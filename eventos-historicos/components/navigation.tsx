@@ -1,0 +1,271 @@
+"use client"
+
+import type React from "react"
+
+import { useState } from "react"
+import Link from "next/link"
+import { useRouter } from "next/navigation"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu"
+import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle } from "@/components/ui/sheet"
+import { Separator } from "@/components/ui/separator"
+import {
+  Search,
+  Menu,
+  Moon,
+  Sun,
+  Globe,
+  Info,
+  Mail,
+  SearchIcon,
+  Newspaper,
+  BookOpen,
+  Calendar,
+  Clock,
+} from "lucide-react"
+import { useTheme } from "next-themes"
+
+export function Navigation() {
+  const [searchTerm, setSearchTerm] = useState("")
+  const { theme, setTheme } = useTheme()
+  const router = useRouter()
+
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault()
+    if (searchTerm.trim()) {
+      router.push(`/busca?q=${encodeURIComponent(searchTerm.trim())}`)
+      setSearchTerm("")
+    }
+  }
+
+  return (
+    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <div className="container mx-auto px-4">
+        <div className="flex h-16 items-center justify-between">
+          {/* Logo */}
+          <Link href="/" className="flex items-center space-x-3 flex-shrink-0 min-w-[200px] lg:min-w-[240px]">
+            <Globe className="h-8 w-8 text-primary flex-shrink-0" />
+            <div className="flex flex-col justify-center">
+              <span className="text-lg lg:text-xl font-bold text-primary leading-tight">Eventos Históricos</span>
+              <span className="text-xs text-muted-foreground leading-tight">Geopolítica & História</span>
+            </div>
+          </Link>
+
+          {/* Desktop Navigation */}
+          <NavigationMenu className="hidden lg:flex">
+            <NavigationMenuList>
+              <NavigationMenuItem>
+                <Link href="/noticias" legacyBehavior passHref>
+                  <NavigationMenuLink className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50">
+                    Notícias de Geopolítica
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <Link href="/curiosidades" legacyBehavior passHref>
+                  <NavigationMenuLink className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50">
+                    Curiosidades Históricas
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <Link href="/grandes-eventos" legacyBehavior passHref>
+                  <NavigationMenuLink className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50">
+                    Grandes Eventos
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <Link href="/linha-do-tempo" legacyBehavior passHref>
+                  <NavigationMenuLink className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50">
+                    Linha do Tempo
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <NavigationMenuTrigger>Mais</NavigationMenuTrigger>
+                <NavigationMenuContent className="bg-background border border-border shadow-lg rounded-lg">
+                  <div className="grid gap-2 p-4 w-[420px]">
+                    <div className="grid grid-cols-1 gap-1">
+                      <Link
+                        href="/sobre"
+                        className="group flex items-center space-x-3 select-none rounded-lg p-4 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground border border-transparent hover:border-border"
+                      >
+                        <Info className="h-5 w-5 text-primary" />
+                        <div className="space-y-1">
+                          <div className="text-sm font-semibold leading-none">Sobre</div>
+                          <p className="text-xs leading-snug text-muted-foreground">
+                            Conheça nossa missão e equipe editorial
+                          </p>
+                        </div>
+                      </Link>
+
+                      <Link
+                        href="/contato"
+                        className="group flex items-center space-x-3 select-none rounded-lg p-4 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground border border-transparent hover:border-border"
+                      >
+                        <Mail className="h-5 w-5 text-primary" />
+                        <div className="space-y-1">
+                          <div className="text-sm font-semibold leading-none">Contato</div>
+                          <p className="text-xs leading-snug text-muted-foreground">Entre em contato conosco</p>
+                        </div>
+                      </Link>
+
+                      <Separator className="my-2" />
+
+                      <Link
+                        href="/busca"
+                        className="group flex items-center space-x-3 select-none rounded-lg p-4 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground border border-transparent hover:border-border"
+                      >
+                        <SearchIcon className="h-5 w-5 text-primary" />
+                        <div className="space-y-1">
+                          <div className="text-sm font-semibold leading-none">Busca Avançada</div>
+                          <p className="text-xs leading-snug text-muted-foreground">
+                            Encontre conteúdo específico com filtros
+                          </p>
+                        </div>
+                      </Link>
+                    </div>
+                  </div>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
+
+          {/* Search and Theme Toggle */}
+          <div className="flex items-center space-x-2">
+            {/* Search */}
+            <form onSubmit={handleSearch} className="relative hidden sm:block">
+              <Search className="absolute left-2 top-2.5 h-4 w-4 text-muted-foreground" />
+              <Input
+                placeholder="Buscar artigos..."
+                className="pl-8 w-[150px] lg:w-[250px]"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+              />
+            </form>
+
+            {/* Theme Toggle */}
+            <Button variant="ghost" size="icon" onClick={() => setTheme(theme === "light" ? "dark" : "light")}>
+              <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+              <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+              <span className="sr-only">Alternar tema</span>
+            </Button>
+
+            {/* Mobile Menu */}
+            <Sheet>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="icon" className="lg:hidden">
+                  <Menu className="h-5 w-5" />
+                  <span className="sr-only">Abrir menu</span>
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right" className="w-[320px] sm:w-[400px]">
+                <SheetHeader className="text-left pb-4">
+                  <SheetTitle className="flex items-center space-x-2">
+                    <Globe className="h-5 w-5 text-primary" />
+                    <span>Menu de Navegação</span>
+                  </SheetTitle>
+                </SheetHeader>
+
+                <nav className="flex flex-col space-y-1">
+                  {/* Main Navigation */}
+                  <div className="space-y-1">
+                    <Link
+                      href="/noticias"
+                      className="flex items-center space-x-3 rounded-lg px-3 py-3 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
+                    >
+                      <Newspaper className="h-5 w-5 text-primary" />
+                      <span>Notícias de Geopolítica</span>
+                    </Link>
+
+                    <Link
+                      href="/curiosidades"
+                      className="flex items-center space-x-3 rounded-lg px-3 py-3 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
+                    >
+                      <BookOpen className="h-5 w-5 text-primary" />
+                      <span>Curiosidades Históricas</span>
+                    </Link>
+
+                    <Link
+                      href="/grandes-eventos"
+                      className="flex items-center space-x-3 rounded-lg px-3 py-3 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
+                    >
+                      <Calendar className="h-5 w-5 text-primary" />
+                      <span>Grandes Eventos</span>
+                    </Link>
+
+                    <Link
+                      href="/linha-do-tempo"
+                      className="flex items-center space-x-3 rounded-lg px-3 py-3 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
+                    >
+                      <Clock className="h-5 w-5 text-primary" />
+                      <span>Linha do Tempo</span>
+                    </Link>
+                  </div>
+
+                  <Separator className="my-4" />
+
+                  {/* Secondary Navigation */}
+                  <div className="space-y-1">
+                    <Link
+                      href="/sobre"
+                      className="flex items-center space-x-3 rounded-lg px-3 py-3 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
+                    >
+                      <Info className="h-5 w-5 text-muted-foreground" />
+                      <span>Sobre</span>
+                    </Link>
+
+                    <Link
+                      href="/contato"
+                      className="flex items-center space-x-3 rounded-lg px-3 py-3 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
+                    >
+                      <Mail className="h-5 w-5 text-muted-foreground" />
+                      <span>Contato</span>
+                    </Link>
+
+                    <Link
+                      href="/busca"
+                      className="flex items-center space-x-3 rounded-lg px-3 py-3 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
+                    >
+                      <SearchIcon className="h-5 w-5 text-muted-foreground" />
+                      <span>Busca Avançada</span>
+                    </Link>
+                  </div>
+
+                  <Separator className="my-4" />
+
+                  {/* Mobile Search */}
+                  <div className="space-y-2">
+                    <label className="text-sm font-medium text-muted-foreground">Buscar Conteúdo</label>
+                    <form onSubmit={handleSearch} className="relative">
+                      <Search className="absolute left-3 top-2.5 h-4 w-4 text-muted-foreground" />
+                      <Input
+                        placeholder="Buscar artigos..."
+                        className="pl-9"
+                        value={searchTerm}
+                        onChange={(e) => setSearchTerm(e.target.value)}
+                      />
+                    </form>
+                  </div>
+                </nav>
+              </SheetContent>
+            </Sheet>
+          </div>
+        </div>
+      </div>
+    </header>
+  )
+}
