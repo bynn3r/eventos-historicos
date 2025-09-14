@@ -1,0 +1,38 @@
+[
+  {
+    "id": "alexandria",
+    "titulo": "A Biblioteca de Alexandria Nunca Foi Totalmente Destruída",
+    "slug": "biblioteca-de-alexandria",
+    "descricao": "Apesar do mito popular, a Biblioteca de Alexandria não desapareceu em um único evento catastrófico, mas sim declinou gradualmente ao longo de vários séculos. Pesquisas históricas recentes revelam que a biblioteca continuou funcionando até pelo menos o século IV d.C., muito depois dos eventos tradicionalmente associados à sua 'destruição'. O declínio foi causado por uma combinação de fatores: redução do financiamento imperial, mudanças políticas, terremotos, e a gradual transferência do conhecimento para outras instituições. Muitos dos manuscritos foram transferidos para Constantinopla e outras bibliotecas do mundo bizantino, preservando assim parte do conhecimento alexandrino.",
+    "data": "2025-01-15",
+    "categoria": "Antiguidade",
+    "imagem": "/curiosidades/biblioteca-alexandria.jpg"
+  },
+  {
+    "id": "mongol",
+    "titulo": "O Império Mongol: Maior Império Contíguo da História",
+    "slug": "imperio-mongol",
+    "descricao": "O Império Mongol, no seu auge no século XIII, cobria impressionantes 24 milhões de quilômetros quadrados - uma área maior que todo o continente africano. Estendendo-se da Europa Oriental até o Oceano Pacífico, este império conectou culturas, facilitou o comércio através da Rota da Seda e promoveu um intercâmbio sem precedentes de conhecimento, tecnologia e ideias. Contrariamente à imagem de destruição, os mongóis eram administradores eficientes que frequentemente preservavam as estruturas locais de governo e promoviam a tolerância religiosa. Sua rede de comunicação, o 'Yam', era tão eficiente que uma mensagem podia viajar de uma ponta à outra do império em questão de semanas.",
+    "data": "2025-01-14",
+    "categoria": "Idade Média",
+    "imagem": "/curiosidades/imperio-mongol.jpg"
+  },
+  {
+    "id": "guerra-cem-anos",
+    "titulo": "A Guerra dos Cem Anos Durou 116 Anos",
+    "slug": "guerra-cem-anos",
+    "descricao": "A famosa 'Guerra dos Cem Anos' entre Inglaterra e França na verdade durou 116 anos (1337-1453) e não foi uma guerra contínua, mas sim uma série de conflitos intercalados com longos períodos de paz e tréguas. O conflito foi marcado por batalhas icônicas como Crécy, Poitiers e Agincourt, mas também por décadas de negociações diplomáticas. A guerra transformou a arte militar com o uso do arco longo inglês e das primeiras armas de fogo, além de consolidar as identidades nacionais francesa e inglesa. Curiosamente, a guerra só terminou definitivamente quando os ingleses perderam todos os seus territórios na França continental, exceto Calais.",
+    "data": "2025-01-13",
+    "categoria": "Idade Média",
+    "imagem": "/curiosidades/guerra-cem-anos.jpg"
+  },
+  {
+    "id": "piramides-gize",
+    "titulo": "As Pirâmides de Gizé Não Foram Construídas por Escravos",
+    "slug": "piramides-gize",
+    "descricao": "Evidências arqueológicas modernas revelam que as Pirâmides de Gizé não foram construídas por escravos, como popularmente se acredita, mas por trabalhadores assalariados que recebiam rações de carne, cerveja e pão. Descobertas de cemitérios dos trabalhadores mostram que eles recebiam cuidados médicos e eram enterrados com honras próximas às pirâmides. Estima-se que cerca de 20.000 trabalhadores participaram da construção durante os 20 anos necessários para completar a Grande Pirâmide. Estes trabalhadores eram organizados em equipes com nomes como 'Amigos de Khufu' e 'Bêbados de Menkaure', sugerindo um ambiente de trabalho mais organizado e menos opressivo do que se imaginava.",
+    "data": "2025-01-12",
+    "categoria": "Antiguidade",
+    "imagem": "/curiosidades/piramides-gize.jpg"
+  }
+]

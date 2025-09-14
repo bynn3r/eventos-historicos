@@ -5,11 +5,16 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge"
 import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Calendar, Search, Filter } from "lucide-react"
+import { Calendar, Search, Filter, User } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
+import noticiasData from "@/data/noticias.json"
 
 export default function NoticiasPage() {
+  const sortedNoticias = [...noticiasData].sort((a, b) => new Date(b.data).getTime() - new Date(a.data).getTime())
+  const featuredNoticia = sortedNoticias[0]
+  const otherNoticias = sortedNoticias.slice(1)
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navigation />
@@ -41,8 +46,9 @@ export default function NoticiasPage() {
                   </SelectTrigger>
                   <SelectContent>
                     <SelectItem value="oriente-medio">Oriente Médio</SelectItem>
-                    <SelectItem value="asia">Ásia</SelectItem>
+                    <SelectItem value="economia-global">Economia Global</SelectItem>
                     <SelectItem value="europa">Europa</SelectItem>
+                    <SelectItem value="asia">Ásia</SelectItem>
                     <SelectItem value="americas">Américas</SelectItem>
                     <SelectItem value="africa">África</SelectItem>
                   </SelectContent>
@@ -67,77 +73,51 @@ export default function NoticiasPage() {
         <section className="py-12">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {/* Featured Article */}
-              <Card className="md:col-span-2 lg:col-span-3 overflow-hidden">
-                <div className="grid md:grid-cols-2 gap-0">
-                  <div className="aspect-video md:aspect-auto relative">
-                    <Image src="/world-map-with-geopolitical-tensions.jpg" alt="Análise Geopolítica" fill className="object-cover" />
-                    <Badge className="absolute top-4 left-4 bg-destructive text-destructive-foreground">Destaque</Badge>
-                  </div>
-                  <div className="p-6 flex flex-col justify-center">
-                    <div className="flex items-center gap-2 text-sm text-muted-foreground mb-3">
-                      <Calendar className="h-4 w-4" />
-                      <span>16 de Janeiro, 2024</span>
-                      <Badge variant="secondary">Análise</Badge>
+              {featuredNoticia && (
+                <Card className="md:col-span-2 lg:col-span-3 overflow-hidden">
+                  <div className="grid md:grid-cols-2 gap-0">
+                    <div className="aspect-video md:aspect-auto relative">
+                      <Image
+                        src={featuredNoticia.imagem || "/placeholder.svg?height=400&width=600&query=geopolitics news"}
+                        alt={featuredNoticia.titulo}
+                        fill
+                        className="object-cover"
+                      />
+                      <Badge className="absolute top-4 left-4 bg-destructive text-destructive-foreground">
+                        Destaque
+                      </Badge>
                     </div>
-                    <h2 className="text-2xl font-bold mb-4">
-                      O Novo Equilíbrio de Poder Global: Implicações para 2024
-                    </h2>
-                    <p className="text-muted-foreground mb-6">
-                      Uma análise abrangente das mudanças geopolíticas recentes e como elas podem redefinir as relações
-                      internacionais nos próximos anos, incluindo o papel emergente de novas potências regionais.
-                    </p>
-                    <Button asChild>
-                      <Link href="/artigo/equilibrio-poder-global-2024">Ler Análise Completa</Link>
-                    </Button>
+                    <div className="p-6 flex flex-col justify-center">
+                      <div className="flex items-center gap-2 text-sm text-muted-foreground mb-3">
+                        <Calendar className="h-4 w-4" />
+                        <span>{new Date(featuredNoticia.data).toLocaleDateString("pt-BR")}</span>
+                        <Badge variant="secondary">{featuredNoticia.categoria}</Badge>
+                        {featuredNoticia.autor && (
+                          <>
+                            <User className="h-4 w-4" />
+                            <span>{featuredNoticia.autor}</span>
+                          </>
+                        )}
+                      </div>
+                      <h2 className="text-2xl font-bold mb-4">{featuredNoticia.titulo}</h2>
+                      <p className="text-muted-foreground mb-6">{featuredNoticia.descricao}</p>
+                      <Button asChild>
+                        <Link href={`/noticias/${featuredNoticia.slug}`}>Ler Análise Completa</Link>
+                      </Button>
+                    </div>
                   </div>
-                </div>
-              </Card>
+                </Card>
+              )}
 
-              {/* Regular Articles */}
-              {[
-                {
-                  title: "Tensões no Mar do Sul da China: Análise Estratégica",
-                  excerpt:
-                    "Examinamos as recentes movimentações militares na região e suas implicações para o comércio global.",
-                  date: "15 de Janeiro, 2024",
-                  category: "Ásia",
-                  slug: "tensoes-mar-sul-china",
-                },
-                {
-                  title: "União Europeia e a Crise Energética: Novos Desenvolvimentos",
-                  excerpt: "Como os países europeus estão se adaptando às mudanças no fornecimento de energia.",
-                  date: "14 de Janeiro, 2024",
-                  category: "Europa",
-                  slug: "ue-crise-energetica",
-                },
-                {
-                  title: "África: O Continente em Ascensão Geopolítica",
-                  excerpt: "Análise do crescente papel da África nas relações internacionais e economia global.",
-                  date: "13 de Janeiro, 2024",
-                  category: "África",
-                  slug: "africa-ascensao-geopolitica",
-                },
-                {
-                  title: "América Latina: Integração Regional em Foco",
-                  excerpt: "Os desafios e oportunidades da integração econômica e política na região.",
-                  date: "12 de Janeiro, 2024",
-                  category: "Américas",
-                  slug: "america-latina-integracao",
-                },
-                {
-                  title: "Oriente Médio: Diplomacia e Conflitos Regionais",
-                  excerpt: "Uma visão atualizada dos principais conflitos e iniciativas diplomáticas na região.",
-                  date: "11 de Janeiro, 2024",
-                  category: "Oriente Médio",
-                  slug: "oriente-medio-diplomacia",
-                },
-              ].map((article, index) => (
-                <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
+              {otherNoticias.map((noticia) => (
+                <Card key={noticia.id} className="overflow-hidden hover:shadow-lg transition-shadow">
                   <div className="aspect-video relative">
                     <Image
-                      src={`/abstract-geometric-shapes.png?height=200&width=400&query=${article.category.toLowerCase()} geopolitics news`}
-                      alt={article.title}
+                      src={
+                        noticia.imagem ||
+                        `/placeholder.svg?height=200&width=400&query=${noticia.categoria.toLowerCase()} geopolitics news`
+                      }
+                      alt={noticia.titulo}
                       fill
                       className="object-cover"
                     />
@@ -145,16 +125,24 @@ export default function NoticiasPage() {
                   <CardHeader>
                     <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
                       <Calendar className="h-4 w-4" />
-                      <span>{article.date}</span>
-                      <Badge variant="secondary">{article.category}</Badge>
+                      <span>{new Date(noticia.data).toLocaleDateString("pt-BR")}</span>
+                      <Badge variant="secondary">{noticia.categoria}</Badge>
                     </div>
-                    <CardTitle className="text-lg">{article.title}</CardTitle>
-                    <CardDescription>{article.excerpt}</CardDescription>
+                    <CardTitle className="text-lg">{noticia.titulo}</CardTitle>
+                    <CardDescription>{noticia.descricao}</CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <Button variant="outline" size="sm" asChild>
-                      <Link href={`/artigo/${article.slug}`}>Leia Mais</Link>
-                    </Button>
+                    <div className="flex items-center justify-between">
+                      <Button variant="outline" size="sm" asChild>
+                        <Link href={`/noticias/${noticia.slug}`}>Leia Mais</Link>
+                      </Button>
+                      {noticia.autor && (
+                        <div className="flex items-center gap-1 text-xs text-muted-foreground">
+                          <User className="h-3 w-3" />
+                          <span>{noticia.autor}</span>
+                        </div>
+                      )}
+                    </div>
                   </CardContent>
                 </Card>
               ))}

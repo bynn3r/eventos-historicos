@@ -2,19 +2,11 @@
 
 import type React from "react"
 
-import { useState } from "react"
+import { useState, useRef, useEffect } from "react"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu"
 import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle } from "@/components/ui/sheet"
 import { Separator } from "@/components/ui/separator"
 import {
@@ -30,11 +22,14 @@ import {
   BookOpen,
   Calendar,
   Clock,
+  ChevronDown,
 } from "lucide-react"
 import { useTheme } from "next-themes"
 
 export function Navigation() {
   const [searchTerm, setSearchTerm] = useState("")
+  const [maisOpen, setMaisOpen] = useState(false)
+  const dropdownRef = useRef<HTMLDivElement>(null)
   const { theme, setTheme } = useTheme()
   const router = useRouter()
 
@@ -45,6 +40,19 @@ export function Navigation() {
       setSearchTerm("")
     }
   }
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setMaisOpen(false)
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside)
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside)
+    }
+  }, [])
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -60,89 +68,84 @@ export function Navigation() {
           </Link>
 
           {/* Desktop Navigation */}
-          <NavigationMenu className="hidden lg:flex">
-            <NavigationMenuList>
-              <NavigationMenuItem>
-                <Link href="/noticias" legacyBehavior passHref>
-                  <NavigationMenuLink className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50">
-                    Notícias de Geopolítica
-                  </NavigationMenuLink>
-                </Link>
-              </NavigationMenuItem>
+          <nav className="hidden lg:flex items-center space-x-1">
+            <Link
+              href="/noticias"
+              className="inline-flex h-10 items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none"
+            >
+              Notícias de Geopolítica
+            </Link>
 
-              <NavigationMenuItem>
-                <Link href="/curiosidades" legacyBehavior passHref>
-                  <NavigationMenuLink className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50">
-                    Curiosidades Históricas
-                  </NavigationMenuLink>
-                </Link>
-              </NavigationMenuItem>
+            <Link
+              href="/curiosidades"
+              className="inline-flex h-10 items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none"
+            >
+              Curiosidades Históricas
+            </Link>
 
-              <NavigationMenuItem>
-                <Link href="/grandes-eventos" legacyBehavior passHref>
-                  <NavigationMenuLink className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50">
-                    Grandes Eventos
-                  </NavigationMenuLink>
-                </Link>
-              </NavigationMenuItem>
+            <Link
+              href="/grandes-eventos"
+              className="inline-flex h-10 items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none"
+            >
+              Grandes Eventos
+            </Link>
 
-              <NavigationMenuItem>
-                <Link href="/linha-do-tempo" legacyBehavior passHref>
-                  <NavigationMenuLink className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50">
-                    Linha do Tempo
-                  </NavigationMenuLink>
-                </Link>
-              </NavigationMenuItem>
+            <Link
+              href="/linha-do-tempo"
+              className="inline-flex h-10 items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none"
+            >
+              Linha do Tempo
+            </Link>
 
-              <NavigationMenuItem>
-                <NavigationMenuTrigger>Mais</NavigationMenuTrigger>
-                <NavigationMenuContent className="bg-background border border-border shadow-lg rounded-lg">
-                  <div className="grid gap-2 p-4 w-[420px]">
-                    <div className="grid grid-cols-1 gap-1">
-                      <Link
-                        href="/sobre"
-                        className="group flex items-center space-x-3 select-none rounded-lg p-4 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground border border-transparent hover:border-border"
-                      >
-                        <Info className="h-5 w-5 text-primary" />
-                        <div className="space-y-1">
-                          <div className="text-sm font-semibold leading-none">Sobre</div>
-                          <p className="text-xs leading-snug text-muted-foreground">
-                            Conheça nossa missão e equipe editorial
-                          </p>
-                        </div>
-                      </Link>
-
-                      <Link
-                        href="/contato"
-                        className="group flex items-center space-x-3 select-none rounded-lg p-4 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground border border-transparent hover:border-border"
-                      >
-                        <Mail className="h-5 w-5 text-primary" />
-                        <div className="space-y-1">
-                          <div className="text-sm font-semibold leading-none">Contato</div>
-                          <p className="text-xs leading-snug text-muted-foreground">Entre em contato conosco</p>
-                        </div>
-                      </Link>
-
-                      <Separator className="my-2" />
-
-                      <Link
-                        href="/busca"
-                        className="group flex items-center space-x-3 select-none rounded-lg p-4 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground border border-transparent hover:border-border"
-                      >
-                        <SearchIcon className="h-5 w-5 text-primary" />
-                        <div className="space-y-1">
-                          <div className="text-sm font-semibold leading-none">Busca Avançada</div>
-                          <p className="text-xs leading-snug text-muted-foreground">
-                            Encontre conteúdo específico com filtros
-                          </p>
-                        </div>
-                      </Link>
-                    </div>
+            <div className="relative" ref={dropdownRef}>
+              <button
+                onClick={() => setMaisOpen(!maisOpen)}
+                className="inline-flex h-10 items-center justify-center rounded-md bg-yellow-500 hover:bg-yellow-600 px-4 py-2 text-sm font-medium text-black transition-colors focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2"
+              >
+                Mais
+                <ChevronDown className="ml-1 h-4 w-4" />
+              </button>
+              {maisOpen && (
+                <div className="absolute right-0 mt-2 w-56 bg-background dark:bg-gray-900 shadow-lg rounded-lg border border-border z-50">
+                  <div className="py-2">
+                    <Link
+                      href="/sobre"
+                      className="flex items-center px-4 py-2 text-sm hover:bg-accent hover:text-accent-foreground transition-colors"
+                      onClick={() => setMaisOpen(false)}
+                    >
+                      <Info className="mr-3 h-4 w-4" />
+                      Sobre Nós
+                    </Link>
+                    <Link
+                      href="/contato"
+                      className="flex items-center px-4 py-2 text-sm hover:bg-accent hover:text-accent-foreground transition-colors"
+                      onClick={() => setMaisOpen(false)}
+                    >
+                      <Mail className="mr-3 h-4 w-4" />
+                      Contato
+                    </Link>
+                    <Link
+                      href="/privacidade"
+                      className="flex items-center px-4 py-2 text-sm hover:bg-accent hover:text-accent-foreground transition-colors"
+                      onClick={() => setMaisOpen(false)}
+                    >
+                      <Globe className="mr-3 h-4 w-4" />
+                      Política de Privacidade
+                    </Link>
+                    <Separator className="my-1" />
+                    <Link
+                      href="/busca"
+                      className="flex items-center px-4 py-2 text-sm hover:bg-accent hover:text-accent-foreground transition-colors"
+                      onClick={() => setMaisOpen(false)}
+                    >
+                      <SearchIcon className="mr-3 h-4 w-4" />
+                      Busca Avançada
+                    </Link>
                   </div>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-            </NavigationMenuList>
-          </NavigationMenu>
+                </div>
+              )}
+            </div>
+          </nav>
 
           {/* Search and Theme Toggle */}
           <div className="flex items-center space-x-2">
@@ -234,6 +237,14 @@ export function Navigation() {
                     >
                       <Mail className="h-5 w-5 text-muted-foreground" />
                       <span>Contato</span>
+                    </Link>
+
+                    <Link
+                      href="/privacidade"
+                      className="flex items-center space-x-3 rounded-lg px-3 py-3 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
+                    >
+                      <Globe className="h-5 w-5 text-muted-foreground" />
+                      <span>Política de Privacidade</span>
                     </Link>
 
                     <Link

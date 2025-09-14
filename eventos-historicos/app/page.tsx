@@ -85,7 +85,7 @@ export default function HomePage() {
                       equilíbrio de poder mundial, incluindo o papel das grandes potências.
                     </p>
                     <Button asChild>
-                      <Link href="/artigo/tensoes-oriente-medio">Ler Análise Completa</Link>
+                      <Link href="/noticias/tensoes-oriente-medio-2025">Ler Análise Completa</Link>
                     </Button>
                   </div>
                 </div>
@@ -105,7 +105,7 @@ export default function HomePage() {
                       Análise dos acordos comerciais recentes e seu impacto na economia global.
                     </p>
                     <Button variant="outline" size="sm" asChild>
-                      <Link href="/artigo/china-eua-comercio">Leia Mais</Link>
+                      <Link href="/noticias/china-eua-comercio-2025">Leia Mais</Link>
                     </Button>
                   </CardContent>
                 </Card>
@@ -143,7 +143,7 @@ export default function HomePage() {
                     gradualmente ao longo de séculos.
                   </p>
                   <Button variant="ghost" size="sm" asChild>
-                    <Link href="/curiosidade/biblioteca-alexandria">
+                    <Link href="/curiosidades/biblioteca-de-alexandria">
                       Saiba Mais <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
@@ -163,7 +163,7 @@ export default function HomePage() {
                     os segredos de sua expansão.
                   </p>
                   <Button variant="ghost" size="sm" asChild>
-                    <Link href="/curiosidade/imperio-mongol">
+                    <Link href="/curiosidades/imperio-mongol">
                       Saiba Mais <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
@@ -183,7 +183,7 @@ export default function HomePage() {
                     e França com longos períodos de paz.
                   </p>
                   <Button variant="ghost" size="sm" asChild>
-                    <Link href="/curiosidade/guerra-cem-anos">
+                    <Link href="/curiosidades/guerra-cem-anos">
                       Saiba Mais <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
