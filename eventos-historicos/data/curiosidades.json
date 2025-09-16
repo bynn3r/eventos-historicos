@@ -34,5 +34,187 @@
     "data": "2025-01-12",
     "categoria": "Antiguidade",
     "imagem": "/curiosidades/piramides-gize.jpg"
+  },
+
+  {
+    "id": "grande-depressao",
+    "titulo": "A Grande Depressão Afetou o Mundo Todo",
+    "slug": "grande-depressao",
+    "descricao": "A crise de 1929 não atingiu apenas os Estados Unidos. A Grande Depressão provocou falências em massa na Europa, América Latina e Ásia. O comércio internacional caiu mais de 60% entre 1929 e 1934, levando milhões ao desemprego. No Brasil, por exemplo, o preço do café despencou e sacas foram queimadas para tentar equilibrar a economia. O impacto social foi tão profundo que muitos países passaram a adotar políticas econômicas mais intervencionistas, abrindo caminho para líderes autoritários na década de 1930.",
+    "data": "2025-02-15",
+    "categoria": "Século XX",
+    "imagem": "/curiosidades/grande-depressao.jpg"
+  },
+  {
+    "id": "dia-d",
+    "titulo": "O Dia D Foi Adiado Duas Vezes",
+    "slug": "dia-d",
+    "descricao": "A invasão da Normandia, em 6 de junho de 1944, quase não aconteceu nesse dia. O desembarque foi inicialmente marcado para 5 de junho, mas más condições climáticas obrigaram os aliados a adiar a operação. O general Eisenhower só tomou a decisão final de avançar após uma breve janela de melhoria no clima. Caso tivesse adiado novamente, a invasão teria sido adiada por semanas, o que poderia mudar drasticamente o curso da guerra.",
+    "data": "2025-02-16",
+    "categoria": "Segunda Guerra Mundial",
+    "imagem": "/curiosidades/dia-d.jpg"
+  },
+  {
+    "id": "projeto-manhattan",
+    "titulo": "O Projeto Manhattan Empregou Mais de 130 Mil Pessoas",
+    "slug": "projeto-manhattan",
+    "descricao": "O desenvolvimento da bomba atômica pelos Estados Unidos durante a Segunda Guerra Mundial foi um dos maiores esforços científicos e industriais já realizados. O Projeto Manhattan envolveu mais de 130 mil pessoas em várias instalações secretas, como Los Alamos, Oak Ridge e Hanford. O custo foi de cerca de 2 bilhões de dólares da época (equivalente a mais de 25 bilhões hoje). O nível de sigilo era tão alto que a maioria dos trabalhadores não sabia no que estava realmente trabalhando.",
+    "data": "2025-02-17",
+    "categoria": "Segunda Guerra Mundial",
+    "imagem": "/curiosidades/projeto-manhattan.jpg"
+  },
+  {
+    "id": "blitz-londres",
+    "titulo": "Durante a Blitz, Londres Ficou 57 Noites Sob Bombardeio",
+    "slug": "blitz-londres",
+    "descricao": "Entre setembro de 1940 e maio de 1941, a Alemanha nazista lançou uma campanha de bombardeios contra Londres e outras cidades britânicas. Londres sofreu 57 noites consecutivas de ataques aéreos, destruindo bairros inteiros e matando milhares de civis. Apesar da destruição, a moral britânica não quebrou, e o primeiro-ministro Winston Churchill ficou famoso por seus discursos que mantinham a esperança da população. A resistência da Grã-Bretanha foi um ponto de virada na guerra.",
+    "data": "2025-02-18",
+    "categoria": "Segunda Guerra Mundial",
+    "imagem": "/curiosidades/blitz-londres.jpg"
+  },
+  {
+    "id": "stalingrado",
+    "titulo": "A Batalha de Stalingrado Foi a Mais Letal da História",
+    "slug": "batalha-stalingrado",
+    "descricao": "Travada entre 1942 e 1943, a Batalha de Stalingrado é considerada o confronto mais sangrento da história. Estima-se que mais de 2 milhões de pessoas morreram entre soldados e civis. O inverno rigoroso, a resistência soviética e a falta de suprimentos dizimaram as tropas alemãs. A vitória soviética marcou o início da virada da Segunda Guerra Mundial no front oriental.",
+    "data": "2025-02-19",
+    "categoria": "Segunda Guerra Mundial",
+    "imagem": "/curiosidades/stalingrado.jpg"
+  },
+  {
+    "id": "holocausto",
+    "titulo": "O Holocausto Eliminou 6 Milhões de Judeus",
+    "slug": "holocausto",
+    "descricao": "Entre 1941 e 1945, o regime nazista implementou a chamada 'Solução Final', um plano sistemático para exterminar os judeus da Europa. Aproximadamente 6 milhões de judeus foram assassinados em campos de concentração e extermínio como Auschwitz, Treblinka e Sobibor. Além dos judeus, milhões de ciganos, homossexuais, prisioneiros políticos e pessoas com deficiência também foram perseguidos e mortos.",
+    "data": "2025-02-20",
+    "categoria": "Segunda Guerra Mundial",
+    "imagem": "/curiosidades/holocausto.jpg"
+  },
+  {
+    "id": "onu",
+    "titulo": "A ONU Nasceu da Segunda Guerra Mundial",
+    "slug": "fundacao-onu",
+    "descricao": "A Organização das Nações Unidas (ONU) foi fundada em 1945, após a vitória dos Aliados, com o objetivo de evitar novos conflitos mundiais. O estatuto foi assinado por 50 países em São Francisco, incluindo o Brasil. A ONU substituiu a fracassada Liga das Nações e tornou-se a principal instituição global para mediar crises, promover direitos humanos e coordenar ações internacionais.",
+    "data": "2025-02-21",
+    "categoria": "Segunda Guerra Mundial",
+    "imagem": "/curiosidades/onu.jpg"
+  },
+  {
+    "id": "perestroika",
+    "titulo": "A Perestroika Mudou o Mundo",
+    "slug": "perestroika",
+    "descricao": "A política de reformas econômicas e políticas lançada por Mikhail Gorbachev em 1985, conhecida como Perestroika, contribuiu para o fim da Guerra Fria. Ao lado da Glasnost (abertura política), enfraqueceu o controle do Partido Comunista e deu mais liberdade à sociedade soviética. Essas mudanças, no entanto, aceleraram o colapso da União Soviética em 1991, transformando completamente a ordem mundial.",
+    "data": "2025-02-22",
+    "categoria": "Guerra Fria",
+    "imagem": "/curiosidades/perestroika.jpg"
+  },
+  {
+    "id": "crise-misseis-cuba",
+    "titulo": "A Crise dos Mísseis Quase Iniciou a Terceira Guerra Mundial",
+    "slug": "crise-misseis-cuba",
+    "descricao": "Em outubro de 1962, o mundo esteve à beira de uma guerra nuclear quando os Estados Unidos descobriram mísseis soviéticos instalados em Cuba. Durante 13 dias, John F. Kennedy e Nikita Khrushchev negociaram sob intensa pressão militar. O acordo final retirou os mísseis de Cuba em troca da promessa de não invasão da ilha e da retirada de mísseis americanos da Turquia. Foi o momento mais crítico da Guerra Fria.",
+    "data": "2025-02-23",
+    "categoria": "Guerra Fria",
+    "imagem": "/curiosidades/crise-misseis-cuba.jpg"
+  },
+  {
+    "id": "queda-muro",
+    "titulo": "A Queda do Muro de Berlim Foi Um Acidente Político",
+    "slug": "queda-muro-berlim",
+    "descricao": "Em 9 de novembro de 1989, uma conferência de imprensa mal interpretada levou milhares de alemães orientais a acreditarem que as fronteiras estavam abertas. Ao chegarem aos postos de controle, os guardas, confusos e sem ordens claras, simplesmente deixaram as multidões passarem. Esse evento inesperado levou ao colapso imediato do Muro de Berlim, símbolo da Guerra Fria, e acelerou a reunificação da Alemanha.",
+    "data": "2025-02-24",
+    "categoria": "Guerra Fria",
+    "imagem": "/curiosidades/queda-muro-berlim.jpg"
+  },
+
+  {
+    "id": "grande-depressao",
+    "titulo": "A Grande Depressão Afetou o Mundo Todo",
+    "slug": "grande-depressao",
+    "descricao": "A crise de 1929 não atingiu apenas os Estados Unidos. A Grande Depressão provocou falências em massa na Europa, América Latina e Ásia. O comércio internacional caiu mais de 60% entre 1929 e 1934, levando milhões ao desemprego. No Brasil, por exemplo, o preço do café despencou e sacas foram queimadas para tentar equilibrar a economia. O impacto social foi tão profundo que muitos países passaram a adotar políticas econômicas mais intervencionistas, abrindo caminho para líderes autoritários na década de 1930.",
+    "data": "2025-02-15",
+    "categoria": "Século XX",
+    "imagem": "/curiosidades/grande-depressao.jpg"
+  },
+  {
+    "id": "dia-d",
+    "titulo": "O Dia D Foi Adiado Duas Vezes",
+    "slug": "dia-d",
+    "descricao": "A invasão da Normandia, em 6 de junho de 1944, quase não aconteceu nesse dia. O desembarque foi inicialmente marcado para 5 de junho, mas más condições climáticas obrigaram os aliados a adiar a operação. O general Eisenhower só tomou a decisão final de avançar após uma breve janela de melhoria no clima. Caso tivesse adiado novamente, a invasão teria sido adiada por semanas, o que poderia mudar drasticamente o curso da guerra.",
+    "data": "2025-02-16",
+    "categoria": "Segunda Guerra Mundial",
+    "imagem": "/curiosidades/dia-d.jpg"
+  },
+  {
+    "id": "projeto-manhattan",
+    "titulo": "O Projeto Manhattan Empregou Mais de 130 Mil Pessoas",
+    "slug": "projeto-manhattan",
+    "descricao": "O desenvolvimento da bomba atômica pelos Estados Unidos durante a Segunda Guerra Mundial foi um dos maiores esforços científicos e industriais já realizados. O Projeto Manhattan envolveu mais de 130 mil pessoas em várias instalações secretas, como Los Alamos, Oak Ridge e Hanford. O custo foi de cerca de 2 bilhões de dólares da época (equivalente a mais de 25 bilhões hoje). O nível de sigilo era tão alto que a maioria dos trabalhadores não sabia no que estava realmente trabalhando.",
+    "data": "2025-02-17",
+    "categoria": "Segunda Guerra Mundial",
+    "imagem": "/curiosidades/projeto-manhattan.jpg"
+  },
+  {
+    "id": "blitz-londres",
+    "titulo": "Durante a Blitz, Londres Ficou 57 Noites Sob Bombardeio",
+    "slug": "blitz-londres",
+    "descricao": "Entre setembro de 1940 e maio de 1941, a Alemanha nazista lançou uma campanha de bombardeios contra Londres e outras cidades britânicas. Londres sofreu 57 noites consecutivas de ataques aéreos, destruindo bairros inteiros e matando milhares de civis. Apesar da destruição, a moral britânica não quebrou, e o primeiro-ministro Winston Churchill ficou famoso por seus discursos que mantinham a esperança da população. A resistência da Grã-Bretanha foi um ponto de virada na guerra.",
+    "data": "2025-02-18",
+    "categoria": "Segunda Guerra Mundial",
+    "imagem": "/curiosidades/blitz-londres.jpg"
+  },
+  {
+    "id": "stalingrado",
+    "titulo": "A Batalha de Stalingrado Foi a Mais Letal da História",
+    "slug": "batalha-stalingrado",
+    "descricao": "Travada entre 1942 e 1943, a Batalha de Stalingrado é considerada o confronto mais sangrento da história. Estima-se que mais de 2 milhões de pessoas morreram entre soldados e civis. O inverno rigoroso, a resistência soviética e a falta de suprimentos dizimaram as tropas alemãs. A vitória soviética marcou o início da virada da Segunda Guerra Mundial no front oriental.",
+    "data": "2025-02-19",
+    "categoria": "Segunda Guerra Mundial",
+    "imagem": "/curiosidades/stalingrado.jpg"
+  },
+  {
+    "id": "holocausto",
+    "titulo": "O Holocausto Eliminou 6 Milhões de Judeus",
+    "slug": "holocausto",
+    "descricao": "Entre 1941 e 1945, o regime nazista implementou a chamada 'Solução Final', um plano sistemático para exterminar os judeus da Europa. Aproximadamente 6 milhões de judeus foram assassinados em campos de concentração e extermínio como Auschwitz, Treblinka e Sobibor. Além dos judeus, milhões de ciganos, homossexuais, prisioneiros políticos e pessoas com deficiência também foram perseguidos e mortos.",
+    "data": "2025-02-20",
+    "categoria": "Segunda Guerra Mundial",
+    "imagem": "/curiosidades/holocausto.jpg"
+  },
+  {
+    "id": "onu",
+    "titulo": "A ONU Nasceu da Segunda Guerra Mundial",
+    "slug": "fundacao-onu",
+    "descricao": "A Organização das Nações Unidas (ONU) foi fundada em 1945, após a vitória dos Aliados, com o objetivo de evitar novos conflitos mundiais. O estatuto foi assinado por 50 países em São Francisco, incluindo o Brasil. A ONU substituiu a fracassada Liga das Nações e tornou-se a principal instituição global para mediar crises, promover direitos humanos e coordenar ações internacionais.",
+    "data": "2025-02-21",
+    "categoria": "Segunda Guerra Mundial",
+    "imagem": "/curiosidades/onu.jpg"
+  },
+  {
+    "id": "perestroika",
+    "titulo": "A Perestroika Mudou o Mundo",
+    "slug": "perestroika",
+    "descricao": "A política de reformas econômicas e políticas lançada por Mikhail Gorbachev em 1985, conhecida como Perestroika, contribuiu para o fim da Guerra Fria. Ao lado da Glasnost (abertura política), enfraqueceu o controle do Partido Comunista e deu mais liberdade à sociedade soviética. Essas mudanças, no entanto, aceleraram o colapso da União Soviética em 1991, transformando completamente a ordem mundial.",
+    "data": "2025-02-22",
+    "categoria": "Guerra Fria",
+    "imagem": "/curiosidades/perestroika.jpg"
+  },
+  {
+    "id": "crise-misseis-cuba",
+    "titulo": "A Crise dos Mísseis Quase Iniciou a Terceira Guerra Mundial",
+    "slug": "crise-misseis-cuba",
+    "descricao": "Em outubro de 1962, o mundo esteve à beira de uma guerra nuclear quando os Estados Unidos descobriram mísseis soviéticos instalados em Cuba. Durante 13 dias, John F. Kennedy e Nikita Khrushchev negociaram sob intensa pressão militar. O acordo final retirou os mísseis de Cuba em troca da promessa de não invasão da ilha e da retirada de mísseis americanos da Turquia. Foi o momento mais crítico da Guerra Fria.",
+    "data": "2025-02-23",
+    "categoria": "Guerra Fria",
+    "imagem": "/curiosidades/crise-misseis-cuba.jpg"
+  },
+  {
+    "id": "queda-muro",
+    "titulo": "A Queda do Muro de Berlim Foi Um Acidente Político",
+    "slug": "queda-muro-berlim",
+    "descricao": "Em 9 de novembro de 1989, uma conferência de imprensa mal interpretada levou milhares de alemães orientais a acreditarem que as fronteiras estavam abertas. Ao chegarem aos postos de controle, os guardas, confusos e sem ordens claras, simplesmente deixaram as multidões passarem. Esse evento inesperado levou ao colapso imediato do Muro de Berlim, símbolo da Guerra Fria, e acelerou a reunificação da Alemanha.",
+    "data": "2025-02-24",
+    "categoria": "Guerra Fria",
+    "imagem": "/curiosidades/queda-muro-berlim.jpg"
   }
 ]
