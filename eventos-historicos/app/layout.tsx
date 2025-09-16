@@ -5,6 +5,7 @@ import { Analytics } from "@vercel/analytics/next"
 import { ThemeProvider } from "@/components/theme-provider"
 import { ErrorBoundary } from "@/components/error-boundary"
 import { Suspense } from "react"
+import { LanguageProvider } from "@/contexts/language-context"
 import "./globals.css"
 
 const inter = Inter({
@@ -59,7 +60,7 @@ export default function RootLayout({
         <ErrorBoundary>
           <Suspense fallback={null}>
             <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
-              {children}
+              <LanguageProvider>{children}</LanguageProvider>
             </ThemeProvider>
           </Suspense>
         </ErrorBoundary>

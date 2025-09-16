@@ -1,9 +1,14 @@
+"use client"
+
 import Link from "next/link"
 import { Globe, Youtube, Instagram, Twitter, Facebook, Linkedin } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { NewsletterSignup } from "@/components/newsletter-signup"
+import { useLanguage } from "@/contexts/language-context"
 
 export function Footer() {
+  const { t } = useLanguage()
+
   const socialLinks = [
     { icon: Youtube, href: "https://youtube.com/@eventoshistoricos", label: "YouTube" },
     { icon: Instagram, href: "https://instagram.com/eventoshistoricos", label: "Instagram" },
@@ -22,10 +27,7 @@ export function Footer() {
               <Globe className="h-6 w-6 text-primary" />
               <span className="text-lg font-bold text-primary">Eventos Históricos</span>
             </Link>
-            <p className="text-sm text-muted-foreground">
-              Seu portal de confiança para notícias de geopolítica, curiosidades históricas e análises dos grandes
-              eventos mundiais.
-            </p>
+            <p className="text-sm text-muted-foreground">{t("footer.description")}</p>
             <div className="flex space-x-2">
               {socialLinks.map((social) => {
                 const IconComponent = social.icon
@@ -53,31 +55,31 @@ export function Footer() {
 
           {/* Navigation Links */}
           <div>
-            <h3 className="font-semibold mb-4">Navegação</h3>
+            <h3 className="font-semibold mb-4">{t("footer.quickLinks")}</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/noticias" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Notícias de Geopolítica
+                  {t("menu.geopolitics")}
                 </Link>
               </li>
               <li>
                 <Link href="/curiosidades" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Curiosidades Históricas
+                  {t("menu.curiosities")}
                 </Link>
               </li>
               <li>
                 <Link href="/grandes-eventos" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Grandes Eventos
+                  {t("menu.events")}
                 </Link>
               </li>
               <li>
                 <Link href="/linha-do-tempo" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Linha do Tempo
+                  {t("menu.timeline")}
                 </Link>
               </li>
               <li>
                 <Link href="/busca" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Busca Avançada
+                  {t("menu.search")}
                 </Link>
               </li>
             </ul>
@@ -85,7 +87,7 @@ export function Footer() {
 
           {/* Categories */}
           <div>
-            <h3 className="font-semibold mb-4">Categorias Populares</h3>
+            <h3 className="font-semibold mb-4">{t("footer.categories")}</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
@@ -138,18 +140,16 @@ export function Footer() {
 
         <div className="border-t mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-muted-foreground">
-              &copy; 2024 Eventos Históricos. Todos os direitos reservados.
-            </p>
+            <p className="text-sm text-muted-foreground">{t("footer.rights")}</p>
             <div className="flex items-center gap-4 text-sm">
               <Link href="/privacidade" className="text-muted-foreground hover:text-foreground transition-colors">
-                Política de Privacidade
+                {t("menu.privacy")}
               </Link>
               <Link href="/termos" className="text-muted-foreground hover:text-foreground transition-colors">
                 Termos de Uso
               </Link>
               <Link href="/contato" className="text-muted-foreground hover:text-foreground transition-colors">
-                Contato
+                {t("footer.contact")}
               </Link>
             </div>
           </div>

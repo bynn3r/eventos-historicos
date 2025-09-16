@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "titulo": "O Mistério da Biblioteca de Alexandria",
+    "descricao": "Contrariamente à crença popular, a famosa Biblioteca de Alexandria não foi destruída em um único evento catastrófico. Na verdade, ela declinou gradualmente ao longo de vários séculos devido a uma combinação de fatores políticos, econômicos e religiosos.",
+    "categoria": "Antiguidade",
+    "data": "2024-01-15",
+    "autor": "Dr. Marina Santos",
+    "imagem": "/placeholder.svg?height=400&width=600",
+    "conteudo": "A Biblioteca de Alexandria, uma das maiores maravilhas do mundo antigo, continua a fascinar historiadores e o público em geral. Fundada no século III a.C. durante o reinado de Ptolomeu I, ela representava o ápice do conhecimento e da erudição no mundo helenístico...",
+    "tags": ["alexandria", "biblioteca", "antiguidade", "conhecimento"]
+  },
+  {
+    "id": 2,
+    "titulo": "Napoleão e Sua Verdadeira Altura",
+    "descricao": "Napoleão Bonaparte não era tão baixo quanto muitos acreditam. Com 1,70m de altura, ele estava na média para os homens de sua época. A confusão surgiu devido às diferenças entre as medidas francesas e inglesas.",
+    "categoria": "Era Napoleônica",
+    "data": "2024-01-10",
+    "autor": "Prof. Carlos Mendes",
+    "imagem": "/placeholder.svg?height=400&width=600",
+    "conteudo": "Uma das lendas mais persistentes sobre Napoleão Bonaparte é que ele era excepcionalmente baixo. Esta percepção errônea tem suas raízes em uma combinação de propaganda inimiga e confusão sobre sistemas de medida...",
+    "tags": ["napoleão", "altura", "mitos", "história"]
+  },
+  {
+    "id": 3,
+    "titulo": "A Grande Muralha da China Não É Visível do Espaço",
+    "descricao": "Ao contrário do mito popular, a Grande Muralha da China não é visível a olho nu do espaço. Esta lenda urbana foi desmentida por vários astronautas, incluindo aqueles que estiveram na Estação Espacial Internacional.",
+    "categoria": "China Antiga",
+    "data": "2024-01-05",
+    "autor": "Dra. Li Wei",
+    "imagem": "/placeholder.svg?height=400&width=600",
+    "conteudo": "A Grande Muralha da China é uma das estruturas mais impressionantes já construídas pela humanidade. Estendendo-se por milhares de quilômetros através do território chinês, ela representa séculos de trabalho árduo e engenharia impressionante...",
+    "tags": ["china", "muralha", "espaço", "mitos"]
+  }
+]

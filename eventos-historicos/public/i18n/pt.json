@@ -1,0 +1,72 @@
+{
+  "menu": {
+    "home": "Início",
+    "geopolitics": "Notícias de Geopolítica",
+    "curiosities": "Curiosidades Históricas",
+    "events": "Grandes Eventos",
+    "timeline": "Linha do Tempo",
+    "more": "Mais",
+    "about": "Sobre Nós",
+    "contact": "Contato",
+    "privacy": "Política de Privacidade",
+    "search": "Busca Avançada"
+  },
+  "hero": {
+    "title": "Explorando os Eventos Históricos que Moldaram o Mundo",
+    "subtitle": "Explore a geopolítica mundial, descubra curiosidades fascinantes e compreenda os grandes eventos que definiram nossa história através de análises profundas e conteúdo exclusivo.",
+    "latestNews": "Últimas Notícias",
+    "timeline": "Linha do Tempo"
+  },
+  "sections": {
+    "featuredNews": "Notícias em Destaque",
+    "featuredNewsSubtitle": "As últimas análises geopolíticas e eventos mundiais",
+    "historicalCuriosities": "Curiosidades Históricas",
+    "historicalCuriositiesSubtitle": "Fatos fascinantes que você não sabia sobre a história",
+    "majorEvents": "Grandes Eventos",
+    "majorEventsSubtitle": "Os momentos que definiram o curso da humanidade",
+    "seeAll": "Ver Todas"
+  },
+  "newsletter": {
+    "title": "Mantenha-se Informado",
+    "subtitle": "Receba as últimas análises históricas e geopolíticas diretamente em seu email",
+    "placeholder": "Digite seu email",
+    "subscribe": "Inscrever-se"
+  },
+  "footer": {
+    "description": "Sua fonte confiável para análises históricas profundas e compreensão geopolítica do mundo contemporâneo.",
+    "quickLinks": "Links Rápidos",
+    "categories": "Categorias",
+    "contact": "Contato",
+    "rights": "© 2024 Eventos Históricos. Todos os direitos reservados.",
+    "email": "contato@eventoshistoricos.com",
+    "phone": "+55 (11) 99999-9999"
+  },
+  "common": {
+    "readMore": "Ler Mais",
+    "loading": "Carregando...",
+    "search": "Buscar",
+    "searchPlaceholder": "Buscar artigos...",
+    "date": "Data",
+    "author": "Autor",
+    "category": "Categoria",
+    "tags": "Tags",
+    "share": "Compartilhar",
+    "back": "Voltar",
+    "next": "Próximo",
+    "previous": "Anterior"
+  },
+  "pages": {
+    "about": {
+      "title": "Sobre Nós",
+      "subtitle": "Conheça nossa missão e equipe"
+    },
+    "contact": {
+      "title": "Contato",
+      "subtitle": "Entre em contato conosco"
+    },
+    "privacy": {
+      "title": "Política de Privacidade",
+      "subtitle": "Como protegemos seus dados"
+    }
+  }
+}

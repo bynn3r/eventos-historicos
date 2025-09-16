@@ -7,11 +7,13 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Mail, Check, AlertCircle } from "lucide-react"
+import { useLanguage } from "@/contexts/language-context"
 
 export function NewsletterSignup() {
   const [email, setEmail] = useState("")
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle")
   const [message, setMessage] = useState("")
+  const { t } = useLanguage()
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -24,7 +26,6 @@ export function NewsletterSignup() {
       if (email.includes("@")) {
         setStatus("success")
         setMessage("Obrigado! Você foi inscrito com sucesso.")
-        setEmail("")
       } else {
         setStatus("error")
         setMessage("Por favor, insira um email válido.")
@@ -42,25 +43,23 @@ export function NewsletterSignup() {
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
           <Mail className="h-5 w-5" />
-          Newsletter
+          {t("newsletter.title")}
         </CardTitle>
-        <CardDescription>
-          Receba análises exclusivas e as últimas notícias de geopolítica diretamente no seu email.
-        </CardDescription>
+        <CardDescription>{t("newsletter.subtitle")}</CardDescription>
       </CardHeader>
       <CardContent>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="flex gap-2">
             <Input
               type="email"
-              placeholder="Seu melhor email"
+              placeholder={t("newsletter.placeholder")}
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               disabled={status === "loading"}
               className="flex-1"
             />
             <Button type="submit" disabled={status === "loading" || !email}>
-              {status === "loading" ? "..." : "Inscrever"}
+              {status === "loading" ? "..." : t("newsletter.subscribe")}
             </Button>
           </div>
 

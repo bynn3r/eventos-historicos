@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "titulo": "Growing Tensions in the South China Sea",
+    "descricao": "Analysis of recent military movements in the region and their implications for global geopolitical stability.",
+    "categoria": "Asian Geopolitics",
+    "data": "2024-01-20",
+    "autor": "Dr. Roberto Silva",
+    "imagem": "/geopolitics-world-map-with-news-overlay.jpg",
+    "conteudo": "Tensions in the South China Sea continue to escalate, with significant implications for the global geopolitical order. Recent military exercises and territorial disputes have heightened concerns about regional stability...",
+    "tags": ["china", "geopolitics", "south-china-sea", "tensions"]
+  },
+  {
+    "id": 2,
+    "titulo": "The Impact of the War in Ukraine on the Global Economy",
+    "descricao": "How the Ukrainian conflict is redefining global supply chains and international economic alliances.",
+    "categoria": "Global Economy",
+    "data": "2024-01-18",
+    "autor": "Dr. Ana Pereira",
+    "imagem": "/world-map-with-geopolitical-tensions.jpg",
+    "conteudo": "The conflict in Ukraine has repercussions that extend far beyond European borders. Economic sanctions, supply chain disruptions, and the reorganization of trade alliances are redefining the global economy...",
+    "tags": ["ukraine", "economy", "sanctions", "global"]
+  },
+  {
+    "id": 3,
+    "titulo": "The New Silk Road and Its Geopolitical Implications",
+    "descricao": "Examining how the Chinese initiative is transforming trade and political relations between Asia, Europe, and Africa.",
+    "categoria": "International Trade",
+    "data": "2024-01-15",
+    "autor": "Prof. Miguel Torres",
+    "imagem": "/placeholder.svg?height=400&width=600",
+    "conteudo": "The Belt and Road Initiative, known as the New Silk Road, represents one of the most ambitious geopolitical strategies of the 21st century. This Chinese project is redefining global trade and political relations...",
+    "tags": ["china", "silk-road", "trade", "geopolitics"]
+  }
+]

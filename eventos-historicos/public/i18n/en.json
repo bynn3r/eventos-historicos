@@ -1,0 +1,72 @@
+{
+  "menu": {
+    "home": "Home",
+    "geopolitics": "Geopolitics News",
+    "curiosities": "Historical Curiosities",
+    "events": "Major Events",
+    "timeline": "Timeline",
+    "more": "More",
+    "about": "About Us",
+    "contact": "Contact",
+    "privacy": "Privacy Policy",
+    "search": "Advanced Search"
+  },
+  "hero": {
+    "title": "Exploring Historical Events that Shaped the World",
+    "subtitle": "Explore world geopolitics, discover fascinating curiosities and understand the major events that defined our history through deep analysis and exclusive content.",
+    "latestNews": "Latest News",
+    "timeline": "Timeline"
+  },
+  "sections": {
+    "featuredNews": "Featured News",
+    "featuredNewsSubtitle": "The latest geopolitical analysis and world events",
+    "historicalCuriosities": "Historical Curiosities",
+    "historicalCuriositiesSubtitle": "Fascinating facts you didn't know about history",
+    "majorEvents": "Major Events",
+    "majorEventsSubtitle": "The moments that defined the course of humanity",
+    "seeAll": "See All"
+  },
+  "newsletter": {
+    "title": "Stay Informed",
+    "subtitle": "Receive the latest historical and geopolitical analysis directly in your email",
+    "placeholder": "Enter your email",
+    "subscribe": "Subscribe"
+  },
+  "footer": {
+    "description": "Your trusted source for deep historical analysis and geopolitical understanding of the contemporary world.",
+    "quickLinks": "Quick Links",
+    "categories": "Categories",
+    "contact": "Contact",
+    "rights": "© 2024 Historical Events. All rights reserved.",
+    "email": "contact@historicalevents.com",
+    "phone": "+1 (555) 999-9999"
+  },
+  "common": {
+    "readMore": "Read More",
+    "loading": "Loading...",
+    "search": "Search",
+    "searchPlaceholder": "Search articles...",
+    "date": "Date",
+    "author": "Author",
+    "category": "Category",
+    "tags": "Tags",
+    "share": "Share",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous"
+  },
+  "pages": {
+    "about": {
+      "title": "About Us",
+      "subtitle": "Learn about our mission and team"
+    },
+    "contact": {
+      "title": "Contact",
+      "subtitle": "Get in touch with us"
+    },
+    "privacy": {
+      "title": "Privacy Policy",
+      "subtitle": "How we protect your data"
+    }
+  }
+}

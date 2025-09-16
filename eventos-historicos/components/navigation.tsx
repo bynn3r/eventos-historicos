@@ -25,6 +25,8 @@ import {
   ChevronDown,
 } from "lucide-react"
 import { useTheme } from "next-themes"
+import { useLanguage } from "@/contexts/language-context"
+import { LanguageToggle } from "@/components/language-toggle"
 
 export function Navigation() {
   const [searchTerm, setSearchTerm] = useState("")
@@ -32,6 +34,7 @@ export function Navigation() {
   const dropdownRef = useRef<HTMLDivElement>(null)
   const { theme, setTheme } = useTheme()
   const router = useRouter()
+  const { t } = useLanguage()
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault()
@@ -73,28 +76,28 @@ export function Navigation() {
               href="/noticias"
               className="inline-flex h-10 items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none"
             >
-              Notícias de Geopolítica
+              {t("menu.geopolitics")}
             </Link>
 
             <Link
               href="/curiosidades"
               className="inline-flex h-10 items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none"
             >
-              Curiosidades Históricas
+              {t("menu.curiosities")}
             </Link>
 
             <Link
               href="/grandes-eventos"
               className="inline-flex h-10 items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none"
             >
-              Grandes Eventos
+              {t("menu.events")}
             </Link>
 
             <Link
               href="/linha-do-tempo"
               className="inline-flex h-10 items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none"
             >
-              Linha do Tempo
+              {t("menu.timeline")}
             </Link>
 
             <div className="relative" ref={dropdownRef}>
@@ -102,7 +105,7 @@ export function Navigation() {
                 onClick={() => setMaisOpen(!maisOpen)}
                 className="inline-flex h-10 items-center justify-center rounded-md bg-yellow-500 hover:bg-yellow-600 px-4 py-2 text-sm font-medium text-black transition-colors focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2"
               >
-                Mais
+                {t("menu.more")}
                 <ChevronDown className="ml-1 h-4 w-4" />
               </button>
               {maisOpen && (
@@ -114,7 +117,7 @@ export function Navigation() {
                       onClick={() => setMaisOpen(false)}
                     >
                       <Info className="mr-3 h-4 w-4" />
-                      Sobre Nós
+                      {t("menu.about")}
                     </Link>
                     <Link
                       href="/contato"
@@ -122,7 +125,7 @@ export function Navigation() {
                       onClick={() => setMaisOpen(false)}
                     >
                       <Mail className="mr-3 h-4 w-4" />
-                      Contato
+                      {t("menu.contact")}
                     </Link>
                     <Link
                       href="/privacidade"
@@ -130,7 +133,7 @@ export function Navigation() {
                       onClick={() => setMaisOpen(false)}
                     >
                       <Globe className="mr-3 h-4 w-4" />
-                      Política de Privacidade
+                      {t("menu.privacy")}
                     </Link>
                     <Separator className="my-1" />
                     <Link
@@ -139,7 +142,7 @@ export function Navigation() {
                       onClick={() => setMaisOpen(false)}
                     >
                       <SearchIcon className="mr-3 h-4 w-4" />
-                      Busca Avançada
+                      {t("menu.search")}
                     </Link>
                   </div>
                 </div>
@@ -147,18 +150,20 @@ export function Navigation() {
             </div>
           </nav>
 
-          {/* Search and Theme Toggle */}
+          {/* Search, Language Toggle and Theme Toggle */}
           <div className="flex items-center space-x-2">
             {/* Search */}
             <form onSubmit={handleSearch} className="relative hidden sm:block">
               <Search className="absolute left-2 top-2.5 h-4 w-4 text-muted-foreground" />
               <Input
-                placeholder="Buscar artigos..."
+                placeholder={t("common.searchPlaceholder")}
                 className="pl-8 w-[150px] lg:w-[250px]"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
               />
             </form>
+
+            <LanguageToggle />
 
             {/* Theme Toggle */}
             <Button variant="ghost" size="icon" onClick={() => setTheme(theme === "light" ? "dark" : "light")}>
@@ -184,6 +189,11 @@ export function Navigation() {
                 </SheetHeader>
 
                 <nav className="flex flex-col space-y-1">
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-sm font-medium">Idioma / Language</span>
+                    <LanguageToggle />
+                  </div>
+
                   {/* Main Navigation */}
                   <div className="space-y-1">
                     <Link
@@ -191,7 +201,7 @@ export function Navigation() {
                       className="flex items-center space-x-3 rounded-lg px-3 py-3 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
                     >
                       <Newspaper className="h-5 w-5 text-primary" />
-                      <span>Notícias de Geopolítica</span>
+                      <span>{t("menu.geopolitics")}</span>
                     </Link>
 
                     <Link
@@ -199,7 +209,7 @@ export function Navigation() {
                       className="flex items-center space-x-3 rounded-lg px-3 py-3 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
                     >
                       <BookOpen className="h-5 w-5 text-primary" />
-                      <span>Curiosidades Históricas</span>
+                      <span>{t("menu.curiosities")}</span>
                     </Link>
 
                     <Link
@@ -207,7 +217,7 @@ export function Navigation() {
                       className="flex items-center space-x-3 rounded-lg px-3 py-3 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
                     >
                       <Calendar className="h-5 w-5 text-primary" />
-                      <span>Grandes Eventos</span>
+                      <span>{t("menu.events")}</span>
                     </Link>
 
                     <Link
@@ -215,7 +225,7 @@ export function Navigation() {
                       className="flex items-center space-x-3 rounded-lg px-3 py-3 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
                     >
                       <Clock className="h-5 w-5 text-primary" />
-                      <span>Linha do Tempo</span>
+                      <span>{t("menu.timeline")}</span>
                     </Link>
                   </div>
 
@@ -228,7 +238,7 @@ export function Navigation() {
                       className="flex items-center space-x-3 rounded-lg px-3 py-3 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
                     >
                       <Info className="h-5 w-5 text-muted-foreground" />
-                      <span>Sobre</span>
+                      <span>{t("menu.about")}</span>
                     </Link>
 
                     <Link
@@ -236,7 +246,7 @@ export function Navigation() {
                       className="flex items-center space-x-3 rounded-lg px-3 py-3 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
                     >
                       <Mail className="h-5 w-5 text-muted-foreground" />
-                      <span>Contato</span>
+                      <span>{t("menu.contact")}</span>
                     </Link>
 
                     <Link
@@ -244,7 +254,7 @@ export function Navigation() {
                       className="flex items-center space-x-3 rounded-lg px-3 py-3 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
                     >
                       <Globe className="h-5 w-5 text-muted-foreground" />
-                      <span>Política de Privacidade</span>
+                      <span>{t("menu.privacy")}</span>
                     </Link>
 
                     <Link
@@ -252,7 +262,7 @@ export function Navigation() {
                       className="flex items-center space-x-3 rounded-lg px-3 py-3 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
                     >
                       <SearchIcon className="h-5 w-5 text-muted-foreground" />
-                      <span>Busca Avançada</span>
+                      <span>{t("menu.search")}</span>
                     </Link>
                   </div>
 
@@ -260,11 +270,11 @@ export function Navigation() {
 
                   {/* Mobile Search */}
                   <div className="space-y-2">
-                    <label className="text-sm font-medium text-muted-foreground">Buscar Conteúdo</label>
+                    <label className="text-sm font-medium text-muted-foreground">{t("common.search")}</label>
                     <form onSubmit={handleSearch} className="relative">
                       <Search className="absolute left-3 top-2.5 h-4 w-4 text-muted-foreground" />
                       <Input
-                        placeholder="Buscar artigos..."
+                        placeholder={t("common.searchPlaceholder")}
                         className="pl-9"
                         value={searchTerm}
                         onChange={(e) => setSearchTerm(e.target.value)}

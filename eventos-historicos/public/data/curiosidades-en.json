@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "titulo": "The Mystery of the Library of Alexandria",
+    "descricao": "Contrary to popular belief, the famous Library of Alexandria was not destroyed in a single catastrophic event. Instead, it gradually declined over several centuries due to a combination of political, economic, and religious factors.",
+    "categoria": "Antiquity",
+    "data": "2024-01-15",
+    "autor": "Dr. Marina Santos",
+    "imagem": "/placeholder.svg?height=400&width=600",
+    "conteudo": "The Library of Alexandria, one of the greatest wonders of the ancient world, continues to fascinate historians and the general public. Founded in the 3rd century BC during the reign of Ptolemy I, it represented the pinnacle of knowledge and scholarship in the Hellenistic world...",
+    "tags": ["alexandria", "library", "antiquity", "knowledge"]
+  },
+  {
+    "id": 2,
+    "titulo": "Napoleon and His True Height",
+    "descricao": "Napoleon Bonaparte was not as short as many believe. At 1.70m tall, he was average height for men of his time. The confusion arose due to differences between French and English measurements.",
+    "categoria": "Napoleonic Era",
+    "data": "2024-01-10",
+    "autor": "Prof. Carlos Mendes",
+    "imagem": "/placeholder.svg?height=400&width=600",
+    "conteudo": "One of the most persistent legends about Napoleon Bonaparte is that he was exceptionally short. This misconception has its roots in a combination of enemy propaganda and confusion about measurement systems...",
+    "tags": ["napoleon", "height", "myths", "history"]
+  },
+  {
+    "id": 3,
+    "titulo": "The Great Wall of China Is Not Visible from Space",
+    "descricao": "Contrary to popular myth, the Great Wall of China is not visible to the naked eye from space. This urban legend has been debunked by several astronauts, including those who have been to the International Space Station.",
+    "categoria": "Ancient China",
+    "data": "2024-01-05",
+    "autor": "Dr. Li Wei",
+    "imagem": "/placeholder.svg?height=400&width=600",
+    "conteudo": "The Great Wall of China is one of the most impressive structures ever built by humanity. Stretching for thousands of kilometers across Chinese territory, it represents centuries of hard work and impressive engineering...",
+    "tags": ["china", "wall", "space", "myths"]
+  }
+]

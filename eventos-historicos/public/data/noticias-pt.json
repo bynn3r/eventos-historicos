@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "titulo": "Tensões Crescentes no Mar do Sul da China",
+    "descricao": "Análise das recentes movimentações militares na região e suas implicações para a estabilidade geopolítica mundial.",
+    "categoria": "Geopolítica Asiática",
+    "data": "2024-01-20",
+    "autor": "Dr. Roberto Silva",
+    "imagem": "/geopolitics-world-map-with-news-overlay.jpg",
+    "conteudo": "As tensões no Mar do Sul da China continuam a escalar, com implicações significativas para a ordem geopolítica mundial. Recentes exercícios militares e disputas territoriais têm aumentado as preocupações sobre a estabilidade regional...",
+    "tags": ["china", "geopolitica", "mar-sul-china", "tensoes"]
+  },
+  {
+    "id": 2,
+    "titulo": "O Impacto da Guerra na Ucrânia na Economia Global",
+    "descricao": "Como o conflito ucraniano está redefinindo as cadeias de suprimento globais e as alianças econômicas internacionais.",
+    "categoria": "Economia Global",
+    "data": "2024-01-18",
+    "autor": "Dra. Ana Pereira",
+    "imagem": "/world-map-with-geopolitical-tensions.jpg",
+    "conteudo": "O conflito na Ucrânia tem repercussões que vão muito além das fronteiras europeias. As sanções econômicas, a interrupção das cadeias de suprimento e a reorganização das alianças comerciais estão redefinindo a economia global...",
+    "tags": ["ucrania", "economia", "sancoes", "global"]
+  },
+  {
+    "id": 3,
+    "titulo": "A Nova Rota da Seda e Suas Implicações Geopolíticas",
+    "descricao": "Examinando como a iniciativa chinesa está transformando as relações comerciais e políticas entre a Ásia, Europa e África.",
+    "categoria": "Comércio Internacional",
+    "data": "2024-01-15",
+    "autor": "Prof. Miguel Torres",
+    "imagem": "/placeholder.svg?height=400&width=600",
+    "conteudo": "A Iniciativa do Cinturão e Rota, conhecida como Nova Rota da Seda, representa uma das mais ambiciosas estratégias geopolíticas do século XXI. Este projeto chinês está redefinindo as relações comerciais e políticas globais...",
+    "tags": ["china", "rota-seda", "comercio", "geopolitica"]
+  }
+]

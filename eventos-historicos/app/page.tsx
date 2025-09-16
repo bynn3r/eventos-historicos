@@ -1,3 +1,5 @@
+"use client"
+
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { SearchWidget } from "@/components/search-widget"
@@ -7,8 +9,11 @@ import { Badge } from "@/components/ui/badge"
 import { Calendar, Clock, ArrowRight, Globe, BookOpen, TrendingUp } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
+import { useLanguage } from "@/contexts/language-context"
 
 export default function HomePage() {
+  const { t } = useLanguage()
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navigation />
@@ -18,24 +23,19 @@ export default function HomePage() {
         <section className="relative bg-gradient-to-br from-primary/5 to-accent/5 py-20">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-4xl md:text-6xl font-bold text-balance mb-6">
-                Desvendando os <span className="text-primary">Eventos Históricos</span> que Moldaram o Mundo
-              </h1>
-              <p className="text-xl text-muted-foreground text-pretty mb-8 max-w-2xl mx-auto">
-                Explore a geopolítica mundial, descubra curiosidades fascinantes e compreenda os grandes eventos que
-                definiram nossa história através de análises profundas e conteúdo exclusivo.
-              </p>
+              <h1 className="text-4xl md:text-6xl font-bold text-balance mb-6">{t("hero.title")}</h1>
+              <p className="text-xl text-muted-foreground text-pretty mb-8 max-w-2xl mx-auto">{t("hero.subtitle")}</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" asChild>
                   <Link href="/noticias">
                     <TrendingUp className="mr-2 h-5 w-5" />
-                    Últimas Notícias
+                    {t("hero.latestNews")}
                   </Link>
                 </Button>
                 <Button variant="outline" size="lg" asChild>
                   <Link href="/linha-do-tempo">
                     <Clock className="mr-2 h-5 w-5" />
-                    Linha do Tempo
+                    {t("hero.timeline")}
                   </Link>
                 </Button>
               </div>
@@ -48,12 +48,12 @@ export default function HomePage() {
           <div className="container mx-auto px-4">
             <div className="flex items-center justify-between mb-8">
               <div>
-                <h2 className="text-3xl font-bold mb-2">Notícias em Destaque</h2>
-                <p className="text-muted-foreground">As últimas análises geopolíticas e eventos mundiais</p>
+                <h2 className="text-3xl font-bold mb-2">{t("sections.featuredNews")}</h2>
+                <p className="text-muted-foreground">{t("sections.featuredNewsSubtitle")}</p>
               </div>
               <Button variant="outline" asChild>
                 <Link href="/noticias">
-                  Ver Todas <ArrowRight className="ml-2 h-4 w-4" />
+                  {t("sections.seeAll")} <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
             </div>
@@ -85,7 +85,7 @@ export default function HomePage() {
                       equilíbrio de poder mundial, incluindo o papel das grandes potências.
                     </p>
                     <Button asChild>
-                      <Link href="/noticias/tensoes-oriente-medio-2025">Ler Análise Completa</Link>
+                      <Link href="/noticias/tensoes-oriente-medio-2025">{t("common.readMore")}</Link>
                     </Button>
                   </div>
                 </div>
@@ -105,7 +105,7 @@ export default function HomePage() {
                       Análise dos acordos comerciais recentes e seu impacto na economia global.
                     </p>
                     <Button variant="outline" size="sm" asChild>
-                      <Link href="/noticias/china-eua-comercio-2025">Leia Mais</Link>
+                      <Link href="/noticias/china-eua-comercio-2025">{t("common.readMore")}</Link>
                     </Button>
                   </CardContent>
                 </Card>
@@ -119,12 +119,12 @@ export default function HomePage() {
           <div className="container mx-auto px-4">
             <div className="flex items-center justify-between mb-8">
               <div>
-                <h2 className="text-3xl font-bold mb-2">Curiosidades Históricas</h2>
-                <p className="text-muted-foreground">Fatos fascinantes que você talvez não conhecia</p>
+                <h2 className="text-3xl font-bold mb-2">{t("sections.historicalCuriosities")}</h2>
+                <p className="text-muted-foreground">{t("sections.historicalCuriositiesSubtitle")}</p>
               </div>
               <Button variant="outline" asChild>
                 <Link href="/curiosidades">
-                  Ver Todas <ArrowRight className="ml-2 h-4 w-4" />
+                  {t("sections.seeAll")} <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
             </div>
@@ -144,7 +144,7 @@ export default function HomePage() {
                   </p>
                   <Button variant="ghost" size="sm" asChild>
                     <Link href="/curiosidades/biblioteca-de-alexandria">
-                      Saiba Mais <ArrowRight className="ml-2 h-4 w-4" />
+                      {t("common.readMore")} <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
                 </CardContent>
@@ -164,7 +164,7 @@ export default function HomePage() {
                   </p>
                   <Button variant="ghost" size="sm" asChild>
                     <Link href="/curiosidades/imperio-mongol">
-                      Saiba Mais <ArrowRight className="ml-2 h-4 w-4" />
+                      {t("common.readMore")} <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
                 </CardContent>
@@ -184,7 +184,7 @@ export default function HomePage() {
                   </p>
                   <Button variant="ghost" size="sm" asChild>
                     <Link href="/curiosidades/guerra-cem-anos">
-                      Saiba Mais <ArrowRight className="ml-2 h-4 w-4" />
+                      {t("common.readMore")} <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
                 </CardContent>
@@ -197,10 +197,8 @@ export default function HomePage() {
         <section className="py-16 bg-background">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Linha do Tempo Interativa</h2>
-              <p className="text-muted-foreground max-w-2xl mx-auto">
-                Explore os eventos mais importantes da história mundial de forma cronológica e interativa
-              </p>
+              <h2 className="text-3xl font-bold mb-4">{t("sections.majorEvents")}</h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">{t("sections.majorEventsSubtitle")}</p>
             </div>
 
             <div className="relative max-w-4xl mx-auto">
@@ -270,7 +268,7 @@ export default function HomePage() {
                 <Button size="lg" asChild>
                   <Link href="/linha-do-tempo">
                     <Clock className="mr-2 h-5 w-5" />
-                    Explorar Linha do Tempo Completa
+                    {t("hero.timeline")}
                   </Link>
                 </Button>
               </div>
@@ -281,19 +279,16 @@ export default function HomePage() {
         {/* Newsletter Section */}
         <section className="py-16 bg-primary text-primary-foreground">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold mb-4 text-primary-foreground">Mantenha-se Informado</h2>
-            <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-              Receba análises exclusivas, curiosidades históricas e as últimas notícias de geopolítica diretamente no
-              seu email.
-            </p>
+            <h2 className="text-3xl font-bold mb-4 text-primary-foreground">{t("newsletter.title")}</h2>
+            <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">{t("newsletter.subtitle")}</p>
             <div className="max-w-md mx-auto flex gap-4">
               <input
                 type="email"
-                placeholder="Seu melhor email"
+                placeholder={t("newsletter.placeholder")}
                 className="flex-1 px-4 py-3 rounded-lg text-foreground"
               />
               <Button variant="secondary" size="lg">
-                Inscrever-se
+                {t("newsletter.subscribe")}
               </Button>
             </div>
             <p className="text-sm opacity-75 mt-4">Sem spam. Cancele a qualquer momento.</p>
