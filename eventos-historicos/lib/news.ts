@@ -238,6 +238,10 @@ function sanitizeHtml(html: string) {
   return normalizeEncoding(html)
     .replace(/<script[\s\S]*?<\/script>/gi, "")
     .replace(/<style[\s\S]*?<\/style>/gi, "")
+    .replace(/<picture[\s\S]*?<\/picture>/gi, "")
+    .replace(/<figure[\s\S]*?<\/figure>/gi, "")
+    .replace(/<img[^>]*>/gi, "")
+    .replace(/<source[^>]*>/gi, "")
     .replace(/\son\w+="[^"]*"/gi, "")
     .replace(/\son\w+='[^']*'/gi, "")
     .replace(/javascript:/gi, "")
@@ -246,6 +250,90 @@ function sanitizeHtml(html: string) {
     .replace(/<p>\s*(leia mais|read more|continue reading)[\s\S]*?<\/p>/gi, "")
     .replace(/<div[^>]*class="[^"]*(advert|promo|banner)[^"]*"[\s\S]*?<\/div>/gi, "")
     .trim()
+}
+
+function cleanFeedText(text: string) {
+  return normalizeEncoding(text)
+    .replace(/\uFFFD/g, "")
+    .replace(/(?:veja os v[íi]deos[^.]*\.)/gi, "")
+    .replace(/(?:mande para o g1[^.]*\.)/gi, "")
+    .replace(/(?:tem alguma sugest[aã]o de reportagem[^.]*\.)/gi, "")
+    .replace(/(?:clique aqui para seguir[^.]*\.)/gi, "")
+    .replace(/(?:leia mais no site original\.?)/gi, "")
+    .replace(/\s{2,}/g, " ")
+    .trim()
+}
+
+function paragraphizeText(text: string) {
+  const normalized = cleanFeedText(text)
+
+  if (!normalized) {
+    return []
+  }
+
+  const rawBlocks = normalized
+    .split(/\n\s*\n/)
+    .map((block) => block.replace(/\s+/g, " ").trim())
+    .filter(Boolean)
+
+  const paragraphs: string[] = []
+
+  for (const block of rawBlocks) {
+    if (block.length <= 360) {
+      paragraphs.push(block)
+      continue
+    }
+
+    const sentences = block
+      .split(/(?<=[.!?])\s+(?=[A-ZÀ-Ý0-9"])/)
+      .map((sentence) => sentence.trim())
+      .filter(Boolean)
+
+    if (sentences.length <= 1) {
+      paragraphs.push(block)
+      continue
+    }
+
+    let currentParagraph = ""
+
+    for (const sentence of sentences) {
+      const nextParagraph = currentParagraph ? `${currentParagraph} ${sentence}` : sentence
+
+      if (nextParagraph.length > 420 && currentParagraph) {
+        paragraphs.push(currentParagraph)
+        currentParagraph = sentence
+        continue
+      }
+
+      currentParagraph = nextParagraph
+    }
+
+    if (currentParagraph) {
+      paragraphs.push(currentParagraph)
+    }
+  }
+
+  return paragraphs
+}
+
+function extractParagraphText(html: string) {
+  const clean = sanitizeHtml(html)
+  if (!clean) {
+    return ""
+  }
+
+  const text = clean
+    .replace(/<(br|\/p|\/div|\/li|\/h\d)>/gi, "\n")
+    .replace(/<li>/gi, "• ")
+    .replace(/<[^>]+>/g, " ")
+
+  return paragraphizeText(text).join("\n\n")
+}
+
+function textToHtmlParagraphs(text: string) {
+  return paragraphizeText(text)
+    .map((paragraph) => `<p>${paragraph}</p>`)
+    .join("")
 }
 
 function htmlToParagraphs(html: string) {
@@ -389,7 +477,7 @@ function buildRssSlug(item: ParsedFeedItem) {
 }
 
 function buildRssBody(article: ParsedFeedItem, categoria: string, resumo: boolean) {
-  const extractedText = htmlToParagraphs(article.conteudoHtml || article.descricao)
+  const extractedText = extractParagraphText(article.conteudoHtml || article.descricao)
   const baseText = extractedText || article.descricao || article.titulo
   const suffix = resumo
     ? `\n\nEste conteúdo é um resumo editorial gerado a partir do feed oficial de ${article.fonte}. Para ler a matéria completa, acesse o site original.`
@@ -411,6 +499,15 @@ function buildRssHtml(article: ParsedFeedItem, categoria: string, resumo: boolea
   return buildHtmlFromText(buildRssBody(article, categoria, resumo))
 }
 
+function buildStructuredRssHtml(article: ParsedFeedItem, categoria: string, resumo: boolean) {
+  const baseText = extractParagraphText(article.conteudoHtml || article.descricao) || article.descricao || article.titulo
+  const notice = resumo
+    ? `<p><strong>Resumo editorial:</strong> este feed parece trazer apenas um trecho da publicação original de ${article.fonte}. Use o link oficial ao final da página para ler a matéria completa.</p>`
+    : `<p><strong>Crédito editorial:</strong> conteúdo exibido a partir do feed oficial de ${article.fonte}, dentro da curadoria de ${categoria} do Eventos Históricos.</p>`
+
+  return `${textToHtmlParagraphs(baseText)}${notice}`
+}
+
 function isRelevantArticle(article: ParsedFeedItem) {
   const text = normalizeText(`${article.titulo} ${article.descricao} ${article.conteudoHtml}`)
   const hasRelevantKeyword = RELEVANT_KEYWORDS.some((keyword) => text.includes(keyword))
@@ -430,7 +527,7 @@ function parseRssItems(xml: string, feedName: string) {
       const data = stripTags(extractTag(item, "pubDate"))
       const fonte = stripTags(extractTag(item, "source")) || feedName
       const conteudoHtml = sanitizeHtml(contentEncoded || description)
-      const descricao = htmlToParagraphs(description || contentEncoded).split(/\n\s*\n/)[0] || titulo
+      const descricao = extractParagraphText(description || contentEncoded).split(/\n\s*\n/)[0] || titulo
       const imagem = extractImage(item, contentEncoded || description)
 
       return {
@@ -502,7 +599,7 @@ export async function getRssNews(limit = 20): Promise<SiteNewsArticle[]> {
       const slug = buildRssSlug(item)
       const resumo = isTruncated(item.descricao) || !item.conteudoHtml || item.conteudoHtml.length < 280
       const conteudo = buildRssBody(item, categoria, resumo)
-      const conteudoHtml = buildRssHtml(item, categoria, resumo)
+      const conteudoHtml = buildStructuredRssHtml(item, categoria, resumo)
       const score = scoreArticle(item, categoria)
 
       return {

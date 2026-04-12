@@ -2,9 +2,9 @@ import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
+import { NewsImage } from "@/components/news-image"
 import { Calendar, ArrowLeft, ExternalLink, User } from "lucide-react"
 import Link from "next/link"
-import Image from "next/image"
 import { notFound } from "next/navigation"
 import { formatNewsDate, getNewsArticleBySlug, getRelatedNews, renderSafeArticleHtml } from "@/lib/news"
 
@@ -98,7 +98,7 @@ export default async function NoticiaPage({ params }: NoticiaPageProps) {
                 {noticia.imagem && (
                   <figure className="mb-8">
                     <div className="relative aspect-[16/9] overflow-hidden rounded-2xl border bg-muted">
-                      <Image src={noticia.imagem || "/placeholder.svg"} alt={noticia.titulo} fill className="object-cover" />
+                      <NewsImage src={noticia.imagem} alt={noticia.titulo} fill className="object-cover" />
                     </div>
                     <figcaption className="mt-3 text-sm leading-6 text-muted-foreground">{imageCaption}</figcaption>
                   </figure>

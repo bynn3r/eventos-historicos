@@ -1,8 +1,8 @@
-import Image from "next/image"
 import Link from "next/link"
 import { Calendar, ExternalLink, User } from "lucide-react"
 import { Footer } from "@/components/footer"
 import { Navigation } from "@/components/navigation"
+import { NewsImage } from "@/components/news-image"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -47,7 +47,7 @@ export function NewsPageContent({ rssArticles, localArticles }: NewsPageContentP
               <Card className="overflow-hidden">
                 <div className="grid md:grid-cols-2 gap-0">
                   <div className="aspect-video md:aspect-auto relative">
-                    <Image src={featuredNoticia.imagem} alt={featuredNoticia.titulo} fill className="object-cover" />
+                    <NewsImage src={featuredNoticia.imagem} alt={featuredNoticia.titulo} fill className="object-cover" />
                     <Badge className="absolute top-4 left-4 bg-destructive text-destructive-foreground">
                       {featuredNoticia.tipo === "rss" ? "Destaque RSS" : "Análise do portal"}
                     </Badge>
@@ -104,7 +104,7 @@ export function NewsPageContent({ rssArticles, localArticles }: NewsPageContentP
                   {otherRssNoticias.map((noticia) => (
                     <Card key={noticia.id} className="overflow-hidden hover:shadow-lg transition-shadow h-full flex flex-col">
                       <div className="aspect-video relative">
-                        <Image src={noticia.imagem} alt={noticia.titulo} fill className="object-cover" />
+                        <NewsImage src={noticia.imagem} alt={noticia.titulo} fill className="object-cover" />
                       </div>
                       <CardHeader className="flex-1">
                         <div className="flex flex-wrap items-center gap-2 text-sm text-muted-foreground mb-2">
@@ -161,7 +161,7 @@ export function NewsPageContent({ rssArticles, localArticles }: NewsPageContentP
                 {localArticles.map((noticia) => (
                   <Card key={noticia.id} className="overflow-hidden hover:shadow-lg transition-shadow h-full flex flex-col">
                     <div className="aspect-video relative">
-                      <Image src={noticia.imagem} alt={noticia.titulo} fill className="object-cover" />
+                      <NewsImage src={noticia.imagem} alt={noticia.titulo} fill className="object-cover" />
                     </div>
                     <CardHeader className="flex-1">
                       <div className="flex flex-wrap items-center gap-2 text-sm text-muted-foreground mb-2">

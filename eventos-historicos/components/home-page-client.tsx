@@ -3,12 +3,12 @@
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { SearchWidget } from "@/components/search-widget"
+import { NewsImage } from "@/components/news-image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Calendar, Clock, ArrowRight, Globe, BookOpen, TrendingUp, ExternalLink } from "lucide-react"
 import Link from "next/link"
-import Image from "next/image"
 import { useLanguage } from "@/contexts/language-context"
 import { formatNewsDate, type SiteNewsArticle } from "@/lib/news"
 
@@ -74,7 +74,7 @@ export function HomePageClient({ featuredNews }: HomePageClientProps) {
                 <Card className="lg:col-span-3 overflow-hidden">
                   <div className="grid md:grid-cols-2 gap-0">
                     <div className="aspect-video md:aspect-auto relative">
-                      <Image src={featuredArticle.imagem} alt={featuredArticle.titulo} fill className="object-cover" />
+                      <NewsImage src={featuredArticle.imagem} alt={featuredArticle.titulo} fill className="object-cover" />
                       <Badge className="absolute top-4 left-4 bg-destructive text-destructive-foreground">
                         Destaque RSS
                       </Badge>
