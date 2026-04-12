@@ -32,6 +32,8 @@ interface ParsedFeedItem {
 }
 
 const FEED_REVALIDATE_SECONDS = 600
+const MAX_NEWS_AGE_DAYS = 10
+const MAX_HISTORY_AGE_DAYS = 30
 
 const RSS_FEEDS = [
   { name: "BBC World", url: "http://feeds.bbci.co.uk/news/world/rss.xml" },
@@ -277,13 +279,37 @@ function clipText(text: string, maxLength: number) {
   return `${normalized.slice(0, maxLength).trimEnd()}...`
 }
 
+function normalizeImageUrl(url?: string) {
+  if (!url) {
+    return ""
+  }
+
+  const normalized = decodeEntities(url).trim()
+
+  if (!/^https?:\/\//i.test(normalized) && !normalized.startsWith("/")) {
+    return ""
+  }
+
+  if (/(logo|icon|favicon|avatar|sprite)/i.test(normalized)) {
+    return ""
+  }
+
+  if (/w16|w24|w32|w48/i.test(normalized)) {
+    return ""
+  }
+
+  return normalized
+}
+
 function extractImage(item: string, html: string) {
-  return (
-    extractAttribute(item, "media:content", "url") ||
-    extractAttribute(item, "media:thumbnail", "url") ||
-    extractAttribute(item, "enclosure", "url") ||
-    extractAttribute(html, "img", "src")
-  )
+  return [
+    extractAttribute(item, "media:content", "url"),
+    extractAttribute(item, "media:thumbnail", "url"),
+    extractAttribute(item, "enclosure", "url"),
+    extractAttribute(html, "img", "src"),
+  ]
+    .map((candidate) => normalizeImageUrl(candidate))
+    .find(Boolean)
 }
 
 function isTruncated(text: string) {
@@ -316,8 +342,26 @@ function scoreArticle(article: ParsedFeedItem, categoria: string) {
   const globalScore = GLOBAL_PRIORITY_KEYWORDS.filter((keyword) => text.includes(keyword)).length * 8
   const brazilGeneralScore = BRAZIL_GENERAL_KEYWORDS.filter((keyword) => text.includes(keyword)).length * -7
   const titleBonus = /(war|guerra|election|elei|crise|summit|coup|sanction|otan|onu|nasa|artemis)/.test(text) ? 12 : 0
+  const articleDate = article.data ? new Date(article.data) : new Date()
+  const ageHours = Number.isNaN(articleDate.getTime()) ? 9999 : (Date.now() - articleDate.getTime()) / 36e5
+  const ageScore =
+    ageHours <= 12
+      ? 140
+      : ageHours <= 24
+        ? 115
+        : ageHours <= 48
+          ? 90
+          : ageHours <= 72
+            ? 70
+            : ageHours <= 120
+              ? 45
+              : ageHours <= 168
+                ? 25
+                : ageHours <= 240
+                  ? 10
+                  : -20
 
-  return sourceScore + categoryScore + globalScore + brazilGeneralScore + titleBonus
+  return sourceScore + categoryScore + globalScore + brazilGeneralScore + titleBonus + ageScore
 }
 
 function inferImage(article: { titulo: string; descricao: string; categoria: string }) {
@@ -434,6 +478,17 @@ export async function getRssNews(limit = 20): Promise<SiteNewsArticle[]> {
       seen.add(key)
       return true
     })
+    .filter((item) => {
+      const categoria = inferCategory(item)
+      const parsedDate = item.data ? new Date(item.data) : new Date()
+      if (Number.isNaN(parsedDate.getTime())) {
+        return false
+      }
+
+      const ageDays = (Date.now() - parsedDate.getTime()) / 86_400_000
+      const maxAge = categoria === "História" ? MAX_HISTORY_AGE_DAYS : MAX_NEWS_AGE_DAYS
+      return ageDays <= maxAge
+    })
     .map((item) => {
       const categoria = inferCategory(item)
       const parsedDate = item.data ? new Date(item.data) : new Date()
@@ -458,7 +513,7 @@ export async function getRssNews(limit = 20): Promise<SiteNewsArticle[]> {
         fonte: item.fonte,
         fonteUrl: item.link,
         linkFonte: item.link,
-        imagem: item.imagem || inferImage({ ...item, categoria }),
+        imagem: normalizeImageUrl(item.imagem) || inferImage({ ...item, categoria }),
         tags: [normalizeText(categoria), "rss", normalizeText(item.fonte)],
         href: `/noticias/${slug}`,
         externo: false,
