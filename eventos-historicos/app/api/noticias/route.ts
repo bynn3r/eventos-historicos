@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server"
 import { getCuratedNews, getRssNews } from "@/lib/news"
 
-export const revalidate = 1800
+export const revalidate = 600
 
 export async function GET() {
   const [rssArticles, curated] = await Promise.all([getRssNews(20), getCuratedNews(20)])

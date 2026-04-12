@@ -6,7 +6,7 @@ import { Calendar, ArrowLeft, ExternalLink, User } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 import { notFound } from "next/navigation"
-import { formatNewsDate, getNewsArticleBySlug, getRelatedNews } from "@/lib/news"
+import { formatNewsDate, getNewsArticleBySlug, getRelatedNews, renderSafeArticleHtml } from "@/lib/news"
 
 interface NoticiaPageProps {
   params: {
@@ -41,7 +41,7 @@ export default async function NoticiaPage({ params }: NoticiaPageProps) {
   }
 
   const relatedNews = await getRelatedNews(params.slug, 2)
-  const contentParagraphs = noticia.conteudo.split(/\n\s*\n/).filter(Boolean)
+  const safeHtml = renderSafeArticleHtml(noticia.conteudoHtml)
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -64,7 +64,8 @@ export default async function NoticiaPage({ params }: NoticiaPageProps) {
                   <span>{formatNewsDate(noticia.data)}</span>
                 </div>
                 <Badge variant="secondary">{noticia.categoria}</Badge>
-                <Badge variant="outline">{noticia.tipo === "rss" ? "Leitura interna via RSS" : "Análise do portal"}</Badge>
+                <Badge variant="outline">{noticia.tipo === "rss" ? "Agregador RSS" : "Análise do portal"}</Badge>
+                {noticia.resumo && <Badge variant="outline">Conteúdo em formato de resumo</Badge>}
                 {noticia.autor && (
                   <div className="flex items-center gap-2">
                     <User className="h-4 w-4" />
@@ -80,7 +81,7 @@ export default async function NoticiaPage({ params }: NoticiaPageProps) {
                 {noticia.linkFonte && (
                   <Button variant="outline" asChild>
                     <a href={noticia.linkFonte} target="_blank" rel="noopener noreferrer">
-                      Ver matéria original
+                      Ver notícia completa no site original
                       <ExternalLink className="ml-2 h-4 w-4" />
                     </a>
                   </Button>
@@ -96,21 +97,17 @@ export default async function NoticiaPage({ params }: NoticiaPageProps) {
 
             <div className="grid lg:grid-cols-[minmax(0,1fr)_280px] gap-10">
               <div>
-                <div className="prose prose-lg max-w-none mb-8">
-                  {contentParagraphs.map((paragraph, index) => (
-                    <p key={`${noticia.slug}-${index}`} className="text-lg leading-relaxed">
-                      {paragraph}
-                    </p>
-                  ))}
-                </div>
+                <div
+                  className="prose prose-lg max-w-none mb-8 prose-p:leading-relaxed prose-p:text-foreground"
+                  dangerouslySetInnerHTML={{ __html: safeHtml }}
+                />
 
                 {noticia.tipo === "rss" && (
                   <div className="rounded-xl border bg-muted/40 p-5 mb-8">
-                    <h2 className="font-semibold mb-2">Crédito e contexto editorial</h2>
+                    <h2 className="font-semibold mb-2">Crédito editorial</h2>
                     <p className="text-sm text-muted-foreground">
-                      Esta página apresenta uma leitura resumida baseada no feed oficial da fonte citada, organizada
-                      dentro da curadoria do Eventos Históricos. A cobertura completa permanece disponível no veículo
-                      original.
+                      Fonte: <span className="font-medium text-foreground">{noticia.fonte}</span>. O Eventos Históricos
+                      organiza este conteúdo a partir do feed oficial e mantém o link para a publicação original.
                     </p>
                   </div>
                 )}
@@ -118,9 +115,9 @@ export default async function NoticiaPage({ params }: NoticiaPageProps) {
 
               <aside className="space-y-6">
                 <div className="rounded-xl border p-5">
-                  <h2 className="font-semibold mb-3">Fonte da notícia</h2>
+                  <h2 className="font-semibold mb-3">Fonte</h2>
                   <p className="text-sm text-muted-foreground mb-3">
-                    Publicada originalmente por <span className="font-medium text-foreground">{noticia.fonte}</span>.
+                    Fonte: <span className="font-medium text-foreground">{noticia.fonte}</span>
                   </p>
                   {noticia.linkFonte && (
                     <a
@@ -129,7 +126,7 @@ export default async function NoticiaPage({ params }: NoticiaPageProps) {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 text-sm text-primary hover:underline"
                     >
-                      Acessar publicação oficial
+                      Ver notícia completa no site original
                       <ExternalLink className="h-4 w-4" />
                     </a>
                   )}

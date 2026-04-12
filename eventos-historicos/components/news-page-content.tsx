@@ -94,31 +94,34 @@ export function NewsPageContent({ rssArticles, localArticles }: NewsPageContentP
                   <div>
                     <h2 className="text-2xl font-bold">Cobertura em tempo quase real</h2>
                     <p className="text-muted-foreground">
-                      Itens mais recentes vindos de NYT, BBC, Al Jazeera, G1 e Folha, já filtrados por tema.
+                      Itens mais recentes vindos de BBC, Al Jazeera, Guardian, G1, UOL, Agência Brasil e fontes abertas
+                      de história, priorizados por peso geopolítico.
                     </p>
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
                   {otherRssNoticias.map((noticia) => (
-                    <Card key={noticia.id} className="overflow-hidden hover:shadow-lg transition-shadow">
+                    <Card key={noticia.id} className="overflow-hidden hover:shadow-lg transition-shadow h-full flex flex-col">
                       <div className="aspect-video relative">
                         <Image src={noticia.imagem} alt={noticia.titulo} fill className="object-cover" />
                       </div>
-                      <CardHeader>
+                      <CardHeader className="flex-1">
                         <div className="flex flex-wrap items-center gap-2 text-sm text-muted-foreground mb-2">
                           <Calendar className="h-4 w-4" />
                           <span>{formatNewsDate(noticia.data)}</span>
                           <Badge variant="secondary">{noticia.categoria}</Badge>
                         </div>
-                        <CardTitle className="text-lg">
+                        <CardTitle className="text-lg leading-tight min-h-[4.5rem]">
                           <Link href={noticia.href} className="hover:text-primary transition-colors">
                             {noticia.titulo}
                           </Link>
                         </CardTitle>
-                        <CardDescription>{noticia.descricao}</CardDescription>
+                        <CardDescription className="min-h-[6.5rem] overflow-hidden [display:-webkit-box] [-webkit-box-orient:vertical] [-webkit-line-clamp:4]">
+                          {noticia.descricao}
+                        </CardDescription>
                       </CardHeader>
-                      <CardContent>
+                      <CardContent className="mt-auto">
                         <div className="flex items-center justify-between gap-3">
                           <Button variant="outline" size="sm" asChild>
                             <Link href={noticia.href}>Ler no site</Link>
@@ -154,22 +157,24 @@ export function NewsPageContent({ rssArticles, localArticles }: NewsPageContentP
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
                 {localArticles.map((noticia) => (
-                  <Card key={noticia.id} className="overflow-hidden hover:shadow-lg transition-shadow">
+                  <Card key={noticia.id} className="overflow-hidden hover:shadow-lg transition-shadow h-full flex flex-col">
                     <div className="aspect-video relative">
                       <Image src={noticia.imagem} alt={noticia.titulo} fill className="object-cover" />
                     </div>
-                    <CardHeader>
+                    <CardHeader className="flex-1">
                       <div className="flex flex-wrap items-center gap-2 text-sm text-muted-foreground mb-2">
                         <Calendar className="h-4 w-4" />
                         <span>{formatNewsDate(noticia.data)}</span>
                         <Badge variant="secondary">{noticia.categoria}</Badge>
                       </div>
-                      <CardTitle className="text-lg">{noticia.titulo}</CardTitle>
-                      <CardDescription>{noticia.descricao}</CardDescription>
+                      <CardTitle className="text-lg leading-tight min-h-[4.5rem]">{noticia.titulo}</CardTitle>
+                      <CardDescription className="min-h-[6.5rem] overflow-hidden [display:-webkit-box] [-webkit-box-orient:vertical] [-webkit-line-clamp:4]">
+                        {noticia.descricao}
+                      </CardDescription>
                     </CardHeader>
-                    <CardContent>
+                    <CardContent className="mt-auto">
                       <div className="flex items-center justify-between gap-3">
                         <Button variant="outline" size="sm" asChild>
                           <Link href={noticia.href}>Leia mais</Link>
