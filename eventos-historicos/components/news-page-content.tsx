@@ -15,7 +15,7 @@ interface NewsPageContentProps {
 
 export function NewsPageContent({ rssArticles, localArticles }: NewsPageContentProps) {
   const featuredNoticia = rssArticles[0] ?? localArticles[0]
-  const otherRssNoticias = rssArticles.slice(1, 7)
+  const otherRssNoticias = rssArticles.slice(1, 10)
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -26,14 +26,17 @@ export function NewsPageContent({ rssArticles, localArticles }: NewsPageContentP
           <div className="container mx-auto px-4">
             <h1 className="text-4xl font-bold mb-4">Notícias de Geopolítica</h1>
             <p className="text-xl text-muted-foreground max-w-3xl">
-              Feed curado por RSS para destacar geopolítica, diplomacia, memória histórica e marcos contemporâneos com
-              relevância global.
+              Agregador em tempo real com feeds internacionais e brasileiros, filtrado para geopolítica, história e
+              eventos de alto impacto global.
             </p>
             <div className="flex flex-wrap gap-2 mt-6">
               <Badge variant="secondary">Atualização automática</Badge>
+              <Badge variant="outline">Exploração Espacial</Badge>
+              <Badge variant="outline">Conflitos</Badge>
+              <Badge variant="outline">Política</Badge>
+              <Badge variant="outline">Economia Global</Badge>
+              <Badge variant="outline">História</Badge>
               <Badge variant="outline">Geopolítica</Badge>
-              <Badge variant="outline">Eventos históricos</Badge>
-              <Badge variant="outline">Corrida espacial</Badge>
             </div>
           </div>
         </section>
@@ -86,7 +89,9 @@ export function NewsPageContent({ rssArticles, localArticles }: NewsPageContentP
                 <div className="flex items-center justify-between mb-6">
                   <div>
                     <h2 className="text-2xl font-bold">Cobertura em tempo quase real</h2>
-                    <p className="text-muted-foreground">Notícias vindas do RSS e filtradas para o tema do site.</p>
+                    <p className="text-muted-foreground">
+                      Itens mais recentes vindos de NYT, BBC, Al Jazeera, G1 e Folha, já filtrados por tema.
+                    </p>
                   </div>
                 </div>
 

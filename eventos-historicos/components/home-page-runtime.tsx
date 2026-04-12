@@ -10,13 +10,13 @@ export function HomePageRuntime() {
   useEffect(() => {
     const loadNews = async () => {
       try {
-        const response = await fetch("/api/noticias")
+        const response = await fetch("/api/rss")
         if (!response.ok) {
           return
         }
 
-        const data = (await response.json()) as { combinedArticles?: SiteNewsArticle[] }
-        setFeaturedNews(data.combinedArticles?.slice(0, 4) ?? [])
+        const data = (await response.json()) as SiteNewsArticle[]
+        setFeaturedNews(data.slice(0, 4))
       } catch (error) {
         console.error("Falha ao carregar notícias em destaque:", error)
       }
