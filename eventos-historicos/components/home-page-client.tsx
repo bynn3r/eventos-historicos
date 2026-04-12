@@ -17,14 +17,6 @@ interface HomePageClientProps {
 }
 
 function NewsCta({ article, children }: { article: SiteNewsArticle; children: React.ReactNode }) {
-  if (article.externo) {
-    return (
-      <a href={article.href} target="_blank" rel="noopener noreferrer">
-        {children}
-      </a>
-    )
-  }
-
   return <Link href={article.href}>{children}</Link>
 }
 
@@ -96,14 +88,24 @@ export function HomePageClient({ featuredNews }: HomePageClientProps) {
                       </div>
                       <h3 className="text-2xl font-bold mb-4">{featuredArticle.titulo}</h3>
                       <p className="text-muted-foreground mb-6">{featuredArticle.descricao}</p>
-                      <Button asChild>
-                        <NewsCta article={featuredArticle}>
-                          <span className="inline-flex items-center gap-2">
-                            {featuredArticle.externo ? "Abrir cobertura" : t("common.readMore")}
-                            {featuredArticle.externo && <ExternalLink className="h-4 w-4" />}
-                          </span>
-                        </NewsCta>
-                      </Button>
+                      <div className="flex flex-wrap items-center gap-3">
+                        <Button asChild>
+                          <NewsCta article={featuredArticle}>
+                            <span className="inline-flex items-center gap-2">Ler no site</span>
+                          </NewsCta>
+                        </Button>
+                        {featuredArticle.linkFonte && (
+                          <a
+                            href={featuredArticle.linkFonte}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground"
+                          >
+                            Fonte original
+                            <ExternalLink className="h-4 w-4" />
+                          </a>
+                        )}
+                      </div>
                     </div>
                   </div>
                 </Card>
@@ -123,14 +125,24 @@ export function HomePageClient({ featuredNews }: HomePageClientProps) {
                       </Badge>
                       <h4 className="font-semibold mb-2">{secondaryArticle.titulo}</h4>
                       <p className="text-sm text-muted-foreground mb-4">{secondaryArticle.descricao}</p>
-                      <Button variant="outline" size="sm" asChild>
-                        <NewsCta article={secondaryArticle}>
-                          <span className="inline-flex items-center gap-2">
-                            {secondaryArticle.externo ? "Ver fonte" : t("common.readMore")}
-                            {secondaryArticle.externo && <ExternalLink className="h-4 w-4" />}
-                          </span>
-                        </NewsCta>
-                      </Button>
+                      <div className="flex flex-wrap items-center gap-3">
+                        <Button variant="outline" size="sm" asChild>
+                          <NewsCta article={secondaryArticle}>
+                            <span className="inline-flex items-center gap-2">Ler no site</span>
+                          </NewsCta>
+                        </Button>
+                        {secondaryArticle.linkFonte && (
+                          <a
+                            href={secondaryArticle.linkFonte}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1 text-xs text-muted-foreground hover:text-foreground"
+                          >
+                            Fonte
+                            <ExternalLink className="h-3 w-3" />
+                          </a>
+                        )}
+                      </div>
                     </CardContent>
                   </Card>
                 )}

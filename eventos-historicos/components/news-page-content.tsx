@@ -67,18 +67,22 @@ export function NewsPageContent({ rssArticles, localArticles }: NewsPageContentP
                     </div>
                     <h2 className="text-2xl font-bold mb-4">{featuredNoticia.titulo}</h2>
                     <p className="text-muted-foreground mb-6">{featuredNoticia.descricao}</p>
-                    <Button asChild>
-                      {featuredNoticia.externo ? (
-                        <a href={featuredNoticia.href} target="_blank" rel="noopener noreferrer">
-                          <span className="inline-flex items-center gap-2">
-                            Abrir cobertura
-                            <ExternalLink className="h-4 w-4" />
-                          </span>
+                    <div className="flex flex-wrap items-center gap-3">
+                      <Button asChild>
+                        <Link href={featuredNoticia.href}>Ler no Eventos Históricos</Link>
+                      </Button>
+                      {featuredNoticia.linkFonte && (
+                        <a
+                          href={featuredNoticia.linkFonte}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground"
+                        >
+                          Ver fonte oficial
+                          <ExternalLink className="h-4 w-4" />
                         </a>
-                      ) : (
-                        <Link href={featuredNoticia.href}>Ler análise completa</Link>
                       )}
-                    </Button>
+                    </div>
                   </div>
                 </div>
               </Card>
@@ -107,17 +111,31 @@ export function NewsPageContent({ rssArticles, localArticles }: NewsPageContentP
                           <span>{formatNewsDate(noticia.data)}</span>
                           <Badge variant="secondary">{noticia.categoria}</Badge>
                         </div>
-                        <CardTitle className="text-lg">{noticia.titulo}</CardTitle>
+                        <CardTitle className="text-lg">
+                          <Link href={noticia.href} className="hover:text-primary transition-colors">
+                            {noticia.titulo}
+                          </Link>
+                        </CardTitle>
                         <CardDescription>{noticia.descricao}</CardDescription>
                       </CardHeader>
                       <CardContent>
                         <div className="flex items-center justify-between gap-3">
                           <Button variant="outline" size="sm" asChild>
-                            <a href={noticia.href} target="_blank" rel="noopener noreferrer">
-                              Leia na fonte
-                            </a>
+                            <Link href={noticia.href}>Ler no site</Link>
                           </Button>
-                          <span className="text-xs text-muted-foreground">{noticia.fonte}</span>
+                          {noticia.linkFonte ? (
+                            <a
+                              href={noticia.linkFonte}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center gap-1 text-xs text-muted-foreground hover:text-foreground"
+                            >
+                              {noticia.fonte}
+                              <ExternalLink className="h-3 w-3" />
+                            </a>
+                          ) : (
+                            <span className="text-xs text-muted-foreground">{noticia.fonte}</span>
+                          )}
                         </div>
                       </CardContent>
                     </Card>

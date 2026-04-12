@@ -2,6 +2,7 @@ import noticiasData from "@/data/noticias.json"
 
 export interface SiteNewsArticle {
   id: string
+  slug: string
   titulo: string
   descricao: string
   conteudo: string
@@ -36,11 +37,26 @@ const RSS_FEEDS = [
 ]
 
 const CATEGORY_RULES = [
-  { categoria: "Exploração Espacial", keywords: ["lua", "artemis", "nasa", "spacex", "space", "moon", "apollo", "orbita", "marte", "astronaut"] },
-  { categoria: "Conflitos", keywords: ["guerra", "war", "conflit", "ataque", "attack", "missil", "missile", "bomb", "troops", "ceasefire", "militar", "navio de guerra"] },
-  { categoria: "Política", keywords: ["elei", "election", "president", "premier", "prime minister", "governo", "parliament", "congresso", "coalition", "opposition"] },
-  { categoria: "Economia Global", keywords: ["trade", "tariff", "econom", "mercado", "inflation", "sanction", "energy", "oil", "gas", "supply chain"] },
-  { categoria: "História", keywords: ["histori", "arqueolog", "artifact", "heritage", "museum", "ancient", "patrimonio", "memoria"] },
+  {
+    categoria: "Exploração Espacial",
+    keywords: ["lua", "artemis", "nasa", "spacex", "space", "moon", "apollo", "orbita", "marte", "astronaut"],
+  },
+  {
+    categoria: "Conflitos",
+    keywords: ["guerra", "war", "conflit", "ataque", "attack", "missil", "missile", "bomb", "troops", "ceasefire", "militar", "navio de guerra"],
+  },
+  {
+    categoria: "Política",
+    keywords: ["elei", "election", "president", "premier", "prime minister", "governo", "parliament", "congresso", "coalition", "opposition"],
+  },
+  {
+    categoria: "Economia Global",
+    keywords: ["trade", "tariff", "econom", "mercado", "inflation", "sanction", "energy", "oil", "gas", "supply chain"],
+  },
+  {
+    categoria: "História",
+    keywords: ["histori", "arqueolog", "artifact", "heritage", "museum", "ancient", "patrimonio", "memoria"],
+  },
 ]
 
 const RELEVANT_KEYWORDS = [
@@ -123,7 +139,21 @@ function slugify(value: string) {
   return normalizeText(value)
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-+|-+$/g, "")
-    .slice(0, 80)
+    .slice(0, 90)
+}
+
+function buildRssSlug(item: ParsedFeedItem) {
+  const datePart = item.data ? new Date(item.data).toISOString().slice(0, 10) : "atual"
+  return slugify(`${item.fonte}-${item.titulo}-${datePart}`)
+}
+
+function buildRssBody(article: ParsedFeedItem, categoria: string) {
+  const base = article.descricao || article.titulo
+  return [
+    base,
+    `Esta é uma leitura resumida, montada a partir do feed oficial de ${article.fonte}, dentro da curadoria de ${categoria} do Eventos Históricos.`,
+    "Para conferir a cobertura completa e o contexto original, use o link da fonte oficial no final da página.",
+  ].join("\n\n")
 }
 
 function isRelevantArticle(article: ParsedFeedItem) {
@@ -212,16 +242,18 @@ export async function getRssNews(limit = 20): Promise<SiteNewsArticle[]> {
       seen.add(key)
       return true
     })
-    .map((item, index) => {
+    .map((item) => {
       const categoria = inferCategory(item)
       const parsedDate = item.data ? new Date(item.data) : new Date()
       const data = Number.isNaN(parsedDate.getTime()) ? new Date().toISOString() : parsedDate.toISOString()
+      const slug = buildRssSlug(item)
 
       return {
-        id: `rss-${slugify(item.titulo)}-${index}`,
+        id: `rss-${slug}`,
+        slug,
         titulo: item.titulo,
         descricao: item.descricao || "Resumo selecionado automaticamente a partir de feeds internacionais e brasileiros.",
-        conteudo: item.descricao || item.titulo,
+        conteudo: buildRssBody(item, categoria),
         data,
         categoria,
         fonte: item.fonte,
@@ -229,8 +261,8 @@ export async function getRssNews(limit = 20): Promise<SiteNewsArticle[]> {
         linkFonte: item.link,
         imagem: item.imagem || inferImage({ ...item, categoria }),
         tags: [normalizeText(categoria), "rss", normalizeText(item.fonte)],
-        href: item.link,
-        externo: true,
+        href: `/noticias/${slug}`,
+        externo: false,
         tipo: "rss",
       } satisfies SiteNewsArticle
     })
@@ -243,6 +275,7 @@ function normalizeLocalArticles(): SiteNewsArticle[] {
     .sort((a, b) => new Date(b.data).getTime() - new Date(a.data).getTime())
     .map((article) => ({
       id: article.id,
+      slug: article.slug,
       titulo: article.titulo,
       descricao: article.descricao,
       conteudo: article.conteudo,
@@ -269,6 +302,23 @@ export async function getCuratedNews(limit = 20) {
     localArticles,
     combinedArticles: rssArticles.length > 0 ? [...rssArticles, ...localArticles] : localArticles,
   }
+}
+
+export async function getNewsArticleBySlug(slug: string) {
+  const localArticles = normalizeLocalArticles()
+  const localArticle = localArticles.find((article) => article.slug === slug)
+
+  if (localArticle) {
+    return localArticle
+  }
+
+  const rssArticles = await getRssNews(30)
+  return rssArticles.find((article) => article.slug === slug)
+}
+
+export async function getRelatedNews(currentSlug: string, limit = 2) {
+  const { combinedArticles } = await getCuratedNews(12)
+  return combinedArticles.filter((article) => article.slug !== currentSlug).slice(0, limit)
 }
 
 export function formatNewsDate(date: string) {
