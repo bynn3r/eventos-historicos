@@ -242,6 +242,9 @@ function sanitizeHtml(html: string) {
     .replace(/\son\w+='[^']*'/gi, "")
     .replace(/javascript:/gi, "")
     .replace(/<iframe[\s\S]*?<\/iframe>/gi, "")
+    .replace(/<a[^>]*>\s*(leia mais|read more|continue reading)[\s\S]*?<\/a>/gi, "")
+    .replace(/<p>\s*(leia mais|read more|continue reading)[\s\S]*?<\/p>/gi, "")
+    .replace(/<div[^>]*class="[^"]*(advert|promo|banner)[^"]*"[\s\S]*?<\/div>/gi, "")
     .trim()
 }
 
@@ -299,6 +302,9 @@ function normalizeImageUrl(url?: string) {
   }
 
   return normalized
+    .replace(/([?&])(width|w)=\d+/gi, "$1$2=1600")
+    .replace(/([?&])(height|h)=\d+/gi, "$1$2=900")
+    .replace(/([?&])(quality|q)=\d+/gi, "$1$2=90")
 }
 
 function extractImage(item: string, html: string) {
