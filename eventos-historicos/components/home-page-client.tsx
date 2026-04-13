@@ -69,9 +69,9 @@ export function HomePageClient({ featuredNews }: HomePageClientProps) {
               </Button>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 items-start">
               {featuredArticle && (
-                <Card className="lg:col-span-3 overflow-hidden">
+                <Card className="lg:col-span-3 overflow-hidden self-start">
                   <div className="grid md:grid-cols-2 gap-0">
                     <Link
                       href={featuredArticle.href}
