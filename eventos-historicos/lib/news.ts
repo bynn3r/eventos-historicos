@@ -31,7 +31,7 @@ interface ParsedFeedItem {
   imagem?: string
 }
 
-const FEED_REVALIDATE_SECONDS = 600
+const FEED_REVALIDATE_SECONDS = 300
 const MAX_NEWS_AGE_DAYS = 10
 const MAX_HISTORY_AGE_DAYS = 30
 

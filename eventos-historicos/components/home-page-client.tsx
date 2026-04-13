@@ -73,12 +73,14 @@ export function HomePageClient({ featuredNews }: HomePageClientProps) {
               {featuredArticle && (
                 <Card className="lg:col-span-3 overflow-hidden">
                   <div className="grid md:grid-cols-2 gap-0">
-                    <div className="aspect-video md:aspect-auto relative">
-                      <NewsImage src={featuredArticle.imagem} alt={featuredArticle.titulo} fill className="object-cover" />
-                      <Badge className="absolute top-4 left-4 bg-destructive text-destructive-foreground">
-                        Destaque RSS
-                      </Badge>
-                    </div>
+                    <NewsCta article={featuredArticle}>
+                      <div className="aspect-video md:aspect-auto relative overflow-hidden">
+                        <NewsImage src={featuredArticle.imagem} alt={featuredArticle.titulo} fill className="object-cover transition-transform duration-300 hover:scale-[1.02]" />
+                        <Badge className="absolute top-4 left-4 bg-destructive text-destructive-foreground">
+                          Destaque RSS
+                        </Badge>
+                      </div>
+                    </NewsCta>
                     <div className="p-6 flex flex-col justify-center">
                       <div className="flex flex-wrap items-center gap-2 text-sm text-muted-foreground mb-2">
                         <Calendar className="h-4 w-4" />
@@ -86,7 +88,11 @@ export function HomePageClient({ featuredNews }: HomePageClientProps) {
                         <Badge variant="secondary">{featuredArticle.categoria}</Badge>
                         <span>{featuredArticle.fonte}</span>
                       </div>
-                      <h3 className="text-2xl font-bold mb-4">{featuredArticle.titulo}</h3>
+                      <h3 className="text-2xl font-bold mb-4">
+                        <NewsCta article={featuredArticle}>
+                          <span className="hover:text-primary transition-colors">{featuredArticle.titulo}</span>
+                        </NewsCta>
+                      </h3>
                       <p className="text-muted-foreground mb-6">{featuredArticle.descricao}</p>
                       <div className="flex flex-wrap items-center gap-3">
                         <Button asChild>
@@ -123,7 +129,11 @@ export function HomePageClient({ featuredNews }: HomePageClientProps) {
                       <Badge variant="secondary" className="mb-3">
                         {secondaryArticle.categoria}
                       </Badge>
-                      <h4 className="font-semibold mb-2">{secondaryArticle.titulo}</h4>
+                      <h4 className="font-semibold mb-2">
+                        <NewsCta article={secondaryArticle}>
+                          <span className="hover:text-primary transition-colors">{secondaryArticle.titulo}</span>
+                        </NewsCta>
+                      </h4>
                       <p className="text-sm text-muted-foreground mb-4">{secondaryArticle.descricao}</p>
                       <div className="flex flex-wrap items-center gap-3">
                         <Button variant="outline" size="sm" asChild>

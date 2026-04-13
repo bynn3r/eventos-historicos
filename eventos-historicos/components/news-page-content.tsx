@@ -46,12 +46,12 @@ export function NewsPageContent({ rssArticles, localArticles }: NewsPageContentP
             {featuredNoticia && (
               <Card className="overflow-hidden">
                 <div className="grid md:grid-cols-2 gap-0">
-                  <div className="aspect-video md:aspect-auto relative">
-                    <NewsImage src={featuredNoticia.imagem} alt={featuredNoticia.titulo} fill className="object-cover" />
+                  <Link href={featuredNoticia.href} className="aspect-video md:aspect-auto relative block overflow-hidden">
+                    <NewsImage src={featuredNoticia.imagem} alt={featuredNoticia.titulo} fill className="object-cover transition-transform duration-300 hover:scale-[1.02]" />
                     <Badge className="absolute top-4 left-4 bg-destructive text-destructive-foreground">
                       {featuredNoticia.tipo === "rss" ? "Destaque RSS" : "Análise do portal"}
                     </Badge>
-                  </div>
+                  </Link>
                   <div className="p-6 flex flex-col justify-center">
                     <div className="flex flex-wrap items-center gap-2 text-sm text-muted-foreground mb-3">
                       <Calendar className="h-4 w-4" />
@@ -65,7 +65,11 @@ export function NewsPageContent({ rssArticles, localArticles }: NewsPageContentP
                         </>
                       )}
                     </div>
-                    <h2 className="text-2xl font-bold mb-4">{featuredNoticia.titulo}</h2>
+                    <h2 className="text-2xl font-bold mb-4">
+                      <Link href={featuredNoticia.href} className="hover:text-primary transition-colors">
+                        {featuredNoticia.titulo}
+                      </Link>
+                    </h2>
                     <p className="text-muted-foreground mb-6">{featuredNoticia.descricao}</p>
                     <div className="flex flex-wrap items-center gap-3">
                       <Button asChild>
@@ -103,9 +107,9 @@ export function NewsPageContent({ rssArticles, localArticles }: NewsPageContentP
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
                   {otherRssNoticias.map((noticia) => (
                     <Card key={noticia.id} className="overflow-hidden hover:shadow-lg transition-shadow h-full flex flex-col">
-                      <div className="aspect-video relative">
-                        <NewsImage src={noticia.imagem} alt={noticia.titulo} fill className="object-cover" />
-                      </div>
+                      <Link href={noticia.href} className="aspect-video relative block overflow-hidden">
+                        <NewsImage src={noticia.imagem} alt={noticia.titulo} fill className="object-cover transition-transform duration-300 hover:scale-[1.02]" />
+                      </Link>
                       <CardHeader className="flex-1">
                         <div className="flex flex-wrap items-center gap-2 text-sm text-muted-foreground mb-2">
                           <Calendar className="h-4 w-4" />
@@ -160,16 +164,20 @@ export function NewsPageContent({ rssArticles, localArticles }: NewsPageContentP
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
                 {localArticles.map((noticia) => (
                   <Card key={noticia.id} className="overflow-hidden hover:shadow-lg transition-shadow h-full flex flex-col">
-                    <div className="aspect-video relative">
-                      <NewsImage src={noticia.imagem} alt={noticia.titulo} fill className="object-cover" />
-                    </div>
+                    <Link href={noticia.href} className="aspect-video relative block overflow-hidden">
+                      <NewsImage src={noticia.imagem} alt={noticia.titulo} fill className="object-cover transition-transform duration-300 hover:scale-[1.02]" />
+                    </Link>
                     <CardHeader className="flex-1">
                       <div className="flex flex-wrap items-center gap-2 text-sm text-muted-foreground mb-2">
                         <Calendar className="h-4 w-4" />
                         <span>{formatNewsDate(noticia.data)}</span>
                         <Badge variant="secondary">{noticia.categoria}</Badge>
                       </div>
-                      <CardTitle className="text-lg leading-tight min-h-[4.5rem]">{noticia.titulo}</CardTitle>
+                      <CardTitle className="text-lg leading-tight min-h-[4.5rem]">
+                        <Link href={noticia.href} className="hover:text-primary transition-colors">
+                          {noticia.titulo}
+                        </Link>
+                      </CardTitle>
                       <CardDescription className="min-h-[6.5rem] overflow-hidden [display:-webkit-box] [-webkit-box-orient:vertical] [-webkit-line-clamp:4]">
                         {noticia.descricao}
                       </CardDescription>
