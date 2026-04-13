@@ -171,125 +171,6 @@ const SOURCE_WEIGHTS: Record<string, number> = {
   "UOL Notícias": 18,
 }
 
-type ImageTheme = {
-  matchers: string[]
-  categories?: string[]
-  images: string[]
-}
-
-const TITLE_STOPWORDS = new Set([
-  "a",
-  "o",
-  "as",
-  "os",
-  "um",
-  "uma",
-  "de",
-  "da",
-  "do",
-  "das",
-  "dos",
-  "e",
-  "em",
-  "no",
-  "na",
-  "nos",
-  "nas",
-  "por",
-  "para",
-  "com",
-  "sem",
-  "sobre",
-  "under",
-  "after",
-  "before",
-  "amid",
-  "from",
-  "into",
-  "that",
-  "this",
-  "will",
-  "what",
-  "who",
-  "why",
-  "how",
-  "the",
-  "and",
-  "its",
-  "his",
-  "her",
-  "their",
-  "mais",
-  "como",
-  "entre",
-  "apos",
-  "contra",
-  "says",
-  "say",
-  "sua",
-  "seu",
-])
-
-const THEME_FALLBACK_IMAGES: Record<string, ImageTheme> = {
-  ira_oriente_medio: {
-    matchers: ["ira", "iran", "hormuz", "teera", "tehran", "oriente medio", "middle east", "gaza", "israel", "siria"],
-    categories: ["Conflitos", "GeopolÃ­tica"],
-    images: ["/world-map-with-geopolitical-tensions.jpg", "/geopolitics-world-map-with-news-overlay.jpg"],
-  },
-  energia_petroleo: {
-    matchers: ["petroleo", "oil", "gas", "energia", "energy", "refinaria", "refinery", "barris", "barrels"],
-    categories: ["Economia Global", "GeopolÃ­tica"],
-    images: ["/world-map-with-geopolitical-tensions.jpg", "/geopolitics-world-map-with-news-overlay.jpg"],
-  },
-  eua_trump: {
-    matchers: ["trump", "eua", "estados unidos", "white house", "casa branca", "washington", "pentagono", "pentagon"],
-    categories: ["PolÃ­tica", "GeopolÃ­tica"],
-    images: ["/geopolitics-world-map-with-news-overlay.jpg", "/world-map-with-geopolitical-tensions.jpg"],
-  },
-  onu_diplomacia: {
-    matchers: ["onu", "united nations", "diplomac", "summit", "cupula", "ceasefire", "negoci", "talks", "sanction"],
-    categories: ["GeopolÃ­tica", "PolÃ­tica"],
-    images: ["/geopolitics-world-map-with-news-overlay.jpg", "/world-map-with-geopolitical-tensions.jpg"],
-  },
-  guerra_conflito: {
-    matchers: ["guerra", "war", "conflit", "attack", "ataque", "troops", "militar", "missil", "missile", "fronteira", "border"],
-    categories: ["Conflitos"],
-    images: ["/world-map-with-geopolitical-tensions.jpg", "/geopolitics-world-map-with-news-overlay.jpg"],
-  },
-  exploracao_espacial: {
-    matchers: ["lua", "moon", "nasa", "artemis", "apollo", "spacex", "space", "marte", "mars", "astronaut"],
-    categories: ["ExploraÃ§Ã£o Espacial"],
-    images: ["/historical-books-and-world-map-study.jpg", "/geopolitics-world-map-with-news-overlay.jpg"],
-  },
-  historia_roma: {
-    matchers: ["roma", "romano", "roman", "coliseu", "empire", "imperio romano", "caesar", "cesar"],
-    categories: ["HistÃ³ria"],
-    images: ["/curiosidades/imperio-mongol.jpg", "/historical-books-and-world-map-study.jpg"],
-  },
-  revolucao_francesa: {
-    matchers: ["revolucao francesa", "french revolution", "bastille", "bastilha", "napoleon", "robespierre"],
-    categories: ["HistÃ³ria"],
-    images: ["/curiosidades/guerra-cem-anos.jpg", "/historical-books-and-world-map-study.jpg"],
-  },
-  historia_geral: {
-    matchers: ["historia", "historic", "arqueolog", "museum", "artifact", "heritage", "ancient", "memoria"],
-    categories: ["HistÃ³ria"],
-    images: ["/historical-books-and-world-map-study.jpg", "/curiosidades/biblioteca-alexandria.jpg"],
-  },
-}
-
-const CATEGORY_EDITORIAL_IMAGES: Record<string, string[]> = {
-  "Conflitos": ["/world-map-with-geopolitical-tensions.jpg", "/geopolitics-world-map-with-news-overlay.jpg"],
-  "GeopolÃ­tica": ["/geopolitics-world-map-with-news-overlay.jpg", "/world-map-with-geopolitical-tensions.jpg"],
-  "PolÃ­tica": ["/geopolitics-world-map-with-news-overlay.jpg", "/world-map-with-geopolitical-tensions.jpg"],
-  "Economia Global": ["/world-map-with-geopolitical-tensions.jpg", "/geopolitics-world-map-with-news-overlay.jpg"],
-  "ExploraÃ§Ã£o Espacial": ["/historical-books-and-world-map-study.jpg", "/geopolitics-world-map-with-news-overlay.jpg"],
-  "HistÃ³ria": ["/historical-books-and-world-map-study.jpg", "/curiosidades/biblioteca-alexandria.jpg"],
-}
-
-const recentFallbackHistory: string[] = []
-const MAX_RECENT_FALLBACKS = 6
-
 function stripTags(value: string) {
   return value.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim()
 }
@@ -351,49 +232,6 @@ function slugify(value: string) {
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-+|-+$/g, "")
     .slice(0, 90)
-}
-
-function extractMeaningfulTerms(value: string) {
-  return normalizeText(value)
-    .split(/[^a-z0-9]+/)
-    .map((term) => term.trim())
-    .filter((term) => term.length > 2 && !TITLE_STOPWORDS.has(term))
-}
-
-function computeStableIndex(seed: string, size: number) {
-  if (size <= 1) {
-    return 0
-  }
-
-  let hash = 0
-
-  for (const char of seed) {
-    hash = (hash * 31 + char.charCodeAt(0)) >>> 0
-  }
-
-  return hash % size
-}
-
-function rememberFallbackImage(image: string) {
-  recentFallbackHistory.push(image)
-
-  while (recentFallbackHistory.length > MAX_RECENT_FALLBACKS) {
-    recentFallbackHistory.shift()
-  }
-}
-
-function pickRotatingImage(images: string[], seed: string) {
-  const availableImages = images.filter(Boolean)
-
-  if (availableImages.length === 0) {
-    return "/geopolitics-world-map-with-news-overlay.jpg"
-  }
-
-  const freshImages = availableImages.filter((image) => !recentFallbackHistory.includes(image))
-  const pool = freshImages.length > 0 ? freshImages : availableImages
-  const selected = pool[computeStableIndex(seed, pool.length)]
-  rememberFallbackImage(selected)
-  return selected
 }
 
 function sanitizeHtml(html: string) {
@@ -547,11 +385,7 @@ function normalizeImageUrl(url?: string) {
     return ""
   }
 
-  if (/(thumb|thumbnail|small|tiny|1x1|spacer|pixel)/i.test(normalized)) {
-    return ""
-  }
-
-  if (/w16|w24|w32|w48|width=1\d{1,2}|width=2\d{1,2}|height=1\d{1,2}|height=2\d{1,2}/i.test(normalized)) {
+  if (/w16|w24|w32|w48/i.test(normalized)) {
     return ""
   }
 
@@ -564,8 +398,8 @@ function normalizeImageUrl(url?: string) {
 function extractImage(item: string, html: string) {
   return [
     extractAttribute(item, "media:content", "url"),
-    extractAttribute(item, "enclosure", "url"),
     extractAttribute(item, "media:thumbnail", "url"),
+    extractAttribute(item, "enclosure", "url"),
     extractAttribute(html, "img", "src"),
   ]
     .map((candidate) => normalizeImageUrl(candidate))
@@ -624,38 +458,16 @@ function scoreArticle(article: ParsedFeedItem, categoria: string) {
   return sourceScore + categoryScore + globalScore + brazilGeneralScore + titleBonus + ageScore
 }
 
-function inferImage(article: { titulo: string; descricao: string; categoria: string; tags?: string[]; id?: string; slug?: string }) {
-  const normalizedTitle = normalizeText(article.titulo)
-  const normalizedDescription = normalizeText(article.descricao)
-  const normalizedCategory = normalizeText(article.categoria)
-  const normalizedTags = (article.tags ?? []).map((tag) => normalizeText(tag))
-  const titleTerms = extractMeaningfulTerms(article.titulo)
-  const seed = article.slug || article.id || `${article.titulo}-${article.categoria}`
-  const themeScores = Object.entries(THEME_FALLBACK_IMAGES).map(([theme, config]) => {
-    const titleScore = config.matchers.filter(
-      (matcher) => normalizedTitle.includes(matcher) || titleTerms.some((term) => matcher.includes(term) || term.includes(matcher)),
-    ).length * 12
-    const descriptionScore = config.matchers.filter((matcher) => normalizedDescription.includes(matcher)).length * 5
-    const tagScore = config.matchers.filter((matcher) => normalizedTags.some((tag) => tag.includes(matcher) || matcher.includes(tag))).length * 4
-    const categoryScore = config.categories?.some((category) => normalizeText(category) === normalizedCategory) ? 6 : 0
+function inferImage(article: { titulo: string; descricao: string; categoria: string }) {
+  const text = normalizeText(`${article.titulo} ${article.descricao} ${article.categoria}`)
 
-    return {
-      theme,
-      score: titleScore + descriptionScore + tagScore + categoryScore,
-      images: config.images,
-    }
-  })
-
-  const bestTheme = themeScores
-    .filter((theme) => theme.score > 0)
-    .sort((a, b) => b.score - a.score)[0]
-
-  if (bestTheme) {
-    return pickRotatingImage(bestTheme.images, `${bestTheme.theme}-${seed}`)
+  if (/(space|lua|artemis|nasa|moon|apollo|marte|astronaut)/.test(text)) {
+    return "/historical-books-and-world-map-study.jpg"
   }
-
-  const categoryImages = CATEGORY_EDITORIAL_IMAGES[article.categoria] ?? ["/geopolitics-world-map-with-news-overlay.jpg"]
-  return pickRotatingImage(categoryImages, `${normalizedCategory}-${seed}`)
+  if (/(guerra|war|conflit|attack|bomb|militar|oriente medio|border|troops)/.test(text)) {
+    return "/world-map-with-geopolitical-tensions.jpg"
+  }
+  return "/geopolitics-world-map-with-news-overlay.jpg"
 }
 
 function buildRssSlug(item: ParsedFeedItem) {
@@ -804,7 +616,7 @@ export async function getRssNews(limit = 20): Promise<SiteNewsArticle[]> {
         fonte: item.fonte,
         fonteUrl: item.link,
         linkFonte: item.link,
-        imagem: normalizeImageUrl(item.imagem) || inferImage({ ...item, categoria, tags: [categoria, item.fonte], slug }),
+        imagem: normalizeImageUrl(item.imagem) || inferImage({ ...item, categoria }),
         tags: [normalizeText(categoria), "rss", normalizeText(item.fonte)],
         href: `/noticias/${slug}`,
         externo: false,
