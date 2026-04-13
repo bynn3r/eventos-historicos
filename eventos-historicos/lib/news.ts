@@ -32,6 +32,7 @@ interface ParsedFeedItem {
 }
 
 const FEED_REVALIDATE_SECONDS = 300
+const WIKIMEDIA_REVALIDATE_SECONDS = 86_400
 const MAX_NEWS_AGE_DAYS = 10
 const MAX_HISTORY_AGE_DAYS = 30
 
@@ -234,6 +235,43 @@ function slugify(value: string) {
     .slice(0, 90)
 }
 
+function extractTitleEntities(value: string) {
+  const entities = value.match(/\b([A-ZÀ-Ý][\p{L}\-']+(?:\s+[A-ZÀ-Ý][\p{L}\-']+)*)/gu) ?? []
+  return [...new Set(entities.map((entity) => entity.trim()).filter((entity) => entity.length > 2))]
+}
+
+function buildWikimediaQueries(article: { titulo: string; descricao: string; categoria: string }) {
+  const normalizedTitle = normalizeEncoding(article.titulo)
+  const entities = extractTitleEntities(normalizedTitle)
+  const titleWords = normalizedTitle
+    .split(/[^\p{L}\p{N}\-]+/u)
+    .map((word) => word.trim())
+    .filter((word) => word.length > 3)
+
+  const categoryHints =
+    article.categoria === "Conflitos"
+      ? ["war", "conflict", "military"]
+      : article.categoria === "Política"
+        ? ["politics", "government", "diplomacy"]
+        : article.categoria === "Economia Global"
+          ? ["economy", "oil", "energy"]
+          : article.categoria === "Exploração Espacial"
+            ? ["space exploration", "NASA", "Moon"]
+            : article.categoria === "História"
+              ? ["history", "historical event", "ancient world"]
+              : ["geopolitics", "world affairs"]
+
+  const rawQueries = [
+    normalizedTitle,
+    ...entities,
+    ...entities.map((entity) => `${entity} ${article.categoria}`),
+    titleWords.slice(0, 4).join(" "),
+    ...categoryHints,
+  ]
+
+  return [...new Set(rawQueries.map((query) => query.replace(/\s+/g, " ").trim()).filter((query) => query.length >= 4))].slice(0, 6)
+}
+
 function sanitizeHtml(html: string) {
   return normalizeEncoding(html)
     .replace(/<script[\s\S]*?<\/script>/gi, "")
@@ -406,6 +444,63 @@ function extractImage(item: string, html: string) {
     .find(Boolean)
 }
 
+async function searchWikimediaImage(query: string) {
+  try {
+    const url = new URL("https://en.wikipedia.org/w/api.php")
+    url.searchParams.set("action", "query")
+    url.searchParams.set("format", "json")
+    url.searchParams.set("generator", "search")
+    url.searchParams.set("gsrsearch", query)
+    url.searchParams.set("gsrlimit", "5")
+    url.searchParams.set("prop", "pageimages|info")
+    url.searchParams.set("piprop", "thumbnail")
+    url.searchParams.set("pithumbsize", "1600")
+    url.searchParams.set("inprop", "url")
+
+    const response = await fetch(url.toString(), {
+      signal: AbortSignal.timeout(5000),
+      headers: { "User-Agent": "EventosHistoricosBot/1.0" },
+      next: { revalidate: WIKIMEDIA_REVALIDATE_SECONDS },
+    })
+
+    if (!response.ok) {
+      return ""
+    }
+
+    const data = (await response.json()) as {
+      query?: {
+        pages?: Record<string, { thumbnail?: { source?: string } }>
+      }
+    }
+
+    const pages = Object.values(data.query?.pages ?? {})
+
+    return pages
+      .map((page) => normalizeImageUrl(page.thumbnail?.source))
+      .find(Boolean) ?? ""
+  } catch {
+    return ""
+  }
+}
+
+async function resolveArticleImage(article: { titulo: string; descricao: string; categoria: string }, feedImage?: string) {
+  const normalizedFeedImage = normalizeImageUrl(feedImage)
+
+  if (normalizedFeedImage) {
+    return normalizedFeedImage
+  }
+
+  for (const query of buildWikimediaQueries(article)) {
+    const image = await searchWikimediaImage(query)
+
+    if (image) {
+      return image
+    }
+  }
+
+  return inferImage(article)
+}
+
 function isTruncated(text: string) {
   const normalized = normalizeText(text)
   return normalized.endsWith("...") || normalized.endsWith("…") || normalized.includes("[+") || normalized.includes("continue reading")
@@ -570,8 +665,9 @@ export async function getRssNews(limit = 20): Promise<SiteNewsArticle[]> {
   const results = await Promise.all(RSS_FEEDS.map((feed) => fetchFeed(feed.url, feed.name)))
   const seen = new Set<string>()
 
-  return results
-    .flat()
+  const articles = await Promise.all(
+    results
+      .flat()
     .filter(isRelevantArticle)
     .filter((item) => {
       const key = normalizeText(`${item.titulo}-${item.link}`)
@@ -592,7 +688,7 @@ export async function getRssNews(limit = 20): Promise<SiteNewsArticle[]> {
       const maxAge = categoria === "História" ? MAX_HISTORY_AGE_DAYS : MAX_NEWS_AGE_DAYS
       return ageDays <= maxAge
     })
-    .map((item) => {
+    .map(async (item) => {
       const categoria = inferCategory(item)
       const parsedDate = item.data ? new Date(item.data) : new Date()
       const data = Number.isNaN(parsedDate.getTime()) ? new Date().toISOString() : parsedDate.toISOString()
@@ -601,6 +697,7 @@ export async function getRssNews(limit = 20): Promise<SiteNewsArticle[]> {
       const conteudo = buildRssBody(item, categoria, resumo)
       const conteudoHtml = buildStructuredRssHtml(item, categoria, resumo)
       const score = scoreArticle(item, categoria)
+      const imagem = await resolveArticleImage({ ...item, categoria }, item.imagem)
 
       return {
         score,
@@ -616,13 +713,16 @@ export async function getRssNews(limit = 20): Promise<SiteNewsArticle[]> {
         fonte: item.fonte,
         fonteUrl: item.link,
         linkFonte: item.link,
-        imagem: normalizeImageUrl(item.imagem) || inferImage({ ...item, categoria }),
+        imagem,
         tags: [normalizeText(categoria), "rss", normalizeText(item.fonte)],
         href: `/noticias/${slug}`,
         externo: false,
         tipo: "rss" as const,
       }
-    })
+    }),
+  )
+
+  return articles
     .sort((a, b) => {
       if (b.score !== a.score) {
         return b.score - a.score
