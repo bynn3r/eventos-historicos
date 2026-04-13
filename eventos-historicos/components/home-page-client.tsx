@@ -73,14 +73,20 @@ export function HomePageClient({ featuredNews }: HomePageClientProps) {
               {featuredArticle && (
                 <Card className="lg:col-span-3 overflow-hidden">
                   <div className="grid md:grid-cols-2 gap-0">
-                    <NewsCta article={featuredArticle}>
-                      <div className="aspect-video md:aspect-auto relative overflow-hidden">
-                        <NewsImage src={featuredArticle.imagem} alt={featuredArticle.titulo} fill className="object-cover transition-transform duration-300 hover:scale-[1.02]" />
-                        <Badge className="absolute top-4 left-4 bg-destructive text-destructive-foreground">
-                          Destaque RSS
-                        </Badge>
-                      </div>
-                    </NewsCta>
+                    <Link
+                      href={featuredArticle.href}
+                      className="group relative block min-h-[260px] overflow-hidden md:min-h-full"
+                    >
+                      <NewsImage
+                        src={featuredArticle.imagem}
+                        alt={featuredArticle.titulo}
+                        fill
+                        className="object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+                      />
+                      <Badge className="absolute top-4 left-4 bg-destructive text-destructive-foreground">
+                        Destaque RSS
+                      </Badge>
+                    </Link>
                     <div className="p-6 flex flex-col justify-center">
                       <div className="flex flex-wrap items-center gap-2 text-sm text-muted-foreground mb-2">
                         <Calendar className="h-4 w-4" />
