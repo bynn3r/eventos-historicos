@@ -532,45 +532,6 @@ function clipText(text: string, maxLength: number) {
   return `${normalized.slice(0, maxLength).trimEnd()}...`
 }
 
-function extractNumericQueryParam(url: string, keys: string[]) {
-  try {
-    const parsedUrl = new URL(url)
-
-    for (const key of keys) {
-      const rawValue = parsedUrl.searchParams.get(key)
-
-      if (!rawValue) {
-        continue
-      }
-
-      const value = Number.parseInt(rawValue, 10)
-
-      if (!Number.isNaN(value)) {
-        return value
-      }
-    }
-  } catch {
-    return undefined
-  }
-
-  return undefined
-}
-
-function hasTooSmallDimensions(url: string) {
-  const width = extractNumericQueryParam(url, ["width", "w"])
-  const height = extractNumericQueryParam(url, ["height", "h"])
-
-  if (width && width < 120) {
-    return true
-  }
-
-  if (height && height < 120) {
-    return true
-  }
-
-  return false
-}
-
 function normalizeImageUrl(url?: string) {
   if (!url) {
     return ""
@@ -590,7 +551,7 @@ function normalizeImageUrl(url?: string) {
     return ""
   }
 
-  if (/\b(w16|w24|w32|w48)\b/i.test(normalized) || hasTooSmallDimensions(normalized)) {
+  if (/w16|w24|w32|w48|width=1\d{1,2}|width=2\d{1,2}|height=1\d{1,2}|height=2\d{1,2}/i.test(normalized)) {
     return ""
   }
 
