@@ -35,6 +35,26 @@ const FEED_REVALIDATE_SECONDS = 300
 const WIKIMEDIA_REVALIDATE_SECONDS = 86_400
 const MAX_NEWS_AGE_DAYS = 10
 const MAX_HISTORY_AGE_DAYS = 30
+const OPENAI_API_URL = "https://api.openai.com/v1/chat/completions"
+const OPENAI_IMAGE_HINT_MODEL = process.env.OPENAI_EDITORIAL_MODEL || "gpt-5-mini"
+
+type ImageHintArticle = {
+  titulo: string
+  descricao: string
+  categoria: string
+}
+
+type OpenAIImageHintResponse = {
+  searchQueries: string[]
+  theme: string
+}
+
+type WikimediaImageCandidate = {
+  imageUrl: string
+  score: number
+}
+
+const imageHintCache = new Map<string, Promise<OpenAIImageHintResponse | null>>()
 
 const RSS_FEEDS = [
   { name: "BBC World", url: "http://feeds.bbci.co.uk/news/world/rss.xml" },
@@ -272,6 +292,137 @@ function buildWikimediaQueries(article: { titulo: string; descricao: string; cat
   return [...new Set(rawQueries.map((query) => query.replace(/\s+/g, " ").trim()).filter((query) => query.length >= 4))].slice(0, 6)
 }
 
+function buildSemanticFallbackQueries(article: { titulo: string; descricao: string; categoria: string }) {
+  const text = normalizeText(`${article.titulo} ${article.descricao} ${article.categoria}`)
+  const queries: string[] = []
+
+  if (/(iran|iranian|hormuz|persian gulf|gulf|tehran|bandar abbas|port)/.test(text)) {
+    queries.push("Iran port", "Bandar Abbas", "Strait of Hormuz", "Persian Gulf")
+  }
+
+  if (/(ukraine|ukrainian|putin|russia|russian|moscow|kyiv|hungary|orban|peter magyar)/.test(text)) {
+    queries.push("Ukraine", "Volodymyr Zelenskyy", "Viktor Orban", "Peter Magyar", "Russia Ukraine war")
+  }
+
+  if (/(european union|eu |europeu|uniao europeia|tariff|tarifa|steel|aco|commission|brussels)/.test(text)) {
+    queries.push("European Commission", "European Union", "steel mill", "Brussels")
+  }
+
+  if (/(trump|white house|united states|us president|washington)/.test(text)) {
+    queries.push("Donald Trump", "White House", "United States Capitol")
+  }
+
+  if (/(united nations|onu|security council|diplomac|assembly)/.test(text)) {
+    queries.push("United Nations Headquarters", "United Nations Security Council", "UN General Assembly")
+  }
+
+  if (/(guerra|war|conflict|missile|troops|naval|blockade|military)/.test(text)) {
+    queries.push("military ship", "naval ship", "conflict zone")
+  }
+
+  if (queries.length === 0 && article.categoria === "Conflitos") {
+    queries.push("conflict zone", "military ship")
+  }
+
+  if (queries.length === 0 && article.categoria === "Politica") {
+    queries.push("parliament", "government building")
+  }
+
+  return [...new Set(queries)].slice(0, 6)
+}
+
+function buildImageHintCacheKey(article: ImageHintArticle) {
+  return normalizeText(`${article.titulo} ${article.descricao} ${article.categoria}`)
+}
+
+async function requestOpenAIImageHints(article: ImageHintArticle) {
+  const apiKey = process.env.OPENAI_API_KEY
+
+  if (!apiKey) {
+    return null
+  }
+
+  const cacheKey = buildImageHintCacheKey(article)
+  const cached = imageHintCache.get(cacheKey)
+
+  if (cached) {
+    return cached
+  }
+
+  const pending = (async () => {
+    try {
+      const response = await fetch(OPENAI_API_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${apiKey}`,
+        },
+        body: JSON.stringify({
+          model: OPENAI_IMAGE_HINT_MODEL,
+          temperature: 0.1,
+          response_format: {
+            type: "json_schema",
+            json_schema: {
+              name: "news_image_hints",
+              strict: true,
+              schema: {
+                type: "object",
+                additionalProperties: false,
+                properties: {
+                  searchQueries: {
+                    type: "array",
+                    items: { type: "string" },
+                  },
+                  theme: { type: "string" },
+                },
+                required: ["searchQueries", "theme"],
+              },
+            },
+          },
+          messages: [
+            {
+              role: "system",
+              content:
+                "Voce escolhe pistas de busca para imagens editoriais de noticias. Use apenas titulo, resumo e categoria fornecidos. Nao invente fatos novos. Retorne de 3 a 5 consultas curtas e especificas, adequadas para buscar imagem no Wikimedia. Priorize entidades reais, lugares, organizacoes e temas centrais da noticia. Evite termos genericos como world map ou geopolitics quando houver algo mais especifico.",
+            },
+            {
+              role: "user",
+              content: JSON.stringify(article),
+            },
+          ],
+        }),
+        signal: AbortSignal.timeout(6000),
+      })
+
+      if (!response.ok) {
+        return null
+      }
+
+      const data = (await response.json()) as {
+        choices?: Array<{ message?: { content?: string } }>
+      }
+
+      const rawContent = data.choices?.[0]?.message?.content
+
+      if (!rawContent) {
+        return null
+      }
+
+      const parsed = JSON.parse(rawContent) as OpenAIImageHintResponse
+
+      return {
+        searchQueries: [...new Set((parsed.searchQueries ?? []).map((query) => normalizeEncoding(query).trim()).filter((query) => query.length >= 3))].slice(0, 5),
+        theme: normalizeEncoding(parsed.theme ?? "").trim(),
+      }
+    } catch {
+      return null
+    }
+  })()
+
+  imageHintCache.set(cacheKey, pending)
+  return pending
+}
+
 function sanitizeHtml(html: string) {
   return normalizeEncoding(html)
     .replace(/<script[\s\S]*?<\/script>/gi, "")
@@ -423,6 +574,10 @@ function normalizeImageUrl(url?: string) {
     return ""
   }
 
+  if (/(flag_of|seal_of|coat_of_arms|locator_map|blank_map|orthographic|relief_location)/i.test(normalized)) {
+    return ""
+  }
+
   if (/w16|w24|w32|w48/i.test(normalized)) {
     return ""
   }
@@ -444,7 +599,7 @@ function extractImage(item: string, html: string) {
     .find(Boolean)
 }
 
-async function searchWikimediaImage(query: string) {
+async function searchWikimediaImages(query: string): Promise<WikimediaImageCandidate[]> {
   try {
     const url = new URL("https://en.wikipedia.org/w/api.php")
     url.searchParams.set("action", "query")
@@ -464,22 +619,47 @@ async function searchWikimediaImage(query: string) {
     })
 
     if (!response.ok) {
-      return ""
+      return []
     }
 
     const data = (await response.json()) as {
       query?: {
-        pages?: Record<string, { thumbnail?: { source?: string } }>
+        pages?: Record<string, { title?: string; thumbnail?: { source?: string } }>
       }
     }
 
     const pages = Object.values(data.query?.pages ?? {})
 
-    return pages
-      .map((page) => normalizeImageUrl(page.thumbnail?.source))
-      .find(Boolean) ?? ""
+    const ranked = pages
+      .map((page) => {
+        const imageUrl = normalizeImageUrl(page.thumbnail?.source)
+        const pageTitle = normalizeText(page.title ?? "")
+        let score = 0
+
+        if (!imageUrl) {
+          score = -100
+        }
+
+        if (pageTitle.includes(normalizeText(query))) {
+          score += 40
+        }
+
+        if (/(ship|port|strait|gulf|commission|trump|ukraine|european union|brussels|iran)/.test(pageTitle)) {
+          score += 18
+        }
+
+        if (/(flag|seal|map|locator|coat of arms)/.test(pageTitle)) {
+          score -= 60
+        }
+
+        return { imageUrl, score }
+      })
+      .filter((entry) => entry.imageUrl)
+      .sort((a, b) => b.score - a.score)
+
+    return ranked
   } catch {
-    return ""
+    return []
   }
 }
 
@@ -490,12 +670,32 @@ async function resolveArticleImage(article: { titulo: string; descricao: string;
     return normalizedFeedImage
   }
 
-  for (const query of buildWikimediaQueries(article)) {
-    const image = await searchWikimediaImage(query)
+  const aiHints = await requestOpenAIImageHints(article)
+  const candidateQueries = [
+    ...(aiHints?.searchQueries ?? []),
+    ...buildSemanticFallbackQueries(article),
+    ...buildWikimediaQueries(article),
+    ...(aiHints?.theme ? [`${aiHints.theme} ${article.categoria}`] : []),
+  ]
 
-    if (image) {
-      return image
+  const rankedCandidates: WikimediaImageCandidate[] = []
+  const uniqueQueries = [...new Set(candidateQueries.map((value) => value.trim()).filter((value) => value.length >= 3))]
+
+  for (const [index, query] of uniqueQueries.entries()) {
+    const candidates = await searchWikimediaImages(query)
+
+    for (const candidate of candidates.slice(0, 4)) {
+      rankedCandidates.push({
+        imageUrl: candidate.imageUrl,
+        score: candidate.score + Math.max(0, 40 - index * 6),
+      })
     }
+  }
+
+  const bestCandidate = rankedCandidates.sort((a, b) => b.score - a.score)[0]
+
+  if (bestCandidate?.imageUrl) {
+    return bestCandidate.imageUrl
   }
 
   return inferImage(article)

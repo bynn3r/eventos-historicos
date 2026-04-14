@@ -15,6 +15,10 @@ interface NoticiaPageProps {
   }
 }
 
+function renderTextParagraphs(text: string) {
+  return text.split(/\n\s*\n/).filter(Boolean)
+}
+
 export async function generateStaticParams() {
   return []
 }
@@ -42,8 +46,9 @@ export default async function NoticiaPage({ params }: NoticiaPageProps) {
   }
 
   const relatedNews = await getRelatedNews(params.slug, 2)
+  const shouldUseEditorialExpansion = noticia.tipo === "rss" && noticia.resumo
   const expandedEditorial =
-    noticia.tipo === "rss"
+    shouldUseEditorialExpansion
       ? await generateExpandedContent(
           noticia,
           relatedNews.map((related) => ({
@@ -54,11 +59,17 @@ export default async function NoticiaPage({ params }: NoticiaPageProps) {
           })),
         )
       : null
+
+  const displayTitle = expandedEditorial?.titlePt || noticia.titulo
+  const displaySubtitle = expandedEditorial?.subtitlePt || noticia.descricao
+  const displayContent = expandedEditorial?.contentPt || ""
+  const displayHistoricalContext = expandedEditorial?.historicalContextPt
+  const editorialNote = expandedEditorial?.editorialNotePt
   const safeHtml = renderSafeArticleHtml(noticia.conteudoHtml)
   const imageCaption =
     noticia.tipo === "rss"
-      ? `Imagem da cobertura original via ${noticia.fonte}.`
-      : `Imagem de destaque da analise ${noticia.fonte}.`
+      ? `Imagem de referencia da cobertura publicada por ${noticia.fonte}.`
+      : `Imagem de destaque da analise publicada por ${noticia.fonte}.`
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -67,7 +78,7 @@ export default async function NoticiaPage({ params }: NoticiaPageProps) {
       <main className="flex-1 bg-background">
         <article className="py-10 md:py-14">
           <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
-            <div className="mx-auto mb-8 max-w-4xl">
+            <div className="mx-auto max-w-[920px]">
               <Button variant="ghost" asChild className="mb-6 pl-0 text-muted-foreground hover:text-foreground">
                 <Link href="/noticias">
                   <ArrowLeft className="mr-2 h-4 w-4" />
@@ -75,15 +86,12 @@ export default async function NoticiaPage({ params }: NoticiaPageProps) {
                 </Link>
               </Button>
 
-              <div className="flex flex-wrap items-center gap-3 text-sm text-muted-foreground mb-4">
+              <div className="mb-4 flex flex-wrap items-center gap-3 text-sm text-muted-foreground">
+                <Badge variant="secondary">{noticia.categoria}</Badge>
                 <div className="flex items-center gap-2">
                   <Calendar className="h-4 w-4" />
                   <span>{formatNewsDate(noticia.data)}</span>
                 </div>
-                <Badge variant="secondary">{noticia.categoria}</Badge>
-                <Badge variant="outline">{noticia.tipo === "rss" ? "Agregador RSS" : "Analise do portal"}</Badge>
-                {noticia.resumo && <Badge variant="outline">Resumo editorial</Badge>}
-                {expandedEditorial && <Badge variant="outline">Conteudo editorial expandido</Badge>}
                 {noticia.autor && (
                   <div className="flex items-center gap-2">
                     <User className="h-4 w-4" />
@@ -92,165 +100,152 @@ export default async function NoticiaPage({ params }: NoticiaPageProps) {
                 )}
               </div>
 
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-balance mb-5">
-                {noticia.titulo}
+              <h1 className="max-w-4xl text-4xl font-bold tracking-tight text-balance text-foreground md:text-5xl lg:text-6xl">
+                {displayTitle}
               </h1>
 
-              {noticia.descricao && (
-                <p className="max-w-3xl text-lg md:text-xl leading-8 text-muted-foreground mb-6">{noticia.descricao}</p>
+              {displaySubtitle && (
+                <p className="mt-5 max-w-3xl text-lg leading-8 text-muted-foreground md:text-xl">{displaySubtitle}</p>
               )}
 
               {noticia.linkFonte && (
-                <Button variant="outline" asChild className="rounded-full px-5">
-                  <a href={noticia.linkFonte} target="_blank" rel="noopener noreferrer">
-                    Ver noticia completa no site original
-                    <ExternalLink className="ml-2 h-4 w-4" />
-                  </a>
-                </Button>
+                <div className="mt-6">
+                  <Button variant="outline" asChild className="rounded-full px-5">
+                    <a href={noticia.linkFonte} target="_blank" rel="noopener noreferrer">
+                      Ver noticia completa no site original
+                      <ExternalLink className="ml-2 h-4 w-4" />
+                    </a>
+                  </Button>
+                </div>
               )}
-            </div>
 
-            <div className="mx-auto grid w-full max-w-6xl grid-cols-1 gap-10 lg:grid-cols-[minmax(0,860px)_280px] lg:items-start">
-              <div className="min-w-0">
-                {noticia.imagem && (
-                  <figure className="mb-8">
-                    <div className="relative aspect-[16/9] overflow-hidden rounded-2xl border bg-muted">
-                      <NewsImage src={noticia.imagem} alt={noticia.titulo} fill className="object-cover" />
+              {noticia.imagem && (
+                <figure className="mt-8">
+                  <div className="relative aspect-[16/9] overflow-hidden rounded-3xl border bg-muted">
+                    <NewsImage src={noticia.imagem} alt={displayTitle} fill className="object-cover" />
+                  </div>
+                  <figcaption className="mt-3 text-sm leading-6 text-muted-foreground">{imageCaption}</figcaption>
+                </figure>
+              )}
+
+              <div className="mt-10 max-w-[820px]">
+                {expandedEditorial ? (
+                  <div className="space-y-10">
+                    <div className="prose prose-neutral max-w-none prose-p:mb-6 prose-p:text-[1.06rem] prose-p:leading-8">
+                      {renderTextParagraphs(displayContent).map((paragraph, index) => (
+                        <p key={`${index}-${paragraph.slice(0, 24)}`}>{paragraph}</p>
+                      ))}
                     </div>
-                    <figcaption className="mt-3 text-sm leading-6 text-muted-foreground">{imageCaption}</figcaption>
-                  </figure>
-                )}
 
-                <div className="mx-auto max-w-prose">
-                  {expandedEditorial ? (
-                    <div className="space-y-8">
-                      <div className="prose prose-neutral max-w-none prose-p:mb-6 prose-p:leading-8 prose-p:text-[1.05rem]">
-                        {expandedEditorial.expandedContent.split(/\n\s*\n/).map((paragraph, index) => (
-                          <p key={`${index}-${paragraph.slice(0, 24)}`}>{paragraph}</p>
-                        ))}
-                      </div>
-
-                      <div className="rounded-2xl border bg-muted/30 p-6 space-y-5">
-                        <div className="flex flex-wrap items-center gap-2">
-                          <Badge variant="secondary">Conteudo editorial expandido</Badge>
-                          <span className="text-sm text-muted-foreground">Confianca: {expandedEditorial.confidenceScore}%</span>
+                    {displayHistoricalContext && (
+                      <section className="rounded-2xl border bg-muted/20 p-6">
+                        <h2 className="text-lg font-semibold text-foreground">Contexto historico</h2>
+                        <div className="mt-4 space-y-4 text-sm leading-7 text-muted-foreground">
+                          {renderTextParagraphs(displayHistoricalContext).map((paragraph, index) => (
+                            <p key={`${index}-${paragraph.slice(0, 24)}`}>{paragraph}</p>
+                          ))}
                         </div>
+                      </section>
+                    )}
 
-                        {expandedEditorial.confidenceScore < 70 && (
-                          <p className="text-sm leading-6 text-muted-foreground">
-                            Texto editorial expandido com base no resumo da fonte original.
-                          </p>
-                        )}
-
-                        {expandedEditorial.historicalContext && (
-                          <div className="space-y-3">
-                            <h2 className="text-base font-semibold">Contexto historico</h2>
-                            <div className="space-y-3 text-sm leading-7 text-muted-foreground">
-                              {expandedEditorial.historicalContext.split(/\n\s*\n/).map((paragraph, index) => (
-                                <p key={`${index}-${paragraph.slice(0, 24)}`}>{paragraph}</p>
-                              ))}
-                            </div>
-                          </div>
-                        )}
-
+                    <section className="rounded-2xl border bg-card p-6">
+                      <div className="flex flex-col gap-5 md:flex-row md:items-start md:justify-between">
                         <div className="space-y-2">
-                          <h2 className="text-base font-semibold">Resumo original da fonte</h2>
-                          <p className="text-sm leading-7 text-muted-foreground">{expandedEditorial.originalSummary}</p>
-                        </div>
-
-                        {expandedEditorial.warnings.length > 0 && (
-                          <div className="space-y-2">
-                            <h2 className="text-base font-semibold">Avisos editoriais</h2>
-                            <ul className="space-y-2 text-sm leading-6 text-muted-foreground">
-                              {expandedEditorial.warnings.map((warning, index) => (
-                                <li key={`${index}-${warning.slice(0, 24)}`}>{warning}</li>
-                              ))}
-                            </ul>
-                          </div>
-                        )}
-
-                        <div className="space-y-2 border-t pt-4">
-                          <h2 className="text-base font-semibold">Credito editorial</h2>
+                          <h2 className="text-base font-semibold text-foreground">Fonte</h2>
                           <p className="text-sm leading-6 text-muted-foreground">
-                            Fonte: <span className="font-medium text-foreground">{noticia.fonte}</span>. O Eventos Historicos organiza este conteudo a partir do feed oficial e mantem acesso para a publicacao original.
+                            {noticia.fonte}. O Eventos Historicos organiza este conteudo com base na publicacao original.
                           </p>
                         </div>
+
+                        {noticia.linkFonte && (
+                          <Button variant="outline" asChild className="md:min-w-[240px] md:justify-between">
+                            <a href={noticia.linkFonte} target="_blank" rel="noopener noreferrer">
+                              Ver noticia completa no site original
+                              <ExternalLink className="h-4 w-4" />
+                            </a>
+                          </Button>
+                        )}
                       </div>
-                    </div>
-                  ) : (
+
+                      {noticia.tags.length > 0 && (
+                        <div className="mt-5 flex flex-wrap gap-2">
+                          {noticia.tags.map((tag) => (
+                            <Badge key={tag} variant="outline" className="text-xs">
+                              #{tag}
+                            </Badge>
+                          ))}
+                        </div>
+                      )}
+                    </section>
+
+                    {editorialNote && (
+                      <p className="text-sm leading-6 text-muted-foreground">{editorialNote}</p>
+                    )}
+                  </div>
+                ) : (
+                  <div className="space-y-8">
                     <div
-                      className="prose prose-neutral max-w-none prose-headings:scroll-mt-24 prose-p:mb-6 prose-p:leading-8 prose-p:text-[1.05rem] prose-li:leading-8 prose-strong:text-foreground prose-a:text-primary"
+                      className="prose prose-neutral max-w-none prose-headings:scroll-mt-24 prose-p:mb-6 prose-p:text-[1.06rem] prose-p:leading-8 prose-li:leading-8 prose-strong:text-foreground prose-a:text-primary"
                       dangerouslySetInnerHTML={{ __html: safeHtml }}
                     />
-                  )}
-                </div>
 
-                {noticia.tipo === "rss" && !expandedEditorial && (
-                  <div className="mx-auto mt-10 max-w-prose rounded-2xl border bg-muted/40 p-6">
-                    <h2 className="text-base font-semibold mb-2">Credito editorial</h2>
-                    <p className="text-sm leading-6 text-muted-foreground">
-                      Fonte: <span className="font-medium text-foreground">{noticia.fonte}</span>. O Eventos Historicos organiza este conteudo a partir do feed oficial e mantem acesso para a publicacao original.
-                    </p>
+                    <section className="rounded-2xl border bg-card p-6">
+                      <div className="flex flex-col gap-5 md:flex-row md:items-start md:justify-between">
+                        <div className="space-y-2">
+                          <h2 className="text-base font-semibold text-foreground">Fonte</h2>
+                          <p className="text-sm leading-6 text-muted-foreground">
+                            {noticia.fonte}. O Eventos Historicos organiza este conteudo com base na publicacao original.
+                          </p>
+                        </div>
+
+                        {noticia.linkFonte && (
+                          <Button variant="outline" asChild className="md:min-w-[240px] md:justify-between">
+                            <a href={noticia.linkFonte} target="_blank" rel="noopener noreferrer">
+                              Ver noticia completa no site original
+                              <ExternalLink className="h-4 w-4" />
+                            </a>
+                          </Button>
+                        )}
+                      </div>
+
+                      {noticia.tags.length > 0 && (
+                        <div className="mt-5 flex flex-wrap gap-2">
+                          {noticia.tags.map((tag) => (
+                            <Badge key={tag} variant="outline" className="text-xs">
+                              #{tag}
+                            </Badge>
+                          ))}
+                        </div>
+                      )}
+                    </section>
                   </div>
                 )}
               </div>
-
-              <aside className="lg:sticky lg:top-24 space-y-5">
-                <div className="rounded-2xl border bg-card p-5">
-                  <h2 className="text-base font-semibold mb-3">Fonte</h2>
-                  <p className="text-sm leading-6 text-muted-foreground mb-4">
-                    Fonte: <span className="font-medium text-foreground">{noticia.fonte}</span>
-                  </p>
-                  {noticia.linkFonte && (
-                    <Button variant="outline" asChild className="w-full justify-between">
-                      <a href={noticia.linkFonte} target="_blank" rel="noopener noreferrer">
-                        Ver noticia completa no site original
-                        <ExternalLink className="h-4 w-4" />
-                      </a>
-                    </Button>
-                  )}
-                </div>
-
-                {noticia.tags.length > 0 && (
-                  <div className="rounded-2xl border bg-card p-5">
-                    <h2 className="text-base font-semibold mb-3">Tags</h2>
-                    <div className="flex flex-wrap gap-2">
-                      {noticia.tags.map((tag) => (
-                        <Badge key={tag} variant="outline" className="text-xs">
-                          #{tag}
-                        </Badge>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </aside>
             </div>
 
             {relatedNews.length > 0 && (
-              <div className="mx-auto mt-16 max-w-6xl border-t pt-10">
-                <div className="mx-auto max-w-4xl">
-                  <h3 className="text-2xl md:text-3xl font-bold mb-6">Noticias relacionadas</h3>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {relatedNews.map((related) => (
-                      <Link
-                        key={related.id}
-                        href={related.href}
-                        className="group rounded-2xl border bg-card p-6 hover:shadow-lg transition-shadow"
-                      >
-                        <Badge variant="secondary" className="mb-3">
-                          {related.categoria}
-                        </Badge>
-                        <h4 className="font-semibold text-lg leading-7 mb-2 group-hover:text-primary transition-colors">
-                          {related.titulo}
-                        </h4>
-                        <p className="text-sm leading-6 text-muted-foreground">{related.descricao}</p>
-                        <div className="flex items-center gap-2 text-xs text-muted-foreground mt-4">
-                          <Calendar className="h-3 w-3" />
-                          <span>{formatNewsDate(related.data)}</span>
-                        </div>
-                      </Link>
-                    ))}
-                  </div>
+              <div className="mx-auto mt-16 max-w-[920px] border-t pt-10">
+                <h3 className="text-2xl font-bold text-foreground md:text-3xl">Noticias relacionadas</h3>
+                <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-2">
+                  {relatedNews.map((related) => (
+                    <Link
+                      key={related.id}
+                      href={related.href}
+                      className="group rounded-2xl border bg-card p-6 transition-shadow hover:shadow-lg"
+                    >
+                      <Badge variant="secondary" className="mb-3">
+                        {related.categoria}
+                      </Badge>
+                      <h4 className="mb-2 text-lg font-semibold leading-7 group-hover:text-primary transition-colors">
+                        {related.titulo}
+                      </h4>
+                      <p className="text-sm leading-6 text-muted-foreground">{related.descricao}</p>
+                      <div className="mt-4 flex items-center gap-2 text-xs text-muted-foreground">
+                        <Calendar className="h-3 w-3" />
+                        <span>{formatNewsDate(related.data)}</span>
+                      </div>
+                    </Link>
+                  ))}
                 </div>
               </div>
             )}

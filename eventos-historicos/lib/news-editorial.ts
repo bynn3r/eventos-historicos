@@ -8,10 +8,13 @@ interface RelatedEditorialArticle {
 }
 
 export interface ExpandedContentResult {
-  expandedContent: string
+  titlePt: string
+  subtitlePt: string
+  contentPt: string
+  historicalContextPt?: string
+  editorialNotePt: string
   confidenceScore: number
   warnings: string[]
-  historicalContext?: string
   originalSummary: string
   usedAI: boolean
   isFallback: boolean
@@ -28,17 +31,43 @@ interface EditorialGenerationInput {
 }
 
 interface OpenAIEditorialResponse {
-  expandedContent: string
+  titlePt: string
+  subtitlePt: string
+  contentPt: string
+  historicalContextPt: string | null
+  editorialNotePt: string
   confidenceScore: number
   warnings: string[]
-  historicalContext: string | null
 }
 
 const OPENAI_API_URL = "https://api.openai.com/v1/chat/completions"
 const OPENAI_EDITORIAL_MODEL = process.env.OPENAI_EDITORIAL_MODEL || "gpt-5-mini"
+const DEFAULT_EDITORIAL_NOTE = "Conteudo adaptado editorialmente com base na fonte original."
+const LOW_CONFIDENCE_THRESHOLD = 68
 
 function normalizeWhitespace(value: string) {
   return value.replace(/\s+/g, " ").trim()
+}
+
+function splitIntoParagraphs(value: string) {
+  return value
+    .split(/\n\s*\n/)
+    .map((paragraph) => normalizeWhitespace(paragraph))
+    .filter(Boolean)
+}
+
+function formatPtDate(value: string) {
+  const parsedDate = new Date(value)
+
+  if (Number.isNaN(parsedDate.getTime())) {
+    return ""
+  }
+
+  return new Intl.DateTimeFormat("pt-BR", {
+    day: "2-digit",
+    month: "long",
+    year: "numeric",
+  }).format(parsedDate)
 }
 
 function extractNumbers(value: string) {
@@ -49,115 +78,108 @@ function extractQuotedText(value: string) {
   return value.match(/["“][^"”]+["”]/g) ?? []
 }
 
-function extractNamedEntities(value: string) {
-  const uppercaseEntities = value.match(/\b[A-Z]{2,}(?:-[A-Z]{2,})*\b/g) ?? []
-  const multiWordEntities = value.match(/\b[A-ZÀ-Ý][\p{L}\-']+(?:\s+[A-ZÀ-Ý][\p{L}\-']+)+/gu) ?? []
-  return [...new Set([...uppercaseEntities, ...multiWordEntities].map((entity) => normalizeWhitespace(entity)))]
-}
-
-function splitIntoParagraphs(value: string) {
-  return value
-    .split(/\n\s*\n/)
-    .map((paragraph) => normalizeWhitespace(paragraph))
-    .filter(Boolean)
-}
-
-function estimateFallbackConfidence(input: EditorialGenerationInput) {
-  const summaryLength = normalizeWhitespace(input.summary).length
-  const relatedBonus = Math.min(input.relatedArticles?.length ?? 0, 2) * 6
-
-  if (summaryLength >= 420) {
-    return 74 + relatedBonus
-  }
-
-  if (summaryLength >= 240) {
-    return 66 + relatedBonus
-  }
-
-  if (summaryLength >= 140) {
-    return 58 + relatedBonus
-  }
-
-  return 46 + relatedBonus
-}
-
-function buildFallbackHistoricalContext(input: EditorialGenerationInput) {
-  const relatedSameCategory = (input.relatedArticles ?? []).filter((article) => article.category === input.category)
-
-  if (input.category === "História" && relatedSameCategory.length > 0) {
-    return `A cobertura relacionada sugere que o tema faz parte de um quadro histórico mais amplo, mas o material-base disponível aqui não detalha antecedentes adicionais com precisão suficiente para ampliá-los além deste contexto.`
-  }
-
-  if (input.category === "Geopolítica" || input.category === "Conflitos" || input.category === "Política") {
-    return relatedSameCategory.length > 0
-      ? `Matérias relacionadas indicam que o episódio acompanha uma sequência maior de cobertura sobre ${input.category.toLowerCase()}, embora o resumo original não traga elementos suficientes para reconstruir toda essa cronologia com segurança.`
-      : undefined
-  }
-
-  return undefined
-}
-
-function buildFallbackExpandedContent(input: EditorialGenerationInput): ExpandedContentResult {
-  const summary = normalizeWhitespace(input.summary || input.title)
-  const lead = summary || input.title
-  const paragraphs = [
-    lead,
-    `De acordo com a cobertura publicada por ${input.source} em ${input.pubDate}, o tema foi classificado em ${input.category.toLowerCase()}. O material disponível indica esse desenvolvimento, mas não oferece todos os detalhes normalmente presentes em uma reportagem completa.`,
-  ]
-
-  if (summary.length >= 140) {
-    paragraphs.push(
-      `No recorte apresentado pela fonte original, os elementos centrais apontam para desdobramentos relevantes do caso, com possível impacto político, diplomático, econômico ou histórico conforme a natureza da notícia. Como o texto-base é resumido, esta versão editorial preserva apenas o que já aparece no resumo original.`,
-    )
-  }
-
-  if ((input.relatedArticles ?? []).length > 0) {
-    paragraphs.push(
-      `A cobertura relacionada sugere que o assunto vem sendo acompanhado em conjunto com outros acontecimentos próximos, o que ajuda a situar a notícia em um contexto maior sem acrescentar fatos que não estejam confirmados no material-base desta publicação.`,
-    )
-  }
-
-  return {
-    expandedContent: paragraphs.join("\n\n"),
-    confidenceScore: estimateFallbackConfidence(input),
-    warnings: ["Texto editorial expandido com base no resumo da fonte original."],
-    historicalContext: buildFallbackHistoricalContext(input),
-    originalSummary: summary,
-    usedAI: false,
-    isFallback: true,
-  }
-}
-
-function sanitizeGeneratedResult(result: OpenAIEditorialResponse, input: EditorialGenerationInput) {
-  const allowedText = [
+function buildAllowedText(input: EditorialGenerationInput) {
+  return [
     input.title,
     input.summary,
     input.source,
     input.pubDate,
+    formatPtDate(input.pubDate),
     input.category,
     ...input.tags,
     ...(input.relatedArticles ?? []).flatMap((article) => [article.title, article.summary, article.source, article.category]),
-  ].join(" ")
+  ]
+    .filter(Boolean)
+    .join(" ")
+}
 
+function sanitizeGeneratedResult(result: OpenAIEditorialResponse, input: EditorialGenerationInput) {
+  const allowedText = buildAllowedText(input)
   const allowedNumbers = new Set(extractNumbers(allowedText))
   const allowedQuotes = new Set(extractQuotedText(allowedText))
-  const allowedEntities = new Set(extractNamedEntities(allowedText))
+  const outputText = [result.titlePt, result.subtitlePt, result.contentPt, result.historicalContextPt ?? ""].join("\n")
 
-  const outputNumbers = extractNumbers(result.expandedContent)
-  const outputQuotes = extractQuotedText(result.expandedContent)
-  const outputEntities = extractNamedEntities(`${result.expandedContent}\n${result.historicalContext ?? ""}`)
-
-  const unexpectedNumbers = outputNumbers.filter((value) => !allowedNumbers.has(value))
-  const unexpectedQuotes = outputQuotes.filter((value) => !allowedQuotes.has(value))
-  const unexpectedEntities = outputEntities.filter((value) => !allowedEntities.has(value) && value !== input.source)
+  const unexpectedNumbers = extractNumbers(outputText).filter((value) => !allowedNumbers.has(value))
+  const unexpectedQuotes = extractQuotedText(outputText).filter((value) => !allowedQuotes.has(value))
 
   return {
-    hasUnsafeContent: unexpectedNumbers.length > 0 || unexpectedQuotes.length > 0 || unexpectedEntities.length > 2,
+    hasUnsafeContent: unexpectedNumbers.length > 0 || unexpectedQuotes.length > 0,
     warnings: [
-      ...(unexpectedNumbers.length > 0 ? ["A saída expandida incluiu números não confirmados pelas entradas."] : []),
-      ...(unexpectedQuotes.length > 0 ? ["A saída expandida incluiu citações não presentes no material-base."] : []),
-      ...(unexpectedEntities.length > 2 ? ["A saída expandida incluiu referências nominais fora das entradas fornecidas."] : []),
+      ...(unexpectedNumbers.length > 0 ? ["Numeros adicionais nao confirmados pelo material-base."] : []),
+      ...(unexpectedQuotes.length > 0 ? ["Citacoes nao presentes nas entradas originais."] : []),
     ],
+  }
+}
+
+function estimateFallbackConfidence(input: EditorialGenerationInput) {
+  const summaryLength = normalizeWhitespace(input.summary).length
+
+  if (summaryLength >= 360) {
+    return 70
+  }
+
+  if (summaryLength >= 220) {
+    return 62
+  }
+
+  return 52
+}
+
+function summarizeLead(summary: string, title: string) {
+  const normalizedSummary = normalizeWhitespace(summary)
+  if (!normalizedSummary) {
+    return normalizeWhitespace(title)
+  }
+
+  return normalizedSummary
+}
+
+function buildFallbackContent(input: EditorialGenerationInput) {
+  const lead = summarizeLead(input.summary, input.title)
+  const dateLabel = formatPtDate(input.pubDate)
+  const paragraphs = [lead]
+
+  if (dateLabel) {
+    paragraphs.push(`A publicacao original foi veiculada em ${dateLabel} por ${input.source}, dentro da editoria de ${input.category.toLowerCase()}.`)
+  }
+
+  return paragraphs.join("\n\n")
+}
+
+function normalizeParagraphCount(value: string, maxParagraphs = 6) {
+  const paragraphs = splitIntoParagraphs(value)
+
+  if (paragraphs.length === 0) {
+    return ""
+  }
+
+  return paragraphs.slice(0, maxParagraphs).join("\n\n")
+}
+
+function keepShortWhenLowConfidence(value: string, confidenceScore: number) {
+  if (confidenceScore >= LOW_CONFIDENCE_THRESHOLD) {
+    return value
+  }
+
+  const paragraphs = splitIntoParagraphs(value)
+  return paragraphs.slice(0, Math.min(3, paragraphs.length)).join("\n\n")
+}
+
+function buildFallbackExpandedContent(input: EditorialGenerationInput): ExpandedContentResult {
+  const originalSummary = normalizeWhitespace(input.summary || input.title)
+  const fallbackContent = buildFallbackContent(input)
+
+  return {
+    titlePt: normalizeWhitespace(input.title),
+    subtitlePt: originalSummary,
+    contentPt: fallbackContent,
+    historicalContextPt: undefined,
+    editorialNotePt: DEFAULT_EDITORIAL_NOTE,
+    confidenceScore: estimateFallbackConfidence(input),
+    warnings: ["Versao editorial curta gerada a partir do resumo da fonte original."],
+    originalSummary,
+    usedAI: false,
+    isFallback: true,
   }
 }
 
@@ -180,23 +202,26 @@ async function requestOpenAIExpandedContent(input: EditorialGenerationInput) {
       response_format: {
         type: "json_schema",
         json_schema: {
-          name: "expanded_editorial_article",
+          name: "expanded_editorial_article_ptbr",
           strict: true,
           schema: {
             type: "object",
             additionalProperties: false,
             properties: {
-              expandedContent: { type: "string" },
+              titlePt: { type: "string" },
+              subtitlePt: { type: "string" },
+              contentPt: { type: "string" },
+              historicalContextPt: {
+                anyOf: [{ type: "string" }, { type: "null" }],
+              },
+              editorialNotePt: { type: "string" },
               confidenceScore: { type: "number" },
               warnings: {
                 type: "array",
                 items: { type: "string" },
               },
-              historicalContext: {
-                anyOf: [{ type: "string" }, { type: "null" }],
-              },
             },
-            required: ["expandedContent", "confidenceScore", "warnings", "historicalContext"],
+            required: ["titlePt", "subtitlePt", "contentPt", "historicalContextPt", "editorialNotePt", "confidenceScore", "warnings"],
           },
         },
       },
@@ -204,15 +229,18 @@ async function requestOpenAIExpandedContent(input: EditorialGenerationInput) {
         {
           role: "system",
           content:
-            "Você é um editor de notícias. Expanda o texto somente com base na entrada recebida. Não invente fatos, nomes, números, datas, lugares, declarações ou citações. Preserve o idioma predominante da entrada. Se a base for curta, gere um texto curto e neutro. Se não houver base suficiente para contexto histórico, retorne historicalContext como null.",
+            'Voce e um editor de noticias em portugues do Brasil. Reescreva e expanda o conteudo abaixo com tom jornalistico natural, claro e sobrio. Use apenas as informacoes fornecidas. Nao invente fatos, numeros, nomes, datas, falas ou contexto externo. Quando houver pouca informacao, escreva menos. O texto final deve parecer uma materia curta publicada em um portal de noticias brasileiro. Nunca mencione que e uma IA, que esta expandindo um resumo, nem explique limitacoes no corpo do texto. Traduza titulo, subtitulo, resumo e corpo final para portugues do Brasil. Use datas em formato brasileiro. Retorne de 3 a 6 paragrafos no campo contentPt quando houver base suficiente; se a base for curta, entregue menos paragrafos. So preencha historicalContextPt quando houver base suficiente nas entradas.',
         },
         {
           role: "user",
-          content: JSON.stringify(input),
+          content: JSON.stringify({
+            ...input,
+            pubDate: formatPtDate(input.pubDate) || input.pubDate,
+          }),
         },
       ],
     }),
-    signal: AbortSignal.timeout(12_000),
+    signal: AbortSignal.timeout(15_000),
   })
 
   if (!response.ok) {
@@ -252,35 +280,29 @@ export async function generateExpandedContent(
   }
 
   const fallback = buildFallbackExpandedContent(input)
-  const hasApiKey = Boolean(process.env.OPENAI_API_KEY)
 
   try {
     const aiResult = await requestOpenAIExpandedContent(input)
 
     if (!aiResult) {
-      return hasApiKey
-        ? fallback
-        : {
-            ...fallback,
-            warnings: [
-              ...fallback.warnings,
-              "OPENAI_API_KEY nÃ£o configurada. O site exibiu uma versÃ£o editorial segura sem uso de IA.",
-            ],
-          }
+      return fallback
     }
 
-    const normalizedExpanded = splitIntoParagraphs(aiResult.expandedContent).join("\n\n")
-    const normalizedHistorical = aiResult.historicalContext ? splitIntoParagraphs(aiResult.historicalContext).join("\n\n") : undefined
-    const validation = sanitizeGeneratedResult(
-      {
-        ...aiResult,
-        expandedContent: normalizedExpanded,
-        historicalContext: normalizedHistorical ?? null,
-      },
-      input,
-    )
+    const normalizedResult: OpenAIEditorialResponse = {
+      titlePt: normalizeWhitespace(aiResult.titlePt),
+      subtitlePt: normalizeWhitespace(aiResult.subtitlePt),
+      contentPt: keepShortWhenLowConfidence(normalizeParagraphCount(aiResult.contentPt), aiResult.confidenceScore),
+      historicalContextPt: aiResult.historicalContextPt
+        ? keepShortWhenLowConfidence(normalizeParagraphCount(aiResult.historicalContextPt, 3), aiResult.confidenceScore)
+        : null,
+      editorialNotePt: normalizeWhitespace(aiResult.editorialNotePt) || DEFAULT_EDITORIAL_NOTE,
+      confidenceScore: Math.max(0, Math.min(100, Math.round(aiResult.confidenceScore))),
+      warnings: aiResult.warnings,
+    }
 
-    if (!normalizedExpanded || validation.hasUnsafeContent) {
+    const validation = sanitizeGeneratedResult(normalizedResult, input)
+
+    if (!normalizedResult.contentPt || validation.hasUnsafeContent) {
       return {
         ...fallback,
         confidenceScore: Math.min(fallback.confidenceScore, 55),
@@ -288,19 +310,32 @@ export async function generateExpandedContent(
       }
     }
 
+    if (normalizedResult.confidenceScore < LOW_CONFIDENCE_THRESHOLD) {
+      return {
+        ...fallback,
+        titlePt: normalizedResult.titlePt || fallback.titlePt,
+        subtitlePt: normalizedResult.subtitlePt || fallback.subtitlePt,
+        contentPt: normalizedResult.subtitlePt || fallback.contentPt,
+        editorialNotePt: normalizedResult.editorialNotePt || DEFAULT_EDITORIAL_NOTE,
+        confidenceScore: normalizedResult.confidenceScore,
+        warnings: normalizedResult.warnings,
+        usedAI: true,
+      }
+    }
+
     return {
-      expandedContent: normalizedExpanded,
-      confidenceScore: Math.max(0, Math.min(100, Math.round(aiResult.confidenceScore))),
-      warnings: aiResult.warnings.length > 0 ? aiResult.warnings : fallback.warnings,
-      historicalContext: normalizedHistorical,
+      titlePt: normalizedResult.titlePt || fallback.titlePt,
+      subtitlePt: normalizedResult.subtitlePt || fallback.subtitlePt,
+      contentPt: normalizedResult.contentPt,
+      historicalContextPt: normalizedResult.historicalContextPt || undefined,
+      editorialNotePt: normalizedResult.editorialNotePt || DEFAULT_EDITORIAL_NOTE,
+      confidenceScore: normalizedResult.confidenceScore,
+      warnings: normalizedResult.warnings,
       originalSummary: fallback.originalSummary,
       usedAI: true,
       isFallback: false,
     }
   } catch {
-    return {
-      ...fallback,
-      warnings: [...fallback.warnings, "A geração assistida por IA falhou e o site exibiu uma versão editorial segura."],
-    }
+    return fallback
   }
 }
