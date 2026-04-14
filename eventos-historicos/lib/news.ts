@@ -55,6 +55,7 @@ type WikimediaImageCandidate = {
 }
 
 const imageHintCache = new Map<string, Promise<OpenAIImageHintResponse | null>>()
+const sourceImageCache = new Map<string, Promise<string>>()
 
 const RSS_FEEDS = [
   { name: "BBC World", url: "http://feeds.bbci.co.uk/news/world/rss.xml" },
@@ -239,6 +240,81 @@ function extractTag(block: string, tag: string) {
 function extractAttribute(block: string, tag: string, attribute: string) {
   const match = block.match(new RegExp(`<${tag}[^>]*${attribute}="([^"]+)"[^>]*>`, "i"))
   return match ? decodeEntities(match[1]) : ""
+}
+
+function extractMetaContent(html: string, propertyName: string) {
+  const match = html.match(new RegExp(`<meta[^>]+(?:property|name)=["']${propertyName}["'][^>]+content=["']([^"']+)["']`, "i"))
+  return match ? decodeEntities(match[1]) : ""
+}
+
+function extractImagesByPattern(html: string, pattern: RegExp) {
+  return [...html.matchAll(pattern)]
+    .map((match) => normalizeImageUrl(match[1]))
+    .filter(Boolean)
+}
+
+function extractSourceSpecificImage(html: string, url: string) {
+  const hostname = (() => {
+    try {
+      return new URL(url).hostname.toLowerCase()
+    } catch {
+      return ""
+    }
+  })()
+
+  const patterns: RegExp[] = []
+
+  if (hostname.includes("aljazeera.com")) {
+    patterns.push(
+      /<img[^>]+src=["']([^"']+)["'][^>]+class=["'][^"']*responsive-image[^"']*["']/gi,
+      /<img[^>]+src=["']([^"']+)["'][^>]+alt=["'][^"']+["'][^>]*>/gi,
+    )
+  }
+
+  if (hostname.includes("theguardian.com")) {
+    patterns.push(
+      /<img[^>]+src=["']([^"']+)["'][^>]+itemprop=["']contentUrl["'][^>]*>/gi,
+      /<source[^>]+srcset=["']([^ "'?,]+[^"']*)["']/gi,
+    )
+  }
+
+  if (hostname.includes("bbc.") || hostname.includes("bbcnews")) {
+    patterns.push(
+      /<img[^>]+src=["']([^"']+)["'][^>]+data-testid=["'][^"']*image[^"']*["']/gi,
+      /<img[^>]+src=["']([^"']+)["'][^>]+loading=["']eager["'][^>]*>/gi,
+    )
+  }
+
+  if (hostname.includes("g1.globo.com") || hostname.includes("globo.com")) {
+    patterns.push(
+      /<img[^>]+src=["']([^"']+)["'][^>]+class=["'][^"']*content-media__image[^"']*["']/gi,
+      /<img[^>]+src=["']([^"']+)["'][^>]+itemprop=["']image["'][^>]*>/gi,
+    )
+  }
+
+  if (hostname.includes("uol.com.br")) {
+    patterns.push(
+      /<img[^>]+src=["']([^"']+)["'][^>]+class=["'][^"']*thumb[^"']*["']/gi,
+      /<img[^>]+src=["']([^"']+)["'][^>]+itemprop=["']image["'][^>]*>/gi,
+    )
+  }
+
+  if (hostname.includes("agenciabrasil.ebc.com.br")) {
+    patterns.push(
+      /<img[^>]+src=["']([^"']+)["'][^>]+class=["'][^"']*img-fluid[^"']*["']/gi,
+      /<img[^>]+src=["']([^"']+)["'][^>]+typeof=["']foaf:Image["'][^>]*>/gi,
+    )
+  }
+
+  for (const pattern of patterns) {
+    const candidate = extractImagesByPattern(html, pattern).find(Boolean)
+
+    if (candidate) {
+      return candidate
+    }
+  }
+
+  return ""
 }
 
 function normalizeText(value: string) {
@@ -663,11 +739,55 @@ async function searchWikimediaImages(query: string): Promise<WikimediaImageCandi
   }
 }
 
-async function resolveArticleImage(article: { titulo: string; descricao: string; categoria: string }, feedImage?: string) {
+async function fetchSourcePageImage(url?: string) {
+  if (!url || !/^https?:\/\//i.test(url)) {
+    return ""
+  }
+
+  const cached = sourceImageCache.get(url)
+  if (cached) {
+    return cached
+  }
+
+  const pending = (async () => {
+    try {
+      const response = await fetch(url, {
+        headers: { "User-Agent": "Mozilla/5.0" },
+        signal: AbortSignal.timeout(6000),
+        next: { revalidate: FEED_REVALIDATE_SECONDS },
+      })
+
+      if (!response.ok) {
+        return ""
+      }
+
+      const html = await response.text()
+      const metaImage =
+        extractMetaContent(html, "og:image") ||
+        extractMetaContent(html, "twitter:image") ||
+        extractMetaContent(html, "og:image:url")
+
+      return normalizeImageUrl(metaImage) || extractSourceSpecificImage(html, url)
+    } catch {
+      return ""
+    }
+  })()
+
+  sourceImageCache.set(url, pending)
+  return pending
+}
+
+async function resolveArticleImage(article: { titulo: string; descricao: string; categoria: string; link?: string }, feedImage?: string) {
   const normalizedFeedImage = normalizeImageUrl(feedImage)
 
   if (normalizedFeedImage) {
     return normalizedFeedImage
+  }
+
+  const sourcePageImage = await fetchSourcePageImage(article.link)
+
+  if (sourcePageImage) {
+    return sourcePageImage
   }
 
   const aiHints = await requestOpenAIImageHints(article)
@@ -897,7 +1017,7 @@ export async function getRssNews(limit = 20): Promise<SiteNewsArticle[]> {
       const conteudo = buildRssBody(item, categoria, resumo)
       const conteudoHtml = buildStructuredRssHtml(item, categoria, resumo)
       const score = scoreArticle(item, categoria)
-      const imagem = await resolveArticleImage({ ...item, categoria }, item.imagem)
+      const imagem = await resolveArticleImage({ ...item, categoria, link: item.link }, item.imagem)
 
       return {
         score,
