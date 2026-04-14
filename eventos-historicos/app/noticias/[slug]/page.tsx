@@ -24,12 +24,12 @@ export async function generateMetadata({ params }: NoticiaPageProps) {
 
   if (!noticia) {
     return {
-      title: "Notícia não encontrada",
+      title: "Noticia nao encontrada",
     }
   }
 
   return {
-    title: `${noticia.titulo} | Eventos Históricos`,
+    title: `${noticia.titulo} | Eventos Historicos`,
     description: noticia.descricao,
   }
 }
@@ -55,7 +55,10 @@ export default async function NoticiaPage({ params }: NoticiaPageProps) {
         )
       : null
   const safeHtml = renderSafeArticleHtml(noticia.conteudoHtml)
-  const imageCaption = noticia.tipo === "rss" ? `Imagem da cobertura original via ${noticia.fonte}.` : `Imagem de destaque da análise ${noticia.fonte}.`
+  const imageCaption =
+    noticia.tipo === "rss"
+      ? `Imagem da cobertura original via ${noticia.fonte}.`
+      : `Imagem de destaque da analise ${noticia.fonte}.`
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -68,7 +71,7 @@ export default async function NoticiaPage({ params }: NoticiaPageProps) {
               <Button variant="ghost" asChild className="mb-6 pl-0 text-muted-foreground hover:text-foreground">
                 <Link href="/noticias">
                   <ArrowLeft className="mr-2 h-4 w-4" />
-                  Voltar às Notícias
+                  Voltar as noticias
                 </Link>
               </Button>
 
@@ -78,9 +81,9 @@ export default async function NoticiaPage({ params }: NoticiaPageProps) {
                   <span>{formatNewsDate(noticia.data)}</span>
                 </div>
                 <Badge variant="secondary">{noticia.categoria}</Badge>
-                <Badge variant="outline">{noticia.tipo === "rss" ? "Agregador RSS" : "Análise do portal"}</Badge>
+                <Badge variant="outline">{noticia.tipo === "rss" ? "Agregador RSS" : "Analise do portal"}</Badge>
                 {noticia.resumo && <Badge variant="outline">Resumo editorial</Badge>}
-                {expandedEditorial && <Badge variant="outline">ConteÃºdo editorial expandido</Badge>}
+                {expandedEditorial && <Badge variant="outline">Conteudo editorial expandido</Badge>}
                 {noticia.autor && (
                   <div className="flex items-center gap-2">
                     <User className="h-4 w-4" />
@@ -100,7 +103,7 @@ export default async function NoticiaPage({ params }: NoticiaPageProps) {
               {noticia.linkFonte && (
                 <Button variant="outline" asChild className="rounded-full px-5">
                   <a href={noticia.linkFonte} target="_blank" rel="noopener noreferrer">
-                    Ver notícia completa no site original
+                    Ver noticia completa no site original
                     <ExternalLink className="ml-2 h-4 w-4" />
                   </a>
                 </Button>
@@ -121,50 +124,58 @@ export default async function NoticiaPage({ params }: NoticiaPageProps) {
                 <div className="mx-auto max-w-prose">
                   {expandedEditorial ? (
                     <div className="space-y-8">
-                      <div className="rounded-2xl border bg-muted/30 p-5">
-                        <div className="flex flex-wrap items-center gap-2 mb-3">
-                          <Badge variant="secondary">ConteÃºdo editorial expandido</Badge>
-                          <span className="text-sm text-muted-foreground">ConfianÃ§a: {expandedEditorial.confidenceScore}%</span>
-                        </div>
-                        {expandedEditorial.confidenceScore < 70 && (
-                          <p className="text-sm leading-6 text-muted-foreground">
-                            Texto editorial expandido com base no resumo da fonte original.
-                          </p>
-                        )}
-                      </div>
-
                       <div className="prose prose-neutral max-w-none prose-p:mb-6 prose-p:leading-8 prose-p:text-[1.05rem]">
                         {expandedEditorial.expandedContent.split(/\n\s*\n/).map((paragraph, index) => (
                           <p key={`${index}-${paragraph.slice(0, 24)}`}>{paragraph}</p>
                         ))}
                       </div>
 
-                      {expandedEditorial.historicalContext && (
-                        <div className="rounded-2xl border bg-muted/30 p-6">
-                          <h2 className="text-base font-semibold mb-3">Contexto histÃ³rico</h2>
-                          <div className="space-y-4 text-sm leading-7 text-muted-foreground">
-                            {expandedEditorial.historicalContext.split(/\n\s*\n/).map((paragraph, index) => (
-                              <p key={`${index}-${paragraph.slice(0, 24)}`}>{paragraph}</p>
-                            ))}
+                      <div className="rounded-2xl border bg-muted/30 p-6 space-y-5">
+                        <div className="flex flex-wrap items-center gap-2">
+                          <Badge variant="secondary">Conteudo editorial expandido</Badge>
+                          <span className="text-sm text-muted-foreground">Confianca: {expandedEditorial.confidenceScore}%</span>
+                        </div>
+
+                        {expandedEditorial.confidenceScore < 70 && (
+                          <p className="text-sm leading-6 text-muted-foreground">
+                            Texto editorial expandido com base no resumo da fonte original.
+                          </p>
+                        )}
+
+                        {expandedEditorial.historicalContext && (
+                          <div className="space-y-3">
+                            <h2 className="text-base font-semibold">Contexto historico</h2>
+                            <div className="space-y-3 text-sm leading-7 text-muted-foreground">
+                              {expandedEditorial.historicalContext.split(/\n\s*\n/).map((paragraph, index) => (
+                                <p key={`${index}-${paragraph.slice(0, 24)}`}>{paragraph}</p>
+                              ))}
+                            </div>
                           </div>
-                        </div>
-                      )}
+                        )}
 
-                      <div className="rounded-2xl border bg-card p-6">
-                        <h2 className="text-base font-semibold mb-2">Resumo original da fonte</h2>
-                        <p className="text-sm leading-7 text-muted-foreground">{expandedEditorial.originalSummary}</p>
+                        <div className="space-y-2">
+                          <h2 className="text-base font-semibold">Resumo original da fonte</h2>
+                          <p className="text-sm leading-7 text-muted-foreground">{expandedEditorial.originalSummary}</p>
+                        </div>
+
+                        {expandedEditorial.warnings.length > 0 && (
+                          <div className="space-y-2">
+                            <h2 className="text-base font-semibold">Avisos editoriais</h2>
+                            <ul className="space-y-2 text-sm leading-6 text-muted-foreground">
+                              {expandedEditorial.warnings.map((warning, index) => (
+                                <li key={`${index}-${warning.slice(0, 24)}`}>{warning}</li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
+
+                        <div className="space-y-2 border-t pt-4">
+                          <h2 className="text-base font-semibold">Credito editorial</h2>
+                          <p className="text-sm leading-6 text-muted-foreground">
+                            Fonte: <span className="font-medium text-foreground">{noticia.fonte}</span>. O Eventos Historicos organiza este conteudo a partir do feed oficial e mantem acesso para a publicacao original.
+                          </p>
+                        </div>
                       </div>
-
-                      {expandedEditorial.warnings.length > 0 && (
-                        <div className="rounded-2xl border border-amber-200 bg-amber-50 p-6 text-amber-950">
-                          <h2 className="text-base font-semibold mb-2">Avisos editoriais</h2>
-                          <ul className="space-y-2 text-sm leading-6">
-                            {expandedEditorial.warnings.map((warning, index) => (
-                              <li key={`${index}-${warning.slice(0, 24)}`}>{warning}</li>
-                            ))}
-                          </ul>
-                        </div>
-                      )}
                     </div>
                   ) : (
                     <div
@@ -174,12 +185,11 @@ export default async function NoticiaPage({ params }: NoticiaPageProps) {
                   )}
                 </div>
 
-                {noticia.tipo === "rss" && (
+                {noticia.tipo === "rss" && !expandedEditorial && (
                   <div className="mx-auto mt-10 max-w-prose rounded-2xl border bg-muted/40 p-6">
-                    <h2 className="text-base font-semibold mb-2">Crédito editorial</h2>
+                    <h2 className="text-base font-semibold mb-2">Credito editorial</h2>
                     <p className="text-sm leading-6 text-muted-foreground">
-                      Fonte: <span className="font-medium text-foreground">{noticia.fonte}</span>. O Eventos Históricos
-                      organiza este conteúdo a partir do feed oficial e mantém acesso para a publicação original.
+                      Fonte: <span className="font-medium text-foreground">{noticia.fonte}</span>. O Eventos Historicos organiza este conteudo a partir do feed oficial e mantem acesso para a publicacao original.
                     </p>
                   </div>
                 )}
@@ -194,7 +204,7 @@ export default async function NoticiaPage({ params }: NoticiaPageProps) {
                   {noticia.linkFonte && (
                     <Button variant="outline" asChild className="w-full justify-between">
                       <a href={noticia.linkFonte} target="_blank" rel="noopener noreferrer">
-                        Ver notícia completa no site original
+                        Ver noticia completa no site original
                         <ExternalLink className="h-4 w-4" />
                       </a>
                     </Button>
@@ -219,7 +229,7 @@ export default async function NoticiaPage({ params }: NoticiaPageProps) {
             {relatedNews.length > 0 && (
               <div className="mx-auto mt-16 max-w-6xl border-t pt-10">
                 <div className="mx-auto max-w-4xl">
-                  <h3 className="text-2xl md:text-3xl font-bold mb-6">Notícias Relacionadas</h3>
+                  <h3 className="text-2xl md:text-3xl font-bold mb-6">Noticias relacionadas</h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {relatedNews.map((related) => (
                       <Link
