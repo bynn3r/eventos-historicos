@@ -252,12 +252,21 @@ export async function generateExpandedContent(
   }
 
   const fallback = buildFallbackExpandedContent(input)
+  const hasApiKey = Boolean(process.env.OPENAI_API_KEY)
 
   try {
     const aiResult = await requestOpenAIExpandedContent(input)
 
     if (!aiResult) {
-      return fallback
+      return hasApiKey
+        ? fallback
+        : {
+            ...fallback,
+            warnings: [
+              ...fallback.warnings,
+              "OPENAI_API_KEY nÃ£o configurada. O site exibiu uma versÃ£o editorial segura sem uso de IA.",
+            ],
+          }
     }
 
     const normalizedExpanded = splitIntoParagraphs(aiResult.expandedContent).join("\n\n")
