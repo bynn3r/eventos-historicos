@@ -6,6 +6,7 @@ import { NewsImage } from "@/components/news-image"
 import { Calendar, ArrowLeft, ExternalLink, User } from "lucide-react"
 import Link from "next/link"
 import { notFound } from "next/navigation"
+import { generateExpandedContent } from "@/lib/news-editorial"
 import { formatNewsDate, getNewsArticleBySlug, getRelatedNews, renderSafeArticleHtml } from "@/lib/news"
 
 interface NoticiaPageProps {
@@ -41,6 +42,18 @@ export default async function NoticiaPage({ params }: NoticiaPageProps) {
   }
 
   const relatedNews = await getRelatedNews(params.slug, 2)
+  const expandedEditorial =
+    noticia.tipo === "rss"
+      ? await generateExpandedContent(
+          noticia,
+          relatedNews.map((related) => ({
+            titulo: related.titulo,
+            descricao: related.descricao,
+            fonte: related.fonte,
+            categoria: related.categoria,
+          })),
+        )
+      : null
   const safeHtml = renderSafeArticleHtml(noticia.conteudoHtml)
   const imageCaption = noticia.tipo === "rss" ? `Imagem da cobertura original via ${noticia.fonte}.` : `Imagem de destaque da análise ${noticia.fonte}.`
 
@@ -67,6 +80,7 @@ export default async function NoticiaPage({ params }: NoticiaPageProps) {
                 <Badge variant="secondary">{noticia.categoria}</Badge>
                 <Badge variant="outline">{noticia.tipo === "rss" ? "Agregador RSS" : "Análise do portal"}</Badge>
                 {noticia.resumo && <Badge variant="outline">Resumo editorial</Badge>}
+                {expandedEditorial && <Badge variant="outline">ConteÃºdo editorial expandido</Badge>}
                 {noticia.autor && (
                   <div className="flex items-center gap-2">
                     <User className="h-4 w-4" />
@@ -105,10 +119,59 @@ export default async function NoticiaPage({ params }: NoticiaPageProps) {
                 )}
 
                 <div className="mx-auto max-w-prose">
-                  <div
-                    className="prose prose-neutral max-w-none prose-headings:scroll-mt-24 prose-p:mb-6 prose-p:leading-8 prose-p:text-[1.05rem] prose-li:leading-8 prose-strong:text-foreground prose-a:text-primary"
-                    dangerouslySetInnerHTML={{ __html: safeHtml }}
-                  />
+                  {expandedEditorial ? (
+                    <div className="space-y-8">
+                      <div className="rounded-2xl border bg-muted/30 p-5">
+                        <div className="flex flex-wrap items-center gap-2 mb-3">
+                          <Badge variant="secondary">ConteÃºdo editorial expandido</Badge>
+                          <span className="text-sm text-muted-foreground">ConfianÃ§a: {expandedEditorial.confidenceScore}%</span>
+                        </div>
+                        {expandedEditorial.confidenceScore < 70 && (
+                          <p className="text-sm leading-6 text-muted-foreground">
+                            Texto editorial expandido com base no resumo da fonte original.
+                          </p>
+                        )}
+                      </div>
+
+                      <div className="prose prose-neutral max-w-none prose-p:mb-6 prose-p:leading-8 prose-p:text-[1.05rem]">
+                        {expandedEditorial.expandedContent.split(/\n\s*\n/).map((paragraph, index) => (
+                          <p key={`${index}-${paragraph.slice(0, 24)}`}>{paragraph}</p>
+                        ))}
+                      </div>
+
+                      {expandedEditorial.historicalContext && (
+                        <div className="rounded-2xl border bg-muted/30 p-6">
+                          <h2 className="text-base font-semibold mb-3">Contexto histÃ³rico</h2>
+                          <div className="space-y-4 text-sm leading-7 text-muted-foreground">
+                            {expandedEditorial.historicalContext.split(/\n\s*\n/).map((paragraph, index) => (
+                              <p key={`${index}-${paragraph.slice(0, 24)}`}>{paragraph}</p>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+
+                      <div className="rounded-2xl border bg-card p-6">
+                        <h2 className="text-base font-semibold mb-2">Resumo original da fonte</h2>
+                        <p className="text-sm leading-7 text-muted-foreground">{expandedEditorial.originalSummary}</p>
+                      </div>
+
+                      {expandedEditorial.warnings.length > 0 && (
+                        <div className="rounded-2xl border border-amber-200 bg-amber-50 p-6 text-amber-950">
+                          <h2 className="text-base font-semibold mb-2">Avisos editoriais</h2>
+                          <ul className="space-y-2 text-sm leading-6">
+                            {expandedEditorial.warnings.map((warning, index) => (
+                              <li key={`${index}-${warning.slice(0, 24)}`}>{warning}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    <div
+                      className="prose prose-neutral max-w-none prose-headings:scroll-mt-24 prose-p:mb-6 prose-p:leading-8 prose-p:text-[1.05rem] prose-li:leading-8 prose-strong:text-foreground prose-a:text-primary"
+                      dangerouslySetInnerHTML={{ __html: safeHtml }}
+                    />
+                  )}
                 </div>
 
                 {noticia.tipo === "rss" && (
