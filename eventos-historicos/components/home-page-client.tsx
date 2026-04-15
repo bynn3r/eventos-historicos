@@ -10,7 +10,7 @@ import { Badge } from "@/components/ui/badge"
 import { Calendar, Clock, ArrowRight, Globe, BookOpen, TrendingUp, ExternalLink } from "lucide-react"
 import Link from "next/link"
 import { useLanguage } from "@/contexts/language-context"
-import { formatNewsDate, type SiteNewsArticle } from "@/lib/news"
+import { formatNewsDate, hasContextualImage, type SiteNewsArticle } from "@/lib/news"
 
 interface HomePageClientProps {
   featuredNews: SiteNewsArticle[]
@@ -22,8 +22,8 @@ function NewsCta({ article, children }: { article: SiteNewsArticle; children: Re
 
 export function HomePageClient({ featuredNews }: HomePageClientProps) {
   const { t } = useLanguage()
-  const featuredArticle = featuredNews[0]
-  const secondaryArticle = featuredNews[1] ?? featuredArticle
+  const featuredArticle = featuredNews.find(hasContextualImage) ?? featuredNews[0]
+  const secondaryArticle = featuredNews.find((article) => article.id !== featuredArticle?.id) ?? featuredArticle
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -72,21 +72,25 @@ export function HomePageClient({ featuredNews }: HomePageClientProps) {
             <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 items-start">
               {featuredArticle && (
                 <Card className="lg:col-span-3 overflow-hidden self-start">
-                  <div className="grid md:grid-cols-2 gap-0">
-                    <Link
-                      href={featuredArticle.href}
-                      className="group relative block min-h-[260px] overflow-hidden md:min-h-full"
-                    >
-                      <NewsImage
-                        src={featuredArticle.imagem}
-                        alt={featuredArticle.titulo}
-                        fill
-                        className="object-cover transition-transform duration-300 group-hover:scale-[1.02]"
-                      />
-                      <Badge className="absolute top-4 left-4 bg-destructive text-destructive-foreground">
-                        Destaque RSS
-                      </Badge>
-                    </Link>
+                  <div className={`grid gap-0 ${hasContextualImage(featuredArticle) ? "md:grid-cols-2" : "grid-cols-1"}`}>
+                    {hasContextualImage(featuredArticle) ? (
+                      <Link
+                        href={featuredArticle.href}
+                        className="group relative block min-h-[260px] overflow-hidden md:min-h-full"
+                      >
+                        <NewsImage
+                          src={featuredArticle.imagem}
+                          alt={featuredArticle.titulo}
+                          fill
+                          className="object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+                        />
+                        <Badge className="absolute top-4 left-4 bg-destructive text-destructive-foreground">
+                          Destaque RSS
+                        </Badge>
+                      </Link>
+                    ) : (
+                      <div className="hidden md:block bg-muted/40" />
+                    )}
                     <div className="p-6 flex flex-col justify-center">
                       <div className="flex flex-wrap items-center gap-2 text-sm text-muted-foreground mb-2">
                         <Calendar className="h-4 w-4" />
@@ -123,7 +127,7 @@ export function HomePageClient({ featuredNews }: HomePageClientProps) {
                 </Card>
               )}
 
-              <div className="space-y-6">
+                <div className="space-y-6">
                 <SearchWidget />
 
                 {secondaryArticle && (

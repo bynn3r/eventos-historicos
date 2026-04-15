@@ -6,17 +6,12 @@ import { NewsImage } from "@/components/news-image"
 import { Calendar, ArrowLeft, ExternalLink, User } from "lucide-react"
 import Link from "next/link"
 import { notFound } from "next/navigation"
-import { generateExpandedContent } from "@/lib/news-editorial"
 import { formatNewsDate, getNewsArticleBySlug, getRelatedNews, renderSafeArticleHtml } from "@/lib/news"
 
 interface NoticiaPageProps {
   params: {
     slug: string
   }
-}
-
-function renderTextParagraphs(text: string) {
-  return text.split(/\n\s*\n/).filter(Boolean)
 }
 
 export async function generateStaticParams() {
@@ -46,25 +41,6 @@ export default async function NoticiaPage({ params }: NoticiaPageProps) {
   }
 
   const relatedNews = await getRelatedNews(params.slug, 2)
-  const shouldUseEditorialExpansion = noticia.tipo === "rss" && noticia.resumo
-  const expandedEditorial =
-    shouldUseEditorialExpansion
-      ? await generateExpandedContent(
-          noticia,
-          relatedNews.map((related) => ({
-            titulo: related.titulo,
-            descricao: related.descricao,
-            fonte: related.fonte,
-            categoria: related.categoria,
-          })),
-        )
-      : null
-
-  const displayTitle = expandedEditorial?.titlePt || noticia.titulo
-  const displaySubtitle = expandedEditorial?.subtitlePt || noticia.descricao
-  const displayContent = expandedEditorial?.contentPt || ""
-  const displayHistoricalContext = expandedEditorial?.historicalContextPt
-  const editorialNote = expandedEditorial?.editorialNotePt
   const safeHtml = renderSafeArticleHtml(noticia.conteudoHtml)
   const imageCaption =
     noticia.tipo === "rss"
@@ -101,11 +77,11 @@ export default async function NoticiaPage({ params }: NoticiaPageProps) {
               </div>
 
               <h1 className="max-w-4xl text-4xl font-bold tracking-tight text-balance text-foreground md:text-5xl lg:text-6xl">
-                {displayTitle}
+                {noticia.titulo}
               </h1>
 
-              {displaySubtitle && (
-                <p className="mt-5 max-w-3xl text-lg leading-8 text-muted-foreground md:text-xl">{displaySubtitle}</p>
+              {noticia.descricao && (
+                <p className="mt-5 max-w-3xl text-lg leading-8 text-muted-foreground md:text-xl">{noticia.descricao}</p>
               )}
 
               {noticia.linkFonte && (
@@ -122,104 +98,49 @@ export default async function NoticiaPage({ params }: NoticiaPageProps) {
               {noticia.imagem && (
                 <figure className="mt-8">
                   <div className="relative aspect-[16/9] overflow-hidden rounded-3xl border bg-muted">
-                    <NewsImage src={noticia.imagem} alt={displayTitle} fill className="object-cover" />
+                    <NewsImage src={noticia.imagem} alt={noticia.titulo} fill className="object-cover" />
                   </div>
                   <figcaption className="mt-3 text-sm leading-6 text-muted-foreground">{imageCaption}</figcaption>
                 </figure>
               )}
 
               <div className="mt-10 max-w-[820px]">
-                {expandedEditorial ? (
-                  <div className="space-y-10">
-                    <div className="prose prose-neutral max-w-none prose-p:mb-6 prose-p:text-[1.06rem] prose-p:leading-8">
-                      {renderTextParagraphs(displayContent).map((paragraph, index) => (
-                        <p key={`${index}-${paragraph.slice(0, 24)}`}>{paragraph}</p>
-                      ))}
+                <div className="space-y-8">
+                  <div
+                    className="prose prose-neutral max-w-none prose-headings:scroll-mt-24 prose-p:mb-6 prose-p:text-[1.06rem] prose-p:leading-8 prose-li:leading-8 prose-strong:text-foreground prose-a:text-primary"
+                    dangerouslySetInnerHTML={{ __html: safeHtml }}
+                  />
+
+                  <section className="rounded-2xl border bg-card p-6">
+                    <div className="flex flex-col gap-5 md:flex-row md:items-start md:justify-between">
+                      <div className="space-y-2">
+                        <h2 className="text-base font-semibold text-foreground">Fonte</h2>
+                        <p className="text-sm leading-6 text-muted-foreground">
+                          {noticia.fonte}. O Eventos Historicos organiza este conteudo com base na publicacao original.
+                        </p>
+                      </div>
+
+                      {noticia.linkFonte && (
+                        <Button variant="outline" asChild className="md:min-w-[240px] md:justify-between">
+                          <a href={noticia.linkFonte} target="_blank" rel="noopener noreferrer">
+                            Ver noticia completa no site original
+                            <ExternalLink className="h-4 w-4" />
+                          </a>
+                        </Button>
+                      )}
                     </div>
 
-                    {displayHistoricalContext && (
-                      <section className="rounded-2xl border bg-muted/20 p-6">
-                        <h2 className="text-lg font-semibold text-foreground">Contexto historico</h2>
-                        <div className="mt-4 space-y-4 text-sm leading-7 text-muted-foreground">
-                          {renderTextParagraphs(displayHistoricalContext).map((paragraph, index) => (
-                            <p key={`${index}-${paragraph.slice(0, 24)}`}>{paragraph}</p>
-                          ))}
-                        </div>
-                      </section>
-                    )}
-
-                    <section className="rounded-2xl border bg-card p-6">
-                      <div className="flex flex-col gap-5 md:flex-row md:items-start md:justify-between">
-                        <div className="space-y-2">
-                          <h2 className="text-base font-semibold text-foreground">Fonte</h2>
-                          <p className="text-sm leading-6 text-muted-foreground">
-                            {noticia.fonte}. O Eventos Historicos organiza este conteudo com base na publicacao original.
-                          </p>
-                        </div>
-
-                        {noticia.linkFonte && (
-                          <Button variant="outline" asChild className="md:min-w-[240px] md:justify-between">
-                            <a href={noticia.linkFonte} target="_blank" rel="noopener noreferrer">
-                              Ver noticia completa no site original
-                              <ExternalLink className="h-4 w-4" />
-                            </a>
-                          </Button>
-                        )}
+                    {noticia.tags.length > 0 && (
+                      <div className="mt-5 flex flex-wrap gap-2">
+                        {noticia.tags.map((tag) => (
+                          <Badge key={tag} variant="outline" className="text-xs">
+                            #{tag}
+                          </Badge>
+                        ))}
                       </div>
-
-                      {noticia.tags.length > 0 && (
-                        <div className="mt-5 flex flex-wrap gap-2">
-                          {noticia.tags.map((tag) => (
-                            <Badge key={tag} variant="outline" className="text-xs">
-                              #{tag}
-                            </Badge>
-                          ))}
-                        </div>
-                      )}
-                    </section>
-
-                    {editorialNote && (
-                      <p className="text-sm leading-6 text-muted-foreground">{editorialNote}</p>
                     )}
-                  </div>
-                ) : (
-                  <div className="space-y-8">
-                    <div
-                      className="prose prose-neutral max-w-none prose-headings:scroll-mt-24 prose-p:mb-6 prose-p:text-[1.06rem] prose-p:leading-8 prose-li:leading-8 prose-strong:text-foreground prose-a:text-primary"
-                      dangerouslySetInnerHTML={{ __html: safeHtml }}
-                    />
-
-                    <section className="rounded-2xl border bg-card p-6">
-                      <div className="flex flex-col gap-5 md:flex-row md:items-start md:justify-between">
-                        <div className="space-y-2">
-                          <h2 className="text-base font-semibold text-foreground">Fonte</h2>
-                          <p className="text-sm leading-6 text-muted-foreground">
-                            {noticia.fonte}. O Eventos Historicos organiza este conteudo com base na publicacao original.
-                          </p>
-                        </div>
-
-                        {noticia.linkFonte && (
-                          <Button variant="outline" asChild className="md:min-w-[240px] md:justify-between">
-                            <a href={noticia.linkFonte} target="_blank" rel="noopener noreferrer">
-                              Ver noticia completa no site original
-                              <ExternalLink className="h-4 w-4" />
-                            </a>
-                          </Button>
-                        )}
-                      </div>
-
-                      {noticia.tags.length > 0 && (
-                        <div className="mt-5 flex flex-wrap gap-2">
-                          {noticia.tags.map((tag) => (
-                            <Badge key={tag} variant="outline" className="text-xs">
-                              #{tag}
-                            </Badge>
-                          ))}
-                        </div>
-                      )}
-                    </section>
-                  </div>
-                )}
+                  </section>
+                </div>
               </div>
             </div>
 

@@ -1,4 +1,5 @@
 import noticiasData from "@/data/noticias.json"
+import { generatePortalAnalysis } from "@/lib/news-editorial"
 
 export interface SiteNewsArticle {
   id: string
@@ -18,7 +19,7 @@ export interface SiteNewsArticle {
   tags: string[]
   href: string
   externo: boolean
-  tipo: "rss" | "local"
+  tipo: "rss" | "local" | "analysis"
 }
 
 interface ParsedFeedItem {
@@ -37,6 +38,11 @@ const MAX_NEWS_AGE_DAYS = 10
 const MAX_HISTORY_AGE_DAYS = 30
 const OPENAI_API_URL = "https://api.openai.com/v1/chat/completions"
 const OPENAI_IMAGE_HINT_MODEL = process.env.OPENAI_EDITORIAL_MODEL || "gpt-5-mini"
+const GENERIC_FALLBACK_IMAGES = new Set([
+  "/historical-books-and-world-map-study.jpg",
+  "/world-map-with-geopolitical-tensions.jpg",
+  "/geopolitics-world-map-with-news-overlay.jpg",
+])
 
 type ImageHintArticle = {
   titulo: string
@@ -56,6 +62,7 @@ type WikimediaImageCandidate = {
 
 const imageHintCache = new Map<string, Promise<OpenAIImageHintResponse | null>>()
 const sourceImageCache = new Map<string, Promise<string>>()
+const localizationCache = new Map<string, Promise<{ titulo: string; descricao: string } | null>>()
 
 const RSS_FEEDS = [
   { name: "BBC World", url: "http://feeds.bbci.co.uk/news/world/rss.xml" },
@@ -193,6 +200,56 @@ const SOURCE_WEIGHTS: Record<string, number> = {
   "UOL Notícias": 18,
 }
 
+interface PortalAnalysisThemeRule {
+  id: string
+  label: string
+  category: string
+  tags: string[]
+  image: string
+  keywords: string[]
+}
+
+interface PortalAnalysisGroup {
+  theme: PortalAnalysisThemeRule
+  articles: SiteNewsArticle[]
+  averageScore: number
+}
+
+const PORTAL_ANALYSIS_THEMES: PortalAnalysisThemeRule[] = [
+  {
+    id: "oriente-medio",
+    label: "Oriente Medio e rotas estrategicas",
+    category: "Geopolitica",
+    tags: ["geopolitica", "oriente medio", "seguranca internacional"],
+    image: "/world-map-with-geopolitical-tensions.jpg",
+    keywords: ["iran", "israel", "lebanon", "gaza", "hormuz", "persian gulf", "tehran", "middle east"],
+  },
+  {
+    id: "ucrania-e-europa",
+    label: "Europa, Ucrania e seguranca regional",
+    category: "Conflitos",
+    tags: ["europa", "ucrania", "seguranca europeia"],
+    image: "/geopolitics-world-map-with-news-overlay.jpg",
+    keywords: ["ukraine", "russia", "putin", "kyiv", "moscow", "nato", "orban", "hungary"],
+  },
+  {
+    id: "economia-global",
+    label: "Pressao economica e mercados globais",
+    category: "Economia Global",
+    tags: ["economia global", "comercio", "mercados"],
+    image: "/historical-books-and-world-map-study.jpg",
+    keywords: ["imf", "tariff", "trade", "oil", "energy", "inflation", "sanction", "recession", "steel"],
+  },
+  {
+    id: "tecnologia-e-espaco",
+    label: "Tecnologia, espaco e competicao estrategica",
+    category: "Exploracao Espacial",
+    tags: ["tecnologia", "espaco", "inovacao estrategica"],
+    image: "/historical-books-and-world-map-study.jpg",
+    keywords: ["space", "nasa", "artemis", "moon", "satellite", "chip", "technology"],
+  },
+]
+
 function stripTags(value: string) {
   return value.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim()
 }
@@ -322,6 +379,13 @@ function normalizeText(value: string) {
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "")
     .toLowerCase()
+}
+
+function looksMostlyEnglish(value: string) {
+  const normalized = normalizeText(value)
+  return /( the | with | after | says | warns | live | could | would | next | little | arrives | wrong | crisis )/.test(
+    ` ${normalized} `,
+  )
 }
 
 function slugify(value: string) {
@@ -633,6 +697,105 @@ function clipText(text: string, maxLength: number) {
   }
 
   return `${normalized.slice(0, maxLength).trimEnd()}...`
+}
+
+async function localizeRssTeaser(article: { titulo: string; descricao: string; categoria: string; fonte: string }) {
+  const sourceText = `${article.titulo} ${article.descricao}`
+
+  if (!looksMostlyEnglish(sourceText)) {
+    return {
+      titulo: article.titulo,
+      descricao: article.descricao,
+    }
+  }
+
+  const apiKey = process.env.OPENAI_API_KEY
+
+  if (!apiKey) {
+    return {
+      titulo: article.titulo,
+      descricao: article.descricao,
+    }
+  }
+
+  const cacheKey = normalizeText(`${article.titulo} ${article.descricao} ${article.categoria} ${article.fonte}`)
+  const cached = localizationCache.get(cacheKey)
+
+  if (cached) {
+    return (await cached) ?? { titulo: article.titulo, descricao: article.descricao }
+  }
+
+  const pending = (async () => {
+    try {
+      const response = await fetch(OPENAI_API_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${apiKey}`,
+        },
+        body: JSON.stringify({
+          model: OPENAI_IMAGE_HINT_MODEL,
+          temperature: 0.2,
+          response_format: {
+            type: "json_schema",
+            json_schema: {
+              name: "localized_rss_teaser",
+              strict: true,
+              schema: {
+                type: "object",
+                additionalProperties: false,
+                properties: {
+                  titulo: { type: "string" },
+                  descricao: { type: "string" },
+                },
+                required: ["titulo", "descricao"],
+              },
+            },
+          },
+          messages: [
+            {
+              role: "system",
+              content:
+                "Voce e editor de um portal brasileiro. Traduza e adapte para portugues do Brasil o titulo e o resumo de uma noticia internacional. Use apenas as informacoes fornecidas. Nao invente fatos. O titulo deve soar natural em portal jornalistico. O resumo deve ficar claro e conciso, com no maximo duas frases curtas.",
+            },
+            {
+              role: "user",
+              content: JSON.stringify(article),
+            },
+          ],
+        }),
+        signal: AbortSignal.timeout(7000),
+      })
+
+      if (!response.ok) {
+        return null
+      }
+
+      const data = (await response.json()) as {
+        choices?: Array<{ message?: { content?: string } }>
+      }
+      const rawContent = data.choices?.[0]?.message?.content
+
+      if (!rawContent) {
+        return null
+      }
+
+      const parsed = JSON.parse(rawContent) as { titulo: string; descricao: string }
+      return {
+        titulo: normalizeEncoding(parsed.titulo).trim() || article.titulo,
+        descricao: normalizeEncoding(parsed.descricao).trim() || article.descricao,
+      }
+    } catch {
+      return null
+    }
+  })()
+
+  localizationCache.set(cacheKey, pending)
+
+  return (await pending) ?? {
+    titulo: article.titulo,
+    descricao: article.descricao,
+  }
 }
 
 function normalizeImageUrl(url?: string) {
@@ -981,6 +1144,152 @@ export function renderSafeArticleHtml(html: string) {
   return sanitizeHtml(html)
 }
 
+export function isGenericFallbackImage(src?: string) {
+  return Boolean(src && GENERIC_FALLBACK_IMAGES.has(src))
+}
+
+export function hasContextualImage(article: Pick<SiteNewsArticle, "imagem" | "tipo">) {
+  if (!article.imagem) {
+    return false
+  }
+
+  return article.tipo !== "rss" || !isGenericFallbackImage(article.imagem)
+}
+
+function estimateAnalysisArticleScore(article: Pick<SiteNewsArticle, "titulo" | "descricao" | "categoria" | "data" | "fonte">) {
+  const text = normalizeText(`${article.titulo} ${article.descricao} ${article.categoria} ${article.fonte}`)
+  const categoryBonus =
+    article.categoria === "Conflitos"
+      ? 36
+      : article.categoria === "GeopolÃ­tica"
+        ? 34
+        : article.categoria === "Economia Global"
+          ? 30
+          : article.categoria === "PolÃ­tica"
+            ? 28
+            : article.categoria === "ExploraÃ§Ã£o Espacial"
+              ? 26
+              : 20
+
+  const globalBonus = GLOBAL_PRIORITY_KEYWORDS.filter((keyword) => text.includes(keyword)).length * 7
+  const articleDate = article.data ? new Date(article.data) : new Date()
+  const ageHours = Number.isNaN(articleDate.getTime()) ? 9999 : (Date.now() - articleDate.getTime()) / 36e5
+  const ageScore = ageHours <= 24 ? 80 : ageHours <= 72 ? 55 : ageHours <= 120 ? 28 : 8
+
+  return categoryBonus + globalBonus + ageScore
+}
+
+function groupArticlesByTheme(rssArticles: SiteNewsArticle[]) {
+  const groups = PORTAL_ANALYSIS_THEMES.map((theme) => {
+    const articles = rssArticles.filter((article) => {
+      const text = normalizeText(`${article.titulo} ${article.descricao} ${article.categoria} ${article.tags.join(" ")}`)
+      return theme.keywords.some((keyword) => text.includes(keyword))
+    })
+
+    const averageScore =
+      articles.length > 0
+        ? articles.reduce((total, article) => total + estimateAnalysisArticleScore(article), 0) / articles.length
+        : 0
+
+    return {
+      theme,
+      articles,
+      averageScore,
+    } satisfies PortalAnalysisGroup
+  })
+
+  return groups.filter((group) => group.articles.length > 0)
+}
+
+export function shouldGeneratePortalAnalysis(group: PortalAnalysisGroup) {
+  return group.articles.length >= 3 && group.averageScore >= 70
+}
+
+function buildPortalAnalysisHtml(input: {
+  analysisPt: string
+  globalImpactPt: string
+  historicalContextPt?: string
+  editorialNotePt: string
+}) {
+  const sections = [
+    ...input.analysisPt
+      .split(/\n\s*\n/)
+      .filter(Boolean)
+      .map((paragraph) => `<p>${paragraph}</p>`),
+    `<section><h2>Impacto global</h2>${input.globalImpactPt
+      .split(/\n\s*\n/)
+      .filter(Boolean)
+      .map((paragraph) => `<p>${paragraph}</p>`)
+      .join("")}</section>`,
+    input.historicalContextPt
+      ? `<section><h2>Contexto historico</h2>${input.historicalContextPt
+          .split(/\n\s*\n/)
+          .filter(Boolean)
+          .map((paragraph) => `<p>${paragraph}</p>`)
+          .join("")}</section>`
+      : "",
+    `<p><em>${input.editorialNotePt}</em></p>`,
+  ]
+
+  return sections.filter(Boolean).join("")
+}
+
+async function generatePortalAnalysesFromRss(rssArticles: SiteNewsArticle[]) {
+  const strongGroups = groupArticlesByTheme(rssArticles)
+    .filter(shouldGeneratePortalAnalysis)
+    .sort((a, b) => b.averageScore - a.averageScore)
+    .slice(0, 3)
+
+  const analyses = await Promise.all(
+    strongGroups.map(async (group, index) => {
+      const generated = await generatePortalAnalysis({
+        themeId: group.theme.id,
+        themeLabel: group.theme.label,
+        category: group.theme.category,
+        tags: group.theme.tags,
+        sourceArticles: group.articles.slice(0, 5).map((article) => ({
+          titulo: article.titulo,
+          descricao: article.descricao,
+          fonte: article.fonte,
+          data: article.data,
+          categoria: article.categoria,
+          linkFonte: article.linkFonte,
+        })),
+      })
+
+      const latestDate = group.articles
+        .map((article) => new Date(article.data).getTime())
+        .filter((value) => !Number.isNaN(value))
+        .sort((a, b) => b - a)[0]
+
+      const slug = slugify(`analise-${group.theme.id}-${latestDate || Date.now()}`)
+      const imageFromGroup = group.articles.find(hasContextualImage)?.imagem || group.theme.image
+
+      return {
+        id: `analysis-${group.theme.id}-${index}`,
+        slug,
+        titulo: generated.titlePt,
+        descricao: clipText(generated.summaryPt, 220),
+        conteudo: `${generated.analysisPt}\n\n${generated.globalImpactPt}${generated.historicalContextPt ? `\n\n${generated.historicalContextPt}` : ""}\n\n${generated.editorialNotePt}`,
+        conteudoHtml: buildPortalAnalysisHtml(generated),
+        resumo: false,
+        data: latestDate ? new Date(latestDate).toISOString() : new Date().toISOString(),
+        categoria: group.theme.category,
+        fonte: "Eventos Historicos",
+        fonteUrl: group.articles[0]?.linkFonte,
+        linkFonte: group.articles[0]?.linkFonte,
+        imagem: imageFromGroup,
+        tags: [...new Set([...group.theme.tags, ...group.articles.flatMap((article) => article.tags).slice(0, 4)])],
+        href: `/noticias/${slug}`,
+        externo: false,
+        tipo: "analysis" as const,
+      } satisfies SiteNewsArticle
+    }),
+  )
+
+  return analyses
+}
+
 export async function getRssNews(limit = 20): Promise<SiteNewsArticle[]> {
   const results = await Promise.all(RSS_FEEDS.map((feed) => fetchFeed(feed.url, feed.name)))
   const seen = new Set<string>()
@@ -1018,13 +1327,19 @@ export async function getRssNews(limit = 20): Promise<SiteNewsArticle[]> {
       const conteudoHtml = buildStructuredRssHtml(item, categoria, resumo)
       const score = scoreArticle(item, categoria)
       const imagem = await resolveArticleImage({ ...item, categoria, link: item.link }, item.imagem)
+      const localized = await localizeRssTeaser({
+        titulo: item.titulo,
+        descricao: item.descricao,
+        categoria,
+        fonte: item.fonte,
+      })
 
       return {
         score,
         id: `rss-${slug}`,
         slug,
-        titulo: item.titulo,
-        descricao: clipText(item.descricao || "Resumo selecionado automaticamente a partir de feeds abertos e confiáveis.", 220),
+        titulo: localized.titulo,
+        descricao: clipText(localized.descricao || "Resumo selecionado automaticamente a partir de feeds abertos e confiaveis.", 220),
         conteudo,
         conteudoHtml,
         resumo,
@@ -1074,13 +1389,14 @@ function normalizeLocalArticles(): SiteNewsArticle[] {
       tags: article.tags ?? [],
       href: `/noticias/${article.slug}`,
       externo: false,
-      tipo: "local" as const,
+      tipo: "analysis" as const,
     }))
 }
 
 export async function getCuratedNews(limit = 20) {
   const rssArticles = await getRssNews(limit)
-  const localArticles = normalizeLocalArticles()
+  const generatedAnalyses = await generatePortalAnalysesFromRss(rssArticles)
+  const localArticles = [...generatedAnalyses, ...normalizeLocalArticles()]
 
   return {
     rssArticles,
@@ -1090,14 +1406,13 @@ export async function getCuratedNews(limit = 20) {
 }
 
 export async function getNewsArticleBySlug(slug: string) {
-  const localArticles = normalizeLocalArticles()
+  const { rssArticles, localArticles } = await getCuratedNews(30)
   const localArticle = localArticles.find((article) => article.slug === slug)
 
   if (localArticle) {
     return localArticle
   }
 
-  const rssArticles = await getRssNews(30)
   return rssArticles.find((article) => article.slug === slug)
 }
 
