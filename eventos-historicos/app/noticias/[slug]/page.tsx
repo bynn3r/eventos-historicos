@@ -84,7 +84,7 @@ export default async function NoticiaPage({ params }: NoticiaPageProps) {
                 <p className="mt-5 max-w-3xl text-lg leading-8 text-muted-foreground md:text-xl">{noticia.descricao}</p>
               )}
 
-              {noticia.linkFonte && (
+              {noticia.tipo === "rss" && noticia.linkFonte && (
                 <div className="mt-6">
                   <Button variant="outline" asChild className="rounded-full px-5">
                     <a href={noticia.linkFonte} target="_blank" rel="noopener noreferrer">
@@ -120,7 +120,7 @@ export default async function NoticiaPage({ params }: NoticiaPageProps) {
                         </p>
                       </div>
 
-                      {noticia.linkFonte && (
+                      {noticia.tipo === "rss" && noticia.linkFonte && (
                         <Button variant="outline" asChild className="md:min-w-[240px] md:justify-between">
                           <a href={noticia.linkFonte} target="_blank" rel="noopener noreferrer">
                             Ver noticia completa no site original

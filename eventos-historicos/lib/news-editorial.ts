@@ -41,6 +41,11 @@ function splitIntoParagraphs(value: string) {
     .filter(Boolean)
 }
 
+function looksMostlyEnglish(value: string) {
+  const normalized = value.toLowerCase()
+  return /\b(the|with|after|says|warns|live|could|would|next|little|arrives|wrong|briefing|crisis)\b/.test(normalized)
+}
+
 function formatPtDate(value: string) {
   const parsedDate = new Date(value)
 
@@ -62,7 +67,8 @@ function buildFallbackPortalAnalysis(input: PortalAnalysisInput): GeneratedPorta
     .map((article) => normalizeWhitespace(article.descricao))
     .filter(Boolean)
 
-  const lead = summaries[0] || headlines[0] || `A cobertura recente sobre ${input.themeLabel.toLowerCase()} ganhou densidade nos feeds monitorados pelo portal.`
+  const lead =
+    summaries[0] || `A cobertura recente sobre ${input.themeLabel.toLowerCase()} ganhou densidade nos feeds monitorados pelo portal.`
   const secondParagraph =
     summaries[1] ||
     `As publicacoes reunidas apontam para uma mesma frente de desenvolvimento em ${input.themeLabel.toLowerCase()}, com impactos que ultrapassam o fato isolado e ajudam a explicar o momento politico e estrategico em curso.`
@@ -70,7 +76,7 @@ function buildFallbackPortalAnalysis(input: PortalAnalysisInput): GeneratedPorta
     `No plano internacional, o tema toca debates de ${input.category.toLowerCase()} e ajuda a medir efeitos sobre diplomacia, seguranca, economia e percepcao de risco entre os atores envolvidos.`
 
   return {
-    titlePt: `Analise: ${headlines[0] || input.themeLabel}`,
+    titlePt: `${input.themeLabel}: o que esta em jogo`,
     summaryPt: lead,
     analysisPt: [lead, secondParagraph, impactParagraph].join("\n\n"),
     globalImpactPt: impactParagraph,
@@ -119,7 +125,7 @@ async function requestOpenAIPortalAnalysis(input: PortalAnalysisInput) {
         {
           role: "system",
           content:
-            "Voce e editor de um portal brasileiro de geopolitica e historia. Produza uma analise editorial em portugues do Brasil com base apenas no conjunto de noticias fornecido. Nao invente fatos, nomes, datas, falas ou numeros. Organize o texto como artigo curto de portal: titulo forte, resumo curto, analise principal em 3 a 5 paragrafos, impacto global e contexto historico apenas se houver base suficiente. Tom natural, profissional, claro e sem linguagem robotica. Nao mencione IA no titulo nem no corpo principal.",
+            "Voce e editor de um portal brasileiro de geopolitica e historia. Produza uma analise editorial em portugues do Brasil com base apenas no conjunto de noticias fornecido. Nao invente fatos, nomes, datas, falas ou numeros. O resultado deve parecer um artigo proprio do portal, e nao uma noticia de agencia. Organize o texto com: titulo forte em portugues, resumo curto em portugues, analise principal em 3 a 5 paragrafos, impacto global e contexto historico apenas se houver base suficiente. Evite repetir manchetes em ingles, evite formato de breaking news e nao mencione IA no titulo nem no corpo principal.",
         },
         {
           role: "user",
@@ -163,8 +169,8 @@ export async function generatePortalAnalysis(input: PortalAnalysisInput): Promis
     }
 
     return {
-      titlePt: normalizeWhitespace(result.titlePt) || fallback.titlePt,
-      summaryPt: normalizeWhitespace(result.summaryPt) || fallback.summaryPt,
+      titlePt: looksMostlyEnglish(result.titlePt) ? fallback.titlePt : normalizeWhitespace(result.titlePt) || fallback.titlePt,
+      summaryPt: looksMostlyEnglish(result.summaryPt) ? fallback.summaryPt : normalizeWhitespace(result.summaryPt) || fallback.summaryPt,
       analysisPt: splitIntoParagraphs(result.analysisPt).slice(0, 5).join("\n\n") || fallback.analysisPt,
       globalImpactPt: splitIntoParagraphs(result.globalImpactPt).slice(0, 2).join("\n\n") || fallback.globalImpactPt,
       historicalContextPt: result.historicalContextPt ? splitIntoParagraphs(result.historicalContextPt).slice(0, 2).join("\n\n") : undefined,

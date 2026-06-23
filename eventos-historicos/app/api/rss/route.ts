@@ -1,7 +1,6 @@
 import { NextResponse } from "next/server"
 import { getRssNews } from "@/lib/news"
 
-export const runtime = "edge"
 export const revalidate = 300
 
 export async function GET() {
