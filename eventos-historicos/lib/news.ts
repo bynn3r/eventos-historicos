@@ -665,22 +665,6 @@ function textToHtmlParagraphs(text: string) {
     .join("")
 }
 
-function htmlToParagraphs(html: string) {
-  const clean = sanitizeHtml(html)
-  if (!clean) {
-    return ""
-  }
-
-  const paragraphs = clean
-    .replace(/<(br|\/p|\/div|\/li|\/h\d)>/gi, "\n")
-    .replace(/<li>/gi, "• ")
-    .replace(/<[^>]+>/g, " ")
-    .split(/\n+/)
-    .map((line) => line.replace(/\s+/g, " ").trim())
-    .filter(Boolean)
-
-  return paragraphs.join("\n\n")
-}
 
 function buildHtmlFromText(text: string) {
   return text
@@ -886,6 +870,59 @@ async function resolveArticleImage(article: { titulo: string; descricao: string;
   return inferImage(article)
 }
 
+const articleExpansionCache = new Map<string, Promise<string>>()
+
+async function expandArticleWithAI(article: {
+  titulo: string
+  descricao: string
+  categoria: string
+  fonte: string
+}): Promise<string> {
+  const apiKey = process.env.OPENAI_API_KEY
+  if (!apiKey) return article.descricao
+
+  const cacheKey = normalizeText(`${article.titulo}${article.fonte}`)
+  const cached = articleExpansionCache.get(cacheKey)
+  if (cached) return cached
+
+  const pending = (async (): Promise<string> => {
+    try {
+      const response = await fetch(OPENAI_API_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${apiKey}`,
+        },
+        body: JSON.stringify({
+          model: process.env.OPENAI_EDITORIAL_MODEL || "gpt-4o-mini",
+          temperature: 0.3,
+          messages: [
+            {
+              role: "system",
+              content:
+                "Você é editor de um portal brasileiro de geopolítica e história. Com base no título e resumo de uma notícia internacional, escreva um artigo informativo em português do Brasil com 3 a 4 parágrafos bem desenvolvidos. Mantenha-se fiel aos fatos apresentados. Não invente informações que não estejam no contexto fornecido. Escreva de forma clara, objetiva e jornalística. Separe os parágrafos com duas quebras de linha. Não inclua título nem cabeçalho, apenas os parágrafos.",
+            },
+            {
+              role: "user",
+              content: `Título: ${article.titulo}\nResumo: ${article.descricao}\nCategoria: ${article.categoria}\nFonte: ${article.fonte}`,
+            },
+          ],
+        }),
+        signal: AbortSignal.timeout(20000),
+      })
+
+      if (!response.ok) return article.descricao
+      const data = (await response.json()) as { choices?: Array<{ message?: { content?: string } }> }
+      return normalizeEncoding(data.choices?.[0]?.message?.content?.trim() || article.descricao)
+    } catch {
+      return article.descricao
+    }
+  })()
+
+  articleExpansionCache.set(cacheKey, pending)
+  return pending
+}
+
 function isTruncated(text: string) {
   const normalized = normalizeText(text)
   return normalized.endsWith("...") || normalized.endsWith("…") || normalized.includes("[+") || normalized.includes("continue reading")
@@ -956,37 +993,6 @@ function buildRssSlug(item: ParsedFeedItem) {
   return slugify(`${item.fonte}-${item.titulo}-${datePart}`)
 }
 
-function buildRssBody(article: ParsedFeedItem, categoria: string, resumo: boolean) {
-  const extractedText = extractParagraphText(article.conteudoHtml || article.descricao)
-  const baseText = extractedText || article.descricao || article.titulo
-  const suffix = resumo
-    ? `\n\nEste conteúdo é um resumo editorial gerado a partir do feed oficial de ${article.fonte}. Para ler a matéria completa, acesse o site original.`
-    : `\n\nConteúdo exibido a partir do feed oficial de ${article.fonte}, dentro da curadoria de ${categoria} do Eventos Históricos.`
-
-  return normalizeEncoding(`${baseText}${suffix}`).trim()
-}
-
-function buildRssHtml(article: ParsedFeedItem, categoria: string, resumo: boolean) {
-  const extractedHtml = sanitizeHtml(article.conteudoHtml)
-  if (extractedHtml) {
-    const notice = resumo
-      ? `<p><strong>Resumo editorial:</strong> este feed parece trazer apenas um trecho da publicação original de ${article.fonte}. Use o link oficial ao final da página para ler a matéria completa.</p>`
-      : `<p><strong>Crédito editorial:</strong> conteúdo exibido a partir do feed oficial de ${article.fonte}, dentro da curadoria de ${categoria} do Eventos Históricos.</p>`
-
-    return `${extractedHtml}${notice}`
-  }
-
-  return buildHtmlFromText(buildRssBody(article, categoria, resumo))
-}
-
-function buildStructuredRssHtml(article: ParsedFeedItem, categoria: string, resumo: boolean) {
-  const baseText = extractParagraphText(article.conteudoHtml || article.descricao) || article.descricao || article.titulo
-  const notice = resumo
-    ? `<p><strong>Resumo editorial:</strong> este feed parece trazer apenas um trecho da publicação original de ${article.fonte}. Use o link oficial ao final da página para ler a matéria completa.</p>`
-    : `<p><strong>Crédito editorial:</strong> conteúdo exibido a partir do feed oficial de ${article.fonte}, dentro da curadoria de ${categoria} do Eventos Históricos.</p>`
-
-  return `${textToHtmlParagraphs(baseText)}${notice}`
-}
 
 function isRelevantArticle(article: ParsedFeedItem) {
   const text = normalizeText(`${article.titulo} ${article.descricao} ${article.conteudoHtml}`)
@@ -1230,19 +1236,30 @@ export async function getRssNews(limit = 20): Promise<SiteNewsArticle[]> {
       const isEnglish = looksMostlyEnglish(`${item.titulo} ${item.descricao}`)
       const rawText = extractParagraphText(item.conteudoHtml || item.descricao) || item.descricao || item.titulo
 
-      const [imagem, translatedTitle, translatedDesc, translatedContent] = await Promise.all([
+      const [imagem, translatedTitle, translatedDesc] = await Promise.all([
         resolveArticleImage({ ...item, categoria, link: item.link }, item.imagem),
         isEnglish ? translateToPortuguese(item.titulo) : Promise.resolve(item.titulo),
         isEnglish ? translateToPortuguese(item.descricao) : Promise.resolve(item.descricao),
-        isEnglish ? translateToPortuguese(rawText) : Promise.resolve(rawText),
       ])
 
+      let articleBody: string
+      if (resumo) {
+        articleBody = await expandArticleWithAI({
+          titulo: translatedTitle,
+          descricao: translatedDesc,
+          categoria,
+          fonte: item.fonte,
+        })
+      } else {
+        articleBody = isEnglish ? await translateToPortuguese(rawText) : rawText
+      }
+
       const notice = resumo
-        ? `<p><em>Este feed apresenta apenas um trecho do conteúdo original de <strong>${item.fonte}</strong>. <a href="${item.link}" target="_blank" rel="noopener noreferrer">Leia a matéria completa na fonte</a>.</em></p>`
+        ? `<p><em>Artigo elaborado pela redação editorial do Eventos Históricos com base na cobertura de <strong>${item.fonte}</strong>. <a href="${item.link}" target="_blank" rel="noopener noreferrer">Acesse a reportagem original</a>.</em></p>`
         : `<p><em>Conteúdo do feed oficial de <strong>${item.fonte}</strong>, curado pelo Eventos Históricos.</em></p>`
 
-      const conteudoHtml = `${textToHtmlParagraphs(translatedContent)}${notice}`
-      const conteudo = `${translatedContent}\n\n${resumo ? `Este conteúdo é um resumo de ${item.fonte}. Acesse o site original para ler na íntegra.` : `Conteúdo de ${item.fonte}.`}`
+      const conteudoHtml = `${textToHtmlParagraphs(articleBody)}${notice}`
+      const conteudo = articleBody
 
       return {
         score,
