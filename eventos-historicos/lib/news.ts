@@ -1,5 +1,6 @@
 import noticiasData from "@/data/noticias.json"
 import { generatePortalAnalysis } from "@/lib/news-editorial"
+import { translateToPortuguese } from "@/lib/deepl"
 
 export interface SiteNewsArticle {
   id: string
@@ -62,7 +63,6 @@ type WikimediaImageCandidate = {
 
 const imageHintCache = new Map<string, Promise<OpenAIImageHintResponse | null>>()
 const sourceImageCache = new Map<string, Promise<string>>()
-const localizationCache = new Map<string, Promise<{ titulo: string; descricao: string } | null>>()
 
 const RSS_FEEDS = [
   { name: "BBC World", url: "http://feeds.bbci.co.uk/news/world/rss.xml" },
@@ -699,104 +699,6 @@ function clipText(text: string, maxLength: number) {
   return `${normalized.slice(0, maxLength).trimEnd()}...`
 }
 
-async function localizeRssTeaser(article: { titulo: string; descricao: string; categoria: string; fonte: string }) {
-  const sourceText = `${article.titulo} ${article.descricao}`
-
-  if (!looksMostlyEnglish(sourceText)) {
-    return {
-      titulo: article.titulo,
-      descricao: article.descricao,
-    }
-  }
-
-  const apiKey = process.env.OPENAI_API_KEY
-
-  if (!apiKey) {
-    return {
-      titulo: article.titulo,
-      descricao: article.descricao,
-    }
-  }
-
-  const cacheKey = normalizeText(`${article.titulo} ${article.descricao} ${article.categoria} ${article.fonte}`)
-  const cached = localizationCache.get(cacheKey)
-
-  if (cached) {
-    return (await cached) ?? { titulo: article.titulo, descricao: article.descricao }
-  }
-
-  const pending = (async () => {
-    try {
-      const response = await fetch(OPENAI_API_URL, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${apiKey}`,
-        },
-        body: JSON.stringify({
-          model: OPENAI_IMAGE_HINT_MODEL,
-          temperature: 0.2,
-          response_format: {
-            type: "json_schema",
-            json_schema: {
-              name: "localized_rss_teaser",
-              strict: true,
-              schema: {
-                type: "object",
-                additionalProperties: false,
-                properties: {
-                  titulo: { type: "string" },
-                  descricao: { type: "string" },
-                },
-                required: ["titulo", "descricao"],
-              },
-            },
-          },
-          messages: [
-            {
-              role: "system",
-              content:
-                "Voce e editor de um portal brasileiro. Traduza e adapte para portugues do Brasil o titulo e o resumo de uma noticia internacional. Use apenas as informacoes fornecidas. Nao invente fatos. O titulo deve soar natural em portal jornalistico. O resumo deve ficar claro e conciso, com no maximo duas frases curtas.",
-            },
-            {
-              role: "user",
-              content: JSON.stringify(article),
-            },
-          ],
-        }),
-        signal: AbortSignal.timeout(7000),
-      })
-
-      if (!response.ok) {
-        return null
-      }
-
-      const data = (await response.json()) as {
-        choices?: Array<{ message?: { content?: string } }>
-      }
-      const rawContent = data.choices?.[0]?.message?.content
-
-      if (!rawContent) {
-        return null
-      }
-
-      const parsed = JSON.parse(rawContent) as { titulo: string; descricao: string }
-      return {
-        titulo: normalizeEncoding(parsed.titulo).trim() || article.titulo,
-        descricao: normalizeEncoding(parsed.descricao).trim() || article.descricao,
-      }
-    } catch {
-      return null
-    }
-  })()
-
-  localizationCache.set(cacheKey, pending)
-
-  return (await pending) ?? {
-    titulo: article.titulo,
-    descricao: article.descricao,
-  }
-}
 
 function normalizeImageUrl(url?: string) {
   if (!url) {
@@ -1324,23 +1226,30 @@ export async function getRssNews(limit = 20): Promise<SiteNewsArticle[]> {
       const data = Number.isNaN(parsedDate.getTime()) ? new Date().toISOString() : parsedDate.toISOString()
       const slug = buildRssSlug(item)
       const resumo = isTruncated(item.descricao) || !item.conteudoHtml || item.conteudoHtml.length < 280
-      const conteudo = buildRssBody(item, categoria, resumo)
-      const conteudoHtml = buildStructuredRssHtml(item, categoria, resumo)
       const score = scoreArticle(item, categoria)
-      const imagem = await resolveArticleImage({ ...item, categoria, link: item.link }, item.imagem)
-      const localized = await localizeRssTeaser({
-        titulo: item.titulo,
-        descricao: item.descricao,
-        categoria,
-        fonte: item.fonte,
-      })
+      const isEnglish = looksMostlyEnglish(`${item.titulo} ${item.descricao}`)
+      const rawText = extractParagraphText(item.conteudoHtml || item.descricao) || item.descricao || item.titulo
+
+      const [imagem, translatedTitle, translatedDesc, translatedContent] = await Promise.all([
+        resolveArticleImage({ ...item, categoria, link: item.link }, item.imagem),
+        isEnglish ? translateToPortuguese(item.titulo) : Promise.resolve(item.titulo),
+        isEnglish ? translateToPortuguese(item.descricao) : Promise.resolve(item.descricao),
+        isEnglish ? translateToPortuguese(rawText) : Promise.resolve(rawText),
+      ])
+
+      const notice = resumo
+        ? `<p><em>Este feed apresenta apenas um trecho do conteúdo original de <strong>${item.fonte}</strong>. <a href="${item.link}" target="_blank" rel="noopener noreferrer">Leia a matéria completa na fonte</a>.</em></p>`
+        : `<p><em>Conteúdo do feed oficial de <strong>${item.fonte}</strong>, curado pelo Eventos Históricos.</em></p>`
+
+      const conteudoHtml = `${textToHtmlParagraphs(translatedContent)}${notice}`
+      const conteudo = `${translatedContent}\n\n${resumo ? `Este conteúdo é um resumo de ${item.fonte}. Acesse o site original para ler na íntegra.` : `Conteúdo de ${item.fonte}.`}`
 
       return {
         score,
         id: `rss-${slug}`,
         slug,
-        titulo: localized.titulo,
-        descricao: clipText(localized.descricao || "Resumo selecionado automaticamente a partir de feeds abertos e confiaveis.", 220),
+        titulo: translatedTitle,
+        descricao: clipText(translatedDesc || "Resumo selecionado automaticamente a partir de feeds abertos e confiáveis.", 220),
         conteudo,
         conteudoHtml,
         resumo,
