@@ -6,7 +6,7 @@ applications:
         preBuild:
           commands:
             - npm install -g pnpm
-            - pnpm config set min-pkg-age 0
+            - export npm_config_min_pkg_age=0
             - pnpm install --no-frozen-lockfile
         build:
           commands:
