@@ -33,7 +33,6 @@ interface ParsedFeedItem {
   imagem?: string
 }
 
-const FEED_REVALIDATE_SECONDS = 300
 const WIKIMEDIA_REVALIDATE_SECONDS = 86_400
 const MAX_NEWS_AGE_DAYS = 10
 const MAX_HISTORY_AGE_DAYS = 30
@@ -803,7 +802,7 @@ async function fetchSourcePageImage(url?: string) {
       const response = await fetch(url, {
         headers: { "User-Agent": "Mozilla/5.0" },
         signal: AbortSignal.timeout(6000),
-        next: { revalidate: FEED_REVALIDATE_SECONDS },
+        cache: "no-store",
       })
 
       if (!response.ok) {
@@ -1034,7 +1033,7 @@ async function fetchFeed(url: string, name: string) {
     const response = await fetch(url, {
       signal: AbortSignal.timeout(10000),
       headers: { "User-Agent": "Mozilla/5.0" },
-      next: { revalidate: FEED_REVALIDATE_SECONDS },
+      cache: "no-store",
     })
 
     if (!response.ok) {
