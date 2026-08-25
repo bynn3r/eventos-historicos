@@ -96,8 +96,8 @@ async function translateChunkWithGoogle(chunk: string): Promise<string | null> {
   })
 }
 
-async function translateWithGoogle(text: string): Promise<string | null> {
-  const chunks = text.length <= 4500 ? [text] : splitIntoChunks(text, 4500)
+async function translateParagraphWithGoogle(paragraph: string): Promise<string | null> {
+  const chunks = paragraph.length <= 4500 ? [paragraph] : splitIntoChunks(paragraph, 4500)
   const results: string[] = []
 
   for (const chunk of chunks) {
@@ -107,6 +107,22 @@ async function translateWithGoogle(text: string): Promise<string | null> {
   }
 
   return results.join(" ")
+}
+
+async function translateWithGoogle(text: string): Promise<string | null> {
+  // Chunking by sentence (splitIntoChunks) doesn't know about paragraph breaks —
+  // translate paragraph-by-paragraph and rejoin with blank lines so multi-
+  // paragraph articles don't collapse into one wall of text.
+  const paragraphs = text.split(/\n\s*\n/)
+  const translatedParagraphs: string[] = []
+
+  for (const paragraph of paragraphs) {
+    const translated = await translateParagraphWithGoogle(paragraph)
+    if (translated === null) return null
+    translatedParagraphs.push(translated)
+  }
+
+  return translatedParagraphs.join("\n\n")
 }
 
 async function translateChunkWithMyMemory(chunk: string): Promise<string> {
@@ -134,8 +150,8 @@ async function translateChunkWithMyMemory(chunk: string): Promise<string> {
   })
 }
 
-async function translateWithMyMemory(text: string): Promise<string> {
-  const chunks = splitIntoChunks(text)
+async function translateParagraphWithMyMemory(paragraph: string): Promise<string> {
+  const chunks = splitIntoChunks(paragraph)
   if (chunks.length === 1) return translateChunkWithMyMemory(chunks[0])
 
   // Promise.all would let a single failed chunk reject the whole batch and
@@ -144,6 +160,19 @@ async function translateWithMyMemory(text: string): Promise<string> {
   const results = await Promise.allSettled(chunks.map(translateChunkWithMyMemory))
   const translated = results.map((result, index) => (result.status === "fulfilled" ? result.value : chunks[index]))
   return translated.join(" ")
+}
+
+async function translateWithMyMemory(text: string): Promise<string> {
+  // Same paragraph-preserving approach as translateWithGoogle — chunking by
+  // sentence alone loses the \n\n paragraph breaks.
+  const paragraphs = text.split(/\n\s*\n/)
+
+  if (paragraphs.length === 1) {
+    return translateParagraphWithMyMemory(paragraphs[0])
+  }
+
+  const translatedParagraphs = await Promise.all(paragraphs.map(translateParagraphWithMyMemory))
+  return translatedParagraphs.join("\n\n")
 }
 
 export async function translateToPortuguese(text: string): Promise<string> {
