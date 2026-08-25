@@ -15,7 +15,9 @@ export let lastCacheError: string | null = null
 
 function getDocClient() {
   if (!docClient) {
-    docClient = DynamoDBDocumentClient.from(new DynamoDBClient({ region: REGION }))
+    docClient = DynamoDBDocumentClient.from(new DynamoDBClient({ region: REGION }), {
+      marshallOptions: { removeUndefinedValues: true },
+    })
   }
   return docClient
 }
