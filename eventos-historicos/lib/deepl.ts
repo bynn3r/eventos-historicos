@@ -69,22 +69,26 @@ async function translateWithDeepL(text: string, apiKey: string): Promise<string>
 
 async function translateChunkWithMyMemory(chunk: string): Promise<string> {
   return myMemoryLimit(async () => {
-    const email = process.env.MYMEMORY_EMAIL ?? ""
-    const url = new URL("https://api.mymemory.translated.net/get")
-    url.searchParams.set("q", chunk)
-    url.searchParams.set("langpair", "en|pt-BR")
-    if (email) url.searchParams.set("de", email)
+    try {
+      const email = process.env.MYMEMORY_EMAIL ?? ""
+      const url = new URL("https://api.mymemory.translated.net/get")
+      url.searchParams.set("q", chunk)
+      url.searchParams.set("langpair", "en|pt-BR")
+      if (email) url.searchParams.set("de", email)
 
-    const res = await fetch(url.toString(), { signal: AbortSignal.timeout(8000) })
-    if (!res.ok) return chunk
+      const res = await fetch(url.toString(), { signal: AbortSignal.timeout(8000) })
+      if (!res.ok) return chunk
 
-    const data = (await res.json()) as {
-      responseStatus: number
-      responseData?: { translatedText?: string }
+      const data = (await res.json()) as {
+        responseStatus: number
+        responseData?: { translatedText?: string }
+      }
+
+      if (data.responseStatus !== 200) return chunk
+      return data.responseData?.translatedText || chunk
+    } catch {
+      return chunk
     }
-
-    if (data.responseStatus !== 200) return chunk
-    return data.responseData?.translatedText || chunk
   })
 }
 
@@ -92,7 +96,11 @@ async function translateWithMyMemory(text: string): Promise<string> {
   const chunks = splitIntoChunks(text)
   if (chunks.length === 1) return translateChunkWithMyMemory(chunks[0])
 
-  const translated = await Promise.all(chunks.map(translateChunkWithMyMemory))
+  // Promise.all would let a single failed chunk reject the whole batch and
+  // discard every chunk that DID translate successfully. allSettled keeps
+  // whatever succeeded and only falls back per-chunk.
+  const results = await Promise.allSettled(chunks.map(translateChunkWithMyMemory))
+  const translated = results.map((result, index) => (result.status === "fulfilled" ? result.value : chunks[index]))
   return translated.join(" ")
 }
 

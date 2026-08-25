@@ -846,6 +846,15 @@ function extractMainArticleHtml(html: string) {
   return articleMatch ? articleMatch[1] : html
 }
 
+function stripBylineBoilerplate(paragraph: string) {
+  return paragraph
+    .replace(/last modified on[\s\S]*?\b(am|pm|edt|gmt|bst|utc)\b\.?/gi, "")
+    .replace(/\bshare prefer the [a-z0-9 ]+ on google\b/gi, "")
+    .replace(/\b(mon|tue|wed|thu|fri|sat|sun)\s+\d{1,2}\s+[a-z]+\s+\d{4}\s+\d{1,2}[:.]\d{2}\s*(am|pm|edt|gmt|bst|utc)?/gi, "")
+    .replace(/\s{2,}/g, " ")
+    .trim()
+}
+
 async function fetchSourceArticleText(url?: string): Promise<string> {
   const html = await fetchSourcePageHtml(url)
 
@@ -856,7 +865,7 @@ async function fetchSourceArticleText(url?: string): Promise<string> {
   const cleanHtml = sanitizeHtml(extractMainArticleHtml(html))
   const paragraphs = extractParagraphText(cleanHtml)
     .split(/\n\s*\n/)
-    .map((paragraph) => paragraph.trim())
+    .map((paragraph) => stripBylineBoilerplate(paragraph.trim()))
     .filter(Boolean)
     .filter((paragraph) => !JUNK_PARAGRAPH_PATTERN.test(paragraph))
     .filter((paragraph) => {
