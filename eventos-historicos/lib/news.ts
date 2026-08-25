@@ -1,7 +1,6 @@
 import noticiasData from "@/data/noticias.json"
 import { generatePortalAnalysis } from "@/lib/news-editorial"
 import { translateToPortuguese } from "@/lib/deepl"
-import { readCachedArticles, writeCachedArticles } from "@/lib/news-cache"
 
 export interface SiteNewsArticle {
   id: string
@@ -1385,9 +1384,7 @@ async function getAllScoredCandidates() {
     .filter((candidate): candidate is NonNullable<typeof candidate> => candidate !== null)
 }
 
-const CANONICAL_LIST_LIMIT = 20
-
-async function computeRssNewsLive(limit = CANONICAL_LIST_LIMIT): Promise<SiteNewsArticle[]> {
+export async function getRssNews(limit = 20): Promise<SiteNewsArticle[]> {
   // Scoring/sorting only needs synchronous data (title, date, source) — do that
   // for every candidate first, then run the expensive per-item work (translation,
   // image lookup) ONLY on the `limit` articles that actually make the cut. Doing
@@ -1408,32 +1405,6 @@ async function computeRssNewsLive(limit = CANONICAL_LIST_LIMIT): Promise<SiteNew
   // calls its callback with (item, index, array), and index would otherwise
   // land in hydrateScoredCandidate's `full` parameter.
   return Promise.all(candidates.map((candidate) => hydrateScoredCandidate(candidate)))
-}
-
-export async function getRssNews(limit = CANONICAL_LIST_LIMIT): Promise<SiteNewsArticle[]> {
-  // The scheduled refresh job (see /api/cron/refresh-news) keeps a precomputed
-  // list warm in DynamoDB so ordinary page requests never have to pay for
-  // live feed-fetch + translation + image resolution — the whole reason list
-  // pages used to take 10-30s. Fall back to computing live (and opportunistically
-  // caching the result) if the cache is empty, stale, or unreachable.
-  const cached = await readCachedArticles()
-  if (cached && cached.length > 0) {
-    return cached.slice(0, limit)
-  }
-
-  const live = await computeRssNewsLive(Math.max(limit, CANONICAL_LIST_LIMIT))
-
-  if (live.length > 0) {
-    void writeCachedArticles(live)
-  }
-
-  return live.slice(0, limit)
-}
-
-export async function refreshNewsCache(limit = CANONICAL_LIST_LIMIT): Promise<{ count: number; cached: boolean }> {
-  const live = await computeRssNewsLive(limit)
-  const cached = live.length > 0 ? await writeCachedArticles(live) : false
-  return { count: live.length, cached }
 }
 
 async function findScoredCandidateBySlug(slug: string) {
