@@ -1313,39 +1313,14 @@ export async function getRssNews(limit = 20): Promise<SiteNewsArticle[]> {
         isEnglish ? translateToPortuguese(item.descricao) : Promise.resolve(item.descricao),
       ])
 
+      // Full-text enrichment (scraping the source page + translating a long body) is
+      // expensive and only ever needed for the one article someone actually opens —
+      // see enrichArticleWithFullText(), called on-demand from getNewsArticleBySlug.
+      // Doing it here for every item in a list of 10-20 articles blew past the
+      // platform's request timeout.
       const translatedRawText = isEnglish ? await translateToPortuguese(rawText) : rawText
-
-      let articleBody: string
-      let bodySource: "scraped" | "ai" | "feed" = "feed"
-
-      if (resumo) {
-        const scrapedText = await fetchSourceArticleText(item.link)
-
-        if (scrapedText && scrapedText.length > translatedRawText.length + 200) {
-          articleBody = isEnglish ? await translateToPortuguese(scrapedText) : scrapedText
-          bodySource = "scraped"
-        } else {
-          const aiText = await expandArticleWithAI({
-            titulo: translatedTitle,
-            descricao: translatedDesc,
-            categoria,
-            fonte: item.fonte,
-            contexto: translatedRawText,
-          })
-          articleBody = aiText
-          bodySource = aiText.trim() === translatedRawText.trim() ? "feed" : "ai"
-        }
-      } else {
-        articleBody = translatedRawText
-      }
-
-      const notice =
-        bodySource === "scraped"
-          ? `<p><em>Conteúdo obtido a partir da reportagem original de <strong>${item.fonte}</strong>, reorganizado pelo Eventos Históricos. <a href="${item.link}" target="_blank" rel="noopener noreferrer">Acesse a matéria original</a>.</em></p>`
-          : bodySource === "ai"
-            ? `<p><em>Artigo elaborado pela redação editorial do Eventos Históricos com base na cobertura de <strong>${item.fonte}</strong>. <a href="${item.link}" target="_blank" rel="noopener noreferrer">Acesse a reportagem original</a>.</em></p>`
-            : `<p><em>Conteúdo do feed oficial de <strong>${item.fonte}</strong>, curado pelo Eventos Históricos.</em></p>`
-
+      const articleBody = translatedRawText
+      const notice = `<p><em>Conteúdo do feed oficial de <strong>${item.fonte}</strong>, curado pelo Eventos Históricos.</em></p>`
       const conteudoHtml = `${textToHtmlParagraphs(articleBody)}${notice}`
       const conteudo = articleBody
 
@@ -1420,6 +1395,49 @@ export async function getCuratedNews(limit = 20) {
   }
 }
 
+async function enrichArticleWithFullText(article: SiteNewsArticle): Promise<SiteNewsArticle> {
+  if (article.tipo !== "rss" || !article.resumo) {
+    return article
+  }
+
+  const sourceLink = article.linkFonte || article.fonteUrl
+  const scrapedText = await fetchSourceArticleText(sourceLink)
+
+  let body = ""
+  let bodySource: "scraped" | "ai" = "scraped"
+
+  if (scrapedText && scrapedText.length > article.conteudo.length + 200) {
+    body = looksMostlyEnglish(scrapedText) ? await translateToPortuguese(scrapedText) : scrapedText
+    bodySource = "scraped"
+  } else {
+    const aiText = await expandArticleWithAI({
+      titulo: article.titulo,
+      descricao: article.descricao,
+      categoria: article.categoria,
+      fonte: article.fonte,
+      contexto: article.conteudo,
+    })
+
+    if (aiText.trim() === article.conteudo.trim()) {
+      return article
+    }
+
+    body = aiText
+    bodySource = "ai"
+  }
+
+  const notice =
+    bodySource === "scraped"
+      ? `<p><em>Conteúdo obtido a partir da reportagem original de <strong>${article.fonte}</strong>, reorganizado pelo Eventos Históricos. <a href="${sourceLink}" target="_blank" rel="noopener noreferrer">Acesse a matéria original</a>.</em></p>`
+      : `<p><em>Artigo elaborado pela redação editorial do Eventos Históricos com base na cobertura de <strong>${article.fonte}</strong>. <a href="${sourceLink}" target="_blank" rel="noopener noreferrer">Acesse a reportagem original</a>.</em></p>`
+
+  return {
+    ...article,
+    conteudo: body,
+    conteudoHtml: `${textToHtmlParagraphs(body)}${notice}`,
+  }
+}
+
 export async function getNewsArticleBySlug(slug: string) {
   const { rssArticles, localArticles } = await getCuratedNews(30)
   const localArticle = localArticles.find((article) => article.slug === slug)
@@ -1428,7 +1446,13 @@ export async function getNewsArticleBySlug(slug: string) {
     return localArticle
   }
 
-  return rssArticles.find((article) => article.slug === slug)
+  const rssArticle = rssArticles.find((article) => article.slug === slug)
+
+  if (!rssArticle) {
+    return undefined
+  }
+
+  return enrichArticleWithFullText(rssArticle)
 }
 
 export async function getRelatedNews(currentSlug: string, limit = 2) {
