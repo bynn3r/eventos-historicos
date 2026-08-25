@@ -67,6 +67,45 @@ async function translateWithDeepL(text: string, apiKey: string): Promise<string>
   return data.translations?.[0]?.text || text
 }
 
+async function translateChunkWithGoogle(chunk: string): Promise<string | null> {
+  try {
+    const url = new URL("https://translate.googleapis.com/translate_a/single")
+    url.searchParams.set("client", "gtx")
+    url.searchParams.set("sl", "en")
+    url.searchParams.set("tl", "pt")
+    url.searchParams.set("dt", "t")
+    url.searchParams.set("q", chunk)
+
+    const res = await fetch(url.toString(), {
+      signal: AbortSignal.timeout(6000),
+      headers: { "User-Agent": "Mozilla/5.0" },
+    })
+    if (!res.ok) return null
+
+    const data = (await res.json()) as unknown
+    const segments = Array.isArray(data) ? data[0] : null
+    if (!Array.isArray(segments) || segments.length === 0) return null
+
+    const translated = segments.map((segment: unknown) => (Array.isArray(segment) ? segment[0] ?? "" : "")).join("")
+    return translated.trim() || null
+  } catch {
+    return null
+  }
+}
+
+async function translateWithGoogle(text: string): Promise<string | null> {
+  const chunks = text.length <= 4500 ? [text] : splitIntoChunks(text, 4500)
+  const results: string[] = []
+
+  for (const chunk of chunks) {
+    const translated = await translateChunkWithGoogle(chunk)
+    if (!translated) return null
+    results.push(translated)
+  }
+
+  return results.join(" ")
+}
+
 async function translateChunkWithMyMemory(chunk: string): Promise<string> {
   return myMemoryLimit(async () => {
     try {
@@ -115,6 +154,10 @@ export async function translateToPortuguese(text: string): Promise<string> {
     try {
       const deeplKey = process.env.DEEPL_API_KEY
       if (deeplKey) return await translateWithDeepL(text, deeplKey)
+
+      const googleResult = await translateWithGoogle(text)
+      if (googleResult) return googleResult
+
       return await translateWithMyMemory(text)
     } catch {
       return text
