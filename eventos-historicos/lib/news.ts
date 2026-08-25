@@ -1312,24 +1312,26 @@ function buildScoredCandidate(item: ParsedFeedItem) {
   }
 }
 
-async function hydrateScoredCandidate(candidate: NonNullable<ReturnType<typeof buildScoredCandidate>>): Promise<SiteNewsArticle> {
+async function hydrateScoredCandidate(
+  candidate: NonNullable<ReturnType<typeof buildScoredCandidate>>,
+  full = false,
+): Promise<SiteNewsArticle> {
   const { item, categoria, data } = candidate
   const slug = buildRssSlug(item)
   const resumo = item.truncated || isTruncated(item.descricao) || !item.conteudoHtml || item.conteudoHtml.length < 600
   const isEnglish = looksMostlyEnglish(`${item.titulo} ${item.descricao}`)
   const rawText = extractParagraphText(item.conteudoHtml || item.descricao) || item.descricao || item.titulo
 
-  // The audience reads Portuguese, so translate by default (score-before-hydrate
-  // keeps this to `limit` articles instead of every relevant feed item, and
-  // translateToPortuguese() tries Google's endpoint with a short timeout before
-  // falling back, so a slow/unreachable backend degrades per-field instead of
-  // stalling the whole page). Keep the untranslated text too so the reader can
-  // flip to the original instantly, with no extra request.
+  // Card lists only ever show titulo/descricao (grep confirms `conteudo` is only
+  // read on the single-article page) — translating the full body for every item
+  // in a 20-article list was the main source of slowness, made worse once body
+  // translation had to go paragraph-by-paragraph to preserve line breaks. Only
+  // pay for that when `full` is requested for the one article being opened.
   const [imagem, translatedTitle, translatedDesc, translatedRawText] = await Promise.all([
     resolveArticleImage({ ...item, categoria, link: item.link }, item.imagem),
     isEnglish ? translateToPortuguese(item.titulo) : Promise.resolve(item.titulo),
     isEnglish ? translateToPortuguese(item.descricao) : Promise.resolve(item.descricao),
-    isEnglish ? translateToPortuguese(rawText) : Promise.resolve(rawText),
+    full && isEnglish ? translateToPortuguese(rawText) : Promise.resolve(rawText),
   ])
 
   const articleBody = translatedRawText
@@ -1399,7 +1401,10 @@ export async function getRssNews(limit = 20): Promise<SiteNewsArticle[]> {
     })
     .slice(0, limit)
 
-  return Promise.all(candidates.map(hydrateScoredCandidate))
+  // NOTE: must be wrapped in an arrow function, not passed directly — Array.map
+  // calls its callback with (item, index, array), and index would otherwise
+  // land in hydrateScoredCandidate's `full` parameter.
+  return Promise.all(candidates.map((candidate) => hydrateScoredCandidate(candidate)))
 }
 
 async function findScoredCandidateBySlug(slug: string) {
@@ -1510,7 +1515,7 @@ export async function getNewsArticleBySlug(slug: string) {
   const directCandidate = await findScoredCandidateBySlug(slug)
 
   if (directCandidate) {
-    const hydrated = await hydrateScoredCandidate(directCandidate)
+    const hydrated = await hydrateScoredCandidate(directCandidate, true)
     return enrichArticleWithFullText(hydrated)
   }
 
