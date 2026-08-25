@@ -66,7 +66,9 @@ const sourceImageCache = new Map<string, Promise<string>>()
 const sourcePageHtmlCache = new Map<string, Promise<string>>()
 
 const JUNK_PARAGRAPH_PATTERN =
-  /(cookie|assine|inscreva-se|newsletter|publicidade|advertisement|compartilhe esta|leia tamb[ée]m|veja tamb[ée]m|siga o |siga a |clique aqui|todos os direitos reservados|copyright ©|sign up|subscribe|related:|read more:|leia mais:)/i
+  /(cookie|assine|inscreva-se|newsletter|publicidade|advertisement|compartilhe esta|leia tamb[ée]m|veja tamb[ée]m|siga o |siga a |clique aqui|todos os direitos reservados|copyright ©|sign up|subscribe|related:|read more:|leia mais:|^listen\b|save share|share-nodes|whatsapp-stroke|copylink|caret-right|add .+ on google|download our app|follow us|^by [a-z .]+$|min read|mins read|\bfacebook\b.*\bx\b.*\bwhatsapp\b)/i
+
+const SENTENCE_END_PATTERN = /[.!?"'”)]\s*$/
 
 const RSS_FEEDS = [
   { name: "BBC World", url: "http://feeds.bbci.co.uk/news/world/rss.xml" },
@@ -856,14 +858,19 @@ async function fetchSourceArticleText(url?: string): Promise<string> {
     .split(/\n\s*\n/)
     .map((paragraph) => paragraph.trim())
     .filter(Boolean)
-    .filter((paragraph) => paragraph.length >= 40)
     .filter((paragraph) => !JUNK_PARAGRAPH_PATTERN.test(paragraph))
+    .filter((paragraph) => {
+      const wordCount = paragraph.split(/\s+/).filter(Boolean).length
+      if (wordCount < 6) return false
+      if (paragraph.length < 200 && !SENTENCE_END_PATTERN.test(paragraph)) return false
+      return true
+    })
 
   const selected: string[] = []
   let totalLength = 0
 
   for (const paragraph of paragraphs) {
-    if (totalLength >= 3200) {
+    if (totalLength >= 2200) {
       break
     }
     selected.push(paragraph)

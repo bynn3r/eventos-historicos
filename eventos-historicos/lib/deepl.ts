@@ -1,5 +1,33 @@
 const translationCache = new Map<string, Promise<string>>()
 
+function createLimiter(concurrency: number) {
+  let active = 0
+  const queue: Array<() => void> = []
+
+  const runNext = () => {
+    if (active >= concurrency || queue.length === 0) return
+    active++
+    const run = queue.shift()
+    run?.()
+  }
+
+  return function limit<T>(fn: () => Promise<T>): Promise<T> {
+    return new Promise((resolve, reject) => {
+      queue.push(() => {
+        fn()
+          .then(resolve, reject)
+          .finally(() => {
+            active--
+            runNext()
+          })
+      })
+      runNext()
+    })
+  }
+}
+
+const myMemoryLimit = createLimiter(3)
+
 function splitIntoChunks(text: string, maxLen = 480): string[] {
   if (text.length <= maxLen) return [text]
 
@@ -40,22 +68,24 @@ async function translateWithDeepL(text: string, apiKey: string): Promise<string>
 }
 
 async function translateChunkWithMyMemory(chunk: string): Promise<string> {
-  const email = process.env.MYMEMORY_EMAIL ?? ""
-  const url = new URL("https://api.mymemory.translated.net/get")
-  url.searchParams.set("q", chunk)
-  url.searchParams.set("langpair", "en|pt-BR")
-  if (email) url.searchParams.set("de", email)
+  return myMemoryLimit(async () => {
+    const email = process.env.MYMEMORY_EMAIL ?? ""
+    const url = new URL("https://api.mymemory.translated.net/get")
+    url.searchParams.set("q", chunk)
+    url.searchParams.set("langpair", "en|pt-BR")
+    if (email) url.searchParams.set("de", email)
 
-  const res = await fetch(url.toString(), { signal: AbortSignal.timeout(8000) })
-  if (!res.ok) return chunk
+    const res = await fetch(url.toString(), { signal: AbortSignal.timeout(8000) })
+    if (!res.ok) return chunk
 
-  const data = (await res.json()) as {
-    responseStatus: number
-    responseData?: { translatedText?: string }
-  }
+    const data = (await res.json()) as {
+      responseStatus: number
+      responseData?: { translatedText?: string }
+    }
 
-  if (data.responseStatus !== 200) return chunk
-  return data.responseData?.translatedText || chunk
+    if (data.responseStatus !== 200) return chunk
+    return data.responseData?.translatedText || chunk
+  })
 }
 
 async function translateWithMyMemory(text: string): Promise<string> {
