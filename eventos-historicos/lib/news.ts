@@ -1500,6 +1500,26 @@ async function enrichArticleWithFullText(article: SiteNewsArticle): Promise<Site
   }
 }
 
+// Cheap enough for generateMetadata() to await without delaying the page's
+// initial response — skips the source-page scrape + full-body translation
+// that getNewsArticleBySlug()'s enrichment step does.
+export async function getNewsArticleMetaBySlug(slug: string): Promise<{ titulo: string; descricao: string } | null> {
+  const localArticle = normalizeLocalArticles().find((article) => article.slug === slug)
+
+  if (localArticle) {
+    return { titulo: localArticle.titulo, descricao: localArticle.descricao }
+  }
+
+  const candidate = await findScoredCandidateBySlug(slug)
+
+  if (!candidate) {
+    return null
+  }
+
+  const hydrated = await hydrateScoredCandidate(candidate)
+  return { titulo: hydrated.titulo, descricao: hydrated.descricao }
+}
+
 export async function getNewsArticleBySlug(slug: string) {
   // Local (static) articles never need the RSS feed sweep at all, so check them
   // first without paying for it.
