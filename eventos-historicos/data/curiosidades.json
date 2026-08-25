@@ -3,7 +3,8 @@
     "id": "alexandria",
     "titulo": "A Biblioteca de Alexandria Nunca Foi Totalmente Destruída",
     "slug": "biblioteca-de-alexandria",
-    "descricao": "Apesar do mito popular, a Biblioteca de Alexandria não desapareceu em um único evento catastrófico, mas sim declinou gradualmente ao longo de vários séculos. Pesquisas históricas recentes revelam que a biblioteca continuou funcionando até pelo menos o século IV d.C., muito depois dos eventos tradicionalmente associados à sua 'destruição'. O declínio foi causado por uma combinação de fatores: redução do financiamento imperial, mudanças políticas, terremotos, e a gradual transferência do conhecimento para outras instituições. Muitos dos manuscritos foram transferidos para Constantinopla e outras bibliotecas do mundo bizantino, preservando assim parte do conhecimento alexandrino.",
+    "descricao": "Apesar do mito popular de um incêndio único e catastrófico, a Biblioteca de Alexandria declinou gradualmente ao longo de vários séculos, e parte de seu acervo sobreviveu muito além da Antiguidade.",
+    "conteudo": "Apesar do mito popular, a Biblioteca de Alexandria não desapareceu em um único evento catastrófico, mas sim declinou gradualmente ao longo de vários séculos. Fundada no século III a.C. sob os Ptolomeus, ela funcionou como parte do Museion, um centro de pesquisa que reunia estudiosos de todo o mundo helenístico e chegou a abrigar, segundo relatos antigos, centenas de milhares de rolos de papiro.\n\nA ideia de uma destruição súbita geralmente é associada ao incêndio provocado por Júlio César durante o cerco de Alexandria, em 48 a.C., quando parte dos depósitos próximos ao porto pegou fogo. Esse episódio, no entanto, atingiu apenas uma fração do acervo, e a instituição continuou funcionando por séculos depois disso.\n\nO declínio real foi causado por uma combinação de fatores: redução do financiamento imperial, mudanças políticas e religiosas no Egito romano e bizantino, e a gradual transferência de estudiosos e manuscritos para outras cidades. Fontes históricas indicam atividade intelectual ligada à biblioteca ainda no século IV d.C., muito depois dos eventos tradicionalmente associados à sua 'destruição'.\n\nParte do conhecimento acumulado em Alexandria sobreviveu por meio de cópias que circularam por Constantinopla, pelo mundo árabe e por outras bibliotecas do Mediterrâneo, sendo posteriormente redescoberto e traduzido durante a Idade Média — um lembrete de que a perda de conhecimento antigo foi, na maior parte, um processo lento e não um único momento dramático.",
     "data": "2025-01-15",
     "categoria": "Antiguidade",
     "imagem": "/curiosidades/biblioteca-alexandria.jpg"
@@ -12,7 +13,8 @@
     "id": "mongol",
     "titulo": "O Império Mongol: Maior Império Contíguo da História",
     "slug": "imperio-mongol",
-    "descricao": "O Império Mongol, no seu auge no século XIII, cobria impressionantes 24 milhões de quilômetros quadrados - uma área maior que todo o continente africano. Estendendo-se da Europa Oriental até o Oceano Pacífico, este império conectou culturas, facilitou o comércio através da Rota da Seda e promoveu um intercâmbio sem precedentes de conhecimento, tecnologia e ideias. Contrariamente à imagem de destruição, os mongóis eram administradores eficientes que frequentemente preservavam as estruturas locais de governo e promoviam a tolerância religiosa. Sua rede de comunicação, o 'Yam', era tão eficiente que uma mensagem podia viajar de uma ponta à outra do império em questão de semanas.",
+    "descricao": "No auge do século XIII, o Império Mongol se estendia da Europa Oriental ao Pacífico e conectou culturas, rotas comerciais e ideias em uma escala sem precedentes.",
+    "conteudo": "O Império Mongol, no seu auge no século XIII, cobria uma área impressionante que se estendia da Europa Oriental até o Oceano Pacífico — o maior território contíguo já governado por um único poder na história. Fundado por Genghis Khan a partir da unificação das tribos mongóis nas estepes da Ásia Central, o império cresceu rapidamente sob seus sucessores até se dividir em khanatos regionais.\n\nContrariamente à imagem de pura destruição associada às conquistas mongóis, os khans eram, em muitos aspectos, administradores pragmáticos. Eles frequentemente preservavam estruturas locais de governo, recrutavam burocratas e artesãos das populações conquistadas e promoviam relativa tolerância religiosa dentro de seus domínios, desde que a autoridade mongol não fosse contestada.\n\nO império também facilitou um intercâmbio comercial e cultural sem precedentes ao longo da Rota da Seda, conectando a China à Europa e ao Oriente Médio. Esse período de maior segurança nas rotas terrestres, às vezes chamado de 'Pax Mongolica', permitiu que mercadores, missionários e viajantes — como Marco Polo — cruzassem distâncias que antes eram extremamente arriscadas.\n\nPara administrar um território tão vasto, os mongóis desenvolveram o Yam, um sistema de postos de revezamento com cavalos e mensageiros que permitia que ordens e informações viajassem por milhares de quilômetros em questão de dias ou poucas semanas — uma rede de comunicação notavelmente eficiente para a época.",
     "data": "2025-01-14",
     "categoria": "Idade Média",
     "imagem": "/curiosidades/imperio-mongol.jpg"
@@ -21,7 +23,8 @@
     "id": "guerra-cem-anos",
     "titulo": "A Guerra dos Cem Anos Durou 116 Anos",
     "slug": "guerra-cem-anos",
-    "descricao": "A famosa 'Guerra dos Cem Anos' entre Inglaterra e França na verdade durou 116 anos (1337-1453) e não foi uma guerra contínua, mas sim uma série de conflitos intercalados com longos períodos de paz e tréguas. O conflito foi marcado por batalhas icônicas como Crécy, Poitiers e Agincourt, mas também por décadas de negociações diplomáticas. A guerra transformou a arte militar com o uso do arco longo inglês e das primeiras armas de fogo, além de consolidar as identidades nacionais francesa e inglesa. Curiosamente, a guerra só terminou definitivamente quando os ingleses perderam todos os seus territórios na França continental, exceto Calais.",
+    "descricao": "O conflito entre Inglaterra e França batizado de 'Guerra dos Cem Anos' na verdade se estendeu por 116 anos, intercalando décadas de combate com longos períodos de trégua.",
+    "conteudo": "A famosa 'Guerra dos Cem Anos' entre Inglaterra e França na verdade durou 116 anos (1337-1453) e não foi um conflito contínuo, mas sim uma série de campanhas separadas por longos períodos de paz frágil, tréguas e negociações diplomáticas. O nome só foi cunhado por historiadores no século XIX, muito depois do fim da guerra.\n\nO conflito teve origem em disputas sobre a sucessão ao trono francês e sobre territórios continentais controlados pela coroa inglesa, e é lembrado por batalhas que se tornaram símbolos da época, como Crécy (1346), Poitiers (1356) e Agincourt (1415) — todas vitórias inglesas marcadas pelo uso devastador do arco longo contra a cavalaria pesada francesa.\n\nA guerra também foi palco de transformações militares e políticas profundas: viu o surgimento das primeiras armas de fogo em campo de batalha, o fortalecimento do sentimento de identidade nacional em ambos os lados, e a ascensão de figuras como Joana d'Arc, cuja liderança ajudou a virar o rumo do conflito a favor da França a partir da década de 1430.\n\nO fim da guerra, em 1453, não veio por um tratado formal, mas pelo colapso militar inglês: os ingleses perderam praticamente todos os seus territórios na França continental, restando-lhes apenas o porto de Calais, que permaneceria em mãos inglesas por mais um século.",
     "data": "2025-01-13",
     "categoria": "Idade Média",
     "imagem": "/curiosidades/guerra-cem-anos.jpg"
@@ -30,17 +33,18 @@
     "id": "piramides-gize",
     "titulo": "As Pirâmides de Gizé Não Foram Construídas por Escravos",
     "slug": "piramides-gize",
-    "descricao": "Evidências arqueológicas modernas revelam que as Pirâmides de Gizé não foram construídas por escravos, como popularmente se acredita, mas por trabalhadores assalariados que recebiam rações de carne, cerveja e pão. Descobertas de cemitérios dos trabalhadores mostram que eles recebiam cuidados médicos e eram enterrados com honras próximas às pirâmides. Estima-se que cerca de 20.000 trabalhadores participaram da construção durante os 20 anos necessários para completar a Grande Pirâmide. Estes trabalhadores eram organizados em equipes com nomes como 'Amigos de Khufu' e 'Bêbados de Menkaure', sugerindo um ambiente de trabalho mais organizado e menos opressivo do que se imaginava.",
+    "descricao": "Escavações arqueológicas nos cemitérios dos operários de Gizé mostram trabalhadores assalariados e organizados, e não a mão de obra escrava retratada pela tradição popular.",
+    "conteudo": "Evidências arqueológicas modernas revelam que as Pirâmides de Gizé não foram construídas por escravos, como popularmente se acredita, mas por trabalhadores egípcios que recebiam rações de pão, cerveja e carne como forma de pagamento. Essa visão se consolidou a partir de escavações conduzidas desde o final do século XX próximas ao planalto de Gizé.\n\nDescobertas nos cemitérios dos operários mostram que eles recebiam cuidados médicos — incluindo evidências de tratamento de fraturas e cirurgias — e eram enterrados com relativa honra, próximos às próprias pirâmides que ajudaram a construir, algo incompatível com o tratamento normalmente dado a mão de obra escrava no antigo Egito.\n\nEstima-se que a força de trabalho envolvida na construção da Grande Pirâmide, erguida para o faraó Khufu, girasse em torno de milhares de trabalhadores organizados em turnos, ao longo de cerca de duas décadas. Muitos provavelmente eram camponeses recrutados sazonalmente, durante os períodos em que a inundação anual do Nilo impedia o trabalho agrícola.\n\nEsses trabalhadores eram organizados em equipes com nomes que sugerem orgulho e identidade coletiva, como 'Amigos de Khufu', indicando um ambiente de trabalho mais estruturado — e um projeto de Estado mais mobilizador — do que a imagem popular de multidões escravizadas sob o chicote.",
     "data": "2025-01-12",
     "categoria": "Antiguidade",
     "imagem": "/curiosidades/piramides-gize.jpg"
   },
-
   {
     "id": "grande-depressao",
     "titulo": "A Grande Depressão Afetou o Mundo Todo",
     "slug": "grande-depressao",
-    "descricao": "A crise de 1929 não atingiu apenas os Estados Unidos. A Grande Depressão provocou falências em massa na Europa, América Latina e Ásia. O comércio internacional caiu mais de 60% entre 1929 e 1934, levando milhões ao desemprego. No Brasil, por exemplo, o preço do café despencou e sacas foram queimadas para tentar equilibrar a economia. O impacto social foi tão profundo que muitos países passaram a adotar políticas econômicas mais intervencionistas, abrindo caminho para líderes autoritários na década de 1930.",
+    "descricao": "A crise de 1929 não se limitou aos Estados Unidos: o comércio mundial despencou, o desemprego disparou em vários continentes e o Brasil viu o preço do café desabar.",
+    "conteudo": "A crise que começou com a quebra da bolsa de Nova York, em outubro de 1929, não atingiu apenas os Estados Unidos. A Grande Depressão provocou falências em massa e recessões profundas na Europa, na América Latina e em partes da Ásia, tornando-se a crise econômica mais severa da era industrial.\n\nO comércio internacional despencou drasticamente entre 1929 e 1934, à medida que países elevavam tarifas e restrições na tentativa de proteger suas próprias economias — medidas que, paradoxalmente, aprofundaram a crise global ao reduzir ainda mais o fluxo de bens entre nações. O desemprego em massa se tornou um fenômeno generalizado nas economias industrializadas.\n\nNo Brasil, então fortemente dependente das exportações de café, a crise atingiu o setor com força: os preços internacionais despencaram, levando o governo a comprar e queimar sacas de café excedentes numa tentativa de sustentar os preços — episódio que se tornou um símbolo dos efeitos da Depressão sobre economias exportadoras de commodities.\n\nO impacto social e político foi profundo e duradouro. Em resposta à crise, diversos países passaram a adotar políticas econômicas mais intervencionistas, do New Deal americano a experiências semelhantes em outras partes do mundo, enquanto o desespero econômico também abriu caminho para o fortalecimento de movimentos autoritários na Europa ao longo da década de 1930.",
     "data": "2025-02-15",
     "categoria": "Século XX",
     "imagem": "/curiosidades/grande-depressao.jpg"
@@ -49,7 +53,8 @@
     "id": "dia-d",
     "titulo": "O Dia D Foi Adiado Duas Vezes",
     "slug": "dia-d",
-    "descricao": "A invasão da Normandia, em 6 de junho de 1944, quase não aconteceu nesse dia. O desembarque foi inicialmente marcado para 5 de junho, mas más condições climáticas obrigaram os aliados a adiar a operação. O general Eisenhower só tomou a decisão final de avançar após uma breve janela de melhoria no clima. Caso tivesse adiado novamente, a invasão teria sido adiada por semanas, o que poderia mudar drasticamente o curso da guerra.",
+    "descricao": "A invasão da Normandia, em 6 de junho de 1944, quase não aconteceu naquele dia — más condições climáticas quase forçaram os Aliados a adiar a operação novamente.",
+    "conteudo": "A invasão da Normandia, em 6 de junho de 1944, quase não aconteceu nesse dia. O desembarque foi originalmente marcado para 5 de junho, mas condições de mar e vento desfavoráveis no Canal da Mancha obrigaram os comandantes aliados a adiar a operação por 24 horas — um atraso que já havia sido antecedido por outro adiamento nas semanas anteriores, enquanto se esperava a combinação certa de maré, luz da lua e clima.\n\nA decisão final coube ao general Dwight D. Eisenhower, comandante supremo das forças aliadas, que precisou avaliar previsões meteorológicas incertas fornecidas por sua equipe. Diante de uma breve janela de melhoria prevista para o dia 6, Eisenhower deu a ordem de avançar, ciente de que um novo adiamento significaria esperar por outra combinação favorável de maré e lua — possivelmente até duas semanas depois.\n\nA operação, batizada de Overlord, mobilizou uma força sem precedentes: mais de 150 mil soldados aliados desembarcaram nas praias da Normandia (com nomes de código como Utah, Omaha, Gold, Juno e Sword) no primeiro dia, apoiados por milhares de embarcações e aeronaves, na maior invasão anfíbia já realizada.\n\nO sucesso do desembarque, apesar das pesadas baixas em praias como Omaha, abriu a chamada Frente Ocidental contra a Alemanha nazista e é amplamente considerado um dos pontos de virada decisivos da Segunda Guerra Mundial na Europa.",
     "data": "2025-02-16",
     "categoria": "Segunda Guerra Mundial",
     "imagem": "/curiosidades/dia-d.jpg"
@@ -58,7 +63,8 @@
     "id": "projeto-manhattan",
     "titulo": "O Projeto Manhattan Empregou Mais de 130 Mil Pessoas",
     "slug": "projeto-manhattan",
-    "descricao": "O desenvolvimento da bomba atômica pelos Estados Unidos durante a Segunda Guerra Mundial foi um dos maiores esforços científicos e industriais já realizados. O Projeto Manhattan envolveu mais de 130 mil pessoas em várias instalações secretas, como Los Alamos, Oak Ridge e Hanford. O custo foi de cerca de 2 bilhões de dólares da época (equivalente a mais de 25 bilhões hoje). O nível de sigilo era tão alto que a maioria dos trabalhadores não sabia no que estava realmente trabalhando.",
+    "descricao": "O desenvolvimento da bomba atômica pelos EUA mobilizou mais de 130 mil pessoas em instalações secretas como Los Alamos e Oak Ridge, sob um sigilo extremo.",
+    "conteudo": "O desenvolvimento da bomba atômica pelos Estados Unidos durante a Segunda Guerra Mundial foi um dos maiores esforços científicos e industriais já realizados na história. O Projeto Manhattan chegou a empregar mais de 130 mil pessoas em várias instalações espalhadas pelo país, incluindo o laboratório de pesquisa em Los Alamos, no Novo México, e as gigantescas plantas de enriquecimento de urânio em Oak Ridge, no Tennessee, e de produção de plutônio em Hanford, no estado de Washington.\n\nO projeto reuniu alguns dos maiores físicos da época, muitos deles refugiados europeus que haviam fugido do avanço do nazismo, sob a liderança científica de J. Robert Oppenheimer e a coordenação militar do general Leslie Groves. O custo total é estimado em cerca de 2 bilhões de dólares da época — uma soma que, ajustada pela inflação, ultrapassaria dezenas de bilhões de dólares atuais.\n\nO nível de compartimentalização e sigilo era tão elevado que a grande maioria dos trabalhadores nas instalações de produção não tinha ideia do propósito final do que estava produzindo, conhecendo apenas sua tarefa específica dentro de uma cadeia industrial muito maior e cuidadosamente segmentada.\n\nO projeto culminou no primeiro teste nuclear da história, o Trinity, realizado no deserto do Novo México em julho de 1945, seguido semanas depois pelos bombardeios atômicos de Hiroshima e Nagasaki — eventos que precipitaram a rendição do Japão e inauguraram a era nuclear na política mundial.",
     "data": "2025-02-17",
     "categoria": "Segunda Guerra Mundial",
     "imagem": "/curiosidades/projeto-manhattan.jpg"
@@ -67,7 +73,8 @@
     "id": "blitz-londres",
     "titulo": "Durante a Blitz, Londres Ficou 57 Noites Sob Bombardeio",
     "slug": "blitz-londres",
-    "descricao": "Entre setembro de 1940 e maio de 1941, a Alemanha nazista lançou uma campanha de bombardeios contra Londres e outras cidades britânicas. Londres sofreu 57 noites consecutivas de ataques aéreos, destruindo bairros inteiros e matando milhares de civis. Apesar da destruição, a moral britânica não quebrou, e o primeiro-ministro Winston Churchill ficou famoso por seus discursos que mantinham a esperança da população. A resistência da Grã-Bretanha foi um ponto de virada na guerra.",
+    "descricao": "Entre setembro de 1940 e maio de 1941, a Luftwaffe alemã bombardeou Londres por 57 noites seguidas, mas a moral britânica resistiu, sustentada pela liderança de Churchill.",
+    "conteudo": "Entre setembro de 1940 e maio de 1941, a Alemanha nazista lançou uma campanha intensa de bombardeios aéreos contra cidades britânicas, ficada conhecida como a Blitz. Logo no início da campanha, Londres foi bombardeada por 57 noites consecutivas, à medida que a Luftwaffe alemã tentava quebrar a resistência britânica e destruir sua capacidade industrial e sua moral.\n\nOs ataques destruíram bairros inteiros, danificaram gravemente a infraestrutura da cidade e mataram dezenas de milhares de civis britânicos ao longo da campanha, que também atingiu outras cidades como Coventry — cujo centro histórico foi praticamente arrasado numa única noite de novembro de 1940 — e Birmingham.\n\nApesar da destruição, a resposta popular ficou marcada pelo chamado 'espírito da Blitz': milhões de londrinos passaram a se abrigar nas estações do metrô durante os ataques noturnos, e a vida civil, embora duramente afetada, não entrou em colapso. O primeiro-ministro Winston Churchill tornou-se símbolo dessa resistência através de discursos que buscavam sustentar a esperança da população em meio ao bombardeio constante.\n\nA campanha aérea alemã, que buscava obter superioridade aérea antes de uma eventual invasão da Grã-Bretanha, acabou fracassando em seu objetivo estratégico. A resistência britânica no ar e no solo é hoje vista como um dos primeiros grandes reveses da Alemanha nazista na guerra, e um ponto de virada simbólico no conflito.",
     "data": "2025-02-18",
     "categoria": "Segunda Guerra Mundial",
     "imagem": "/curiosidades/blitz-londres.jpg"
@@ -76,7 +83,8 @@
     "id": "stalingrado",
     "titulo": "A Batalha de Stalingrado Foi a Mais Letal da História",
     "slug": "batalha-stalingrado",
-    "descricao": "Travada entre 1942 e 1943, a Batalha de Stalingrado é considerada o confronto mais sangrento da história. Estima-se que mais de 2 milhões de pessoas morreram entre soldados e civis. O inverno rigoroso, a resistência soviética e a falta de suprimentos dizimaram as tropas alemãs. A vitória soviética marcou o início da virada da Segunda Guerra Mundial no front oriental.",
+    "descricao": "Travada entre 1942 e 1943, a Batalha de Stalingrado deixou milhões de mortos entre soldados e civis e marcou a virada da Segunda Guerra Mundial na frente oriental.",
+    "conteudo": "Travada entre agosto de 1942 e fevereiro de 1943, a Batalha de Stalingrado é considerada um dos confrontos mais sangrentos já registrados na história militar. As estimativas de baixas — somando soldados soviéticos, alemães e de seus aliados, além de civis presos no cerco da cidade — chegam a mais de um milhão de pessoas, tornando-a um dos episódios mais letais de toda a Segunda Guerra Mundial.\n\nA batalha começou como parte da ofensiva alemã em direção ao Cáucaso e seus campos de petróleo, com Stalingrado (atual Volgogrado) se tornando um objetivo simbólico e estratégico por carregar o nome do líder soviético. Os combates urbanos, travados casa a casa e às vezes andar por andar, transformaram a cidade em ruínas ao longo de meses de luta.\n\nO inverno russo extremamente rigoroso, combinado com a resistência soviética e uma manobra de cerco que isolou o 6º Exército alemão dentro da cidade, dizimou as tropas do Eixo. Sem suprimentos e cercados, os remanescentes das forças alemãs acabaram se rendendo em fevereiro de 1943, numa das maiores capitulações militares da história alemã.\n\nA vitória soviética em Stalingrado é amplamente considerada o ponto de virada da guerra na Frente Oriental, encerrando o avanço alemão para o leste e dando início a uma série de ofensivas soviéticas que, ao longo dos dois anos seguintes, levariam o Exército Vermelho até Berlim.",
     "data": "2025-02-19",
     "categoria": "Segunda Guerra Mundial",
     "imagem": "/curiosidades/stalingrado.jpg"
@@ -85,7 +93,8 @@
     "id": "holocausto",
     "titulo": "O Holocausto Eliminou 6 Milhões de Judeus",
     "slug": "holocausto",
-    "descricao": "Entre 1941 e 1945, o regime nazista implementou a chamada 'Solução Final', um plano sistemático para exterminar os judeus da Europa. Aproximadamente 6 milhões de judeus foram assassinados em campos de concentração e extermínio como Auschwitz, Treblinka e Sobibor. Além dos judeus, milhões de ciganos, homossexuais, prisioneiros políticos e pessoas com deficiência também foram perseguidos e mortos.",
+    "descricao": "Entre 1941 e 1945, o regime nazista assassinou cerca de 6 milhões de judeus europeus em campos de concentração e extermínio, ao lado de milhões de outras vítimas.",
+    "conteudo": "Entre 1941 e 1945, o regime nazista implementou a chamada 'Solução Final', um plano sistemático de perseguição e extermínio dos judeus da Europa. Estima-se que aproximadamente 6 milhões de judeus tenham sido assassinados durante o Holocausto, em campos de concentração e extermínio como Auschwitz-Birkenau, Treblinka e Sobibor, além de execuções em massa realizadas por unidades móveis de extermínio em territórios ocupados do Leste Europeu.\n\nO processo envolveu uma infraestrutura burocrática e industrial vasta: deportações organizadas por trem a partir de guetos e territórios ocupados por toda a Europa, câmaras de gás projetadas para extermínio em massa e um sistema de registro que documentava metodicamente as vítimas — características que tornam o Holocausto um caso extremo de genocídio industrializado pelo Estado.\n\nAlém da população judaica, o regime nazista perseguiu e assassinou milhões de outras vítimas consideradas 'indesejáveis' por sua ideologia: ciganos (Roma e Sinti), pessoas com deficiência física ou mental, prisioneiros políticos, membros da resistência, homossexuais e prisioneiros de guerra soviéticos, entre outros grupos.\n\nO Holocausto só terminou com a derrota militar da Alemanha nazista em 1945, quando forças aliadas e soviéticas libertaram os campos ainda em operação. Os julgamentos de Nuremberg, realizados logo em seguida, estabeleceram precedentes importantes de direito internacional sobre crimes contra a humanidade que ainda hoje moldam a forma como genocídios são julgados.",
     "data": "2025-02-20",
     "categoria": "Segunda Guerra Mundial",
     "imagem": "/curiosidades/holocausto.jpg"
@@ -94,7 +103,8 @@
     "id": "onu",
     "titulo": "A ONU Nasceu da Segunda Guerra Mundial",
     "slug": "fundacao-onu",
-    "descricao": "A Organização das Nações Unidas (ONU) foi fundada em 1945, após a vitória dos Aliados, com o objetivo de evitar novos conflitos mundiais. O estatuto foi assinado por 50 países em São Francisco, incluindo o Brasil. A ONU substituiu a fracassada Liga das Nações e tornou-se a principal instituição global para mediar crises, promover direitos humanos e coordenar ações internacionais.",
+    "descricao": "Fundada em 1945 por 50 países, incluindo o Brasil, a ONU nasceu para evitar novos conflitos mundiais e substituir a fracassada Liga das Nações.",
+    "conteudo": "A Organização das Nações Unidas (ONU) foi fundada em 1945, no rescaldo da Segunda Guerra Mundial, com o objetivo declarado de evitar que um conflito de proporções globais voltasse a se repetir. A Carta das Nações Unidas foi assinada em São Francisco por representantes de 50 países fundadores, incluindo o Brasil, ao final de uma conferência que reuniu delegações de todo o mundo entre abril e junho daquele ano.\n\nA nova organização foi concebida como sucessora da Liga das Nações, criada após a Primeira Guerra Mundial mas incapaz de impedir a escalada de tensões que levou ao conflito seguinte, em parte por sua falta de mecanismos efetivos de aplicação e pela ausência de potências-chave, como os próprios Estados Unidos, entre seus membros mais influentes.\n\nO desenho institucional da ONU tentou corrigir essas fragilidades: criou-se o Conselho de Segurança, com membros permanentes dotados de poder de veto, na tentativa de garantir que as grandes potências vencedoras da guerra permanecessem engajadas na nova arquitetura de segurança coletiva, em vez de se afastarem dela como haviam feito com a Liga das Nações.\n\nDesde sua fundação, a ONU expandiu significativamente seu escopo de atuação, passando a mediar crises internacionais, coordenar operações de paz, promover direitos humanos por meio de declarações e tratados, e articular agências especializadas em saúde, alimentação, infância e desenvolvimento — tornando-se a principal instituição multilateral do mundo, ainda que frequentemente limitada pelas mesmas rivalidades entre grandes potências que buscava conter.",
     "data": "2025-02-21",
     "categoria": "Segunda Guerra Mundial",
     "imagem": "/curiosidades/onu.jpg"
@@ -103,7 +113,8 @@
     "id": "perestroika",
     "titulo": "A Perestroika Mudou o Mundo",
     "slug": "perestroika",
-    "descricao": "A política de reformas econômicas e políticas lançada por Mikhail Gorbachev em 1985, conhecida como Perestroika, contribuiu para o fim da Guerra Fria. Ao lado da Glasnost (abertura política), enfraqueceu o controle do Partido Comunista e deu mais liberdade à sociedade soviética. Essas mudanças, no entanto, aceleraram o colapso da União Soviética em 1991, transformando completamente a ordem mundial.",
+    "descricao": "As reformas lançadas por Mikhail Gorbachev em 1985 abriram a sociedade soviética, mas também aceleraram o colapso da URSS em 1991, redesenhando a ordem mundial.",
+    "conteudo": "A política de reformas econômicas e políticas lançada por Mikhail Gorbachev a partir de 1985, conhecida como Perestroika (reestruturação), buscava revitalizar uma economia soviética estagnada por meio de maior abertura ao mercado, descentralização administrativa e incentivos à iniciativa individual dentro do sistema socialista.\n\nA Perestroika andou lado a lado com a Glasnost (transparência), uma política de maior abertura política e liberdade de informação que permitiu debates públicos, críticas ao governo e ao passado soviético — incluindo ao stalinismo — numa escala impensável nas décadas anteriores da União Soviética.\n\nEssas reformas enfraqueceram progressivamente o controle centralizado do Partido Comunista sobre a economia e a sociedade, ao mesmo tempo em que davam voz a movimentos nacionalistas nas repúblicas soviéticas e nos países do Bloco do Leste Europeu, que passaram a questionar abertamente a autoridade de Moscou.\n\nAo abrir espaço para essas forças sem conseguir resolver os problemas econômicos estruturais do sistema soviético, a Perestroika acabou acelerando — em vez de evitar — o colapso da União Soviética, que se desintegrou formalmente em dezembro de 1991. O fim da URSS encerrou a Guerra Fria e transformou profundamente a ordem geopolítica mundial, dando origem a 15 novos países independentes.",
     "data": "2025-02-22",
     "categoria": "Guerra Fria",
     "imagem": "/curiosidades/perestroika.jpg"
@@ -112,7 +123,8 @@
     "id": "crise-misseis-cuba",
     "titulo": "A Crise dos Mísseis Quase Iniciou a Terceira Guerra Mundial",
     "slug": "crise-misseis-cuba",
-    "descricao": "Em outubro de 1962, o mundo esteve à beira de uma guerra nuclear quando os Estados Unidos descobriram mísseis soviéticos instalados em Cuba. Durante 13 dias, John F. Kennedy e Nikita Khrushchev negociaram sob intensa pressão militar. O acordo final retirou os mísseis de Cuba em troca da promessa de não invasão da ilha e da retirada de mísseis americanos da Turquia. Foi o momento mais crítico da Guerra Fria.",
+    "descricao": "Em outubro de 1962, o mundo esteve à beira de uma guerra nuclear quando os EUA descobriram mísseis soviéticos em Cuba — a crise mais tensa da Guerra Fria.",
+    "conteudo": "Em outubro de 1962, o mundo esteve mais perto do que nunca de uma guerra nuclear direta entre as superpotências, quando aviões espiões americanos U-2 descobriram que a União Soviética havia instalado mísseis balísticos com capacidade nuclear em Cuba, a poucos minutos de voo do território continental dos Estados Unidos.\n\nDurante 13 dias de intensa tensão, conhecidos como a Crise dos Mísseis de Cuba, o presidente americano John F. Kennedy e o líder soviético Nikita Khrushchov negociaram sob enorme pressão militar e diplomática, enquanto os Estados Unidos impunham um bloqueio naval a Cuba e ambos os lados colocavam suas forças nucleares em estado de alerta elevado.\n\nO episódio incluiu momentos particularmente perigosos, como o de um submarino soviético armado com torpedo nuclear que quase disparou contra navios americanos após ser cercado e pressionado a emergir — um ataque que teria sido evitado apenas pela recusa de um dos oficiais a bordo em autorizar o lançamento.\n\nA crise terminou com um acordo negociado nos bastidores: a União Soviética concordou em retirar os mísseis de Cuba em troca do compromisso público dos Estados Unidos de não invadir a ilha, além de uma retirada discreta e não anunciada de mísseis americanos posicionados na Turquia. O desfecho é hoje visto como o momento mais perigoso de toda a Guerra Fria — e um raro exemplo de diplomacia bem-sucedida sob a sombra iminente de uma guerra nuclear.",
     "data": "2025-02-23",
     "categoria": "Guerra Fria",
     "imagem": "/curiosidades/crise-misseis-cuba.jpg"
@@ -121,98 +133,8 @@
     "id": "queda-muro",
     "titulo": "A Queda do Muro de Berlim Foi Um Acidente Político",
     "slug": "queda-muro-berlim",
-    "descricao": "Em 9 de novembro de 1989, uma conferência de imprensa mal interpretada levou milhares de alemães orientais a acreditarem que as fronteiras estavam abertas. Ao chegarem aos postos de controle, os guardas, confusos e sem ordens claras, simplesmente deixaram as multidões passarem. Esse evento inesperado levou ao colapso imediato do Muro de Berlim, símbolo da Guerra Fria, e acelerou a reunificação da Alemanha.",
-    "data": "2025-02-24",
-    "categoria": "Guerra Fria",
-    "imagem": "/curiosidades/queda-muro-berlim.jpg"
-  },
-
-  {
-    "id": "grande-depressao",
-    "titulo": "A Grande Depressão Afetou o Mundo Todo",
-    "slug": "grande-depressao",
-    "descricao": "A crise de 1929 não atingiu apenas os Estados Unidos. A Grande Depressão provocou falências em massa na Europa, América Latina e Ásia. O comércio internacional caiu mais de 60% entre 1929 e 1934, levando milhões ao desemprego. No Brasil, por exemplo, o preço do café despencou e sacas foram queimadas para tentar equilibrar a economia. O impacto social foi tão profundo que muitos países passaram a adotar políticas econômicas mais intervencionistas, abrindo caminho para líderes autoritários na década de 1930.",
-    "data": "2025-02-15",
-    "categoria": "Século XX",
-    "imagem": "/curiosidades/grande-depressao.jpg"
-  },
-  {
-    "id": "dia-d",
-    "titulo": "O Dia D Foi Adiado Duas Vezes",
-    "slug": "dia-d",
-    "descricao": "A invasão da Normandia, em 6 de junho de 1944, quase não aconteceu nesse dia. O desembarque foi inicialmente marcado para 5 de junho, mas más condições climáticas obrigaram os aliados a adiar a operação. O general Eisenhower só tomou a decisão final de avançar após uma breve janela de melhoria no clima. Caso tivesse adiado novamente, a invasão teria sido adiada por semanas, o que poderia mudar drasticamente o curso da guerra.",
-    "data": "2025-02-16",
-    "categoria": "Segunda Guerra Mundial",
-    "imagem": "/curiosidades/dia-d.jpg"
-  },
-  {
-    "id": "projeto-manhattan",
-    "titulo": "O Projeto Manhattan Empregou Mais de 130 Mil Pessoas",
-    "slug": "projeto-manhattan",
-    "descricao": "O desenvolvimento da bomba atômica pelos Estados Unidos durante a Segunda Guerra Mundial foi um dos maiores esforços científicos e industriais já realizados. O Projeto Manhattan envolveu mais de 130 mil pessoas em várias instalações secretas, como Los Alamos, Oak Ridge e Hanford. O custo foi de cerca de 2 bilhões de dólares da época (equivalente a mais de 25 bilhões hoje). O nível de sigilo era tão alto que a maioria dos trabalhadores não sabia no que estava realmente trabalhando.",
-    "data": "2025-02-17",
-    "categoria": "Segunda Guerra Mundial",
-    "imagem": "/curiosidades/projeto-manhattan.jpg"
-  },
-  {
-    "id": "blitz-londres",
-    "titulo": "Durante a Blitz, Londres Ficou 57 Noites Sob Bombardeio",
-    "slug": "blitz-londres",
-    "descricao": "Entre setembro de 1940 e maio de 1941, a Alemanha nazista lançou uma campanha de bombardeios contra Londres e outras cidades britânicas. Londres sofreu 57 noites consecutivas de ataques aéreos, destruindo bairros inteiros e matando milhares de civis. Apesar da destruição, a moral britânica não quebrou, e o primeiro-ministro Winston Churchill ficou famoso por seus discursos que mantinham a esperança da população. A resistência da Grã-Bretanha foi um ponto de virada na guerra.",
-    "data": "2025-02-18",
-    "categoria": "Segunda Guerra Mundial",
-    "imagem": "/curiosidades/blitz-londres.jpg"
-  },
-  {
-    "id": "stalingrado",
-    "titulo": "A Batalha de Stalingrado Foi a Mais Letal da História",
-    "slug": "batalha-stalingrado",
-    "descricao": "Travada entre 1942 e 1943, a Batalha de Stalingrado é considerada o confronto mais sangrento da história. Estima-se que mais de 2 milhões de pessoas morreram entre soldados e civis. O inverno rigoroso, a resistência soviética e a falta de suprimentos dizimaram as tropas alemãs. A vitória soviética marcou o início da virada da Segunda Guerra Mundial no front oriental.",
-    "data": "2025-02-19",
-    "categoria": "Segunda Guerra Mundial",
-    "imagem": "/curiosidades/stalingrado.jpg"
-  },
-  {
-    "id": "holocausto",
-    "titulo": "O Holocausto Eliminou 6 Milhões de Judeus",
-    "slug": "holocausto",
-    "descricao": "Entre 1941 e 1945, o regime nazista implementou a chamada 'Solução Final', um plano sistemático para exterminar os judeus da Europa. Aproximadamente 6 milhões de judeus foram assassinados em campos de concentração e extermínio como Auschwitz, Treblinka e Sobibor. Além dos judeus, milhões de ciganos, homossexuais, prisioneiros políticos e pessoas com deficiência também foram perseguidos e mortos.",
-    "data": "2025-02-20",
-    "categoria": "Segunda Guerra Mundial",
-    "imagem": "/curiosidades/holocausto.jpg"
-  },
-  {
-    "id": "onu",
-    "titulo": "A ONU Nasceu da Segunda Guerra Mundial",
-    "slug": "fundacao-onu",
-    "descricao": "A Organização das Nações Unidas (ONU) foi fundada em 1945, após a vitória dos Aliados, com o objetivo de evitar novos conflitos mundiais. O estatuto foi assinado por 50 países em São Francisco, incluindo o Brasil. A ONU substituiu a fracassada Liga das Nações e tornou-se a principal instituição global para mediar crises, promover direitos humanos e coordenar ações internacionais.",
-    "data": "2025-02-21",
-    "categoria": "Segunda Guerra Mundial",
-    "imagem": "/curiosidades/onu.jpg"
-  },
-  {
-    "id": "perestroika",
-    "titulo": "A Perestroika Mudou o Mundo",
-    "slug": "perestroika",
-    "descricao": "A política de reformas econômicas e políticas lançada por Mikhail Gorbachev em 1985, conhecida como Perestroika, contribuiu para o fim da Guerra Fria. Ao lado da Glasnost (abertura política), enfraqueceu o controle do Partido Comunista e deu mais liberdade à sociedade soviética. Essas mudanças, no entanto, aceleraram o colapso da União Soviética em 1991, transformando completamente a ordem mundial.",
-    "data": "2025-02-22",
-    "categoria": "Guerra Fria",
-    "imagem": "/curiosidades/perestroika.jpg"
-  },
-  {
-    "id": "crise-misseis-cuba",
-    "titulo": "A Crise dos Mísseis Quase Iniciou a Terceira Guerra Mundial",
-    "slug": "crise-misseis-cuba",
-    "descricao": "Em outubro de 1962, o mundo esteve à beira de uma guerra nuclear quando os Estados Unidos descobriram mísseis soviéticos instalados em Cuba. Durante 13 dias, John F. Kennedy e Nikita Khrushchev negociaram sob intensa pressão militar. O acordo final retirou os mísseis de Cuba em troca da promessa de não invasão da ilha e da retirada de mísseis americanos da Turquia. Foi o momento mais crítico da Guerra Fria.",
-    "data": "2025-02-23",
-    "categoria": "Guerra Fria",
-    "imagem": "/curiosidades/crise-misseis-cuba.jpg"
-  },
-  {
-    "id": "queda-muro",
-    "titulo": "A Queda do Muro de Berlim Foi Um Acidente Político",
-    "slug": "queda-muro-berlim",
-    "descricao": "Em 9 de novembro de 1989, uma conferência de imprensa mal interpretada levou milhares de alemães orientais a acreditarem que as fronteiras estavam abertas. Ao chegarem aos postos de controle, os guardas, confusos e sem ordens claras, simplesmente deixaram as multidões passarem. Esse evento inesperado levou ao colapso imediato do Muro de Berlim, símbolo da Guerra Fria, e acelerou a reunificação da Alemanha.",
+    "descricao": "Em 9 de novembro de 1989, uma coletiva de imprensa mal interpretada levou milhares de alemães orientais às fronteiras, e guardas confusos simplesmente os deixaram passar.",
+    "conteudo": "Em 9 de novembro de 1989, uma resposta ambígua durante uma coletiva de imprensa transmitida ao vivo levou milhares de alemães orientais a acreditarem que as fronteiras com o Ocidente estavam abertas imediatamente. O porta-voz do governo da Alemanha Oriental, Günter Schabowski, ao ser questionado sobre novas regras de viagem, respondeu de forma confusa que as mudanças valeriam 'imediatamente, sem demora' — informação que, na verdade, ainda deveria entrar em vigor apenas no dia seguinte, e de forma mais controlada.\n\nA notícia se espalhou rapidamente pela televisão e boca a boca, e multidões cada vez maiores começaram a se aglomerar nos postos de controle que separavam Berlim Oriental da Ocidental. Os guardas de fronteira, sem receber ordens claras de seus superiores e diante de multidões crescentes e cada vez mais insistentes, se viram numa posição insustentável.\n\nDiante da pressão e da falta de instruções para conter as multidões pela força, os guardas de alguns postos acabaram simplesmente abrindo os portões e deixando as pessoas passarem, sem qualquer decisão formal do governo leste-alemão de derrubar o Muro naquela noite. O que começou como um mal-entendido burocrático se transformou, em questão de horas, num fato consumado impossível de reverter.\n\nA queda do Muro de Berlim, símbolo máximo da divisão da Guerra Fria desde sua construção em 1961, precipitou uma sequência acelerada de eventos que levaria à reunificação formal da Alemanha menos de um ano depois, em outubro de 1990, e é hoje um dos marcos mais emblemáticos do fim da ordem bipolar que dividiu o mundo por décadas.",
     "data": "2025-02-24",
     "categoria": "Guerra Fria",
     "imagem": "/curiosidades/queda-muro-berlim.jpg"

@@ -31,7 +31,8 @@ export async function generateMetadata({ params }: CuriosidadePageProps) {
 
   return {
     title: `${curiosidade.titulo} | Eventos Históricos`,
-    description: curiosidade.descricao.substring(0, 160) + "...",
+    description:
+      curiosidade.descricao.length > 160 ? `${curiosidade.descricao.substring(0, 160)}...` : curiosidade.descricao,
   }
 }
 
@@ -93,7 +94,13 @@ export default function CuriosidadePage({ params }: CuriosidadePageProps) {
 
             {/* Content */}
             <div className="prose prose-lg max-w-none">
-              <p className="text-lg leading-relaxed">{curiosidade.descricao}</p>
+              {(curiosidade.conteudo ?? curiosidade.descricao)
+                .split(/\n\s*\n/)
+                .map((paragraph, index) => (
+                  <p key={index} className="mb-6 text-lg leading-relaxed last:mb-0">
+                    {paragraph}
+                  </p>
+                ))}
             </div>
 
             {/* Related Curiosities */}
