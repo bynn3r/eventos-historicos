@@ -63,6 +63,10 @@ type WikimediaImageCandidate = {
 
 const imageHintCache = new Map<string, Promise<OpenAIImageHintResponse | null>>()
 const sourceImageCache = new Map<string, Promise<string>>()
+const sourcePageHtmlCache = new Map<string, Promise<string>>()
+
+const JUNK_PARAGRAPH_PATTERN =
+  /(cookie|assine|inscreva-se|newsletter|publicidade|advertisement|compartilhe esta|leia tamb[ée]m|veja tamb[ée]m|siga o |siga a |clique aqui|todos os direitos reservados|copyright ©|sign up|subscribe|related:|read more:|leia mais:)/i
 
 const RSS_FEEDS = [
   { name: "BBC World", url: "http://feeds.bbci.co.uk/news/world/rss.xml" },
@@ -788,12 +792,12 @@ async function searchWikimediaImages(query: string): Promise<WikimediaImageCandi
   }
 }
 
-async function fetchSourcePageImage(url?: string) {
+async function fetchSourcePageHtml(url?: string): Promise<string> {
   if (!url || !/^https?:\/\//i.test(url)) {
     return ""
   }
 
-  const cached = sourceImageCache.get(url)
+  const cached = sourcePageHtmlCache.get(url)
   if (cached) {
     return cached
   }
@@ -810,20 +814,64 @@ async function fetchSourcePageImage(url?: string) {
         return ""
       }
 
-      const html = await response.text()
-      const metaImage =
-        extractMetaContent(html, "og:image") ||
-        extractMetaContent(html, "twitter:image") ||
-        extractMetaContent(html, "og:image:url")
-
-      return normalizeImageUrl(metaImage) || extractSourceSpecificImage(html, url)
+      return await response.text()
     } catch {
       return ""
     }
   })()
 
-  sourceImageCache.set(url, pending)
+  sourcePageHtmlCache.set(url, pending)
   return pending
+}
+
+async function fetchSourcePageImage(url?: string) {
+  const html = await fetchSourcePageHtml(url)
+
+  if (!html) {
+    return ""
+  }
+
+  const metaImage =
+    extractMetaContent(html, "og:image") ||
+    extractMetaContent(html, "twitter:image") ||
+    extractMetaContent(html, "og:image:url")
+
+  return normalizeImageUrl(metaImage) || extractSourceSpecificImage(html, url ?? "")
+}
+
+function extractMainArticleHtml(html: string) {
+  const articleMatch = html.match(/<article\b[^>]*>([\s\S]*?)<\/article>/i)
+  return articleMatch ? articleMatch[1] : html
+}
+
+async function fetchSourceArticleText(url?: string): Promise<string> {
+  const html = await fetchSourcePageHtml(url)
+
+  if (!html) {
+    return ""
+  }
+
+  const cleanHtml = sanitizeHtml(extractMainArticleHtml(html))
+  const paragraphs = extractParagraphText(cleanHtml)
+    .split(/\n\s*\n/)
+    .map((paragraph) => paragraph.trim())
+    .filter(Boolean)
+    .filter((paragraph) => paragraph.length >= 40)
+    .filter((paragraph) => !JUNK_PARAGRAPH_PATTERN.test(paragraph))
+
+  const selected: string[] = []
+  let totalLength = 0
+
+  for (const paragraph of paragraphs) {
+    if (totalLength >= 3200) {
+      break
+    }
+    selected.push(paragraph)
+    totalLength += paragraph.length
+  }
+
+  const text = selected.join("\n\n")
+  return text.length >= 400 ? text : ""
 }
 
 async function resolveArticleImage(article: { titulo: string; descricao: string; categoria: string; link?: string }, feedImage?: string) {
@@ -1261,21 +1309,35 @@ export async function getRssNews(limit = 20): Promise<SiteNewsArticle[]> {
       const translatedRawText = isEnglish ? await translateToPortuguese(rawText) : rawText
 
       let articleBody: string
+      let bodySource: "scraped" | "ai" | "feed" = "feed"
+
       if (resumo) {
-        articleBody = await expandArticleWithAI({
-          titulo: translatedTitle,
-          descricao: translatedDesc,
-          categoria,
-          fonte: item.fonte,
-          contexto: translatedRawText,
-        })
+        const scrapedText = await fetchSourceArticleText(item.link)
+
+        if (scrapedText && scrapedText.length > translatedRawText.length + 200) {
+          articleBody = isEnglish ? await translateToPortuguese(scrapedText) : scrapedText
+          bodySource = "scraped"
+        } else {
+          const aiText = await expandArticleWithAI({
+            titulo: translatedTitle,
+            descricao: translatedDesc,
+            categoria,
+            fonte: item.fonte,
+            contexto: translatedRawText,
+          })
+          articleBody = aiText
+          bodySource = aiText.trim() === translatedRawText.trim() ? "feed" : "ai"
+        }
       } else {
         articleBody = translatedRawText
       }
 
-      const notice = resumo
-        ? `<p><em>Artigo elaborado pela redação editorial do Eventos Históricos com base na cobertura de <strong>${item.fonte}</strong>. <a href="${item.link}" target="_blank" rel="noopener noreferrer">Acesse a reportagem original</a>.</em></p>`
-        : `<p><em>Conteúdo do feed oficial de <strong>${item.fonte}</strong>, curado pelo Eventos Históricos.</em></p>`
+      const notice =
+        bodySource === "scraped"
+          ? `<p><em>Conteúdo obtido a partir da reportagem original de <strong>${item.fonte}</strong>, reorganizado pelo Eventos Históricos. <a href="${item.link}" target="_blank" rel="noopener noreferrer">Acesse a matéria original</a>.</em></p>`
+          : bodySource === "ai"
+            ? `<p><em>Artigo elaborado pela redação editorial do Eventos Históricos com base na cobertura de <strong>${item.fonte}</strong>. <a href="${item.link}" target="_blank" rel="noopener noreferrer">Acesse a reportagem original</a>.</em></p>`
+            : `<p><em>Conteúdo do feed oficial de <strong>${item.fonte}</strong>, curado pelo Eventos Históricos.</em></p>`
 
       const conteudoHtml = `${textToHtmlParagraphs(articleBody)}${notice}`
       const conteudo = articleBody
