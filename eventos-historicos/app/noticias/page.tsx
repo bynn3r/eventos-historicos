@@ -1,10 +1,5 @@
-import { NewsPageContent } from "@/components/news-page-content"
-import { getCuratedNews } from "@/lib/news"
+import { NewsPageRuntime } from "@/components/news-page-runtime"
 
-export const dynamic = "force-dynamic"
-
-export default async function NoticiasPage() {
-  const { rssArticles, localArticles } = await getCuratedNews(20)
-
-  return <NewsPageContent rssArticles={rssArticles} localArticles={localArticles} />
+export default function NoticiasPage() {
+  return <NewsPageRuntime />
 }
