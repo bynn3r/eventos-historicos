@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server"
 import { refreshNewsCache } from "@/lib/news"
+import { lastCacheError } from "@/lib/news-cache"
 
 export const dynamic = "force-dynamic"
 
@@ -10,7 +11,8 @@ export const dynamic = "force-dynamic"
 export async function GET() {
   try {
     const result = await refreshNewsCache()
-    return NextResponse.json(result)
+    // TEMPORARY: lastCacheError while diagnosing why writes fail in production.
+    return NextResponse.json({ ...result, lastCacheError })
   } catch (error) {
     return NextResponse.json({ error: error instanceof Error ? error.message : "unknown_error" }, { status: 500 })
   }

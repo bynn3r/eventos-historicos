@@ -9,6 +9,10 @@ const MAX_CACHE_AGE_MS = 60 * 60 * 1000 // 1 hour
 
 let docClient: DynamoDBDocumentClient | null = null
 
+// TEMPORARY: surfaced by /api/cron/refresh-news while diagnosing why writes
+// fail in production — remove once resolved.
+export let lastCacheError: string | null = null
+
 function getDocClient() {
   if (!docClient) {
     docClient = DynamoDBDocumentClient.from(new DynamoDBClient({ region: REGION }))
@@ -63,7 +67,8 @@ export async function writeCachedArticles(articles: SiteNewsArticle[]): Promise<
     )
 
     return true
-  } catch {
+  } catch (error) {
+    lastCacheError = error instanceof Error ? `${error.name}: ${error.message}` : String(error)
     return false
   }
 }
