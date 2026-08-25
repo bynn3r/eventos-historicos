@@ -31,6 +31,7 @@ interface ParsedFeedItem {
   fonte: string
   link: string
   imagem?: string
+  truncated: boolean
 }
 
 const WIKIMEDIA_REVALIDATE_SECONDS = 86_400
@@ -876,9 +877,11 @@ async function expandArticleWithAI(article: {
   descricao: string
   categoria: string
   fonte: string
+  contexto?: string
 }): Promise<string> {
+  const fallback = article.contexto?.trim() || article.descricao
   const apiKey = process.env.OPENAI_API_KEY
-  if (!apiKey) return article.descricao
+  if (!apiKey) return fallback
 
   const cacheKey = normalizeText(`${article.titulo}${article.fonte}`)
   const cached = articleExpansionCache.get(cacheKey)
@@ -899,22 +902,23 @@ async function expandArticleWithAI(article: {
             {
               role: "system",
               content:
-                "Você é editor de um portal brasileiro de geopolítica e história. Com base no título e resumo de uma notícia internacional, escreva um artigo informativo em português do Brasil com 3 a 4 parágrafos bem desenvolvidos. Mantenha-se fiel aos fatos apresentados. Não invente informações que não estejam no contexto fornecido. Escreva de forma clara, objetiva e jornalística. Separe os parágrafos com duas quebras de linha. Não inclua título nem cabeçalho, apenas os parágrafos.",
+                "Você é editor de um portal brasileiro de geopolítica e história. Com base no título, resumo e contexto adicional de uma notícia internacional, escreva um artigo informativo em português do Brasil com 3 a 4 parágrafos bem desenvolvidos. Mantenha-se fiel aos fatos apresentados. Não invente informações que não estejam no contexto fornecido. Escreva de forma clara, objetiva e jornalística. Separe os parágrafos com duas quebras de linha. Não inclua título nem cabeçalho, apenas os parágrafos.",
             },
             {
               role: "user",
-              content: `Título: ${article.titulo}\nResumo: ${article.descricao}\nCategoria: ${article.categoria}\nFonte: ${article.fonte}`,
+              content: `Título: ${article.titulo}\nResumo: ${article.descricao}\nContexto adicional do feed: ${article.contexto || "(nenhum)"}\nCategoria: ${article.categoria}\nFonte: ${article.fonte}`,
             },
           ],
         }),
         signal: AbortSignal.timeout(20000),
       })
 
-      if (!response.ok) return article.descricao
+      if (!response.ok) return fallback
       const data = (await response.json()) as { choices?: Array<{ message?: { content?: string } }> }
-      return normalizeEncoding(data.choices?.[0]?.message?.content?.trim() || article.descricao)
+      const content = data.choices?.[0]?.message?.content?.trim()
+      return content ? normalizeEncoding(content) : fallback
     } catch {
-      return article.descricao
+      return fallback
     }
   })()
 
@@ -1000,6 +1004,16 @@ function isRelevantArticle(article: ParsedFeedItem) {
   return hasRelevantKeyword && !hasNegativeKeyword
 }
 
+function hasTruncationMarker(rawHtml: string) {
+  const normalized = normalizeText(decodeEntities(rawHtml))
+  return (
+    /(continue reading|read more|leia mais|saiba mais|veja mais)\s*(\.\.\.)?\s*(<\/a>)?\s*$/.test(normalized.trim()) ||
+    /\[\+\d+\s*chars?\]/.test(normalized) ||
+    normalized.trim().endsWith("...") ||
+    normalized.trim().endsWith("…")
+  )
+}
+
 function parseRssItems(xml: string, feedName: string) {
   const items = xml.match(/<item\b[\s\S]*?<\/item>/gi) ?? []
 
@@ -1011,9 +1025,11 @@ function parseRssItems(xml: string, feedName: string) {
       const description = extractTag(item, "description")
       const data = stripTags(extractTag(item, "pubDate"))
       const fonte = stripTags(extractTag(item, "source")) || feedName
-      const conteudoHtml = sanitizeHtml(contentEncoded || description)
+      const rawSource = contentEncoded || description
+      const conteudoHtml = sanitizeHtml(rawSource)
       const descricao = extractParagraphText(description || contentEncoded).split(/\n\s*\n/)[0] || titulo
       const imagem = extractImage(item, contentEncoded || description)
+      const truncated = hasTruncationMarker(rawSource)
 
       return {
         titulo: normalizeEncoding(titulo),
@@ -1023,6 +1039,7 @@ function parseRssItems(xml: string, feedName: string) {
         fonte: normalizeEncoding(fonte),
         link,
         imagem,
+        truncated,
       }
     })
     .filter((item) => item.titulo && item.link)
@@ -1230,7 +1247,7 @@ export async function getRssNews(limit = 20): Promise<SiteNewsArticle[]> {
       const parsedDate = item.data ? new Date(item.data) : new Date()
       const data = Number.isNaN(parsedDate.getTime()) ? new Date().toISOString() : parsedDate.toISOString()
       const slug = buildRssSlug(item)
-      const resumo = isTruncated(item.descricao) || !item.conteudoHtml || item.conteudoHtml.length < 280
+      const resumo = item.truncated || isTruncated(item.descricao) || !item.conteudoHtml || item.conteudoHtml.length < 600
       const score = scoreArticle(item, categoria)
       const isEnglish = looksMostlyEnglish(`${item.titulo} ${item.descricao}`)
       const rawText = extractParagraphText(item.conteudoHtml || item.descricao) || item.descricao || item.titulo
@@ -1241,6 +1258,8 @@ export async function getRssNews(limit = 20): Promise<SiteNewsArticle[]> {
         isEnglish ? translateToPortuguese(item.descricao) : Promise.resolve(item.descricao),
       ])
 
+      const translatedRawText = isEnglish ? await translateToPortuguese(rawText) : rawText
+
       let articleBody: string
       if (resumo) {
         articleBody = await expandArticleWithAI({
@@ -1248,9 +1267,10 @@ export async function getRssNews(limit = 20): Promise<SiteNewsArticle[]> {
           descricao: translatedDesc,
           categoria,
           fonte: item.fonte,
+          contexto: translatedRawText,
         })
       } else {
-        articleBody = isEnglish ? await translateToPortuguese(rawText) : rawText
+        articleBody = translatedRawText
       }
 
       const notice = resumo
