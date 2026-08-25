@@ -85,6 +85,9 @@ export default async function NoticiaPage({ params }: NoticiaPageProps) {
                   titulo={noticia.titulo}
                   descricao={noticia.descricao}
                   conteudo={noticia.conteudo}
+                  tituloOriginal={noticia.tituloOriginal}
+                  descricaoOriginal={noticia.descricaoOriginal}
+                  conteudoOriginal={noticia.conteudoOriginal}
                   noticeHtml={noticia.noticeHtml}
                   linkFonte={noticia.linkFonte}
                   imagem={noticia.imagem}

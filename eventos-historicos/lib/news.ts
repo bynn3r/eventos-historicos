@@ -1,5 +1,6 @@
 import noticiasData from "@/data/noticias.json"
 import { generatePortalAnalysis } from "@/lib/news-editorial"
+import { translateToPortuguese } from "@/lib/deepl"
 
 export interface SiteNewsArticle {
   id: string
@@ -22,6 +23,9 @@ export interface SiteNewsArticle {
   tipo: "rss" | "local" | "analysis"
   idioma: "pt" | "en"
   noticeHtml: string
+  tituloOriginal?: string
+  descricaoOriginal?: string
+  conteudoOriginal?: string
 }
 
 interface ParsedFeedItem {
@@ -67,7 +71,7 @@ const sourceImageCache = new Map<string, Promise<string>>()
 const sourcePageHtmlCache = new Map<string, Promise<string>>()
 
 const JUNK_PARAGRAPH_PATTERN =
-  /(cookie|assine|inscreva-se|newsletter|publicidade|advertisement|compartilhe esta|leia tamb[ée]m|veja tamb[ée]m|siga o |siga a |clique aqui|todos os direitos reservados|copyright ©|sign up|subscribe|related:|read more:|leia mais:|^listen\b|save share|share-nodes|whatsapp-stroke|copylink|caret-right|add .+ on google|download our app|follow us|^by [a-z .]+$|min read|mins read|\bfacebook\b.*\bx\b.*\bwhatsapp\b)/i
+  /(cookie|assine|inscreva-se|newsletter|publicidade|advertisement|compartilhe esta|leia tamb[ée]m|veja tamb[ée]m|siga o |siga a |clique aqui|todos os direitos reservados|copyright ©|sign up|subscribe|related:|read more:|leia mais:|^listen\b|save share|share-nodes|whatsapp-stroke|copylink|caret-right|add .+ on google|download our app|follow us|^by [a-z .]+$|min read|mins read|\bfacebook\b.*\bx\b.*\bwhatsapp\b|recommended stories|^list \d+ of \d+|end of list)/i
 
 const SENTENCE_END_PATTERN = /[.!?"'”)]\s*$/
 
@@ -852,6 +856,9 @@ function stripBylineBoilerplate(paragraph: string) {
     .replace(/last modified on[\s\S]*?\b(am|pm|edt|gmt|bst|utc)\b\.?/gi, "")
     .replace(/\bshare prefer the [a-z0-9 ]+ on google\b/gi, "")
     .replace(/\b(mon|tue|wed|thu|fri|sat|sun)\s+\d{1,2}\s+[a-z]+\s+\d{4}\s+\d{1,2}[:.]\d{2}\s*(am|pm|edt|gmt|bst|utc)?/gi, "")
+    .replace(/recommended stories[\s\S]*?end of list/gi, "")
+    .replace(/\blist \d+ of \d+\b/gi, "")
+    .replace(/•\s*[^.!?]{0,140}\?(?=\s|$)/g, "")
     .replace(/\s{2,}/g, " ")
     .trim()
 }
@@ -1312,12 +1319,20 @@ async function hydrateScoredCandidate(candidate: NonNullable<ReturnType<typeof b
   const isEnglish = looksMostlyEnglish(`${item.titulo} ${item.descricao}`)
   const rawText = extractParagraphText(item.conteudoHtml || item.descricao) || item.descricao || item.titulo
 
-  // Server-side translation of every list item made pages slow and unreliable
-  // (the free translation backends this app relies on are flaky from this
-  // hosting environment). Ship the feed's own language here — the reader
-  // translates on demand via the PT/EN button on the article page instead.
-  const imagem = await resolveArticleImage({ ...item, categoria, link: item.link }, item.imagem)
-  const articleBody = rawText
+  // The audience reads Portuguese, so translate by default (score-before-hydrate
+  // keeps this to `limit` articles instead of every relevant feed item, and
+  // translateToPortuguese() tries Google's endpoint with a short timeout before
+  // falling back, so a slow/unreachable backend degrades per-field instead of
+  // stalling the whole page). Keep the untranslated text too so the reader can
+  // flip to the original instantly, with no extra request.
+  const [imagem, translatedTitle, translatedDesc, translatedRawText] = await Promise.all([
+    resolveArticleImage({ ...item, categoria, link: item.link }, item.imagem),
+    isEnglish ? translateToPortuguese(item.titulo) : Promise.resolve(item.titulo),
+    isEnglish ? translateToPortuguese(item.descricao) : Promise.resolve(item.descricao),
+    isEnglish ? translateToPortuguese(rawText) : Promise.resolve(rawText),
+  ])
+
+  const articleBody = translatedRawText
   const notice = `<p><em>Conteúdo do feed oficial de <strong>${item.fonte}</strong>, curado pelo Eventos Históricos.</em></p>`
   const conteudoHtml = `${textToHtmlParagraphs(articleBody)}${notice}`
   const conteudo = articleBody
@@ -1325,8 +1340,8 @@ async function hydrateScoredCandidate(candidate: NonNullable<ReturnType<typeof b
   return {
     id: `rss-${slug}`,
     slug,
-    titulo: item.titulo,
-    descricao: clipText(item.descricao || "Resumo selecionado automaticamente a partir de feeds abertos e confiáveis.", 220),
+    titulo: translatedTitle,
+    descricao: clipText(translatedDesc || "Resumo selecionado automaticamente a partir de feeds abertos e confiáveis.", 220),
     conteudo,
     conteudoHtml,
     resumo,
@@ -1342,6 +1357,9 @@ async function hydrateScoredCandidate(candidate: NonNullable<ReturnType<typeof b
     tipo: "rss" as const,
     idioma: isEnglish ? "en" : "pt",
     noticeHtml: notice,
+    tituloOriginal: isEnglish ? item.titulo : undefined,
+    descricaoOriginal: isEnglish ? item.descricao : undefined,
+    conteudoOriginal: isEnglish ? rawText : undefined,
   }
 }
 
@@ -1437,13 +1455,13 @@ async function enrichArticleWithFullText(article: SiteNewsArticle): Promise<Site
   const scrapedText = await fetchSourceArticleText(sourceLink)
 
   let body = ""
+  let bodyOriginal: string | undefined
   let bodySource: "scraped" | "ai" = "scraped"
 
-  // No server-side translation here either — scraping is already the slow part
-  // of this request. Body stays in whatever language the source published in;
-  // the reader translates on demand via the PT/EN button.
   if (scrapedText && scrapedText.length > article.conteudo.length + 200) {
-    body = scrapedText
+    const scrapedIsEnglish = looksMostlyEnglish(scrapedText)
+    body = scrapedIsEnglish ? await translateToPortuguese(scrapedText) : scrapedText
+    bodyOriginal = scrapedIsEnglish ? scrapedText : undefined
     bodySource = "scraped"
   } else {
     const aiText = await expandArticleWithAI({
@@ -1471,8 +1489,9 @@ async function enrichArticleWithFullText(article: SiteNewsArticle): Promise<Site
     ...article,
     conteudo: body,
     conteudoHtml: `${textToHtmlParagraphs(body)}${notice}`,
-    idioma: bodySource === "scraped" && looksMostlyEnglish(body) ? "en" : article.idioma,
+    idioma: bodyOriginal ? "en" : article.idioma,
     noticeHtml: notice,
+    conteudoOriginal: bodyOriginal ?? article.conteudoOriginal,
   }
 }
 

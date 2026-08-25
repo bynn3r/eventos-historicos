@@ -3,23 +3,20 @@
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { NewsImage } from "@/components/news-image"
-import { Languages, Loader2, ExternalLink } from "lucide-react"
+import { Languages, ExternalLink } from "lucide-react"
 
 interface ArticleTranslateProps {
   idiomaOriginal: "pt" | "en"
   titulo: string
   descricao: string
   conteudo: string
+  tituloOriginal?: string
+  descricaoOriginal?: string
+  conteudoOriginal?: string
   noticeHtml: string
   linkFonte?: string
   imagem?: string
   imageCaption: string
-}
-
-interface TranslatedState {
-  titulo: string
-  descricao: string
-  paragrafos: string[]
 }
 
 function paragraphsFrom(text: string) {
@@ -34,56 +31,20 @@ export function ArticleTranslate({
   titulo,
   descricao,
   conteudo,
+  tituloOriginal,
+  descricaoOriginal,
+  conteudoOriginal,
   noticeHtml,
   linkFonte,
   imagem,
   imageCaption,
 }: ArticleTranslateProps) {
-  const [translated, setTranslated] = useState<TranslatedState | null>(null)
-  const [loading, setLoading] = useState(false)
-  const [error, setError] = useState(false)
+  const hasOriginal = idiomaOriginal === "en" && Boolean(tituloOriginal || descricaoOriginal || conteudoOriginal)
+  const [showingOriginal, setShowingOriginal] = useState(false)
 
-  const paragrafosOriginais = paragraphsFrom(conteudo)
-  const showingTranslated = translated !== null
-
-  async function handleTranslate() {
-    if (showingTranslated) {
-      setTranslated(null)
-      return
-    }
-
-    setLoading(true)
-    setError(false)
-
-    try {
-      const response = await fetch("/api/traduzir", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ texts: [titulo, descricao, ...paragrafosOriginais] }),
-      })
-
-      if (!response.ok) {
-        throw new Error("Falha ao traduzir")
-      }
-
-      const data = (await response.json()) as { texts: string[] }
-      const [translatedTitulo, translatedDescricao, ...translatedParagrafos] = data.texts
-
-      setTranslated({
-        titulo: translatedTitulo,
-        descricao: translatedDescricao,
-        paragrafos: translatedParagrafos,
-      })
-    } catch {
-      setError(true)
-    } finally {
-      setLoading(false)
-    }
-  }
-
-  const displayTitulo = showingTranslated ? translated.titulo : titulo
-  const displayDescricao = showingTranslated ? translated.descricao : descricao
-  const displayParagrafos = showingTranslated ? translated.paragrafos : paragrafosOriginais
+  const displayTitulo = showingOriginal ? tituloOriginal || titulo : titulo
+  const displayDescricao = showingOriginal ? descricaoOriginal || descricao : descricao
+  const displayParagrafos = paragraphsFrom(showingOriginal ? conteudoOriginal || conteudo : conteudo)
 
   return (
     <div>
@@ -107,17 +68,18 @@ export function ArticleTranslate({
           </Button>
         )}
 
-        {idiomaOriginal === "en" && (
-          <Button variant="outline" size="sm" onClick={handleTranslate} disabled={loading} className="rounded-full">
-            {loading ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : <Languages className="mr-2 h-4 w-4" />}
-            {showingTranslated ? "Ver original em inglês" : "Traduzir para português"}
+        {hasOriginal && (
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={() => setShowingOriginal((current) => !current)}
+            className="rounded-full"
+          >
+            <Languages className="mr-2 h-4 w-4" />
+            {showingOriginal ? "Ver tradução em português" : "Ver original em inglês"}
           </Button>
         )}
       </div>
-
-      {idiomaOriginal === "en" && error && (
-        <p className="mt-2 text-sm text-destructive">Não foi possível traduzir agora. Tente de novo.</p>
-      )}
 
       {imagem && (
         <figure className="mt-8">
@@ -129,13 +91,13 @@ export function ArticleTranslate({
       )}
 
       <div className="mt-10 max-w-[820px]">
-        <div
-          className="prose prose-neutral max-w-none prose-headings:scroll-mt-24 prose-p:mb-6 prose-p:text-[1.06rem] prose-p:leading-8 prose-li:leading-8 prose-strong:text-foreground prose-a:text-primary"
-        >
+        <div className="prose prose-neutral max-w-none prose-headings:scroll-mt-24 prose-a:text-primary">
           {displayParagrafos.map((paragraph, index) => (
-            <p key={index}>{paragraph}</p>
+            <p key={index} className="mb-6 text-[1.06rem] leading-8 last:mb-0">
+              {paragraph}
+            </p>
           ))}
-          {noticeHtml && <div dangerouslySetInnerHTML={{ __html: noticeHtml }} />}
+          {noticeHtml && <div className="mt-6" dangerouslySetInnerHTML={{ __html: noticeHtml }} />}
         </div>
       </div>
     </div>
