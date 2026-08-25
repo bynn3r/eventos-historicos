@@ -1,9 +1,11 @@
 "use client"
 
 import { useState } from "react"
+import Link from "next/link"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
@@ -28,6 +30,7 @@ interface TimelineEvent {
   impact: string
   icon: any
   color: string
+  slug?: string
 }
 
 const timelineEvents: TimelineEvent[] = [
@@ -147,6 +150,7 @@ const timelineEvents: TimelineEvent[] = [
     impact: "Redefinição da ordem mundial e início da era nuclear",
     icon: Sword,
     color: "bg-red-500",
+    slug: "fim-segunda-guerra-mundial",
   },
   {
     id: "10",
@@ -338,6 +342,11 @@ export default function LinhaDoTempoPage() {
                                 <h4 className="font-semibold mb-2">Impacto Histórico:</h4>
                                 <p className="text-sm text-muted-foreground">{event.impact}</p>
                               </div>
+                              {event.slug && (
+                                <Button asChild className="mt-4 w-full">
+                                  <Link href={`/evento/${event.slug}`}>Explorar experiência completa</Link>
+                                </Button>
+                              )}
                             </DialogContent>
                           </Dialog>
                         </div>
@@ -402,6 +411,11 @@ export default function LinhaDoTempoPage() {
                                       <h4 className="font-semibold mb-2">Impacto Histórico:</h4>
                                       <p className="text-sm text-muted-foreground">{event.impact}</p>
                                     </div>
+                                    {event.slug && (
+                                      <Button asChild className="mt-4 w-full">
+                                        <Link href={`/evento/${event.slug}`}>Explorar experiência completa</Link>
+                                      </Button>
+                                    )}
                                   </DialogContent>
                                 </Dialog>
                               </div>
@@ -470,6 +484,11 @@ export default function LinhaDoTempoPage() {
                                     <h4 className="font-semibold mb-2">Impacto Histórico:</h4>
                                     <p className="text-sm text-muted-foreground">{event.impact}</p>
                                   </div>
+                                  {event.slug && (
+                                    <Button asChild className="mt-4 w-full">
+                                      <Link href={`/evento/${event.slug}`}>Explorar experiência completa</Link>
+                                    </Button>
+                                  )}
                                 </DialogContent>
                               </Dialog>
                             )}

@@ -42,12 +42,13 @@ export default function GrandesEventosPage() {
                 {
                   year: "1945",
                   title: "Fim da Segunda Guerra Mundial",
+                  slug: "fim-segunda-guerra-mundial",
                   description:
                     "O conflito mais devastador da história chega ao fim com a rendição do Japão, marcando o início de uma nova ordem mundial e o surgimento das superpotências.",
                   impact: "Redefiniu o mapa geopolítico mundial",
                   casualties: "70-85 milhões de mortos",
                   icon: Globe,
-                  image: "world war 2 end celebration",
+                  image: "/eventos/hero-reichstag.jpg",
                 },
                 {
                   year: "1969",
@@ -106,7 +107,11 @@ export default function GrandesEventosPage() {
                     <div className="grid md:grid-cols-3 gap-0">
                       <div className="aspect-video md:aspect-auto relative">
                         <Image
-                          src={`/abstract-geometric-shapes.png?height=300&width=400&query=${event.image}`}
+                          src={
+                            event.image.startsWith("/") && !event.image.includes("?")
+                              ? event.image
+                              : `/abstract-geometric-shapes.png?height=300&width=400&query=${event.image}`
+                          }
                           alt={event.title}
                           fill
                           className="object-cover"
@@ -140,7 +145,7 @@ export default function GrandesEventosPage() {
                               </div>
                               <Button asChild>
                                 <Link
-                                  href={`/evento/${event.year.toLowerCase()}-${event.title.toLowerCase().replace(/\s+/g, "-")}`}
+                                  href={`/evento/${"slug" in event ? event.slug : `${event.year.toLowerCase()}-${event.title.toLowerCase().replace(/\s+/g, "-")}`}`}
                                 >
                                   Explorar Evento Completo
                                 </Link>

@@ -1,0 +1,107 @@
+[
+  {
+    "slug": "fim-segunda-guerra-mundial",
+    "titulo": "Fim da Segunda Guerra Mundial",
+    "ano": "1945",
+    "periodo": "1939 – 1945",
+    "categoria": "Militar",
+    "hook": "Seis anos de guerra total terminam com dois cogumelos atômicos, uma Europa em ruínas e um mundo repentinamente dividido em duas novas superpotências.",
+    "heroImagem": "/eventos/hero-reichstag.jpg",
+    "heroLegenda": "Soldados soviéticos hasteiam a bandeira sobre o Reichstag em Berlim, 2 de maio de 1945.",
+    "estatisticas": [
+      { "label": "Duração do conflito", "valor": "6 anos" },
+      { "label": "Mortos estimados", "valor": "70–85 milhões" },
+      { "label": "Países envolvidos", "valor": "mais de 30" },
+      { "label": "Novo legado", "valor": "ONU e Guerra Fria" }
+    ],
+    "contexto": "Em 1945, a Segunda Guerra Mundial já se arrastava havia quase seis anos e havia se tornado o conflito mais destrutivo da história da humanidade. Depois do fracasso da ofensiva alemã nas Ardenas, no inverno de 1944-45, os Aliados avançavam de todos os lados: o Exército Vermelho soviético empurrava a Wehrmacht para fora do Leste Europeu, enquanto tropas americanas, britânicas e francesas cruzavam o Reno rumo ao coração da Alemanha. No Pacífico, os Estados Unidos retomavam ilha por ilha o território conquistado pelo Japão, aproximando-se perigosamente do arquipélago japonês. Foi nesse contexto — de vitória militar cada vez mais certa, mas de custo humano ainda incalculável — que os líderes aliados começaram a negociar não apenas o fim da guerra, mas o desenho do mundo que viria depois dela.",
+    "momentos": [
+      {
+        "data": "4–11 de fevereiro de 1945",
+        "titulo": "Conferência de Ialta",
+        "local": "Ialta, Crimeia",
+        "texto": "Com a vitória sobre a Alemanha já dada como certa, Franklin Roosevelt, Winston Churchill e Josef Stalin se reuniram no litoral da Crimeia para negociar o futuro da Europa do pós-guerra. Ali foram traçadas as zonas de ocupação da Alemanha derrotada, definidas as bases para a fundação das Nações Unidas e discutida a entrada da União Soviética na guerra contra o Japão. As decisões de Ialta lançaram as fundações — e também as sementes de desconfiança — da ordem que dividiria o mundo em blocos capitalista e comunista nas décadas seguintes.",
+        "imagem": "/eventos/momento-ialta.jpg"
+      },
+      {
+        "data": "16 de abril – 2 de maio de 1945",
+        "titulo": "Queda de Berlim",
+        "local": "Berlim, Alemanha",
+        "texto": "O Exército Vermelho lançou o assalto final à capital alemã, travando combates urbanos brutais rua a rua contra as últimas defesas nazistas, incluindo unidades formadas às pressas por adolescentes e idosos. Em 30 de abril, com as tropas soviéticas a poucos quarteirões de seu bunker, Adolf Hitler cometeu suicídio. Dois dias depois, a guarnição alemã em Berlim se rendeu, e soldados soviéticos hastearam a bandeira vermelha sobre o Reichstag — a imagem que se tornaria o símbolo definitivo da derrota nazista.",
+        "imagem": "/eventos/momento-berlim.jpg"
+      },
+      {
+        "data": "8 de maio de 1945",
+        "titulo": "V-E Day: rendição alemã",
+        "local": "Reims e Berlim",
+        "texto": "Após a rendição incondicional assinada pelos representantes militares alemães, os combates na Europa cessaram oficialmente. Multidões tomaram as ruas de Londres, Paris, Nova York e Moscou para celebrar o fim de quase seis anos de guerra no continente europeu. Mas a alegria era incompleta: o conflito no Pacífico contra o Japão continuava, sem sinal claro de quando — ou a que custo — terminaria.",
+        "imagem": "/eventos/momento-berlim.jpg"
+      },
+      {
+        "data": "17 de julho – 2 de agosto de 1945",
+        "titulo": "Conferência de Potsdam",
+        "local": "Potsdam, Alemanha",
+        "texto": "Com a Alemanha já derrotada, os líderes aliados se reuniram novamente nos arredores de Berlim para decidir os detalhes da ocupação alemã e emitir um ultimato ao Japão exigindo rendição incondicional. A composição da mesa havia mudado: Truman substituíra Roosevelt, morto em abril, e Attlee substituiria Churchill no meio da conferência após a derrota eleitoral deste último. Foi em Potsdam que Truman, discretamente, informou Stalin sobre a existência de uma nova arma 'de poder destrutivo incomum' — a bomba atômica, testada com sucesso poucos dias antes no deserto do Novo México.",
+        "imagem": "/eventos/momento-potsdam.jpg"
+      },
+      {
+        "data": "6 de agosto de 1945",
+        "titulo": "Bomba atômica sobre Hiroshima",
+        "local": "Hiroshima, Japão",
+        "texto": "O bombardeiro americano Enola Gay lançou a primeira bomba atômica usada em combate sobre a cidade de Hiroshima, matando dezenas de milhares de pessoas instantaneamente e condenando muitas outras a morrer nos meses seguintes por ferimentos e radiação. Foi a primeira vez na história que uma arma nuclear foi utilizada contra uma população, inaugurando uma nova e aterrorizante era na forma como a humanidade poderia travar guerras.",
+        "imagem": "/eventos/momento-hiroshima.jpg"
+      },
+      {
+        "data": "9 de agosto de 1945",
+        "titulo": "Bomba atômica sobre Nagasaki",
+        "local": "Nagasaki, Japão",
+        "texto": "Três dias depois de Hiroshima, e no mesmo dia em que a União Soviética declarava guerra ao Japão e invadia a Manchúria ocupada pelos japoneses, uma segunda bomba atômica foi lançada sobre Nagasaki. Diante da combinação de dois ataques nucleares e da entrada soviética na guerra do Pacífico, a liderança japonesa se via, pela primeira vez, sem qualquer caminho plausível de vitória ou negociação em condições favoráveis.",
+        "imagem": "/eventos/momento-hiroshima.jpg"
+      },
+      {
+        "data": "15 de agosto de 1945",
+        "titulo": "V-J Day: rendição do Japão",
+        "local": "Tóquio, Japão",
+        "texto": "Em um discurso transmitido pelo rádio a todo o país — a primeira vez que a maioria dos japoneses ouvia a voz de seu imperador —, Hirohito anunciou a aceitação dos termos de rendição estabelecidos em Potsdam. A rendição formal seria assinada semanas depois, a bordo do encouraçado americano USS Missouri, ancorado na baía de Tóquio, encerrando oficialmente a Segunda Guerra Mundial.",
+        "imagem": "/eventos/momento-rendicao.jpg"
+      }
+    ],
+    "locais": [
+      { "nome": "Ialta", "lat": 44.5, "lng": 34.16, "descricao": "Conferência que definiu a partilha da Europa do pós-guerra, em fevereiro de 1945." },
+      { "nome": "Berlim", "lat": 52.52, "lng": 13.4, "descricao": "Capital alemã tomada pelo Exército Vermelho em maio de 1945, selando a derrota nazista." },
+      { "nome": "Potsdam", "lat": 52.4, "lng": 13.07, "descricao": "Conferência final entre os Aliados, que emitiu o ultimato de rendição ao Japão." },
+      { "nome": "Hiroshima", "lat": 34.39, "lng": 132.45, "descricao": "Primeira cidade da história atingida por uma bomba atômica, em 6 de agosto de 1945." },
+      { "nome": "Nagasaki", "lat": 32.75, "lng": 129.87, "descricao": "Segunda e última cidade atingida por um ataque nuclear, em 9 de agosto de 1945." },
+      { "nome": "Tóquio", "lat": 35.68, "lng": 139.65, "descricao": "Onde o imperador Hirohito anunciou a rendição japonesa em rede nacional de rádio." },
+      { "nome": "São Francisco", "lat": 37.77, "lng": -122.42, "descricao": "Cidade onde a Carta das Nações Unidas foi assinada meses antes, em junho de 1945." }
+    ],
+    "figuras": [
+      {
+        "nome": "Harry S. Truman",
+        "papel": "Presidente dos Estados Unidos",
+        "imagem": "/eventos/figura-truman.jpg",
+        "descricao": "Assumiu a presidência após a morte de Roosevelt em abril de 1945 e autorizou o uso das bombas atômicas contra o Japão."
+      },
+      {
+        "nome": "Josef Stalin",
+        "papel": "Líder da União Soviética",
+        "imagem": "/eventos/figura-stalin.jpg",
+        "descricao": "Comandou o avanço soviético até Berlim e negociou em Ialta e Potsdam a partilha da Europa do pós-guerra."
+      },
+      {
+        "nome": "Winston Churchill",
+        "papel": "Primeiro-ministro do Reino Unido",
+        "imagem": "/eventos/figura-churchill.jpg",
+        "descricao": "Liderou a resistência britânica desde 1940 e participou das negociações de Ialta, sendo substituído por Clement Attlee no meio da Conferência de Potsdam."
+      },
+      {
+        "nome": "Hirohito",
+        "papel": "Imperador do Japão",
+        "imagem": "/eventos/figura-hirohito.jpg",
+        "descricao": "Anunciou pessoalmente, em rádio nacional, a aceitação da rendição japonesa em 15 de agosto de 1945."
+      }
+    ],
+    "legado": "O fim da Segunda Guerra Mundial não trouxe apenas alívio — trouxe um mundo irreconhecível em relação ao que existia em 1939. Dezenas de milhões de mortos, cidades inteiras reduzidas a escombros na Europa e no Japão, e o surgimento de uma arma capaz de destruir civilizações inteiras mudaram permanentemente a forma como as grandes potências pensariam sobre guerra, poder e diplomacia.\n\nDas cinzas do conflito nasceu a Organização das Nações Unidas, criada meses antes do fim da guerra com a promessa de evitar que uma catástrofe dessa escala se repetisse. Ao mesmo tempo, as divergências entre as potências ocidentais e a União Soviética — visíveis já em Potsdam — rapidamente se transformariam na Guerra Fria, uma nova rivalidade global que dominaria as relações internacionais pelas quatro décadas seguintes.\n\nA guerra também redesenhou o mapa de poder mundial: impérios coloniais europeus, enfraquecidos pelo conflito, começariam a se desfazer nas décadas seguintes, enquanto Estados Unidos e União Soviética emergiam como as duas superpotências que definiriam a geopolítica global até o final do século XX.",
+    "curiosidadesRelacionadas": ["projeto-manhattan", "dia-d", "onu", "holocausto"]
+  }
+]
