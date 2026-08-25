@@ -3,6 +3,7 @@ import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { NewsImage } from "@/components/news-image"
+import { ArticleTranslate } from "@/components/article-translate"
 import { Calendar, ArrowLeft, ExternalLink, User } from "lucide-react"
 import Link from "next/link"
 import { notFound } from "next/navigation"
@@ -78,41 +79,47 @@ export default async function NoticiaPage({ params }: NoticiaPageProps) {
                 )}
               </div>
 
-              <h1 className="max-w-4xl text-4xl font-bold tracking-tight text-balance text-foreground md:text-5xl lg:text-6xl">
-                {noticia.titulo}
-              </h1>
+              {noticia.tipo === "rss" ? (
+                <ArticleTranslate
+                  idiomaOriginal={noticia.idioma}
+                  titulo={noticia.titulo}
+                  descricao={noticia.descricao}
+                  conteudo={noticia.conteudo}
+                  noticeHtml={noticia.noticeHtml}
+                  linkFonte={noticia.linkFonte}
+                  imagem={noticia.imagem}
+                  imageCaption={imageCaption}
+                />
+              ) : (
+                <>
+                  <h1 className="max-w-4xl text-4xl font-bold tracking-tight text-balance text-foreground md:text-5xl lg:text-6xl">
+                    {noticia.titulo}
+                  </h1>
 
-              {noticia.descricao && (
-                <p className="mt-5 max-w-3xl text-lg leading-8 text-muted-foreground md:text-xl">{noticia.descricao}</p>
-              )}
+                  {noticia.descricao && (
+                    <p className="mt-5 max-w-3xl text-lg leading-8 text-muted-foreground md:text-xl">{noticia.descricao}</p>
+                  )}
 
-              {noticia.tipo === "rss" && noticia.linkFonte && (
-                <div className="mt-6">
-                  <Button variant="outline" asChild className="rounded-full px-5">
-                    <a href={noticia.linkFonte} target="_blank" rel="noopener noreferrer">
-                      Ver noticia completa no site original
-                      <ExternalLink className="ml-2 h-4 w-4" />
-                    </a>
-                  </Button>
-                </div>
-              )}
+                  {noticia.imagem && (
+                    <figure className="mt-8">
+                      <div className="relative aspect-[16/9] overflow-hidden rounded-3xl border bg-muted">
+                        <NewsImage src={noticia.imagem} alt={noticia.titulo} fill className="object-cover" />
+                      </div>
+                      <figcaption className="mt-3 text-sm leading-6 text-muted-foreground">{imageCaption}</figcaption>
+                    </figure>
+                  )}
 
-              {noticia.imagem && (
-                <figure className="mt-8">
-                  <div className="relative aspect-[16/9] overflow-hidden rounded-3xl border bg-muted">
-                    <NewsImage src={noticia.imagem} alt={noticia.titulo} fill className="object-cover" />
+                  <div className="mt-10 max-w-[820px]">
+                    <div
+                      className="prose prose-neutral max-w-none prose-headings:scroll-mt-24 prose-p:mb-6 prose-p:text-[1.06rem] prose-p:leading-8 prose-li:leading-8 prose-strong:text-foreground prose-a:text-primary"
+                      dangerouslySetInnerHTML={{ __html: safeHtml }}
+                    />
                   </div>
-                  <figcaption className="mt-3 text-sm leading-6 text-muted-foreground">{imageCaption}</figcaption>
-                </figure>
+                </>
               )}
 
               <div className="mt-10 max-w-[820px]">
                 <div className="space-y-8">
-                  <div
-                    className="prose prose-neutral max-w-none prose-headings:scroll-mt-24 prose-p:mb-6 prose-p:text-[1.06rem] prose-p:leading-8 prose-li:leading-8 prose-strong:text-foreground prose-a:text-primary"
-                    dangerouslySetInnerHTML={{ __html: safeHtml }}
-                  />
-
                   <section className="rounded-2xl border bg-card p-6">
                     <div className="flex flex-col gap-5 md:flex-row md:items-start md:justify-between">
                       <div className="space-y-2">

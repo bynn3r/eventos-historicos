@@ -1,6 +1,5 @@
 import noticiasData from "@/data/noticias.json"
 import { generatePortalAnalysis } from "@/lib/news-editorial"
-import { translateToPortuguese } from "@/lib/deepl"
 
 export interface SiteNewsArticle {
   id: string
@@ -21,6 +20,8 @@ export interface SiteNewsArticle {
   href: string
   externo: boolean
   tipo: "rss" | "local" | "analysis"
+  idioma: "pt" | "en"
+  noticeHtml: string
 }
 
 interface ParsedFeedItem {
@@ -1272,6 +1273,8 @@ async function generatePortalAnalysesFromRss(rssArticles: SiteNewsArticle[]) {
         href: `/noticias/${slug}`,
         externo: false,
         tipo: "analysis" as const,
+        idioma: "pt" as const,
+        noticeHtml: "",
       } satisfies SiteNewsArticle
     }),
   )
@@ -1309,19 +1312,12 @@ async function hydrateScoredCandidate(candidate: NonNullable<ReturnType<typeof b
   const isEnglish = looksMostlyEnglish(`${item.titulo} ${item.descricao}`)
   const rawText = extractParagraphText(item.conteudoHtml || item.descricao) || item.descricao || item.titulo
 
-  const [imagem, translatedTitle, translatedDesc] = await Promise.all([
-    resolveArticleImage({ ...item, categoria, link: item.link }, item.imagem),
-    isEnglish ? translateToPortuguese(item.titulo) : Promise.resolve(item.titulo),
-    isEnglish ? translateToPortuguese(item.descricao) : Promise.resolve(item.descricao),
-  ])
-
-  // Full-text enrichment (scraping the source page + translating a long body) is
-  // expensive and only ever needed for the one article someone actually opens —
-  // see enrichArticleWithFullText(), called on-demand from getNewsArticleBySlug.
-  // Doing it here for every item in a list of 10-20 articles blew past the
-  // platform's request timeout.
-  const translatedRawText = isEnglish ? await translateToPortuguese(rawText) : rawText
-  const articleBody = translatedRawText
+  // Server-side translation of every list item made pages slow and unreliable
+  // (the free translation backends this app relies on are flaky from this
+  // hosting environment). Ship the feed's own language here — the reader
+  // translates on demand via the PT/EN button on the article page instead.
+  const imagem = await resolveArticleImage({ ...item, categoria, link: item.link }, item.imagem)
+  const articleBody = rawText
   const notice = `<p><em>Conteúdo do feed oficial de <strong>${item.fonte}</strong>, curado pelo Eventos Históricos.</em></p>`
   const conteudoHtml = `${textToHtmlParagraphs(articleBody)}${notice}`
   const conteudo = articleBody
@@ -1329,8 +1325,8 @@ async function hydrateScoredCandidate(candidate: NonNullable<ReturnType<typeof b
   return {
     id: `rss-${slug}`,
     slug,
-    titulo: translatedTitle,
-    descricao: clipText(translatedDesc || "Resumo selecionado automaticamente a partir de feeds abertos e confiáveis.", 220),
+    titulo: item.titulo,
+    descricao: clipText(item.descricao || "Resumo selecionado automaticamente a partir de feeds abertos e confiáveis.", 220),
     conteudo,
     conteudoHtml,
     resumo,
@@ -1344,6 +1340,8 @@ async function hydrateScoredCandidate(candidate: NonNullable<ReturnType<typeof b
     href: `/noticias/${slug}`,
     externo: false,
     tipo: "rss" as const,
+    idioma: isEnglish ? "en" : "pt",
+    noticeHtml: notice,
   }
 }
 
@@ -1413,6 +1411,8 @@ function normalizeLocalArticles(): SiteNewsArticle[] {
       href: `/noticias/${article.slug}`,
       externo: false,
       tipo: "analysis" as const,
+      idioma: "pt" as const,
+      noticeHtml: "",
     }))
 }
 
@@ -1439,8 +1439,11 @@ async function enrichArticleWithFullText(article: SiteNewsArticle): Promise<Site
   let body = ""
   let bodySource: "scraped" | "ai" = "scraped"
 
+  // No server-side translation here either — scraping is already the slow part
+  // of this request. Body stays in whatever language the source published in;
+  // the reader translates on demand via the PT/EN button.
   if (scrapedText && scrapedText.length > article.conteudo.length + 200) {
-    body = looksMostlyEnglish(scrapedText) ? await translateToPortuguese(scrapedText) : scrapedText
+    body = scrapedText
     bodySource = "scraped"
   } else {
     const aiText = await expandArticleWithAI({
@@ -1468,6 +1471,8 @@ async function enrichArticleWithFullText(article: SiteNewsArticle): Promise<Site
     ...article,
     conteudo: body,
     conteudoHtml: `${textToHtmlParagraphs(body)}${notice}`,
+    idioma: bodySource === "scraped" && looksMostlyEnglish(body) ? "en" : article.idioma,
+    noticeHtml: notice,
   }
 }
 
