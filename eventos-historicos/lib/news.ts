@@ -1279,13 +1279,80 @@ async function generatePortalAnalysesFromRss(rssArticles: SiteNewsArticle[]) {
   return analyses
 }
 
-export async function getRssNews(limit = 20): Promise<SiteNewsArticle[]> {
+function buildScoredCandidate(item: ParsedFeedItem) {
+  const categoria = inferCategory(item)
+  const parsedDate = item.data ? new Date(item.data) : new Date()
+
+  if (Number.isNaN(parsedDate.getTime())) {
+    return null
+  }
+
+  const ageDays = (Date.now() - parsedDate.getTime()) / 86_400_000
+  const maxAge = categoria === "História" ? MAX_HISTORY_AGE_DAYS : MAX_NEWS_AGE_DAYS
+
+  if (ageDays > maxAge) {
+    return null
+  }
+
+  return {
+    item,
+    categoria,
+    score: scoreArticle(item, categoria),
+    data: parsedDate.toISOString(),
+  }
+}
+
+async function hydrateScoredCandidate(candidate: NonNullable<ReturnType<typeof buildScoredCandidate>>): Promise<SiteNewsArticle> {
+  const { item, categoria, data } = candidate
+  const slug = buildRssSlug(item)
+  const resumo = item.truncated || isTruncated(item.descricao) || !item.conteudoHtml || item.conteudoHtml.length < 600
+  const isEnglish = looksMostlyEnglish(`${item.titulo} ${item.descricao}`)
+  const rawText = extractParagraphText(item.conteudoHtml || item.descricao) || item.descricao || item.titulo
+
+  const [imagem, translatedTitle, translatedDesc] = await Promise.all([
+    resolveArticleImage({ ...item, categoria, link: item.link }, item.imagem),
+    isEnglish ? translateToPortuguese(item.titulo) : Promise.resolve(item.titulo),
+    isEnglish ? translateToPortuguese(item.descricao) : Promise.resolve(item.descricao),
+  ])
+
+  // Full-text enrichment (scraping the source page + translating a long body) is
+  // expensive and only ever needed for the one article someone actually opens —
+  // see enrichArticleWithFullText(), called on-demand from getNewsArticleBySlug.
+  // Doing it here for every item in a list of 10-20 articles blew past the
+  // platform's request timeout.
+  const translatedRawText = isEnglish ? await translateToPortuguese(rawText) : rawText
+  const articleBody = translatedRawText
+  const notice = `<p><em>Conteúdo do feed oficial de <strong>${item.fonte}</strong>, curado pelo Eventos Históricos.</em></p>`
+  const conteudoHtml = `${textToHtmlParagraphs(articleBody)}${notice}`
+  const conteudo = articleBody
+
+  return {
+    id: `rss-${slug}`,
+    slug,
+    titulo: translatedTitle,
+    descricao: clipText(translatedDesc || "Resumo selecionado automaticamente a partir de feeds abertos e confiáveis.", 220),
+    conteudo,
+    conteudoHtml,
+    resumo,
+    data,
+    categoria,
+    fonte: item.fonte,
+    fonteUrl: item.link,
+    linkFonte: item.link,
+    imagem,
+    tags: [normalizeText(categoria), "rss", normalizeText(item.fonte)],
+    href: `/noticias/${slug}`,
+    externo: false,
+    tipo: "rss" as const,
+  }
+}
+
+async function getAllScoredCandidates() {
   const results = await Promise.all(RSS_FEEDS.map((feed) => fetchFeed(feed.url, feed.name)))
   const seen = new Set<string>()
 
-  const articles = await Promise.all(
-    results
-      .flat()
+  return results
+    .flat()
     .filter(isRelevantArticle)
     .filter((item) => {
       const key = normalizeText(`${item.titulo}-${item.link}`)
@@ -1295,68 +1362,19 @@ export async function getRssNews(limit = 20): Promise<SiteNewsArticle[]> {
       seen.add(key)
       return true
     })
-    .filter((item) => {
-      const categoria = inferCategory(item)
-      const parsedDate = item.data ? new Date(item.data) : new Date()
-      if (Number.isNaN(parsedDate.getTime())) {
-        return false
-      }
+    .map(buildScoredCandidate)
+    .filter((candidate): candidate is NonNullable<typeof candidate> => candidate !== null)
+}
 
-      const ageDays = (Date.now() - parsedDate.getTime()) / 86_400_000
-      const maxAge = categoria === "História" ? MAX_HISTORY_AGE_DAYS : MAX_NEWS_AGE_DAYS
-      return ageDays <= maxAge
-    })
-    .map(async (item) => {
-      const categoria = inferCategory(item)
-      const parsedDate = item.data ? new Date(item.data) : new Date()
-      const data = Number.isNaN(parsedDate.getTime()) ? new Date().toISOString() : parsedDate.toISOString()
-      const slug = buildRssSlug(item)
-      const resumo = item.truncated || isTruncated(item.descricao) || !item.conteudoHtml || item.conteudoHtml.length < 600
-      const score = scoreArticle(item, categoria)
-      const isEnglish = looksMostlyEnglish(`${item.titulo} ${item.descricao}`)
-      const rawText = extractParagraphText(item.conteudoHtml || item.descricao) || item.descricao || item.titulo
-
-      const [imagem, translatedTitle, translatedDesc] = await Promise.all([
-        resolveArticleImage({ ...item, categoria, link: item.link }, item.imagem),
-        isEnglish ? translateToPortuguese(item.titulo) : Promise.resolve(item.titulo),
-        isEnglish ? translateToPortuguese(item.descricao) : Promise.resolve(item.descricao),
-      ])
-
-      // Full-text enrichment (scraping the source page + translating a long body) is
-      // expensive and only ever needed for the one article someone actually opens —
-      // see enrichArticleWithFullText(), called on-demand from getNewsArticleBySlug.
-      // Doing it here for every item in a list of 10-20 articles blew past the
-      // platform's request timeout.
-      const translatedRawText = isEnglish ? await translateToPortuguese(rawText) : rawText
-      const articleBody = translatedRawText
-      const notice = `<p><em>Conteúdo do feed oficial de <strong>${item.fonte}</strong>, curado pelo Eventos Históricos.</em></p>`
-      const conteudoHtml = `${textToHtmlParagraphs(articleBody)}${notice}`
-      const conteudo = articleBody
-
-      return {
-        score,
-        id: `rss-${slug}`,
-        slug,
-        titulo: translatedTitle,
-        descricao: clipText(translatedDesc || "Resumo selecionado automaticamente a partir de feeds abertos e confiáveis.", 220),
-        conteudo,
-        conteudoHtml,
-        resumo,
-        data,
-        categoria,
-        fonte: item.fonte,
-        fonteUrl: item.link,
-        linkFonte: item.link,
-        imagem,
-        tags: [normalizeText(categoria), "rss", normalizeText(item.fonte)],
-        href: `/noticias/${slug}`,
-        externo: false,
-        tipo: "rss" as const,
-      }
-    }),
-  )
-
-  return articles
+export async function getRssNews(limit = 20): Promise<SiteNewsArticle[]> {
+  // Scoring/sorting only needs synchronous data (title, date, source) — do that
+  // for every candidate first, then run the expensive per-item work (translation,
+  // image lookup) ONLY on the `limit` articles that actually make the cut. Doing
+  // the expensive work before slicing meant translating/resolving images for
+  // every relevant+recent article across 10 feeds (often 50-100+) just to keep
+  // the top 20, which was slow enough to blow past the platform's timeout once
+  // translation calls stopped being near-instant.
+  const candidates = (await getAllScoredCandidates())
     .sort((a, b) => {
       if (b.score !== a.score) {
         return b.score - a.score
@@ -1364,7 +1382,13 @@ export async function getRssNews(limit = 20): Promise<SiteNewsArticle[]> {
       return new Date(b.data).getTime() - new Date(a.data).getTime()
     })
     .slice(0, limit)
-    .map(({ score: _score, ...article }) => article satisfies SiteNewsArticle)
+
+  return Promise.all(candidates.map(hydrateScoredCandidate))
+}
+
+async function findScoredCandidateBySlug(slug: string) {
+  const candidates = await getAllScoredCandidates()
+  return candidates.find((candidate) => buildRssSlug(candidate.item) === slug) ?? null
 }
 
 function normalizeLocalArticles(): SiteNewsArticle[] {
@@ -1448,11 +1472,31 @@ async function enrichArticleWithFullText(article: SiteNewsArticle): Promise<Site
 }
 
 export async function getNewsArticleBySlug(slug: string) {
-  const { rssArticles, localArticles } = await getCuratedNews(30)
-  const localArticle = localArticles.find((article) => article.slug === slug)
+  // Local (static) articles never need the RSS feed sweep at all, so check them
+  // first without paying for it.
+  const localArticle = normalizeLocalArticles().find((article) => article.slug === slug)
 
   if (localArticle) {
     return localArticle
+  }
+
+  // Most detail-page visits are for a live RSS article. Find just that one
+  // candidate and hydrate/enrich it alone, instead of translating a whole
+  // top-N list (getCuratedNews) just to look one slug up in it.
+  const directCandidate = await findScoredCandidateBySlug(slug)
+
+  if (directCandidate) {
+    const hydrated = await hydrateScoredCandidate(directCandidate)
+    return enrichArticleWithFullText(hydrated)
+  }
+
+  // Fallback for slugs that only exist among AI-generated portal analyses,
+  // which are derived from the top-N RSS list and can't be found any other way.
+  const { rssArticles, localArticles } = await getCuratedNews(30)
+  const fallbackLocal = localArticles.find((article) => article.slug === slug)
+
+  if (fallbackLocal) {
+    return fallbackLocal
   }
 
   const rssArticle = rssArticles.find((article) => article.slug === slug)

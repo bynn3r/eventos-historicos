@@ -27,6 +27,7 @@ function createLimiter(concurrency: number) {
 }
 
 const myMemoryLimit = createLimiter(3)
+const googleLimit = createLimiter(4)
 
 function splitIntoChunks(text: string, maxLen = 480): string[] {
   if (text.length <= maxLen) return [text]
@@ -68,29 +69,31 @@ async function translateWithDeepL(text: string, apiKey: string): Promise<string>
 }
 
 async function translateChunkWithGoogle(chunk: string): Promise<string | null> {
-  try {
-    const url = new URL("https://translate.googleapis.com/translate_a/single")
-    url.searchParams.set("client", "gtx")
-    url.searchParams.set("sl", "en")
-    url.searchParams.set("tl", "pt")
-    url.searchParams.set("dt", "t")
-    url.searchParams.set("q", chunk)
+  return googleLimit(async () => {
+    try {
+      const url = new URL("https://translate.googleapis.com/translate_a/single")
+      url.searchParams.set("client", "gtx")
+      url.searchParams.set("sl", "en")
+      url.searchParams.set("tl", "pt")
+      url.searchParams.set("dt", "t")
+      url.searchParams.set("q", chunk)
 
-    const res = await fetch(url.toString(), {
-      signal: AbortSignal.timeout(6000),
-      headers: { "User-Agent": "Mozilla/5.0" },
-    })
-    if (!res.ok) return null
+      const res = await fetch(url.toString(), {
+        signal: AbortSignal.timeout(3500),
+        headers: { "User-Agent": "Mozilla/5.0" },
+      })
+      if (!res.ok) return null
 
-    const data = (await res.json()) as unknown
-    const segments = Array.isArray(data) ? data[0] : null
-    if (!Array.isArray(segments) || segments.length === 0) return null
+      const data = (await res.json()) as unknown
+      const segments = Array.isArray(data) ? data[0] : null
+      if (!Array.isArray(segments) || segments.length === 0) return null
 
-    const translated = segments.map((segment: unknown) => (Array.isArray(segment) ? segment[0] ?? "" : "")).join("")
-    return translated.trim() || null
-  } catch {
-    return null
-  }
+      const translated = segments.map((segment: unknown) => (Array.isArray(segment) ? segment[0] ?? "" : "")).join("")
+      return translated.trim() || null
+    } catch {
+      return null
+    }
+  })
 }
 
 async function translateWithGoogle(text: string): Promise<string | null> {
@@ -115,7 +118,7 @@ async function translateChunkWithMyMemory(chunk: string): Promise<string> {
       url.searchParams.set("langpair", "en|pt-BR")
       if (email) url.searchParams.set("de", email)
 
-      const res = await fetch(url.toString(), { signal: AbortSignal.timeout(8000) })
+      const res = await fetch(url.toString(), { signal: AbortSignal.timeout(3500) })
       if (!res.ok) return chunk
 
       const data = (await res.json()) as {
