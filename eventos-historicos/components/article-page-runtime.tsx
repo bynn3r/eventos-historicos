@@ -1,6 +1,5 @@
 "use client"
 
-import { useEffect, useState } from "react"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
@@ -11,102 +10,12 @@ import { Calendar, ArrowLeft, ExternalLink, User } from "lucide-react"
 import Link from "next/link"
 import { formatNewsDate, renderSafeArticleHtml, type SiteNewsArticle } from "@/lib/news"
 
-interface ArticlePageData {
+interface ArticlePageRuntimeProps {
   noticia: SiteNewsArticle
   relatedNews: SiteNewsArticle[]
 }
 
-function ArticlePageSkeleton() {
-  return (
-    <div className="min-h-screen flex flex-col">
-      <Navigation />
-      <main className="flex-1 bg-background">
-        <article className="py-10 md:py-14">
-          <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
-            <div className="mx-auto max-w-[920px] animate-pulse">
-              <div className="mb-6 h-9 w-40 rounded bg-muted" />
-              <div className="mb-4 flex gap-3">
-                <div className="h-5 w-20 rounded-full bg-muted" />
-                <div className="h-5 w-28 rounded bg-muted" />
-              </div>
-              <div className="h-10 w-full rounded bg-muted" />
-              <div className="mt-3 h-10 w-2/3 rounded bg-muted" />
-              <div className="mt-5 h-5 w-full rounded bg-muted" />
-              <div className="mt-2 h-5 w-3/4 rounded bg-muted" />
-              <div className="mt-8 aspect-[16/9] w-full rounded-3xl bg-muted" />
-              <div className="mt-10 space-y-4">
-                {Array.from({ length: 5 }).map((_, index) => (
-                  <div key={index} className="h-4 w-full rounded bg-muted" />
-                ))}
-              </div>
-            </div>
-          </div>
-        </article>
-      </main>
-      <Footer />
-    </div>
-  )
-}
-
-function ArticlePageError() {
-  return (
-    <div className="min-h-screen flex flex-col">
-      <Navigation />
-      <main className="flex-1 flex flex-col items-center justify-center gap-4 bg-background text-center">
-        <p className="text-muted-foreground">Não foi possível carregar esta notícia agora.</p>
-        <Button variant="outline" asChild>
-          <Link href="/noticias">Voltar as noticias</Link>
-        </Button>
-      </main>
-      <Footer />
-    </div>
-  )
-}
-
-export function ArticlePageRuntime({ slug }: { slug: string }) {
-  const [data, setData] = useState<ArticlePageData | null>(null)
-  const [status, setStatus] = useState<"loading" | "ready" | "error">("loading")
-
-  useEffect(() => {
-    let cancelled = false
-
-    const load = async () => {
-      try {
-        const response = await fetch(`/api/noticias/${slug}`)
-        if (!response.ok) {
-          throw new Error("Falha ao carregar noticia")
-        }
-
-        const json = (await response.json()) as ArticlePageData
-
-        if (!cancelled) {
-          setData(json)
-          setStatus("ready")
-        }
-      } catch (error) {
-        console.error("Falha ao carregar noticia:", error)
-        if (!cancelled) {
-          setStatus("error")
-        }
-      }
-    }
-
-    load()
-
-    return () => {
-      cancelled = true
-    }
-  }, [slug])
-
-  if (status === "loading") {
-    return <ArticlePageSkeleton />
-  }
-
-  if (status === "error" || !data) {
-    return <ArticlePageError />
-  }
-
-  const { noticia, relatedNews } = data
+export function ArticlePageRuntime({ noticia, relatedNews }: ArticlePageRuntimeProps) {
   const safeHtml = renderSafeArticleHtml(noticia.conteudoHtml)
   const imageCaption =
     noticia.tipo === "rss"
