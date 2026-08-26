@@ -1,6 +1,7 @@
 import noticiasData from "@/data/noticias.json"
 import { generatePortalAnalysis } from "@/lib/news-editorial"
 import { translateToPortuguese } from "@/lib/deepl"
+import { getCachedRssArticles, setCachedRssArticles } from "@/lib/redis-cache"
 
 export interface SiteNewsArticle {
   id: string
@@ -1392,10 +1393,20 @@ const RSS_CACHE_TTL = 90_000
 
 export async function getRssNews(limit = 20): Promise<SiteNewsArticle[]> {
   const now = Date.now()
+
+  // 1. In-memory cache (warm Lambda, fastest — ~0ms)
   if (rssCache && now - rssCache.at < RSS_CACHE_TTL) {
     return rssCache.articles.slice(0, limit)
   }
 
+  // 2. Redis cache (cold Lambda, persists across restarts — ~5-20ms)
+  const redisArticles = await getCachedRssArticles()
+  if (redisArticles && redisArticles.length > 0) {
+    rssCache = { articles: redisArticles, at: now }
+    return redisArticles.slice(0, limit)
+  }
+
+  // 3. Full fetch (first visit or after 1h TTL expiry — ~5-6s)
   const candidates = (await getAllScoredCandidates())
     .sort((a, b) => {
       if (b.score !== a.score) return b.score - a.score
@@ -1405,6 +1416,10 @@ export async function getRssNews(limit = 20): Promise<SiteNewsArticle[]> {
 
   const articles = await Promise.all(candidates.map((candidate) => hydrateScoredCandidate(candidate)))
   rssCache = { articles, at: now }
+
+  // Store in Redis without blocking the response
+  setCachedRssArticles(articles).catch(() => {})
+
   return articles
 }
 
