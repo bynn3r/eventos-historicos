@@ -1330,7 +1330,7 @@ async function hydrateScoredCandidate(
   const [imagem, translatedTitle, translatedDesc, translatedRawText] = await Promise.all([
     Promise.race([
       resolveArticleImage({ ...item, categoria, link: item.link }, item.imagem),
-      new Promise<string>((resolve) => setTimeout(() => resolve(imageFallback), 8000)),
+      new Promise<string>((resolve) => setTimeout(() => resolve(imageFallback), 3000)),
     ]),
     isEnglish ? translateToPortuguese(item.titulo) : Promise.resolve(item.titulo),
     isEnglish ? translateToPortuguese(item.descricao) : Promise.resolve(item.descricao),
@@ -1387,27 +1387,25 @@ async function getAllScoredCandidates() {
     .filter((candidate): candidate is NonNullable<typeof candidate> => candidate !== null)
 }
 
+let rssCache: { articles: SiteNewsArticle[]; at: number } | null = null
+const RSS_CACHE_TTL = 90_000
+
 export async function getRssNews(limit = 20): Promise<SiteNewsArticle[]> {
-  // Scoring/sorting only needs synchronous data (title, date, source) — do that
-  // for every candidate first, then run the expensive per-item work (translation,
-  // image lookup) ONLY on the `limit` articles that actually make the cut. Doing
-  // the expensive work before slicing meant translating/resolving images for
-  // every relevant+recent article across 10 feeds (often 50-100+) just to keep
-  // the top 20, which was slow enough to blow past the platform's timeout once
-  // translation calls stopped being near-instant.
+  const now = Date.now()
+  if (rssCache && now - rssCache.at < RSS_CACHE_TTL) {
+    return rssCache.articles.slice(0, limit)
+  }
+
   const candidates = (await getAllScoredCandidates())
     .sort((a, b) => {
-      if (b.score !== a.score) {
-        return b.score - a.score
-      }
+      if (b.score !== a.score) return b.score - a.score
       return new Date(b.data).getTime() - new Date(a.data).getTime()
     })
     .slice(0, limit)
 
-  // NOTE: must be wrapped in an arrow function, not passed directly — Array.map
-  // calls its callback with (item, index, array), and index would otherwise
-  // land in hydrateScoredCandidate's `full` parameter.
-  return Promise.all(candidates.map((candidate) => hydrateScoredCandidate(candidate)))
+  const articles = await Promise.all(candidates.map((candidate) => hydrateScoredCandidate(candidate)))
+  rssCache = { articles, at: now }
+  return articles
 }
 
 async function findScoredCandidateBySlug(slug: string) {
