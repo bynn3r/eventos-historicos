@@ -396,9 +396,11 @@ function normalizeText(value: string) {
 }
 
 function looksMostlyEnglish(value: string) {
-  const normalized = normalizeText(value)
-  return /( the | with | after | says | warns | live | could | would | next | little | arrives | wrong | crisis )/.test(
-    ` ${normalized} `,
+  const normalized = ` ${normalizeText(value)} `
+  // Common English function words — if any appear as whole words the text is English.
+  // Kept broad so short titles ("Gaza ceasefire deal reached") are also caught.
+  return /\b(the|a|an|is|are|was|were|be|been|of|in|on|to|for|and|but|or|with|by|at|from|as|it|its|this|that|he|she|they|we|you|who|which|has|have|had|will|would|can|could|should|may|might|must|not|no|up|out|if|so|than|then|after|before|over|under|about|into|through|says|said|warns|calls|reports|amid|despite|against|during|while|when|where|how|new|more|last|first|their|our|his|her|us|uk)\b/.test(
+    normalized,
   )
 }
 
@@ -1319,7 +1321,8 @@ async function hydrateScoredCandidate(
   const { item, categoria, data } = candidate
   const slug = buildRssSlug(item)
   const resumo = item.truncated || isTruncated(item.descricao) || !item.conteudoHtml || item.conteudoHtml.length < 600
-  const isEnglish = looksMostlyEnglish(`${item.titulo} ${item.descricao}`)
+  // All RSS feeds are English-language sources — always translate.
+  const isEnglish = true
   const rawText = extractParagraphText(item.conteudoHtml || item.descricao) || item.descricao || item.titulo
 
   // Card lists only ever show titulo/descricao (grep confirms `conteudo` is only
