@@ -1578,16 +1578,20 @@ async function enrichArticleWithFullText(article: SiteNewsArticle): Promise<Site
 // that getNewsArticleBySlug()'s enrichment step does.
 export async function getNewsArticleMetaBySlug(slug: string): Promise<{ titulo: string; descricao: string } | null> {
   const localArticle = normalizeLocalArticles().find((article) => article.slug === slug)
+  if (localArticle) return { titulo: localArticle.titulo, descricao: localArticle.descricao }
 
-  if (localArticle) {
-    return { titulo: localArticle.titulo, descricao: localArticle.descricao }
-  }
+  // Check Redis slug cache first — avoids fetching all feeds just for metadata
+  const cached = await getCachedArticleBySlug(slug)
+  if (cached) return { titulo: cached.titulo, descricao: cached.descricao }
 
+  // Check RSS list cache
+  const cachedList = await getCachedRssArticles()
+  const listHit = cachedList?.find((a) => a.slug === slug)
+  if (listHit) return { titulo: listHit.titulo, descricao: listHit.descricao }
+
+  // Last resort: fetch all feeds
   const candidate = await findScoredCandidateBySlug(slug)
-
-  if (!candidate) {
-    return null
-  }
+  if (!candidate) return null
 
   const hydrated = await hydrateScoredCandidate(candidate)
   return { titulo: hydrated.titulo, descricao: hydrated.descricao }
