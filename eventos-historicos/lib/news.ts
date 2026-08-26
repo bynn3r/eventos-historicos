@@ -88,10 +88,12 @@ const RSS_FEEDS = [
   { name: "History Extra", url: "https://www.historyextra.com/feed/" },
 ]
 
+const HISTORY_SOURCES = new Set(["History Extra", "Smithsonian History", "World History Encyclopedia"])
+
 const CATEGORY_RULES = [
   {
     categoria: "Exploração Espacial",
-    keywords: ["lua", "artemis", "nasa", "spacex", "space", "moon", "apollo", "orbita", "marte", "astronaut"],
+    keywords: ["artemis", "nasa", "spacex", "space mission", "space program", "space exploration", "space flight", "space station", "orbita", "marte", "astronaut", "rocket launch", "moon landing", "lunar mission"],
   },
   {
     categoria: "Conflitos",
@@ -919,19 +921,15 @@ async function resolveArticleImage(article: { titulo: string; descricao: string;
     ...(aiHints?.theme ? [`${aiHints.theme} ${article.categoria}`] : []),
   ]
 
-  const rankedCandidates: WikimediaImageCandidate[] = []
-  const uniqueQueries = [...new Set(candidateQueries.map((value) => value.trim()).filter((value) => value.length >= 3))]
+  const uniqueQueries = [...new Set(candidateQueries.map((value) => value.trim()).filter((value) => value.length >= 3))].slice(0, 4)
 
-  for (const [index, query] of uniqueQueries.entries()) {
-    const candidates = await searchWikimediaImages(query)
-
-    for (const candidate of candidates.slice(0, 4)) {
-      rankedCandidates.push({
-        imageUrl: candidate.imageUrl,
-        score: candidate.score + Math.max(0, 40 - index * 6),
-      })
-    }
-  }
+  const allResults = await Promise.all(uniqueQueries.map(searchWikimediaImages))
+  const rankedCandidates: WikimediaImageCandidate[] = allResults.flatMap((candidates, index) =>
+    candidates.slice(0, 4).map((candidate) => ({
+      imageUrl: candidate.imageUrl,
+      score: candidate.score + Math.max(0, 40 - index * 10),
+    }))
+  )
 
   const bestCandidate = rankedCandidates.sort((a, b) => b.score - a.score)[0]
 
@@ -1004,6 +1002,7 @@ function isTruncated(text: string) {
 }
 
 function inferCategory(article: ParsedFeedItem) {
+  if (HISTORY_SOURCES.has(article.fonte)) return "História"
   const text = normalizeText(`${article.titulo} ${article.descricao} ${article.conteudoHtml}`)
   const matchedRule = CATEGORY_RULES.find((rule) => rule.keywords.some((keyword) => text.includes(keyword)))
   return matchedRule?.categoria ?? "Geopolítica"
@@ -1327,8 +1326,12 @@ async function hydrateScoredCandidate(
   // in a 20-article list was the main source of slowness, made worse once body
   // translation had to go paragraph-by-paragraph to preserve line breaks. Only
   // pay for that when `full` is requested for the one article being opened.
+  const imageFallback = inferImage({ ...item, categoria })
   const [imagem, translatedTitle, translatedDesc, translatedRawText] = await Promise.all([
-    resolveArticleImage({ ...item, categoria, link: item.link }, item.imagem),
+    Promise.race([
+      resolveArticleImage({ ...item, categoria, link: item.link }, item.imagem),
+      new Promise<string>((resolve) => setTimeout(() => resolve(imageFallback), 8000)),
+    ]),
     isEnglish ? translateToPortuguese(item.titulo) : Promise.resolve(item.titulo),
     isEnglish ? translateToPortuguese(item.descricao) : Promise.resolve(item.descricao),
     full && isEnglish ? translateToPortuguese(rawText) : Promise.resolve(rawText),
