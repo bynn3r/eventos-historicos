@@ -1403,8 +1403,9 @@ export async function refreshRssCache(): Promise<SiteNewsArticle[]> {
     })
     .slice(0, 20)
 
-  // Basic hydration for the list/card cache (no full body translation)
-  const articles = await Promise.all(candidates.map((candidate) => hydrateScoredCandidate(candidate)))
+  // Basic hydration for the list/card cache — 7s image timeout so OG image
+  // scraping has time to complete (default 3s is too short for source pages)
+  const articles = await Promise.all(candidates.map((candidate) => hydrateScoredCandidate(candidate, false, 7000)))
   rssCache = { articles, at: Date.now() }
   await setCachedRssArticles(articles)
 
