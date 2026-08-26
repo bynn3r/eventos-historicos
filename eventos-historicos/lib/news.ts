@@ -1399,9 +1399,25 @@ export async function refreshRssCache(): Promise<SiteNewsArticle[]> {
     })
     .slice(0, 20)
 
+  // Basic hydration for the list/card cache (no full body translation)
   const articles = await Promise.all(candidates.map((candidate) => hydrateScoredCandidate(candidate)))
   rssCache = { articles, at: Date.now() }
   await setCachedRssArticles(articles)
+
+  // Pre-warm per-slug cache with full content so the first visitor gets a fast
+  // response. Run all in parallel; cap the whole phase at 22s so the Lambda
+  // stays within its execution budget even if some sources are slow.
+  await Promise.race([
+    Promise.allSettled(
+      candidates.map(async (candidate) => {
+        const hydrated = await hydrateScoredCandidate(candidate, true)
+        const enriched = await enrichArticleWithFullText(hydrated)
+        await setCachedArticleBySlug(enriched.slug, enriched)
+      }),
+    ),
+    new Promise<void>((resolve) => setTimeout(resolve, 22_000)),
+  ])
+
   return articles
 }
 
