@@ -2,6 +2,7 @@ import noticiasData from "@/data/noticias.json"
 import { generatePortalAnalysis } from "@/lib/news-editorial"
 import { translateToPortuguese } from "@/lib/deepl"
 import { getCachedRssArticles, setCachedRssArticles, getCachedArticleBySlug, setCachedArticleBySlug } from "@/lib/redis-cache"
+import { getNoticiaDb, saveNoticiaDb, listNoticiasDb, noticiaExistsDb } from "@/lib/dynamodb"
 
 export interface SiteNewsArticle {
   id: string
@@ -1403,28 +1404,52 @@ export async function refreshRssCache(): Promise<SiteNewsArticle[]> {
     })
     .slice(0, 20)
 
-  // Basic hydration for the list/card cache — 7s image timeout so OG image
-  // scraping has time to complete (default 3s is too short for source pages)
-  const articles = await Promise.all(candidates.map((candidate) => hydrateScoredCandidate(candidate, false, 7000)))
-  rssCache = { articles, at: Date.now() }
-  await setCachedRssArticles(articles)
+  // Check which articles are already fully processed in DynamoDB
+  const checkedCandidates = await Promise.all(
+    candidates.map(async (candidate) => {
+      const slug = buildRssSlug(candidate.item)
+      const alreadyDone = await noticiaExistsDb(slug)
+      return { candidate, slug, alreadyDone }
+    }),
+  )
 
-  // Pre-warm per-slug cache with full content so the first visitor gets a fast
-  // response. Run all in parallel; cap the whole phase at 22s so the Lambda
-  // stays within its execution budget even if some sources are slow.
-  await Promise.race([
+  const alreadyInDb = checkedCandidates.filter((c) => c.alreadyDone)
+  const toProcess = checkedCandidates.filter((c) => !c.alreadyDone)
+
+  // Fetch existing full articles from DB (for list cache)
+  const fromDb = await Promise.all(
+    alreadyInDb.map(({ slug }) => getNoticiaDb(slug)),
+  ).then((results) => results.filter((a): a is SiteNewsArticle => a !== null))
+
+  // Process only new articles — full enrichment + save to DynamoDB + Redis slug cache
+  const processedResults = await Promise.race([
     Promise.allSettled(
-      candidates.map(async (candidate) => {
-        // 8s image timeout in background cron — allows OG image scraping to complete
+      toProcess.map(async ({ candidate }) => {
         const hydrated = await hydrateScoredCandidate(candidate, true, 8000)
-        const enriched = await enrichArticleWithFullText(hydrated)
-        await setCachedArticleBySlug(enriched.slug, enriched)
+        const enriched = await enrichArticleWithFullText(hydrated).catch(() => hydrated)
+        await saveNoticiaDb(enriched)
+        await setCachedArticleBySlug(enriched.slug, enriched).catch(() => {})
+        return enriched
       }),
     ),
-    new Promise<void>((resolve) => setTimeout(resolve, 22_000)),
+    new Promise<PromiseSettledResult<SiteNewsArticle>[]>((resolve) =>
+      setTimeout(() => resolve([]), 25_000),
+    ),
   ])
 
-  return articles
+  const newArticles = processedResults
+    .filter((r): r is PromiseFulfilledResult<SiteNewsArticle> => r.status === "fulfilled")
+    .map((r) => r.value)
+
+  // Combine DB articles + newly processed, sort by date, update list caches
+  const allArticles = [...fromDb, ...newArticles]
+    .sort((a, b) => new Date(b.data).getTime() - new Date(a.data).getTime())
+    .slice(0, 20)
+
+  rssCache = { articles: allArticles, at: Date.now() }
+  await setCachedRssArticles(allArticles)
+
+  return allArticles
 }
 
 export async function getRssNews(limit = 20): Promise<SiteNewsArticle[]> {
@@ -1442,7 +1467,15 @@ export async function getRssNews(limit = 20): Promise<SiteNewsArticle[]> {
     return redisArticles.slice(0, limit)
   }
 
-  // 3. Full fetch (first visit or after 1h TTL expiry — ~5-6s)
+  // 3. DynamoDB (Redis expired but articles are persisted — ~10-20ms)
+  const dbArticles = await listNoticiasDb(limit)
+  if (dbArticles.length > 0) {
+    rssCache = { articles: dbArticles, at: now }
+    setCachedRssArticles(dbArticles).catch(() => {})
+    return dbArticles
+  }
+
+  // 4. Full fetch from RSS feeds (first ever run or DB empty — ~5-6s)
   const candidates = (await getAllScoredCandidates())
     .sort((a, b) => {
       if (b.score !== a.score) return b.score - a.score
@@ -1452,8 +1485,6 @@ export async function getRssNews(limit = 20): Promise<SiteNewsArticle[]> {
 
   const articles = await Promise.all(candidates.map((candidate) => hydrateScoredCandidate(candidate)))
   rssCache = { articles, at: now }
-
-  // Store in Redis without blocking the response
   setCachedRssArticles(articles).catch(() => {})
 
   return articles
@@ -1606,6 +1637,7 @@ async function enrichAndCache(article: SiteNewsArticle): Promise<SiteNewsArticle
     ])
     if (!enriched.resumo) {
       setCachedArticleBySlug(enriched.slug, enriched).catch(() => {})
+      saveNoticiaDb(enriched).catch(() => {})
     }
     return enriched
   } catch {
@@ -1618,17 +1650,27 @@ export async function getNewsArticleBySlug(slug: string) {
   const localArticle = normalizeLocalArticles().find((article) => article.slug === slug)
   if (localArticle) return localArticle
 
-  // Fast path: fully enriched article pre-warmed by cron (30 min TTL).
+  // 1. Redis slug cache — fully enriched, fastest (~1ms)
   const cached = await getCachedArticleBySlug(slug)
   if (cached && !cached.resumo) return cached
 
-  // Slug in RSS list cache — enrich on-demand if still truncated.
-  const cachedList = await getCachedRssArticles()
-  const listHit = cachedList?.find((a) => a.slug === slug)
-  const base = cached ?? listHit
+  // 2. DynamoDB — persistent, survives Redis TTL (~10ms)
+  const dbArticle = await getNoticiaDb(slug)
+  if (dbArticle && !dbArticle.resumo) {
+    setCachedArticleBySlug(slug, dbArticle).catch(() => {}) // re-warm Redis
+    return dbArticle
+  }
+
+  // 3. Article found but truncated (resumo: true) — enrich on-demand
+  const base = cached ?? dbArticle
   if (base) return enrichAndCache(base)
 
-  // Last resort: fetch feeds to find the article, then enrich.
+  // 4. Check RSS list cache as a base for enrichment
+  const cachedList = await getCachedRssArticles()
+  const listHit = cachedList?.find((a) => a.slug === slug)
+  if (listHit) return enrichAndCache(listHit)
+
+  // 5. Last resort: fetch feeds, enrich, and save to DB for next time
   const directCandidate = await findScoredCandidateBySlug(slug)
   if (directCandidate) {
     const hydrated = await hydrateScoredCandidate(directCandidate, true)
