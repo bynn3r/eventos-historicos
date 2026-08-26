@@ -7,7 +7,7 @@ applications:
           commands:
             - npm install -g pnpm
             - export npm_config_min_pkg_age=0
-            - pnpm install --no-frozen-lockfile
+            - pnpm install --no-frozen-lockfile --config.min-pkg-age=0
         build:
           commands:
             - pnpm build
