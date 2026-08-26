@@ -1317,6 +1317,7 @@ function buildScoredCandidate(item: ParsedFeedItem) {
 async function hydrateScoredCandidate(
   candidate: NonNullable<ReturnType<typeof buildScoredCandidate>>,
   full = false,
+  imageTimeoutMs = 3000,
 ): Promise<SiteNewsArticle> {
   const { item, categoria, data } = candidate
   const slug = buildRssSlug(item)
@@ -1334,7 +1335,7 @@ async function hydrateScoredCandidate(
   const [imagem, translatedTitle, translatedDesc, translatedRawText] = await Promise.all([
     Promise.race([
       resolveArticleImage({ ...item, categoria, link: item.link }, item.imagem),
-      new Promise<string>((resolve) => setTimeout(() => resolve(imageFallback), 3000)),
+      new Promise<string>((resolve) => setTimeout(() => resolve(imageFallback), imageTimeoutMs)),
     ]),
     isEnglish ? translateToPortuguese(item.titulo) : Promise.resolve(item.titulo),
     isEnglish ? translateToPortuguese(item.descricao) : Promise.resolve(item.descricao),
@@ -1413,7 +1414,8 @@ export async function refreshRssCache(): Promise<SiteNewsArticle[]> {
   await Promise.race([
     Promise.allSettled(
       candidates.map(async (candidate) => {
-        const hydrated = await hydrateScoredCandidate(candidate, true)
+        // 8s image timeout in background cron — allows OG image scraping to complete
+        const hydrated = await hydrateScoredCandidate(candidate, true, 8000)
         const enriched = await enrichArticleWithFullText(hydrated)
         await setCachedArticleBySlug(enriched.slug, enriched)
       }),
