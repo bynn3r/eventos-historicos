@@ -1593,40 +1593,25 @@ export async function getNewsArticleBySlug(slug: string) {
   const localArticle = normalizeLocalArticles().find((article) => article.slug === slug)
   if (localArticle) return localArticle
 
-  // Fast path: fully enriched article cached by slug in Redis (30 min TTL).
+  // Fast path: fully enriched article pre-warmed by cron (30 min TTL).
   const cached = await getCachedArticleBySlug(slug)
   if (cached) return cached
 
-  // Second fast path: slug already in the RSS list cache — skip re-fetching all
-  // feeds and just enrich this one article.
+  // Slug in RSS list cache but not yet enriched by cron — return the basic
+  // article (feed content, possibly truncated). No scraping on user visit.
   const cachedList = await getCachedRssArticles()
   const listHit = cachedList?.find((a) => a.slug === slug)
-  if (listHit) {
-    const enriched = await enrichArticleWithFullText(listHit)
-    setCachedArticleBySlug(slug, enriched).catch(() => {})
-    return enriched
-  }
+  if (listHit) return listHit
 
-  // Find the raw candidate among all feeds (fetches all RSS feeds).
+  // Last resort: fetch feeds to find the article, return without scraping.
   const directCandidate = await findScoredCandidateBySlug(slug)
   if (directCandidate) {
-    const hydrated = await hydrateScoredCandidate(directCandidate, true)
-    const enriched = await enrichArticleWithFullText(hydrated)
-    setCachedArticleBySlug(slug, enriched).catch(() => {})
-    return enriched
+    return hydrateScoredCandidate(directCandidate, true)
   }
 
   // Fallback for AI-generated portal analyses slugs.
-  const { rssArticles, localArticles } = await getCuratedNews(30)
-  const fallbackLocal = localArticles.find((article) => article.slug === slug)
-  if (fallbackLocal) return fallbackLocal
-
-  const rssArticle = rssArticles.find((article) => article.slug === slug)
-  if (!rssArticle) return undefined
-
-  const enriched = await enrichArticleWithFullText(rssArticle)
-  setCachedArticleBySlug(slug, enriched).catch(() => {})
-  return enriched
+  const { localArticles, rssArticles } = await getCuratedNews(30)
+  return localArticles.find((a) => a.slug === slug) ?? rssArticles.find((a) => a.slug === slug)
 }
 
 export async function getRelatedNews(currentSlug: string, limit = 2) {
