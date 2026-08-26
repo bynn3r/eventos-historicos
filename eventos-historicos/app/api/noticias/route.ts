@@ -1,14 +1,14 @@
 import { NextResponse } from "next/server"
-import { getCuratedNews, getRssNews } from "@/lib/news"
+import { getCuratedNews } from "@/lib/news"
 
 export const dynamic = "force-dynamic"
 
 export async function GET() {
-  const [rssArticles, curated] = await Promise.all([getRssNews(20), getCuratedNews(20)])
+  const curated = await getCuratedNews(20)
 
   return NextResponse.json({
-    rssArticles,
+    rssArticles: curated.rssArticles,
     localArticles: curated.localArticles,
-    combinedArticles: rssArticles.length > 0 ? [...rssArticles, ...curated.localArticles] : curated.localArticles,
+    combinedArticles: curated.combinedArticles,
   })
 }
