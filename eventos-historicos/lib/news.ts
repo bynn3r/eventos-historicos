@@ -1599,14 +1599,18 @@ export async function getNewsArticleMetaBySlug(slug: string): Promise<{ titulo: 
 }
 
 async function enrichAndCache(article: SiteNewsArticle): Promise<SiteNewsArticle> {
-  const enriched = await Promise.race([
-    enrichArticleWithFullText(article),
-    new Promise<SiteNewsArticle>((resolve) => setTimeout(() => resolve(article), 8_000)),
-  ])
-  if (!enriched.resumo) {
-    setCachedArticleBySlug(enriched.slug, enriched).catch(() => {})
+  try {
+    const enriched = await Promise.race([
+      enrichArticleWithFullText(article).catch(() => article),
+      new Promise<SiteNewsArticle>((resolve) => setTimeout(() => resolve(article), 8_000)),
+    ])
+    if (!enriched.resumo) {
+      setCachedArticleBySlug(enriched.slug, enriched).catch(() => {})
+    }
+    return enriched
+  } catch {
+    return article
   }
-  return enriched
 }
 
 export async function getNewsArticleBySlug(slug: string) {
