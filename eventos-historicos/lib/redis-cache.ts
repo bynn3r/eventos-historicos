@@ -5,6 +5,9 @@ import type { SiteNewsArticle } from "@/lib/news"
 const CACHE_KEY = "noticias:rss:v3"
 const CACHE_TTL_SECONDS = 3600 // 1 hour
 
+const ARTICLE_PREFIX = "noticias:article:v1:"
+const ARTICLE_TTL_SECONDS = 1800 // 30 min — full hydrated+enriched article
+
 let client: Redis | null = null
 
 function getClient(): Redis | null {
@@ -34,4 +37,22 @@ export async function setCachedRssArticles(articles: SiteNewsArticle[]): Promise
   } catch {
     // non-fatal — next request will just recompute
   }
+}
+
+export async function getCachedArticleBySlug(slug: string): Promise<SiteNewsArticle | null> {
+  const redis = getClient()
+  if (!redis) return null
+  try {
+    return await redis.get<SiteNewsArticle>(`${ARTICLE_PREFIX}${slug}`)
+  } catch {
+    return null
+  }
+}
+
+export async function setCachedArticleBySlug(slug: string, article: SiteNewsArticle): Promise<void> {
+  const redis = getClient()
+  if (!redis) return
+  try {
+    await redis.set(`${ARTICLE_PREFIX}${slug}`, article, { ex: ARTICLE_TTL_SECONDS })
+  } catch {}
 }

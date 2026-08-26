@@ -1,7 +1,7 @@
 import noticiasData from "@/data/noticias.json"
 import { generatePortalAnalysis } from "@/lib/news-editorial"
 import { translateToPortuguese } from "@/lib/deepl"
-import { getCachedRssArticles, setCachedRssArticles } from "@/lib/redis-cache"
+import { getCachedRssArticles, setCachedRssArticles, getCachedArticleBySlug, setCachedArticleBySlug } from "@/lib/redis-cache"
 
 export interface SiteNewsArticle {
   id: string
@@ -1573,45 +1573,49 @@ export async function getNewsArticleMetaBySlug(slug: string): Promise<{ titulo: 
 }
 
 export async function getNewsArticleBySlug(slug: string) {
-  // Local (static) articles never need the RSS feed sweep at all, so check them
-  // first without paying for it.
+  // Local (static) articles never need the RSS feed sweep at all.
   const localArticle = normalizeLocalArticles().find((article) => article.slug === slug)
+  if (localArticle) return localArticle
 
-  if (localArticle) {
-    return localArticle
+  // Fast path: fully enriched article cached by slug in Redis (30 min TTL).
+  const cached = await getCachedArticleBySlug(slug)
+  if (cached) return cached
+
+  // Second fast path: slug already in the RSS list cache — skip re-fetching all
+  // feeds and just enrich this one article.
+  const cachedList = await getCachedRssArticles()
+  const listHit = cachedList?.find((a) => a.slug === slug)
+  if (listHit) {
+    const enriched = await enrichArticleWithFullText(listHit)
+    setCachedArticleBySlug(slug, enriched).catch(() => {})
+    return enriched
   }
 
-  // Most detail-page visits are for a live RSS article. Find just that one
-  // candidate and hydrate/enrich it alone, instead of translating a whole
-  // top-N list (getCuratedNews) just to look one slug up in it.
+  // Find the raw candidate among all feeds (fetches all RSS feeds).
   const directCandidate = await findScoredCandidateBySlug(slug)
-
   if (directCandidate) {
     const hydrated = await hydrateScoredCandidate(directCandidate, true)
-    return enrichArticleWithFullText(hydrated)
+    const enriched = await enrichArticleWithFullText(hydrated)
+    setCachedArticleBySlug(slug, enriched).catch(() => {})
+    return enriched
   }
 
-  // Fallback for slugs that only exist among AI-generated portal analyses,
-  // which are derived from the top-N RSS list and can't be found any other way.
+  // Fallback for AI-generated portal analyses slugs.
   const { rssArticles, localArticles } = await getCuratedNews(30)
   const fallbackLocal = localArticles.find((article) => article.slug === slug)
-
-  if (fallbackLocal) {
-    return fallbackLocal
-  }
+  if (fallbackLocal) return fallbackLocal
 
   const rssArticle = rssArticles.find((article) => article.slug === slug)
+  if (!rssArticle) return undefined
 
-  if (!rssArticle) {
-    return undefined
-  }
-
-  return enrichArticleWithFullText(rssArticle)
+  const enriched = await enrichArticleWithFullText(rssArticle)
+  setCachedArticleBySlug(slug, enriched).catch(() => {})
+  return enriched
 }
 
 export async function getRelatedNews(currentSlug: string, limit = 2) {
-  const { combinedArticles } = await getCuratedNews(12)
-  return combinedArticles.filter((article) => article.slug !== currentSlug).slice(0, limit)
+  const articles = await getRssNews(12)
+  return articles.filter((article) => article.slug !== currentSlug).slice(0, limit)
 }
 
 export function formatNewsDate(date: string) {
