@@ -1598,6 +1598,17 @@ export async function getNewsArticleMetaBySlug(slug: string): Promise<{ titulo: 
   return { titulo: hydrated.titulo, descricao: hydrated.descricao }
 }
 
+async function enrichAndCache(article: SiteNewsArticle): Promise<SiteNewsArticle> {
+  const enriched = await Promise.race([
+    enrichArticleWithFullText(article),
+    new Promise<SiteNewsArticle>((resolve) => setTimeout(() => resolve(article), 8_000)),
+  ])
+  if (!enriched.resumo) {
+    setCachedArticleBySlug(enriched.slug, enriched).catch(() => {})
+  }
+  return enriched
+}
+
 export async function getNewsArticleBySlug(slug: string) {
   // Local (static) articles never need the RSS feed sweep at all.
   const localArticle = normalizeLocalArticles().find((article) => article.slug === slug)
@@ -1605,18 +1616,19 @@ export async function getNewsArticleBySlug(slug: string) {
 
   // Fast path: fully enriched article pre-warmed by cron (30 min TTL).
   const cached = await getCachedArticleBySlug(slug)
-  if (cached) return cached
+  if (cached && !cached.resumo) return cached
 
-  // Slug in RSS list cache but not yet enriched by cron — return the basic
-  // article (feed content, possibly truncated). No scraping on user visit.
+  // Slug in RSS list cache — enrich on-demand if still truncated.
   const cachedList = await getCachedRssArticles()
   const listHit = cachedList?.find((a) => a.slug === slug)
-  if (listHit) return listHit
+  const base = cached ?? listHit
+  if (base) return enrichAndCache(base)
 
-  // Last resort: fetch feeds to find the article, return without scraping.
+  // Last resort: fetch feeds to find the article, then enrich.
   const directCandidate = await findScoredCandidateBySlug(slug)
   if (directCandidate) {
-    return hydrateScoredCandidate(directCandidate, true)
+    const hydrated = await hydrateScoredCandidate(directCandidate, true)
+    return enrichAndCache(hydrated)
   }
 
   // Fallback for AI-generated portal analyses slugs.

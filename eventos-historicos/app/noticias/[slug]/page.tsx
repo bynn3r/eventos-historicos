@@ -1,5 +1,5 @@
 import { ArticlePageRuntime } from "@/components/article-page-runtime"
-import { getNewsArticleBySlug, getRelatedNews } from "@/lib/news"
+import { getNewsArticleBySlug, getNewsArticleMetaBySlug, getRelatedNews } from "@/lib/news"
 import { notFound } from "next/navigation"
 
 interface NoticiaPageProps {
@@ -15,15 +15,15 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: NoticiaPageProps) {
-  const noticia = await getNewsArticleBySlug(params.slug)
+  const meta = await getNewsArticleMetaBySlug(params.slug)
 
-  if (!noticia) {
+  if (!meta) {
     return { title: "Noticia nao encontrada" }
   }
 
   return {
-    title: `${noticia.titulo} | Eventos Historicos`,
-    description: noticia.descricao,
+    title: `${meta.titulo} | Eventos Historicos`,
+    description: meta.descricao,
   }
 }
 
