@@ -1119,7 +1119,7 @@ function parseRssItems(xml: string, feedName: string) {
 async function fetchFeed(url: string, name: string) {
   try {
     const response = await fetch(url, {
-      signal: AbortSignal.timeout(10000),
+      signal: AbortSignal.timeout(4000),
       headers: { "User-Agent": "Mozilla/5.0" },
       cache: "no-store",
     })

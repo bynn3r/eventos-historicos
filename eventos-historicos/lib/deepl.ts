@@ -27,7 +27,7 @@ function createLimiter(concurrency: number) {
 }
 
 const myMemoryLimit = createLimiter(3)
-const googleLimit = createLimiter(4)
+const googleLimit = createLimiter(8)
 
 function splitIntoChunks(text: string, maxLen = 480): string[] {
   if (text.length <= maxLen) return [text]
