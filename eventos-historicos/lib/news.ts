@@ -1442,16 +1442,38 @@ function normalizeLocalArticles(): SiteNewsArticle[] {
     }))
 }
 
-export async function getCuratedNews(limit = 20) {
-  const rssArticles = await getRssNews(limit)
-  const generatedAnalyses = await generatePortalAnalysesFromRss(rssArticles)
-  const localArticles = [...generatedAnalyses, ...normalizeLocalArticles()]
+type CuratedNewsResult = {
+  rssArticles: SiteNewsArticle[]
+  localArticles: SiteNewsArticle[]
+  combinedArticles: SiteNewsArticle[]
+}
 
-  return {
+let curatedCache: { data: CuratedNewsResult; at: number } | null = null
+const CURATED_CACHE_TTL = 90_000
+
+export async function getCuratedNews(limit = 20): Promise<CuratedNewsResult> {
+  const now = Date.now()
+  if (curatedCache && now - curatedCache.at < CURATED_CACHE_TTL) {
+    return curatedCache.data
+  }
+
+  const rssArticles = await getRssNews(limit)
+
+  // Cap analyses at 8s — if OpenAI is slow, skip and serve articles now
+  const generatedAnalyses = await Promise.race([
+    generatePortalAnalysesFromRss(rssArticles),
+    new Promise<SiteNewsArticle[]>((resolve) => setTimeout(() => resolve([]), 8000)),
+  ])
+
+  const localArticles = [...generatedAnalyses, ...normalizeLocalArticles()]
+  const data: CuratedNewsResult = {
     rssArticles,
     localArticles,
     combinedArticles: rssArticles.length > 0 ? [...rssArticles, ...localArticles] : localArticles,
   }
+
+  curatedCache = { data, at: now }
+  return data
 }
 
 async function enrichArticleWithFullText(article: SiteNewsArticle): Promise<SiteNewsArticle> {

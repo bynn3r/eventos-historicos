@@ -73,23 +73,31 @@ export function NewsPageRuntime() {
 
     const load = async () => {
       try {
-        const response = await fetch("/api/noticias")
-        if (!response.ok) {
-          throw new Error("Falha ao carregar noticias")
-        }
+        // Stage 1: load RSS articles (fast — shows news immediately)
+        const response = await fetch("/api/noticias?articles=1")
+        if (!response.ok) throw new Error("Falha ao carregar noticias")
 
         const data = (await response.json()) as { rssArticles?: SiteNewsArticle[]; localArticles?: SiteNewsArticle[] }
+        if (cancelled) return
 
-        if (!cancelled) {
-          setRssArticles(data.rssArticles ?? [])
-          setLocalArticles(data.localArticles ?? [])
-          setStatus("ready")
+        setRssArticles(data.rssArticles ?? [])
+        setLocalArticles(data.localArticles ?? [])
+        setStatus("ready")
+
+        // Stage 2: load editorial analyses in background (slow — fills in silently)
+        if ((data.localArticles ?? []).length === 0) {
+          fetch("/api/noticias/analyses")
+            .then((r) => r.ok ? r.json() : null)
+            .then((analysesData) => {
+              if (!cancelled && analysesData?.localArticles?.length > 0) {
+                setLocalArticles(analysesData.localArticles)
+              }
+            })
+            .catch(() => {})
         }
       } catch (error) {
         console.error("Falha ao carregar noticias:", error)
-        if (!cancelled) {
-          setStatus("error")
-        }
+        if (!cancelled) setStatus("error")
       }
     }
 
