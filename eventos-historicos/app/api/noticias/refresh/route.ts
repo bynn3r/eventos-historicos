@@ -6,8 +6,14 @@ export const dynamic = "force-dynamic"
 export async function POST(request: NextRequest) {
   const secret = process.env.CRON_SECRET
   const auth = request.headers.get("authorization")
+  const querySecret = request.nextUrl.searchParams.get("secret")
 
-  if (secret && auth !== `Bearer ${secret}`) {
+  const authorized =
+    !secret ||
+    auth === `Bearer ${secret}` ||
+    querySecret === secret
+
+  if (!authorized) {
     return NextResponse.json({ error: "unauthorized" }, { status: 401 })
   }
 
