@@ -1391,6 +1391,20 @@ async function getAllScoredCandidates() {
 let rssCache: { articles: SiteNewsArticle[]; at: number } | null = null
 const RSS_CACHE_TTL = 90_000
 
+export async function refreshRssCache(): Promise<SiteNewsArticle[]> {
+  const candidates = (await getAllScoredCandidates())
+    .sort((a, b) => {
+      if (b.score !== a.score) return b.score - a.score
+      return new Date(b.data).getTime() - new Date(a.data).getTime()
+    })
+    .slice(0, 20)
+
+  const articles = await Promise.all(candidates.map((candidate) => hydrateScoredCandidate(candidate)))
+  rssCache = { articles, at: Date.now() }
+  await setCachedRssArticles(articles)
+  return articles
+}
+
 export async function getRssNews(limit = 20): Promise<SiteNewsArticle[]> {
   const now = Date.now()
 
