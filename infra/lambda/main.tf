@@ -94,15 +94,33 @@ resource "aws_lambda_function" "noticias" {
 
 resource "aws_lambda_function_url" "noticias" {
   function_name      = aws_lambda_function.noticias.function_name
-  authorization_type = "NONE"
+  authorization_type = "AWS_IAM"
 
   cors {
     allow_credentials = false
     allow_origins     = [var.allowed_origin]
-    allow_methods     = ["GET", "POST", "OPTIONS"]
-    allow_headers     = ["authorization", "content-type"]
+    allow_methods     = ["GET", "POST"]
+    allow_headers     = ["authorization", "content-type", "x-amz-date", "x-amz-security-token"]
     max_age           = 86400
   }
+}
+
+# Allow the deploy IAM user to invoke the Function URL with IAM auth
+resource "aws_iam_user_policy" "invoke_lambda_url" {
+  name = "invoke-noticias-lambda-url"
+  user = var.deploy_iam_user
+
+  policy = jsonencode({
+    Version = "2012-10-17"
+    Statement = [{
+      Effect   = "Allow"
+      Action   = "lambda:InvokeFunctionUrl"
+      Resource = aws_lambda_function.noticias.arn
+      Condition = {
+        StringEquals = { "lambda:FunctionUrlAuthType" = "AWS_IAM" }
+      }
+    }]
+  })
 }
 
 # ─── EventBridge Scheduler (replaces QStash) ─────────────────────────────────

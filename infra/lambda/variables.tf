@@ -61,6 +61,12 @@ variable "allowed_origin" {
   default     = "*"
 }
 
+variable "deploy_iam_user" {
+  description = "IAM username that Next.js uses to call AWS (gets InvokeFunctionUrl permission)"
+  type        = string
+  default     = "eventos-historicos-deploy"
+}
+
 variable "schedule_expression" {
   description = "EventBridge Scheduler cron expression (4x/day)"
   type        = string
