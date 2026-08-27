@@ -2,8 +2,15 @@
 
 import type React from "react"
 import { createContext, useContext, useState, useEffect } from "react"
+import ptTranslations from "@/lib/i18n/pt.json"
+import enTranslations from "@/lib/i18n/en.json"
 
 type Language = "pt" | "en"
+
+const DICTIONARIES: Record<Language, any> = {
+  pt: ptTranslations,
+  en: enTranslations,
+}
 
 interface LanguageContextType {
   language: Language
@@ -15,25 +22,14 @@ interface LanguageContextType {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined)
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
+  // Dictionaries are bundled at build time (not fetched), so the correct
+  // translations are available on the very first render — server-side and
+  // client-side alike. This avoids both an SSR HTML full of raw i18n keys
+  // and a flash of untranslated text before a network fetch resolved.
   const [language, setLanguageState] = useState<Language>("pt")
-  const [translations, setTranslations] = useState<any>({})
+  const translations = DICTIONARIES[language]
 
-  // Load translations
-  useEffect(() => {
-    const loadTranslations = async () => {
-      try {
-        const response = await fetch(`/i18n/${language}.json`)
-        const data = await response.json()
-        setTranslations(data)
-      } catch (error) {
-        console.error("Failed to load translations:", error)
-      }
-    }
-
-    loadTranslations()
-  }, [language])
-
-  // Load saved language from localStorage
+  // Load saved language preference from localStorage after mount
   useEffect(() => {
     const savedLanguage = localStorage.getItem("language") as Language
     if (savedLanguage && (savedLanguage === "pt" || savedLanguage === "en")) {
