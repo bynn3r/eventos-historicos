@@ -223,22 +223,25 @@ async function resolveArticleImage(
   feedImage?: string,
   timeoutMs = 8000,
 ): Promise<string> {
+  // The source page's own og:image is almost always the outlet's full-size
+  // editorial photo (the link-preview standard, typically 1200px+) — RSS
+  // feed images are frequently tiny crops (the Guardian's feed, e.g., ships
+  // 140px-wide thumbnails that look blurry as a hero image). Prefer it.
+  const sourceImage = await Promise.race([
+    fetchSourcePageImage(article.link),
+    new Promise<string>((resolve) => setTimeout(() => resolve(""), timeoutMs)),
+  ])
+  // Can be the same kind of signed CDN URL as the feed image (reproduced
+  // with the Guardian: og:image is also a i.guim.co.uk URL that 401s if its
+  // dimensions get rewritten) — validate before trusting it.
+  if (sourceImage && (await isImageReachable(sourceImage))) return sourceImage
+
   const normalized = normalizeImageUrl(feedImage)
   // Feeds sometimes hand out signed CDN URLs (the Guardian's i.guim.co.uk
   // being the reproducible case) that 401 for anyone but the Guardian's own
   // frontend — accepting them unchecked meant the article was saved with an
   // image that 401s for every real visitor. Validate before accepting.
   if (normalized && !GENERIC_FALLBACK_IMAGES.has(normalized) && (await isImageReachable(normalized))) return normalized
-
-  const sourceImage = await Promise.race([
-    fetchSourcePageImage(article.link),
-    new Promise<string>((resolve) => setTimeout(() => resolve(""), timeoutMs)),
-  ])
-  // og:image scraped from the source page can be the same kind of signed CDN
-  // URL as the feed image (reproduced with the Guardian: og:image is also a
-  // i.guim.co.uk URL that 401s) — validate this candidate too instead of
-  // trusting it just because it came from the page's own metadata.
-  if (sourceImage && (await isImageReachable(sourceImage))) return sourceImage
 
   const aiHints = await requestOpenAIImageHints(article)
   const queries = [...new Set([
