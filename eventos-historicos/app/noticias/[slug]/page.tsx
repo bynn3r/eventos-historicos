@@ -8,7 +8,15 @@ interface NoticiaPageProps {
   }
 }
 
-export const revalidate = 300
+// generateStaticParams() intentionally returns [] below (news slugs are
+// dynamic/unpredictable). revalidate/ISR on a route with no pre-built params
+// means every request hits Amplify's on-demand-fallback rendering path, which
+// 500s on this platform's Web Compute adapter — confirmed via the build's
+// route table (this page marked ● SSG instead of ƒ Dynamic) and reproduced
+// live (every /noticias/[slug] request currently returns 500). force-dynamic
+// avoids that fallback path entirely. Data fetches are cheap now (DynamoDB
+// reads, ~10-20ms) so this doesn't cost the performance revalidate bought.
+export const dynamic = "force-dynamic"
 
 export async function generateStaticParams() {
   return []
