@@ -1461,13 +1461,11 @@ export async function getRssNews(limit = 20): Promise<SiteNewsArticle[]> {
     return rssCache.articles.slice(0, limit)
   }
 
-  // 2. Lambda API — primary source when configured (~10-30ms)
-  if (isLambdaConfigured()) {
-    const lambdaArticles = await fetchRssArticlesFromApi(limit)
-    if (lambdaArticles.length > 0) {
-      rssCache = { articles: lambdaArticles, at: now }
-      return lambdaArticles
-    }
+  // 2. DynamoDB direct (~10-20ms) — Lambda writes here, so this is always fresh
+  const dbArticles = await listNoticiasDb(limit)
+  if (dbArticles.length > 0) {
+    rssCache = { articles: dbArticles, at: now }
+    return dbArticles
   }
 
   // 3. Redis cache (legacy fallback — ~5-20ms)
@@ -1475,13 +1473,6 @@ export async function getRssNews(limit = 20): Promise<SiteNewsArticle[]> {
   if (redisArticles && redisArticles.length > 0) {
     rssCache = { articles: redisArticles, at: now }
     return redisArticles.slice(0, limit)
-  }
-
-  // 4. DynamoDB direct (~10-20ms)
-  const dbArticles = await listNoticiasDb(limit)
-  if (dbArticles.length > 0) {
-    rssCache = { articles: dbArticles, at: now }
-    return dbArticles
   }
 
   // 5. Full RSS fetch — last resort, no Lambda configured
@@ -1654,22 +1645,16 @@ export async function getNewsArticleBySlug(slug: string) {
   const localArticle = normalizeLocalArticles().find((article) => article.slug === slug)
   if (localArticle) return localArticle
 
-  // 1. Lambda API — primary source when configured
-  if (isLambdaConfigured()) {
-    const lambdaArticle = await fetchArticleBySlugFromApi(slug)
-    if (lambdaArticle) return lambdaArticle
-  }
+  // 1. DynamoDB (~10ms) — Lambda writes here, so this is always fresh
+  const dbArticle = await getNoticiaDb(slug)
+  if (dbArticle && !dbArticle.resumo) return dbArticle
 
   // 2. Redis slug cache (~1ms)
   const cached = await getCachedArticleBySlug(slug)
   if (cached && !cached.resumo) return cached
 
-  // 3. DynamoDB (~10ms)
-  const dbArticle = await getNoticiaDb(slug)
-  if (dbArticle && !dbArticle.resumo) return dbArticle
-
-  // 4. Article truncated — enrich on-demand as fallback
-  const base = cached ?? dbArticle
+  // 3. Article truncated — enrich on-demand as fallback
+  const base = dbArticle ?? cached
   if (base) return enrichAndCache(base)
 
   const cachedList = await getCachedRssArticles()
