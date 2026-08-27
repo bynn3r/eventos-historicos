@@ -904,10 +904,34 @@ async function fetchSourceArticleText(url?: string): Promise<string> {
   return text.length >= 400 ? text : ""
 }
 
+async function isImageReachable(url: string, timeoutMs = 3000): Promise<boolean> {
+  try {
+    const headRes = await fetch(url, { method: "HEAD", signal: AbortSignal.timeout(timeoutMs) })
+    if (headRes.ok) return true
+    // Some CDNs (e.g. the Guardian's signed image proxy) reject HEAD or need
+    // a real GET to evaluate the request signature — retry with a tiny range
+    // request before giving up on the URL.
+    if ([405, 501].includes(headRes.status)) {
+      const getRes = await fetch(url, {
+        signal: AbortSignal.timeout(timeoutMs),
+        headers: { Range: "bytes=0-0" },
+      })
+      return getRes.ok
+    }
+    return false
+  } catch {
+    return false
+  }
+}
+
 async function resolveArticleImage(article: { titulo: string; descricao: string; categoria: string; link?: string }, feedImage?: string) {
   const normalizedFeedImage = normalizeImageUrl(feedImage)
 
-  if (normalizedFeedImage) {
+  // Feeds sometimes hand out signed CDN URLs (the Guardian's i.guim.co.uk
+  // being the reproducible case) that 401 for anyone but the Guardian's own
+  // frontend — accepting them unchecked meant the article looked fine here
+  // but rendered a broken image / generic fallback for every real visitor.
+  if (normalizedFeedImage && (await isImageReachable(normalizedFeedImage))) {
     return normalizedFeedImage
   }
 
