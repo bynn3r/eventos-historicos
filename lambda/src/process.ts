@@ -63,6 +63,13 @@ function normalizeImageUrl(url?: string): string {
   if (/(logo|icon|favicon|avatar|sprite)/i.test(normalized)) return ""
   if (/(flag_of|seal_of|coat_of_arms|locator_map|blank_map|orthographic|relief_location)/i.test(normalized)) return ""
   if (/w16|w24|w32|w48/i.test(normalized)) return ""
+
+  // Some CDNs (e.g. the Guardian's i.guim.co.uk) sign the transform query
+  // params — rewriting width/height/quality without recalculating that
+  // signature invalidates it (401 "invalid signature"). Leave signed URLs
+  // untouched instead of forcing our own dimensions.
+  if (/[?&](s|sig|signature|token)=/i.test(normalized)) return normalized
+
   return normalized
     .replace(/([?&])(width|w)=\d+/gi, "$1$2=1600")
     .replace(/([?&])(height|h)=\d+/gi, "$1$2=900")
