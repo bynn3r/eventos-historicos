@@ -1,14 +1,9 @@
-import { cache } from "react"
 import noticiasData from "@/data/noticias.json"
 import { generatePortalAnalysis } from "@/lib/news-editorial"
 import { translateToPortuguese } from "@/lib/deepl"
 
-import { getNoticiaDb as _getNoticiaDb, saveNoticiaDb, listNoticiasDb, noticiaExistsDb } from "@/lib/dynamodb"
+import { getNoticiaDb, saveNoticiaDb, listNoticiasDb, noticiaExistsDb } from "@/lib/dynamodb"
 import { fetchRssArticlesFromApi, fetchArticleBySlugFromApi, isLambdaConfigured } from "@/lib/news-api"
-
-// Deduplicates DynamoDB reads for the same slug within a single request
-// (generateMetadata + NoticiaPage both call this for the same slug)
-const getNoticiaDb = cache(_getNoticiaDb)
 
 export interface SiteNewsArticle {
   id: string

@@ -47,21 +47,28 @@ export async function saveNoticiaDb(article: SiteNewsArticle): Promise<void> {
 
 export async function getNoticiaDb(slug: string): Promise<SiteNewsArticle | null> {
   const client = getClient()
-  if (!client) return null
+  if (!client) {
+    console.warn("[dynamodb] getNoticiaDb: no credentials configured")
+    return null
+  }
 
   try {
     const result = await client.send(
       new GetCommand({ TableName: TABLE, Key: { slug } }),
     )
     return (result.Item as SiteNewsArticle) ?? null
-  } catch {
+  } catch (err) {
+    console.error("[dynamodb] getNoticiaDb error:", err)
     return null
   }
 }
 
 export async function listNoticiasDb(limit = 20): Promise<SiteNewsArticle[]> {
   const client = getClient()
-  if (!client) return []
+  if (!client) {
+    console.warn("[dynamodb] listNoticiasDb: no credentials configured")
+    return []
+  }
 
   try {
     const result = await client.send(
@@ -71,12 +78,13 @@ export async function listNoticiasDb(limit = 20): Promise<SiteNewsArticle[]> {
         KeyConditionExpression: "#tipo = :tipo",
         ExpressionAttributeNames: { "#tipo": "tipo" },
         ExpressionAttributeValues: { ":tipo": "rss" },
-        ScanIndexForward: false, // newest first
+        ScanIndexForward: false,
         Limit: limit,
       }),
     )
     return (result.Items as SiteNewsArticle[]) ?? []
-  } catch {
+  } catch (err) {
+    console.error("[dynamodb] listNoticiasDb error:", err)
     return []
   }
 }
