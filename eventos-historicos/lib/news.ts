@@ -937,7 +937,11 @@ async function resolveArticleImage(article: { titulo: string; descricao: string;
 
   const sourcePageImage = await fetchSourcePageImage(article.link)
 
-  if (sourcePageImage) {
+  // og:image scraped from the source page can be the same kind of signed CDN
+  // URL as the feed image (reproduced with the Guardian: og:image is also a
+  // i.guim.co.uk URL that 401s) — validate this candidate too instead of
+  // trusting it just because it came from the page's own metadata.
+  if (sourcePageImage && (await isImageReachable(sourcePageImage))) {
     return sourcePageImage
   }
 

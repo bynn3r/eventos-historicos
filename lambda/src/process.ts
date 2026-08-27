@@ -191,19 +191,47 @@ async function requestOpenAIImageHints(article: { titulo: string; descricao: str
   }
 }
 
+async function isImageReachable(url: string, timeoutMs = 3000): Promise<boolean> {
+  try {
+    const headRes = await fetch(url, { method: "HEAD", signal: AbortSignal.timeout(timeoutMs) })
+    if (headRes.ok) return true
+    // Some CDNs (e.g. the Guardian's signed image proxy) reject HEAD or need
+    // a real GET to evaluate the request signature — retry with a tiny range
+    // request before giving up on the URL.
+    if ([405, 501].includes(headRes.status)) {
+      const getRes = await fetch(url, {
+        signal: AbortSignal.timeout(timeoutMs),
+        headers: { Range: "bytes=0-0" },
+      })
+      return getRes.ok
+    }
+    return false
+  } catch {
+    return false
+  }
+}
+
 async function resolveArticleImage(
   article: { titulo: string; descricao: string; categoria: string; link?: string },
   feedImage?: string,
   timeoutMs = 8000,
 ): Promise<string> {
   const normalized = normalizeImageUrl(feedImage)
-  if (normalized && !GENERIC_FALLBACK_IMAGES.has(normalized)) return normalized
+  // Feeds sometimes hand out signed CDN URLs (the Guardian's i.guim.co.uk
+  // being the reproducible case) that 401 for anyone but the Guardian's own
+  // frontend — accepting them unchecked meant the article was saved with an
+  // image that 401s for every real visitor. Validate before accepting.
+  if (normalized && !GENERIC_FALLBACK_IMAGES.has(normalized) && (await isImageReachable(normalized))) return normalized
 
   const sourceImage = await Promise.race([
     fetchSourcePageImage(article.link),
     new Promise<string>((resolve) => setTimeout(() => resolve(""), timeoutMs)),
   ])
-  if (sourceImage) return sourceImage
+  // og:image scraped from the source page can be the same kind of signed CDN
+  // URL as the feed image (reproduced with the Guardian: og:image is also a
+  // i.guim.co.uk URL that 401s) — validate this candidate too instead of
+  // trusting it just because it came from the page's own metadata.
+  if (sourceImage && (await isImageReachable(sourceImage))) return sourceImage
 
   const aiHints = await requestOpenAIImageHints(article)
   const queries = [...new Set([
