@@ -1,7 +1,7 @@
 import noticiasData from "@/data/noticias.json"
 import { generatePortalAnalysis } from "@/lib/news-editorial"
 import { translateToPortuguese } from "@/lib/deepl"
-import { getCachedRssArticles, setCachedRssArticles, getCachedArticleBySlug, setCachedArticleBySlug } from "@/lib/redis-cache"
+
 import { getNoticiaDb, saveNoticiaDb, listNoticiasDb, noticiaExistsDb } from "@/lib/dynamodb"
 import { fetchRssArticlesFromApi, fetchArticleBySlugFromApi, isLambdaConfigured } from "@/lib/news-api"
 
@@ -1429,7 +1429,6 @@ export async function refreshRssCache(): Promise<SiteNewsArticle[]> {
         const hydrated = await hydrateScoredCandidate(candidate, true, 8000)
         const enriched = await enrichArticleWithFullText(hydrated).catch(() => hydrated)
         await saveNoticiaDb(enriched)
-        await setCachedArticleBySlug(enriched.slug, enriched).catch(() => {})
         return enriched
       }),
     ),
@@ -1448,8 +1447,6 @@ export async function refreshRssCache(): Promise<SiteNewsArticle[]> {
     .slice(0, 20)
 
   rssCache = { articles: allArticles, at: Date.now() }
-  await setCachedRssArticles(allArticles)
-
   return allArticles
 }
 
@@ -1468,21 +1465,13 @@ export async function getRssNews(limit = 20): Promise<SiteNewsArticle[]> {
     return dbArticles
   }
 
-  // 3. Redis cache (legacy fallback — ~5-20ms)
-  const redisArticles = await getCachedRssArticles()
-  if (redisArticles && redisArticles.length > 0) {
-    rssCache = { articles: redisArticles, at: now }
-    return redisArticles.slice(0, limit)
-  }
-
-  // 5. Full RSS fetch — last resort, no Lambda configured
+  // 3. Full RSS fetch — last resort, no DynamoDB data
   const candidates = (await getAllScoredCandidates())
     .sort((a, b) => b.score !== a.score ? b.score - a.score : new Date(b.data).getTime() - new Date(a.data).getTime())
     .slice(0, limit)
 
   const articles = await Promise.all(candidates.map((candidate) => hydrateScoredCandidate(candidate)))
   rssCache = { articles, at: now }
-  setCachedRssArticles(articles).catch(() => {})
   return articles
 }
 
@@ -1608,14 +1597,9 @@ export async function getNewsArticleMetaBySlug(slug: string): Promise<{ titulo: 
   const localArticle = normalizeLocalArticles().find((article) => article.slug === slug)
   if (localArticle) return { titulo: localArticle.titulo, descricao: localArticle.descricao }
 
-  // Check Redis slug cache first — avoids fetching all feeds just for metadata
-  const cached = await getCachedArticleBySlug(slug)
-  if (cached) return { titulo: cached.titulo, descricao: cached.descricao }
-
-  // Check RSS list cache
-  const cachedList = await getCachedRssArticles()
-  const listHit = cachedList?.find((a) => a.slug === slug)
-  if (listHit) return { titulo: listHit.titulo, descricao: listHit.descricao }
+  // DynamoDB lookup (~10ms)
+  const dbArticle = await getNoticiaDb(slug)
+  if (dbArticle) return { titulo: dbArticle.titulo, descricao: dbArticle.descricao }
 
   // Last resort: fetch all feeds
   const candidate = await findScoredCandidateBySlug(slug)
@@ -1632,7 +1616,6 @@ async function enrichAndCache(article: SiteNewsArticle): Promise<SiteNewsArticle
       new Promise<SiteNewsArticle>((resolve) => setTimeout(() => resolve(article), 8_000)),
     ])
     if (!enriched.resumo) {
-      setCachedArticleBySlug(enriched.slug, enriched).catch(() => {})
       saveNoticiaDb(enriched).catch(() => {})
     }
     return enriched
@@ -1649,17 +1632,8 @@ export async function getNewsArticleBySlug(slug: string) {
   const dbArticle = await getNoticiaDb(slug)
   if (dbArticle && !dbArticle.resumo) return dbArticle
 
-  // 2. Redis slug cache (~1ms)
-  const cached = await getCachedArticleBySlug(slug)
-  if (cached && !cached.resumo) return cached
-
-  // 3. Article truncated — enrich on-demand as fallback
-  const base = dbArticle ?? cached
-  if (base) return enrichAndCache(base)
-
-  const cachedList = await getCachedRssArticles()
-  const listHit = cachedList?.find((a) => a.slug === slug)
-  if (listHit) return enrichAndCache(listHit)
+  // 2. Article truncated — enrich on-demand
+  if (dbArticle) return enrichAndCache(dbArticle)
 
   const directCandidate = await findScoredCandidateBySlug(slug)
   if (directCandidate) {
