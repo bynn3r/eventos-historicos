@@ -38,13 +38,22 @@ export async function getArticle(slug: string): Promise<SiteNewsArticle | null> 
   }
 }
 
+const GENERIC_IMAGES = new Set([
+  "/historical-books-and-world-map-study.jpg",
+  "/world-map-with-geopolitical-tensions.jpg",
+  "/geopolitics-world-map-with-news-overlay.jpg",
+])
+
 export async function articleExistsFull(slug: string): Promise<boolean> {
   try {
     const result = await getClient().send(
-      new GetCommand({ TableName: TABLE, Key: { slug }, ProjectionExpression: "slug, resumo" }),
+      new GetCommand({ TableName: TABLE, Key: { slug }, ProjectionExpression: "slug, resumo, imagem" }),
     )
-    const item = result.Item as { slug?: string; resumo?: boolean } | undefined
-    return Boolean(item?.slug && item.resumo === false)
+    const item = result.Item as { slug?: string; resumo?: boolean; imagem?: string } | undefined
+    if (!item?.slug || item.resumo !== false) return false
+    // Re-process articles with missing or generic images even when text is enriched
+    if (!item.imagem || GENERIC_IMAGES.has(item.imagem)) return false
+    return true
   } catch {
     return false
   }

@@ -1552,7 +1552,11 @@ async function enrichArticleWithFullText(article: SiteNewsArticle): Promise<Site
   }
 
   const sourceLink = article.linkFonte || article.fonteUrl
+  const needsImage = !article.imagem || GENERIC_FALLBACK_IMAGES.has(article.imagem)
+
+  // fetchSourcePageHtml is cached — fetching text then image reuses the same HTML response
   const scrapedText = await fetchSourceArticleText(sourceLink)
+  const img = needsImage ? await fetchSourcePageImage(sourceLink) : undefined
 
   let body = ""
   let bodyOriginal: string | undefined
@@ -1573,7 +1577,8 @@ async function enrichArticleWithFullText(article: SiteNewsArticle): Promise<Site
     })
 
     if (aiText.trim() === article.conteudo.trim()) {
-      return article
+      // Text enrichment failed; still save updated image if we got one
+      return img && img !== article.imagem ? { ...article, imagem: img } : article
     }
 
     body = aiText
@@ -1588,6 +1593,7 @@ async function enrichArticleWithFullText(article: SiteNewsArticle): Promise<Site
   return {
     ...article,
     resumo: false,
+    imagem: (needsImage && img) ? img : article.imagem,
     conteudo: body,
     conteudoHtml: `${textToHtmlParagraphs(body)}${notice}`,
     idioma: bodyOriginal ? "en" : article.idioma,

@@ -405,10 +405,24 @@ async function hydrateScoredCandidate(candidate: ScoredCandidate, imageTimeoutMs
 }
 
 async function enrichArticle(article: SiteNewsArticle): Promise<SiteNewsArticle> {
-  if (article.tipo !== "rss" || !article.resumo) return article
+  const needsImage = !article.imagem || GENERIC_FALLBACK_IMAGES.has(article.imagem)
+  const needsText = article.tipo === "rss" && article.resumo
+
+  if (!needsText && !needsImage) return article
 
   const sourceLink = article.linkFonte || article.fonteUrl
-  const scrapedText = await fetchSourceArticleText(sourceLink)
+
+  // Image-only update when text is already enriched
+  if (!needsText) {
+    const img = await fetchSourcePageImage(sourceLink)
+    return img ? { ...article, imagem: img } : article
+  }
+
+  // Fetch text and og:image in parallel (separate HTTP requests in Lambda)
+  const [scrapedText, img] = await Promise.all([
+    fetchSourceArticleText(sourceLink),
+    needsImage ? fetchSourcePageImage(sourceLink) : Promise.resolve(""),
+  ])
 
   let body: string
   let bodyOriginal: string | undefined
@@ -427,7 +441,11 @@ async function enrichArticle(article: SiteNewsArticle): Promise<SiteNewsArticle>
       fonte: article.fonte,
       contexto: article.conteudo,
     })
-    if (aiText.trim() === article.conteudo.trim()) return article
+    if (aiText.trim() === article.conteudo.trim()) {
+      // Text enrichment failed; still save updated image if we got one
+      if (img && img !== article.imagem) return { ...article, imagem: img }
+      return article
+    }
     body = aiText
   }
 
@@ -438,6 +456,7 @@ async function enrichArticle(article: SiteNewsArticle): Promise<SiteNewsArticle>
 
   return {
     ...article,
+    imagem: (needsImage && img) ? img : article.imagem,
     conteudo: body,
     conteudoHtml: `${textToHtmlParagraphs(body)}${notice}`,
     idioma: bodyOriginal ? "en" : article.idioma,
