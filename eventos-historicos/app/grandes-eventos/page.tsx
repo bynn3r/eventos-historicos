@@ -53,52 +53,57 @@ export default function GrandesEventosPage() {
                 {
                   year: "1969",
                   title: "Chegada do Homem à Lua",
+                  slug: "chegada-homem-lua",
                   description:
                     "Neil Armstrong e Buzz Aldrin se tornam os primeiros humanos a pisar na Lua, representando o ápice da corrida espacial e um marco na exploração espacial.",
                   impact: "Revolução tecnológica e científica",
                   casualties: "Marco pacífico da humanidade",
                   icon: Zap,
-                  image: "moon landing apollo 11",
+                  image: "/eventos/hero-apollo11-aldrin.jpg",
                 },
                 {
                   year: "1989",
                   title: "Queda do Muro de Berlim",
+                  slug: "queda-muro-berlim",
                   description:
                     "A derrubada do muro simboliza o fim da Guerra Fria e a reunificação da Alemanha, marcando uma nova era nas relações internacionais.",
                   impact: "Fim da divisão ideológica mundial",
                   casualties: "Fim pacífico de um conflito de décadas",
                   icon: Users,
-                  image: "berlin wall fall celebration",
+                  image: "/eventos/hero-muro-berlim.jpg",
                 },
                 {
                   year: "1453",
                   title: "Queda de Constantinopla",
+                  slug: "queda-constantinopla",
                   description:
                     "A conquista otomana marca o fim do Império Bizantino e altera drasticamente o equilíbrio de poder entre Europa e Ásia, impulsionando as Grandes Navegações.",
                   impact: "Mudança nas rotas comerciais mundiais",
                   casualties: "Fim de um império milenar",
                   icon: Globe,
-                  image: "constantinople ottoman conquest",
+                  image: "/eventos/hero-constantinopla.jpg",
                 },
                 {
                   year: "1492",
                   title: "Descobrimento da América",
+                  slug: "descobrimento-america",
                   description:
                     "A chegada de Cristóvão Colombo às Américas inicia a era dos descobrimentos e conecta definitivamente os continentes, transformando a história mundial.",
                   impact: "Integração global dos continentes",
                   casualties: "Transformação demográfica mundial",
                   icon: Globe,
-                  image: "columbus america discovery",
+                  image: "/eventos/hero-colombo.jpg",
                 },
                 {
                   year: "1789",
                   title: "Revolução Francesa",
+                  slug: "revolucao-francesa",
                   description:
                     "O movimento revolucionário que derrubou o Antigo Regime francês espalha ideais de liberdade, igualdade e fraternidade por todo o mundo.",
                   impact: "Nascimento da democracia moderna",
                   casualties: "Milhares de mortos durante o Terror",
                   icon: Users,
-                  image: "french revolution storming bastille",
+                  image: "/eventos/hero-bastilha.jpg",
                 },
               ].map((event, index) => {
                 const IconComponent = event.icon

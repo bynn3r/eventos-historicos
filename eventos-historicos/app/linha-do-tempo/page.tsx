@@ -111,6 +111,7 @@ const timelineEvents: TimelineEvent[] = [
     impact: "Fim do Império Bizantino e impulso às Grandes Navegações",
     icon: Sword,
     color: "bg-red-500",
+    slug: "queda-constantinopla",
   },
   {
     id: "7",
@@ -124,6 +125,7 @@ const timelineEvents: TimelineEvent[] = [
     impact: "Início da colonização europeia das Américas",
     icon: Globe,
     color: "bg-green-500",
+    slug: "descobrimento-america",
   },
   {
     id: "8",
@@ -137,6 +139,7 @@ const timelineEvents: TimelineEvent[] = [
     impact: "Nascimento dos ideais democráticos modernos",
     icon: Users,
     color: "bg-blue-500",
+    slug: "revolucao-francesa",
   },
   {
     id: "9",
@@ -164,6 +167,7 @@ const timelineEvents: TimelineEvent[] = [
     impact: "Marco na exploração espacial e desenvolvimento tecnológico",
     icon: Zap,
     color: "bg-purple-500",
+    slug: "chegada-homem-lua",
   },
   {
     id: "11",
@@ -177,6 +181,7 @@ const timelineEvents: TimelineEvent[] = [
     impact: "Fim da Guerra Fria e início da nova ordem mundial",
     icon: Users,
     color: "bg-blue-500",
+    slug: "queda-muro-berlim",
   },
 ]
 

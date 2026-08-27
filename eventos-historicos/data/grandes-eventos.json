@@ -8,6 +8,10 @@
     "hook": "Seis anos de guerra total terminam com dois cogumelos atômicos, uma Europa em ruínas e um mundo repentinamente dividido em duas novas superpotências.",
     "heroImagem": "/eventos/hero-reichstag.jpg",
     "heroLegenda": "Soldados soviéticos hasteiam a bandeira sobre o Reichstag em Berlim, 2 de maio de 1945.",
+    "jornadaTitulo": "A jornada até o fim da guerra",
+    "jornadaDescricao": "Role a página para acompanhar, momento a momento, os dias que encerraram o conflito mais devastador da história.",
+    "mapaTitulo": "Pelo mundo, em 1945",
+    "mapaDescricao": "Os lugares onde as decisões — e as tragédias — que encerraram a guerra aconteceram.",
     "estatisticas": [
       { "label": "Duração do conflito", "valor": "6 anos" },
       { "label": "Mortos estimados", "valor": "70–85 milhões" },
@@ -103,5 +107,590 @@
     ],
     "legado": "O fim da Segunda Guerra Mundial não trouxe apenas alívio — trouxe um mundo irreconhecível em relação ao que existia em 1939. Dezenas de milhões de mortos, cidades inteiras reduzidas a escombros na Europa e no Japão, e o surgimento de uma arma capaz de destruir civilizações inteiras mudaram permanentemente a forma como as grandes potências pensariam sobre guerra, poder e diplomacia.\n\nDas cinzas do conflito nasceu a Organização das Nações Unidas, criada meses antes do fim da guerra com a promessa de evitar que uma catástrofe dessa escala se repetisse. Ao mesmo tempo, as divergências entre as potências ocidentais e a União Soviética — visíveis já em Potsdam — rapidamente se transformariam na Guerra Fria, uma nova rivalidade global que dominaria as relações internacionais pelas quatro décadas seguintes.\n\nA guerra também redesenhou o mapa de poder mundial: impérios coloniais europeus, enfraquecidos pelo conflito, começariam a se desfazer nas décadas seguintes, enquanto Estados Unidos e União Soviética emergiam como as duas superpotências que definiriam a geopolítica global até o final do século XX.",
     "curiosidadesRelacionadas": ["projeto-manhattan", "dia-d", "onu", "holocausto"]
+  },
+  {
+    "slug": "queda-constantinopla",
+    "titulo": "Queda de Constantinopla",
+    "ano": "1453",
+    "periodo": "6 de abril – 29 de maio de 1453",
+    "categoria": "Militar",
+    "hook": "Em 53 dias de cerco, um adolescente sultão com um canhão do tamanho de um navio apagou onze séculos de Roma — e o mundo antigo terminou ao amanhecer de uma terça-feira de maio.",
+    "heroImagem": "/eventos/hero-constantinopla.jpg",
+    "heroLegenda": "O sultão Mehmed II entra em Constantinopla conquistada, em óleo do pintor Fausto Zonaro (fim do século XIX) — a cena que marcou o fim do Império Bizantino.",
+    "jornadaTitulo": "O cerco final de Bizâncio",
+    "jornadaDescricao": "Acompanhe, dia a dia, as sete semanas em que a última capital do Império Romano resistiu ao maior exército e à maior artilharia que a Europa já havia visto — até o amanhecer em que tudo mudou.",
+    "mapaTitulo": "Do Bósforo ao Mediterrâneo, em 1453",
+    "mapaDescricao": "Do acampamento do sultão em Adrianópolis aos portos de Gênova e Veneza, e aos apelos ignorados em Roma: veja os lugares reais que decidiram o destino de Constantinopla.",
+    "estatisticas": [
+      { "label": "Duração do cerco", "valor": "53 dias" },
+      { "label": "Forças otomanas", "valor": "≈ 80 mil combatentes" },
+      { "label": "Defensores da cidade", "valor": "≈ 7 mil combatentes" },
+      { "label": "Fim do Império Romano do Oriente", "valor": "1.123 anos (330–1453)" }
+    ],
+    "contexto": "Em 1453, Constantinopla já era a sombra de um império. Fundada por Constantino, o Grande, em 330, a cidade fora por mil anos o maior centro urbano e comercial da cristandade — mas o Império Bizantino que ela governava havia encolhido, ao longo de séculos de guerras, cruzadas e perdas territoriais, a pouco mais do que a própria capital e alguns enclaves na Morreia e no mar Egeu. Do outro lado, os turcos otomanos, que haviam cruzado para os Bálcãs no século XIV, já cercavam a cidade por terra havia gerações: dois sultões anteriores tentaram tomá-la, em 1396 e 1422, sem sucesso. Quando o jovem Mehmed II subiu ao trono em 1451, aos dezenove anos, fez da conquista de Constantinopla o projeto central de seu reinado, vendo na cidade a chave para unificar seus domínios na Ásia e na Europa e herdar o prestígio de Roma. Ele construiu a fortaleza de Rumeli Hisarı no Bósforo para cortar o suprimento naval bizantino, contratou o engenheiro húngaro Orban para fundir uma artilharia sem precedentes e reuniu um exército muitas vezes maior que a população da cidade sitiada. O imperador Constantino XI Paleólogo, que reinava desde 1449, tentara em vão obter socorro militar do Ocidente: a união das Igrejas ortodoxa e católica, selada no Concílio de Florença em 1439 como preço pela ajuda papal, era impopular entre o clero e o povo bizantinos e rendeu apenas apoio simbólico. Isolada, subfinanciada e defendida por poucos milhares de soldados contra dezenas de milhares de otomanos, Constantinopla entrou na primavera de 1453 cercada por terra e, em breve, também por mar.",
+    "momentos": [
+      {
+        "data": "5–6 de abril de 1453",
+        "titulo": "O exército de Mehmed II cerca a cidade",
+        "local": "Muralhas Teodosianas, Constantinopla",
+        "texto": "No início de abril, as vanguardas otomanas já ocupavam os arredores de Constantinopla. Em 6 de abril, o próprio sultão Mehmed II chegou com o grosso do exército — estimado entre 60 e 80 mil combatentes regulares, além de milhares de irregulares bashi-bazouks — e armou seu acampamento diante das muralhas terrestres, com sua tenda vermelha e dourada erguida de frente para o portão de São Romano. Dentro da cidade, o imperador Constantino XI dispunha de pouco mais de 7 mil homens, entre gregos, genoveses e venezianos, para defender quase 20 quilômetros de muralhas marítimas e terrestres. A frota otomana, sob o comando do almirante Baltoghlu, bloqueou o mar de Mármara e o acesso ao Bósforo, enquanto a infantaria e a artilharia se posicionavam ao longo das muralhas Teodosianas, erguidas havia mais de mil anos e consideradas até então praticamente inexpugnáveis. Constantino ordenou o fechamento dos portões e o reforço improvisado dos pontos mais fracos da fortificação, enquanto sinos de igrejas convocavam a população para orações. Começava ali, formalmente, um cerco que duraria cinquenta e três dias.",
+        "imagem": "/eventos/momento-cerco-inicio.jpg"
+      },
+      {
+        "data": "6–19 de abril de 1453",
+        "titulo": "Os canhões gigantes de Orban começam a rugir",
+        "local": "Muralhas Teodosianas, Constantinopla",
+        "texto": "O trunfo de Mehmed era a artilharia mais poderosa já reunida até então: dezenas de bombardas de bronze fundidas pelo engenheiro húngaro Orban, que antes oferecera seus serviços a Constantino XI e fora recusado por falta de dinheiro. A maior das peças, apelidada de 'Basílica', media quase oito metros de cano e disparava esferas de pedra de mais de quinhentos quilos a distâncias de mais de um quilômetro e meio, exigindo dezenas de bois e centenas de homens apenas para movê-la até a posição de tiro. A partir de 6 de abril, o bombardeio contínuo começou a golpear os trechos mais vulneráveis da muralha, perto do vale do rio Lico, onde as fortificações eram mais baixas. Cada bala abria fissuras nas pedras seculares; à noite, defensores e civis trabalhavam desesperadamente para tapar as brechas com barris de terra, madeira e escombros, refazendo em horas o que a artilharia destruía em minutos. O ritmo lento dos canhões — apenas alguns disparos por dia devido ao tempo de resfriamento e recarga — deu à guarnição uma janela preciosa, mas o desgaste psicológico e físico das muralhas era implacável e cumulativo.",
+        "imagem": "/eventos/momento-canhoes-orban.jpg"
+      },
+      {
+        "data": "20 de abril de 1453",
+        "titulo": "Quatro naus rompem o bloqueio naval otomano",
+        "local": "Mar de Mármara, próximo a Constantinopla",
+        "texto": "Em 20 de abril, um pequeno comboio de quatro navios cristãos — três galés genovesas carregadas de suprimentos e uma nau bizantina de trigo vinda da Sicília — tentou romper o bloqueio otomano e alcançar o Corno de Ouro. A frota do sultão, com mais de cem embarcações sob o comando de Baltoghlu, cercou os quatro navios diante da própria tenda de Mehmed, que assistiu à batalha da margem. Apesar da disparidade numérica, os cascos mais altos e a artilharia genovesa infligiram pesadas baixas às galeras otomanas menores, e o vento mudou a favor dos defensores no momento decisivo, permitindo que os quatro navios rompessem o cerco e entrassem no Corno de Ouro protegidos pela grande corrente que fechava a enseada. Foi uma humilhação pública para Mehmed, que destituiu Baltoghlu do comando da frota. Para a cidade sitiada, a vitória naval foi um raro momento de euforia — mas também revelou ao sultão que, enquanto a corrente do Corno de Ouro permanecesse fechada, sua frota jamais alcançaria o flanco mais fraco das muralhas marítimas.",
+        "imagem": "/eventos/momento-corno-ouro-naval.jpg"
+      },
+      {
+        "data": "22 de abril de 1453",
+        "titulo": "Navios otomanos são arrastados por terra até o Corno de Ouro",
+        "local": "Colina de Gálata, Constantinopla",
+        "texto": "Incapaz de romper a grande corrente que barrava a entrada do Corno de Ouro, Mehmed ordenou uma manobra que chocou os defensores: a construção, em poucos dias, de uma pista de troncos untados com sebo e óleo sobre as colinas de Gálata, contornando a barreira por terra firme. Na madrugada de 22 de abril, cerca de setenta embarcações otomanas — içadas em plataformas de madeira e puxadas por bois e centenas de homens — foram deslocadas por essa via improvisada e recolocadas na água já dentro do Corno de Ouro, atrás da corrente e da frota cristã. Os habitantes de Constantinopla acordaram para ver dezenas de velas otomanas onde não deveria haver nenhuma, ameaçando diretamente as muralhas marítimas do lado norte da cidade, até então as menos guarnecidas. O feito, mais um golpe psicológico do que uma vitória militar imediata, obrigou Constantino a esticar ainda mais seus escassos defensores para cobrir uma nova frente, e uma tentativa bizantino-genovesa de incendiar a frota otomana no Corno de Ouro, poucos dias depois, terminou em fracasso e novas baixas.",
+        "imagem": "/eventos/momento-navios-terra.jpg"
+      },
+      {
+        "data": "26 de maio de 1453",
+        "titulo": "O conselho de guerra e o pessimismo de Mehmed",
+        "local": "Acampamento otomano, Constantinopla",
+        "texto": "Após semanas de cerco sem conquistar a cidade, com o desgaste das tropas e rumores de uma frota de socorro veneziana a caminho, parte dos conselheiros de Mehmed — liderados pelo vizir Halil Pasha, cético desde o início quanto à campanha — defendeu levantar o cerco. Mehmed, porém, decidiu apostar tudo em um assalto geral e definitivo, encerrando qualquer possibilidade de negociação. Ordenou três dias de preparação: jejum, orações públicas e a promessa formal às tropas de saque livre da cidade por três dias caso a tomassem, conforme o costume islâmico de guerra para cidades que resistiam ao chamado de rendição. Do lado bizantino, Constantino XI recebeu relatos de que o ataque final era iminente e, na noite de 28 de maio, participou de uma última cerimônia religiosa solene na Hagia Sophia, reunindo ortodoxos e católicos lado a lado pela primeira vez em anos, num gesto de unidade tardia. Depois, percorreu as muralhas pedindo perdão a seus soldados e cidadãos por qualquer falha, num discurso que cronistas posteriores registrariam como o adeus de um imperador que sabia, com razoável certeza, que não veria o dia seguinte.",
+        "imagem": "/eventos/momento-conselho-guerra.jpg"
+      },
+      {
+        "data": "29 de maio de 1453, madrugada",
+        "titulo": "O assalto final e a morte de Constantino XI",
+        "local": "Portão de São Romano e Kerkoporta, Constantinopla",
+        "texto": "Pouco depois da meia-noite, ao som de tambores, trombetas e o grito 'Alá, Alá!', Mehmed lançou o ataque final em ondas sucessivas: primeiro os irregulares bashi-bazouks, depois tropas anatólias, e por fim os janízaros, sua infantaria de elite. Na muralha, o comandante genovês Giovanni Giustiniani Longo, que liderava a defesa terrestre ao lado de Constantino, foi gravemente ferido por volta do amanhecer e retirado para tratamento — sua saída, mal interpretada por muitos como uma fuga, espalhou pânico entre os defensores genoveses. Quase simultaneamente, segundo relatos da época, um pequeno portão secundário chamado Kerkoporta foi encontrado aberto ou mal trancado, permitindo que um grupo de otomanos penetrasse e hasteasse sua bandeira sobre uma torre, semeando ainda mais confusão. Vendo a linha ceder, Constantino XI, segundo a tradição, arrancou as insígnias imperiais, empunhou a espada e lançou-se ao combate junto a seus últimos soldados nas proximidades do portão de São Romano. Seu corpo nunca foi identificado com certeza — encerrando, ali, onze séculos de imperadores romanos.",
+        "imagem": "/eventos/momento-assalto-final.jpg"
+      },
+      {
+        "data": "29 de maio de 1453, tarde",
+        "titulo": "O saque da cidade",
+        "local": "Ruas e igrejas de Constantinopla",
+        "texto": "Cumprindo a promessa feita antes do assalto, as tropas otomanas tiveram permissão para saquear Constantinopla livremente. Por horas, soldados invadiram casas, mosteiros e igrejas — incluindo a Hagia Sophia, onde civis haviam se refugiado em massa esperando um milagre de salvação — capturando prisioneiros para escravização e resgate, e roubando relíquias, ícones e manuscritos acumulados ao longo de séculos. Bibliotecas inteiras foram dispersas ou destruídas, e a população livre da cidade, estimada em cerca de 50 mil habitantes antes do cerco, foi drasticamente reduzida entre mortos e escravizados. À tarde, Mehmed II, alarmado com a escala da destruição de uma cidade que pretendia governar, ordenou o fim do saque mais cedo do que os três dias prometidos e entrou pessoalmente na cidade, cavalgando até a Hagia Sophia. Ali, segundo relatos, desmontou, curvou-se e derramou terra sobre a própria cabeça em sinal de humildade antes de declarar o templo propriedade sua e ordenar que fosse preservado, não destruído.",
+        "imagem": "/eventos/momento-saque-cidade.jpg"
+      },
+      {
+        "data": "29 de maio de 1453 em diante",
+        "titulo": "Hagia Sophia se torna mesquita e nasce Istambul otomana",
+        "local": "Hagia Sophia, Constantinopla",
+        "texto": "Ainda na tarde da conquista, Mehmed II ordenou que a Hagia Sophia, catedral máxima da cristandade ortodoxa por quase novecentos anos, fosse convertida em mesquita — mantendo, porém, seu nome e sua estrutura, e determinando que apenas elementos figurativos incompatíveis com o culto muçulmano fossem cobertos, não destruídos. Um minarete de madeira, um mihrab voltado para Meca e um minbar foram acrescentados nos meses seguintes. O sultão, doravante chamado Fatih, 'o Conquistador', proclamou-se herdeiro dos imperadores romanos e transferiu sua capital para a cidade, que passaria a ser conhecida informalmente como Istambul, embora o nome Constantinopla continuasse em uso oficial por séculos. Para repovoá-la, Mehmed convocou famílias muçulmanas, cristãs e judias de outras partes do império, e nomeou um novo patriarca ortodoxo, Gennadios II, autorizando a Igreja a continuar operando sob soberania otomana. Em poucos anos, a antiga capital bizantina renasceria como o coração administrativo, comercial e religioso de um império que se estenderia por três continentes nos séculos seguintes.",
+        "imagem": "/eventos/momento-hagia-sophia.jpg"
+      }
+    ],
+    "locais": [
+      { "nome": "Constantinopla (Muralhas Teodosianas)", "lat": 41.0186, "lng": 28.9236, "descricao": "As muralhas terrestres de quase 5,5 km, erguidas no século V, foram o principal alvo do bombardeio otomano e o local onde a defesa e a resistência de Constantino XI se concentraram." },
+      { "nome": "Hagia Sophia", "lat": 41.0086, "lng": 28.9802, "descricao": "Catedral máxima do cristianismo ortodoxo, sediou a última liturgia unida da cidade na véspera da queda e foi transformada em mesquita por Mehmed II horas depois da conquista." },
+      { "nome": "Corno de Ouro", "lat": 41.0270, "lng": 28.9600, "descricao": "Enseada natural protegida por uma grande corrente; o transporte de navios otomanos por terra até suas águas, em 22 de abril, abriu uma nova frente contra as muralhas marítimas." },
+      { "nome": "Adrianópolis (Edirne)", "lat": 41.6771, "lng": 26.5557, "descricao": "Capital otomana à época, de onde Mehmed II partiu com seu exército e onde o engenheiro Orban fundiu as bombardas gigantes usadas no cerco." },
+      { "nome": "Rumeli Hisarı (fortaleza do Bósforo)", "lat": 41.0847, "lng": 29.0575, "descricao": "Fortaleza construída por ordem de Mehmed II em 1452 na margem europeia do Bósforo, para cortar o suprimento naval e o socorro externo a Constantinopla antes mesmo do cerco começar." },
+      { "nome": "Chios", "lat": 38.3729, "lng": 26.1341, "descricao": "Ilha genovesa do mar Egeu de onde partiu parte dos cerca de 700 soldados profissionais recrutados por Giovanni Giustiniani Longo para reforçar a defesa da cidade." },
+      { "nome": "Roma", "lat": 41.9029, "lng": 12.4534, "descricao": "Sede do papado, para onde Constantino XI e seus enviados apelaram por socorro militar em troca da união das Igrejas — ajuda que chegou tarde demais e em escala insuficiente." }
+    ],
+    "figuras": [
+      {
+        "nome": "Mehmed II",
+        "papel": "Sultão do Império Otomano",
+        "imagem": "/eventos/figura-mehmed.jpg",
+        "descricao": "Aos 21 anos, planejou e comandou pessoalmente o cerco, apostando toda sua autoridade recém-conquistada na tomada de Constantinopla — vitória que lhe rendeu o título de 'Fatih', o Conquistador."
+      },
+      {
+        "nome": "Constantino XI Paleólogo",
+        "papel": "Último imperador bizantino",
+        "imagem": "/eventos/figura-constantino.jpg",
+        "descricao": "Recusou-se a abandonar a cidade mesmo diante de forças esmagadoras e morreu em combate na muralha na madrugada de 29 de maio, encerrando a linhagem de imperadores romanos iniciada por Augusto."
+      },
+      {
+        "nome": "Giovanni Giustiniani Longo",
+        "papel": "Comandante militar genovês, chefe da defesa terrestre",
+        "imagem": "/eventos/figura-giustiniani.jpg",
+        "descricao": "Nobre genovês que financiou e liderou cerca de 700 soldados profissionais em socorro a Constantinopla; seu ferimento e retirada durante o assalto final abalaram a moral dos defensores."
+      },
+      {
+        "nome": "Orban",
+        "papel": "Engenheiro de artilharia húngaro",
+        "imagem": "/eventos/figura-orban.jpg",
+        "descricao": "Depois de ter sua oferta recusada por falta de recursos bizantinos, fundiu para Mehmed II as maiores bombardas já construídas até então, decisivas para abrir brechas nas muralhas milenares."
+      }
+    ],
+    "legado": "A queda de Constantinopla extinguiu, de forma definitiva, o Império Romano do Oriente — a última continuidade institucional direta da Roma Antiga, encerrada 1.123 anos após sua fundação por Constantino, o Grande. Para a Europa cristã, a notícia chegou como um choque civilizacional: pela primeira vez em séculos, uma capital cristã histórica passava ao controle de um poder islâmico, e o feito consolidou o Império Otomano como potência dominante no Mediterrâneo oriental e nos Bálcãs por mais de quatro séculos, com Istambul como sua capital.\n\nO evento também acelerou transformações que já estavam em curso. Estudiosos e copistas bizantinos que fugiram para a Itália levaram consigo manuscritos gregos clássicos e o conhecimento da língua grega antiga, alimentando o Renascimento italiano então em ascensão. No plano comercial, o controle otomano sobre as rotas terrestres para o Oriente encareceu e dificultou o comércio europeu de especiarias, um dos fatores que impulsionou reinos como Portugal e Espanha a buscar rotas marítimas alternativas para a Ásia — um impulso que, décadas depois, levaria às viagens de Bartolomeu Dias, Vasco da Gama e Cristóvão Colombo, e à Era das Grandes Navegações.\n\nSimbolicamente, a queda também remodelou identidades políticas e religiosas por séculos: Moscou passou a se autodenominar a 'Terceira Roma', herdeira da ortodoxia bizantina, enquanto os sultões otomanos reivindicavam para si o título de sucessores dos Césares. A Hagia Sophia, convertida em mesquita em 1453, tornou-se museu em 1934 sob a Turquia republicana e voltou a funcionar como mesquita em 2020 — permanecendo, quase 600 anos depois, um símbolo vivo e disputado do momento em que um mundo antigo terminou e outro, novo, começou.",
+    "curiosidadesRelacionadas": []
+  },
+  {
+    "slug": "descobrimento-america",
+    "titulo": "Descobrimento da América",
+    "ano": "1492",
+    "periodo": "3 de agosto – 12 de outubro de 1492",
+    "categoria": "Exploração",
+    "hook": "Três navios, um punhado de marinheiros assustados e um erro de cálculo sobre o tamanho do planeta: assim a Europa colidiu com um mundo que já tinha nome, povos e história.",
+    "heroImagem": "/eventos/hero-colombo.jpg",
+    "heroLegenda": "\"O Desembarco de Colombo\", tela pintada por Dióscoro Puebla em 1862 — uma reconstituição romântica, feita quase quatro séculos depois, do momento em que os europeus pisaram em terras já habitadas havia milênios.",
+    "jornadaTitulo": "Trinta e seis dias de mar aberto",
+    "jornadaDescricao": "Acompanhe, etapa por etapa, a travessia que ligou Palos de la Frontera a uma pequena ilha do Caribe — e mudou o curso da história de dois continentes.",
+    "mapaTitulo": "Pelo Atlântico, em 1492",
+    "mapaDescricao": "Da Espanha às Ilhas Canárias, e destas ao Caribe: veja os pontos exatos por onde passou a frota de Colombo em sua viagem de ida e volta.",
+    "estatisticas": [
+      { "label": "Navios na expedição", "valor": "3 (Santa María, Pinta e Niña)" },
+      { "label": "Tripulantes ao todo", "valor": "cerca de 90 homens" },
+      { "label": "Travessia oceânica (Canárias–Bahamas)", "valor": "36 dias" },
+      { "label": "Duração total da viagem, ida e volta", "valor": "224 dias" }
+    ],
+    "contexto": "No fim do século XV, chegar ao Oriente — fonte de especiarias, seda e outras riquezas cobiçadas pela Europa — significava enfrentar rotas terrestres longas, caras e controladas por intermediários otomanos e italianos. Portugal já buscava um caminho marítimo alternativo contornando a África: em 1488, Bartolomeu Dias havia dobrado o Cabo da Boa Esperança, abrindo caminho para a futura rota até a Índia. Foi nesse ambiente de competição ibérica por rotas comerciais que o navegador genovês Cristóvão Colombo propôs algo diferente: alcançar as Índias navegando para oeste, atravessando o Oceano Atlântico. A proposta se baseava em cálculos equivocados sobre o tamanho da Terra — Colombo subestimava significativamente a circunferência do globo e superestimava a extensão da Ásia, o que tornava a viagem, em sua conta, muito mais curta do que era na realidade. Rejeitado pela coroa portuguesa, que já apostava na rota africana, Colombo levou o projeto à Espanha. Ali, após anos de negociação, obteve o apoio dos Reis Católicos, Isabel I de Castela e Fernando II de Aragão, recém-vitoriosos na conquista de Granada, último reduto muçulmano na península Ibérica, em janeiro de 1492. Em 17 de abril daquele ano, foram assinadas as Capitulações de Santa Fé, contrato que garantia a Colombo os títulos de Almirante do Mar Oceano, Vice-rei e Governador das terras que viesse a encontrar, além de participação nas riquezas obtidas. O financiamento veio de fundos reais, de investidores privados e da própria cidade de Palos de la Frontera, obrigada pela coroa a fornecer duas caravelas como forma de pagar uma dívida. Assim nasceu a expedição que, sem que ninguém a bordo soubesse, encontraria não as Índias, mas um continente inteiro já habitado por dezenas de milhões de pessoas.",
+    "momentos": [
+      {
+        "data": "3 de agosto de 1492",
+        "titulo": "A partida de Palos de la Frontera",
+        "local": "Palos de la Frontera, Espanha",
+        "texto": "Pouco antes do amanhecer, três embarcações deixaram o pequeno porto fluvial de Palos de la Frontera, na foz do rio Tinto: a nau Santa María, sob comando do próprio Colombo e com Juan de la Cosa como mestre, e as caravelas Pinta e Niña, capitaneadas pelos irmãos Martín Alonso Pinzón e Vicente Yáñez Pinzón. Ao todo, cerca de 90 homens embarcaram — muitos deles recrutados na própria vila, que conhecia bem o mar e havia sido pressionada pela coroa a ceder navios. Colombo levava cartas de apresentação aos governantes do Oriente e um diário de bordo onde registraria, dia a dia, ventos, distâncias e observações. A meta declarada era alcançar as Índias por uma rota nunca tentada; a meta real dos marinheiros, mais modesta, era sobreviver à viagem e voltar para casa. Ninguém a bordo imaginava que, em vez das cortes do Grão Khan, encontrariam praias desconhecidas do outro lado do oceano.",
+        "imagem": "/eventos/momento-partida-palos.jpg"
+      },
+      {
+        "data": "9 de agosto – 6 de setembro de 1492",
+        "titulo": "Escala nas Ilhas Canárias",
+        "local": "Ilhas Canárias, Espanha",
+        "texto": "A frota fez escala no arquipélago das Canárias, então o ponto mais ocidental sob domínio espanhol. Em Gran Canaria, a tripulação reparou o leme da Pinta, que havia se soltado logo nos primeiros dias de viagem — um contratempo que gerou desconfiança entre Colombo e Martín Alonso Pinzón, que suspeitava de sabotagem por parte dos antigos donos da caravela. A frota seguiu depois para San Sebastián de La Gomera, onde reabasteceu de água, lenha e provisões frescas. Foi ali, em 6 de setembro, que os três navios largaram definitivamente rumo ao oeste, deixando para trás o último porto conhecido e adentrando águas que nenhum piloto europeu registrado havia cruzado antes. A partir daquele ponto, não haveria mais terra à vista por semanas — e a cada légua percorrida, a ansiedade da tripulação cresceria.",
+        "imagem": "/eventos/momento-canarias.jpg"
+      },
+      {
+        "data": "Final de setembro – início de outubro de 1492",
+        "titulo": "O mar dos Sargaços e a ameaça de motim",
+        "local": "Oceano Atlântico",
+        "texto": "Por volta de 16 de setembro, a frota entrou em uma vasta região coberta de algas flutuantes, o mar dos Sargaços — um fenômeno que intrigou e assustou os marinheiros, que temiam encalhar em bancos de vegetação. Os dias se seguiam sem sinal de terra, e a tripulação, exausta e cada vez mais cética quanto aos cálculos de Colombo, começou a cogitar abertamente forçar o retorno à Espanha. Segundo relatos da época, por volta de 10 de outubro a tensão chegou a um ponto crítico, com queixas abertas contra o almirante. Colombo, temendo perder o controle da expedição, teria negociado mais alguns dias de navegação antes de desistir — ao mesmo tempo em que sinais crescentes de proximidade da costa (aves terrestres, galhos flutuantes, vegetação fresca) davam novo fôlego à esperança da tripulação.",
+        "imagem": "/eventos/momento-mar-sargaco.jpg"
+      },
+      {
+        "data": "Madrugada de 12 de outubro de 1492",
+        "titulo": "Terra à vista",
+        "local": "Atlântico, próximo às Bahamas",
+        "texto": "Por volta de duas horas da madrugada, Rodrigo de Triana, marinheiro que servia de vigia na Pinta, avistou uma faixa clara ao longe e gritou o que se tornaria uma das frases mais repetidas da história da navegação: \"Terra! Terra!\". Um tiro de bombarda confirmou o alerta às demais embarcações. Colombo mais tarde reivindicaria para si o crédito da descoberta, alegando ter visto uma luz distante horas antes — uma disputa que lhe garantiu uma recompensa vitalícia prometida pela coroa a quem primeiro avistasse terra, e que gerou ressentimento entre a tripulação. Ao amanhecer, os três navios se aproximaram cautelosamente de uma pequena ilha baixa, cercada de recifes de coral, que os habitantes locais chamavam de Guanahani. Depois de mais de dois meses de viagem desde Palos — e 36 dias sem avistar terra desde a partida de La Gomera —, a frota finalmente lançou âncora.",
+        "imagem": "/eventos/momento-terra-a-vista.jpg"
+      },
+      {
+        "data": "12 de outubro de 1492",
+        "titulo": "Desembarque em Guanahani e o encontro com os lucaios",
+        "local": "Guanahani (atual San Salvador), Bahamas",
+        "texto": "Colombo desembarcou acompanhado dos irmãos Pinzón e de um escrivão, portando a bandeira real e um estandarte com a cruz verde da expedição. Tomou posse formal da ilha em nome dos reis de Castela, batizando-a de San Salvador — sem que os habitantes locais, indígenas lucaios de língua taína que já viviam ali havia gerações, fossem consultados sobre o que acabava de acontecer com sua terra. Em seu diário, Colombo descreveu pessoas nuas, pintadas, que se aproximaram sem medo, trocando algodão, lanças e papagaios por contas de vidro e guizos. Ele anotou, quase no mesmo fôlego, que pareciam gente pacífica e que \"com cinquenta homens poderíamos sujeitá-los a todos e fazê-los fazer o que quiséssemos\" — um comentário que antecipa, já no primeiro dia de contato, a lógica de dominação que marcaria a colonização das Américas nas décadas seguintes.",
+        "imagem": "/eventos/momento-desembarque-guanahani.jpg"
+      },
+      {
+        "data": "28 de outubro de 1492",
+        "titulo": "Chegada a Cuba",
+        "local": "Baía de Bariay, nordeste de Cuba",
+        "texto": "Depois de explorar outras ilhas do arquipélago das Bahamas, a frota alcançou a costa de uma terra muito maior, que Colombo batizou de Juana e que os habitantes locais chamavam de Colba (Cuba). Convencido de estar próximo do continente asiático, ele enviou emissários terra adentro à procura da corte do Grão Khan descrita por Marco Polo — encontraram, em vez disso, aldeias de agricultores taínos e, pela primeira vez registrada por europeus, pessoas fumando folhas enroladas de tabaco, hábito que os espanhóis levariam de volta à Europa. Colombo navegou ao longo da costa cubana por semanas, convencido de ter encontrado uma península do continente asiático, sem perceber que se tratava de uma ilha.",
+        "imagem": "/eventos/momento-chegada-cuba.jpg"
+      },
+      {
+        "data": "24–25 de dezembro de 1492",
+        "titulo": "O naufrágio da Santa María e a fundação de La Navidad",
+        "local": "Costa norte de Hispaniola (atual Haiti)",
+        "texto": "Navegando ao largo da ilha que batizou de Hispaniola (atual Haiti e República Dominicana), a Santa María encalhou silenciosamente em um banco de areia na madrugada de Natal, enquanto a tripulação dormia. O navio ficou irrecuperável. Com a ajuda do cacique local, Guacanagarí, que forneceu canoas e mão de obra para salvar carga e mantimentos, Colombo decidiu deixar parte da tripulação para trás — cerca de 39 homens — em um pequeno forte erguido com a madeira do naufrágio, batizado de La Navidad. Foi o primeiro assentamento europeu permanente nas Américas desde os tempos vikings. Colombo prometeu voltar; quando o fez, quase um ano depois, encontraria o forte destruído e todos os seus ocupantes mortos, num sinal precoce de como o contato entre os dois mundos rapidamente descambaria para o conflito.",
+        "imagem": "/eventos/momento-naufragio-santamaria.jpg"
+      },
+      {
+        "data": "16 de janeiro – 15 de março de 1493",
+        "titulo": "O retorno triunfal à Espanha",
+        "local": "Açores, Lisboa e Palos de la Frontera",
+        "texto": "Com a Santa María perdida, Colombo retornou à Europa a bordo da Niña, acompanhado pela Pinta, de onde Martín Alonso Pinzón havia se separado semanas antes. A travessia de volta foi marcada por tempestades severas que quase afundaram as duas caravelas nas imediações dos Açores. Em 4 de março de 1493, um temporal forçou a Niña a buscar abrigo em Lisboa, onde Colombo foi recebido — com desconforto mal disfarçado — pelo rei João II de Portugal, que havia recusado financiar a mesma viagem anos antes. Depois de nova escala, Colombo finalmente ancorou em Palos de la Frontera em 15 de março de 1493, mesmo dia em que a Pinta, seguindo rota separada, também chegou ao porto. A notícia se espalhou rapidamente; semanas depois, Colombo foi recebido com grande pompa pelos Reis Católicos em Barcelona, exibindo objetos, plantas e alguns indígenas taínos trazidos à força como prova de sua façanha.",
+        "imagem": "/eventos/momento-retorno-espanha.jpg"
+      }
+    ],
+    "locais": [
+      { "nome": "Palos de la Frontera", "lat": 37.2283, "lng": -6.8944, "descricao": "Porto de partida da expedição em 3 de agosto de 1492 e local de chegada, no retorno, em 15 de março de 1493." },
+      { "nome": "San Sebastián de La Gomera (Ilhas Canárias)", "lat": 28.0914, "lng": -17.1114, "descricao": "Última escala antes da travessia atlântica; a frota reabasteceu ali e partiu definitivamente rumo ao oeste em 6 de setembro de 1492." },
+      { "nome": "Guanahani / San Salvador (Bahamas)", "lat": 24.0350, "lng": -74.4975, "descricao": "Ilha onde a frota avistou terra e desembarcou em 12 de outubro de 1492, primeiro contato registrado entre Colombo e os povos indígenas do Caribe." },
+      { "nome": "Baía de Bariay, Cuba", "lat": 21.2833, "lng": -75.9667, "descricao": "Ponto da costa cubana onde a expedição chegou em 28 de outubro de 1492, na crença de estar próxima do continente asiático." },
+      { "nome": "La Navidad, Hispaniola (atual Haiti)", "lat": 19.6906, "lng": -72.0158, "descricao": "Local onde a Santa María naufragou no Natal de 1492 e onde foi erguido o primeiro forte europeu permanente nas Américas." },
+      { "nome": "Ilha de Santa Maria, Açores", "lat": 36.9958, "lng": -25.1707, "descricao": "Ponto de refúgio da frota durante as violentas tempestades enfrentadas na viagem de volta à Europa, em fevereiro de 1493." },
+      { "nome": "Lisboa, Portugal", "lat": 38.7223, "lng": -9.1393, "descricao": "Porto onde a Niña atracou em 4 de março de 1493, permitindo que Colombo se encontrasse com o rei João II antes de seguir para a Espanha." }
+    ],
+    "figuras": [
+      {
+        "nome": "Cristóvão Colombo",
+        "papel": "Navegador genovês, Almirante do Mar Oceano",
+        "imagem": "/eventos/figura-colombo.jpg",
+        "descricao": "Idealizador e comandante da expedição, defendeu por anos a ideia de alcançar as Índias navegando para oeste e liderou as quatro viagens que o tornaram figura central — e hoje profundamente controversa — na história do contato entre Europa e América."
+      },
+      {
+        "nome": "Isabel I de Castela",
+        "papel": "Rainha de Castela",
+        "imagem": "/eventos/figura-isabel.jpg",
+        "descricao": "Ao lado de Fernando II, financiou e autorizou a expedição por meio das Capitulações de Santa Fé, concedendo a Colombo títulos e privilégios sobre as terras que viesse a encontrar."
+      },
+      {
+        "nome": "Fernando II de Aragão",
+        "papel": "Rei de Aragão",
+        "imagem": "/eventos/figura-fernando.jpg",
+        "descricao": "Corregente ao lado de Isabel I, foi cossignatário do acordo que viabilizou a viagem e, junto com ela, recebeu Colombo em Barcelona após seu retorno triunfal em 1493."
+      },
+      {
+        "nome": "Martín Alonso Pinzón",
+        "papel": "Capitão da caravela Pinta",
+        "imagem": "/eventos/figura-pinzon.jpg",
+        "descricao": "Armador experiente de Palos, foi decisivo para recrutar tripulação e conter ameaças de motim durante a travessia; separou-se de Colombo no Caribe e morreu poucos dias após o retorno à Espanha, em março de 1493."
+      }
+    ],
+    "legado": "A chegada de Colombo ao Caribe inaugurou aquilo que historiadores chamam de Intercâmbio Colombiano: a troca, em escala inédita, de plantas, animais, alimentos, doenças e pessoas entre os dois lados do Atlântico. Milho, batata, tomate, cacau e pimenta seguiram para a Europa, Ásia e África, transformando dietas e economias inteiras; cavalos, gado, trigo e cana-de-açúcar chegaram às Américas, remodelando paisagens e sistemas de trabalho. Doenças como varíola, sarampo e gripe, contra as quais os povos americanos não tinham imunidade prévia, provocaram um dos maiores colapsos demográficos da história — estima-se que a população indígena das Américas tenha caído entre 80% e 90% ao longo do século seguinte ao contato, por doença, guerra, escravização e ruptura dos modos de vida tradicionais.\n\nPara os povos taínos que receberam Colombo em Guanahani, o encontro marcou o início do fim de sua autonomia. Nas décadas seguintes, o sistema de encomienda impôs trabalho forçado à população indígena de Hispaniola em minas e plantações, e a combinação de exploração, violência e epidemias praticamente extinguiu os taínos das Grandes Antilhas como povo distinto em poucas gerações — embora estudos genéticos recentes mostrem que sua ascendência sobrevive em parte significativa da população caribenha atual. A viagem de 1492 abriu caminho para mais três expedições de Colombo e, na sequência, para a colonização espanhola e portuguesa de vastos territórios americanos, com consequências profundas e duradouras para os povos originários.\n\nDo ponto de vista europeu, o evento redesenhou o mapa geopolítico e econômico do mundo. Espanha e Portugal dividiram formalmente as terras recém-encontradas pelo Tratado de Tordesilhas, em 1494, e o fluxo de prata e ouro extraído das Américas ao longo dos séculos seguintes financiou guerras, impérios e o surgimento de novas potências comerciais na Europa. A data de 12 de outubro de 1492 permanece, até hoje, um símbolo contestado: celebrada por séculos como marco do \"Novo Mundo\", ela é cada vez mais reconhecida — inclusive em partes das próprias Américas, onde o dia passou a ser chamado de Dia dos Povos Indígenas em vários países — como o início de um processo de conquista e colonização que reconfigurou radical e violentamente a vida de milhões de pessoas que já estavam ali.",
+    "curiosidadesRelacionadas": []
+  },
+  {
+    "slug": "revolucao-francesa",
+    "titulo": "Revolução Francesa",
+    "ano": "1789",
+    "periodo": "5 de maio de 1789 – 9 de novembro de 1799",
+    "categoria": "Política",
+    "hook": "Em poucas semanas, um povo faminto e endividado derrubou séculos de monarquia absoluta e reescreveu, à força de barricadas e guilhotina, a própria ideia do que um cidadão pode exigir do seu governo.",
+    "heroImagem": "/eventos/hero-bastilha.jpg",
+    "heroLegenda": "A tomada da Bastilha, em 14 de julho de 1789, retratada por Jean-Pierre Houël — o momento em que Paris pegou em armas contra o Antigo Regime.",
+    "jornadaTitulo": "Da Bastilha à guilhotina",
+    "jornadaDescricao": "Acompanhe, momento a momento, como uma monarquia à beira da falência se transformou no palco da revolução política mais radical do Ocidente. Role a página e viva cada virada dessa história.",
+    "mapaTitulo": "Pela França revolucionária",
+    "mapaDescricao": "De Versalhes à Bastilha, da fuga fracassada em Varennes até a praça onde caiu a cabeça de um rei: percorra os lugares reais onde a Revolução Francesa aconteceu.",
+    "estatisticas": [
+      { "label": "Prisioneiros libertados na Bastilha", "valor": "7" },
+      { "label": "Deputados do Terceiro Estado nos Estados Gerais", "valor": "578" },
+      { "label": "Distância da Marcha das Mulheres até Versalhes", "valor": "≈ 19 km" },
+      { "label": "Execuções estimadas durante o Terror (1793-1794)", "valor": "≈ 17.000" }
+    ],
+    "contexto": "No fim dos anos 1780, a França era uma potência endividada até o pescoço. Décadas de guerras dispendiosas — entre elas o apoio à independência dos Estados Unidos — haviam esgotado os cofres reais, enquanto um sistema fiscal profundamente desigual isentava a nobreza e o clero, as duas ordens privilegiadas, do grosso dos impostos. Todo o peso recaía sobre o Terceiro Estado: camponeses, artesãos e uma burguesia urbana cada vez mais instruída e impaciente com sua exclusão do poder político. Colheitas ruins em 1788 elevaram o preço do pão a níveis insustentáveis, espalhando fome pelas cidades. Ao mesmo tempo, as ideias do Iluminismo — Voltaire, Rousseau, Montesquieu — vinham corroendo havia décadas a legitimidade do direito divino dos reis, propondo no lugar noções de soberania popular, separação de poderes e direitos naturais. Diante da bancarrota iminente, Luís XVI viu-se obrigado a convocar os Estados Gerais, a antiga assembleia consultiva das três ordens do reino, que não se reunia desde 1614. A expectativa de reformas fiscais logo se transformou em algo maior: o Terceiro Estado, representando mais de 95% da população mas com voto historicamente igualado ao das outras duas ordens, exigiu que a votação fosse feita por cabeça e não por ordem — uma disputa aparentemente processual que, em poucas semanas, incendiaria toda a estrutura política do Antigo Regime e daria início a um dos processos revolucionários mais decisivos da história moderna.",
+    "momentos": [
+      {
+        "data": "5 de maio de 1789",
+        "titulo": "A abertura dos Estados Gerais",
+        "local": "Salão dos Menus-Plaisirs, Palácio de Versalhes",
+        "texto": "Depois de 175 anos sem se reunir, os Estados Gerais foram solenemente abertos por Luís XVI em Versalhes. Mais de 1.100 deputados das três ordens — clero, nobreza e o Terceiro Estado, este com 578 representantes, o dobro dos outros dois — compareceram em trajes protocolares que já sinalizavam a desigualdade do sistema: os nobres em seda, o clero em vestes eclesiásticas, os deputados do Terceiro Estado obrigados a usar um traje preto simples. O rei esperava discutir apenas a crise financeira, mas o clima era outro. Os debates travaram quase de imediato em torno de uma questão aparentemente técnica, mas explosiva: o voto deveria ser contado por ordem (dando às duas ordens privilegiadas maioria automática sobre o Terceiro Estado) ou por cabeça, deputado a deputado? Semanas de impasse se seguiram, com o Terceiro Estado recusando-se a validar seus poderes separadamente das outras ordens. Em 17 de junho, cansados da paralisia, os deputados do Terceiro Estado, unidos a alguns clérigos e nobres liberais, se autoproclamaram Assembleia Nacional — o primeiro ato de ruptura formal com a estrutura tradicional do reino, e o gatilho direto para a crise que explodiria três dias depois.",
+        "imagem": "/eventos/momento-estados-gerais.jpg"
+      },
+      {
+        "data": "20 de junho de 1789",
+        "titulo": "O Juramento do Jogo da Pela",
+        "local": "Quadra do Jeu de Paume, Versalhes",
+        "texto": "Ao chegarem para a sessão daquela manhã, os deputados da recém-criada Assembleia Nacional encontraram as portas de seu salão trancadas e guardadas por soldados, sob o pretexto de preparativos para uma sessão real. Temendo que o rei pretendesse dissolvê-los à força, cerca de 577 deputados se dirigiram a uma quadra coberta de jogo da pela (uma espécie de precursor do tênis) nas proximidades do palácio. Ali, de pé, amontoados sob o teto baixo do salão, juraram solenemente, com uma única abstenção, não se separar até que a França tivesse uma constituição escrita que limitasse os poderes do monarca. Liderado pelo astrônomo e futuro prefeito de Paris Jean Sylvain Bailly, o juramento foi um ato de desobediência civil coletiva sem precedentes: pela primeira vez, representantes eleitos afirmavam que sua autoridade vinha da nação, não da vontade do rei. Luís XVI tentou reverter a situação dias depois, ordenando que as três ordens deliberassem separadamente, mas recuou diante da resistência e, em 27 de junho, mandou que clero e nobreza se juntassem à Assembleia Nacional, agora rebatizada Assembleia Nacional Constituinte.",
+        "imagem": "/eventos/momento-juramento-jogo-pela.jpg"
+      },
+      {
+        "data": "14 de julho de 1789",
+        "titulo": "A Tomada da Bastilha",
+        "local": "Fortaleza da Bastilha, Paris",
+        "texto": "Com Paris em polvorosa após a demissão do ministro reformista Necker e rumores de que tropas reais cercavam a cidade, multidões armadas passaram a manhã saqueando arsenais em busca de pólvora e munição. Por volta do meio-dia, milhares convergiram para a Bastilha, antiga fortaleza medieval usada como prisão real e depósito de pólvora, símbolo maior do poder arbitrário da monarquia — ainda que abrigasse, naquele dia, apenas sete presos. Depois de negociações fracassadas, tiros foram trocados; cerca de cem populares morreram no cerco. O governador, marquês Bernard-René de Launay, rendeu-se no fim da tarde; horas depois foi arrastado pelas ruas e assassinado, sua cabeça decepada e exibida numa lança pela cidade. A queda da Bastilha, noticiada a Luís XVI naquela mesma noite — segundo o relato tradicional, o rei perguntou se era uma revolta, e o duque de La Rochefoucauld-Liancourt respondeu: \"Não, Sire, é uma revolução\" — tornou-se o símbolo fundador da Revolução Francesa e, décadas depois, a data nacional da França, celebrada até hoje em 14 de julho.",
+        "imagem": "/eventos/momento-tomada-bastilha.jpg"
+      },
+      {
+        "data": "26 de agosto de 1789",
+        "titulo": "A Declaração dos Direitos do Homem e do Cidadão",
+        "local": "Assembleia Nacional Constituinte, Versalhes",
+        "texto": "Semanas depois da queda da Bastilha, com o campo francês varrido por ondas de pânico e revoltas camponesas contra o regime senhorial — episódio conhecido como o Grande Medo —, a Assembleia Nacional Constituinte deu dois passos decisivos. Na noite de 4 de agosto, num arroubo quase eufórico, os deputados votaram a abolição dos privilégios feudais, dízimos e direitos senhoriais que sustentavam a ordem social do Antigo Regime. Poucas semanas depois, em 26 de agosto, aprovaram a Declaração dos Direitos do Homem e do Cidadão, documento de dezessete artigos inspirado no Iluminismo e nas declarações americanas, com contribuição direta de figuras como Lafayette, que consultara Thomas Jefferson na redação. O texto proclamava que os homens nascem e permanecem livres e iguais em direitos, e listava liberdades fundamentais — de expressão, de propriedade, de segurança, a presunção de inocência — como princípios universais, não concessões régias. Afixada como preâmbulo da futura constituição, a Declaração tornou-se um dos documentos políticos mais influentes da história moderna, embora suas promessas de igualdade ainda não se estendessem, na prática, às mulheres nem aos escravizados das colônias francesas.",
+        "imagem": "/eventos/momento-declaracao-direitos.jpg"
+      },
+      {
+        "data": "5 e 6 de outubro de 1789",
+        "titulo": "A Marcha das Mulheres a Versalhes",
+        "local": "De Paris a Versalhes",
+        "texto": "Com o preço do pão disparado e rumores de banquetes reais enquanto o povo passava fome, uma multidão de mulheres dos mercados parisienses começou a se reunir na manhã de 5 de outubro, armada com facas, foices e cabos de vassoura. O que começou como protesto contra a escassez de alimentos rapidamente ganhou contornos políticos: milhares de mulheres, seguidas por homens da Guarda Nacional sob o comando de Lafayette, marcharam os cerca de 19 quilômetros entre Paris e Versalhes sob chuva, gritando por pão e por respostas do rei. Ao anoitecer, cercaram o palácio; na manhã seguinte, invasores chegaram a penetrar nos aposentos reais, forçando a rainha Maria Antonieta a fugir para os quartos do rei. Diante da pressão, Luís XVI apareceu na sacada e concordou em acompanhar a multidão de volta a Paris. Na tarde de 6 de outubro, um cortejo popular escoltou a família real até o Palácio das Tulherias, na capital — de onde o rei nunca mais sairia livremente. O episódio transferiu simbólica e fisicamente o centro do poder francês de Versalhes para Paris, sob os olhos vigilantes do povo.",
+        "imagem": "/eventos/momento-marcha-mulheres.jpg"
+      },
+      {
+        "data": "20 e 21 de junho de 1791",
+        "titulo": "A fuga fracassada para Varennes",
+        "local": "Varennes-en-Argonne",
+        "texto": "Cada vez mais prisioneiro em seu próprio país e desconfortável com o rumo das reformas, Luís XVI planejou secretamente fugir de Paris com a rainha, os filhos e a irmã do rei, na noite de 20 para 21 de junho de 1791. Disfarçados de criados a serviço de uma suposta baronesa russa, deixaram as Tulherias numa pesada carruagem rumo a Montmédy, perto da fronteira, onde tropas monarquistas leais aguardavam para apoiar uma possível contrarrevolução. A viagem, porém, foi lenta e cheia de atrasos. Em Sainte-Menehould, o mestre de postas Jean-Baptiste Drouet reconheceu o rosto do rei — segundo a tradição, a partir do perfil estampado numa nota de assignat — e cavalgou à frente para alertar as autoridades. A carruagem real foi finalmente detida na pequena cidade de Varennes-en-Argonne, a poucos quilômetros do destino, e escoltada de volta a Paris sob guarda armada, em meio a um silêncio hostil das multidões ao longo do caminho. A fuga fracassada destruiu de vez a credibilidade de Luís XVI como monarca constitucional: para grande parte da opinião pública, ficara provado que o rei conspirava contra a própria revolução, abrindo caminho, ano e meio depois, para o fim da monarquia.",
+        "imagem": "/eventos/momento-fuga-varennes.jpg"
+      },
+      {
+        "data": "10 de agosto de 1792",
+        "titulo": "A queda da monarquia",
+        "local": "Palácio das Tulherias, Paris",
+        "texto": "Com a França em guerra contra a Áustria e a Prússia desde a primavera, e sob a ameaça do Manifesto de Brunswick — que prometia destruir Paris caso a família real sofresse qualquer dano —, a desconfiança popular em relação a Luís XVI atingiu o limite. Na madrugada de 10 de agosto, cerca de 20 mil homens — guardas nacionais, federados vindos de Marselha e da Bretanha e sans-culottes parisienses — marcharam sobre o Palácio das Tulherias. O rei e a família buscaram refúgio na Assembleia Legislativa nas proximidades, deixando para trás cerca de 900 Guardas Suíços encarregados da defesa do palácio. No confronto que se seguiu, mais de 600 guardas suíços foram mortos, muitos já depois de se renderem, além de dezenas de funcionários da corte. Diante do caos, a Assembleia decretou a suspensão de Luís XVI de suas funções; a família real foi levada para a Torre do Temple, agora como prisioneira. Em poucas semanas, a recém-eleita Convenção Nacional aboliria formalmente a monarquia, proclamando a República Francesa em 21 de setembro de 1792 — um ano exato antes de a guilhotina começar a funcionar em ritmo industrial sob o Terror.",
+        "imagem": "/eventos/momento-queda-monarquia.jpg"
+      },
+      {
+        "data": "21 de janeiro de 1793",
+        "titulo": "A execução de Luís XVI",
+        "local": "Praça da Revolução, Paris",
+        "texto": "Julgado pela Convenção Nacional sob a acusação de conspirar contra a liberdade da nação e a segurança do Estado, Luís XVI — já tratado apenas como o \"cidadão Luís Capet\" — foi considerado culpado por votação quase unânime dos 721 deputados presentes, em 15 de janeiro de 1793. Dois dias depois, numa votação nominal tensa e demorada, 361 deputados votaram pela pena de morte imediata, contra 288 que defendiam prisão, exílio ou uma condenação condicional — uma maioria de apenas um voto acima do necessário. Na manhã fria e enevoada de 21 de janeiro, o ex-rei foi conduzido da Torre do Temple até a Praça da Revolução, no centro de Paris, num trajeto de quase duas horas sob forte escolta. Diante de uma multidão estimada em dezenas de milhares de pessoas, Luís XVI tentou discursar do cadafalso, mas foi interrompido pelo rufar dos tambores antes de ser guilhotinado. Sua execução, a primeira de um monarca reinante por decisão de um tribunal revolucionário, chocou as demais cortes da Europa, endureceu a coalizão de potências em guerra contra a França e selou o rompimento definitivo e irreversível com o Antigo Regime.",
+        "imagem": "/eventos/momento-execucao-luis16.jpg"
+      },
+      {
+        "data": "5 de setembro de 1793",
+        "titulo": "\"O Terror é a ordem do dia\"",
+        "local": "Convenção Nacional, Paris",
+        "texto": "Com a França ameaçada simultaneamente por exércitos estrangeiros nas fronteiras, revoltas contrarrevolucionárias internas — como a insurreição da Vendeia — e uma inflação galopante, a Convenção Nacional radicalizou-se sob pressão dos sans-culottes parisienses. Em 5 de setembro de 1793, os deputados declararam formalmente que \"o terror é a ordem do dia\", autorizando o Comitê de Salvação Pública, dominado a partir de julho por Maximilien Robespierre, a usar medidas extraordinárias contra os chamados \"inimigos da revolução\". Dias depois, a Lei dos Suspeitos ampliou drasticamente a definição de traição, permitindo prisões em massa com base em meras suspeitas de deslealdade. Um tribunal revolucionário sumário passou a julgar acusados em processos relâmpago, quase sempre terminando na guilhotina montada na atual Praça da Concórdia. Nos meses seguintes, cerca de 17 mil pessoas foram oficialmente executadas em toda a França — entre elas a rainha Maria Antonieta, em outubro de 1793, girondinos rivais dos jacobinos e, por fim, o próprio Danton. O ciclo de violência só se encerraria em julho de 1794, quando o próprio Robespierre, já isolado, foi derrubado e guilhotinado na reação conhecida como Termidor.",
+        "imagem": "/eventos/momento-terror.jpg"
+      }
+    ],
+    "locais": [
+      { "nome": "Bastilha (atual Praça da Bastilha), Paris", "lat": 48.8531, "lng": 2.3691, "descricao": "Fortaleza-prisão tomada por revolucionários em 14 de julho de 1789, num ataque que se tornou o símbolo fundador da Revolução Francesa." },
+      { "nome": "Palácio de Versalhes", "lat": 48.8049, "lng": 2.1204, "descricao": "Sede do poder real onde os Estados Gerais foram abertos, o Juramento do Jogo da Pela foi feito e a Marcha das Mulheres forçou a família real a partir para Paris." },
+      { "nome": "Varennes-en-Argonne", "lat": 49.2269, "lng": 5.0350, "descricao": "Pequena cidade do leste da França onde Luís XVI e a família real foram reconhecidos e detidos na madrugada de 21 de junho de 1791, ao tentar fugir do país." },
+      { "nome": "Palácio das Tulherias, Paris", "lat": 48.8634, "lng": 2.3275, "descricao": "Residência parisiense da família real desde 1789, invadida em 10 de agosto de 1792 num levante que derrubou definitivamente a monarquia francesa." },
+      { "nome": "Torre do Temple, Paris", "lat": 48.8631, "lng": 2.3585, "descricao": "Antiga fortaleza medieval onde Luís XVI, Maria Antonieta e os filhos ficaram presos após a queda da monarquia, até a execução do rei em 1793." },
+      { "nome": "Praça da Revolução (atual Praça da Concórdia), Paris", "lat": 48.8656, "lng": 2.3212, "descricao": "Local onde a guilhotina revolucionária funcionou durante o Terror, palco das execuções de Luís XVI, Maria Antonieta e milhares de outros condenados." }
+    ],
+    "figuras": [
+      {
+        "nome": "Luís XVI",
+        "papel": "Rei da França e de Navarra, depois \"Rei dos Franceses\"",
+        "imagem": "/eventos/figura-luis16.jpg",
+        "descricao": "Monarca indeciso diante da crise financeira e das reformas exigidas pelo Terceiro Estado, foi deposto em 1792 e guilhotinado em janeiro de 1793 por traição à nação."
+      },
+      {
+        "nome": "Maria Antonieta",
+        "papel": "Rainha da França, arquiduquesa da Áustria",
+        "imagem": "/eventos/figura-maria-antonieta.jpg",
+        "descricao": "Alvo de intensa impopularidade por seus supostos gastos extravagantes e origem estrangeira, foi presa junto ao marido e executada em outubro de 1793."
+      },
+      {
+        "nome": "Maximilien Robespierre",
+        "papel": "Deputado jacobino e membro dominante do Comitê de Salvação Pública",
+        "imagem": "/eventos/figura-robespierre.jpg",
+        "descricao": "Advogado e orador conhecido como \"o Incorruptível\", liderou o Terror em nome da virtude republicana antes de ser derrubado e executado em julho de 1794."
+      },
+      {
+        "nome": "Georges Danton",
+        "papel": "Advogado revolucionário e ministro da Justiça",
+        "imagem": "/eventos/figura-danton.jpg",
+        "descricao": "Orador poderoso e um dos organizadores da insurreição de 10 de agosto de 1792, tornou-se figura central da Primeira República antes de cair em desgraça e ser guilhotinado em 1794."
+      }
+    ],
+    "legado": "A Revolução Francesa não terminou com a queda de Robespierre em 1794, mas sua fase mais radical havia redesenhado permanentemente as possibilidades da política moderna. A Declaração dos Direitos do Homem e do Cidadão tornou-se referência direta para constituições e movimentos de direitos civis ao redor do mundo nos séculos seguintes, consagrando princípios de igualdade legal, soberania popular e liberdade individual que, embora aplicados de forma incompleta e contraditória na própria França revolucionária, forneceram o vocabulário político que passaria a estruturar debates sobre cidadania, representação e direitos humanos até os dias de hoje.\n\nNo plano institucional, a década revolucionária destruiu de forma irreversível o sistema de privilégios estamentais do Antigo Regime francês e experimentou, em rápida sucessão, monarquia constitucional, república, ditadura de comitê e, por fim, abriu caminho para a ascensão de Napoleão Bonaparte, que tomaria o poder no golpe de 18 Brumário (9 de novembro de 1799), encerrando formalmente o período revolucionário. As guerras desencadeadas pela Revolução espalhariam, no entanto, seus ideais e seu código legal por boa parte da Europa sob o domínio napoleônico, plantando sementes de nacionalismo e reformismo liberal que floresceriam ao longo do século XIX.\n\nO legado mais duradouro da Revolução Francesa talvez seja simbólico: ela demonstrou, de forma dramática e sangrenta, que a legitimidade de um governo podia ser questionada e derrubada em nome da vontade popular, e não apenas da tradição ou do direito divino. Esse precedente inspiraria diretamente revoluções liberais e nacionais por toda a Europa e a América Latina no século seguinte, além de alimentar debates que atravessam até hoje discussões sobre os limites entre liberdade, igualdade e os riscos da violência política em nome de ideais revolucionários.",
+    "curiosidadesRelacionadas": []
+  },
+  {
+    "slug": "chegada-homem-lua",
+    "titulo": "Chegada do Homem à Lua",
+    "ano": "1969",
+    "periodo": "16–24 de julho de 1969",
+    "categoria": "Exploração Espacial",
+    "hook": "Por oito dias em julho de 1969, a humanidade inteira prendeu a respiração: três homens deixaram a Terra, dois pisaram em outro mundo, e nada mais foi igual desde então.",
+    "heroImagem": "/eventos/hero-apollo11-aldrin.jpg",
+    "heroLegenda": "Buzz Aldrin fotografado por Neil Armstrong na superfície do Mar da Tranquilidade, em 20 de julho de 1969 — no visor do capacete, o reflexo do próprio Armstrong e do módulo lunar Eagle.",
+    "jornadaTitulo": "Oito dias que mudaram a história",
+    "jornadaDescricao": "Role para acompanhar, hora a hora, a jornada da Apollo 11: do estrondo do lançamento na Flórida ao primeiro passo humano em outro mundo, até o mergulho de volta ao Oceano Pacífico.",
+    "mapaTitulo": "Da Terra à Lua, em 1969",
+    "mapaDescricao": "Da rampa de lançamento na Flórida ao centro de controle no Texas, do Mar da Tranquilidade lunar ao ponto de amerissagem no Pacífico — os lugares reais que sediaram a missão mais ousada da história.",
+    "estatisticas": [
+      { "label": "Duração total da missão", "valor": "8 dias, 3h e 18min" },
+      { "label": "Distância percorrida (ida e volta)", "valor": "cerca de 950.000 km" },
+      { "label": "Tempo na superfície lunar", "valor": "21h 36min (EVA de 2h31min)" },
+      { "label": "Audiência mundial da TV", "valor": "cerca de 600 milhões de pessoas" }
+    ],
+    "contexto": "No auge da Guerra Fria, a corrida espacial era um campo de batalha simbólico entre Estados Unidos e União Soviética. Os soviéticos acumulavam vitórias espetaculares — o satélite Sputnik em 1957 e o voo de Iuri Gagarin em 1961, primeiro ser humano a orbitar a Terra — deixando os americanos em desvantagem tecnológica e moral. Em 25 de maio de 1961, o presidente John F. Kennedy declarou ao Congresso dos Estados Unidos o compromisso de \"pousar um homem na Lua e trazê-lo de volta em segurança à Terra\" antes do fim da década, uma meta reafirmada em seu célebre discurso na Rice University, em setembro de 1962, quando disse que os Estados Unidos escolhiam ir à Lua \"não porque é fácil, mas porque é difícil\". Nascia assim o Programa Apollo, sob a recém-criada NASA, mobilizando cerca de 400 mil pessoas e um orçamento sem precedentes em tempos de paz. O caminho até 1969 foi marcado por avanços vertiginosos e também por tragédia: em janeiro de 1967, o incêndio na cabine da Apollo 1 matou os astronautas Gus Grissom, Ed White e Roger Chaffee, forçando uma reformulação profunda do projeto. As missões Apollo 7 e 8 testaram a espaçonave em órbita terrestre e depois lunar; a Apollo 9 validou o módulo lunar; a Apollo 10 fez um \"ensaio geral\" completo, aproximando-se da superfície da Lua sem pousar. Quando a Apollo 11 decolou, em julho de 1969, a NASA já havia percorrido quase todo o caminho técnico — restava apenas o passo final, mais arriscado e mais aguardado: colocar botas humanas no solo lunar diante dos olhos do mundo inteiro.",
+    "momentos": [
+      {
+        "data": "16 de julho de 1969, 13:32 UTC (09:32 no horário local)",
+        "titulo": "O foguete Saturn V decola rumo à Lua",
+        "local": "Centro Espacial Kennedy, Complexo de Lançamento 39A, Flórida, EUA",
+        "texto": "Pouco depois das nove da manhã, o gigantesco foguete Saturn V — com 111 metros de altura e quase 3 mil toneladas — ergueu-se da plataforma 39A diante de mais de um milhão de espectadores reunidos ao longo da costa da Flórida. A bordo, Neil Armstrong, Buzz Aldrin e Michael Collins sentiam o rugido de cinco motores F-1 produzindo 3,4 mil toneladas de empuxo. Em pouco mais de dois minutos e meio, o primeiro estágio já havia sido descartado; em cerca de doze minutos, a espaçonave alcançava a órbita terrestre. Autoridades, jornalistas e cerca de 600 milhões de pessoas ao redor do planeta acompanhavam, pela primeira vez em escala global, o início de uma viagem à Lua transmitida ao vivo pela televisão. Entre os presentes estavam o ex-presidente Lyndon Johnson e figuras do governo Nixon. Após cerca de uma hora e meia em órbita, um novo disparo dos motores — a chamada injeção translunar — lançou a Apollo 11 para fora da órbita da Terra, rumo ao seu destino a quase 400 mil quilômetros de distância.",
+        "imagem": "/eventos/momento-lancamento-saturno5.jpg"
+      },
+      {
+        "data": "16–19 de julho de 1969",
+        "titulo": "Três dias de viagem e a manobra de acoplamento",
+        "local": "Espaço, em trajetória entre a Terra e a Lua",
+        "texto": "Poucas horas após o lançamento, a espaçonave realizou uma manobra delicada: o módulo de comando e serviço Columbia se separou do estágio superior do foguete, girou 180 graus e acoplou-se ao módulo lunar Eagle, guardado dentro do compartimento superior do foguete, extraindo-o para a viagem. Durante os três dias seguintes, a tripulação cruzou o vazio entre os dois mundos, fazendo a espaçonave girar lentamente sobre seu próprio eixo — o chamado \"assado de churrasco\" (barbecue roll) — para distribuir igualmente o calor do Sol sobre o casco. Os astronautas fizeram transmissões de TV ao vivo mostrando a Terra cada vez menor pela janela, checaram sistemas e descansaram em turnos. Em 19 de julho, a Apollo 11 entrou em órbita lunar após acender os motores no lado oculto da Lua, fora de contato com a Terra — momento de tensão silenciosa no Controle da Missão, que só pôde confirmar o sucesso da manobra quando o sinal de rádio foi restabelecido.",
+        "imagem": "/eventos/momento-acoplamento-eagle.jpg"
+      },
+      {
+        "data": "20 de julho de 1969, por volta das 17:44 UTC",
+        "titulo": "O Eagle se separa da Columbia e inicia a descida",
+        "local": "Órbita lunar, acima da face visível da Lua",
+        "texto": "Com a espaçonave já em órbita lunar, Armstrong e Aldrin passaram para dentro do módulo lunar Eagle, deixando Michael Collins sozinho a bordo da Columbia. Às 17:44 UTC, o Eagle se desacoplou e começou a se afastar, iniciando a descida rumo à superfície. Collins, orbitando a cada duas horas, passava por longos trechos atrás da Lua sem qualquer contato de rádio com a Terra ou com seus companheiros — tornando-se, por minutos a cada órbita, o ser humano mais isolado da história. Durante a descida motorizada, alarmes de computador do tipo \"1202\" e \"1201\" soaram na cabine do Eagle, indicando sobrecarga no computador de bordo; em Houston, o jovem controlador Steve Bales autorizou prosseguir, decisão que se provaria correta. Com o combustível se esgotando e o piloto automático mirando um campo de pedras, Armstrong assumiu o controle manual nos instantes finais, procurando um local seguro para pousar — um dos momentos de maior tensão de toda a corrida espacial.",
+        "imagem": "/eventos/momento-descida-eagle.jpg"
+      },
+      {
+        "data": "20 de julho de 1969, 20:17:40 UTC",
+        "titulo": "\"Houston, aqui é a Base Tranquilidade. O Eagle pousou\"",
+        "local": "Mar da Tranquilidade, superfície da Lua",
+        "texto": "Com apenas cerca de 25 segundos de combustível restantes, Neil Armstrong pousou o módulo lunar Eagle suavemente sobre a poeira do Mar da Tranquilidade. Sua voz, calma e contida, ecoou pelo rádio até a Terra: \"Houston, Tranquility Base here. The Eagle has landed\" — \"Houston, aqui é a Base Tranquilidade. O Eagle pousou\". No Controle da Missão, em Houston, a tensão acumulada por horas explodiu em aplausos e lágrimas; o controlador de voo Charles Duke, responsável pela comunicação com a tripulação, respondeu, aliviado: \"Você deixou um bocado de gente quase azul aqui embaixo. Estamos respirando de novo.\" Pela primeira vez na história, uma espaçonave tripulada pousava sobre outro corpo celeste, a quase 384 mil quilômetros da Terra. Armstrong e Aldrin ainda passariam cerca de seis horas e meia dentro do módulo lunar, checando sistemas e se preparando psicologicamente, antes de vestirem os trajes espaciais e abrirem a escotilha para o momento que o mundo esperava.",
+        "imagem": "/eventos/momento-pouso-tranquility.jpg"
+      },
+      {
+        "data": "21 de julho de 1969, 02:56:15 UTC",
+        "titulo": "\"Um pequeno passo para o homem, um salto gigante para a humanidade\"",
+        "local": "Mar da Tranquilidade, superfície da Lua",
+        "texto": "Às 02h56min15s UTC de 21 de julho (ainda 22h56 de 20 de julho no horário da costa leste dos EUA), Neil Armstrong desceu lentamente a escada do módulo lunar e pisou na poeira cinzenta da Lua, pronunciando a frase que ficaria gravada na história: \"That's one small step for man, one giant leap for mankind\" — \"Este é um pequeno passo para o homem, um salto gigante para a humanidade\". Uma câmera de TV instalada no Eagle transmitiu as imagens, em preto e branco e granuladas, ao vivo para uma audiência estimada em 600 milhões de pessoas, o maior público televisivo já reunido até então. Armstrong descreveu a superfície como \"de grão fino, quase como pó\", relatando que suas botas afundavam apenas alguns milímetros. Cerca de vinte minutos depois, ele colheu uma amostra de contingência do solo lunar, guardando-a no bolso do traje — uma precaução caso a missão precisasse ser abortada repentinamente antes da coleta planejada.",
+        "imagem": "/eventos/momento-primeiro-passo.jpg"
+      },
+      {
+        "data": "21 de julho de 1969, madrugada (UTC)",
+        "titulo": "Aldrin se junta a Armstrong: a bandeira, a placa e a ligação de Nixon",
+        "local": "Mar da Tranquilidade, superfície da Lua",
+        "texto": "Cerca de dezenove minutos após Armstrong, Buzz Aldrin desceu a escada do Eagle e se tornou o segundo homem a pisar na Lua, descrevendo a paisagem com a célebre expressão \"magnificent desolation\" (\"magnífica desolação\"). Juntos, os dois astronautas plantaram uma bandeira dos Estados Unidos — presa a uma haste horizontal para parecer tremulando na ausência de atmosfera —, montaram instrumentos científicos como um sismômetro e um refletor de laser, e coletaram cerca de 21,5 quilos de rochas e solo lunar. Deixaram também uma placa metálica fixada na perna do módulo lunar, com os dizeres: \"Aqui, homens do planeta Terra pisaram pela primeira vez na Lua, julho de 1969 d.C. Viemos em paz, em nome de toda a humanidade.\" Durante a caminhada, o presidente Richard Nixon fez uma ligação telefônica da Casa Branca, chamando-a de \"a ligação telefônica mais histórica já feita\". No total, a atividade extraveicular durou 2 horas e 31 minutos.",
+        "imagem": "/eventos/momento-bandeira-lua.jpg"
+      },
+      {
+        "data": "21 de julho de 1969, 17:54 UTC",
+        "titulo": "Decolagem da Lua e reencontro em órbita",
+        "local": "Órbita lunar, acima do Mar da Tranquilidade",
+        "texto": "Após pouco mais de 21 horas e meia na superfície lunar, o estágio de ascensão do módulo Eagle acendeu seu motor e decolou da Lua, deixando para trás a base inferior como um marco permanente. Michael Collins, que havia completado 27 órbitas sozinho a bordo da Columbia, acompanhou tenso a manobra: qualquer falha deixaria Armstrong e Aldrin presos na Lua, sem possibilidade de resgate. Cerca de três horas e meia depois, o Eagle acoplou-se novamente à Columbia; Armstrong e Aldrin transferiram as amostras lunares e os equipamentos para o módulo de comando, e o estágio de ascensão, já sem utilidade, foi ejetado e permaneceu em órbita lunar. No dia seguinte, 22 de julho, um novo disparo dos motores — a injeção transterrestre — lançou a Columbia, agora com os três astronautas reunidos, de volta em direção à Terra.",
+        "imagem": "/eventos/momento-decolagem-lua.jpg"
+      },
+      {
+        "data": "24 de julho de 1969, 16:50:35 UTC",
+        "titulo": "Amerissagem no Pacífico e o retorno de heróis",
+        "local": "Oceano Pacífico, aproximadamente 13°19′N 169°09′W, a sudoeste do Havaí",
+        "texto": "Depois de cerca de três dias de viagem de volta, a cápsula Columbia reentrou na atmosfera terrestre a mais de 39 mil quilômetros por hora, protegida por um escudo térmico incandescente, e amerissou no Oceano Pacífico às 16h50min35s UTC de 24 de julho de 1969, a cerca de 1.500 quilômetros a sudoeste do Havaí. A poucos quilômetros de distância, o porta-aviões USS Hornet recolheu os três astronautas, que — por precaução contra eventuais micro-organismos lunares desconhecidos — vestiram trajes de isolamento biológico ainda dentro da cápsula e passaram os 21 dias seguintes em quarentena, primeiro a bordo do navio e depois em uma instalação especial no Texas. Ao desembarcarem, foram recebidos como heróis: o presidente Nixon esperava pessoalmente no convés do Hornet. Nas semanas seguintes, Armstrong, Aldrin e Collins percorreram dezenas de países em turnê triunfal, celebrados como símbolos de uma conquista que a humanidade inteira, e não apenas os Estados Unidos, reivindicava como sua.",
+        "imagem": "/eventos/momento-amerissagem.jpg"
+      }
+    ],
+    "locais": [
+      { "nome": "Centro Espacial Kennedy (Complexo de Lançamento 39A)", "lat": 28.6083, "lng": -80.6042, "descricao": "Rampa de lançamento na costa da Flórida de onde o foguete Saturn V decolou em 16 de julho de 1969, levando a tripulação da Apollo 11 rumo à Lua." },
+      { "nome": "Centro de Controle da Missão, Houston", "lat": 29.5502, "lng": -95.0930, "descricao": "No Centro de Naves Tripuladas (hoje Centro Espacial Johnson), controladores de voo liderados por Gene Kranz acompanharam cada etapa da missão, incluindo os tensos minutos finais do pouso lunar." },
+      { "nome": "Mar da Tranquilidade — Tranquility Base (Lua)", "lat": 0.67408, "lng": 23.47297, "descricao": "Local exato do pouso do módulo lunar Eagle e dos primeiros passos humanos em outro mundo, em 20 e 21 de julho de 1969." },
+      { "nome": "Local de amerissagem, Oceano Pacífico Norte", "lat": 13.3167, "lng": -169.15, "descricao": "Ponto do Oceano Pacífico onde a cápsula Columbia amerissou em 24 de julho de 1969, encerrando a missão após 8 dias no espaço." },
+      { "nome": "USS Hornet (navio de recuperação)", "lat": 21.3, "lng": -157.85, "descricao": "Porta-aviões que resgatou os astronautas no Pacífico e os levou, em quarentena, até Pearl Harbor e depois ao Havaí antes do retorno ao Texas." },
+      { "nome": "Casa Branca, Washington D.C.", "lat": 38.8977, "lng": -77.0365, "descricao": "De onde o presidente Richard Nixon fez, por telefone, a ligação para os astronautas na Lua, chamada por ele mesmo de 'a ligação mais histórica já feita da Casa Branca'." }
+    ],
+    "figuras": [
+      {
+        "nome": "Neil Armstrong",
+        "papel": "Comandante da missão Apollo 11",
+        "imagem": "/eventos/figura-armstrong.jpg",
+        "descricao": "Piloto de testes e engenheiro aeroespacial, foi o primeiro ser humano a pisar na Lua, pronunciando a frase que se tornou símbolo da era espacial."
+      },
+      {
+        "nome": "Buzz Aldrin",
+        "papel": "Piloto do Módulo Lunar",
+        "imagem": "/eventos/figura-aldrin.jpg",
+        "descricao": "Segundo homem a pisar na Lua, doutor em astronáutica pelo MIT, responsável por desenvolver técnicas de encontro orbital usadas na descida e no retorno do módulo lunar."
+      },
+      {
+        "nome": "Michael Collins",
+        "papel": "Piloto do Módulo de Comando",
+        "imagem": "/eventos/figura-collins.jpg",
+        "descricao": "Permaneceu sozinho em órbita lunar a bordo da Columbia enquanto Armstrong e Aldrin desciam à superfície, garantindo o elo vital para o retorno seguro da tripulação à Terra."
+      },
+      {
+        "nome": "Eugene 'Gene' Kranz",
+        "papel": "Diretor de voo (Equipe Branca), Centro de Controle da Missão, Houston",
+        "imagem": "/eventos/figura-kranz.jpg",
+        "descricao": "Liderou a equipe de controladores de voo durante a descida e o pouso do módulo lunar, tomando decisões decisivas sob pressão diante dos alarmes de computador nos minutos finais."
+      }
+    ],
+    "legado": "A chegada do homem à Lua encerrou simbolicamente a fase mais aguda da corrida espacial: os Estados Unidos haviam cumprido a promessa feita por Kennedy oito anos antes, e a União Soviética, que também mirava um pouso tripulado, jamais conseguiu replicar o feito, encerrando discretamente seu próprio programa lunar tripulado nos anos seguintes. A Apollo 11 seria sucedida por outras cinco missões que pousaram na Lua até 1972 (Apollo 12, 14, 15, 16 e 17), consolidando um total de doze astronautas caminhando sobre sua superfície — até hoje, o único corpo celeste além da Terra pisado por seres humanos.\n\nO impacto tecnológico do programa Apollo se espalhou muito além da exploração espacial: avanços em computação miniaturizada, materiais isolantes, softwares de controle de voo e telemetria alimentaram, direta ou indiretamente, indústrias inteiras nas décadas seguintes. As mais de 380 quilos de rochas lunares trazidas pelas missões Apollo continuam sendo estudadas por cientistas até os dias atuais, revelando informações sobre a formação da Lua e do Sistema Solar. A fotografia da Terra vista do espaço, popularizada pelas missões Apollo, também alimentou o nascente movimento ambientalista global, oferecendo à humanidade uma nova perspectiva sobre a fragilidade do próprio planeta.\n\nCulturalmente, o pouso na Lua tornou-se um dos eventos mais unificadores do século XX, assistido ao vivo por centenas de milhões de pessoas e celebrado como conquista de toda a humanidade, não apenas de uma nação. Décadas depois, o feito segue como referência máxima de ambição científica e engenharia de precisão, inspirando o atual esforço da NASA — o Programa Artemis — para devolver astronautas à superfície lunar, desta vez com o objetivo de estabelecer presença humana duradoura como trampolim para futuras missões a Marte.",
+    "curiosidadesRelacionadas": []
+  },
+  {
+    "slug": "queda-muro-berlim",
+    "titulo": "Queda do Muro de Berlim",
+    "ano": "1989",
+    "periodo": "Agosto – novembro de 1989",
+    "categoria": "Política",
+    "hook": "Numa noite de novembro, uma resposta improvisada numa entrevista coletiva bastou para derrubar, em poucas horas, uma fronteira erguida havia 28 anos — e, com ela, toda a ordem que dividia o mundo em dois.",
+    "heroImagem": "/eventos/hero-muro-berlim.jpg",
+    "heroLegenda": "Berlinenses comemoram em cima do Muro perto do Portão de Brandemburgo, na madrugada de 10 de novembro de 1989.",
+    "jornadaTitulo": "A noite que dividiu a história em antes e depois",
+    "jornadaDescricao": "Role para acompanhar, mês a mês, como fissuras na Cortina de Ferro se transformaram, em poucos meses de 1989, na queda de uma das fronteiras mais vigiadas do planeta.",
+    "mapaTitulo": "Pela Europa em transformação, 1989",
+    "mapaDescricao": "De Moscou a Berlim, passando pela fronteira húngara e pelas ruas de Leipzig, veja os lugares onde a revolução pacífica de 1989 tomou forma.",
+    "estatisticas": [
+      { "label": "Duração do Muro em pé", "valor": "28 anos (1961–1989)" },
+      { "label": "Extensão total da barreira", "valor": "≈155 km" },
+      { "label": "Vítimas fatais na fronteira", "valor": "ao menos 140 mortos" },
+      { "label": "Alemães orientais que fugiram via Hungria em 1989", "valor": "mais de 60 mil" }
+    ],
+    "contexto": "Ao final da Segunda Guerra Mundial, a Alemanha foi dividida em zonas de ocupação aliadas, e Berlim, mesmo situada no interior do território soviético, foi igualmente repartida entre as potências vencedoras. Em 1949, essa divisão se cristalizou na criação de dois Estados alemães: a República Federal da Alemanha (RFA), capitalista e alinhada ao Ocidente, e a República Democrática Alemã (RDA), socialista e satélite de Moscou. Berlim Ocidental tornou-se um enclave de liberdade cercado por território comunista, e o fluxo constante de alemães orientais fugindo para o lado ocidental — cerca de 3,5 milhões entre 1949 e 1961 — levou o governo da RDA, com apoio soviético, a erguer o Muro de Berlim na madrugada de 13 de agosto de 1961. Por 28 anos, a barreira de concreto, arame farpado, torres de vigia e faixa da morte separou famílias, bairros e um povo inteiro, tornando-se o símbolo máximo da Cortina de Ferro e da divisão bipolar do mundo na Guerra Fria.\n\nO equilíbrio começou a mudar na segunda metade dos anos 1980. Ao assumir a liderança soviética em 1985, Mikhail Gorbachev lançou as políticas de glasnost (transparência) e perestroika (reestruturação), afrouxando o controle rígido de Moscou sobre os países do Pacto de Varsóvia e sinalizando que a URSS não mais interviria militarmente para sustentar regimes comunistas impopulares — uma ruptura decisiva com a Doutrina Brejnev. Estimulados por esse novo clima, movimentos de reforma ganharam força na Polônia (com o Solidariedade) e na Hungria, enquanto a economia estagnada e a repressão da RDA, sob o inflexível Erich Honecker, geravam descontentamento crescente. Em 1989, esse caldeirão de fatores — abertura soviética, crise econômica, protestos populares e uma geração cansada de viver atrás do Muro — convergiu para uma sequência de eventos que, em poucos meses, derrubaria não apenas uma parede de concreto, mas toda a ordem geopolítica erguida desde 1945.",
+    "momentos": [
+      {
+        "data": "2 de maio de 1989",
+        "titulo": "Hungria abre uma fresta na Cortina de Ferro",
+        "local": "Fronteira Hungria-Áustria, perto de Sopron",
+        "texto": "Em 2 de maio de 1989, guardas húngaros começaram a desmontar trechos da cerca eletrificada de arame farpado que separava a Hungria da Áustria — a primeira ruptura física visível na Cortina de Ferro em quase quatro décadas. O gesto, motivado por reformas internas e pelo alto custo de manutenção da barreira, não tinha a intenção declarada de abrir uma rota de fuga para alemães orientais, mas a notícia se espalhou rapidamente. Milhares de cidadãos da RDA, que podiam viajar livremente até a Hungria por acordos entre países socialistas, passaram a se dirigir à fronteira húngara-austríaca na esperança de atravessar para o Ocidente. Acampamentos improvisados de 'turistas' alemães orientais começaram a se formar perto de Budapeste e ao longo da fronteira, enquanto o governo húngaro, sob pressão crescente, hesitava entre honrar seus compromissos com a RDA e ceder à onda humanitária. O desmonte da cerca, imortalizado em fotografias de arame cortado, tornou-se um marco simbólico: pela primeira vez desde o início da Guerra Fria, um país do Bloco Soviético abria fisicamente uma brecha no sistema que mantinha a Europa dividida, prenunciando o efeito dominó que se seguiria nos meses seguintes.",
+        "imagem": "/eventos/momento-cerca-hungria.jpg"
+      },
+      {
+        "data": "19 de agosto de 1989",
+        "titulo": "O Piquenique Pan-Europeu",
+        "local": "Sopronpuszta, perto de Sopron, Hungria",
+        "texto": "Organizado por ativistas húngaros e austríacos ligados à União Pan-Europeia, presidida por Otto von Habsburg, o 'Piquenique Pan-Europeu' reuniu milhares de pessoas perto da cidade de Sopron sob o pretexto de um evento de confraternização e reflexão sobre a integração europeia. Como parte da celebração, um portão de madeira na fronteira entre Hungria e Áustria foi simbolicamente aberto por três horas, entre 15h e 18h. A notícia, divulgada por panfletos distribuídos em campos de refugiados, atraiu centenas de alemães orientais que aguardavam havia semanas uma oportunidade de fuga. Quando o portão se abriu, cerca de 700 cidadãos da RDA atravessaram correndo para o lado austríaco, sob os olhos de guardas fronteiriços húngaros que, em um momento decisivo, optaram por não atirar nem intervir. O episódio foi o maior êxodo em massa desde a construção do Muro em 1961 e testou publicamente a disposição de Moscou em usar força para conter a debandada — teste que a URSS, sob Gorbachev, silenciosamente não aceitou. O Piquenique Pan-Europeu entrou para a história como um ensaio geral da queda da Cortina de Ferro, três meses antes do colapso do Muro de Berlim.",
+        "imagem": "/eventos/momento-piquenique-paneuropeu.jpg"
+      },
+      {
+        "data": "10–11 de setembro de 1989",
+        "titulo": "Hungria abre oficialmente a fronteira",
+        "local": "Budapeste e fronteira Hungria-Áustria",
+        "texto": "Após semanas de negociações tensas com Berlim Oriental e Moscou, o governo húngaro anunciou, na noite de 10 de setembro de 1989, que abriria oficialmente sua fronteira com a Áustria a partir da meia-noite, permitindo que qualquer cidadão da RDA presente em território húngaro emigrasse livremente para o Ocidente. O anúncio, feito pelo ministro das Relações Exteriores Gyula Horn, rompeu unilateralmente um acordo bilateral de 1969 com a RDA que proibia esse tipo de travessia — um ato de desafio direto ao regime de Erich Honecker. Em poucos dias, dezenas de milhares de alemães orientais que se aglomeravam em campos improvisados na Hungria cruzaram para a Áustria e seguiram para a Alemanha Ocidental; estima-se que mais de 60 mil tenham deixado a RDA pela rota húngara entre setembro e o início de novembro. A decisão húngara, tomada com o conhecimento de que Moscou não interviria, expôs publicamente a fragilidade do Bloco Soviético e alimentou o desespero e a indignação dentro da própria RDA, onde a televisão ocidental, captada em boa parte do país, mostrava as cenas de famílias se reencontrando do outro lado da fronteira. Foi o primeiro rombo institucional, e não apenas físico, na Cortina de Ferro.",
+        "imagem": "/eventos/momento-fronteira-hungria-aberta.jpg"
+      },
+      {
+        "data": "9 de outubro de 1989",
+        "titulo": "A segunda-feira decisiva em Leipzig",
+        "local": "Nikolaikirche, Leipzig",
+        "texto": "Desde 1982, orações por reformas e direitos civis eram realizadas semanalmente na Igreja de São Nicolau (Nikolaikirche), em Leipzig, reunindo pequenos grupos de dissidentes. Ao longo de setembro de 1989, essas 'manifestações de segunda-feira' cresceram rapidamente, e as autoridades da RDA, temendo uma repetição do massacre da Praça da Paz Celestial ocorrido em Pequim meses antes, mobilizaram cerca de 8 mil policiais, soldados e membros da milícia operária, além de hospitais preparados com estoques extras de sangue. Na noite de 9 de outubro, porém, mais de 70 mil pessoas — muito além de qualquer expectativa — tomaram as ruas ao redor da Nikolaikirche entoando o grito que se tornaria o lema da revolução: 'Wir sind das Volk!' ('Nós somos o povo!'). Diante da magnitude pacífica e disciplinada da multidão, as forças de segurança recuaram sem disparar um único tiro. O momento é considerado o ponto de virada decisivo da revolução na Alemanha Oriental: provou que o regime já não tinha vontade nem legitimidade para reprimir seu próprio povo pela força, abrindo caminho para semanas de protestos crescentes em Berlim Oriental, Dresden e outras cidades que culminariam na queda do Muro um mês depois.",
+        "imagem": "/eventos/momento-leipzig-segunda.jpg"
+      },
+      {
+        "data": "9 de novembro de 1989, por volta das 18h53",
+        "titulo": "A coletiva de imprensa que mudou a história",
+        "local": "Centro Internacional de Imprensa, Mohrenstraße, Berlim Oriental",
+        "texto": "Pressionado pela onda de protestos e pela renúncia de Erich Honecker três semanas antes, o novo governo da RDA, liderado por Egon Krenz, preparou uma nova regulamentação de viagens para aliviar a crise, prevendo a emissão facilitada de vistos a partir do dia seguinte. Na coletiva de imprensa televisionada ao vivo naquela noite, o porta-voz do Politburo, Günter Schabowski, que havia recebido as instruções pouco antes de entrar na sala e não fora plenamente informado sobre os detalhes, leu o comunicado de forma hesitante. Quando um jornalista perguntou quando a nova regra entraria em vigor, Schabowski folheou seus papéis, hesitou, e respondeu: 'Ab sofort, unverzüglich' — 'A partir de agora, imediatamente'. A resposta, um erro de interpretação do texto que na verdade previa um processo administrativo gradual, foi transmitida ao vivo para milhões de telespectadores em ambos os lados do Muro. Emissoras ocidentais como a ARD noticiaram, ainda naquela noite, que a RDA havia 'aberto suas fronteiras'. A frase de Schabowski, dita quase de improviso, desencadeou em poucas horas um dos acontecimentos mais rápidos e inesperados da história do século XX.",
+        "imagem": "/eventos/momento-schabowski.jpg"
+      },
+      {
+        "data": "Noite de 9 para 10 de novembro de 1989",
+        "titulo": "As multidões tomam os postos de fronteira",
+        "local": "Posto fronteiriço de Bornholmer Straße, Berlim",
+        "texto": "Assim que a notícia do anúncio de Schabowski se espalhou pela televisão e pelo boca a boca, milhares de berlinenses orientais se dirigiram aos postos de controle ao longo do Muro, exigindo passagem imediata para o Ocidente. No posto de Bornholmer Straße, o primeiro a ceder, o comandante Harald Jäger tentou repetidamente contatar seus superiores para obter instruções, mas não recebeu ordens claras — e nenhuma autorização para usar força contra uma multidão pacífica que já somava milhares de pessoas. Por volta das 23h30, sem alternativa e temendo um desastre, Jäger tomou a decisão, por conta própria, de abrir os portões e deixar de verificar passaportes. A notícia se espalhou instantaneamente, e em minutos os demais postos de controle do Muro — Checkpoint Charlie, Invalidenstraße, Chausseestraße e outros — foram igualmente abertos sob pressão popular. Milhares de alemães orientais atravessaram para Berlim Ocidental, recebidos por multidões em festa, buzinas de carros, champanhe e lágrimas. Foi a primeira vez, em 28 anos, que a fronteira entre as duas Alemanhas se abria livremente e sem violência, numa noite que ficaria conhecida simplesmente como 'die Nacht, die die Mauer fiel' — a noite em que o Muro caiu.",
+        "imagem": "/eventos/momento-abertura-fronteira.jpg"
+      },
+      {
+        "data": "A partir de 10 de novembro de 1989",
+        "titulo": "Os Mauerspechte: o Muro é destruído a golpes de picareta",
+        "local": "Portão de Brandemburgo, Berlim",
+        "texto": "Nos dias seguintes à abertura, o Muro de Berlim deixou de ser apenas uma barreira política para se tornar palco de uma celebração coletiva e, literalmente, um monumento a ser demolido pelas próprias mãos do povo. Milhares de berlinenses de ambos os lados, munidos de martelos, picaretas, cinzéis e até ferramentas improvisadas, passaram a atacar a estrutura de concreto em busca de lascas e fragmentos como lembranças — apelidados de 'Mauerspechte' ('pica-paus do muro'). Cenas de pessoas escalando o Muro perto do Portão de Brandemburgo, dançando sobre seu topo e brindando com espumante tornaram-se algumas das imagens mais icônicas do século XX, estampadas em jornais do mundo inteiro. Em 22 de dezembro de 1989, o Portão de Brandemburgo, fechado desde 1961, foi reaberto oficialmente. Nas semanas seguintes, máquinas pesadas começaram a demolição sistemática de grandes trechos da estrutura, processo que se estenderia ao longo de 1990. Do que um dia foram cerca de 155 quilômetros de concreto, arame farpado e torres de vigilância, restaram apenas fragmentos preservados como memorial — muitos deles hoje espalhados por museus e coleções privadas ao redor do mundo, testemunhas físicas de uma das quedas mais rápidas e simbólicas de um regime na história moderna.",
+        "imagem": "/eventos/momento-mauerspechte.jpg"
+      },
+      {
+        "data": "3 de outubro de 1990",
+        "titulo": "A reunificação da Alemanha",
+        "local": "Berlim",
+        "texto": "Menos de um ano após a queda do Muro, o processo de reunificação alemã, impulsionado pelo chanceler da Alemanha Ocidental, Helmut Kohl, e negociado internacionalmente através do chamado Tratado 'Dois Mais Quatro' (as duas Alemanhas e as quatro potências ocupantes — Estados Unidos, União Soviética, Reino Unido e França), chegou à sua conclusão formal. À meia-noite de 3 de outubro de 1990, a República Democrática Alemã deixou oficialmente de existir, e seus cinco estados (Länder) foram incorporados à República Federal da Alemanha, sob os termos do Artigo 23 da Constituição da RFA. Em Berlim, uma multidão de centenas de milhares de pessoas celebrou em frente ao prédio do Reichstag, com direito a fogos de artifício, discursos oficiais e o hasteamento da bandeira alemã unificada à meia-noite. O que havia sido dividido pela força em 1945 e selado pelo concreto em 1961 voltava a ser, 45 anos depois, um único país soberano. A data, 3 de outubro, tornou-se o feriado nacional da Alemanha reunificada — o 'Dia da Unidade Alemã' —, celebrado até hoje como o desfecho oficial de um processo que começou com fissuras na Cortina de Ferro e culminou na reconfiguração completa do mapa político da Europa.",
+        "imagem": "/eventos/momento-reunificacao.jpg"
+      }
+    ],
+    "locais": [
+      { "nome": "Portão de Brandemburgo, Berlim", "lat": 52.5163, "lng": 13.3777, "descricao": "Símbolo maior da divisão da cidade, o portão ficou fechado dentro da faixa de segurança do Muro por quase três décadas; em 22 de dezembro de 1989 foi reaberto ao público, tornando-se o epicentro das celebrações da reunificação." },
+      { "nome": "Checkpoint Charlie, Berlim", "lat": 52.5077, "lng": 13.3904, "descricao": "O mais famoso posto de controle entre os setores americano e soviético de Berlim, palco de tensos confrontos durante a Guerra Fria e de cenas de celebração na noite de 9 de novembro de 1989." },
+      { "nome": "Posto fronteiriço de Bornholmer Straße, Berlim", "lat": 52.5504, "lng": 13.3888, "descricao": "Primeiro posto de fronteira a abrir seus portões na noite de 9 de novembro de 1989, sob decisão do oficial Harald Jäger, dando início à queda efetiva do Muro." },
+      { "nome": "Alexanderplatz, Berlim Oriental", "lat": 52.5219, "lng": 13.4132, "descricao": "Em 4 de novembro de 1989, reuniu cerca de meio milhão de pessoas no maior protesto já registrado na história da RDA, exigindo liberdade de expressão e reformas democráticas." },
+      { "nome": "Nikolaikirche, Leipzig", "lat": 51.3396, "lng": 12.3731, "descricao": "Berço das 'manifestações de segunda-feira', onde orações por reformas se transformaram, em 9 de outubro de 1989, no maior protesto pacífico contra o regime da RDA até então." },
+      { "nome": "Sopron e fronteira Hungria-Áustria", "lat": 47.6817, "lng": 16.5845, "descricao": "Palco do Piquenique Pan-Europeu de 19 de agosto de 1989 e da abertura oficial da fronteira em setembro, rota pela qual dezenas de milhares de alemães orientais fugiram para o Ocidente." },
+      { "nome": "Kremlin, Moscou", "lat": 55.7520, "lng": 37.6175, "descricao": "Sede do poder soviético, onde Mikhail Gorbachev conduzia as reformas da glasnost e perestroika e decidia não intervir militarmente para sustentar os regimes comunistas do Leste Europeu." }
+    ],
+    "figuras": [
+      {
+        "nome": "Mikhail Gorbachev",
+        "papel": "Secretário-geral do Partido Comunista da União Soviética",
+        "imagem": "/eventos/figura-gorbachev.jpg",
+        "descricao": "Suas políticas de glasnost e perestroika, e a recusa em usar força militar para sustentar os regimes comunistas do Leste Europeu, abriram espaço para as revoluções de 1989."
+      },
+      {
+        "nome": "Günter Schabowski",
+        "papel": "Porta-voz do Politburo do SED (Partido Socialista Unificado da Alemanha)",
+        "imagem": "/eventos/figura-schabowski.jpg",
+        "descricao": "Sua resposta improvisada e imprecisa numa coletiva de imprensa em 9 de novembro de 1989 anunciou por engano a abertura imediata das fronteiras, precipitando a queda do Muro naquela mesma noite."
+      },
+      {
+        "nome": "Helmut Kohl",
+        "papel": "Chanceler federal da Alemanha Ocidental (RFA)",
+        "imagem": "/eventos/figura-kohl.jpg",
+        "descricao": "Articulou política e diplomaticamente o rápido processo de reunificação alemã, concluído em 3 de outubro de 1990."
+      },
+      {
+        "nome": "Egon Krenz",
+        "papel": "Secretário-geral do SED e chefe de Estado da RDA (outubro–dezembro de 1989)",
+        "imagem": "/eventos/figura-krenz.jpg",
+        "descricao": "Sucedeu Erich Honecker em 18 de outubro de 1989 e autorizou a nova regulamentação de viagens cujo anúncio precipitado por Schabowski levou à derrubada do Muro."
+      }
+    ],
+    "legado": "A queda do Muro desencadeou um processo político vertiginoso. Em poucos meses, o regime da RDA perdeu completamente a legitimidade; em março de 1990 ocorreram as primeiras eleições livres no país, vencidas por partidos favoráveis à reunificação rápida. Menos de um ano depois da noite de 9 de novembro, em 3 de outubro de 1990, a Alemanha se reunificou formalmente sob a bandeira da República Federal, encerrando 45 anos de divisão territorial, ideológica e humana que havia separado famílias inteiras.\n\nO colapso da RDA foi apenas o primeiro de uma cadeia de quedas: ao longo do restante de 1989, os regimes comunistas da Polônia, Hungria, Tchecoslováquia (Revolução de Veludo), Bulgária e Romênia (onde Nicolae Ceaușescu foi deposto e executado em dezembro) também ruíram, num movimento que ficou conhecido como o 'Outono das Nações'. A própria União Soviética, enfraquecida pelas reformas de Gorbachev e por movimentos independentistas em suas repúblicas, se desintegraria formalmente em dezembro de 1991, encerrando quase 45 anos de Guerra Fria e a divisão bipolar do mundo entre Washington e Moscou.\n\nNas décadas seguintes, a queda do Muro tornou-se o símbolo maior do fim da Guerra Fria e da reunificação do continente europeu. A União Europeia e a OTAN se expandiram progressivamente para o Leste, incorporando países que décadas antes estavam sob domínio soviético, como Polônia, Hungria, República Tcheca e, mais tarde, os países bálticos. Hoje, poucos trechos do Muro original permanecem de pé — preservados como memoriais, como a East Side Gallery em Berlim —, mas seu legado permanece vivo como lembrete de que barreiras erguidas para dividir povos, por mais concretas e vigiadas que sejam, podem ruir diante da vontade popular.",
+    "curiosidadesRelacionadas": ["queda-muro"]
   }
 ]

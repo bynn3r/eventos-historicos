@@ -124,11 +124,8 @@ export default function EventoPage({ params }: EventoPageProps) {
         <section className="bg-muted/30 py-16 md:py-24">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-2xl text-center">
-              <h2 className="text-2xl font-bold text-foreground md:text-3xl">A jornada até o fim da guerra</h2>
-              <p className="mt-3 text-muted-foreground">
-                Role a página para acompanhar, momento a momento, os dias que encerraram o conflito mais
-                devastador da história.
-              </p>
+              <h2 className="text-2xl font-bold text-foreground md:text-3xl">{evento.jornadaTitulo}</h2>
+              <p className="mt-3 text-muted-foreground">{evento.jornadaDescricao}</p>
             </div>
 
             <div className="mx-auto mt-16 max-w-5xl">
@@ -141,10 +138,8 @@ export default function EventoPage({ params }: EventoPageProps) {
         <section className="py-16 md:py-24">
           <div className="container mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-2xl text-center">
-              <h2 className="text-2xl font-bold text-foreground md:text-3xl">Pelo mundo, em 1945</h2>
-              <p className="mt-3 text-muted-foreground">
-                Os lugares onde as decisões — e as tragédias — que encerraram a guerra aconteceram.
-              </p>
+              <h2 className="text-2xl font-bold text-foreground md:text-3xl">{evento.mapaTitulo}</h2>
+              <p className="mt-3 text-muted-foreground">{evento.mapaDescricao}</p>
             </div>
 
             <div className="mt-12">
