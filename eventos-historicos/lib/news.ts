@@ -3,7 +3,6 @@ import { generatePortalAnalysis } from "@/lib/news-editorial"
 import { translateToPortuguese } from "@/lib/deepl"
 
 import { getNoticiaDb, saveNoticiaDb, listNoticiasDb, noticiaExistsDb } from "@/lib/dynamodb"
-import { fetchRssArticlesFromApi, fetchArticleBySlugFromApi, isLambdaConfigured } from "@/lib/news-api"
 
 export interface SiteNewsArticle {
   id: string
