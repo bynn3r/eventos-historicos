@@ -6,16 +6,18 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { NewsImage } from "@/components/news-image"
 import { ArticleTranslate } from "@/components/article-translate"
-import { Calendar, ArrowLeft, ExternalLink, User } from "lucide-react"
+import { Calendar, ArrowLeft, ExternalLink, User, Landmark } from "lucide-react"
 import Link from "next/link"
 import { formatNewsDate, renderSafeArticleHtml, type SiteNewsArticle } from "@/lib/news"
+import type { RelatedContentItem } from "@/lib/related-content"
 
 interface ArticlePageRuntimeProps {
   noticia: SiteNewsArticle
   relatedNews: SiteNewsArticle[]
+  relatedHistorical?: RelatedContentItem[]
 }
 
-export function ArticlePageRuntime({ noticia, relatedNews }: ArticlePageRuntimeProps) {
+export function ArticlePageRuntime({ noticia, relatedNews, relatedHistorical = [] }: ArticlePageRuntimeProps) {
   const safeHtml = renderSafeArticleHtml(noticia.conteudoHtml)
   const imageCaption =
     noticia.tipo === "rss"
@@ -124,6 +126,35 @@ export function ArticlePageRuntime({ noticia, relatedNews }: ArticlePageRuntimeP
                       </div>
                     )}
                   </section>
+
+                  {relatedHistorical.length > 0 && (
+                    <section className="rounded-2xl border bg-card p-6">
+                      <div className="mb-4 flex items-center gap-2">
+                        <Landmark className="h-5 w-5 text-primary" />
+                        <h2 className="text-base font-semibold text-foreground">Contexto histórico</h2>
+                      </div>
+                      <p className="mb-5 text-sm text-muted-foreground">
+                        Isso já aconteceu antes — explore o pano de fundo histórico por trás dessa notícia.
+                      </p>
+                      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
+                        {relatedHistorical.map((item) => (
+                          <Link
+                            key={`${item.type}-${item.slug}`}
+                            href={item.href}
+                            className="group rounded-xl border bg-background p-4 transition-shadow hover:shadow-lg"
+                          >
+                            <Badge variant="outline" className="mb-2 text-xs">
+                              {item.type === "evento" ? "Linha do Tempo" : "Curiosidade"}
+                            </Badge>
+                            <h3 className="mb-1 text-sm font-semibold leading-6 group-hover:text-primary transition-colors">
+                              {item.title}
+                            </h3>
+                            <p className="line-clamp-3 text-xs leading-5 text-muted-foreground">{item.summary}</p>
+                          </Link>
+                        ))}
+                      </div>
+                    </section>
+                  )}
                 </div>
               </div>
             </div>

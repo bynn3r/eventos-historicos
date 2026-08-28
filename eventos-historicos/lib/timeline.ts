@@ -31,6 +31,7 @@ export interface TimelineEvent {
   relatedEvents: string[]
   characters: TimelineCharacter[]
   sources: TimelineSource[]
+  keywords: string[]
 }
 
 const events = timelineData as TimelineEvent[]

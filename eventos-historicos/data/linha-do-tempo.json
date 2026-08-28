@@ -17,7 +17,15 @@
     "image": "/eventos/hero-narmer-palette.jpg",
     "relatedEvents": [],
     "characters": [],
-    "sources": []
+    "sources": [],
+    "keywords": [
+      "egito",
+      "menes",
+      "narmer",
+      "faraó",
+      "nilo",
+      "primeira dinastia"
+    ]
   },
   {
     "id": "primeiros-jogos-olimpicos",
@@ -39,7 +47,15 @@
       "fundacao-de-roma"
     ],
     "characters": [],
-    "sources": []
+    "sources": [],
+    "keywords": [
+      "olimpíadas",
+      "jogos olímpicos",
+      "grécia antiga",
+      "olimpia",
+      "zeus",
+      "atletismo"
+    ]
   },
   {
     "id": "fundacao-de-roma",
@@ -62,7 +78,15 @@
       "queda-imperio-romano-ocidente"
     ],
     "characters": [],
-    "sources": []
+    "sources": [],
+    "keywords": [
+      "roma",
+      "rômulo",
+      "remo",
+      "itália",
+      "império romano",
+      "loba capitolina"
+    ]
   },
   {
     "id": "unificacao-china",
@@ -82,7 +106,14 @@
     "image": "/eventos/hero-exercito-terracota.jpg",
     "relatedEvents": [],
     "characters": [],
-    "sources": []
+    "sources": [],
+    "keywords": [
+      "china",
+      "qin shi huang",
+      "dinastia qin",
+      "grande muralha",
+      "reinos combatentes"
+    ]
   },
   {
     "id": "queda-imperio-romano-ocidente",
@@ -105,7 +136,16 @@
       "queda-constantinopla"
     ],
     "characters": [],
-    "sources": []
+    "sources": [],
+    "keywords": [
+      "roma",
+      "império romano",
+      "odoacro",
+      "rômulo augusto",
+      "queda de roma",
+      "idade média",
+      "bárbaros"
+    ]
   },
   {
     "id": "queda-constantinopla",
@@ -153,7 +193,16 @@
         "description": "Depois de ter sua oferta recusada por falta de recursos bizantinos, fundiu para Mehmed II as maiores bombardas já construídas até então, decisivas para abrir brechas nas muralhas milenares."
       }
     ],
-    "sources": []
+    "sources": [],
+    "keywords": [
+      "constantinopla",
+      "bizâncio",
+      "império bizantino",
+      "otomano",
+      "mehmed",
+      "istambul",
+      "turquia"
+    ]
   },
   {
     "id": "descobrimento-america",
@@ -200,7 +249,16 @@
         "description": "Armador experiente de Palos, foi decisivo para recrutar tripulação e conter ameaças de motim durante a travessia; separou-se de Colombo no Caribe e morreu poucos dias após o retorno à Espanha, em março de 1493."
       }
     ],
-    "sources": []
+    "sources": [],
+    "keywords": [
+      "colombo",
+      "américa",
+      "espanha",
+      "caribe",
+      "colonização",
+      "índias",
+      "novo mundo"
+    ]
   },
   {
     "id": "revolucao-francesa",
@@ -245,7 +303,17 @@
         "description": "Orador poderoso e um dos organizadores da insurreição de 10 de agosto de 1792, tornou-se figura central da Primeira República antes de cair em desgraça e ser guilhotinado em 1794."
       }
     ],
-    "sources": []
+    "sources": [],
+    "keywords": [
+      "frança",
+      "revolução francesa",
+      "bastilha",
+      "luís xvi",
+      "robespierre",
+      "monarquia",
+      "guilhotina",
+      "república"
+    ]
   },
   {
     "id": "fim-segunda-guerra-mundial",
@@ -293,7 +361,19 @@
         "description": "Anunciou pessoalmente, em rádio nacional, a aceitação da rendição japonesa em 15 de agosto de 1945."
       }
     ],
-    "sources": []
+    "sources": [],
+    "keywords": [
+      "segunda guerra mundial",
+      "hitler",
+      "nazismo",
+      "hiroshima",
+      "nagasaki",
+      "japão",
+      "alemanha",
+      "aliados",
+      "holocausto",
+      "bomba atômica"
+    ]
   },
   {
     "id": "chegada-homem-lua",
@@ -340,7 +420,17 @@
         "description": "Liderou a equipe de controladores de voo durante a descida e o pouso do módulo lunar, tomando decisões decisivas sob pressão diante dos alarmes de computador nos minutos finais."
       }
     ],
-    "sources": []
+    "sources": [],
+    "keywords": [
+      "lua",
+      "apollo 11",
+      "nasa",
+      "armstrong",
+      "aldrin",
+      "corrida espacial",
+      "estados unidos",
+      "exploração espacial"
+    ]
   },
   {
     "id": "queda-muro-berlim",
@@ -387,6 +477,17 @@
         "description": "Sucedeu Erich Honecker em 18 de outubro de 1989 e autorizou a nova regulamentação de viagens cujo anúncio precipitado por Schabowski levou à derrubada do Muro."
       }
     ],
-    "sources": []
+    "sources": [],
+    "keywords": [
+      "muro de berlim",
+      "alemanha",
+      "guerra fria",
+      "urss",
+      "união soviética",
+      "rússia",
+      "reunificação alemã",
+      "otan",
+      "berlim"
+    ]
   }
 ]

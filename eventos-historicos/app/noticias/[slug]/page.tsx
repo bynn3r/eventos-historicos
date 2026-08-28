@@ -1,5 +1,6 @@
 import { ArticlePageRuntime } from "@/components/article-page-runtime"
 import { getNewsArticleBySlug, getNewsArticleMetaBySlug, getRelatedNews } from "@/lib/news"
+import { findRelatedContent } from "@/lib/related-content"
 import { notFound } from "next/navigation"
 
 interface NoticiaPageProps {
@@ -45,5 +46,7 @@ export default async function NoticiaPage({ params }: NoticiaPageProps) {
     notFound()
   }
 
-  return <ArticlePageRuntime noticia={noticia} relatedNews={relatedNews} />
+  const relatedHistorical = findRelatedContent(`${noticia.titulo} ${noticia.descricao}`, noticia.categoria)
+
+  return <ArticlePageRuntime noticia={noticia} relatedNews={relatedNews} relatedHistorical={relatedHistorical} />
 }
