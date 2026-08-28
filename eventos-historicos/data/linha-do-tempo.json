@@ -1,0 +1,392 @@
+[
+  {
+    "id": "unificacao-egito",
+    "slug": "unificacao-egito",
+    "title": "Unificação do Egito",
+    "startYear": -3100,
+    "endYear": -3100,
+    "dateDisplay": "c. 3100 a.C.",
+    "period": "Idade Antiga",
+    "region": "África",
+    "country": "Egito",
+    "category": "Política",
+    "summary": "Menes une o Alto e Baixo Egito, fundando a primeira dinastia.",
+    "content": "O faraó Menes (também conhecido como Narmer) consegue unificar o Alto e Baixo Egito, estabelecendo a primeira dinastia e criando um dos primeiros estados centralizados da história. Este evento marca o início da civilização egípcia como a conhecemos, com a criação de um sistema administrativo complexo e o desenvolvimento da escrita hieroglífica.",
+    "importance": 4,
+    "featured": false,
+    "image": "/eventos/hero-narmer-palette.jpg",
+    "relatedEvents": [],
+    "characters": [],
+    "sources": []
+  },
+  {
+    "id": "primeiros-jogos-olimpicos",
+    "slug": "primeiros-jogos-olimpicos",
+    "title": "Primeiros Jogos Olímpicos",
+    "startYear": -776,
+    "endYear": -776,
+    "dateDisplay": "776 a.C.",
+    "period": "Idade Antiga",
+    "region": "Europa",
+    "country": "Grécia",
+    "category": "Cultural",
+    "summary": "Início dos Jogos Olímpicos na Grécia Antiga.",
+    "content": "Os primeiros Jogos Olímpicos registrados são realizados em Olímpia, na Grécia, em honra a Zeus. Este evento marca não apenas o início de uma tradição esportiva que perdura até hoje, mas também representa a importância da competição atlética na cultura grega e o desenvolvimento de um calendário pan-helênico que unia as cidades-estado gregas.",
+    "importance": 3,
+    "featured": false,
+    "image": "/eventos/hero-olimpia-grecia.jpg",
+    "relatedEvents": [
+      "fundacao-de-roma"
+    ],
+    "characters": [],
+    "sources": []
+  },
+  {
+    "id": "fundacao-de-roma",
+    "slug": "fundacao-de-roma",
+    "title": "Fundação de Roma",
+    "startYear": -753,
+    "endYear": -753,
+    "dateDisplay": "753 a.C.",
+    "period": "Idade Antiga",
+    "region": "Europa",
+    "country": "Itália",
+    "category": "Política",
+    "summary": "História da fundação de Roma por Rômulo e Remo.",
+    "content": "Segundo a tradição romana, Roma é fundada por Rômulo após matar seu irmão gêmeo Remo. Embora seja uma lenda, esta data marca simbolicamente o início de uma das civilizações mais influentes da história, que evoluiria de uma pequena cidade-estado para um império que dominaria o Mediterrâneo por mais de mil anos.",
+    "importance": 4,
+    "featured": false,
+    "image": "/eventos/hero-loba-capitolina.jpg",
+    "relatedEvents": [
+      "primeiros-jogos-olimpicos",
+      "queda-imperio-romano-ocidente"
+    ],
+    "characters": [],
+    "sources": []
+  },
+  {
+    "id": "unificacao-china",
+    "slug": "unificacao-china",
+    "title": "Unificação da China",
+    "startYear": -221,
+    "endYear": -221,
+    "dateDisplay": "221 a.C.",
+    "period": "Idade Antiga",
+    "region": "Ásia",
+    "country": "China",
+    "category": "Política",
+    "summary": "Qin Shi Huang une a China e se torna o primeiro imperador.",
+    "content": "Qin Shi Huang completa a unificação da China, terminando o período dos Reinos Combatentes e estabelecendo a dinastia Qin. Ele padroniza a moeda, a escrita, as medidas e inicia a construção da Grande Muralha. Suas reformas criam a base para a China imperial que duraria mais de 2000 anos.",
+    "importance": 4,
+    "featured": false,
+    "image": "/eventos/hero-exercito-terracota.jpg",
+    "relatedEvents": [],
+    "characters": [],
+    "sources": []
+  },
+  {
+    "id": "queda-imperio-romano-ocidente",
+    "slug": "queda-imperio-romano-ocidente",
+    "title": "Queda do Império Romano do Ocidente",
+    "startYear": 476,
+    "endYear": 476,
+    "dateDisplay": "476",
+    "period": "Idade Antiga",
+    "region": "Europa",
+    "country": "Itália",
+    "category": "Política",
+    "summary": "Fim oficial do Império Romano do Ocidente.",
+    "content": "Odoacro, líder dos hérulos, depõe Rômulo Augusto, o último imperador romano do Ocidente, marcando o fim oficial do Império Romano do Ocidente. Este evento simboliza o fim da Antiguidade e o início da Idade Média na Europa, com profundas transformações políticas, sociais e culturais.",
+    "importance": 5,
+    "featured": false,
+    "image": "/eventos/hero-queda-roma-ocidente.jpg",
+    "relatedEvents": [
+      "fundacao-de-roma",
+      "queda-constantinopla"
+    ],
+    "characters": [],
+    "sources": []
+  },
+  {
+    "id": "queda-constantinopla",
+    "slug": "queda-constantinopla",
+    "title": "Queda de Constantinopla",
+    "startYear": 1453,
+    "endYear": 1453,
+    "dateDisplay": "1453",
+    "period": "Idade Média",
+    "region": "Europa/Ásia",
+    "country": "Turquia",
+    "category": "Militar",
+    "summary": "Em 53 dias de cerco, um adolescente sultão com um canhão do tamanho de um navio apagou onze séculos de Roma — e o mundo antigo terminou ao amanhecer de uma terça-feira de maio.",
+    "content": "Em 1453, Constantinopla já era a sombra de um império. Fundada por Constantino, o Grande, em 330, a cidade fora por mil anos o maior centro urbano e comercial da cristandade — mas o Império Bizantino que ela governava havia encolhido, ao longo de séculos de guerras, cruzadas e perdas territoriais, a pouco mais do que a própria capital e alguns enclaves na Morreia e no mar Egeu. Do outro lado, os turcos otomanos, que haviam cruzado para os Bálcãs no século XIV, já cercavam a cidade por terra havia gerações: dois sultões anteriores tentaram tomá-la, em 1396 e 1422, sem sucesso. Quando o jovem Mehmed II subiu ao trono em 1451, aos dezenove anos, fez da conquista de Constantinopla o projeto central de seu reinado, vendo na cidade a chave para unificar seus domínios na Ásia e na Europa e herdar o prestígio de Roma. Ele construiu a fortaleza de Rumeli Hisarı no Bósforo para cortar o suprimento naval bizantino, contratou o engenheiro húngaro Orban para fundir uma artilharia sem precedentes e reuniu um exército muitas vezes maior que a população da cidade sitiada. O imperador Constantino XI Paleólogo, que reinava desde 1449, tentara em vão obter socorro militar do Ocidente: a união das Igrejas ortodoxa e católica, selada no Concílio de Florença em 1439 como preço pela ajuda papal, era impopular entre o clero e o povo bizantinos e rendeu apenas apoio simbólico. Isolada, subfinanciada e defendida por poucos milhares de soldados contra dezenas de milhares de otomanos, Constantinopla entrou na primavera de 1453 cercada por terra e, em breve, também por mar.\n\nA queda de Constantinopla extinguiu, de forma definitiva, o Império Romano do Oriente — a última continuidade institucional direta da Roma Antiga, encerrada 1.123 anos após sua fundação por Constantino, o Grande. Para a Europa cristã, a notícia chegou como um choque civilizacional: pela primeira vez em séculos, uma capital cristã histórica passava ao controle de um poder islâmico, e o feito consolidou o Império Otomano como potência dominante no Mediterrâneo oriental e nos Bálcãs por mais de quatro séculos, com Istambul como sua capital.\n\nO evento também acelerou transformações que já estavam em curso. Estudiosos e copistas bizantinos que fugiram para a Itália levaram consigo manuscritos gregos clássicos e o conhecimento da língua grega antiga, alimentando o Renascimento italiano então em ascensão. No plano comercial, o controle otomano sobre as rotas terrestres para o Oriente encareceu e dificultou o comércio europeu de especiarias, um dos fatores que impulsionou reinos como Portugal e Espanha a buscar rotas marítimas alternativas para a Ásia — um impulso que, décadas depois, levaria às viagens de Bartolomeu Dias, Vasco da Gama e Cristóvão Colombo, e à Era das Grandes Navegações.\n\nSimbolicamente, a queda também remodelou identidades políticas e religiosas por séculos: Moscou passou a se autodenominar a 'Terceira Roma', herdeira da ortodoxia bizantina, enquanto os sultões otomanos reivindicavam para si o título de sucessores dos Césares. A Hagia Sophia, convertida em mesquita em 1453, tornou-se museu em 1934 sob a Turquia republicana e voltou a funcionar como mesquita em 2020 — permanecendo, quase 600 anos depois, um símbolo vivo e disputado do momento em que um mundo antigo terminou e outro, novo, começou.",
+    "importance": 5,
+    "featured": true,
+    "image": "/eventos/hero-constantinopla.jpg",
+    "relatedEvents": [
+      "queda-imperio-romano-ocidente",
+      "descobrimento-america"
+    ],
+    "characters": [
+      {
+        "name": "Mehmed II",
+        "role": "Sultão do Império Otomano",
+        "image": "/eventos/figura-mehmed.jpg",
+        "description": "Aos 21 anos, planejou e comandou pessoalmente o cerco, apostando toda sua autoridade recém-conquistada na tomada de Constantinopla — vitória que lhe rendeu o título de 'Fatih', o Conquistador."
+      },
+      {
+        "name": "Constantino XI Paleólogo",
+        "role": "Último imperador bizantino",
+        "image": "/eventos/figura-constantino.jpg",
+        "description": "Recusou-se a abandonar a cidade mesmo diante de forças esmagadoras e morreu em combate na muralha na madrugada de 29 de maio, encerrando a linhagem de imperadores romanos iniciada por Augusto."
+      },
+      {
+        "name": "Giovanni Giustiniani Longo",
+        "role": "Comandante militar genovês, chefe da defesa terrestre",
+        "image": "/eventos/figura-giustiniani.jpg",
+        "description": "Nobre genovês que financiou e liderou cerca de 700 soldados profissionais em socorro a Constantinopla; seu ferimento e retirada durante o assalto final abalaram a moral dos defensores."
+      },
+      {
+        "name": "Orban",
+        "role": "Engenheiro de artilharia húngaro",
+        "image": "/eventos/figura-orban.jpg",
+        "description": "Depois de ter sua oferta recusada por falta de recursos bizantinos, fundiu para Mehmed II as maiores bombardas já construídas até então, decisivas para abrir brechas nas muralhas milenares."
+      }
+    ],
+    "sources": []
+  },
+  {
+    "id": "descobrimento-america",
+    "slug": "descobrimento-america",
+    "title": "Descobrimento da América",
+    "startYear": 1492,
+    "endYear": 1492,
+    "dateDisplay": "1492",
+    "period": "Idade Moderna",
+    "region": "Américas",
+    "country": "Bahamas",
+    "category": "Exploração",
+    "summary": "Três navios, um punhado de marinheiros assustados e um erro de cálculo sobre o tamanho do planeta: assim a Europa colidiu com um mundo que já tinha nome, povos e história.",
+    "content": "No fim do século XV, chegar ao Oriente — fonte de especiarias, seda e outras riquezas cobiçadas pela Europa — significava enfrentar rotas terrestres longas, caras e controladas por intermediários otomanos e italianos. Portugal já buscava um caminho marítimo alternativo contornando a África: em 1488, Bartolomeu Dias havia dobrado o Cabo da Boa Esperança, abrindo caminho para a futura rota até a Índia. Foi nesse ambiente de competição ibérica por rotas comerciais que o navegador genovês Cristóvão Colombo propôs algo diferente: alcançar as Índias navegando para oeste, atravessando o Oceano Atlântico. A proposta se baseava em cálculos equivocados sobre o tamanho da Terra — Colombo subestimava significativamente a circunferência do globo e superestimava a extensão da Ásia, o que tornava a viagem, em sua conta, muito mais curta do que era na realidade. Rejeitado pela coroa portuguesa, que já apostava na rota africana, Colombo levou o projeto à Espanha. Ali, após anos de negociação, obteve o apoio dos Reis Católicos, Isabel I de Castela e Fernando II de Aragão, recém-vitoriosos na conquista de Granada, último reduto muçulmano na península Ibérica, em janeiro de 1492. Em 17 de abril daquele ano, foram assinadas as Capitulações de Santa Fé, contrato que garantia a Colombo os títulos de Almirante do Mar Oceano, Vice-rei e Governador das terras que viesse a encontrar, além de participação nas riquezas obtidas. O financiamento veio de fundos reais, de investidores privados e da própria cidade de Palos de la Frontera, obrigada pela coroa a fornecer duas caravelas como forma de pagar uma dívida. Assim nasceu a expedição que, sem que ninguém a bordo soubesse, encontraria não as Índias, mas um continente inteiro já habitado por dezenas de milhões de pessoas.\n\nA chegada de Colombo ao Caribe inaugurou aquilo que historiadores chamam de Intercâmbio Colombiano: a troca, em escala inédita, de plantas, animais, alimentos, doenças e pessoas entre os dois lados do Atlântico. Milho, batata, tomate, cacau e pimenta seguiram para a Europa, Ásia e África, transformando dietas e economias inteiras; cavalos, gado, trigo e cana-de-açúcar chegaram às Américas, remodelando paisagens e sistemas de trabalho. Doenças como varíola, sarampo e gripe, contra as quais os povos americanos não tinham imunidade prévia, provocaram um dos maiores colapsos demográficos da história — estima-se que a população indígena das Américas tenha caído entre 80% e 90% ao longo do século seguinte ao contato, por doença, guerra, escravização e ruptura dos modos de vida tradicionais.\n\nPara os povos taínos que receberam Colombo em Guanahani, o encontro marcou o início do fim de sua autonomia. Nas décadas seguintes, o sistema de encomienda impôs trabalho forçado à população indígena de Hispaniola em minas e plantações, e a combinação de exploração, violência e epidemias praticamente extinguiu os taínos das Grandes Antilhas como povo distinto em poucas gerações — embora estudos genéticos recentes mostrem que sua ascendência sobrevive em parte significativa da população caribenha atual. A viagem de 1492 abriu caminho para mais três expedições de Colombo e, na sequência, para a colonização espanhola e portuguesa de vastos territórios americanos, com consequências profundas e duradouras para os povos originários.\n\nDo ponto de vista europeu, o evento redesenhou o mapa geopolítico e econômico do mundo. Espanha e Portugal dividiram formalmente as terras recém-encontradas pelo Tratado de Tordesilhas, em 1494, e o fluxo de prata e ouro extraído das Américas ao longo dos séculos seguintes financiou guerras, impérios e o surgimento de novas potências comerciais na Europa. A data de 12 de outubro de 1492 permanece, até hoje, um símbolo contestado: celebrada por séculos como marco do \"Novo Mundo\", ela é cada vez mais reconhecida — inclusive em partes das próprias Américas, onde o dia passou a ser chamado de Dia dos Povos Indígenas em vários países — como o início de um processo de conquista e colonização que reconfigurou radical e violentamente a vida de milhões de pessoas que já estavam ali.",
+    "importance": 5,
+    "featured": true,
+    "image": "/eventos/hero-colombo.jpg",
+    "relatedEvents": [
+      "queda-constantinopla"
+    ],
+    "characters": [
+      {
+        "name": "Cristóvão Colombo",
+        "role": "Navegador genovês, Almirante do Mar Oceano",
+        "image": "/eventos/figura-colombo.jpg",
+        "description": "Idealizador e comandante da expedição, defendeu por anos a ideia de alcançar as Índias navegando para oeste e liderou as quatro viagens que o tornaram figura central — e hoje profundamente controversa — na história do contato entre Europa e América."
+      },
+      {
+        "name": "Isabel I de Castela",
+        "role": "Rainha de Castela",
+        "image": "/eventos/figura-isabel.jpg",
+        "description": "Ao lado de Fernando II, financiou e autorizou a expedição por meio das Capitulações de Santa Fé, concedendo a Colombo títulos e privilégios sobre as terras que viesse a encontrar."
+      },
+      {
+        "name": "Fernando II de Aragão",
+        "role": "Rei de Aragão",
+        "image": "/eventos/figura-fernando.jpg",
+        "description": "Corregente ao lado de Isabel I, foi cossignatário do acordo que viabilizou a viagem e, junto com ela, recebeu Colombo em Barcelona após seu retorno triunfal em 1493."
+      },
+      {
+        "name": "Martín Alonso Pinzón",
+        "role": "Capitão da caravela Pinta",
+        "image": "/eventos/figura-pinzon.jpg",
+        "description": "Armador experiente de Palos, foi decisivo para recrutar tripulação e conter ameaças de motim durante a travessia; separou-se de Colombo no Caribe e morreu poucos dias após o retorno à Espanha, em março de 1493."
+      }
+    ],
+    "sources": []
+  },
+  {
+    "id": "revolucao-francesa",
+    "slug": "revolucao-francesa",
+    "title": "Revolução Francesa",
+    "startYear": 1789,
+    "endYear": 1799,
+    "dateDisplay": "1789–1799",
+    "period": "Idade Contemporânea",
+    "region": "Europa",
+    "country": "França",
+    "category": "Política",
+    "summary": "Em poucas semanas, um povo faminto e endividado derrubou séculos de monarquia absoluta e reescreveu, à força de barricadas e guilhotina, a própria ideia do que um cidadão pode exigir do seu governo.",
+    "content": "No fim dos anos 1780, a França era uma potência endividada até o pescoço. Décadas de guerras dispendiosas — entre elas o apoio à independência dos Estados Unidos — haviam esgotado os cofres reais, enquanto um sistema fiscal profundamente desigual isentava a nobreza e o clero, as duas ordens privilegiadas, do grosso dos impostos. Todo o peso recaía sobre o Terceiro Estado: camponeses, artesãos e uma burguesia urbana cada vez mais instruída e impaciente com sua exclusão do poder político. Colheitas ruins em 1788 elevaram o preço do pão a níveis insustentáveis, espalhando fome pelas cidades. Ao mesmo tempo, as ideias do Iluminismo — Voltaire, Rousseau, Montesquieu — vinham corroendo havia décadas a legitimidade do direito divino dos reis, propondo no lugar noções de soberania popular, separação de poderes e direitos naturais. Diante da bancarrota iminente, Luís XVI viu-se obrigado a convocar os Estados Gerais, a antiga assembleia consultiva das três ordens do reino, que não se reunia desde 1614. A expectativa de reformas fiscais logo se transformou em algo maior: o Terceiro Estado, representando mais de 95% da população mas com voto historicamente igualado ao das outras duas ordens, exigiu que a votação fosse feita por cabeça e não por ordem — uma disputa aparentemente processual que, em poucas semanas, incendiaria toda a estrutura política do Antigo Regime e daria início a um dos processos revolucionários mais decisivos da história moderna.\n\nA Revolução Francesa não terminou com a queda de Robespierre em 1794, mas sua fase mais radical havia redesenhado permanentemente as possibilidades da política moderna. A Declaração dos Direitos do Homem e do Cidadão tornou-se referência direta para constituições e movimentos de direitos civis ao redor do mundo nos séculos seguintes, consagrando princípios de igualdade legal, soberania popular e liberdade individual que, embora aplicados de forma incompleta e contraditória na própria França revolucionária, forneceram o vocabulário político que passaria a estruturar debates sobre cidadania, representação e direitos humanos até os dias de hoje.\n\nNo plano institucional, a década revolucionária destruiu de forma irreversível o sistema de privilégios estamentais do Antigo Regime francês e experimentou, em rápida sucessão, monarquia constitucional, república, ditadura de comitê e, por fim, abriu caminho para a ascensão de Napoleão Bonaparte, que tomaria o poder no golpe de 18 Brumário (9 de novembro de 1799), encerrando formalmente o período revolucionário. As guerras desencadeadas pela Revolução espalhariam, no entanto, seus ideais e seu código legal por boa parte da Europa sob o domínio napoleônico, plantando sementes de nacionalismo e reformismo liberal que floresceriam ao longo do século XIX.\n\nO legado mais duradouro da Revolução Francesa talvez seja simbólico: ela demonstrou, de forma dramática e sangrenta, que a legitimidade de um governo podia ser questionada e derrubada em nome da vontade popular, e não apenas da tradição ou do direito divino. Esse precedente inspiraria diretamente revoluções liberais e nacionais por toda a Europa e a América Latina no século seguinte, além de alimentar debates que atravessam até hoje discussões sobre os limites entre liberdade, igualdade e os riscos da violência política em nome de ideais revolucionários.",
+    "importance": 5,
+    "featured": true,
+    "image": "/eventos/hero-bastilha.jpg",
+    "relatedEvents": [],
+    "characters": [
+      {
+        "name": "Luís XVI",
+        "role": "Rei da França e de Navarra, depois \"Rei dos Franceses\"",
+        "image": "/eventos/figura-luis16.jpg",
+        "description": "Monarca indeciso diante da crise financeira e das reformas exigidas pelo Terceiro Estado, foi deposto em 1792 e guilhotinado em janeiro de 1793 por traição à nação."
+      },
+      {
+        "name": "Maria Antonieta",
+        "role": "Rainha da França, arquiduquesa da Áustria",
+        "image": "/eventos/figura-maria-antonieta.jpg",
+        "description": "Alvo de intensa impopularidade por seus supostos gastos extravagantes e origem estrangeira, foi presa junto ao marido e executada em outubro de 1793."
+      },
+      {
+        "name": "Maximilien Robespierre",
+        "role": "Deputado jacobino e membro dominante do Comitê de Salvação Pública",
+        "image": "/eventos/figura-robespierre.jpg",
+        "description": "Advogado e orador conhecido como \"o Incorruptível\", liderou o Terror em nome da virtude republicana antes de ser derrubado e executado em julho de 1794."
+      },
+      {
+        "name": "Georges Danton",
+        "role": "Advogado revolucionário e ministro da Justiça",
+        "image": "/eventos/figura-danton.jpg",
+        "description": "Orador poderoso e um dos organizadores da insurreição de 10 de agosto de 1792, tornou-se figura central da Primeira República antes de cair em desgraça e ser guilhotinado em 1794."
+      }
+    ],
+    "sources": []
+  },
+  {
+    "id": "fim-segunda-guerra-mundial",
+    "slug": "fim-segunda-guerra-mundial",
+    "title": "Fim da Segunda Guerra Mundial",
+    "startYear": 1939,
+    "endYear": 1945,
+    "dateDisplay": "1939–1945",
+    "period": "Idade Contemporânea",
+    "region": "Global",
+    "country": "Japão",
+    "category": "Militar",
+    "summary": "Seis anos de guerra total terminam com dois cogumelos atômicos, uma Europa em ruínas e um mundo repentinamente dividido em duas novas superpotências.",
+    "content": "Em 1945, a Segunda Guerra Mundial já se arrastava havia quase seis anos e havia se tornado o conflito mais destrutivo da história da humanidade. Depois do fracasso da ofensiva alemã nas Ardenas, no inverno de 1944-45, os Aliados avançavam de todos os lados: o Exército Vermelho soviético empurrava a Wehrmacht para fora do Leste Europeu, enquanto tropas americanas, britânicas e francesas cruzavam o Reno rumo ao coração da Alemanha. No Pacífico, os Estados Unidos retomavam ilha por ilha o território conquistado pelo Japão, aproximando-se perigosamente do arquipélago japonês. Foi nesse contexto — de vitória militar cada vez mais certa, mas de custo humano ainda incalculável — que os líderes aliados começaram a negociar não apenas o fim da guerra, mas o desenho do mundo que viria depois dela.\n\nO fim da Segunda Guerra Mundial não trouxe apenas alívio — trouxe um mundo irreconhecível em relação ao que existia em 1939. Dezenas de milhões de mortos, cidades inteiras reduzidas a escombros na Europa e no Japão, e o surgimento de uma arma capaz de destruir civilizações inteiras mudaram permanentemente a forma como as grandes potências pensariam sobre guerra, poder e diplomacia.\n\nDas cinzas do conflito nasceu a Organização das Nações Unidas, criada meses antes do fim da guerra com a promessa de evitar que uma catástrofe dessa escala se repetisse. Ao mesmo tempo, as divergências entre as potências ocidentais e a União Soviética — visíveis já em Potsdam — rapidamente se transformariam na Guerra Fria, uma nova rivalidade global que dominaria as relações internacionais pelas quatro décadas seguintes.\n\nA guerra também redesenhou o mapa de poder mundial: impérios coloniais europeus, enfraquecidos pelo conflito, começariam a se desfazer nas décadas seguintes, enquanto Estados Unidos e União Soviética emergiam como as duas superpotências que definiriam a geopolítica global até o final do século XX.",
+    "importance": 5,
+    "featured": true,
+    "image": "/eventos/hero-reichstag.jpg",
+    "relatedEvents": [
+      "chegada-homem-lua",
+      "queda-muro-berlim"
+    ],
+    "characters": [
+      {
+        "name": "Harry S. Truman",
+        "role": "Presidente dos Estados Unidos",
+        "image": "/eventos/figura-truman.jpg",
+        "description": "Assumiu a presidência após a morte de Roosevelt em abril de 1945 e autorizou o uso das bombas atômicas contra o Japão."
+      },
+      {
+        "name": "Josef Stalin",
+        "role": "Líder da União Soviética",
+        "image": "/eventos/figura-stalin.jpg",
+        "description": "Comandou o avanço soviético até Berlim e negociou em Ialta e Potsdam a partilha da Europa do pós-guerra."
+      },
+      {
+        "name": "Winston Churchill",
+        "role": "Primeiro-ministro do Reino Unido",
+        "image": "/eventos/figura-churchill.jpg",
+        "description": "Liderou a resistência britânica desde 1940 e participou das negociações de Ialta, sendo substituído por Clement Attlee no meio da Conferência de Potsdam."
+      },
+      {
+        "name": "Hirohito",
+        "role": "Imperador do Japão",
+        "image": "/eventos/figura-hirohito.jpg",
+        "description": "Anunciou pessoalmente, em rádio nacional, a aceitação da rendição japonesa em 15 de agosto de 1945."
+      }
+    ],
+    "sources": []
+  },
+  {
+    "id": "chegada-homem-lua",
+    "slug": "chegada-homem-lua",
+    "title": "Chegada do Homem à Lua",
+    "startYear": 1969,
+    "endYear": 1969,
+    "dateDisplay": "1969",
+    "period": "Idade Contemporânea",
+    "region": "Global",
+    "country": "Estados Unidos",
+    "category": "Exploração Espacial",
+    "summary": "Por oito dias em julho de 1969, a humanidade inteira prendeu a respiração: três homens deixaram a Terra, dois pisaram em outro mundo, e nada mais foi igual desde então.",
+    "content": "No auge da Guerra Fria, a corrida espacial era um campo de batalha simbólico entre Estados Unidos e União Soviética. Os soviéticos acumulavam vitórias espetaculares — o satélite Sputnik em 1957 e o voo de Iuri Gagarin em 1961, primeiro ser humano a orbitar a Terra — deixando os americanos em desvantagem tecnológica e moral. Em 25 de maio de 1961, o presidente John F. Kennedy declarou ao Congresso dos Estados Unidos o compromisso de \"pousar um homem na Lua e trazê-lo de volta em segurança à Terra\" antes do fim da década, uma meta reafirmada em seu célebre discurso na Rice University, em setembro de 1962, quando disse que os Estados Unidos escolhiam ir à Lua \"não porque é fácil, mas porque é difícil\". Nascia assim o Programa Apollo, sob a recém-criada NASA, mobilizando cerca de 400 mil pessoas e um orçamento sem precedentes em tempos de paz. O caminho até 1969 foi marcado por avanços vertiginosos e também por tragédia: em janeiro de 1967, o incêndio na cabine da Apollo 1 matou os astronautas Gus Grissom, Ed White e Roger Chaffee, forçando uma reformulação profunda do projeto. As missões Apollo 7 e 8 testaram a espaçonave em órbita terrestre e depois lunar; a Apollo 9 validou o módulo lunar; a Apollo 10 fez um \"ensaio geral\" completo, aproximando-se da superfície da Lua sem pousar. Quando a Apollo 11 decolou, em julho de 1969, a NASA já havia percorrido quase todo o caminho técnico — restava apenas o passo final, mais arriscado e mais aguardado: colocar botas humanas no solo lunar diante dos olhos do mundo inteiro.\n\nA chegada do homem à Lua encerrou simbolicamente a fase mais aguda da corrida espacial: os Estados Unidos haviam cumprido a promessa feita por Kennedy oito anos antes, e a União Soviética, que também mirava um pouso tripulado, jamais conseguiu replicar o feito, encerrando discretamente seu próprio programa lunar tripulado nos anos seguintes. A Apollo 11 seria sucedida por outras cinco missões que pousaram na Lua até 1972 (Apollo 12, 14, 15, 16 e 17), consolidando um total de doze astronautas caminhando sobre sua superfície — até hoje, o único corpo celeste além da Terra pisado por seres humanos.\n\nO impacto tecnológico do programa Apollo se espalhou muito além da exploração espacial: avanços em computação miniaturizada, materiais isolantes, softwares de controle de voo e telemetria alimentaram, direta ou indiretamente, indústrias inteiras nas décadas seguintes. As mais de 380 quilos de rochas lunares trazidas pelas missões Apollo continuam sendo estudadas por cientistas até os dias atuais, revelando informações sobre a formação da Lua e do Sistema Solar. A fotografia da Terra vista do espaço, popularizada pelas missões Apollo, também alimentou o nascente movimento ambientalista global, oferecendo à humanidade uma nova perspectiva sobre a fragilidade do próprio planeta.\n\nCulturalmente, o pouso na Lua tornou-se um dos eventos mais unificadores do século XX, assistido ao vivo por centenas de milhões de pessoas e celebrado como conquista de toda a humanidade, não apenas de uma nação. Décadas depois, o feito segue como referência máxima de ambição científica e engenharia de precisão, inspirando o atual esforço da NASA — o Programa Artemis — para devolver astronautas à superfície lunar, desta vez com o objetivo de estabelecer presença humana duradoura como trampolim para futuras missões a Marte.",
+    "importance": 5,
+    "featured": true,
+    "image": "/eventos/hero-apollo11-aldrin.jpg",
+    "relatedEvents": [
+      "fim-segunda-guerra-mundial"
+    ],
+    "characters": [
+      {
+        "name": "Neil Armstrong",
+        "role": "Comandante da missão Apollo 11",
+        "image": "/eventos/figura-armstrong.jpg",
+        "description": "Piloto de testes e engenheiro aeroespacial, foi o primeiro ser humano a pisar na Lua, pronunciando a frase que se tornou símbolo da era espacial."
+      },
+      {
+        "name": "Buzz Aldrin",
+        "role": "Piloto do Módulo Lunar",
+        "image": "/eventos/figura-aldrin.jpg",
+        "description": "Segundo homem a pisar na Lua, doutor em astronáutica pelo MIT, responsável por desenvolver técnicas de encontro orbital usadas na descida e no retorno do módulo lunar."
+      },
+      {
+        "name": "Michael Collins",
+        "role": "Piloto do Módulo de Comando",
+        "image": "/eventos/figura-collins.jpg",
+        "description": "Permaneceu sozinho em órbita lunar a bordo da Columbia enquanto Armstrong e Aldrin desciam à superfície, garantindo o elo vital para o retorno seguro da tripulação à Terra."
+      },
+      {
+        "name": "Eugene 'Gene' Kranz",
+        "role": "Diretor de voo (Equipe Branca), Centro de Controle da Missão, Houston",
+        "image": "/eventos/figura-kranz.jpg",
+        "description": "Liderou a equipe de controladores de voo durante a descida e o pouso do módulo lunar, tomando decisões decisivas sob pressão diante dos alarmes de computador nos minutos finais."
+      }
+    ],
+    "sources": []
+  },
+  {
+    "id": "queda-muro-berlim",
+    "slug": "queda-muro-berlim",
+    "title": "Queda do Muro de Berlim",
+    "startYear": 1989,
+    "endYear": 1989,
+    "dateDisplay": "1989",
+    "period": "Idade Contemporânea",
+    "region": "Europa",
+    "country": "Alemanha",
+    "category": "Política",
+    "summary": "Numa noite de novembro, uma resposta improvisada numa entrevista coletiva bastou para derrubar, em poucas horas, uma fronteira erguida havia 28 anos — e, com ela, toda a ordem que dividia o mundo em dois.",
+    "content": "Ao final da Segunda Guerra Mundial, a Alemanha foi dividida em zonas de ocupação aliadas, e Berlim, mesmo situada no interior do território soviético, foi igualmente repartida entre as potências vencedoras. Em 1949, essa divisão se cristalizou na criação de dois Estados alemães: a República Federal da Alemanha (RFA), capitalista e alinhada ao Ocidente, e a República Democrática Alemã (RDA), socialista e satélite de Moscou. Berlim Ocidental tornou-se um enclave de liberdade cercado por território comunista, e o fluxo constante de alemães orientais fugindo para o lado ocidental — cerca de 3,5 milhões entre 1949 e 1961 — levou o governo da RDA, com apoio soviético, a erguer o Muro de Berlim na madrugada de 13 de agosto de 1961. Por 28 anos, a barreira de concreto, arame farpado, torres de vigia e faixa da morte separou famílias, bairros e um povo inteiro, tornando-se o símbolo máximo da Cortina de Ferro e da divisão bipolar do mundo na Guerra Fria.\n\nO equilíbrio começou a mudar na segunda metade dos anos 1980. Ao assumir a liderança soviética em 1985, Mikhail Gorbachev lançou as políticas de glasnost (transparência) e perestroika (reestruturação), afrouxando o controle rígido de Moscou sobre os países do Pacto de Varsóvia e sinalizando que a URSS não mais interviria militarmente para sustentar regimes comunistas impopulares — uma ruptura decisiva com a Doutrina Brejnev. Estimulados por esse novo clima, movimentos de reforma ganharam força na Polônia (com o Solidariedade) e na Hungria, enquanto a economia estagnada e a repressão da RDA, sob o inflexível Erich Honecker, geravam descontentamento crescente. Em 1989, esse caldeirão de fatores — abertura soviética, crise econômica, protestos populares e uma geração cansada de viver atrás do Muro — convergiu para uma sequência de eventos que, em poucos meses, derrubaria não apenas uma parede de concreto, mas toda a ordem geopolítica erguida desde 1945.\n\nA queda do Muro desencadeou um processo político vertiginoso. Em poucos meses, o regime da RDA perdeu completamente a legitimidade; em março de 1990 ocorreram as primeiras eleições livres no país, vencidas por partidos favoráveis à reunificação rápida. Menos de um ano depois da noite de 9 de novembro, em 3 de outubro de 1990, a Alemanha se reunificou formalmente sob a bandeira da República Federal, encerrando 45 anos de divisão territorial, ideológica e humana que havia separado famílias inteiras.\n\nO colapso da RDA foi apenas o primeiro de uma cadeia de quedas: ao longo do restante de 1989, os regimes comunistas da Polônia, Hungria, Tchecoslováquia (Revolução de Veludo), Bulgária e Romênia (onde Nicolae Ceaușescu foi deposto e executado em dezembro) também ruíram, num movimento que ficou conhecido como o 'Outono das Nações'. A própria União Soviética, enfraquecida pelas reformas de Gorbachev e por movimentos independentistas em suas repúblicas, se desintegraria formalmente em dezembro de 1991, encerrando quase 45 anos de Guerra Fria e a divisão bipolar do mundo entre Washington e Moscou.\n\nNas décadas seguintes, a queda do Muro tornou-se o símbolo maior do fim da Guerra Fria e da reunificação do continente europeu. A União Europeia e a OTAN se expandiram progressivamente para o Leste, incorporando países que décadas antes estavam sob domínio soviético, como Polônia, Hungria, República Tcheca e, mais tarde, os países bálticos. Hoje, poucos trechos do Muro original permanecem de pé — preservados como memoriais, como a East Side Gallery em Berlim —, mas seu legado permanece vivo como lembrete de que barreiras erguidas para dividir povos, por mais concretas e vigiadas que sejam, podem ruir diante da vontade popular.",
+    "importance": 5,
+    "featured": true,
+    "image": "/eventos/hero-muro-berlim.jpg",
+    "relatedEvents": [
+      "fim-segunda-guerra-mundial"
+    ],
+    "characters": [
+      {
+        "name": "Mikhail Gorbachev",
+        "role": "Secretário-geral do Partido Comunista da União Soviética",
+        "image": "/eventos/figura-gorbachev.jpg",
+        "description": "Suas políticas de glasnost e perestroika, e a recusa em usar força militar para sustentar os regimes comunistas do Leste Europeu, abriram espaço para as revoluções de 1989."
+      },
+      {
+        "name": "Günter Schabowski",
+        "role": "Porta-voz do Politburo do SED (Partido Socialista Unificado da Alemanha)",
+        "image": "/eventos/figura-schabowski.jpg",
+        "description": "Sua resposta improvisada e imprecisa numa coletiva de imprensa em 9 de novembro de 1989 anunciou por engano a abertura imediata das fronteiras, precipitando a queda do Muro naquela mesma noite."
+      },
+      {
+        "name": "Helmut Kohl",
+        "role": "Chanceler federal da Alemanha Ocidental (RFA)",
+        "image": "/eventos/figura-kohl.jpg",
+        "description": "Articulou política e diplomaticamente o rápido processo de reunificação alemã, concluído em 3 de outubro de 1990."
+      },
+      {
+        "name": "Egon Krenz",
+        "role": "Secretário-geral do SED e chefe de Estado da RDA (outubro–dezembro de 1989)",
+        "image": "/eventos/figura-krenz.jpg",
+        "description": "Sucedeu Erich Honecker em 18 de outubro de 1989 e autorizou a nova regulamentação de viagens cujo anúncio precipitado por Schabowski levou à derrubada do Muro."
+      }
+    ],
+    "sources": []
+  }
+]

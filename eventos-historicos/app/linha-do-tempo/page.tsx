@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useMemo, useState } from "react"
 import Link from "next/link"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
@@ -17,192 +17,88 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog"
-import { Search, Filter, MapPin, Users, Zap, Globe, Crown, Sword, BookOpen } from "lucide-react"
+import { Search, Filter, MapPin, Users, Zap, Globe, Crown, Sword, BookOpen, ArrowUpDown } from "lucide-react"
+import {
+  getAllTimelineEvents,
+  filterTimelineEvents,
+  TIMELINE_PERIODS,
+  TIMELINE_CATEGORIES,
+  TIMELINE_REGIONS,
+  type TimelineEvent,
+} from "@/lib/timeline"
 
-interface TimelineEvent {
-  id: string
-  year: number
-  title: string
-  shortDescription: string
-  fullDescription: string
-  category: string
-  region: string
-  impact: string
-  icon: any
-  color: string
-  slug?: string
+// Icon/color are presentation-only, so they live here (not in the JSON data)
+// keyed by slug — a small lookup instead of one entry per event keeps the
+// content file free of React references.
+const EVENT_VISUALS: Record<string, { icon: any; color: string }> = {
+  "unificacao-egito": { icon: Crown, color: "bg-yellow-500" },
+  "primeiros-jogos-olimpicos": { icon: Users, color: "bg-blue-500" },
+  "fundacao-de-roma": { icon: Sword, color: "bg-red-500" },
+  "unificacao-china": { icon: Crown, color: "bg-yellow-500" },
+  "queda-imperio-romano-ocidente": { icon: Sword, color: "bg-red-500" },
+  "queda-constantinopla": { icon: Sword, color: "bg-red-500" },
+  "descobrimento-america": { icon: Globe, color: "bg-green-500" },
+  "revolucao-francesa": { icon: Users, color: "bg-blue-500" },
+  "fim-segunda-guerra-mundial": { icon: Sword, color: "bg-red-500" },
+  "chegada-homem-lua": { icon: Zap, color: "bg-purple-500" },
+  "queda-muro-berlim": { icon: Users, color: "bg-blue-500" },
+}
+const DEFAULT_VISUAL = { icon: BookOpen, color: "bg-slate-500" }
+
+function getVisual(slug: string) {
+  return EVENT_VISUALS[slug] ?? DEFAULT_VISUAL
 }
 
-const timelineEvents: TimelineEvent[] = [
-  {
-    id: "1",
-    year: -3100,
-    title: "Unificação do Egito",
-    shortDescription: "Menes une o Alto e Baixo Egito, fundando a primeira dinastia.",
-    fullDescription:
-      "O faraó Menes (também conhecido como Narmer) consegue unificar o Alto e Baixo Egito, estabelecendo a primeira dinastia e criando um dos primeiros estados centralizados da história. Este evento marca o início da civilização egípcia como a conhecemos, com a criação de um sistema administrativo complexo e o desenvolvimento da escrita hieroglífica.",
-    category: "Política",
-    region: "África",
-    impact: "Fundação de uma das civilizações mais duradouras da história",
-    icon: Crown,
-    color: "bg-yellow-500",
-  },
-  {
-    id: "2",
-    year: -776,
-    title: "Primeiros Jogos Olímpicos",
-    shortDescription: "Início dos Jogos Olímpicos na Grécia Antiga.",
-    fullDescription:
-      "Os primeiros Jogos Olímpicos registrados são realizados em Olímpia, na Grécia, em honra a Zeus. Este evento marca não apenas o início de uma tradição esportiva que perdura até hoje, mas também representa a importância da competição atlética na cultura grega e o desenvolvimento de um calendário pan-helênico que unia as cidades-estado gregas.",
-    category: "Cultural",
-    region: "Europa",
-    impact: "Criação de uma tradição esportiva mundial",
-    icon: Users,
-    color: "bg-blue-500",
-  },
-  {
-    id: "3",
-    year: -753,
-    title: "Fundação de Roma",
-    shortDescription: "História da fundação de Roma por Rômulo e Remo.",
-    fullDescription:
-      "Segundo a tradição romana, Roma é fundada por Rômulo após matar seu irmão gêmeo Remo. Embora seja uma lenda, esta data marca simbolicamente o início de uma das civilizações mais influentes da história, que evoluiria de uma pequena cidade-estado para um império que dominaria o Mediterrâneo por mais de mil anos.",
-    category: "Política",
-    region: "Europa",
-    impact: "Início do que se tornaria o Império Romano",
-    icon: Sword,
-    color: "bg-red-500",
-  },
-  {
-    id: "4",
-    year: -221,
-    title: "Unificação da China",
-    shortDescription: "Qin Shi Huang une a China e se torna o primeiro imperador.",
-    fullDescription:
-      "Qin Shi Huang completa a unificação da China, terminando o período dos Reinos Combatentes e estabelecendo a dinastia Qin. Ele padroniza a moeda, a escrita, as medidas e inicia a construção da Grande Muralha. Suas reformas criam a base para a China imperial que duraria mais de 2000 anos.",
-    category: "Política",
-    region: "Ásia",
-    impact: "Criação da China unificada e imperial",
-    icon: Crown,
-    color: "bg-yellow-500",
-  },
-  {
-    id: "5",
-    year: 476,
-    title: "Queda do Império Romano do Ocidente",
-    shortDescription: "Fim oficial do Império Romano do Ocidente.",
-    fullDescription:
-      "Odoacro, líder dos hérulos, depõe Rômulo Augusto, o último imperador romano do Ocidente, marcando o fim oficial do Império Romano do Ocidente. Este evento simboliza o fim da Antiguidade e o início da Idade Média na Europa, com profundas transformações políticas, sociais e culturais.",
-    category: "Política",
-    region: "Europa",
-    impact: "Fim da Antiguidade e início da Idade Média",
-    icon: Sword,
-    color: "bg-red-500",
-  },
-  {
-    id: "6",
-    year: 1453,
-    title: "Queda de Constantinopla",
-    shortDescription: "Os otomanos conquistam Constantinopla, fim do Império Bizantino.",
-    fullDescription:
-      "Mehmed II, sultão otomano, conquista Constantinopla após um cerco de 53 dias, pondo fim ao Império Bizantino que durava mais de mil anos. A queda da cidade força muitos eruditos bizantinos a fugir para o Ocidente, contribuindo para o Renascimento, e altera as rotas comerciais, impulsionando as Grandes Navegações.",
-    category: "Militar",
-    region: "Europa/Ásia",
-    impact: "Fim do Império Bizantino e impulso às Grandes Navegações",
-    icon: Sword,
-    color: "bg-red-500",
-    slug: "queda-constantinopla",
-  },
-  {
-    id: "7",
-    year: 1492,
-    title: "Descobrimento da América",
-    shortDescription: "Cristóvão Colombo chega às Américas.",
-    fullDescription:
-      "Cristóvão Colombo, navegando sob a bandeira espanhola, chega às ilhas do Caribe, iniciando o contato permanente entre a Europa e as Américas. Este evento marca o início da era colonial, com profundas consequências para os povos nativos americanos e o estabelecimento de um sistema econômico global.",
-    category: "Exploração",
-    region: "Américas",
-    impact: "Início da colonização europeia das Américas",
-    icon: Globe,
-    color: "bg-green-500",
-    slug: "descobrimento-america",
-  },
-  {
-    id: "8",
-    year: 1789,
-    title: "Revolução Francesa",
-    shortDescription: "Início da Revolução Francesa com a Tomada da Bastilha.",
-    fullDescription:
-      "A Revolução Francesa começa com a Tomada da Bastilha em 14 de julho, marcando o fim do Antigo Regime na França. Os ideais de liberdade, igualdade e fraternidade se espalham pela Europa e pelo mundo, influenciando movimentos democráticos e de independência por séculos.",
-    category: "Revolução",
-    region: "Europa",
-    impact: "Nascimento dos ideais democráticos modernos",
-    icon: Users,
-    color: "bg-blue-500",
-    slug: "revolucao-francesa",
-  },
-  {
-    id: "9",
-    year: 1945,
-    title: "Fim da Segunda Guerra Mundial",
-    shortDescription: "Rendição do Japão marca o fim da Segunda Guerra Mundial.",
-    fullDescription:
-      "Com a rendição do Japão em 2 de setembro de 1945, após os bombardeios atômicos de Hiroshima e Nagasaki, termina a Segunda Guerra Mundial. O conflito mais devastador da história deixa entre 70-85 milhões de mortos e redefine completamente o mapa geopolítico mundial, dando início à Guerra Fria.",
-    category: "Militar",
-    region: "Global",
-    impact: "Redefinição da ordem mundial e início da era nuclear",
-    icon: Sword,
-    color: "bg-red-500",
-    slug: "fim-segunda-guerra-mundial",
-  },
-  {
-    id: "10",
-    year: 1969,
-    title: "Chegada do Homem à Lua",
-    shortDescription: "Neil Armstrong e Buzz Aldrin pisam na Lua.",
-    fullDescription:
-      "A missão Apollo 11 da NASA consegue pousar na Lua, com Neil Armstrong se tornando o primeiro ser humano a pisar em outro corpo celeste. Este feito representa o ápice da corrida espacial e demonstra o potencial da cooperação científica e tecnológica humana.",
-    category: "Ciência",
-    region: "Global",
-    impact: "Marco na exploração espacial e desenvolvimento tecnológico",
-    icon: Zap,
-    color: "bg-purple-500",
-    slug: "chegada-homem-lua",
-  },
-  {
-    id: "11",
-    year: 1989,
-    title: "Queda do Muro de Berlim",
-    shortDescription: "Derrubada do Muro de Berlim simboliza o fim da Guerra Fria.",
-    fullDescription:
-      "A queda do Muro de Berlim em 9 de novembro marca simbolicamente o fim da Guerra Fria e da divisão ideológica do mundo. Este evento leva à reunificação alemã e ao colapso da União Soviética, redefinindo as relações internacionais e iniciando uma nova era de globalização.",
-    category: "Política",
-    region: "Europa",
-    impact: "Fim da Guerra Fria e início da nova ordem mundial",
-    icon: Users,
-    color: "bg-blue-500",
-    slug: "queda-muro-berlim",
-  },
-]
+function EventDialogContent({ event }: { event: TimelineEvent }) {
+  const { icon: IconComponent, color } = getVisual(event.slug)
+
+  return (
+    <DialogContent className="max-w-2xl">
+      <DialogHeader>
+        <div className="flex items-center gap-4 mb-4">
+          <div className={`w-12 h-12 ${color} rounded-lg flex items-center justify-center shadow-lg`}>
+            <IconComponent className="h-6 w-6 text-white" />
+          </div>
+          <div>
+            <DialogTitle className="text-2xl">{event.title}</DialogTitle>
+            <div className="flex items-center gap-2 mt-2 flex-wrap">
+              <Badge className={`${color} text-white`}>{event.dateDisplay}</Badge>
+              <Badge variant="secondary">{event.category}</Badge>
+              <Badge variant="outline">{event.region}</Badge>
+            </div>
+          </div>
+        </div>
+      </DialogHeader>
+      <DialogDescription className="text-base leading-relaxed">{event.summary}</DialogDescription>
+      <div className="mt-4 flex flex-col gap-2 sm:flex-row">
+        <Button asChild className="flex-1">
+          <Link href={`/linha-do-tempo/${event.slug}`}>Ver artigo completo</Link>
+        </Button>
+        {event.featured && (
+          <Button asChild variant="secondary" className="flex-1">
+            <Link href={`/evento/${event.slug}`}>Explorar experiência completa</Link>
+          </Button>
+        )}
+      </div>
+    </DialogContent>
+  )
+}
 
 export default function LinhaDoTempoPage() {
+  const allEvents = useMemo(() => getAllTimelineEvents(), [])
+
   const [selectedCategory, setSelectedCategory] = useState<string>("all")
   const [selectedRegion, setSelectedRegion] = useState<string>("all")
+  const [selectedPeriod, setSelectedPeriod] = useState<string>("all")
   const [searchTerm, setSearchTerm] = useState<string>("")
-  const [selectedEvent, setSelectedEvent] = useState<TimelineEvent | null>(null)
+  const [sortOrder, setSortOrder] = useState<"asc" | "desc">("asc")
 
-  const categories = ["all", "Política", "Militar", "Cultural", "Revolução", "Exploração", "Ciência"]
-  const regions = ["all", "Europa", "Ásia", "África", "Américas", "Global", "Europa/Ásia"]
-
-  const filteredEvents = timelineEvents.filter((event) => {
-    const matchesCategory = selectedCategory === "all" || event.category === selectedCategory
-    const matchesRegion = selectedRegion === "all" || event.region === selectedRegion
-    const matchesSearch =
-      searchTerm === "" ||
-      event.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      event.shortDescription.toLowerCase().includes(searchTerm.toLowerCase())
-
-    return matchesCategory && matchesRegion && matchesSearch
+  const filteredEvents = filterTimelineEvents({
+    query: searchTerm,
+    category: selectedCategory,
+    region: selectedRegion,
+    period: selectedPeriod,
+    sort: sortOrder,
   })
 
   return (
@@ -235,16 +131,30 @@ export default function LinhaDoTempoPage() {
                   onChange={(e) => setSearchTerm(e.target.value)}
                 />
               </div>
-              <div className="flex gap-2">
+              <div className="flex flex-wrap gap-2">
+                <Select value={selectedPeriod} onValueChange={setSelectedPeriod}>
+                  <SelectTrigger className="w-[160px]">
+                    <SelectValue placeholder="Período" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="all">Todos os períodos</SelectItem>
+                    {TIMELINE_PERIODS.map((period) => (
+                      <SelectItem key={period} value={period}>
+                        {period}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
                 <Select value={selectedCategory} onValueChange={setSelectedCategory}>
                   <SelectTrigger className="w-[150px]">
                     <Filter className="mr-2 h-4 w-4" />
                     <SelectValue placeholder="Categoria" />
                   </SelectTrigger>
                   <SelectContent>
-                    {categories.map((category) => (
+                    <SelectItem value="all">Todas</SelectItem>
+                    {TIMELINE_CATEGORIES.map((category) => (
                       <SelectItem key={category} value={category}>
-                        {category === "all" ? "Todas" : category}
+                        {category}
                       </SelectItem>
                     ))}
                   </SelectContent>
@@ -255,13 +165,22 @@ export default function LinhaDoTempoPage() {
                     <SelectValue placeholder="Região" />
                   </SelectTrigger>
                   <SelectContent>
-                    {regions.map((region) => (
+                    <SelectItem value="all">Todas</SelectItem>
+                    {TIMELINE_REGIONS.map((region) => (
                       <SelectItem key={region} value={region}>
-                        {region === "all" ? "Todas" : region}
+                        {region}
                       </SelectItem>
                     ))}
                   </SelectContent>
                 </Select>
+                <Button
+                  variant="outline"
+                  onClick={() => setSortOrder((current) => (current === "asc" ? "desc" : "asc"))}
+                  className="gap-2"
+                >
+                  <ArrowUpDown className="h-4 w-4" />
+                  {sortOrder === "asc" ? "Mais antigos" : "Mais recentes"}
+                </Button>
               </div>
             </div>
           </div>
@@ -279,7 +198,7 @@ export default function LinhaDoTempoPage() {
 
               <div className="space-y-8 md:space-y-16">
                 {filteredEvents.map((event, index) => {
-                  const IconComponent = event.icon
+                  const { icon: IconComponent, color } = getVisual(event.slug)
                   const isLeft = index % 2 === 0
 
                   return (
@@ -289,7 +208,7 @@ export default function LinhaDoTempoPage() {
                         {/* Timeline Point */}
                         <div className="relative flex-shrink-0">
                           <div
-                            className={`w-8 h-8 ${event.color} rounded-full border-4 border-background flex items-center justify-center shadow-lg`}
+                            className={`w-8 h-8 ${color} rounded-full border-4 border-background flex items-center justify-center shadow-lg`}
                           >
                             <IconComponent className="h-4 w-4 text-white" />
                           </div>
@@ -302,14 +221,12 @@ export default function LinhaDoTempoPage() {
                               <Card className="cursor-pointer hover:shadow-lg transition-all duration-200 hover:scale-[1.02]">
                                 <CardHeader className="pb-3">
                                   <div className="flex items-center gap-2 mb-3">
-                                    <Badge className={`${event.color} text-white font-semibold`}>
-                                      {event.year < 0 ? `${Math.abs(event.year)} a.C.` : event.year}
-                                    </Badge>
+                                    <Badge className={`${color} text-white font-semibold`}>{event.dateDisplay}</Badge>
                                     <Badge variant="secondary">{event.category}</Badge>
                                   </div>
                                   <CardTitle className="text-xl leading-tight">{event.title}</CardTitle>
                                   <CardDescription className="text-base leading-relaxed">
-                                    {event.shortDescription}
+                                    {event.summary}
                                   </CardDescription>
                                 </CardHeader>
                                 <CardContent>
@@ -320,39 +237,7 @@ export default function LinhaDoTempoPage() {
                                 </CardContent>
                               </Card>
                             </DialogTrigger>
-                            <DialogContent className="max-w-2xl">
-                              <DialogHeader>
-                                <div className="flex items-center gap-4 mb-4">
-                                  <div
-                                    className={`w-12 h-12 ${event.color} rounded-lg flex items-center justify-center shadow-lg`}
-                                  >
-                                    <IconComponent className="h-6 w-6 text-white" />
-                                  </div>
-                                  <div>
-                                    <DialogTitle className="text-2xl">{event.title}</DialogTitle>
-                                    <div className="flex items-center gap-2 mt-2">
-                                      <Badge className={`${event.color} text-white`}>
-                                        {event.year < 0 ? `${Math.abs(event.year)} a.C.` : event.year}
-                                      </Badge>
-                                      <Badge variant="secondary">{event.category}</Badge>
-                                      <Badge variant="outline">{event.region}</Badge>
-                                    </div>
-                                  </div>
-                                </div>
-                              </DialogHeader>
-                              <DialogDescription className="text-base leading-relaxed">
-                                {event.fullDescription}
-                              </DialogDescription>
-                              <div className="mt-6 p-4 bg-muted/50 rounded-lg">
-                                <h4 className="font-semibold mb-2">Impacto Histórico:</h4>
-                                <p className="text-sm text-muted-foreground">{event.impact}</p>
-                              </div>
-                              {event.slug && (
-                                <Button asChild className="mt-4 w-full">
-                                  <Link href={`/evento/${event.slug}`}>Explorar experiência completa</Link>
-                                </Button>
-                              )}
-                            </DialogContent>
+                            <EventDialogContent event={event} />
                           </Dialog>
                         </div>
                       </div>
@@ -370,15 +255,15 @@ export default function LinhaDoTempoPage() {
                                       <CardHeader className="pb-3">
                                         <div className="flex items-center justify-end gap-2 mb-3">
                                           <Badge variant="secondary">{event.category}</Badge>
-                                          <Badge className={`${event.color} text-white font-semibold`}>
-                                            {event.year < 0 ? `${Math.abs(event.year)} a.C.` : event.year}
+                                          <Badge className={`${color} text-white font-semibold`}>
+                                            {event.dateDisplay}
                                           </Badge>
                                         </div>
                                         <CardTitle className="text-xl leading-tight text-right">
                                           {event.title}
                                         </CardTitle>
                                         <CardDescription className="text-base leading-relaxed text-right">
-                                          {event.shortDescription}
+                                          {event.summary}
                                         </CardDescription>
                                       </CardHeader>
                                       <CardContent>
@@ -389,39 +274,7 @@ export default function LinhaDoTempoPage() {
                                       </CardContent>
                                     </Card>
                                   </DialogTrigger>
-                                  <DialogContent className="max-w-2xl">
-                                    <DialogHeader>
-                                      <div className="flex items-center gap-4 mb-4">
-                                        <div
-                                          className={`w-12 h-12 ${event.color} rounded-lg flex items-center justify-center shadow-lg`}
-                                        >
-                                          <IconComponent className="h-6 w-6 text-white" />
-                                        </div>
-                                        <div>
-                                          <DialogTitle className="text-2xl">{event.title}</DialogTitle>
-                                          <div className="flex items-center gap-2 mt-2">
-                                            <Badge className={`${event.color} text-white`}>
-                                              {event.year < 0 ? `${Math.abs(event.year)} a.C.` : event.year}
-                                            </Badge>
-                                            <Badge variant="secondary">{event.category}</Badge>
-                                            <Badge variant="outline">{event.region}</Badge>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </DialogHeader>
-                                    <DialogDescription className="text-base leading-relaxed">
-                                      {event.fullDescription}
-                                    </DialogDescription>
-                                    <div className="mt-6 p-4 bg-muted/50 rounded-lg">
-                                      <h4 className="font-semibold mb-2">Impacto Histórico:</h4>
-                                      <p className="text-sm text-muted-foreground">{event.impact}</p>
-                                    </div>
-                                    {event.slug && (
-                                      <Button asChild className="mt-4 w-full">
-                                        <Link href={`/evento/${event.slug}`}>Explorar experiência completa</Link>
-                                      </Button>
-                                    )}
-                                  </DialogContent>
+                                  <EventDialogContent event={event} />
                                 </Dialog>
                               </div>
                             )}
@@ -430,7 +283,7 @@ export default function LinhaDoTempoPage() {
                           {/* Center Timeline Point */}
                           <div className="relative flex-shrink-0">
                             <div
-                              className={`w-10 h-10 ${event.color} rounded-full border-4 border-background flex items-center justify-center shadow-lg z-10 relative`}
+                              className={`w-10 h-10 ${color} rounded-full border-4 border-background flex items-center justify-center shadow-lg z-10 relative`}
                             >
                               <IconComponent className="h-5 w-5 text-white" />
                             </div>
@@ -444,14 +297,14 @@ export default function LinhaDoTempoPage() {
                                   <Card className="inline-block max-w-md cursor-pointer hover:shadow-lg transition-all duration-200 hover:scale-[1.02]">
                                     <CardHeader className="pb-3">
                                       <div className="flex items-center gap-2 mb-3">
-                                        <Badge className={`${event.color} text-white font-semibold`}>
-                                          {event.year < 0 ? `${Math.abs(event.year)} a.C.` : event.year}
+                                        <Badge className={`${color} text-white font-semibold`}>
+                                          {event.dateDisplay}
                                         </Badge>
                                         <Badge variant="secondary">{event.category}</Badge>
                                       </div>
                                       <CardTitle className="text-xl leading-tight">{event.title}</CardTitle>
                                       <CardDescription className="text-base leading-relaxed">
-                                        {event.shortDescription}
+                                        {event.summary}
                                       </CardDescription>
                                     </CardHeader>
                                     <CardContent>
@@ -462,39 +315,7 @@ export default function LinhaDoTempoPage() {
                                     </CardContent>
                                   </Card>
                                 </DialogTrigger>
-                                <DialogContent className="max-w-2xl">
-                                  <DialogHeader>
-                                    <div className="flex items-center gap-4 mb-4">
-                                      <div
-                                        className={`w-12 h-12 ${event.color} rounded-lg flex items-center justify-center shadow-lg`}
-                                      >
-                                        <IconComponent className="h-6 w-6 text-white" />
-                                      </div>
-                                      <div>
-                                        <DialogTitle className="text-2xl">{event.title}</DialogTitle>
-                                        <div className="flex items-center gap-2 mt-2">
-                                          <Badge className={`${event.color} text-white`}>
-                                            {event.year < 0 ? `${Math.abs(event.year)} a.C.` : event.year}
-                                          </Badge>
-                                          <Badge variant="secondary">{event.category}</Badge>
-                                          <Badge variant="outline">{event.region}</Badge>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </DialogHeader>
-                                  <DialogDescription className="text-base leading-relaxed">
-                                    {event.fullDescription}
-                                  </DialogDescription>
-                                  <div className="mt-6 p-4 bg-muted/50 rounded-lg">
-                                    <h4 className="font-semibold mb-2">Impacto Histórico:</h4>
-                                    <p className="text-sm text-muted-foreground">{event.impact}</p>
-                                  </div>
-                                  {event.slug && (
-                                    <Button asChild className="mt-4 w-full">
-                                      <Link href={`/evento/${event.slug}`}>Explorar experiência completa</Link>
-                                    </Button>
-                                  )}
-                                </DialogContent>
+                                <EventDialogContent event={event} />
                               </Dialog>
                             )}
                           </div>
@@ -534,15 +355,15 @@ export default function LinhaDoTempoPage() {
                 <div className="text-sm text-muted-foreground">Anos de História</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-accent-foreground mb-2">{timelineEvents.length}</div>
+                <div className="text-3xl font-bold text-accent-foreground mb-2">{allEvents.length}</div>
                 <div className="text-sm text-muted-foreground">Eventos Principais</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-destructive mb-2">{regions.length - 1}</div>
+                <div className="text-3xl font-bold text-destructive mb-2">{TIMELINE_REGIONS.length}</div>
                 <div className="text-sm text-muted-foreground">Regiões Cobertas</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-primary mb-2">{categories.length - 1}</div>
+                <div className="text-3xl font-bold text-primary mb-2">{TIMELINE_CATEGORIES.length}</div>
                 <div className="text-sm text-muted-foreground">Categorias</div>
               </div>
             </div>

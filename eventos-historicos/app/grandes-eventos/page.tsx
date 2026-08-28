@@ -149,11 +149,7 @@ export default function GrandesEventosPage() {
                                 </div>
                               </div>
                               <Button asChild>
-                                <Link
-                                  href={`/evento/${"slug" in event ? event.slug : `${event.year.toLowerCase()}-${event.title.toLowerCase().replace(/\s+/g, "-")}`}`}
-                                >
-                                  Explorar Evento Completo
-                                </Link>
+                                <Link href={`/evento/${event.slug}`}>Explorar Evento Completo</Link>
                               </Button>
                             </CardContent>
                           </div>
