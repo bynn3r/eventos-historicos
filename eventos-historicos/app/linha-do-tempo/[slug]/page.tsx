@@ -9,6 +9,7 @@ import Image from "next/image"
 import { notFound } from "next/navigation"
 import grandesEventosData from "@/data/grandes-eventos.json"
 import { getAllTimelineEvents, getTimelineEventBySlug, getRelatedTimelineEvents } from "@/lib/timeline"
+import { findRelatedContent } from "@/lib/related-content"
 
 const SITE_URL = "https://eventoshistoricos.com.br"
 
@@ -55,6 +56,12 @@ export default function LinhaDoTempoEventoPage({ params }: LinhaDoTempoEventoPag
   }
 
   const relatedEvents = getRelatedTimelineEvents(event)
+  const relatedCuriosidades = findRelatedContent(`${event.title} ${event.summary}`, {
+    category: event.category,
+    excludeSlug: event.slug,
+    onlyType: "curiosidade",
+    limit: 3,
+  })
   const hasFlagshipExperience = grandesEventosData.some((flagship) => flagship.slug === event.slug)
   const url = `${SITE_URL}/linha-do-tempo/${event.slug}`
 
@@ -248,6 +255,30 @@ export default function LinhaDoTempoEventoPage({ params }: LinhaDoTempoEventoPag
                         <Badge>{related.dateDisplay}</Badge>
                         <Badge variant="secondary">{related.category}</Badge>
                       </div>
+                      <h3 className="font-semibold mb-2 group-hover:text-primary transition-colors">
+                        {related.title}
+                      </h3>
+                      <p className="text-sm text-muted-foreground">{related.summary}</p>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Related curiosidades */}
+            {relatedCuriosidades.length > 0 && (
+              <div className="mt-12 pt-8 border-t">
+                <h2 className="text-2xl font-bold mb-6">Curiosidades Relacionadas</h2>
+                <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+                  {relatedCuriosidades.map((related) => (
+                    <Link
+                      key={related.slug}
+                      href={related.href}
+                      className="group block p-6 border rounded-lg hover:shadow-lg transition-shadow"
+                    >
+                      <Badge variant="secondary" className="mb-3">
+                        {related.category}
+                      </Badge>
                       <h3 className="font-semibold mb-2 group-hover:text-primary transition-colors">
                         {related.title}
                       </h3>

@@ -1043,9 +1043,9 @@
     "country": "Brasil",
     "category": "Política",
     "summary": "Às margens de um riacho na periferia de São Paulo, um príncipe de 23 anos rompeu com a metrópole que o havia criado e transformou a maior colônia das Américas no primeiro império independente do continente.",
-    "content": "Em 1808, a família real portuguesa transferiu-se para o Rio de Janeiro fugindo de Napoleão. A Revolução do Porto, em 1820, exigiu o retorno do rei d. João VI e a recolonização do Brasil. Em 1821, d. João VI partiu, deixando o filho d. Pedro como príncipe regente.\n\nPressionado a permanecer, d. Pedro proferiu, em 9 de janeiro de 1822, a frase do Dia do Fico. Nomeou José Bonifácio ministro do Reino, seu principal conselheiro na ruptura.\n\nEm 2 de setembro, o Conselho de Estado, presidido pela princesa Maria Leopoldina, recomendou o rompimento com Lisboa. Em 7 de setembro de 1822, às margens do riacho do Ipiranga, d. Pedro recebeu as correspondências das Cortes e declarou a independência. A cena consagrada nos livros deve muito ao quadro de Pedro Américo, pintado só em 1888. D. Pedro foi aclamado imperador em outubro e coroado em dezembro de 1822.\n\nPortugal só reconheceu a independência em 1825, mediante indenização. Ao contrário das ex-colônias espanholas, o Brasil manteve a unidade territorial e a forma monárquica, iniciando o Primeiro Reinado sob d. Pedro I.",
+    "content": "Em novembro de 1807, com as tropas de Napoleão avançando sobre Lisboa, o príncipe regente d. João e toda a Corte portuguesa embarcaram para o Brasil sob escolta britânica — cerca de 15 mil pessoas. A esquadra chegou ao Rio de Janeiro em 8 de março de 1808. A cidade virou sede de um império: ganhou Banco do Brasil, Biblioteca Real, Jardim Botânico. Em 16 de dezembro de 1815, o Brasil deixou de ser colônia e foi elevado a Reino Unido a Portugal e Algarves. Esse arranjo incomodava as elites de Lisboa. A Revolução Liberal do Porto, em agosto de 1820, exigiu o retorno do rei e a recolonização do Brasil. D. João VI partiu para Lisboa em abril de 1821, deixando o filho d. Pedro como regente. Ao longo de 1821 e 1822, as Cortes foram endurecendo as exigências. Foi nesse cenário de humilhação política crescente que a ruptura de 1822 se tornou praticamente inevitável.\n\nA independência não rompeu com a estrutura social e econômica do Brasil colonial: a escravidão foi mantida, a monarquia foi preservada, e boa parte da elite política continuou no poder. Diferentemente de outros processos de independência nas Américas, o Brasil manteve a unidade territorial e trocou de regime sem uma ruptura social profunda.\n\nA consolidação exigiu tempo: focos de resistência portuguesa só foram debelados ao longo de 1823-1824, e o reconhecimento internacional dependeu da mediação britânica, que financiou a indenização de 1825 — um endividamento que marcaria as finanças do Império por décadas.\n\nDo ponto de vista simbólico, o 7 de Setembro se tornou o marco fundador da nacionalidade brasileira, celebrado como feriado nacional desde o Império e reforçado por obras como a pintura de Pedro Américo e o Hino da Independência, composto pelo próprio d. Pedro I.",
     "importance": 5,
-    "featured": false,
+    "featured": true,
     "image": "/eventos/hero-independencia-brasil.jpg",
     "relatedEvents": [
       "independencia-estados-unidos",
@@ -1055,26 +1055,26 @@
       {
         "name": "Dom Pedro I",
         "role": "Príncipe regente e primeiro imperador do Brasil",
-        "image": "",
-        "description": "Proclamou a independência às margens do Ipiranga em 7 de setembro de 1822."
+        "image": "/eventos/figura-dom-pedro-i.jpg",
+        "description": "Proclamou a independência às margens do Ipiranga e foi aclamado e coroado imperador em 1822."
       },
       {
         "name": "José Bonifácio de Andrada e Silva",
-        "role": "Ministro do Reino e principal conselheiro de d. Pedro",
-        "image": "",
-        "description": "Conhecido como o 'Patriarca da Independência'."
+        "role": "Ministro do Reino e dos Negócios Estrangeiros",
+        "image": "/eventos/figura-jose-bonifacio.jpg",
+        "description": "Principal arquiteto político da independência; ficou conhecido como o Patriarca da Independência."
       },
       {
-        "name": "Imperatriz Maria Leopoldina",
-        "role": "Princesa consorte e regente interina",
-        "image": "",
-        "description": "Presidiu o Conselho de Estado que recomendou o rompimento com Portugal."
+        "name": "Maria Leopoldina de Áustria",
+        "role": "Princesa regente interina",
+        "image": "/eventos/figura-leopoldina.jpg",
+        "description": "Presidiu o Conselho de Estado que assinou o decreto reconhecendo a separação do Brasil."
       },
       {
         "name": "Dom João VI",
         "role": "Rei de Portugal, Brasil e Algarves",
-        "image": "",
-        "description": "Ao retornar a Portugal em 1821, criou as condições diretas para a crise da independência."
+        "image": "/eventos/figura-dom-joao-vi.jpg",
+        "description": "Transferiu a Corte ao Rio em 1808, elevou o Brasil a reino em 1815 e assinou o reconhecimento da independência em 1825."
       }
     ],
     "sources": [],
@@ -1102,9 +1102,9 @@
     "country": "Diversos países (conflito global)",
     "category": "Militar",
     "summary": "Um tiro em Sarajevo bastou para detonar um sistema de alianças tenso havia décadas, arrastando o mundo para quatro anos de trincheiras, gás venenoso e uma carnificina sem precedentes na história.",
-    "content": "No início do século XX, a Europa vivia sob um equilíbrio de forças tenso: a Tríplice Aliança (Alemanha, Áustria-Hungria, Itália) contra a Tríplice Entente (França, Rússia, Reino Unido). Rivalidades coloniais e nacionalismo criaram um ambiente explosivo.\n\nA faísca veio em 28 de junho de 1914: o arquiduque Francisco Ferdinando foi assassinado em Sarajevo por Gavrilo Princip. Em 28 de julho, a Áustria-Hungria declarou guerra à Sérvia, e o sistema de alianças entrou em cadeia.\n\nNa Frente Ocidental, a guerra travou em trincheiras, palco de batalhas de desgaste como Verdun e o Somme (1916). Em 1917, os EUA entraram na guerra e a Revolução Russa levou a Rússia a assinar paz separada. O Brasil declarou guerra à Alemanha em 1917, único país sul-americano a participar ativamente.\n\nO Armistício de 11 de novembro de 1918 encerrou os combates, com cerca de 9 milhões de militares mortos. O Tratado de Versalhes (1919) impôs duras condições à Alemanha e redesenhou o mapa da Europa, lançando, sem que se soubesse, as sementes de um conflito ainda maior duas décadas depois.",
+    "content": "No verão de 1914, a Europa era uma rede de alianças que prometia proteção mútua e, na prática, funcionava como um estopim coletivo. De um lado, a Tríplice Aliança unia Alemanha, Áustria-Hungria e Itália; do outro, a Tríplice Entente reunia França, Rússia e Grã-Bretanha. Havia décadas essas potências disputavam colônias, mercados e prestígio, e a corrida armamentista naval entre a Alemanha e a Grã-Bretanha havia transformado o continente num arsenal pronto para disparar. O nacionalismo exacerbado fazia da guerra algo quase desejável para setores das elites e das massas. Nenhuma região concentrava tantas tensões quanto os Bálcãs, apelidados de \"polvorinho da Europa\": a Áustria-Hungria anexara a Bósnia-Herzegovina em 1908, e a Rússia se posicionava como protetora dos eslavos, numa rivalidade direta com Viena. As duas Guerras Balcânicas de 1912-1913 já haviam deixado ressentimentos abertos. Bastou, então, uma faísca: o assassinato do herdeiro do trono austro-húngaro em Sarajevo acionou um mecanismo de tratados e ultimatos que nenhuma capital europeia conseguiu — ou quis — desarmar a tempo.\n\nO Tratado de Versalhes impôs à Alemanha pesadas reparações e a cláusula de culpa exclusiva pela guerra — condições que alimentariam décadas de ressentimento e terreno fértil para a ascensão do nazismo, apenas vinte anos depois. Os impérios austro-húngaro, otomano e russo desapareceram do mapa, dando lugar a uma dezena de novos Estados.\n\nA guerra acelerou transformações sociais profundas: milhões de mulheres que assumiram postos de trabalho reforçaram os movimentos sufragistas. A experiência das trincheiras marcou profundamente a literatura, a arte e a psicologia do século XX.\n\nPara o Brasil, a participação abriu caminho para presença mais ativa na diplomacia internacional. Globalmente, a criação da Liga das Nações em 1919 representou a primeira tentativa moderna de segurança coletiva — um projeto que fracassaria, mas lançaria as bases da ONU, fundada após a tragédia ainda maior de 1939.",
     "importance": 5,
-    "featured": false,
+    "featured": true,
     "image": "/eventos/hero-primeira-guerra-mundial.jpg",
     "relatedEvents": [
       "revolucao-russa",
@@ -1114,27 +1114,27 @@
     "characters": [
       {
         "name": "Gavrilo Princip",
-        "role": "Nacionalista sérvio-bósnio",
-        "image": "",
-        "description": "Assassinou o arquiduque Francisco Ferdinando, ato que desencadeou a guerra."
+        "role": "Nacionalista bósnio-sérvio",
+        "image": "/eventos/figura-gavrilo-princip.jpg",
+        "description": "Assassinou o arquiduque Francisco Ferdinando, ato que serviu de estopim imediato para a guerra."
       },
       {
-        "name": "Arquiduque Francisco Ferdinando",
-        "role": "Herdeiro do trono austro-húngaro",
-        "image": "",
-        "description": "Sua morte forneceu o pretexto imediato para a eclosão da guerra."
-      },
-      {
-        "name": "Kaiser Guilherme II",
-        "role": "Imperador da Alemanha",
-        "image": "",
-        "description": "Liderou o esforço de guerra alemão."
+        "name": "Guilherme II",
+        "role": "Kaiser (imperador) da Alemanha",
+        "image": "/eventos/figura-guilherme-ii.jpg",
+        "description": "Concedeu à Áustria-Hungria o apoio incondicional e liderou o esforço de guerra alemão até abdicar em 1918."
       },
       {
         "name": "Woodrow Wilson",
         "role": "Presidente dos Estados Unidos",
-        "image": "",
-        "description": "Conduziu a entrada dos EUA na guerra em 1917."
+        "image": "/eventos/figura-woodrow-wilson.jpg",
+        "description": "Manteve os EUA neutros até 1917, quando pediu ao Congresso a declaração de guerra à Alemanha."
+      },
+      {
+        "name": "Georges Clemenceau",
+        "role": "Primeiro-ministro da França",
+        "image": "/eventos/figura-clemenceau.jpg",
+        "description": "Assumiu o governo francês em 1917, conduziu o esforço de guerra final e presidiu depois a Conferência de Paz de Paris."
       }
     ],
     "sources": [],
@@ -1163,9 +1163,9 @@
     "country": "Rússia",
     "category": "Revolução",
     "summary": "Em poucos meses de 1917, dois levantes populares derrubaram três séculos de domínio czarista e colocaram os bolcheviques no poder, dando origem ao primeiro Estado socialista da história.",
-    "content": "No inverno de 1917, a Rússia czarista já não suportava o peso da guerra. Em 23 de fevereiro, operárias de Petrogrado saíram às ruas contra a fome. Em dias, Nicolau II foi forçado a abdicar, encerrando 304 anos de domínio Romanov. Surgiu um Governo Provisório que dividia poder com os sovietes.\n\nVladimir Lênin retornou do exílio em abril e radicalizou o discurso com \"Paz, terra e pão\". Na noite de 25 de outubro de 1917, guardas vermelhos sob comando de Trótski tomaram Petrogrado e assaltaram o Palácio de Inverno, praticamente sem resistência.\n\nAs primeiras medidas bolcheviques foram drásticas: distribuição de terras, controle operário, e em 1918 o Tratado de Brest-Litovsk tirou a Rússia da guerra. Seguiu-se uma sangrenta guerra civil (1918-1922). Nicolau II e a família foram executados em 1918.\n\nDa vitória bolchevique nasceu, em 1922, a União Soviética — o primeiro Estado socialista do mundo, que sob Stálin disputaria a Guerra Fria com os Estados Unidos até seu colapso em 1991.",
+    "content": "Em fevereiro de 1917, a Rússia era um império exausto. Nicolau II governava havia 23 anos com poder quase absoluto, sustentado por uma burocracia rígida, uma polícia política temida e uma nobreza que se recusava a repartir a terra com os camponeses. Desde 1914 o país sangrava na Primeira Guerra Mundial: mais de 15 milhões de homens haviam sido mobilizados, as derrotas se acumulavam na frente oriental e as baixas passavam de 1,7 milhão de mortos. Nas cidades, a guerra desorganizara os trens e as fábricas — o abastecimento de grãos para Petrogrado e Moscou despencou, o pão escasseou e os preços dispararam. Enquanto isso, Nicolau II passava longas temporadas no quartel-general militar em Mogilev, deixando o governo nas mãos da czarina Alexandra e de seu conselheiro, o monge Grigóri Rasputin, cuja influência alimentava rumores de traição e corrupção na corte — rumores que só pioraram depois de seu assassinato, em dezembro de 1916. Greves operárias, já frequentes desde 1915, se multiplicaram no inverno de 1916 para 1917, movidas tanto pela fome quanto pela raiva contra um sistema que parecia incapaz de reformar-se. A Duma, o frágil parlamento criado após a revolução de 1905, pressionava por um governo responsável perante o povo, mas o czar recusava qualquer concessão real. Foi nesse caldeirão de fome, derrota militar e descrédito da monarquia que, em 23 de fevereiro de 1917, operárias de Petrogrado saíram às ruas — e deram início a um colapso que ninguém, nem os próprios revolucionários, sabia ainda aonde levaria.\n\nA tomada bolchevique do poder mergulhou a Rússia em uma sangrenta guerra civil entre 1918 e 1921. Do caos dessa guerra emergiu, em 1922, a União das Repúblicas Socialistas Soviéticas, o primeiro Estado do mundo a se declarar oficialmente comunista.\n\nPara além de suas fronteiras, a Revolução Russa tornou-se referência para movimentos revolucionários ao longo de todo o século XX, alimentando a rivalidade Leste-Oeste que definiria a Guerra Fria após 1945.\n\nInternamente, o preço humano foi imenso: fome, expropriações e os expurgos stalinistas ceifaram milhões de vidas. A União Soviética resistiria por quase sete décadas, até se dissolver em dezembro de 1991.",
     "importance": 5,
-    "featured": false,
+    "featured": true,
     "image": "/eventos/hero-revolucao-russa.jpg",
     "relatedEvents": [
       "primeira-guerra-mundial",
@@ -1173,22 +1173,28 @@
     ],
     "characters": [
       {
-        "name": "Vladimir Lênin",
-        "role": "Líder do Partido Bolchevique",
-        "image": "",
-        "description": "Liderou a tomada bolchevique do poder e se tornou o primeiro dirigente soviético."
-      },
-      {
-        "name": "Leon Trótski",
-        "role": "Comandante do Comitê Militar Revolucionário",
-        "image": "",
-        "description": "Organizou a insurreição de outubro de 1917."
-      },
-      {
         "name": "Nicolau II",
         "role": "Último czar da Rússia",
-        "image": "",
-        "description": "Sua abdicação encerrou mais de três séculos de domínio Romanov."
+        "image": "/eventos/figura-nicolau-ii.jpg",
+        "description": "Governou com poder quase absoluto até ser forçado a abdicar em março de 1917; foi executado com a família em julho de 1918."
+      },
+      {
+        "name": "Vladimir Lênin",
+        "role": "Líder do Partido Bolchevique",
+        "image": "/eventos/figura-lenin.jpg",
+        "description": "Retornou do exílio em abril de 1917 com as Teses de Abril e liderou a insurreição de outubro que instaurou o poder soviético."
+      },
+      {
+        "name": "Liev Trótski",
+        "role": "Presidente do Soviete de Petrogrado",
+        "image": "/eventos/figura-trotski.jpg",
+        "description": "Comandou o Comitê Militar Revolucionário que planejou a tomada do poder em outubro."
+      },
+      {
+        "name": "Aleksandr Kerenski",
+        "role": "Chefe do Governo Provisório",
+        "image": "/eventos/figura-kerenski.jpg",
+        "description": "Liderou o Governo Provisório entre julho e outubro de 1917, mas não conseguiu conter o avanço bolchevique."
       }
     ],
     "sources": [],

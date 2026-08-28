@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Input } from "@/components/ui/input"
-import { Search, Users, Globe, Zap } from "lucide-react"
+import { Search, Users, Globe, Zap, Sword } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 
@@ -104,6 +104,39 @@ export default function GrandesEventosPage() {
                   casualties: "Milhares de mortos durante o Terror",
                   icon: Users,
                   image: "/eventos/hero-bastilha.jpg",
+                },
+                {
+                  year: "1822",
+                  title: "Independência do Brasil",
+                  slug: "independencia-brasil",
+                  description:
+                    "Às margens do riacho do Ipiranga, Dom Pedro I rompe com Portugal e transforma a maior colônia das Américas no primeiro império independente do continente.",
+                  impact: "Nascimento da nação brasileira",
+                  casualties: "Rompimento negociado ao longo de 3 anos",
+                  icon: Globe,
+                  image: "/eventos/hero-independencia-brasil.jpg",
+                },
+                {
+                  year: "1914",
+                  title: "Primeira Guerra Mundial",
+                  slug: "primeira-guerra-mundial",
+                  description:
+                    "Um assassinato em Sarajevo arrasta impérios inteiros para quatro anos de trincheiras, redesenhando o mapa da Europa e lançando as sementes do conflito seguinte.",
+                  impact: "Fim de quatro impérios europeus",
+                  casualties: "Cerca de 17 milhões de mortos",
+                  icon: Sword,
+                  image: "/eventos/hero-primeira-guerra-mundial.jpg",
+                },
+                {
+                  year: "1917",
+                  title: "Revolução Russa",
+                  slug: "revolucao-russa",
+                  description:
+                    "Em oito meses, operárias famintas em Petrogrado desencadeiam a queda de um império de 300 anos e a ascensão do primeiro Estado socialista da história.",
+                  impact: "Nascimento da União Soviética",
+                  casualties: "Guerra civil e milhões de vítimas",
+                  icon: Users,
+                  image: "/eventos/hero-revolucao-russa.jpg",
                 },
               ].map((event, index) => {
                 const IconComponent = event.icon

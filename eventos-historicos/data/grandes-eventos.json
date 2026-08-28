@@ -13,10 +13,22 @@
     "mapaTitulo": "Pelo mundo, em 1945",
     "mapaDescricao": "Os lugares onde as decisões — e as tragédias — que encerraram a guerra aconteceram.",
     "estatisticas": [
-      { "label": "Duração do conflito", "valor": "6 anos" },
-      { "label": "Mortos estimados", "valor": "70–85 milhões" },
-      { "label": "Países envolvidos", "valor": "mais de 30" },
-      { "label": "Novo legado", "valor": "ONU e Guerra Fria" }
+      {
+        "label": "Duração do conflito",
+        "valor": "6 anos"
+      },
+      {
+        "label": "Mortos estimados",
+        "valor": "70–85 milhões"
+      },
+      {
+        "label": "Países envolvidos",
+        "valor": "mais de 30"
+      },
+      {
+        "label": "Novo legado",
+        "valor": "ONU e Guerra Fria"
+      }
     ],
     "contexto": "Em 1945, a Segunda Guerra Mundial já se arrastava havia quase seis anos e havia se tornado o conflito mais destrutivo da história da humanidade. Depois do fracasso da ofensiva alemã nas Ardenas, no inverno de 1944-45, os Aliados avançavam de todos os lados: o Exército Vermelho soviético empurrava a Wehrmacht para fora do Leste Europeu, enquanto tropas americanas, britânicas e francesas cruzavam o Reno rumo ao coração da Alemanha. No Pacífico, os Estados Unidos retomavam ilha por ilha o território conquistado pelo Japão, aproximando-se perigosamente do arquipélago japonês. Foi nesse contexto — de vitória militar cada vez mais certa, mas de custo humano ainda incalculável — que os líderes aliados começaram a negociar não apenas o fim da guerra, mas o desenho do mundo que viria depois dela.",
     "momentos": [
@@ -71,13 +83,48 @@
       }
     ],
     "locais": [
-      { "nome": "Ialta", "lat": 44.5, "lng": 34.16, "descricao": "Conferência que definiu a partilha da Europa do pós-guerra, em fevereiro de 1945." },
-      { "nome": "Berlim", "lat": 52.52, "lng": 13.4, "descricao": "Capital alemã tomada pelo Exército Vermelho em maio de 1945, selando a derrota nazista." },
-      { "nome": "Potsdam", "lat": 52.4, "lng": 13.07, "descricao": "Conferência final entre os Aliados, que emitiu o ultimato de rendição ao Japão." },
-      { "nome": "Hiroshima", "lat": 34.39, "lng": 132.45, "descricao": "Primeira cidade da história atingida por uma bomba atômica, em 6 de agosto de 1945." },
-      { "nome": "Nagasaki", "lat": 32.75, "lng": 129.87, "descricao": "Segunda e última cidade atingida por um ataque nuclear, em 9 de agosto de 1945." },
-      { "nome": "Tóquio", "lat": 35.68, "lng": 139.65, "descricao": "Onde o imperador Hirohito anunciou a rendição japonesa em rede nacional de rádio." },
-      { "nome": "São Francisco", "lat": 37.77, "lng": -122.42, "descricao": "Cidade onde a Carta das Nações Unidas foi assinada meses antes, em junho de 1945." }
+      {
+        "nome": "Ialta",
+        "lat": 44.5,
+        "lng": 34.16,
+        "descricao": "Conferência que definiu a partilha da Europa do pós-guerra, em fevereiro de 1945."
+      },
+      {
+        "nome": "Berlim",
+        "lat": 52.52,
+        "lng": 13.4,
+        "descricao": "Capital alemã tomada pelo Exército Vermelho em maio de 1945, selando a derrota nazista."
+      },
+      {
+        "nome": "Potsdam",
+        "lat": 52.4,
+        "lng": 13.07,
+        "descricao": "Conferência final entre os Aliados, que emitiu o ultimato de rendição ao Japão."
+      },
+      {
+        "nome": "Hiroshima",
+        "lat": 34.39,
+        "lng": 132.45,
+        "descricao": "Primeira cidade da história atingida por uma bomba atômica, em 6 de agosto de 1945."
+      },
+      {
+        "nome": "Nagasaki",
+        "lat": 32.75,
+        "lng": 129.87,
+        "descricao": "Segunda e última cidade atingida por um ataque nuclear, em 9 de agosto de 1945."
+      },
+      {
+        "nome": "Tóquio",
+        "lat": 35.68,
+        "lng": 139.65,
+        "descricao": "Onde o imperador Hirohito anunciou a rendição japonesa em rede nacional de rádio."
+      },
+      {
+        "nome": "São Francisco",
+        "lat": 37.77,
+        "lng": -122.42,
+        "descricao": "Cidade onde a Carta das Nações Unidas foi assinada meses antes, em junho de 1945."
+      }
     ],
     "figuras": [
       {
@@ -106,7 +153,12 @@
       }
     ],
     "legado": "O fim da Segunda Guerra Mundial não trouxe apenas alívio — trouxe um mundo irreconhecível em relação ao que existia em 1939. Dezenas de milhões de mortos, cidades inteiras reduzidas a escombros na Europa e no Japão, e o surgimento de uma arma capaz de destruir civilizações inteiras mudaram permanentemente a forma como as grandes potências pensariam sobre guerra, poder e diplomacia.\n\nDas cinzas do conflito nasceu a Organização das Nações Unidas, criada meses antes do fim da guerra com a promessa de evitar que uma catástrofe dessa escala se repetisse. Ao mesmo tempo, as divergências entre as potências ocidentais e a União Soviética — visíveis já em Potsdam — rapidamente se transformariam na Guerra Fria, uma nova rivalidade global que dominaria as relações internacionais pelas quatro décadas seguintes.\n\nA guerra também redesenhou o mapa de poder mundial: impérios coloniais europeus, enfraquecidos pelo conflito, começariam a se desfazer nas décadas seguintes, enquanto Estados Unidos e União Soviética emergiam como as duas superpotências que definiriam a geopolítica global até o final do século XX.",
-    "curiosidadesRelacionadas": ["projeto-manhattan", "dia-d", "onu", "holocausto"]
+    "curiosidadesRelacionadas": [
+      "projeto-manhattan",
+      "dia-d",
+      "onu",
+      "holocausto"
+    ]
   },
   {
     "slug": "queda-constantinopla",
@@ -122,10 +174,22 @@
     "mapaTitulo": "Do Bósforo ao Mediterrâneo, em 1453",
     "mapaDescricao": "Do acampamento do sultão em Adrianópolis aos portos de Gênova e Veneza, e aos apelos ignorados em Roma: veja os lugares reais que decidiram o destino de Constantinopla.",
     "estatisticas": [
-      { "label": "Duração do cerco", "valor": "53 dias" },
-      { "label": "Forças otomanas", "valor": "≈ 80 mil combatentes" },
-      { "label": "Defensores da cidade", "valor": "≈ 7 mil combatentes" },
-      { "label": "Fim do Império Romano do Oriente", "valor": "1.123 anos (330–1453)" }
+      {
+        "label": "Duração do cerco",
+        "valor": "53 dias"
+      },
+      {
+        "label": "Forças otomanas",
+        "valor": "≈ 80 mil combatentes"
+      },
+      {
+        "label": "Defensores da cidade",
+        "valor": "≈ 7 mil combatentes"
+      },
+      {
+        "label": "Fim do Império Romano do Oriente",
+        "valor": "1.123 anos (330–1453)"
+      }
     ],
     "contexto": "Em 1453, Constantinopla já era a sombra de um império. Fundada por Constantino, o Grande, em 330, a cidade fora por mil anos o maior centro urbano e comercial da cristandade — mas o Império Bizantino que ela governava havia encolhido, ao longo de séculos de guerras, cruzadas e perdas territoriais, a pouco mais do que a própria capital e alguns enclaves na Morreia e no mar Egeu. Do outro lado, os turcos otomanos, que haviam cruzado para os Bálcãs no século XIV, já cercavam a cidade por terra havia gerações: dois sultões anteriores tentaram tomá-la, em 1396 e 1422, sem sucesso. Quando o jovem Mehmed II subiu ao trono em 1451, aos dezenove anos, fez da conquista de Constantinopla o projeto central de seu reinado, vendo na cidade a chave para unificar seus domínios na Ásia e na Europa e herdar o prestígio de Roma. Ele construiu a fortaleza de Rumeli Hisarı no Bósforo para cortar o suprimento naval bizantino, contratou o engenheiro húngaro Orban para fundir uma artilharia sem precedentes e reuniu um exército muitas vezes maior que a população da cidade sitiada. O imperador Constantino XI Paleólogo, que reinava desde 1449, tentara em vão obter socorro militar do Ocidente: a união das Igrejas ortodoxa e católica, selada no Concílio de Florença em 1439 como preço pela ajuda papal, era impopular entre o clero e o povo bizantinos e rendeu apenas apoio simbólico. Isolada, subfinanciada e defendida por poucos milhares de soldados contra dezenas de milhares de otomanos, Constantinopla entrou na primavera de 1453 cercada por terra e, em breve, também por mar.",
     "momentos": [
@@ -187,13 +251,48 @@
       }
     ],
     "locais": [
-      { "nome": "Constantinopla (Muralhas Teodosianas)", "lat": 41.0186, "lng": 28.9236, "descricao": "As muralhas terrestres de quase 5,5 km, erguidas no século V, foram o principal alvo do bombardeio otomano e o local onde a defesa e a resistência de Constantino XI se concentraram." },
-      { "nome": "Hagia Sophia", "lat": 41.0086, "lng": 28.9802, "descricao": "Catedral máxima do cristianismo ortodoxo, sediou a última liturgia unida da cidade na véspera da queda e foi transformada em mesquita por Mehmed II horas depois da conquista." },
-      { "nome": "Corno de Ouro", "lat": 41.0270, "lng": 28.9600, "descricao": "Enseada natural protegida por uma grande corrente; o transporte de navios otomanos por terra até suas águas, em 22 de abril, abriu uma nova frente contra as muralhas marítimas." },
-      { "nome": "Adrianópolis (Edirne)", "lat": 41.6771, "lng": 26.5557, "descricao": "Capital otomana à época, de onde Mehmed II partiu com seu exército e onde o engenheiro Orban fundiu as bombardas gigantes usadas no cerco." },
-      { "nome": "Rumeli Hisarı (fortaleza do Bósforo)", "lat": 41.0847, "lng": 29.0575, "descricao": "Fortaleza construída por ordem de Mehmed II em 1452 na margem europeia do Bósforo, para cortar o suprimento naval e o socorro externo a Constantinopla antes mesmo do cerco começar." },
-      { "nome": "Chios", "lat": 38.3729, "lng": 26.1341, "descricao": "Ilha genovesa do mar Egeu de onde partiu parte dos cerca de 700 soldados profissionais recrutados por Giovanni Giustiniani Longo para reforçar a defesa da cidade." },
-      { "nome": "Roma", "lat": 41.9029, "lng": 12.4534, "descricao": "Sede do papado, para onde Constantino XI e seus enviados apelaram por socorro militar em troca da união das Igrejas — ajuda que chegou tarde demais e em escala insuficiente." }
+      {
+        "nome": "Constantinopla (Muralhas Teodosianas)",
+        "lat": 41.0186,
+        "lng": 28.9236,
+        "descricao": "As muralhas terrestres de quase 5,5 km, erguidas no século V, foram o principal alvo do bombardeio otomano e o local onde a defesa e a resistência de Constantino XI se concentraram."
+      },
+      {
+        "nome": "Hagia Sophia",
+        "lat": 41.0086,
+        "lng": 28.9802,
+        "descricao": "Catedral máxima do cristianismo ortodoxo, sediou a última liturgia unida da cidade na véspera da queda e foi transformada em mesquita por Mehmed II horas depois da conquista."
+      },
+      {
+        "nome": "Corno de Ouro",
+        "lat": 41.027,
+        "lng": 28.96,
+        "descricao": "Enseada natural protegida por uma grande corrente; o transporte de navios otomanos por terra até suas águas, em 22 de abril, abriu uma nova frente contra as muralhas marítimas."
+      },
+      {
+        "nome": "Adrianópolis (Edirne)",
+        "lat": 41.6771,
+        "lng": 26.5557,
+        "descricao": "Capital otomana à época, de onde Mehmed II partiu com seu exército e onde o engenheiro Orban fundiu as bombardas gigantes usadas no cerco."
+      },
+      {
+        "nome": "Rumeli Hisarı (fortaleza do Bósforo)",
+        "lat": 41.0847,
+        "lng": 29.0575,
+        "descricao": "Fortaleza construída por ordem de Mehmed II em 1452 na margem europeia do Bósforo, para cortar o suprimento naval e o socorro externo a Constantinopla antes mesmo do cerco começar."
+      },
+      {
+        "nome": "Chios",
+        "lat": 38.3729,
+        "lng": 26.1341,
+        "descricao": "Ilha genovesa do mar Egeu de onde partiu parte dos cerca de 700 soldados profissionais recrutados por Giovanni Giustiniani Longo para reforçar a defesa da cidade."
+      },
+      {
+        "nome": "Roma",
+        "lat": 41.9029,
+        "lng": 12.4534,
+        "descricao": "Sede do papado, para onde Constantino XI e seus enviados apelaram por socorro militar em troca da união das Igrejas — ajuda que chegou tarde demais e em escala insuficiente."
+      }
     ],
     "figuras": [
       {
@@ -222,7 +321,9 @@
       }
     ],
     "legado": "A queda de Constantinopla extinguiu, de forma definitiva, o Império Romano do Oriente — a última continuidade institucional direta da Roma Antiga, encerrada 1.123 anos após sua fundação por Constantino, o Grande. Para a Europa cristã, a notícia chegou como um choque civilizacional: pela primeira vez em séculos, uma capital cristã histórica passava ao controle de um poder islâmico, e o feito consolidou o Império Otomano como potência dominante no Mediterrâneo oriental e nos Bálcãs por mais de quatro séculos, com Istambul como sua capital.\n\nO evento também acelerou transformações que já estavam em curso. Estudiosos e copistas bizantinos que fugiram para a Itália levaram consigo manuscritos gregos clássicos e o conhecimento da língua grega antiga, alimentando o Renascimento italiano então em ascensão. No plano comercial, o controle otomano sobre as rotas terrestres para o Oriente encareceu e dificultou o comércio europeu de especiarias, um dos fatores que impulsionou reinos como Portugal e Espanha a buscar rotas marítimas alternativas para a Ásia — um impulso que, décadas depois, levaria às viagens de Bartolomeu Dias, Vasco da Gama e Cristóvão Colombo, e à Era das Grandes Navegações.\n\nSimbolicamente, a queda também remodelou identidades políticas e religiosas por séculos: Moscou passou a se autodenominar a 'Terceira Roma', herdeira da ortodoxia bizantina, enquanto os sultões otomanos reivindicavam para si o título de sucessores dos Césares. A Hagia Sophia, convertida em mesquita em 1453, tornou-se museu em 1934 sob a Turquia republicana e voltou a funcionar como mesquita em 2020 — permanecendo, quase 600 anos depois, um símbolo vivo e disputado do momento em que um mundo antigo terminou e outro, novo, começou.",
-    "curiosidadesRelacionadas": []
+    "curiosidadesRelacionadas": [
+      "constantinopla-dois-constantinos"
+    ]
   },
   {
     "slug": "descobrimento-america",
@@ -238,10 +339,22 @@
     "mapaTitulo": "Pelo Atlântico, em 1492",
     "mapaDescricao": "Da Espanha às Ilhas Canárias, e destas ao Caribe: veja os pontos exatos por onde passou a frota de Colombo em sua viagem de ida e volta.",
     "estatisticas": [
-      { "label": "Navios na expedição", "valor": "3 (Santa María, Pinta e Niña)" },
-      { "label": "Tripulantes ao todo", "valor": "cerca de 90 homens" },
-      { "label": "Travessia oceânica (Canárias–Bahamas)", "valor": "36 dias" },
-      { "label": "Duração total da viagem, ida e volta", "valor": "224 dias" }
+      {
+        "label": "Navios na expedição",
+        "valor": "3 (Santa María, Pinta e Niña)"
+      },
+      {
+        "label": "Tripulantes ao todo",
+        "valor": "cerca de 90 homens"
+      },
+      {
+        "label": "Travessia oceânica (Canárias–Bahamas)",
+        "valor": "36 dias"
+      },
+      {
+        "label": "Duração total da viagem, ida e volta",
+        "valor": "224 dias"
+      }
     ],
     "contexto": "No fim do século XV, chegar ao Oriente — fonte de especiarias, seda e outras riquezas cobiçadas pela Europa — significava enfrentar rotas terrestres longas, caras e controladas por intermediários otomanos e italianos. Portugal já buscava um caminho marítimo alternativo contornando a África: em 1488, Bartolomeu Dias havia dobrado o Cabo da Boa Esperança, abrindo caminho para a futura rota até a Índia. Foi nesse ambiente de competição ibérica por rotas comerciais que o navegador genovês Cristóvão Colombo propôs algo diferente: alcançar as Índias navegando para oeste, atravessando o Oceano Atlântico. A proposta se baseava em cálculos equivocados sobre o tamanho da Terra — Colombo subestimava significativamente a circunferência do globo e superestimava a extensão da Ásia, o que tornava a viagem, em sua conta, muito mais curta do que era na realidade. Rejeitado pela coroa portuguesa, que já apostava na rota africana, Colombo levou o projeto à Espanha. Ali, após anos de negociação, obteve o apoio dos Reis Católicos, Isabel I de Castela e Fernando II de Aragão, recém-vitoriosos na conquista de Granada, último reduto muçulmano na península Ibérica, em janeiro de 1492. Em 17 de abril daquele ano, foram assinadas as Capitulações de Santa Fé, contrato que garantia a Colombo os títulos de Almirante do Mar Oceano, Vice-rei e Governador das terras que viesse a encontrar, além de participação nas riquezas obtidas. O financiamento veio de fundos reais, de investidores privados e da própria cidade de Palos de la Frontera, obrigada pela coroa a fornecer duas caravelas como forma de pagar uma dívida. Assim nasceu a expedição que, sem que ninguém a bordo soubesse, encontraria não as Índias, mas um continente inteiro já habitado por dezenas de milhões de pessoas.",
     "momentos": [
@@ -303,13 +416,48 @@
       }
     ],
     "locais": [
-      { "nome": "Palos de la Frontera", "lat": 37.2283, "lng": -6.8944, "descricao": "Porto de partida da expedição em 3 de agosto de 1492 e local de chegada, no retorno, em 15 de março de 1493." },
-      { "nome": "San Sebastián de La Gomera (Ilhas Canárias)", "lat": 28.0914, "lng": -17.1114, "descricao": "Última escala antes da travessia atlântica; a frota reabasteceu ali e partiu definitivamente rumo ao oeste em 6 de setembro de 1492." },
-      { "nome": "Guanahani / San Salvador (Bahamas)", "lat": 24.0350, "lng": -74.4975, "descricao": "Ilha onde a frota avistou terra e desembarcou em 12 de outubro de 1492, primeiro contato registrado entre Colombo e os povos indígenas do Caribe." },
-      { "nome": "Baía de Bariay, Cuba", "lat": 21.2833, "lng": -75.9667, "descricao": "Ponto da costa cubana onde a expedição chegou em 28 de outubro de 1492, na crença de estar próxima do continente asiático." },
-      { "nome": "La Navidad, Hispaniola (atual Haiti)", "lat": 19.6906, "lng": -72.0158, "descricao": "Local onde a Santa María naufragou no Natal de 1492 e onde foi erguido o primeiro forte europeu permanente nas Américas." },
-      { "nome": "Ilha de Santa Maria, Açores", "lat": 36.9958, "lng": -25.1707, "descricao": "Ponto de refúgio da frota durante as violentas tempestades enfrentadas na viagem de volta à Europa, em fevereiro de 1493." },
-      { "nome": "Lisboa, Portugal", "lat": 38.7223, "lng": -9.1393, "descricao": "Porto onde a Niña atracou em 4 de março de 1493, permitindo que Colombo se encontrasse com o rei João II antes de seguir para a Espanha." }
+      {
+        "nome": "Palos de la Frontera",
+        "lat": 37.2283,
+        "lng": -6.8944,
+        "descricao": "Porto de partida da expedição em 3 de agosto de 1492 e local de chegada, no retorno, em 15 de março de 1493."
+      },
+      {
+        "nome": "San Sebastián de La Gomera (Ilhas Canárias)",
+        "lat": 28.0914,
+        "lng": -17.1114,
+        "descricao": "Última escala antes da travessia atlântica; a frota reabasteceu ali e partiu definitivamente rumo ao oeste em 6 de setembro de 1492."
+      },
+      {
+        "nome": "Guanahani / San Salvador (Bahamas)",
+        "lat": 24.035,
+        "lng": -74.4975,
+        "descricao": "Ilha onde a frota avistou terra e desembarcou em 12 de outubro de 1492, primeiro contato registrado entre Colombo e os povos indígenas do Caribe."
+      },
+      {
+        "nome": "Baía de Bariay, Cuba",
+        "lat": 21.2833,
+        "lng": -75.9667,
+        "descricao": "Ponto da costa cubana onde a expedição chegou em 28 de outubro de 1492, na crença de estar próxima do continente asiático."
+      },
+      {
+        "nome": "La Navidad, Hispaniola (atual Haiti)",
+        "lat": 19.6906,
+        "lng": -72.0158,
+        "descricao": "Local onde a Santa María naufragou no Natal de 1492 e onde foi erguido o primeiro forte europeu permanente nas Américas."
+      },
+      {
+        "nome": "Ilha de Santa Maria, Açores",
+        "lat": 36.9958,
+        "lng": -25.1707,
+        "descricao": "Ponto de refúgio da frota durante as violentas tempestades enfrentadas na viagem de volta à Europa, em fevereiro de 1493."
+      },
+      {
+        "nome": "Lisboa, Portugal",
+        "lat": 38.7223,
+        "lng": -9.1393,
+        "descricao": "Porto onde a Niña atracou em 4 de março de 1493, permitindo que Colombo se encontrasse com o rei João II antes de seguir para a Espanha."
+      }
     ],
     "figuras": [
       {
@@ -338,7 +486,9 @@
       }
     ],
     "legado": "A chegada de Colombo ao Caribe inaugurou aquilo que historiadores chamam de Intercâmbio Colombiano: a troca, em escala inédita, de plantas, animais, alimentos, doenças e pessoas entre os dois lados do Atlântico. Milho, batata, tomate, cacau e pimenta seguiram para a Europa, Ásia e África, transformando dietas e economias inteiras; cavalos, gado, trigo e cana-de-açúcar chegaram às Américas, remodelando paisagens e sistemas de trabalho. Doenças como varíola, sarampo e gripe, contra as quais os povos americanos não tinham imunidade prévia, provocaram um dos maiores colapsos demográficos da história — estima-se que a população indígena das Américas tenha caído entre 80% e 90% ao longo do século seguinte ao contato, por doença, guerra, escravização e ruptura dos modos de vida tradicionais.\n\nPara os povos taínos que receberam Colombo em Guanahani, o encontro marcou o início do fim de sua autonomia. Nas décadas seguintes, o sistema de encomienda impôs trabalho forçado à população indígena de Hispaniola em minas e plantações, e a combinação de exploração, violência e epidemias praticamente extinguiu os taínos das Grandes Antilhas como povo distinto em poucas gerações — embora estudos genéticos recentes mostrem que sua ascendência sobrevive em parte significativa da população caribenha atual. A viagem de 1492 abriu caminho para mais três expedições de Colombo e, na sequência, para a colonização espanhola e portuguesa de vastos territórios americanos, com consequências profundas e duradouras para os povos originários.\n\nDo ponto de vista europeu, o evento redesenhou o mapa geopolítico e econômico do mundo. Espanha e Portugal dividiram formalmente as terras recém-encontradas pelo Tratado de Tordesilhas, em 1494, e o fluxo de prata e ouro extraído das Américas ao longo dos séculos seguintes financiou guerras, impérios e o surgimento de novas potências comerciais na Europa. A data de 12 de outubro de 1492 permanece, até hoje, um símbolo contestado: celebrada por séculos como marco do \"Novo Mundo\", ela é cada vez mais reconhecida — inclusive em partes das próprias Américas, onde o dia passou a ser chamado de Dia dos Povos Indígenas em vários países — como o início de um processo de conquista e colonização que reconfigurou radical e violentamente a vida de milhões de pessoas que já estavam ali.",
-    "curiosidadesRelacionadas": []
+    "curiosidadesRelacionadas": [
+      "colombo-mundo-em-forma-de-pera"
+    ]
   },
   {
     "slug": "revolucao-francesa",
@@ -354,10 +504,22 @@
     "mapaTitulo": "Pela França revolucionária",
     "mapaDescricao": "De Versalhes à Bastilha, da fuga fracassada em Varennes até a praça onde caiu a cabeça de um rei: percorra os lugares reais onde a Revolução Francesa aconteceu.",
     "estatisticas": [
-      { "label": "Prisioneiros libertados na Bastilha", "valor": "7" },
-      { "label": "Deputados do Terceiro Estado nos Estados Gerais", "valor": "578" },
-      { "label": "Distância da Marcha das Mulheres até Versalhes", "valor": "≈ 19 km" },
-      { "label": "Execuções estimadas durante o Terror (1793-1794)", "valor": "≈ 17.000" }
+      {
+        "label": "Prisioneiros libertados na Bastilha",
+        "valor": "7"
+      },
+      {
+        "label": "Deputados do Terceiro Estado nos Estados Gerais",
+        "valor": "578"
+      },
+      {
+        "label": "Distância da Marcha das Mulheres até Versalhes",
+        "valor": "≈ 19 km"
+      },
+      {
+        "label": "Execuções estimadas durante o Terror (1793-1794)",
+        "valor": "≈ 17.000"
+      }
     ],
     "contexto": "No fim dos anos 1780, a França era uma potência endividada até o pescoço. Décadas de guerras dispendiosas — entre elas o apoio à independência dos Estados Unidos — haviam esgotado os cofres reais, enquanto um sistema fiscal profundamente desigual isentava a nobreza e o clero, as duas ordens privilegiadas, do grosso dos impostos. Todo o peso recaía sobre o Terceiro Estado: camponeses, artesãos e uma burguesia urbana cada vez mais instruída e impaciente com sua exclusão do poder político. Colheitas ruins em 1788 elevaram o preço do pão a níveis insustentáveis, espalhando fome pelas cidades. Ao mesmo tempo, as ideias do Iluminismo — Voltaire, Rousseau, Montesquieu — vinham corroendo havia décadas a legitimidade do direito divino dos reis, propondo no lugar noções de soberania popular, separação de poderes e direitos naturais. Diante da bancarrota iminente, Luís XVI viu-se obrigado a convocar os Estados Gerais, a antiga assembleia consultiva das três ordens do reino, que não se reunia desde 1614. A expectativa de reformas fiscais logo se transformou em algo maior: o Terceiro Estado, representando mais de 95% da população mas com voto historicamente igualado ao das outras duas ordens, exigiu que a votação fosse feita por cabeça e não por ordem — uma disputa aparentemente processual que, em poucas semanas, incendiaria toda a estrutura política do Antigo Regime e daria início a um dos processos revolucionários mais decisivos da história moderna.",
     "momentos": [
@@ -426,12 +588,42 @@
       }
     ],
     "locais": [
-      { "nome": "Bastilha (atual Praça da Bastilha), Paris", "lat": 48.8531, "lng": 2.3691, "descricao": "Fortaleza-prisão tomada por revolucionários em 14 de julho de 1789, num ataque que se tornou o símbolo fundador da Revolução Francesa." },
-      { "nome": "Palácio de Versalhes", "lat": 48.8049, "lng": 2.1204, "descricao": "Sede do poder real onde os Estados Gerais foram abertos, o Juramento do Jogo da Pela foi feito e a Marcha das Mulheres forçou a família real a partir para Paris." },
-      { "nome": "Varennes-en-Argonne", "lat": 49.2269, "lng": 5.0350, "descricao": "Pequena cidade do leste da França onde Luís XVI e a família real foram reconhecidos e detidos na madrugada de 21 de junho de 1791, ao tentar fugir do país." },
-      { "nome": "Palácio das Tulherias, Paris", "lat": 48.8634, "lng": 2.3275, "descricao": "Residência parisiense da família real desde 1789, invadida em 10 de agosto de 1792 num levante que derrubou definitivamente a monarquia francesa." },
-      { "nome": "Torre do Temple, Paris", "lat": 48.8631, "lng": 2.3585, "descricao": "Antiga fortaleza medieval onde Luís XVI, Maria Antonieta e os filhos ficaram presos após a queda da monarquia, até a execução do rei em 1793." },
-      { "nome": "Praça da Revolução (atual Praça da Concórdia), Paris", "lat": 48.8656, "lng": 2.3212, "descricao": "Local onde a guilhotina revolucionária funcionou durante o Terror, palco das execuções de Luís XVI, Maria Antonieta e milhares de outros condenados." }
+      {
+        "nome": "Bastilha (atual Praça da Bastilha), Paris",
+        "lat": 48.8531,
+        "lng": 2.3691,
+        "descricao": "Fortaleza-prisão tomada por revolucionários em 14 de julho de 1789, num ataque que se tornou o símbolo fundador da Revolução Francesa."
+      },
+      {
+        "nome": "Palácio de Versalhes",
+        "lat": 48.8049,
+        "lng": 2.1204,
+        "descricao": "Sede do poder real onde os Estados Gerais foram abertos, o Juramento do Jogo da Pela foi feito e a Marcha das Mulheres forçou a família real a partir para Paris."
+      },
+      {
+        "nome": "Varennes-en-Argonne",
+        "lat": 49.2269,
+        "lng": 5.035,
+        "descricao": "Pequena cidade do leste da França onde Luís XVI e a família real foram reconhecidos e detidos na madrugada de 21 de junho de 1791, ao tentar fugir do país."
+      },
+      {
+        "nome": "Palácio das Tulherias, Paris",
+        "lat": 48.8634,
+        "lng": 2.3275,
+        "descricao": "Residência parisiense da família real desde 1789, invadida em 10 de agosto de 1792 num levante que derrubou definitivamente a monarquia francesa."
+      },
+      {
+        "nome": "Torre do Temple, Paris",
+        "lat": 48.8631,
+        "lng": 2.3585,
+        "descricao": "Antiga fortaleza medieval onde Luís XVI, Maria Antonieta e os filhos ficaram presos após a queda da monarquia, até a execução do rei em 1793."
+      },
+      {
+        "nome": "Praça da Revolução (atual Praça da Concórdia), Paris",
+        "lat": 48.8656,
+        "lng": 2.3212,
+        "descricao": "Local onde a guilhotina revolucionária funcionou durante o Terror, palco das execuções de Luís XVI, Maria Antonieta e milhares de outros condenados."
+      }
     ],
     "figuras": [
       {
@@ -460,7 +652,9 @@
       }
     ],
     "legado": "A Revolução Francesa não terminou com a queda de Robespierre em 1794, mas sua fase mais radical havia redesenhado permanentemente as possibilidades da política moderna. A Declaração dos Direitos do Homem e do Cidadão tornou-se referência direta para constituições e movimentos de direitos civis ao redor do mundo nos séculos seguintes, consagrando princípios de igualdade legal, soberania popular e liberdade individual que, embora aplicados de forma incompleta e contraditória na própria França revolucionária, forneceram o vocabulário político que passaria a estruturar debates sobre cidadania, representação e direitos humanos até os dias de hoje.\n\nNo plano institucional, a década revolucionária destruiu de forma irreversível o sistema de privilégios estamentais do Antigo Regime francês e experimentou, em rápida sucessão, monarquia constitucional, república, ditadura de comitê e, por fim, abriu caminho para a ascensão de Napoleão Bonaparte, que tomaria o poder no golpe de 18 Brumário (9 de novembro de 1799), encerrando formalmente o período revolucionário. As guerras desencadeadas pela Revolução espalhariam, no entanto, seus ideais e seu código legal por boa parte da Europa sob o domínio napoleônico, plantando sementes de nacionalismo e reformismo liberal que floresceriam ao longo do século XIX.\n\nO legado mais duradouro da Revolução Francesa talvez seja simbólico: ela demonstrou, de forma dramática e sangrenta, que a legitimidade de um governo podia ser questionada e derrubada em nome da vontade popular, e não apenas da tradição ou do direito divino. Esse precedente inspiraria diretamente revoluções liberais e nacionais por toda a Europa e a América Latina no século seguinte, além de alimentar debates que atravessam até hoje discussões sobre os limites entre liberdade, igualdade e os riscos da violência política em nome de ideais revolucionários.",
-    "curiosidadesRelacionadas": []
+    "curiosidadesRelacionadas": [
+      "tempo-decimal-revolucao-francesa"
+    ]
   },
   {
     "slug": "chegada-homem-lua",
@@ -476,10 +670,22 @@
     "mapaTitulo": "Da Terra à Lua, em 1969",
     "mapaDescricao": "Da rampa de lançamento na Flórida ao centro de controle no Texas, do Mar da Tranquilidade lunar ao ponto de amerissagem no Pacífico — os lugares reais que sediaram a missão mais ousada da história.",
     "estatisticas": [
-      { "label": "Duração total da missão", "valor": "8 dias, 3h e 18min" },
-      { "label": "Distância percorrida (ida e volta)", "valor": "cerca de 950.000 km" },
-      { "label": "Tempo na superfície lunar", "valor": "21h 36min (EVA de 2h31min)" },
-      { "label": "Audiência mundial da TV", "valor": "cerca de 600 milhões de pessoas" }
+      {
+        "label": "Duração total da missão",
+        "valor": "8 dias, 3h e 18min"
+      },
+      {
+        "label": "Distância percorrida (ida e volta)",
+        "valor": "cerca de 950.000 km"
+      },
+      {
+        "label": "Tempo na superfície lunar",
+        "valor": "21h 36min (EVA de 2h31min)"
+      },
+      {
+        "label": "Audiência mundial da TV",
+        "valor": "cerca de 600 milhões de pessoas"
+      }
     ],
     "contexto": "No auge da Guerra Fria, a corrida espacial era um campo de batalha simbólico entre Estados Unidos e União Soviética. Os soviéticos acumulavam vitórias espetaculares — o satélite Sputnik em 1957 e o voo de Iuri Gagarin em 1961, primeiro ser humano a orbitar a Terra — deixando os americanos em desvantagem tecnológica e moral. Em 25 de maio de 1961, o presidente John F. Kennedy declarou ao Congresso dos Estados Unidos o compromisso de \"pousar um homem na Lua e trazê-lo de volta em segurança à Terra\" antes do fim da década, uma meta reafirmada em seu célebre discurso na Rice University, em setembro de 1962, quando disse que os Estados Unidos escolhiam ir à Lua \"não porque é fácil, mas porque é difícil\". Nascia assim o Programa Apollo, sob a recém-criada NASA, mobilizando cerca de 400 mil pessoas e um orçamento sem precedentes em tempos de paz. O caminho até 1969 foi marcado por avanços vertiginosos e também por tragédia: em janeiro de 1967, o incêndio na cabine da Apollo 1 matou os astronautas Gus Grissom, Ed White e Roger Chaffee, forçando uma reformulação profunda do projeto. As missões Apollo 7 e 8 testaram a espaçonave em órbita terrestre e depois lunar; a Apollo 9 validou o módulo lunar; a Apollo 10 fez um \"ensaio geral\" completo, aproximando-se da superfície da Lua sem pousar. Quando a Apollo 11 decolou, em julho de 1969, a NASA já havia percorrido quase todo o caminho técnico — restava apenas o passo final, mais arriscado e mais aguardado: colocar botas humanas no solo lunar diante dos olhos do mundo inteiro.",
     "momentos": [
@@ -541,12 +747,42 @@
       }
     ],
     "locais": [
-      { "nome": "Centro Espacial Kennedy (Complexo de Lançamento 39A)", "lat": 28.6083, "lng": -80.6042, "descricao": "Rampa de lançamento na costa da Flórida de onde o foguete Saturn V decolou em 16 de julho de 1969, levando a tripulação da Apollo 11 rumo à Lua." },
-      { "nome": "Centro de Controle da Missão, Houston", "lat": 29.5502, "lng": -95.0930, "descricao": "No Centro de Naves Tripuladas (hoje Centro Espacial Johnson), controladores de voo liderados por Gene Kranz acompanharam cada etapa da missão, incluindo os tensos minutos finais do pouso lunar." },
-      { "nome": "Mar da Tranquilidade — Tranquility Base (Lua)", "lat": 0.67408, "lng": 23.47297, "descricao": "Local exato do pouso do módulo lunar Eagle e dos primeiros passos humanos em outro mundo, em 20 e 21 de julho de 1969." },
-      { "nome": "Local de amerissagem, Oceano Pacífico Norte", "lat": 13.3167, "lng": -169.15, "descricao": "Ponto do Oceano Pacífico onde a cápsula Columbia amerissou em 24 de julho de 1969, encerrando a missão após 8 dias no espaço." },
-      { "nome": "USS Hornet (navio de recuperação)", "lat": 21.3, "lng": -157.85, "descricao": "Porta-aviões que resgatou os astronautas no Pacífico e os levou, em quarentena, até Pearl Harbor e depois ao Havaí antes do retorno ao Texas." },
-      { "nome": "Casa Branca, Washington D.C.", "lat": 38.8977, "lng": -77.0365, "descricao": "De onde o presidente Richard Nixon fez, por telefone, a ligação para os astronautas na Lua, chamada por ele mesmo de 'a ligação mais histórica já feita da Casa Branca'." }
+      {
+        "nome": "Centro Espacial Kennedy (Complexo de Lançamento 39A)",
+        "lat": 28.6083,
+        "lng": -80.6042,
+        "descricao": "Rampa de lançamento na costa da Flórida de onde o foguete Saturn V decolou em 16 de julho de 1969, levando a tripulação da Apollo 11 rumo à Lua."
+      },
+      {
+        "nome": "Centro de Controle da Missão, Houston",
+        "lat": 29.5502,
+        "lng": -95.093,
+        "descricao": "No Centro de Naves Tripuladas (hoje Centro Espacial Johnson), controladores de voo liderados por Gene Kranz acompanharam cada etapa da missão, incluindo os tensos minutos finais do pouso lunar."
+      },
+      {
+        "nome": "Mar da Tranquilidade — Tranquility Base (Lua)",
+        "lat": 0.67408,
+        "lng": 23.47297,
+        "descricao": "Local exato do pouso do módulo lunar Eagle e dos primeiros passos humanos em outro mundo, em 20 e 21 de julho de 1969."
+      },
+      {
+        "nome": "Local de amerissagem, Oceano Pacífico Norte",
+        "lat": 13.3167,
+        "lng": -169.15,
+        "descricao": "Ponto do Oceano Pacífico onde a cápsula Columbia amerissou em 24 de julho de 1969, encerrando a missão após 8 dias no espaço."
+      },
+      {
+        "nome": "USS Hornet (navio de recuperação)",
+        "lat": 21.3,
+        "lng": -157.85,
+        "descricao": "Porta-aviões que resgatou os astronautas no Pacífico e os levou, em quarentena, até Pearl Harbor e depois ao Havaí antes do retorno ao Texas."
+      },
+      {
+        "nome": "Casa Branca, Washington D.C.",
+        "lat": 38.8977,
+        "lng": -77.0365,
+        "descricao": "De onde o presidente Richard Nixon fez, por telefone, a ligação para os astronautas na Lua, chamada por ele mesmo de 'a ligação mais histórica já feita da Casa Branca'."
+      }
     ],
     "figuras": [
       {
@@ -575,7 +811,9 @@
       }
     ],
     "legado": "A chegada do homem à Lua encerrou simbolicamente a fase mais aguda da corrida espacial: os Estados Unidos haviam cumprido a promessa feita por Kennedy oito anos antes, e a União Soviética, que também mirava um pouso tripulado, jamais conseguiu replicar o feito, encerrando discretamente seu próprio programa lunar tripulado nos anos seguintes. A Apollo 11 seria sucedida por outras cinco missões que pousaram na Lua até 1972 (Apollo 12, 14, 15, 16 e 17), consolidando um total de doze astronautas caminhando sobre sua superfície — até hoje, o único corpo celeste além da Terra pisado por seres humanos.\n\nO impacto tecnológico do programa Apollo se espalhou muito além da exploração espacial: avanços em computação miniaturizada, materiais isolantes, softwares de controle de voo e telemetria alimentaram, direta ou indiretamente, indústrias inteiras nas décadas seguintes. As mais de 380 quilos de rochas lunares trazidas pelas missões Apollo continuam sendo estudadas por cientistas até os dias atuais, revelando informações sobre a formação da Lua e do Sistema Solar. A fotografia da Terra vista do espaço, popularizada pelas missões Apollo, também alimentou o nascente movimento ambientalista global, oferecendo à humanidade uma nova perspectiva sobre a fragilidade do próprio planeta.\n\nCulturalmente, o pouso na Lua tornou-se um dos eventos mais unificadores do século XX, assistido ao vivo por centenas de milhões de pessoas e celebrado como conquista de toda a humanidade, não apenas de uma nação. Décadas depois, o feito segue como referência máxima de ambição científica e engenharia de precisão, inspirando o atual esforço da NASA — o Programa Artemis — para devolver astronautas à superfície lunar, desta vez com o objetivo de estabelecer presença humana duradoura como trampolim para futuras missões a Marte.",
-    "curiosidadesRelacionadas": []
+    "curiosidadesRelacionadas": [
+      "declaracao-alfandegaria-apollo-11"
+    ]
   },
   {
     "slug": "queda-muro-berlim",
@@ -591,10 +829,22 @@
     "mapaTitulo": "Pela Europa em transformação, 1989",
     "mapaDescricao": "De Moscou a Berlim, passando pela fronteira húngara e pelas ruas de Leipzig, veja os lugares onde a revolução pacífica de 1989 tomou forma.",
     "estatisticas": [
-      { "label": "Duração do Muro em pé", "valor": "28 anos (1961–1989)" },
-      { "label": "Extensão total da barreira", "valor": "≈155 km" },
-      { "label": "Vítimas fatais na fronteira", "valor": "ao menos 140 mortos" },
-      { "label": "Alemães orientais que fugiram via Hungria em 1989", "valor": "mais de 60 mil" }
+      {
+        "label": "Duração do Muro em pé",
+        "valor": "28 anos (1961–1989)"
+      },
+      {
+        "label": "Extensão total da barreira",
+        "valor": "≈155 km"
+      },
+      {
+        "label": "Vítimas fatais na fronteira",
+        "valor": "ao menos 140 mortos"
+      },
+      {
+        "label": "Alemães orientais que fugiram via Hungria em 1989",
+        "valor": "mais de 60 mil"
+      }
     ],
     "contexto": "Ao final da Segunda Guerra Mundial, a Alemanha foi dividida em zonas de ocupação aliadas, e Berlim, mesmo situada no interior do território soviético, foi igualmente repartida entre as potências vencedoras. Em 1949, essa divisão se cristalizou na criação de dois Estados alemães: a República Federal da Alemanha (RFA), capitalista e alinhada ao Ocidente, e a República Democrática Alemã (RDA), socialista e satélite de Moscou. Berlim Ocidental tornou-se um enclave de liberdade cercado por território comunista, e o fluxo constante de alemães orientais fugindo para o lado ocidental — cerca de 3,5 milhões entre 1949 e 1961 — levou o governo da RDA, com apoio soviético, a erguer o Muro de Berlim na madrugada de 13 de agosto de 1961. Por 28 anos, a barreira de concreto, arame farpado, torres de vigia e faixa da morte separou famílias, bairros e um povo inteiro, tornando-se o símbolo máximo da Cortina de Ferro e da divisão bipolar do mundo na Guerra Fria.\n\nO equilíbrio começou a mudar na segunda metade dos anos 1980. Ao assumir a liderança soviética em 1985, Mikhail Gorbachev lançou as políticas de glasnost (transparência) e perestroika (reestruturação), afrouxando o controle rígido de Moscou sobre os países do Pacto de Varsóvia e sinalizando que a URSS não mais interviria militarmente para sustentar regimes comunistas impopulares — uma ruptura decisiva com a Doutrina Brejnev. Estimulados por esse novo clima, movimentos de reforma ganharam força na Polônia (com o Solidariedade) e na Hungria, enquanto a economia estagnada e a repressão da RDA, sob o inflexível Erich Honecker, geravam descontentamento crescente. Em 1989, esse caldeirão de fatores — abertura soviética, crise econômica, protestos populares e uma geração cansada de viver atrás do Muro — convergiu para uma sequência de eventos que, em poucos meses, derrubaria não apenas uma parede de concreto, mas toda a ordem geopolítica erguida desde 1945.",
     "momentos": [
@@ -656,13 +906,48 @@
       }
     ],
     "locais": [
-      { "nome": "Portão de Brandemburgo, Berlim", "lat": 52.5163, "lng": 13.3777, "descricao": "Símbolo maior da divisão da cidade, o portão ficou fechado dentro da faixa de segurança do Muro por quase três décadas; em 22 de dezembro de 1989 foi reaberto ao público, tornando-se o epicentro das celebrações da reunificação." },
-      { "nome": "Checkpoint Charlie, Berlim", "lat": 52.5077, "lng": 13.3904, "descricao": "O mais famoso posto de controle entre os setores americano e soviético de Berlim, palco de tensos confrontos durante a Guerra Fria e de cenas de celebração na noite de 9 de novembro de 1989." },
-      { "nome": "Posto fronteiriço de Bornholmer Straße, Berlim", "lat": 52.5504, "lng": 13.3888, "descricao": "Primeiro posto de fronteira a abrir seus portões na noite de 9 de novembro de 1989, sob decisão do oficial Harald Jäger, dando início à queda efetiva do Muro." },
-      { "nome": "Alexanderplatz, Berlim Oriental", "lat": 52.5219, "lng": 13.4132, "descricao": "Em 4 de novembro de 1989, reuniu cerca de meio milhão de pessoas no maior protesto já registrado na história da RDA, exigindo liberdade de expressão e reformas democráticas." },
-      { "nome": "Nikolaikirche, Leipzig", "lat": 51.3396, "lng": 12.3731, "descricao": "Berço das 'manifestações de segunda-feira', onde orações por reformas se transformaram, em 9 de outubro de 1989, no maior protesto pacífico contra o regime da RDA até então." },
-      { "nome": "Sopron e fronteira Hungria-Áustria", "lat": 47.6817, "lng": 16.5845, "descricao": "Palco do Piquenique Pan-Europeu de 19 de agosto de 1989 e da abertura oficial da fronteira em setembro, rota pela qual dezenas de milhares de alemães orientais fugiram para o Ocidente." },
-      { "nome": "Kremlin, Moscou", "lat": 55.7520, "lng": 37.6175, "descricao": "Sede do poder soviético, onde Mikhail Gorbachev conduzia as reformas da glasnost e perestroika e decidia não intervir militarmente para sustentar os regimes comunistas do Leste Europeu." }
+      {
+        "nome": "Portão de Brandemburgo, Berlim",
+        "lat": 52.5163,
+        "lng": 13.3777,
+        "descricao": "Símbolo maior da divisão da cidade, o portão ficou fechado dentro da faixa de segurança do Muro por quase três décadas; em 22 de dezembro de 1989 foi reaberto ao público, tornando-se o epicentro das celebrações da reunificação."
+      },
+      {
+        "nome": "Checkpoint Charlie, Berlim",
+        "lat": 52.5077,
+        "lng": 13.3904,
+        "descricao": "O mais famoso posto de controle entre os setores americano e soviético de Berlim, palco de tensos confrontos durante a Guerra Fria e de cenas de celebração na noite de 9 de novembro de 1989."
+      },
+      {
+        "nome": "Posto fronteiriço de Bornholmer Straße, Berlim",
+        "lat": 52.5504,
+        "lng": 13.3888,
+        "descricao": "Primeiro posto de fronteira a abrir seus portões na noite de 9 de novembro de 1989, sob decisão do oficial Harald Jäger, dando início à queda efetiva do Muro."
+      },
+      {
+        "nome": "Alexanderplatz, Berlim Oriental",
+        "lat": 52.5219,
+        "lng": 13.4132,
+        "descricao": "Em 4 de novembro de 1989, reuniu cerca de meio milhão de pessoas no maior protesto já registrado na história da RDA, exigindo liberdade de expressão e reformas democráticas."
+      },
+      {
+        "nome": "Nikolaikirche, Leipzig",
+        "lat": 51.3396,
+        "lng": 12.3731,
+        "descricao": "Berço das 'manifestações de segunda-feira', onde orações por reformas se transformaram, em 9 de outubro de 1989, no maior protesto pacífico contra o regime da RDA até então."
+      },
+      {
+        "nome": "Sopron e fronteira Hungria-Áustria",
+        "lat": 47.6817,
+        "lng": 16.5845,
+        "descricao": "Palco do Piquenique Pan-Europeu de 19 de agosto de 1989 e da abertura oficial da fronteira em setembro, rota pela qual dezenas de milhares de alemães orientais fugiram para o Ocidente."
+      },
+      {
+        "nome": "Kremlin, Moscou",
+        "lat": 55.752,
+        "lng": 37.6175,
+        "descricao": "Sede do poder soviético, onde Mikhail Gorbachev conduzia as reformas da glasnost e perestroika e decidia não intervir militarmente para sustentar os regimes comunistas do Leste Europeu."
+      }
     ],
     "figuras": [
       {
@@ -691,6 +976,512 @@
       }
     ],
     "legado": "A queda do Muro desencadeou um processo político vertiginoso. Em poucos meses, o regime da RDA perdeu completamente a legitimidade; em março de 1990 ocorreram as primeiras eleições livres no país, vencidas por partidos favoráveis à reunificação rápida. Menos de um ano depois da noite de 9 de novembro, em 3 de outubro de 1990, a Alemanha se reunificou formalmente sob a bandeira da República Federal, encerrando 45 anos de divisão territorial, ideológica e humana que havia separado famílias inteiras.\n\nO colapso da RDA foi apenas o primeiro de uma cadeia de quedas: ao longo do restante de 1989, os regimes comunistas da Polônia, Hungria, Tchecoslováquia (Revolução de Veludo), Bulgária e Romênia (onde Nicolae Ceaușescu foi deposto e executado em dezembro) também ruíram, num movimento que ficou conhecido como o 'Outono das Nações'. A própria União Soviética, enfraquecida pelas reformas de Gorbachev e por movimentos independentistas em suas repúblicas, se desintegraria formalmente em dezembro de 1991, encerrando quase 45 anos de Guerra Fria e a divisão bipolar do mundo entre Washington e Moscou.\n\nNas décadas seguintes, a queda do Muro tornou-se o símbolo maior do fim da Guerra Fria e da reunificação do continente europeu. A União Europeia e a OTAN se expandiram progressivamente para o Leste, incorporando países que décadas antes estavam sob domínio soviético, como Polônia, Hungria, República Tcheca e, mais tarde, os países bálticos. Hoje, poucos trechos do Muro original permanecem de pé — preservados como memoriais, como a East Side Gallery em Berlim —, mas seu legado permanece vivo como lembrete de que barreiras erguidas para dividir povos, por mais concretas e vigiadas que sejam, podem ruir diante da vontade popular.",
-    "curiosidadesRelacionadas": ["queda-muro"]
+    "curiosidadesRelacionadas": [
+      "queda-muro"
+    ]
+  },
+  {
+    "slug": "revolucao-russa",
+    "titulo": "Revolução Russa",
+    "ano": "1917",
+    "periodo": "Fevereiro – Novembro de 1917",
+    "categoria": "Revolução",
+    "hook": "Em oito meses, um império de trezentos anos ruiu sob o peso da fome e da guerra — e no vácuo deixado pelo czar, um punhado de revolucionários prometeu reinventar o mundo do zero.",
+    "heroLegenda": "Manifestantes se dispersam sob fogo de metralhadora na Nevsky Prospekt, em Petrogrado, durante os chamados Dias de Julho de 1917.",
+    "jornadaTitulo": "Oito meses que abalaram o mundo",
+    "jornadaDescricao": "Role a página para acompanhar, semana a semana, como filas de pão viraram motim, motim virou abdicação, e abdicação virou a revolução que redesenhou o século XX.",
+    "mapaTitulo": "Pela Rússia revolucionária, em 1917",
+    "mapaDescricao": "De Petrogrado, palco dos motins e da insurreição, até Ecaterimburgo, onde a dinastia Romanov teve seu fim trágico, percorra os lugares onde a história virou.",
+    "estatisticas": [
+      {
+        "label": "Duração da dinastia Romanov encerrada",
+        "valor": "304 anos (1613–1917)"
+      },
+      {
+        "label": "Habitantes de Petrogrado em 1917",
+        "valor": "cerca de 2,4 milhões"
+      },
+      {
+        "label": "Duração do Governo Provisório",
+        "valor": "8 meses (março a outubro/novembro)"
+      },
+      {
+        "label": "Território perdido no Tratado de Brest-Litovsk",
+        "valor": "cerca de 1/4 do Império Russo"
+      }
+    ],
+    "contexto": "Em fevereiro de 1917, a Rússia era um império exausto. Nicolau II governava havia 23 anos com poder quase absoluto, sustentado por uma burocracia rígida, uma polícia política temida e uma nobreza que se recusava a repartir a terra com os camponeses. Desde 1914 o país sangrava na Primeira Guerra Mundial: mais de 15 milhões de homens haviam sido mobilizados, as derrotas se acumulavam na frente oriental e as baixas passavam de 1,7 milhão de mortos. Nas cidades, a guerra desorganizara os trens e as fábricas — o abastecimento de grãos para Petrogrado e Moscou despencou, o pão escasseou e os preços dispararam. Enquanto isso, Nicolau II passava longas temporadas no quartel-general militar em Mogilev, deixando o governo nas mãos da czarina Alexandra e de seu conselheiro, o monge Grigóri Rasputin, cuja influência alimentava rumores de traição e corrupção na corte — rumores que só pioraram depois de seu assassinato, em dezembro de 1916. Greves operárias, já frequentes desde 1915, se multiplicaram no inverno de 1916 para 1917, movidas tanto pela fome quanto pela raiva contra um sistema que parecia incapaz de reformar-se. A Duma, o frágil parlamento criado após a revolução de 1905, pressionava por um governo responsável perante o povo, mas o czar recusava qualquer concessão real. Foi nesse caldeirão de fome, derrota militar e descrédito da monarquia que, em 23 de fevereiro de 1917, operárias de Petrogrado saíram às ruas — e deram início a um colapso que ninguém, nem os próprios revolucionários, sabia ainda aonde levaria.",
+    "locais": [
+      {
+        "nome": "Petrogrado (atual São Petersburgo)",
+        "lat": 59.9398,
+        "lng": 30.3146,
+        "descricao": "Capital do Império Russo e palco central da revolução, dos protestos de fevereiro à tomada do Palácio de Inverno em outubro."
+      },
+      {
+        "nome": "Pskov",
+        "lat": 57.8136,
+        "lng": 28.3496,
+        "descricao": "Na sede do comando da Frente Norte, Nicolau II assinou sua abdicação em 2 de março de 1917."
+      },
+      {
+        "nome": "Tsárskoie Seló",
+        "lat": 59.7156,
+        "lng": 30.396,
+        "descricao": "No Palácio Alexandre, a família imperial viveu os primeiros meses de prisão domiciliar."
+      },
+      {
+        "nome": "Moscou",
+        "lat": 55.752,
+        "lng": 37.6175,
+        "descricao": "Segunda maior cidade do império, tornou-se a nova capital soviética em 1918."
+      },
+      {
+        "nome": "Brest-Litovsk",
+        "lat": 52.0975,
+        "lng": 23.6879,
+        "descricao": "Onde a Rússia soviética assinou, em março de 1918, o tratado que a retirou da Primeira Guerra Mundial."
+      },
+      {
+        "nome": "Ecaterimburgo",
+        "lat": 56.8442,
+        "lng": 60.6097,
+        "descricao": "Na Casa Ipatiev, a família Romanov foi executada em julho de 1918."
+      }
+    ],
+    "legado": "A tomada bolchevique do poder mergulhou a Rússia em uma sangrenta guerra civil entre 1918 e 1921. Do caos dessa guerra emergiu, em 1922, a União das Repúblicas Socialistas Soviéticas, o primeiro Estado do mundo a se declarar oficialmente comunista.\n\nPara além de suas fronteiras, a Revolução Russa tornou-se referência para movimentos revolucionários ao longo de todo o século XX, alimentando a rivalidade Leste-Oeste que definiria a Guerra Fria após 1945.\n\nInternamente, o preço humano foi imenso: fome, expropriações e os expurgos stalinistas ceifaram milhões de vidas. A União Soviética resistiria por quase sete décadas, até se dissolver em dezembro de 1991.",
+    "curiosidadesRelacionadas": [
+      "revolucao-outubro-aconteceu-em-novembro"
+    ],
+    "heroImagem": "/eventos/hero-revolucao-russa.jpg",
+    "momentos": [
+      {
+        "data": "23 de fevereiro de 1917 (8 de março, calendário gregoriano)",
+        "titulo": "As operárias tomam as ruas no Dia Internacional da Mulher",
+        "local": "Petrogrado",
+        "texto": "Tudo começou com pão. No Dia Internacional da Mulher, operárias têxteis dos bairros industriais de Vyborg saíram às ruas de Petrogrado exigindo comida, cansadas das filas intermináveis diante de padarias vazias. Dias antes, a fábrica metalúrgica Putílov havia decretado um lockout que deixou milhares de homens sem trabalho e engrossou as manifestações. As mulheres convocaram os operários das fábricas vizinhas a se juntarem à greve, e a adesão foi imediata: em poucas horas, dezenas de milhares de trabalhadores paralisaram a capital. Cartazes pediam \"Pão!\" e, cada vez mais, \"Abaixo a autocracia!\" e \"Abaixo a guerra!\". A polícia tentou conter os cortejos, mas o número de manifestantes só crescia a cada esquina cruzada. Em dois dias, a greve já reunia mais de 300 mil pessoas, praticamente paralisando a cidade.",
+        "imagem": "/eventos/momento-manifestacao-fevereiro.jpg"
+      },
+      {
+        "data": "27 de fevereiro de 1917 (12 de março)",
+        "titulo": "A guarnição de Petrogrado se amotina",
+        "local": "Petrogrado",
+        "texto": "Depois de quatro dias de greves e confrontos crescentes, o momento decisivo chegou quando os próprios soldados encarregados de conter a revolta viraram-se contra o regime. Na manhã de 27 de fevereiro, o Regimento Volynsky, que na véspera havia atirado contra manifestantes na Praça Znamenskaya, se recusou a repetir a ordem, matou o oficial que a comandava e se juntou aos revoltosos. O motim se espalhou como fogo por outras unidades da guarnição. Sem tropas confiáveis para reprimir a revolta, o poder czarista em Petrogrado simplesmente evaporou. No mesmo dia, dois centros de autoridade rival nasceram: deputados da Duma formaram um Comitê Provisório, enquanto operários e soldados eleitos criaram o Soviete de Petrogrado.",
+        "imagem": "/eventos/momento-motim-guarnicao.jpg"
+      },
+      {
+        "data": "2 de março de 1917 (15 de março)",
+        "titulo": "Nicolau II abdica do trono",
+        "local": "Pskov",
+        "texto": "Alertado tarde demais sobre a gravidade da revolta, Nicolau II deixou o quartel-general em Mogilev tentando retornar a Petrogrado, mas seu trem imperial foi desviado por ferroviários revolucionários até a cidade de Pskov. Ali, cercado por generais que já haviam perdido a fé em sua capacidade de governar, o czar compreendeu que não tinha mais exército disposto a defendê-lo. Na noite de 2 de março, assinou o ato de abdicação — não apenas em seu próprio nome, mas também em nome do filho hemofílico, o czarevique Alexei. A coroa passou ao irmão do czar, o grão-duque Miguel, que no dia seguinte recusou aceitá-la, extinguindo de fato 304 anos de governo da dinastia Romanov.",
+        "imagem": "/eventos/momento-abdicacao-nicolau.jpg"
+      },
+      {
+        "data": "3 de abril de 1917 (16 de abril)",
+        "titulo": "Lênin retorna do exílio e lança as Teses de Abril",
+        "local": "Estação da Finlândia, Petrogrado",
+        "texto": "Exilado na Suíça havia anos, Vladimir Lênin recebeu a notícia da queda do czar com urgência. Como os Aliados bloqueavam sua passagem, o governo alemão autorizou que ele atravessasse o território germânico em um vagão de trem selado. Ao desembarcar na Estação da Finlândia, foi recebido por uma multidão de operários e soldados com bandeiras vermelhas. No dia seguinte, apresentou as Teses de Abril: nada de apoio ao Governo Provisório, nada de continuar a guerra — \"todo o poder aos sovietes\". A palavra de ordem \"Paz, Terra e Pão\" logo se espalhou pelas fábricas e quartéis.",
+        "imagem": "/eventos/momento-lenin-retorno.jpg"
+      },
+      {
+        "data": "3 a 7 de julho de 1917 (16 a 20 de julho)",
+        "titulo": "Os Dias de Julho",
+        "local": "Petrogrado",
+        "texto": "Impaciente com a guerra que continuava, a base radicalizada de soldados, marinheiros e operários armados tomou as ruas de Petrogrado. Multidões cercaram o Palácio de Tauride exigindo que o Soviete assumisse o poder, mas os próprios líderes socialistas moderados recusaram. O Governo Provisório, chefiado por Aleksandr Kerenski, reagiu com força: tropas leais dispararam contra os manifestantes, e o governo divulgou documentos acusando Lênin de agente alemão. Lênin fugiu disfarçado para a Finlândia, e por semanas pareceu que a estrela bolchevique havia se apagado.",
+        "imagem": "/eventos/momento-dias-julho.jpg"
+      },
+      {
+        "data": "final de agosto de 1917",
+        "titulo": "A tentativa de golpe do general Kornílov",
+        "local": "Petrogrado",
+        "texto": "Convencido de que só uma mão de ferro salvaria a Rússia, o general Lavr Kornílov ordenou que tropas marchassem sobre Petrogrado. Kerenski, temendo ser deposto também, rompeu com o general e apelou aos bolcheviques, libertando seus líderes presos e distribuindo armas aos operários. Ferroviários sabotaram os trilhos e o golpe desmoronou sozinho. Ao rearmar os bolcheviques, Kerenski lhes devolveu prestígio e um arsenal que nunca mais devolveriam — em semanas, conquistaram maioria nos sovietes de Petrogrado e Moscou.",
+        "imagem": "/eventos/momento-golpe-kornilov.jpg"
+      },
+      {
+        "data": "25 e 26 de outubro de 1917 (7 e 8 de novembro)",
+        "titulo": "A insurreição bolchevique e a tomada do Palácio de Inverno",
+        "local": "Petrogrado",
+        "texto": "Sob direção de Trótski, os bolcheviques ocuparam, quase sem resistência, pontos estratégicos de Petrogrado. Kerenski deixou a capital em busca de reforços que jamais chegariam. Ao anoitecer de 25 de outubro, o cruzador Aurora disparou um tiro de canhão como sinal para o assalto final; horas depois, Guardas Vermelhos invadiram o Palácio de Inverno e prenderam os ministros do Governo Provisório. O Segundo Congresso dos Sovietes referendou a tomada do poder — o poder soviético havia nascido.",
+        "imagem": "/eventos/momento-tomada-palacio-inverno.jpg"
+      },
+      {
+        "data": "3 de março de 1918",
+        "titulo": "O Tratado de Brest-Litovsk tira a Rússia da guerra",
+        "local": "Brest-Litovsk",
+        "texto": "Cumprindo a promessa de \"paz imediata\", os bolcheviques negociaram com as Potências Centrais. Trótski tentou ganhar tempo, mas a Alemanha retomou a ofensiva. Diante do risco de perder a capital, Lênin impôs a aceitação de qualquer condição. Em 3 de março de 1918, a Rússia assinou um tratado que cedia a Finlândia, os países bálticos, a Polônia e a Ucrânia — um quarto de seu território europeu — permitindo aos bolcheviques concentrar forças na guerra civil que já começava.",
+        "imagem": "/eventos/momento-brest-litovsk.jpg"
+      },
+      {
+        "data": "16 e 17 de julho de 1918",
+        "titulo": "A execução da família Romanov",
+        "local": "Casa Ipatiev, Ecaterimburgo",
+        "texto": "Com o Exército Branco avançando sobre Ecaterimburgo, o Soviete Regional dos Urais decidiu eliminar a família czarista antes que pudesse ser resgatada. Na madrugada de 17 de julho de 1918, um pelotão comandado por Yakov Yurovsky fuzilou Nicolau II, a czarina Alexandra e os cinco filhos num porão, junto com quatro criados. Os corpos foram ocultados numa mina abandonada. O crime só teve seus detalhes confirmados após a queda da URSS, com a exumação dos restos mortais nos anos 1990 e 2007.",
+        "imagem": "/eventos/momento-execucao-romanov.jpg"
+      }
+    ],
+    "figuras": [
+      {
+        "nome": "Nicolau II",
+        "papel": "Último czar da Rússia",
+        "imagem": "/eventos/figura-nicolau-ii.jpg",
+        "descricao": "Governou com poder quase absoluto até ser forçado a abdicar em março de 1917; foi executado com a família em julho de 1918."
+      },
+      {
+        "nome": "Vladimir Lênin",
+        "papel": "Líder do Partido Bolchevique",
+        "imagem": "/eventos/figura-lenin.jpg",
+        "descricao": "Retornou do exílio em abril de 1917 com as Teses de Abril e liderou a insurreição de outubro que instaurou o poder soviético."
+      },
+      {
+        "nome": "Liev Trótski",
+        "papel": "Presidente do Soviete de Petrogrado",
+        "imagem": "/eventos/figura-trotski.jpg",
+        "descricao": "Comandou o Comitê Militar Revolucionário que planejou a tomada do poder em outubro."
+      },
+      {
+        "nome": "Aleksandr Kerenski",
+        "papel": "Chefe do Governo Provisório",
+        "imagem": "/eventos/figura-kerenski.jpg",
+        "descricao": "Liderou o Governo Provisório entre julho e outubro de 1917, mas não conseguiu conter o avanço bolchevique."
+      }
+    ]
+  },
+  {
+    "slug": "primeira-guerra-mundial",
+    "titulo": "Primeira Guerra Mundial",
+    "ano": "1914",
+    "periodo": "28 de julho de 1914 – 11 de novembro de 1918",
+    "categoria": "Militar",
+    "hook": "Um tiro em Sarajevo, um sistema de alianças rígido demais para dobrar e frouxo demais para segurar: em cinco semanas a Europa inteira estava em guerra, e o século XX nunca mais seria o mesmo.",
+    "heroLegenda": "Soldados britânicos avançam por uma trincheira na Frente Ocidental durante a Batalha do Somme, 1916.",
+    "jornadaTitulo": "Quatro anos que redesenharam o mundo",
+    "jornadaDescricao": "Role a página e acompanhe, momento a momento, como um assassinato em uma cidade dos Bálcãs arrastou impérios inteiros para a lama das trincheiras — até o silêncio abrupto de um vagão de trem na floresta de Compiègne.",
+    "mapaTitulo": "Pela Europa em guerra, 1914-1918",
+    "mapaDescricao": "De Sarajevo, onde tudo começou, às trincheiras da Frente Ocidental e ao vagão de Compiègne, onde tudo terminou.",
+    "estatisticas": [
+      {
+        "label": "Duração do conflito",
+        "valor": "1.566 dias (4 anos e 3 meses)"
+      },
+      {
+        "label": "Soldados mobilizados",
+        "valor": "cerca de 70 milhões"
+      },
+      {
+        "label": "Mortos (militares e civis)",
+        "valor": "cerca de 17 milhões"
+      },
+      {
+        "label": "Feridos",
+        "valor": "cerca de 21 milhões"
+      }
+    ],
+    "contexto": "No verão de 1914, a Europa era uma rede de alianças que prometia proteção mútua e, na prática, funcionava como um estopim coletivo. De um lado, a Tríplice Aliança unia Alemanha, Áustria-Hungria e Itália; do outro, a Tríplice Entente reunia França, Rússia e Grã-Bretanha. Havia décadas essas potências disputavam colônias, mercados e prestígio, e a corrida armamentista naval entre a Alemanha e a Grã-Bretanha havia transformado o continente num arsenal pronto para disparar. O nacionalismo exacerbado fazia da guerra algo quase desejável para setores das elites e das massas. Nenhuma região concentrava tantas tensões quanto os Bálcãs, apelidados de \"polvorinho da Europa\": a Áustria-Hungria anexara a Bósnia-Herzegovina em 1908, e a Rússia se posicionava como protetora dos eslavos, numa rivalidade direta com Viena. As duas Guerras Balcânicas de 1912-1913 já haviam deixado ressentimentos abertos. Bastou, então, uma faísca: o assassinato do herdeiro do trono austro-húngaro em Sarajevo acionou um mecanismo de tratados e ultimatos que nenhuma capital europeia conseguiu — ou quis — desarmar a tempo.",
+    "locais": [
+      {
+        "nome": "Sarajevo",
+        "lat": 43.8563,
+        "lng": 18.4131,
+        "descricao": "Onde Gavrilo Princip assassinou o arquiduque Francisco Ferdinando em 28 de junho de 1914."
+      },
+      {
+        "nome": "Meaux (rio Marne)",
+        "lat": 48.9606,
+        "lng": 2.8783,
+        "descricao": "Palco da Primeira Batalha do Marne, que deteve o avanço alemão sobre Paris."
+      },
+      {
+        "nome": "Ypres",
+        "lat": 50.8503,
+        "lng": 2.885,
+        "descricao": "Cenário da espontânea Trégua de Natal de 1914."
+      },
+      {
+        "nome": "Verdun",
+        "lat": 49.1593,
+        "lng": 5.3844,
+        "descricao": "Símbolo da resistência francesa: dez meses de batalha e cerca de 700 mil baixas."
+      },
+      {
+        "nome": "Vale do Somme (Thiepval)",
+        "lat": 50.0522,
+        "lng": 2.6844,
+        "descricao": "Local da ofensiva britânica de 1916, marcada pelo dia mais sangrento da história militar britânica."
+      },
+      {
+        "nome": "Brest-Litovsk",
+        "lat": 52.0975,
+        "lng": 23.7341,
+        "descricao": "Onde a Rússia bolchevique assinou o tratado que a tirou da guerra em março de 1918."
+      },
+      {
+        "nome": "Compiègne (Clairière de Rethondes)",
+        "lat": 49.416,
+        "lng": 2.94,
+        "descricao": "Onde foi assinado o armistício que encerrou a guerra em 11 de novembro de 1918."
+      }
+    ],
+    "legado": "O Tratado de Versalhes impôs à Alemanha pesadas reparações e a cláusula de culpa exclusiva pela guerra — condições que alimentariam décadas de ressentimento e terreno fértil para a ascensão do nazismo, apenas vinte anos depois. Os impérios austro-húngaro, otomano e russo desapareceram do mapa, dando lugar a uma dezena de novos Estados.\n\nA guerra acelerou transformações sociais profundas: milhões de mulheres que assumiram postos de trabalho reforçaram os movimentos sufragistas. A experiência das trincheiras marcou profundamente a literatura, a arte e a psicologia do século XX.\n\nPara o Brasil, a participação abriu caminho para presença mais ativa na diplomacia internacional. Globalmente, a criação da Liga das Nações em 1919 representou a primeira tentativa moderna de segurança coletiva — um projeto que fracassaria, mas lançaria as bases da ONU, fundada após a tragédia ainda maior de 1939.",
+    "curiosidadesRelacionadas": [
+      "ultimas-horas-primeira-guerra-mundial"
+    ],
+    "heroImagem": "/eventos/hero-primeira-guerra-mundial.jpg",
+    "momentos": [
+      {
+        "data": "28 de junho de 1914",
+        "titulo": "O tiro que incendiou a Europa",
+        "local": "Sarajevo, Bósnia-Herzegovina",
+        "texto": "O arquiduque Francisco Ferdinando, herdeiro do trono austro-húngaro, e sua esposa Sofia chegaram a Sarajevo em visita oficial. Por decisão de última hora, o motorista errou o caminho e parou justamente onde Gavrilo Princip, nacionalista bósnio-sérvio de dezenove anos ligado ao grupo Mão Negra, esperava. Princip disparou duas vezes: ambos morreram em poucos minutos. Em Viena, o governo culpou a Sérvia e, com o apoio da Alemanha, preparou um ultimato quase impossível de aceitar.",
+        "imagem": "/eventos/momento-assassinato-sarajevo.jpg"
+      },
+      {
+        "data": "28 de julho – 4 de agosto de 1914",
+        "titulo": "A Crise de Julho e a corrente de declarações",
+        "local": "Viena, Berlim, São Petersburgo, Paris e Bruxelas",
+        "texto": "Em 28 de julho, a Áustria-Hungria declarou guerra à Sérvia. A Rússia ordenou mobilização geral em 30 de julho. A Alemanha declarou guerra à Rússia em 1º de agosto e à França em 3 de agosto, invadindo a Bélgica neutra para atacar rapidamente os franceses. A invasão belga violou um tratado garantido pela Grã-Bretanha, que declarou guerra à Alemanha em 4 de agosto. Em menos de uma semana, as maiores potências do continente estavam em guerra.",
+        "imagem": "/eventos/momento-crise-julho.jpg"
+      },
+      {
+        "data": "6 a 12 de setembro de 1914",
+        "titulo": "O milagre do Marne",
+        "local": "Rio Marne, França",
+        "texto": "O exército alemão chegou a menos de 50 quilômetros de Paris. O general Joffre, apoiado pelos britânicos, lançou um contra-ataque ao longo do rio Marne — ficaram famosos os \"táxis do Marne\", que transportaram tropas ao front. Os alemães recuaram e se entrincheiraram. A batalha enterrou o Plano Schlieffen e, a partir dali, o front ocidental deixou de ser guerra de movimento para virar uma linha estática de trincheiras.",
+        "imagem": "/eventos/momento-batalha-marne.jpg"
+      },
+      {
+        "data": "24 e 25 de dezembro de 1914",
+        "titulo": "A Trégua de Natal",
+        "local": "Frente da Flandres, próximo a Ypres",
+        "texto": "Na véspera de Natal, cânticos alemães ecoaram pelas trincheiras e foram respondidos pelo lado aliado. No dia seguinte, milhares de soldados saíram de suas posições, trocaram cumprimentos e cigarros, enterraram seus mortos e organizaram partidas improvisadas de futebol na terra de ninguém. O episódio nunca mais se repetiu em escala semelhante — os comandos proibiram fraternização nos Natais seguintes.",
+        "imagem": "/eventos/momento-tregua-natal.jpg"
+      },
+      {
+        "data": "Fevereiro a novembro de 1916",
+        "titulo": "Verdun e o Somme: as batalhas que sangraram uma geração",
+        "local": "Verdun e vale do Somme, França",
+        "texto": "Em Verdun, o objetivo alemão era \"sangrar a França até a morte\". A batalha deixou cerca de 700 mil baixas. Para aliviar a pressão, os britânicos lançaram a ofensiva do Somme em julho: só no primeiro dia, quase 60 mil baixas britânicas, a maior perda em um único dia de sua história militar. Ao final, mais de um milhão de baixas somadas por um avanço de poucos quilômetros.",
+        "imagem": "/eventos/momento-verdun-somme.jpg"
+      },
+      {
+        "data": "6 de abril de 1917",
+        "titulo": "Os Estados Unidos entram na guerra",
+        "local": "Washington, D.C.",
+        "texto": "A Alemanha retomou a guerra submarina irrestrita e a inteligência britânica interceptou o Telegrama Zimmermann, propondo ao México uma aliança contra os EUA. Diante da opinião pública indignada, Wilson pediu ao Congresso a declaração de guerra, aprovada em 6 de abril de 1917, trazendo recursos e um contingente fresco de tropas que chegaria em 1918.",
+        "imagem": "/eventos/momento-eua-entram-guerra.jpg"
+      },
+      {
+        "data": "26 de outubro de 1917",
+        "titulo": "O Brasil entra na guerra",
+        "local": "Rio de Janeiro",
+        "texto": "O Brasil foi o único país da América Latina a participar ativamente da guerra. Após navios brasileiros serem torpedeados por submarinos alemães, o presidente Venceslau Brás declarou guerra à Alemanha. A Divisão Naval brasileira patrulhou o Atlântico Sul, e o país enviou uma missão médica e aviadores para treinamento na Inglaterra.",
+        "imagem": "/eventos/momento-brasil-entra-guerra.jpg"
+      },
+      {
+        "data": "3 de março de 1918",
+        "titulo": "A Rússia sai da guerra",
+        "local": "Brest-Litovsk",
+        "texto": "Os bolcheviques assinaram um tratado de paz separado com a Alemanha, cedendo território vasto. A saída russa liberou dezenas de divisões alemãs do front oriental, transferidas para o oeste na Ofensiva da Primavera — a última grande tentativa alemã de vitória decisiva antes que o peso das tropas americanas se tornasse esmagador.",
+        "imagem": "/eventos/momento-russia-sai-guerra.jpg"
+      },
+      {
+        "data": "8 de agosto – 11 de novembro de 1918",
+        "titulo": "A Ofensiva dos Cem Dias e o Armistício",
+        "local": "Compiègne, França",
+        "texto": "Forças aliadas romperam as linhas alemãs perto de Amiens em 8 de agosto, \"o dia negro do exército alemão\". A Bulgária, o Império Otomano e a Áustria-Hungria assinaram armistícios separados. Motins navais forçaram a abdicação do Kaiser em 9 de novembro. Dois dias depois, delegados alemães assinaram o armistício num vagão de trem em Compiègne, encerrando a guerra às 11h de 11 de novembro de 1918.",
+        "imagem": "/eventos/momento-armisticio-compiegne.jpg"
+      }
+    ],
+    "figuras": [
+      {
+        "nome": "Gavrilo Princip",
+        "papel": "Nacionalista bósnio-sérvio",
+        "imagem": "/eventos/figura-gavrilo-princip.jpg",
+        "descricao": "Assassinou o arquiduque Francisco Ferdinando, ato que serviu de estopim imediato para a guerra."
+      },
+      {
+        "nome": "Guilherme II",
+        "papel": "Kaiser (imperador) da Alemanha",
+        "imagem": "/eventos/figura-guilherme-ii.jpg",
+        "descricao": "Concedeu à Áustria-Hungria o apoio incondicional e liderou o esforço de guerra alemão até abdicar em 1918."
+      },
+      {
+        "nome": "Woodrow Wilson",
+        "papel": "Presidente dos Estados Unidos",
+        "imagem": "/eventos/figura-woodrow-wilson.jpg",
+        "descricao": "Manteve os EUA neutros até 1917, quando pediu ao Congresso a declaração de guerra à Alemanha."
+      },
+      {
+        "nome": "Georges Clemenceau",
+        "papel": "Primeiro-ministro da França",
+        "imagem": "/eventos/figura-clemenceau.jpg",
+        "descricao": "Assumiu o governo francês em 1917, conduziu o esforço de guerra final e presidiu depois a Conferência de Paz de Paris."
+      }
+    ]
+  },
+  {
+    "slug": "independencia-brasil",
+    "titulo": "Independência do Brasil",
+    "ano": "1822",
+    "periodo": "1821 – 1825",
+    "categoria": "Política",
+    "hook": "Às margens de um riacho perto de São Paulo, um príncipe de 24 anos rasgou o vínculo de três séculos entre o Brasil e Portugal — e passou os três anos seguintes tentando provar que aquele grito valia mais do que papel.",
+    "heroLegenda": "\"Independência ou Morte!\", de Pedro Américo (1888): a cena mais famosa da história do Brasil foi pintada 66 anos depois do fato, como reconstituição heroica.",
+    "jornadaTitulo": "O caminho até o Ipiranga",
+    "jornadaDescricao": "De uma corte em fuga de Napoleão a um império recém-nascido: role a página para acompanhar, ano a ano, como um reino colonial virou nação.",
+    "mapaTitulo": "Pelo Brasil e Portugal em 1822",
+    "mapaDescricao": "Do Rio de Janeiro ao Porto, passando por Santos e pelo riacho do Ipiranga: os lugares reais onde a independência foi decidida, anunciada e reconhecida.",
+    "estatisticas": [
+      {
+        "label": "Proclamação da Independência",
+        "valor": "7 de setembro de 1822"
+      },
+      {
+        "label": "Tempo de permanência da Corte no Brasil",
+        "valor": "13 anos (1808–1821)"
+      },
+      {
+        "label": "Distância percorrida por d. Pedro (Rio–São Paulo)",
+        "valor": "cerca de 630 km"
+      },
+      {
+        "label": "Tempo até o reconhecimento de Portugal",
+        "valor": "quase 3 anos (1822–1825)"
+      }
+    ],
+    "contexto": "Em novembro de 1807, com as tropas de Napoleão avançando sobre Lisboa, o príncipe regente d. João e toda a Corte portuguesa embarcaram para o Brasil sob escolta britânica — cerca de 15 mil pessoas. A esquadra chegou ao Rio de Janeiro em 8 de março de 1808. A cidade virou sede de um império: ganhou Banco do Brasil, Biblioteca Real, Jardim Botânico. Em 16 de dezembro de 1815, o Brasil deixou de ser colônia e foi elevado a Reino Unido a Portugal e Algarves. Esse arranjo incomodava as elites de Lisboa. A Revolução Liberal do Porto, em agosto de 1820, exigiu o retorno do rei e a recolonização do Brasil. D. João VI partiu para Lisboa em abril de 1821, deixando o filho d. Pedro como regente. Ao longo de 1821 e 1822, as Cortes foram endurecendo as exigências. Foi nesse cenário de humilhação política crescente que a ruptura de 1822 se tornou praticamente inevitável.",
+    "locais": [
+      {
+        "nome": "Rio de Janeiro (Paço Imperial e Campo de Santana)",
+        "lat": -22.9033,
+        "lng": -43.173,
+        "descricao": "Sede da Corte a partir de 1808 e palco do Dia do Fico, da aclamação e da coroação de d. Pedro I."
+      },
+      {
+        "nome": "Salvador, Bahia",
+        "lat": -12.9718,
+        "lng": -38.5011,
+        "descricao": "Primeiro porto onde a família real desembarcou em 1808."
+      },
+      {
+        "nome": "Riacho do Ipiranga, São Paulo",
+        "lat": -23.5803,
+        "lng": -46.61,
+        "descricao": "Local onde d. Pedro proclamou a independência em 7 de setembro de 1822."
+      },
+      {
+        "nome": "Santos, São Paulo",
+        "lat": -23.9608,
+        "lng": -46.3339,
+        "descricao": "Porto onde d. Pedro inspecionou fortificações dias antes do Grito do Ipiranga."
+      },
+      {
+        "nome": "Porto, Portugal",
+        "lat": 41.1579,
+        "lng": -8.6291,
+        "descricao": "Onde eclodiu a Revolução Liberal de 1820 que exigiu a recolonização do Brasil."
+      },
+      {
+        "nome": "Lisboa, Portugal",
+        "lat": 38.7223,
+        "lng": -9.1393,
+        "descricao": "Sede das Cortes Constituintes que tentaram reverter a autonomia brasileira."
+      }
+    ],
+    "legado": "A independência não rompeu com a estrutura social e econômica do Brasil colonial: a escravidão foi mantida, a monarquia foi preservada, e boa parte da elite política continuou no poder. Diferentemente de outros processos de independência nas Américas, o Brasil manteve a unidade territorial e trocou de regime sem uma ruptura social profunda.\n\nA consolidação exigiu tempo: focos de resistência portuguesa só foram debelados ao longo de 1823-1824, e o reconhecimento internacional dependeu da mediação britânica, que financiou a indenização de 1825 — um endividamento que marcaria as finanças do Império por décadas.\n\nDo ponto de vista simbólico, o 7 de Setembro se tornou o marco fundador da nacionalidade brasileira, celebrado como feriado nacional desde o Império e reforçado por obras como a pintura de Pedro Américo e o Hino da Independência, composto pelo próprio d. Pedro I.",
+    "curiosidadesRelacionadas": [
+      "coracao-dom-pedro-porto"
+    ],
+    "heroImagem": "/eventos/hero-independencia-brasil.jpg",
+    "momentos": [
+      {
+        "data": "8 de março de 1808",
+        "titulo": "A Corte portuguesa desembarca no Rio de Janeiro",
+        "local": "Rio de Janeiro",
+        "texto": "A esquadra que trazia o príncipe regente d. João e cerca de 15 mil integrantes da Corte lisboeta ancorou na baía de Guanabara. Era a primeira vez que um monarca europeu transferia sua sede de governo para uma colônia americana. Semanas antes, em Salvador, d. João assinara a Abertura dos Portos às Nações Amigas, rompendo o monopólio comercial que Portugal mantinha havia três séculos. No Rio, criou rapidamente instituições de Estado que deram à cidade estrutura de capital.",
+        "imagem": "/eventos/momento-chegada-corte-1808.jpg"
+      },
+      {
+        "data": "16 de dezembro de 1815",
+        "titulo": "O Brasil deixa de ser colônia",
+        "local": "Rio de Janeiro",
+        "texto": "D. João assinou a Carta de Lei que elevava o Brasil à categoria de reino, unido a Portugal e ao Algarve. A mudança resolvia um impasse diplomático no Congresso de Viena, que só reconhecia como legítimos governos sediados em capitais históricas, e consolidava a posição da elite luso-brasileira. Foi precisamente esse novo estatuto que as Cortes portuguesas tentariam desfazer cinco anos depois.",
+        "imagem": "/eventos/momento-elevacao-reino-unido.jpg"
+      },
+      {
+        "data": "24 de agosto de 1820",
+        "titulo": "A Revolução do Porto exige a volta do rei",
+        "local": "Porto, Portugal",
+        "texto": "Oficiais e civis liberais tomaram as ruas do Porto, exigindo o fim do absolutismo, uma Constituição e o retorno de d. João VI. As Cortes Constituintes foram além: pretendiam desfazer a elevação do Brasil a reino e devolvê-lo à condição de colônia subordinada. Para as elites que haviam se consolidado no Brasil, a proposta soava inaceitável — e forneceu o combustível político que uniria brasileiros em torno da autonomia.",
+        "imagem": "/eventos/momento-revolucao-porto.jpg"
+      },
+      {
+        "data": "26 de abril de 1821",
+        "titulo": "D. João VI parte para Lisboa e deixa d. Pedro como regente",
+        "local": "Rio de Janeiro",
+        "texto": "Pressionado pelas Cortes, d. João VI embarcou rumo a Lisboa, deixando o filho d. Pedro como príncipe regente do Reino do Brasil. Relatos atribuem a d. João um conselho reservado: diante da possibilidade de separação, seria melhor que a coroa ficasse com o próprio filho do que com um aventureiro. A regência de d. Pedro se tornaria o centro de gravidade de toda a crise seguinte.",
+        "imagem": "/eventos/momento-partida-dom-joao.jpg"
+      },
+      {
+        "data": "9 de janeiro de 1822",
+        "titulo": "O Dia do Fico",
+        "local": "Rio de Janeiro",
+        "texto": "As Cortes de Lisboa exigiram que d. Pedro voltasse à Europa, o que esvaziaria qualquer poder central no Brasil. Lideranças do Rio organizaram uma representação com mais de oito mil assinaturas pedindo que ele permanecesse. D. Pedro respondeu: \"Como é para o bem de todos e felicidade geral da nação, estou pronto. Diga ao povo que fico.\" Dias depois, nomeou José Bonifácio ministro do Reino.",
+        "imagem": "/eventos/momento-dia-do-fico.jpg"
+      },
+      {
+        "data": "2 de setembro de 1822",
+        "titulo": "Leopoldina preside o Conselho de Estado que decide pela separação",
+        "local": "Rio de Janeiro",
+        "texto": "Com d. Pedro em São Paulo, a princesa Leopoldina, regente interina, recebeu decretos das Cortes que anulavam seus atos e exigiam submissão incondicional. Reuniu o Conselho de Estado, ouviu José Bonifácio e assinou o decreto reconhecendo a separação como inevitável, escrevendo ao marido para que proclamasse a independência sem demora.",
+        "imagem": "/eventos/momento-conselho-leopoldina.jpg"
+      },
+      {
+        "data": "7 de setembro de 1822",
+        "titulo": "O Grito do Ipiranga",
+        "local": "São Paulo, riacho do Ipiranga",
+        "texto": "D. Pedro, voltando de Santos, foi alcançado por um estafeta com a carta de Leopoldina. Segundo relatos registrados décadas depois, declarou: \"Independência ou Morte! Estamos separados de Portugal.\" A cena consagrada pelo quadro de Pedro Américo (1888) é uma reconstituição posterior — mas o gesto político real, naquela tarde, selou a ruptura preparada havia quase dois anos.",
+        "imagem": "/eventos/momento-grito-ipiranga.jpg"
+      },
+      {
+        "data": "12 de outubro a 1º de dezembro de 1822",
+        "titulo": "Aclamação e coroação de d. Pedro I",
+        "local": "Rio de Janeiro",
+        "texto": "D. Pedro foi aclamado Imperador Constitucional em 12 de outubro de 1822, no Campo de Santana. Em 1º de dezembro, foi coroado na Capela Imperial. Entre uma data e outra, José Bonifácio organizou a resistência contra guarnições portuguesas na Bahia e estruturou uma Marinha própria sob comando do escocês Thomas Cochrane.",
+        "imagem": "/eventos/momento-aclamacao-coroacao.jpg"
+      },
+      {
+        "data": "29 de agosto de 1825",
+        "titulo": "Portugal reconhece a independência",
+        "local": "Rio de Janeiro",
+        "texto": "Por quase três anos, tropas portuguesas resistiram na Bahia e no Maranhão. Por mediação britânica, foi assinado o Tratado do Rio de Janeiro entre d. João VI e d. Pedro I: Portugal reconhecia a independência em troca de indenização de dois milhões de libras, que o Brasil tomou emprestado do próprio governo britânico.",
+        "imagem": "/eventos/momento-reconhecimento-portugal.jpg"
+      }
+    ],
+    "figuras": [
+      {
+        "nome": "Dom Pedro I",
+        "papel": "Príncipe regente e primeiro imperador do Brasil",
+        "imagem": "/eventos/figura-dom-pedro-i.jpg",
+        "descricao": "Proclamou a independência às margens do Ipiranga e foi aclamado e coroado imperador em 1822."
+      },
+      {
+        "nome": "José Bonifácio de Andrada e Silva",
+        "papel": "Ministro do Reino e dos Negócios Estrangeiros",
+        "imagem": "/eventos/figura-jose-bonifacio.jpg",
+        "descricao": "Principal arquiteto político da independência; ficou conhecido como o Patriarca da Independência."
+      },
+      {
+        "nome": "Maria Leopoldina de Áustria",
+        "papel": "Princesa regente interina",
+        "imagem": "/eventos/figura-leopoldina.jpg",
+        "descricao": "Presidiu o Conselho de Estado que assinou o decreto reconhecendo a separação do Brasil."
+      },
+      {
+        "nome": "Dom João VI",
+        "papel": "Rei de Portugal, Brasil e Algarves",
+        "imagem": "/eventos/figura-dom-joao-vi.jpg",
+        "descricao": "Transferiu a Corte ao Rio em 1808, elevou o Brasil a reino em 1815 e assinou o reconhecimento da independência em 1825."
+      }
+    ]
   }
 ]

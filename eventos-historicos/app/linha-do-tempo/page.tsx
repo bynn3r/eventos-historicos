@@ -42,6 +42,9 @@ const EVENT_VISUALS: Record<string, { icon: any; color: string }> = {
   "fim-segunda-guerra-mundial": { icon: Sword, color: "bg-red-500" },
   "chegada-homem-lua": { icon: Zap, color: "bg-purple-500" },
   "queda-muro-berlim": { icon: Users, color: "bg-blue-500" },
+  "independencia-brasil": { icon: Globe, color: "bg-green-500" },
+  "primeira-guerra-mundial": { icon: Sword, color: "bg-red-500" },
+  "revolucao-russa": { icon: Users, color: "bg-blue-500" },
 }
 const DEFAULT_VISUAL = { icon: BookOpen, color: "bg-slate-500" }
 

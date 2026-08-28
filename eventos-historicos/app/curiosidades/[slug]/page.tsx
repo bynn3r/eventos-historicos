@@ -7,6 +7,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { notFound } from "next/navigation"
 import curiosidadesData from "@/data/curiosidades.json"
+import { findRelatedContent } from "@/lib/related-content"
 
 interface CuriosidadePageProps {
   params: {
@@ -42,6 +43,12 @@ export default function CuriosidadePage({ params }: CuriosidadePageProps) {
   if (!curiosidade) {
     notFound()
   }
+
+  const relatedContent = findRelatedContent(`${curiosidade.titulo} ${curiosidade.descricao}`, {
+    category: curiosidade.categoria,
+    excludeSlug: curiosidade.slug,
+    limit: 4,
+  })
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -103,28 +110,41 @@ export default function CuriosidadePage({ params }: CuriosidadePageProps) {
                 ))}
             </div>
 
-            {/* Related Curiosities */}
+            {/* Related content */}
             <div className="mt-12 pt-8 border-t">
-              <h3 className="text-2xl font-bold mb-6">Outras Curiosidades</h3>
+              <h3 className="text-2xl font-bold mb-6">Continue explorando</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {curiosidadesData
-                  .filter((c) => c.id !== curiosidade.id)
-                  .slice(0, 2)
-                  .map((related) => (
-                    <Link
-                      key={related.id}
-                      href={`/curiosidades/${related.slug}`}
-                      className="group block p-6 border rounded-lg hover:shadow-lg transition-shadow"
-                    >
-                      <Badge variant="secondary" className="mb-3">
-                        {related.categoria}
+                {(relatedContent.length > 0
+                  ? relatedContent
+                  : curiosidadesData
+                      .filter((c) => c.id !== curiosidade.id)
+                      .slice(0, 2)
+                      .map((c) => ({
+                        type: "curiosidade" as const,
+                        slug: c.slug,
+                        title: c.titulo,
+                        summary: c.descricao,
+                        href: `/curiosidades/${c.slug}`,
+                        category: c.categoria,
+                      }))
+                ).map((related) => (
+                  <Link
+                    key={`${related.type}-${related.slug}`}
+                    href={related.href}
+                    className="group block p-6 border rounded-lg hover:shadow-lg transition-shadow"
+                  >
+                    <div className="mb-3 flex items-center gap-2">
+                      <Badge variant="outline" className="text-xs">
+                        {related.type === "evento" ? "Linha do Tempo" : "Curiosidade"}
                       </Badge>
-                      <h4 className="font-semibold mb-2 group-hover:text-primary transition-colors">
-                        {related.titulo}
-                      </h4>
-                      <p className="text-sm text-muted-foreground">{related.descricao.substring(0, 120)}...</p>
-                    </Link>
-                  ))}
+                      <Badge variant="secondary">{related.category}</Badge>
+                    </div>
+                    <h4 className="font-semibold mb-2 group-hover:text-primary transition-colors">
+                      {related.title}
+                    </h4>
+                    <p className="text-sm text-muted-foreground">{related.summary.substring(0, 120)}...</p>
+                  </Link>
+                ))}
               </div>
             </div>
           </div>

@@ -71,11 +71,23 @@ function buildPool(): Matchable[] {
  * keyword hits — a query with no historical parallel returns nothing, which
  * is the correct behavior (no forced/irrelevant suggestion).
  */
-export function findRelatedContent(query: string, category?: string, limit = 3): RelatedContentItem[] {
+interface FindRelatedContentOptions {
+  category?: string
+  limit?: number
+  /** Exclude the item currently being viewed from its own "related" list. */
+  excludeSlug?: string
+  /** Restrict results to one content type (e.g. only curiosidades from a timeline article). */
+  onlyType?: RelatedContentItem["type"]
+}
+
+export function findRelatedContent(query: string, options: FindRelatedContentOptions = {}): RelatedContentItem[] {
+  const { category, limit = 3, excludeSlug, onlyType } = options
   const normalizedQuery = normalize(query)
   const pool = buildPool()
 
   const scored = pool
+    .filter(({ item }) => item.slug !== excludeSlug)
+    .filter(({ item }) => !onlyType || item.type === onlyType)
     .map(({ keywords, category: itemCategory, item }) => {
       let score = 0
       for (const keyword of keywords) {
