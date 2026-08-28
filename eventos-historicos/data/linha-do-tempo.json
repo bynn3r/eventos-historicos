@@ -28,6 +28,45 @@
     ]
   },
   {
+    "id": "codigo-hamurabi",
+    "slug": "codigo-hamurabi",
+    "title": "Código de Hamurábi",
+    "startYear": -1754,
+    "endYear": -1754,
+    "dateDisplay": "c. 1754 a.C.",
+    "period": "Idade Antiga",
+    "region": "Mesopotâmia",
+    "country": "Iraque",
+    "category": "Direito",
+    "summary": "Uma estela de basalto negro de 2,25 metros gravou, pela primeira vez de forma tão completa, a ideia de que até um rei deveria governar por leis escritas — e não apenas pela própria vontade.",
+    "content": "Hamurábi, sexto rei da primeira dinastia de Babilônia, governou por volta de 1792 a 1750 a.C. e, ao longo do reinado, transformou uma cidade-estado de porte médio no centro de um império que unificava a Mesopotâmia. Próximo ao fim de seu governo, por volta de 1754 a.C., ele mandou compilar e gravar um extenso conjunto de normas jurídicas que hoje conhecemos como Código de Hamurábi — não o primeiro código legal da história (códigos sumérios como o de Ur-Nammu e o de Lipit-Ishtar são anteriores), mas o mais completo e mais bem preservado que chegou até os dias atuais.\n\nO texto foi inscrito em uma estela de diorito negro de mais de dois metros de altura, hoje exposta no Museu do Louvre, em Paris. No topo, um relevo mostra Hamurábi diante de Shamash, deus do sol e da justiça, recebendo o símbolo da autoridade real — uma imagem que buscava legitimar as leis como algo de origem quase divina, ainda que redigidas por escribas humanos. Abaixo, em escrita cuneiforme na língua acádia, seguem-se 282 disposições legais que tratam de comércio, propriedade, dívidas, casamento, herança, responsabilidade profissional e crimes.\n\nO princípio mais lembrado do código é o da \"lei de talião\" — \"olho por olho, dente por dente\" —, mas suas penas variavam conforme a posição social do infrator e da vítima, distinguindo homens livres, membros de classes intermediárias e escravos. Havia também normas notavelmente pragmáticas para a época: tabelamento de salários e preços, regras de responsabilidade civil para médicos, construtores e comerciantes, e proteções mínimas para viúvas e órfãos.\n\nA estela foi redescoberta em dezembro de 1901 nas ruínas de Susa, no atual Irã, por uma missão arqueológica francesa. Mais de 3.700 anos depois, o Código de Hamurábi continua sendo referência simbólica sempre que se discute a origem da ideia de que a lei deve ser pública, conhecida e aplicável a todos.",
+    "importance": 4,
+    "featured": false,
+    "image": "/eventos/hero-codigo-hamurabi.jpg",
+    "relatedEvents": [],
+    "characters": [
+      {
+        "name": "Hamurábi",
+        "role": "Rei da Babilônia",
+        "image": "",
+        "description": "Sexto rei da primeira dinastia babilônica, unificou a Mesopotâmia e ordenou a compilação do código de leis que leva seu nome."
+      }
+    ],
+    "sources": [],
+    "keywords": [
+      "codigo de hamurabi",
+      "hamurabi",
+      "lei de taliao",
+      "babilonia",
+      "mesopotamia antiga",
+      "primeiras leis escritas",
+      "museu do louvre",
+      "escrita cuneiforme",
+      "direito antigo",
+      "iraque historia"
+    ]
+  },
+  {
     "id": "primeiros-jogos-olimpicos",
     "slug": "primeiros-jogos-olimpicos",
     "title": "Primeiros Jogos Olímpicos",
@@ -89,6 +128,63 @@
     ]
   },
   {
+    "id": "conquistas-alexandre-grande",
+    "slug": "conquistas-alexandre-grande",
+    "title": "Conquistas de Alexandre, o Grande",
+    "startYear": -334,
+    "endYear": -323,
+    "dateDisplay": "334–323 a.C.",
+    "period": "Idade Antiga",
+    "region": "Mediterrâneo Oriental, Oriente Médio e Ásia Central",
+    "country": "Grécia",
+    "category": "Militar",
+    "summary": "Em pouco mais de uma década, um jovem rei macedônio derrubou o maior império já visto e espalhou a cultura grega da Península Balcânica até as margens do rio Indo.",
+    "content": "Alexandre III da Macedônia tinha apenas vinte anos quando assumiu o trono, em 336 a.C. Educado em parte por Aristóteles, herdou o projeto paterno de invadir o Império Persa Aquemênida. Em 334 a.C., à frente de cerca de 40 mil homens, atravessou o estreito dos Dardanelos rumo à Ásia Menor, dando início a uma campanha que duraria onze anos.\n\nAs vitórias vieram em sequência acelerada: no rio Granico (334 a.C.), em Issos (333 a.C.), onde pôs em fuga o rei Dario III, e no cerco de Tiro (332 a.C.). Avançou até o Egito, onde fundou Alexandria. O golpe decisivo veio em Gaugamela (331 a.C.), desmantelando de vez o poder persa e abrindo caminho para a conquista de Babilônia, Susa e Persépolis.\n\nCom o Império Persa desfeito, Alexandre seguiu para o leste, submetendo a Báctria e a Sogdiana. Em 326 a.C., às margens do rio Indo, travou a Batalha do Hidaspes contra o rei indiano Poro. Exausto, o exército se recusou a avançar mais fundo na Índia, obrigando a retirada.\n\nAlexandre morreu em Babilônia em 323 a.C., aos 32 anos. Seu império fragmentou-se nas Guerras dos Diádocos, dando origem aos reinos helenísticos que por séculos misturaram cultura grega com tradições locais do Egito, da Mesopotâmia e da Pérsia.",
+    "importance": 5,
+    "featured": false,
+    "image": "/eventos/hero-conquistas-alexandre-grande.jpg",
+    "relatedEvents": [],
+    "characters": [
+      {
+        "name": "Alexandre, o Grande",
+        "role": "Rei da Macedônia",
+        "image": "",
+        "description": "Rei macedônio que conquistou o Império Persa e construiu um dos maiores impérios do mundo antigo antes dos 33 anos."
+      },
+      {
+        "name": "Filipe II da Macedônia",
+        "role": "Rei da Macedônia, pai de Alexandre",
+        "image": "",
+        "description": "Construiu o exército profissional macedônio e planejou a invasão da Pérsia antes de ser assassinado em 336 a.C."
+      },
+      {
+        "name": "Dario III",
+        "role": "Rei do Império Persa",
+        "image": "",
+        "description": "Último grande rei aquemênida, derrotado por Alexandre em Issos e Gaugamela."
+      },
+      {
+        "name": "Poro",
+        "role": "Rei indiano do reino de Paurava",
+        "image": "",
+        "description": "Governante indiano que enfrentou Alexandre na Batalha do Hidaspes."
+      }
+    ],
+    "sources": [],
+    "keywords": [
+      "alexandre o grande",
+      "macedonia antiga",
+      "imperio macedonico",
+      "dario iii",
+      "imperio persa",
+      "batalha de gaugamela",
+      "helenismo",
+      "alexandria egito",
+      "grecia antiga",
+      "conquistas militares antigas"
+    ]
+  },
+  {
     "id": "unificacao-china",
     "slug": "unificacao-china",
     "title": "Unificação da China",
@@ -133,7 +229,8 @@
     "image": "/eventos/hero-queda-roma-ocidente.jpg",
     "relatedEvents": [
       "fundacao-de-roma",
-      "queda-constantinopla"
+      "queda-constantinopla",
+      "coroacao-carlos-magno"
     ],
     "characters": [],
     "sources": [],
@@ -145,6 +242,388 @@
       "queda de roma",
       "idade média",
       "bárbaros"
+    ]
+  },
+  {
+    "id": "hegira-inicio-islam",
+    "slug": "hegira-inicio-islam",
+    "title": "Hégira e o Início do Islã",
+    "startYear": 622,
+    "endYear": 622,
+    "dateDisplay": "622 d.C. (setembro)",
+    "period": "Idade Média",
+    "region": "Península Arábica",
+    "country": "Arábia Saudita",
+    "category": "Religião",
+    "summary": "Fugindo de perseguição em Meca, um pequeno grupo de fiéis liderado por Maomé chegou a Medina e fundou ali a primeira comunidade política do Islã — um marco tão decisivo que se tornaria o ano 1 do calendário islâmico.",
+    "content": "Desde cerca de 610 d.C., Maomé pregava em Meca uma mensagem monoteísta que desafiava os interesses da elite mercantil da cidade. Conforme o número de convertidos crescia, os coraixitas intensificaram a perseguição, incluindo um plano para assassinar o profeta.\n\nDiante da conspiração, Maomé organizou a fuga com Abu Bakr, enquanto Ali ibn Abi Talib permaneceu na casa do profeta para enganar os conspiradores. Esconderam-se por três dias na caverna de Thawr antes de seguirem até Iatribe — cidade que passaria a ser chamada Medina. A chegada ocorreu por volta de 24 de setembro de 622 d.C.\n\nEm Medina, Maomé tornou-se também líder político, redigindo a Constituição de Medina, que organizava a convivência entre os diferentes grupos da cidade. Foi ali que se ergueu uma das primeiras mesquitas do Islã.\n\nEm 639 d.C., o califa Umar ibn al-Khattab determinou que o calendário islâmico tivesse início nesse ano — consagrando a migração, e não um evento biográfico isolado, como o marco fundador da civilização islâmica.",
+    "importance": 5,
+    "featured": false,
+    "image": "/eventos/hero-hegira-inicio-islam.jpg",
+    "relatedEvents": [],
+    "characters": [
+      {
+        "name": "Maomé",
+        "role": "Profeta do Islã",
+        "image": "",
+        "description": "Líder religioso cuja migração de Meca a Medina fundou a primeira comunidade política islâmica."
+      },
+      {
+        "name": "Abu Bakr",
+        "role": "Companheiro de Maomé e primeiro califa",
+        "image": "",
+        "description": "Acompanhou Maomé na fuga de Meca antes de se tornar o primeiro califa do Islã."
+      },
+      {
+        "name": "Ali ibn Abi Talib",
+        "role": "Primo e genro de Maomé",
+        "image": "",
+        "description": "Permaneceu em Meca para despistar os conspiradores na noite da fuga."
+      },
+      {
+        "name": "Umar ibn al-Khattab",
+        "role": "Segundo califa do Islã",
+        "image": "",
+        "description": "Instituiu em 639 d.C. o calendário islâmico tendo a Hégira como seu ano inicial."
+      }
+    ],
+    "sources": [],
+    "keywords": [
+      "hegira",
+      "hijra",
+      "islam",
+      "profeta maome",
+      "meca",
+      "medina",
+      "calendario islamico",
+      "muculmanos",
+      "arabia saudita",
+      "oriente medio",
+      "historia do islamismo"
+    ]
+  },
+  {
+    "id": "coroacao-carlos-magno",
+    "slug": "coroacao-carlos-magno",
+    "title": "Coroação de Carlos Magno como Imperador",
+    "startYear": 800,
+    "endYear": 800,
+    "dateDisplay": "25 de dezembro de 800",
+    "period": "Idade Média",
+    "region": "Europa Ocidental",
+    "country": "Itália",
+    "category": "Política",
+    "summary": "Em uma manhã de Natal em Roma, um rei franco se ajoelhou para orar e se levantou imperador — o gesto simbólico que devolveu ao Ocidente a ideia de um império romano.",
+    "content": "Desde meados do século VIII, os francos da dinastia carolíngia haviam se tornado os principais protetores militares e políticos do papado. Carlos Magno, rei dos francos desde 768, expandira seus domínios por toda a Europa Ocidental. Em 799, o papa Leão III foi vítima de uma emboscada em Roma e buscou a proteção de Carlos Magno.\n\nEm 25 de dezembro de 800, durante a missa solene do Natal na Basílica de São Pedro, quando Carlos Magno se ajoelhou para orar, o papa colocou sobre sua cabeça uma coroa, aclamando-o \"Imperador dos Romanos\".\n\nO gesto era religioso e político: Leão III reivindicava para o papado o poder de fazer imperadores, enquanto Carlos herdava o prestígio de restaurar o título imperial romano no Ocidente, extinto desde 476. A medida provocou fúria em Constantinopla, aprofundando o distanciamento entre as duas metades do antigo mundo romano.\n\nA coroação estabeleceu o modelo de aliança entre trono e altar que marcaria toda a Idade Média europeia. O legado de Carlos Magno sobrevive até hoje: desde 1950, a cidade de Aachen concede o Prêmio Carlos Magno a personalidades que contribuem para a integração europeia.",
+    "importance": 5,
+    "featured": false,
+    "image": "/eventos/hero-coroacao-carlos-magno.jpg",
+    "relatedEvents": [],
+    "characters": [
+      {
+        "name": "Carlos Magno",
+        "role": "Rei dos francos, coroado Imperador do Ocidente",
+        "image": "",
+        "description": "Rei franco que unificou grande parte da Europa Ocidental e recebeu do papa o título de imperador."
+      },
+      {
+        "name": "Papa Leão III",
+        "role": "Papa que realizou a coroação",
+        "image": "",
+        "description": "Pontífice que, após sobreviver a uma tentativa de deposição, coroou Carlos Magno imperador."
+      },
+      {
+        "name": "Irene de Atenas",
+        "role": "Imperatriz bizantina",
+        "image": "",
+        "description": "Governante bizantina cujo reinado solitário serviu de pretexto ocidental para a coroação de um novo imperador romano."
+      },
+      {
+        "name": "Alcuíno de York",
+        "role": "Erudito e principal conselheiro intelectual de Carlos Magno",
+        "image": "",
+        "description": "Monge inglês que liderou a corte intelectual carolíngia."
+      }
+    ],
+    "sources": [],
+    "keywords": [
+      "carlos magno",
+      "sacro imperio romano",
+      "papa leao iii",
+      "coroacao imperial",
+      "dinastia carolingia",
+      "idade media",
+      "premio carlos magno",
+      "uniao europeia",
+      "vaticano",
+      "papado medieval"
+    ]
+  },
+  {
+    "id": "grande-cisma-oriente",
+    "slug": "grande-cisma-oriente",
+    "title": "Grande Cisma do Oriente",
+    "startYear": 1054,
+    "endYear": 1054,
+    "dateDisplay": "1054",
+    "period": "Idade Média",
+    "region": "Europa Oriental",
+    "country": "Turquia",
+    "category": "Religião",
+    "summary": "Uma bula de excomunhão largada sobre o altar de Santa Sofia selou, em poucos dias de julho de 1054, uma ruptura que até hoje divide o cristianismo entre Roma e Constantinopla.",
+    "content": "A separação entre as igrejas do Oriente e do Ocidente foi resultado de séculos de afastamento. Divergências litúrgicas, disputas teológicas sobre o \"Filioque\" no Credo, o celibato do clero latino e o choque entre a autoridade papal e a tradição de patriarcados autônomos alimentaram décadas de tensão.\n\nEm 1054, o papa Leão IX enviou uma legação a Constantinopla, chefiada pelo cardeal Humberto de Silva Cândida, para negociar com o patriarca Miguel I Cerulário. Em 16 de julho de 1054, Humberto entrou na Basílica de Santa Sofia e depositou sobre o altar uma bula excomungando Cerulário. Dias depois, o patriarca excomungou por sua vez os legados papais.\n\nÀ época, poucos enxergaram aquilo como ruptura definitiva. Foi apenas após o saque de Constantinopla pelos cruzados latinos em 1204 que o evento de 1054 passou a ser lembrado como o marco da separação definitiva.\n\nAs excomunhões só foram formalmente revogadas em 1965, quando o papa Paulo VI e o patriarca Atenágoras I presidiram cerimônias simultâneas anulando os antigos decretos — gesto que, mais de mil anos depois, ainda não reunificou as duas maiores tradições cristãs do mundo.",
+    "importance": 5,
+    "featured": false,
+    "image": "/eventos/hero-grande-cisma-oriente.jpg",
+    "relatedEvents": [],
+    "characters": [
+      {
+        "name": "Papa Leão IX",
+        "role": "Papa que enviou a legação a Constantinopla",
+        "image": "",
+        "description": "Pontífice reformista que iniciou a missão diplomática cujo fracasso desencadeou o cisma."
+      },
+      {
+        "name": "Cardeal Humberto de Silva Cândida",
+        "role": "Legado papal que excomungou o patriarca",
+        "image": "",
+        "description": "Depositou a bula de excomunhão sobre o altar de Santa Sofia."
+      },
+      {
+        "name": "Miguel I Cerulário",
+        "role": "Patriarca de Constantinopla",
+        "image": "",
+        "description": "Patriarca bizantino que excomungou os legados romanos em resposta."
+      }
+    ],
+    "sources": [],
+    "keywords": [
+      "grande cisma",
+      "igreja ortodoxa",
+      "igreja catolica",
+      "cisma do oriente",
+      "patriarca de constantinopla",
+      "vaticano",
+      "ortodoxia oriental",
+      "excomunhao",
+      "cristianismo",
+      "bizancio"
+    ]
+  },
+  {
+    "id": "primeira-cruzada",
+    "slug": "primeira-cruzada",
+    "title": "Primeira Cruzada",
+    "startYear": 1096,
+    "endYear": 1099,
+    "dateDisplay": "1096–1099",
+    "period": "Idade Média",
+    "region": "Oriente Médio",
+    "country": "Israel",
+    "category": "Militar",
+    "summary": "Um apelo do papa em um concílio na França incendiou a Europa e lançou milhares de cavaleiros, camponeses e peregrinos rumo a Jerusalém.",
+    "content": "Em 27 de novembro de 1095, no Concílio de Clermont, o papa Urbano II pediu o envio de um exército cristão para socorrer o Império Bizantino e libertar Jerusalém do domínio muçulmano. A resposta popular foi avassaladora.\n\nA primeira leva, a Cruzada Popular liderada por Pedro, o Eremita, foi dizimada pelos turcos seljúcidas. O exército cruzado principal, liderado por Godofredo de Bulhão, Boemundo de Tarento e Raimundo IV de Toulouse, cruzou para a Ásia Menor em 1097, conquistou Niceia e, após um cerco brutal, tomou Antioquia em 1098.\n\nEm junho de 1099, os cruzados chegaram a Jerusalém. Em 15 de julho de 1099, romperam as defesas e tomaram a cidade, seguindo-se um massacre generalizado da população muçulmana e judaica. Godofredo de Bulhão foi escolhido para governar, recusando o título de rei.\n\nA vitória resultou na criação de quatro Estados latinos no Levante. Foi a única cruzada, entre as várias que se seguiriam, a alcançar plenamente seu objetivo militar — mas lançou as bases de séculos de conflito entre cristandade e islã cujos ecos ainda ressoam nas tensões geopolíticas contemporâneas da região.",
+    "importance": 5,
+    "featured": false,
+    "image": "/eventos/hero-primeira-cruzada.jpg",
+    "relatedEvents": [],
+    "characters": [
+      {
+        "name": "Papa Urbano II",
+        "role": "Papa que convocou a cruzada no Concílio de Clermont",
+        "image": "",
+        "description": "Seu discurso em Clermont em 1095 deu origem à Primeira Cruzada."
+      },
+      {
+        "name": "Godofredo de Bulhão",
+        "role": "Líder cruzado, primeiro governante de Jerusalém conquistada",
+        "image": "",
+        "description": "Liderou a tomada de Jerusalém e se tornou seu primeiro governante cristão."
+      },
+      {
+        "name": "Boemundo de Tarento",
+        "role": "Príncipe normando, conquistador de Antioquia",
+        "image": "",
+        "description": "Comandou o cerco de Antioquia e fundou o Principado cruzado da cidade."
+      },
+      {
+        "name": "Pedro, o Eremita",
+        "role": "Pregador popular, líder da Cruzada Popular",
+        "image": "",
+        "description": "Seus sermões mobilizaram milhares de camponeses na primeira onda da cruzada."
+      }
+    ],
+    "sources": [],
+    "keywords": [
+      "primeira cruzada",
+      "cruzadas",
+      "jerusalem",
+      "papa urbano ii",
+      "terra santa",
+      "conflito israel palestina",
+      "oriente medio",
+      "reino de jerusalem",
+      "guerra santa",
+      "islam e cristianismo"
+    ]
+  },
+  {
+    "id": "magna-carta",
+    "slug": "magna-carta",
+    "title": "Assinatura da Magna Carta",
+    "startYear": 1215,
+    "endYear": 1215,
+    "dateDisplay": "15 de junho de 1215",
+    "period": "Idade Média",
+    "region": "Europa Ocidental",
+    "country": "Inglaterra",
+    "category": "Direito",
+    "summary": "Cercado por barões rebeldes às margens do Tâmisa, um rei sem prestígio selou, em 1215, o princípio que atravessaria os séculos: até o soberano deve obedecer à lei.",
+    "content": "No início do século XIII, o rei João da Inglaterra, apelidado \"Sem-Terra\", acumulava fracassos: perdera territórios continentais, entrara em conflito com o papa e impunha impostos cada vez mais pesados. A derrota na Batalha de Bouvines, em 1214, esgotou o que restava de sua autoridade.\n\nEm maio de 1215, barões rebeldes ocuparam Londres e forçaram o rei à negociação. O encontro decisivo aconteceu em Runnymede, prado às margens do Tâmisa, em 15 de junho de 1215. Ali, João apôs seu selo real a um documento em latim: a Magna Carta Libertatum.\n\nO texto, com cerca de 63 cláusulas, era sobretudo um pacto entre o rei e a nobreza feudal. Ainda assim, continha sementes de enorme alcance: a cláusula 39 estabelecia que nenhum homem livre poderia ser preso sem julgamento por seus pares; outra vedava novos impostos sem consentimento de um \"conselho comum do reino\", embrião do Parlamento inglês.\n\nReeditada por seus sucessores, a carta se tornou referência permanente do direito inglês, inspirando o habeas corpus e, séculos depois, a Constituição dos Estados Unidos — símbolo universal de que mesmo o soberano deve se curvar à lei.",
+    "importance": 5,
+    "featured": false,
+    "image": "/eventos/hero-magna-carta.jpg",
+    "relatedEvents": [
+      "independencia-estados-unidos"
+    ],
+    "characters": [
+      {
+        "name": "Rei João da Inglaterra (João Sem-Terra)",
+        "role": "Rei da Inglaterra, forçado a selar o documento",
+        "image": "",
+        "description": "Monarca cujas derrotas militares o levaram a ceder às exigências dos barões."
+      },
+      {
+        "name": "Stephen Langton",
+        "role": "Arcebispo de Canterbury e mediador",
+        "image": "",
+        "description": "Figura-chave na negociação entre o rei e os barões rebeldes."
+      },
+      {
+        "name": "Robert Fitzwalter",
+        "role": "Líder dos barões rebeldes",
+        "image": "",
+        "description": "Comandou a facção nobre que ocupou Londres."
+      }
+    ],
+    "sources": [],
+    "keywords": [
+      "magna carta",
+      "direitos humanos",
+      "constituicao",
+      "estado de direito",
+      "monarquia inglesa",
+      "habeas corpus",
+      "reino unido",
+      "parlamento britanico",
+      "historia do direito",
+      "limitacao do poder"
+    ]
+  },
+  {
+    "id": "guerra-dos-cem-anos",
+    "slug": "guerra-dos-cem-anos",
+    "title": "Guerra dos Cem Anos",
+    "startYear": 1337,
+    "endYear": 1453,
+    "dateDisplay": "1337–1453",
+    "period": "Idade Média",
+    "region": "Europa Ocidental",
+    "country": "França e Inglaterra",
+    "category": "Militar",
+    "summary": "Um século e meio de batalhas entre duas coroas rivais forjou a identidade de dois países — e revelou, no meio do caminho, uma camponesa capaz de virar o destino de um reino: Joana d'Arc.",
+    "content": "A Guerra dos Cem Anos nasceu de uma crise de sucessão: quando Carlos IV da França morreu em 1328 sem herdeiro homem, o rei inglês Eduardo III também reivindicou o trono. Em 1337, Filipe VI confiscou a Gasconha inglesa e Eduardo III declarou guerra.\n\nA fase eduardiana trouxe vitórias inglesas em Crécy (1346) e Poitiers (1356), graças ao arco longo galês. O Tratado de Brétigny (1360) consolidou ganhos ingleses, mas a França reconquistou terreno nas décadas seguintes.\n\nO conflito ressurgiu na fase lancastriana: Henrique V venceu em Azincourt (1415), e o Tratado de Troyes (1420) chegou a reconhecê-lo herdeiro do trono francês. Foi o momento mais sombrio para a causa francesa.\n\nA virada veio de uma jovem camponesa: em 1429, Joana d'Arc convenceu o delfim Carlos a lhe confiar tropas para romper o cerco de Orléans, missão cumprida em dias. Ela conduziu Carlos a Reims, onde foi coroado Carlos VII. Capturada em 1430 e queimada viva em 1431, seu impulso não se extinguiu: os franceses reconquistaram território sistematicamente, vencendo em Castillon (1453), batalha que encerrou o conflito.",
+    "importance": 4,
+    "featured": false,
+    "image": "/eventos/hero-guerra-dos-cem-anos.jpg",
+    "relatedEvents": [
+      "peste-negra"
+    ],
+    "characters": [
+      {
+        "name": "Eduardo III da Inglaterra",
+        "role": "Rei inglês que reivindicou o trono francês",
+        "image": "",
+        "description": "Sua reivindicação dinástica deu início ao conflito em 1337."
+      },
+      {
+        "name": "Joana d'Arc",
+        "role": "Líder militar francesa",
+        "image": "",
+        "description": "Camponesa que liberou o cerco de Orléans e conduziu Carlos VII à coroação."
+      },
+      {
+        "name": "Carlos VII da França",
+        "role": "Rei francês coroado com o apoio de Joana d'Arc",
+        "image": "",
+        "description": "Consolidou a reconquista francesa e comandou a vitória final em 1453."
+      },
+      {
+        "name": "Henrique V da Inglaterra",
+        "role": "Rei inglês vencedor em Azincourt",
+        "image": "",
+        "description": "Sua vitória em Azincourt o aproximou, por pouco tempo, de unificar as coroas inglesa e francesa."
+      }
+    ],
+    "sources": [],
+    "keywords": [
+      "guerra dos cem anos",
+      "joana d arc",
+      "franca medieval",
+      "inglaterra medieval",
+      "batalha de azincourt",
+      "batalha de crecy",
+      "carlos vii",
+      "monarquia francesa",
+      "guerra medieval",
+      "cerco de orleans"
+    ]
+  },
+  {
+    "id": "peste-negra",
+    "slug": "peste-negra",
+    "title": "Peste Negra",
+    "startYear": 1347,
+    "endYear": 1351,
+    "dateDisplay": "1347–1351",
+    "period": "Idade Média",
+    "region": "Europa, Ásia e Norte da África",
+    "country": "Itália, França, Inglaterra e outros países europeus",
+    "category": "Social",
+    "summary": "Entre 1347 e 1351, uma doença vinda das estepes da Ásia dizimou entre um terço e metade da população europeia e mudou para sempre a economia, a fé e a mentalidade do continente.",
+    "content": "Em outubro de 1347, naus genovesas atracaram em Messina, na Sicília, carregando a peste bubônica, causada pela bactéria Yersinia pestis. A doença vinha se espalhando pelas rotas comerciais da Ásia Central. Em poucos meses avançou pela Itália, sul da França e Espanha; em 1348 alcançou a Inglaterra e a Alemanha.\n\nOs sintomas eram rápidos e aterrorizantes: febre alta e bubões dolorosos que podiam levar à morte em poucos dias. Sem compreensão da causa real, os europeus atribuíam a peste a castigo divino, alimentando perseguições, sobretudo contra comunidades judaicas.\n\nEstima-se que entre um terço e metade da população europeia — 25 a 50 milhões de pessoas — tenha morrido em pouco mais de quatro anos. A súbita escassez de trabalhadores elevou os salários camponeses e acelerou o declínio da servidão. Cidades portuárias como Veneza passaram a impor períodos de isolamento a navios suspeitos — origem da palavra \"quarentena\".\n\nA Peste Negra voltaria em surtos periódicos por mais de trezentos anos, mas o abalo de 1347-1351 já havia enfraquecido irreversivelmente o sistema feudal e preparado, à sua maneira sombria, o terreno para as transformações que desembocariam no Renascimento.",
+    "importance": 5,
+    "featured": false,
+    "image": "/eventos/hero-peste-negra.jpg",
+    "relatedEvents": [
+      "guerra-dos-cem-anos"
+    ],
+    "characters": [
+      {
+        "name": "Giovanni Boccaccio",
+        "role": "Escritor florentino e cronista da epidemia",
+        "image": "",
+        "description": "Registrou no Decameron o impacto devastador da peste sobre Florença."
+      },
+      {
+        "name": "Papa Clemente VI",
+        "role": "Papa em Avignon durante a pandemia",
+        "image": "",
+        "description": "Emitiu bulas papais protegendo comunidades judaicas das perseguições."
+      }
+    ],
+    "sources": [],
+    "keywords": [
+      "peste negra",
+      "peste bubonica",
+      "pandemia",
+      "idade media",
+      "epidemia historica",
+      "quarentena",
+      "mortalidade em massa",
+      "historia da medicina",
+      "crise sanitaria",
+      "rota da seda"
     ]
   },
   {
@@ -165,7 +644,11 @@
     "image": "/eventos/hero-constantinopla.jpg",
     "relatedEvents": [
       "queda-imperio-romano-ocidente",
-      "descobrimento-america"
+      "descobrimento-america",
+      "grande-cisma-oriente",
+      "primeira-cruzada",
+      "hegira-inicio-islam",
+      "descobrimento-brasil"
     ],
     "characters": [
       {
@@ -221,7 +704,8 @@
     "featured": true,
     "image": "/eventos/hero-colombo.jpg",
     "relatedEvents": [
-      "queda-constantinopla"
+      "queda-constantinopla",
+      "descobrimento-brasil"
     ],
     "characters": [
       {
@@ -261,6 +745,236 @@
     ]
   },
   {
+    "id": "descobrimento-brasil",
+    "slug": "descobrimento-brasil",
+    "title": "Chegada da Esquadra de Cabral ao Brasil",
+    "startYear": 1500,
+    "endYear": 1500,
+    "dateDisplay": "22 de abril de 1500",
+    "period": "Idade Moderna",
+    "region": "América do Sul",
+    "country": "Brasil",
+    "category": "Exploração",
+    "summary": "Treze navios, mil e meio de homens e uma volta imprevista no Atlântico colocaram Portugal em contato com uma terra já habitada havia milênios — o episódio que a historiografia tradicional chamou de 'descobrimento'.",
+    "content": "Desde o início do século XV, Portugal investia em navegação para alcançar as especiarias do Oriente. Bartolomeu Dias contornara o Cabo da Boa Esperança em 1488 e Vasco da Gama chegara à Índia em 1498. Em 1494, o Tratado de Tordesilhas dividira entre Portugal e Espanha as terras \"por descobrir\", numa linha que, sem que os portugueses soubessem, cortava o litoral da futura América do Sul.\n\nPedro Álvares Cabral partiu de Lisboa em março de 1500 à frente de treze embarcações rumo à Índia. Ao fazer a \"volta do mar\", a frota se afastou mais do que o previsto e, em 22 de abril de 1500, avistou terra próximo ao que hoje é Porto Seguro, na Bahia.\n\nAquela costa não era vazia: há milênios, povos indígenas ocupavam o território, entre eles os Tupiniquim, que protagonizaram o primeiro encontro com os europeus. O escrivão Pero Vaz de Caminha registrou o episódio em carta ao rei Dom Manuel I, hoje a fonte primária mais importante sobre esse contato.\n\nO episódio, celebrado por séculos como \"Descobrimento do Brasil\", é hoje tratado com mais precisão: a chegada dos portugueses a uma terra já povoada. Nas décadas seguintes, o contato inicial deu lugar à exploração do pau-brasil, à escravização de povos indígenas e, a partir de 1530, à colonização sistemática do território.",
+    "importance": 5,
+    "featured": false,
+    "image": "/eventos/hero-descobrimento-brasil.jpg",
+    "relatedEvents": [
+      "descobrimento-america",
+      "queda-constantinopla"
+    ],
+    "characters": [
+      {
+        "name": "Pedro Álvares Cabral",
+        "role": "Comandante da esquadra portuguesa",
+        "image": "",
+        "description": "Fidalgo português que comandou a frota de treze naus e chegou à costa do Brasil em abril de 1500."
+      },
+      {
+        "name": "Pero Vaz de Caminha",
+        "role": "Escrivão da esquadra",
+        "image": "",
+        "description": "Autor da carta que registrou o primeiro relato oficial do encontro com os povos indígenas."
+      },
+      {
+        "name": "Bartolomeu Dias",
+        "role": "Navegador da esquadra",
+        "image": "",
+        "description": "Já havia contornado o Cabo da Boa Esperança em 1488 e integrou a frota de Cabral."
+      },
+      {
+        "name": "Povo Tupiniquim",
+        "role": "Primeiros habitantes em contato com os portugueses",
+        "image": "",
+        "description": "Povo indígena de tronco tupi que habitava o litoral onde a esquadra aportou."
+      }
+    ],
+    "sources": [],
+    "keywords": [
+      "descobrimento do brasil",
+      "pedro alvares cabral",
+      "porto seguro",
+      "monte pascoal",
+      "povos indigenas",
+      "tupiniquim",
+      "colonizacao portuguesa",
+      "carta de pero vaz de caminha",
+      "tratado de tordesilhas",
+      "brasil colonia"
+    ]
+  },
+  {
+    "id": "reforma-protestante",
+    "slug": "reforma-protestante",
+    "title": "Martinho Lutero e as 95 Teses",
+    "startYear": 1517,
+    "endYear": 1517,
+    "dateDisplay": "31 de outubro de 1517",
+    "period": "Idade Moderna",
+    "region": "Europa",
+    "country": "Alemanha",
+    "category": "Religião",
+    "summary": "Um monge agostiniano insatisfeito com a venda de indulgências publicou 95 pontos para debate acadêmico — e, sem pretender de início, rachou ao meio a unidade religiosa da Europa cristã.",
+    "content": "No início do século XVI, a Igreja Católica financiava obras monumentais em parte pela venda de indulgências. Na Alemanha, o frade Johann Tetzel conduzia uma campanha agressiva que escandalizou Martinho Lutero, monge agostiniano e professor em Wittenberg.\n\nEm 31 de outubro de 1517, Lutero tornou pública uma lista de 95 proposições questionando a base teológica das indulgências. A tradição conta que ele as pregou na porta da Igreja do Castelo de Wittenberg; não há registro contemporâneo desse gesto específico. Com a imprensa de Gutenberg, as teses se espalharam pela Europa em semanas.\n\nConvocado a se retratar, Lutero recusou-se e em 1521 foi excomungado pelo papa Leão X. Protegido pelo elector Frederico, o Sábio, passou a traduzir a Bíblia para o alemão vernáculo.\n\nA Reforma Protestante fragmentou definitivamente a cristandade ocidental, dando origem a novas correntes religiosas e a décadas de guerras religiosas na Europa. Seus efeitos moldaram parte do pensamento político moderno e ainda hoje dividem tradições cristãs ao redor do mundo, inclusive no Brasil.",
+    "importance": 5,
+    "featured": false,
+    "image": "/eventos/hero-reforma-protestante.jpg",
+    "relatedEvents": [],
+    "characters": [
+      {
+        "name": "Martinho Lutero",
+        "role": "Monge agostiniano e autor das 95 Teses",
+        "image": "",
+        "description": "Professor de teologia em Wittenberg cuja crítica às indulgências deu origem à Reforma Protestante."
+      },
+      {
+        "name": "Papa Leão X",
+        "role": "Pontífice da Igreja Católica",
+        "image": "",
+        "description": "Papa que excomungou Lutero em 1521."
+      },
+      {
+        "name": "Johann Tetzel",
+        "role": "Frade vendedor de indulgências",
+        "image": "",
+        "description": "Sua campanha agressiva de venda de indulgências motivou a reação de Lutero."
+      },
+      {
+        "name": "Frederico, o Sábio",
+        "role": "Elector da Saxônia",
+        "image": "",
+        "description": "Governante que protegeu politicamente Lutero."
+      }
+    ],
+    "sources": [],
+    "keywords": [
+      "reforma protestante",
+      "martinho lutero",
+      "95 teses",
+      "wittenberg",
+      "indulgencias",
+      "igreja catolica",
+      "protestantismo",
+      "papa leao x",
+      "evangelicos",
+      "cisma cristao"
+    ]
+  },
+  {
+    "id": "revolucao-industrial",
+    "slug": "revolucao-industrial",
+    "title": "Revolução Industrial",
+    "startYear": 1760,
+    "endYear": 1840,
+    "dateDisplay": "c. 1760–1840",
+    "period": "Idade Moderna",
+    "region": "Europa",
+    "country": "Reino Unido (Grã-Bretanha)",
+    "category": "Economia",
+    "summary": "Em pouco mais de setenta anos, o vapor e o carvão substituíram a força humana e animal, e a Grã-Bretanha se tornou a primeira nação a atravessar a fronteira entre o mundo agrário e o mundo industrial.",
+    "content": "Entre meados do século XVIII e as primeiras décadas do XIX, a Grã-Bretanha viveu a mais profunda transformação econômica desde o surgimento da agricultura. Reservas de carvão e ferro, um sistema bancário sólido e um mercado consumidor em expansão criaram as condições para a industrialização.\n\nA partir de 1760, inovações mudaram a forma de produzir: a spinning jenny (1764), o tear mecânico de Arkwright, e sobretudo a máquina a vapor aperfeiçoada por James Watt entre 1769 e 1776. A siderurgia avançou com o uso do coque, e ferrovias, a partir de 1825, encurtaram distâncias.\n\nA produção migrou das oficinas domésticas para grandes fábricas, atraindo famílias para cidades como Manchester e Birmingham. Jornadas de até 16 horas e trabalho infantil generalizado geraram protestos, como o movimento ludita, até que leis fabris passaram a regular as condições de trabalho.\n\nA industrialização se espalhou para a Bélgica, França, Estados Unidos e depois Alemanha e Japão. Mais do que mudança tecnológica, redefiniu as relações de trabalho, criou a classe operária moderna e o capitalismo industrial, e lançou as bases — e os desafios ambientais — do mundo interconectado em que vivemos hoje.",
+    "importance": 5,
+    "featured": false,
+    "image": "/eventos/hero-revolucao-industrial.jpg",
+    "relatedEvents": [
+      "primeira-guerra-mundial"
+    ],
+    "characters": [
+      {
+        "name": "James Watt",
+        "role": "Engenheiro e inventor",
+        "image": "",
+        "description": "Aperfeiçoou a máquina a vapor entre 1769 e 1776."
+      },
+      {
+        "name": "Richard Arkwright",
+        "role": "Empresário e inventor têxtil",
+        "image": "",
+        "description": "Criou o water frame e organizou o primeiro sistema fabril moderno."
+      },
+      {
+        "name": "Adam Smith",
+        "role": "Economista e filósofo",
+        "image": "",
+        "description": "Autor de 'A Riqueza das Nações' (1776), forneceu as bases teóricas do capitalismo industrial."
+      }
+    ],
+    "sources": [],
+    "keywords": [
+      "revolucao industrial",
+      "maquina a vapor",
+      "james watt",
+      "carvao",
+      "capitalismo industrial",
+      "urbanizacao",
+      "trabalho infantil",
+      "sindicatos",
+      "tecnologia",
+      "inglaterra"
+    ]
+  },
+  {
+    "id": "independencia-estados-unidos",
+    "slug": "independencia-estados-unidos",
+    "title": "Independência dos Estados Unidos",
+    "startYear": 1776,
+    "endYear": 1776,
+    "dateDisplay": "4 de julho de 1776",
+    "period": "Idade Moderna",
+    "region": "América do Norte",
+    "country": "Estados Unidos",
+    "category": "Revolução",
+    "summary": "Treze colônias britânicas cansadas de pagar impostos sem voz política declararam ruptura com a coroa e deram à luz uma nação que se tornaria a primeira grande república moderna.",
+    "content": "Ao longo da década de 1760, a relação entre a Grã-Bretanha e suas treze colônias se deteriorou por causa de impostos impostos sem representação no Parlamento. Episódios como o Boston Tea Party (1773) escalaram a tensão, e em abril de 1775 os primeiros confrontos em Lexington e Concord marcaram o início da guerra.\n\nEm junho de 1776, o Congresso Continental formou o \"Comitê dos Cinco\" para redigir a declaração de ruptura. Thomas Jefferson foi o principal redator, apoiando-se em ideias iluministas de John Locke. Em 4 de julho de 1776, o Congresso aprovou o texto final da Declaração de Independência.\n\nA Declaração proclamava que \"todos os homens são criados iguais\" e dotados de direitos inalienáveis — frase que se tornaria um dos textos políticos mais citados da história, apesar da contradição com a manutenção da escravidão nas próprias colônias signatárias.\n\nA guerra se estendeu até 1783, quando o Tratado de Paris reconheceu a independência. O sucesso da revolução americana inspirou movimentos revolucionários em outras partes do mundo, incluindo a Revolução Francesa e os processos de independência na América Latina, entre eles o próprio Brasil em 1822.",
+    "importance": 5,
+    "featured": false,
+    "image": "/eventos/hero-independencia-estados-unidos.jpg",
+    "relatedEvents": [
+      "magna-carta",
+      "revolucao-francesa",
+      "independencia-brasil"
+    ],
+    "characters": [
+      {
+        "name": "Thomas Jefferson",
+        "role": "Autor principal da Declaração de Independência",
+        "image": "",
+        "description": "Delegado da Virgínia e principal redator do texto que proclamou a independência."
+      },
+      {
+        "name": "George Washington",
+        "role": "Comandante do Exército Continental",
+        "image": "",
+        "description": "Liderou as forças coloniais e se tornaria o primeiro presidente dos EUA."
+      },
+      {
+        "name": "Benjamin Franklin",
+        "role": "Diplomata e membro do Comitê dos Cinco",
+        "image": "",
+        "description": "Ajudou a revisar a Declaração e buscou apoio francês para a causa americana."
+      },
+      {
+        "name": "John Adams",
+        "role": "Delegado de Massachusetts",
+        "image": "",
+        "description": "Um dos principais defensores da independência, viria a se tornar o segundo presidente dos EUA."
+      }
+    ],
+    "sources": [],
+    "keywords": [
+      "independencia dos estados unidos",
+      "declaracao de independencia",
+      "4 de julho",
+      "thomas jefferson",
+      "george washington",
+      "revolucao americana",
+      "treze colonias",
+      "estados unidos",
+      "benjamin franklin"
+    ]
+  },
+  {
     "id": "revolucao-francesa",
     "slug": "revolucao-francesa",
     "title": "Revolução Francesa",
@@ -276,7 +990,9 @@
     "importance": 5,
     "featured": true,
     "image": "/eventos/hero-bastilha.jpg",
-    "relatedEvents": [],
+    "relatedEvents": [
+      "independencia-estados-unidos"
+    ],
     "characters": [
       {
         "name": "Luís XVI",
@@ -316,6 +1032,227 @@
     ]
   },
   {
+    "id": "independencia-brasil",
+    "slug": "independencia-brasil",
+    "title": "Independência do Brasil — Grito do Ipiranga",
+    "startYear": 1822,
+    "endYear": 1822,
+    "dateDisplay": "7 de setembro de 1822",
+    "period": "Idade Contemporânea",
+    "region": "América do Sul",
+    "country": "Brasil",
+    "category": "Política",
+    "summary": "Às margens de um riacho na periferia de São Paulo, um príncipe de 23 anos rompeu com a metrópole que o havia criado e transformou a maior colônia das Américas no primeiro império independente do continente.",
+    "content": "Em 1808, a família real portuguesa transferiu-se para o Rio de Janeiro fugindo de Napoleão. A Revolução do Porto, em 1820, exigiu o retorno do rei d. João VI e a recolonização do Brasil. Em 1821, d. João VI partiu, deixando o filho d. Pedro como príncipe regente.\n\nPressionado a permanecer, d. Pedro proferiu, em 9 de janeiro de 1822, a frase do Dia do Fico. Nomeou José Bonifácio ministro do Reino, seu principal conselheiro na ruptura.\n\nEm 2 de setembro, o Conselho de Estado, presidido pela princesa Maria Leopoldina, recomendou o rompimento com Lisboa. Em 7 de setembro de 1822, às margens do riacho do Ipiranga, d. Pedro recebeu as correspondências das Cortes e declarou a independência. A cena consagrada nos livros deve muito ao quadro de Pedro Américo, pintado só em 1888. D. Pedro foi aclamado imperador em outubro e coroado em dezembro de 1822.\n\nPortugal só reconheceu a independência em 1825, mediante indenização. Ao contrário das ex-colônias espanholas, o Brasil manteve a unidade territorial e a forma monárquica, iniciando o Primeiro Reinado sob d. Pedro I.",
+    "importance": 5,
+    "featured": false,
+    "image": "/eventos/hero-independencia-brasil.jpg",
+    "relatedEvents": [
+      "independencia-estados-unidos",
+      "descobrimento-brasil"
+    ],
+    "characters": [
+      {
+        "name": "Dom Pedro I",
+        "role": "Príncipe regente e primeiro imperador do Brasil",
+        "image": "",
+        "description": "Proclamou a independência às margens do Ipiranga em 7 de setembro de 1822."
+      },
+      {
+        "name": "José Bonifácio de Andrada e Silva",
+        "role": "Ministro do Reino e principal conselheiro de d. Pedro",
+        "image": "",
+        "description": "Conhecido como o 'Patriarca da Independência'."
+      },
+      {
+        "name": "Imperatriz Maria Leopoldina",
+        "role": "Princesa consorte e regente interina",
+        "image": "",
+        "description": "Presidiu o Conselho de Estado que recomendou o rompimento com Portugal."
+      },
+      {
+        "name": "Dom João VI",
+        "role": "Rei de Portugal, Brasil e Algarves",
+        "image": "",
+        "description": "Ao retornar a Portugal em 1821, criou as condições diretas para a crise da independência."
+      }
+    ],
+    "sources": [],
+    "keywords": [
+      "independencia do brasil",
+      "sete de setembro",
+      "grito do ipiranga",
+      "dom pedro i",
+      "jose bonifacio",
+      "portugal",
+      "brasil imperio",
+      "monarquia",
+      "hino da independencia"
+    ]
+  },
+  {
+    "id": "primeira-guerra-mundial",
+    "slug": "primeira-guerra-mundial",
+    "title": "Primeira Guerra Mundial",
+    "startYear": 1914,
+    "endYear": 1918,
+    "dateDisplay": "28 de julho de 1914 – 11 de novembro de 1918",
+    "period": "Idade Contemporânea",
+    "region": "Europa",
+    "country": "Diversos países (conflito global)",
+    "category": "Militar",
+    "summary": "Um tiro em Sarajevo bastou para detonar um sistema de alianças tenso havia décadas, arrastando o mundo para quatro anos de trincheiras, gás venenoso e uma carnificina sem precedentes na história.",
+    "content": "No início do século XX, a Europa vivia sob um equilíbrio de forças tenso: a Tríplice Aliança (Alemanha, Áustria-Hungria, Itália) contra a Tríplice Entente (França, Rússia, Reino Unido). Rivalidades coloniais e nacionalismo criaram um ambiente explosivo.\n\nA faísca veio em 28 de junho de 1914: o arquiduque Francisco Ferdinando foi assassinado em Sarajevo por Gavrilo Princip. Em 28 de julho, a Áustria-Hungria declarou guerra à Sérvia, e o sistema de alianças entrou em cadeia.\n\nNa Frente Ocidental, a guerra travou em trincheiras, palco de batalhas de desgaste como Verdun e o Somme (1916). Em 1917, os EUA entraram na guerra e a Revolução Russa levou a Rússia a assinar paz separada. O Brasil declarou guerra à Alemanha em 1917, único país sul-americano a participar ativamente.\n\nO Armistício de 11 de novembro de 1918 encerrou os combates, com cerca de 9 milhões de militares mortos. O Tratado de Versalhes (1919) impôs duras condições à Alemanha e redesenhou o mapa da Europa, lançando, sem que se soubesse, as sementes de um conflito ainda maior duas décadas depois.",
+    "importance": 5,
+    "featured": false,
+    "image": "/eventos/hero-primeira-guerra-mundial.jpg",
+    "relatedEvents": [
+      "revolucao-russa",
+      "fim-segunda-guerra-mundial",
+      "revolucao-industrial"
+    ],
+    "characters": [
+      {
+        "name": "Gavrilo Princip",
+        "role": "Nacionalista sérvio-bósnio",
+        "image": "",
+        "description": "Assassinou o arquiduque Francisco Ferdinando, ato que desencadeou a guerra."
+      },
+      {
+        "name": "Arquiduque Francisco Ferdinando",
+        "role": "Herdeiro do trono austro-húngaro",
+        "image": "",
+        "description": "Sua morte forneceu o pretexto imediato para a eclosão da guerra."
+      },
+      {
+        "name": "Kaiser Guilherme II",
+        "role": "Imperador da Alemanha",
+        "image": "",
+        "description": "Liderou o esforço de guerra alemão."
+      },
+      {
+        "name": "Woodrow Wilson",
+        "role": "Presidente dos Estados Unidos",
+        "image": "",
+        "description": "Conduziu a entrada dos EUA na guerra em 1917."
+      }
+    ],
+    "sources": [],
+    "keywords": [
+      "primeira guerra mundial",
+      "grande guerra",
+      "sarajevo",
+      "gavrilo princip",
+      "austria hungria",
+      "alemanha",
+      "trincheiras",
+      "tratado de versalhes",
+      "armisticio",
+      "brasil na primeira guerra"
+    ]
+  },
+  {
+    "id": "revolucao-russa",
+    "slug": "revolucao-russa",
+    "title": "Revolução Russa",
+    "startYear": 1917,
+    "endYear": 1917,
+    "dateDisplay": "Fevereiro a Novembro de 1917",
+    "period": "Idade Contemporânea",
+    "region": "Europa Oriental",
+    "country": "Rússia",
+    "category": "Revolução",
+    "summary": "Em poucos meses de 1917, dois levantes populares derrubaram três séculos de domínio czarista e colocaram os bolcheviques no poder, dando origem ao primeiro Estado socialista da história.",
+    "content": "No inverno de 1917, a Rússia czarista já não suportava o peso da guerra. Em 23 de fevereiro, operárias de Petrogrado saíram às ruas contra a fome. Em dias, Nicolau II foi forçado a abdicar, encerrando 304 anos de domínio Romanov. Surgiu um Governo Provisório que dividia poder com os sovietes.\n\nVladimir Lênin retornou do exílio em abril e radicalizou o discurso com \"Paz, terra e pão\". Na noite de 25 de outubro de 1917, guardas vermelhos sob comando de Trótski tomaram Petrogrado e assaltaram o Palácio de Inverno, praticamente sem resistência.\n\nAs primeiras medidas bolcheviques foram drásticas: distribuição de terras, controle operário, e em 1918 o Tratado de Brest-Litovsk tirou a Rússia da guerra. Seguiu-se uma sangrenta guerra civil (1918-1922). Nicolau II e a família foram executados em 1918.\n\nDa vitória bolchevique nasceu, em 1922, a União Soviética — o primeiro Estado socialista do mundo, que sob Stálin disputaria a Guerra Fria com os Estados Unidos até seu colapso em 1991.",
+    "importance": 5,
+    "featured": false,
+    "image": "/eventos/hero-revolucao-russa.jpg",
+    "relatedEvents": [
+      "primeira-guerra-mundial",
+      "queda-muro-berlim"
+    ],
+    "characters": [
+      {
+        "name": "Vladimir Lênin",
+        "role": "Líder do Partido Bolchevique",
+        "image": "",
+        "description": "Liderou a tomada bolchevique do poder e se tornou o primeiro dirigente soviético."
+      },
+      {
+        "name": "Leon Trótski",
+        "role": "Comandante do Comitê Militar Revolucionário",
+        "image": "",
+        "description": "Organizou a insurreição de outubro de 1917."
+      },
+      {
+        "name": "Nicolau II",
+        "role": "Último czar da Rússia",
+        "image": "",
+        "description": "Sua abdicação encerrou mais de três séculos de domínio Romanov."
+      }
+    ],
+    "sources": [],
+    "keywords": [
+      "revolucao russa",
+      "urss",
+      "uniao sovietica",
+      "comunismo",
+      "lenin",
+      "bolcheviques",
+      "czar nicolau ii",
+      "trotsky",
+      "guerra civil russa",
+      "russia"
+    ]
+  },
+  {
+    "id": "grande-depressao-1929",
+    "slug": "grande-depressao-1929",
+    "title": "Grande Depressão",
+    "startYear": 1929,
+    "endYear": 1939,
+    "dateDisplay": "1929–1939",
+    "period": "Idade Contemporânea",
+    "region": "América do Norte",
+    "country": "Estados Unidos",
+    "category": "Economia",
+    "summary": "O colapso da Bolsa de Nova York em outubro de 1929 desencadeou a mais profunda e duradoura crise econômica do capitalismo moderno, derrubando governos e redesenhando o papel do Estado.",
+    "content": "Os EUA dos anos 1920 viviam um otimismo febril, com investimentos especulativos em bolsa alimentando uma bolha. Em 24 de outubro de 1929, a \"Quinta-Feira Negra\", um volume recorde de ações foi despejado no mercado em pânico. Em 29 de outubro, a \"Terça-Feira Negra\", o pânico se generalizou.\n\nA quebra expôs fragilidades profundas: superprodução, desigualdade, um sistema bancário frágil e políticas comerciais equivocadas. Milhares de bancos quebraram e o desemprego chegou a 25% em 1933.\n\nO presidente Hoover foi derrotado nas eleições de 1932 por Franklin D. Roosevelt, que lançou o New Deal: obras públicas, reforma bancária e Previdência Social.\n\nA recuperação plena só viria com a mobilização industrial da Segunda Guerra Mundial. Os efeitos transbordaram fronteiras: o comércio internacional despencou, economias exportadoras foram arrastadas para a recessão, e a instabilidade econômica na Europa alimentou o avanço de regimes autoritários, contribuindo para o cenário que levaria à guerra.",
+    "importance": 5,
+    "featured": false,
+    "image": "/eventos/hero-grande-depressao-1929.jpg",
+    "relatedEvents": [
+      "fim-segunda-guerra-mundial"
+    ],
+    "characters": [
+      {
+        "name": "Franklin D. Roosevelt",
+        "role": "Presidente dos Estados Unidos e criador do New Deal",
+        "image": "",
+        "description": "Lançou o New Deal para combater o desemprego após a Grande Depressão."
+      },
+      {
+        "name": "Herbert Hoover",
+        "role": "Presidente dos Estados Unidos durante o início da crise",
+        "image": "",
+        "description": "Governou nos primeiros anos da Depressão."
+      }
+    ],
+    "sources": [],
+    "keywords": [
+      "grande depressao",
+      "crise de 1929",
+      "quebra da bolsa",
+      "wall street",
+      "new deal",
+      "roosevelt",
+      "crise economica",
+      "recessao",
+      "desemprego",
+      "bolsa de valores"
+    ]
+  },
+  {
     "id": "fim-segunda-guerra-mundial",
     "slug": "fim-segunda-guerra-mundial",
     "title": "Fim da Segunda Guerra Mundial",
@@ -333,7 +1270,9 @@
     "image": "/eventos/hero-reichstag.jpg",
     "relatedEvents": [
       "chegada-homem-lua",
-      "queda-muro-berlim"
+      "queda-muro-berlim",
+      "primeira-guerra-mundial",
+      "grande-depressao-1929"
     ],
     "characters": [
       {
@@ -373,6 +1312,63 @@
       "aliados",
       "holocausto",
       "bomba atômica"
+    ]
+  },
+  {
+    "id": "independencia-india",
+    "slug": "independencia-india",
+    "title": "Independência da Índia",
+    "startYear": 1947,
+    "endYear": 1947,
+    "dateDisplay": "15 de agosto de 1947",
+    "period": "Idade Contemporânea",
+    "region": "Ásia Meridional",
+    "country": "Índia",
+    "category": "Independência",
+    "summary": "À meia-noite de 15 de agosto de 1947, a Índia se libertou de quase dois séculos de domínio colonial britânico — mas a independência veio acompanhada da dolorosa partição que dividiu o subcontinente.",
+    "content": "Por quase duzentos anos, a Índia esteve sob controle britânico. A resistência cresceu com o Congresso Nacional Indiano e Mahatma Gandhi, que liderou campanhas de desobediência civil não violenta, como a Marcha do Sal de 1930.\n\nA Segunda Guerra Mundial acelerou o desfecho. Lord Mountbatten foi enviado em 1947 para negociar a transferência de poder, mas Muhammad Ali Jinnah exigia um Estado separado para os muçulmanos. Diante da violência crescente, Mountbatten anunciou que a independência viria com partição.\n\nÀ meia-noite entre 14 e 15 de agosto de 1947, nasceram dois Estados: Paquistão e Índia. Jawaharlal Nehru discursou sobre um \"encontro com o destino\". Gandhi, contrário à partição, passou o dia em Calcutá tentando conter massacres.\n\nEstima-se que 10 a 15 milhões de pessoas tenham sido deslocadas na partição, um dos maiores êxodos da história, com centenas de milhares de mortos em violência sectária. Gandhi foi assassinado meses depois, em janeiro de 1948. A independência deixou como legado a rivalidade entre Índia e Paquistão que ainda marca a geopolítica do sul da Ásia.",
+    "importance": 5,
+    "featured": false,
+    "image": "/eventos/hero-independencia-india.jpg",
+    "relatedEvents": [],
+    "characters": [
+      {
+        "name": "Mahatma Gandhi",
+        "role": "Líder do movimento de independência indiano",
+        "image": "",
+        "description": "Liderou décadas de resistência civil não violenta contra o domínio britânico."
+      },
+      {
+        "name": "Jawaharlal Nehru",
+        "role": "Primeiro primeiro-ministro da Índia independente",
+        "image": "",
+        "description": "Discursou na proclamação da independência em 1947."
+      },
+      {
+        "name": "Muhammad Ali Jinnah",
+        "role": "Líder da Liga Muçulmana e fundador do Paquistão",
+        "image": "",
+        "description": "Defendeu a criação de um Estado separado para os muçulmanos do subcontinente."
+      },
+      {
+        "name": "Lord Mountbatten",
+        "role": "Último vice-rei britânico da Índia",
+        "image": "",
+        "description": "Conduziu a negociação final da transferência de poder em 1947."
+      }
+    ],
+    "sources": [],
+    "keywords": [
+      "independencia da india",
+      "gandhi",
+      "nehru",
+      "jinnah",
+      "paquistao",
+      "particao da india",
+      "descolonizacao",
+      "imperio britanico",
+      "nao violencia",
+      "caxemira"
     ]
   },
   {
@@ -449,7 +1445,8 @@
     "featured": true,
     "image": "/eventos/hero-muro-berlim.jpg",
     "relatedEvents": [
-      "fim-segunda-guerra-mundial"
+      "fim-segunda-guerra-mundial",
+      "revolucao-russa"
     ],
     "characters": [
       {
