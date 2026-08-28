@@ -248,10 +248,10 @@ export default function LinhaDoTempoPage() {
                           {/* Left Side Content */}
                           <div className="flex-1 pr-8">
                             {isLeft && (
-                              <div className="text-right">
+                              <div className="flex justify-end">
                                 <Dialog>
                                   <DialogTrigger asChild>
-                                    <Card className="inline-block max-w-md cursor-pointer hover:shadow-lg transition-all duration-200 hover:scale-[1.02] ml-auto">
+                                    <Card className="w-full max-w-md cursor-pointer hover:shadow-lg transition-all duration-200 hover:scale-[1.02]">
                                       <CardHeader className="pb-3">
                                         <div className="flex items-center justify-end gap-2 mb-3">
                                           <Badge variant="secondary">{event.category}</Badge>
@@ -292,9 +292,10 @@ export default function LinhaDoTempoPage() {
                           {/* Right Side Content */}
                           <div className="flex-1 pl-8">
                             {!isLeft && (
-                              <Dialog>
-                                <DialogTrigger asChild>
-                                  <Card className="inline-block max-w-md cursor-pointer hover:shadow-lg transition-all duration-200 hover:scale-[1.02]">
+                              <div className="flex justify-start">
+                                <Dialog>
+                                  <DialogTrigger asChild>
+                                    <Card className="w-full max-w-md cursor-pointer hover:shadow-lg transition-all duration-200 hover:scale-[1.02]">
                                     <CardHeader className="pb-3">
                                       <div className="flex items-center gap-2 mb-3">
                                         <Badge className={`${color} text-white font-semibold`}>
@@ -316,7 +317,8 @@ export default function LinhaDoTempoPage() {
                                   </Card>
                                 </DialogTrigger>
                                 <EventDialogContent event={event} />
-                              </Dialog>
+                                </Dialog>
+                              </div>
                             )}
                           </div>
                         </div>
