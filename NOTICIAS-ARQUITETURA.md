@@ -105,7 +105,7 @@ ALLOWED_ORIGIN=*
 
 ### Cache HTTP (páginas de artigo)
 
-`revalidate = 300` em `/noticias/[slug]/page.tsx` — Next.js renderiza uma vez e serve HTML cacheado por 5 minutos. Primeiro visitante paga o custo de renderização; os seguintes recebem resposta instantânea.
+`force-dynamic` em `/noticias/[slug]/page.tsx` — cada request re-renderiza (sem cache de HTML). Com DynamoDB lendo em ~10–20ms e artigos pré-enriquecidos (`resumo: false`), o tempo de resposta se mantém baixo sem precisar de ISR. ISR com `generateStaticParams() { return [] }` causa 500 no Amplify WEB_COMPUTE (ver seção de bugs #3).
 
 ---
 
@@ -169,9 +169,11 @@ O pacote `@upstash/redis` ainda está em `package.json` e `lib/redis-cache.ts` a
 
 **Fix:** `enrichArticleWithFullText` agora retorna `resumo: false` explicitamente no objeto de retorno.
 
-### 3. Bug: `force-dynamic` re-renderizava em cada request
+### 3. Bug: ISR com `revalidate = 300` causando 500 no Amplify
 
-`export const dynamic = "force-dynamic"` em `/noticias/[slug]/page.tsx` impedia qualquer cache de HTML. Substituído por `export const revalidate = 300`.
+Tentou-se substituir `force-dynamic` por `revalidate = 300` para ganhar cache de HTML por 5 minutos. Com `generateStaticParams() { return [] }` (slugs são dinâmicos/imprevisíveis), o Next.js trata a página como SSG com fallback on-demand — o adaptador Web Compute do Amplify não suporta esse caminho e retorna 500 em todos os acessos.
+
+**Fix:** mantido `export const dynamic = "force-dynamic"`. Leituras do DynamoDB (~10–20ms) tornam o custo de re-renderizar por request irrelevante na prática.
 
 ### 4. Bug: `import { cache } from "react"` quebrando Route Handlers
 
@@ -227,13 +229,12 @@ eventos-historicos/
     ├── lib/
     │   ├── news.ts                      # lógica central de notícias
     │   ├── dynamodb.ts                  # leitura DynamoDB (Next.js)
-    │   ├── news-api.ts                  # cliente da Lambda Function URL (SigV4)
-    │   ├── redis-cache.ts               # CÓDIGO MORTO — pode ser removido
+    │   ├── related-content.ts           # conecta notícias ao arquivo histórico
     │   └── deepl.ts                     # tradução resiliente
     ├── app/
     │   ├── api/rss/route.ts             # GET /api/rss → getRssNews()
     │   ├── api/noticias/route.ts        # GET /api/noticias → getCuratedNews()
-    │   └── noticias/[slug]/page.tsx     # revalidate=300, ISR
+    │   └── noticias/[slug]/page.tsx     # force-dynamic
     └── components/
         ├── home-page-runtime.tsx        # "use client", fetch /api/rss
         └── news-page-runtime.tsx        # "use client", fetch /api/noticias
@@ -270,8 +271,8 @@ O Terraform (`infra/lambda/`) gerencia a infraestrutura (IAM, EventBridge, Funct
 
 ## Pendências
 
-- [ ] Remover `lib/redis-cache.ts` e `@upstash/redis` do `package.json`
-- [ ] Remover imports de `news-api.ts` de `lib/news.ts` (não utilizados no read path)
+- [x] Remover `lib/redis-cache.ts` e `@upstash/redis` do `package.json`
+- [x] Remover `lib/news-api.ts` e imports não utilizados de `lib/news.ts`
 - [ ] Configurar `DEEPL_API_KEY` no Lambda e no Amplify (tradução mais fiel)
 - [ ] Alertas de custo AWS (Billing Alarm no CloudWatch)
 - [ ] Monitoramento de erros Lambda no CloudWatch
