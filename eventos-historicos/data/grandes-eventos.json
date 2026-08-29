@@ -1522,35 +1522,35 @@
         "titulo": "Os dois reinos: Alto e Baixo Egito",
         "local": "Vale do Nilo",
         "texto": "No período pré-dinástico tardio, o Nilo era governado por dois mundos. O Alto Egito, ao sul, tinha em Hieracômpolis seu grande centro de poder — uma cidade de milhares de habitantes com templos, oficinas de cerâmica e palácios rudimentares, onde reis da 'Dinastia 0' já desenvolviam um protocolo de corte e um rudimentar sistema de escrita. O Baixo Egito, no delta, era mais fragmentado politicamente mas igualmente rico: controlava as rotas comerciais com o Levante mediterrâneo e produzia papiro, linho e peixe em abundância. Entre os dois reinos havia décadas de tensão intermitente, incursões militares e alianças por casamento. Os textos egípcios posteriores descrevem esse período como uma era caótica que antecedeu a dádiva da unificação — mas a arqueologia sugere um processo muito mais lento e negociado do que a narrativa heroica oficial.",
-        "imagem": "/eventos/hero-narmer-palette.jpg"
+        "imagem": "/eventos/momento-egito-dois-reinos.jpg"
       },
       {
         "data": "c. 3100 a.C.",
         "titulo": "A campanha de Narmer: descida ao norte",
         "local": "Hieracômpolis e Vale do Nilo",
         "texto": "O rei Narmer — identificado por muitos estudiosos com o lendário Menes que a tradição posterior recordaria como o primeiro faraó — conduziu uma campanha militar decisiva contra o norte. Sua base era Hieracômpolis, o grande centro religioso e político do Alto Egito, onde seu templo principal produzia os objetos votivos mais ricos da época — entre eles, a Paleta de Narmer e a Cabeça de Maça de Narmer, encontradas pelos arqueólogos no fim do século XIX e hoje nos museus do Cairo e de Oxford. Os detalhes militares da campanha são impossíveis de reconstruir com precisão, mas a Paleta registra sua vitória: o rei empunhando a maça — arma cerimonial do poder real — sobre um inimigo ajoelhado, usando a coroa branca do sul. No reverso, o mesmo rei aparece usando a coroa vermelha do norte em inspeção aos prisioneiros capturados. Dois reinos, dois atos, uma única figura: o rei que reclamou as duas coroas.",
-        "imagem": "/eventos/hero-narmer-palette.jpg"
+        "imagem": "/eventos/figura-narmer.jpg"
       },
       {
         "data": "c. 3100 a.C.",
         "titulo": "A Paleta de Narmer: o documento da unificação",
         "local": "Hieracômpolis (Kom el-Ahmar), Egito",
         "texto": "A Paleta de Narmer é um artefato votivo de ardósia de cerca de 64 cm de altura, encontrado no depósito principal do templo de Hieracômpolis em 1898 pelo arqueólogo James Quibell. Seu valor para a história não está na função original — paletas eram usadas para moer pigmentos de maquiagem para olhos — mas na narrativa política que seu relevo conta. De um lado, Narmer ergue a maça branca sobre um inimigo capturado, com o halcão de Hórus mantendo prisioneiros pelo nariz: o deus sancionando a vitória real. Do outro, o rei, agora com a coroa vermelha do Baixo Egito, inspeciona prisioneiros decapitados em fileira. Na base, dois leões de pescoços entrelaçados — símbolo da integração de dois opostos. A paleta é o exemplo mais antigo de escrita hieroglífica completa com nomes reais identificáveis, e o primeiro documento visual que narra o ato de unificação política. Hoje no Museu Egípcio do Cairo, é um dos objetos mais estudados da história humana.",
-        "imagem": "/eventos/hero-narmer-palette.jpg"
+        "imagem": "/eventos/momento-egito-narmer-paleta.jpg"
       },
       {
         "data": "c. 3100 – 3050 a.C.",
         "titulo": "A fundação de Mênfis: a cidade entre dois mundos",
         "local": "Mênfis (atual Mit Rahina), Egito",
         "texto": "A tradição egípcia atribui à figura de Menes — provavelmente o próprio Narmer ou seu sucessor imediato, Hor-Aha — a fundação de uma nova capital estrategicamente posicionada no ponto de encontro entre os dois reinos: Mênfis, às margens do Nilo, onde o vale estreito do sul começa a se abrir para o delta do norte. Segundo Heródoto e as fontes tardias, a cidade foi erguida sobre um aterro ganho ao rio — um feito de engenharia que exigiu a construção de diques e canais. O nome egípcio da cidade, Ineb-hedj, significa 'Muralhas Brancas', uma referência às suas defesas de pedra calcária que brilhavam sob o sol. Mênfis se tornaria a capital e o centro administrativo, religioso e comercial do Egito por mais de dois mil anos — e seu principal templo, dedicado ao deus Ptah, o criador, seria chamado pelos gregos de Aigyptos, nome que daria origem à palavra 'Egito'.",
-        "imagem": "/eventos/hero-narmer-palette.jpg"
+        "imagem": "/eventos/momento-egito-menfis.jpg"
       },
       {
         "data": "c. 3100 – 2686 a.C.",
         "titulo": "A coroa dupla e o nascimento do faraó",
         "local": "Egito",
         "texto": "A unificação criou não apenas um Estado mas uma teologia do poder. O governante do Egito unificado não era simplesmente um rei conquistador: era a encarnação viva de Hórus, filho de Osíris, cujo reinado traria ordem (Maat) ao mundo. Sua coroa — o Pschent, a coroa dupla, que combinava a branca do sul e a vermelha do norte — era a materialização da síntese dos dois mundos. Os títulos reais multiplicaram-se para dar conta da complexidade do poder: o faraó era simultaneamente Senhor do Alto e do Baixo Egito, Rei das Duas Terras, Filho de Ré. Cada ato cerimonial — a corrida ritual, a inundação do Nilo, a colheita — era encenado duas vezes, uma para cada metade do reino. Essa dualidade tornada unidade tornou-se a espinha dorsal da civilização egípcia: os templos exibiriam por três mil anos as cenas do rei usando alternadamente as duas coroas, renovando simbolicamente a unificação que Narmer havia conquistado com sua maça.",
-        "imagem": "/eventos/hero-narmer-palette.jpg"
+        "imagem": "/eventos/momento-egito-coroa-dupla.jpg"
       }
     ],
     "locais": [
@@ -1652,35 +1652,35 @@
         "titulo": "A primeira olimpíada: Koroibos vence a corrida do estádio",
         "local": "Olímpia, Élida, Grécia",
         "texto": "A primeira edição registrada dos Jogos Olímpicos consistia em uma única prova: o estádio, uma corrida de aproximadamente 190 metros — o comprimento do estádio de pedra do santuário. O vencedor foi Koroibos de Elis, um cozinheiro ou padeiro (as fontes variam) cuja cidade natal era a própria Élida, região que administrava o santuário. Seu nome abriu o registro oficial dos vencedores olímpicos — a lista que os gregos usariam por séculos para datar eventos históricos, referindo-se a 'tal evento aconteceu na olimpíada em que venceu fulano'. Koroibos não recebeu dinheiro, ouro ou terras: apenas uma coroa de oliveira silvestre, cortada de uma árvore sagrada no recinto de Zeus, e o direito de erguer uma estátua em sua honra em Elis. Mas retornou para casa como herói, celebrado em poemas e festas — a lógica de que glória pública era o prêmio supremo estava no coração da cultura olímpica.",
-        "imagem": "/eventos/hero-olimpia-grecia.jpg"
+        "imagem": "/eventos/momento-olimpicos-estadio.jpg"
       },
       {
         "data": "776 a.C. em diante",
         "titulo": "A ekechéria: a trégua sagrada que unia rivais",
         "local": "Grécia",
         "texto": "O elemento mais extraordinário dos Jogos Olímpicos não era a competição esportiva em si — era a ekechéria, a trégua sagrada proclamada pelos heróis do santuário de Elis antes de cada olimpíada. Por um período de um a três meses (o tempo variou conforme os Jogos cresceram em duração e afluência), todas as cidades-estado gregas suspendiam hostilidades: exércitos paravam, batalhas eram adiadas, e os enviados de Elis — os spondophoroi, portadores da trégua — percorriam o mundo grego anunciando os Jogos e garantindo salvo-conduto a atletas, espectadores e embaixadores que se deslocassem a Olímpia. Violar a ekechéria era uma sacrilégio punível com multas pesadas e exclusão das competições. A trégua não extinguia guerras — mas criava uma janela onde o Mediterrâneo grego, por um breve momento a cada quatro anos, respirava junto.",
-        "imagem": "/eventos/hero-olimpia-grecia.jpg"
+        "imagem": "/eventos/momento-olimpicos-palestra.jpg"
       },
       {
         "data": "Séculos VIII – IV a.C.",
         "titulo": "O programa cresce: de uma corrida a um festival de cinco dias",
         "local": "Olímpia, Grécia",
         "texto": "Ao longo dos séculos seguintes, o programa olímpico expandiu-se gradualmente. Na 14ª olimpíada (724 a.C.) foi acrescentada a corrida do díaulos (dois comprimentos de estádio, ida e volta); na 15ª, o dólico (corrida de longa distância, 20 a 24 voltas). Na 18ª olimpíada (708 a.C.) chegou o pentatlo — salto em distância, corrida, disco, dardo e luta —, e no mesmo ano a luta livre. O pugilismo entrou em 688 a.C., a corrida de quadrigas (carros puxados por quatro cavalos) em 680 a.C. e o pancrácio — misto de luta e boxe sem regras exceto morder e furar os olhos — em 648 a.C. No auge, os Jogos duravam cinco dias inteiros: o primeiro para sacrifícios e juramentos, os três seguintes para as competições, o último para a cerimônia de premiação e banquetes. O templo de Zeus em Olímpia, erguido entre 470 e 456 a.C., abrigava a estátua crisoelefantina do deus — obra de Fídias considerada uma das Sete Maravilhas do Mundo Antigo.",
-        "imagem": "/eventos/hero-olimpia-grecia.jpg"
+        "imagem": "/eventos/momento-olimpicos-discobolo.jpg"
       },
       {
         "data": "393 d.C.",
         "titulo": "O fim dos Jogos: Teodósio I e a proibição",
         "local": "Milão, Império Romano",
         "texto": "Após mais de mil anos e pelo menos 293 olimpíadas, os Jogos Olímpicos foram extintos por decreto do imperador romano Teodósio I em 393 d.C. O contexto era o de uma campanha sistemática contra o paganismo: Teodósio havia proclamado o Édito de Tessalônica em 380, tornando o catolicismo niceno a religião oficial do Império, e fechado progressivamente templos e santuários politeístas. Os Jogos Olímpicos eram, na raiz, um festival religioso em honra a Zeus — incompatível com a nova ordem cristã. O santuário de Olímpia foi abandonado, seus tesouros dispersos, e o templo de Zeus destruído parcialmente por um edito posterior. Dois terremotos e as enchentes do rio Alfeu enterraram os restos do santuário sob metros de sedimento por séculos. A longa memória dos Jogos sobreviveu nos textos gregos e romanos — e foi a partir desses textos que um aristocrata francês do século XIX os redescobriria.",
-        "imagem": "/eventos/hero-olimpia-grecia.jpg"
+        "imagem": "/eventos/momento-olimpicos-templo-zeus.jpg"
       },
       {
         "data": "1896",
         "titulo": "O renascimento: os primeiros Jogos Olímpicos modernos",
         "local": "Atenas, Grécia",
         "texto": "O barão Pierre de Coubertin, educador e historiador francês fascinado pelo modelo educacional britânico e pela crença de que o esporte poderia promover paz entre nações, propôs a revivescência dos Jogos Olímpicos no Congresso Internacional de Paris em 1894. A ideia foi aprovada e os primeiros Jogos modernos realizados em Atenas em 1896, com a participação de 241 atletas de 14 nações. O estádio Panatenaico, reconstruído com mármore branco nos moldes do original do século IV a.C., acolheu as competições. A chama olímpica — inexistente na antiguidade como tradição contínua, mas evocada simbolicamente — tornaria-se o ícone dos Jogos modernos. Da corrida de 190 metros de Koroibos de Elis a uma cerimônia global transmitida para bilhões de pessoas, o intervalo é de quase três mil anos — mas a ideia central permaneceu: reunir rivais em torno de uma competição que, por um momento, substitui o conflito pela vitória conquistada com o próprio corpo.",
-        "imagem": "/eventos/hero-olimpia-grecia.jpg"
+        "imagem": "/eventos/momento-olimpicos-1896.jpg"
       }
     ],
     "locais": [
@@ -1776,35 +1776,35 @@
         "titulo": "O que a arqueologia diz: as primeiras aldeias do Palatino",
         "local": "Colina Palatina, Roma",
         "texto": "As escavações no Palatino e no Foro Romano revelaram traços de ocupação humana que remontam a pelo menos o século X a.C.: fundações de cabanas de madeira e palha, poços, silos para grãos e sepulturas que indicam comunidades pastorais estáveis. A chamada 'cabana de Rômulo' — uma estrutura encontrada nos anos 1940 no Palatino, preservada como relíquia sagrada ainda nos tempos imperiais — mostra o tipo de habitação típico das aldeias do Lácio pré-romano: oval, com estrutura de postes, teto de palha e piso de terra. Não havia cidade, muralhas, templos ou escrita nesse período: apenas uma concentração de aldeias nos cumes das colinas, separadas por pântanos e vegetação densa no fundo dos vales.",
-        "imagem": "/eventos/hero-loba-capitolina.jpg"
+        "imagem": "/eventos/momento-roma-palatino.jpg"
       },
       {
         "data": "c. 753 a.C.",
         "titulo": "O sulco sagrado de Rômulo: o rito de fundação",
         "local": "Colina Palatina, Roma",
         "texto": "Segundo o ritual itálico de fundação — que pode ter raízes etruscas — um novo centro urbano era delimitado pelo traçado de um sulco (o sulcus primigenius) com um arado puxado por um boi branco e uma vaca branca, enquanto o fundador caminhava por dentro erguendo a lâmina nos pontos onde as portas seriam abertas. O solo revirado formava o pomerium, o limite sagrado da cidade: cruzá-lo era sacrilégio para homens armados. A data de 21 de abril de 753 a.C. — o feriado romano do Parilia, festa dos pastores — foi fixada pelo erudito Varrão no século I a.C. combinando genealogias míticas e cálculos astronômicos. A lenda diz que Remo, em gesto de escárnio, saltou sobre o sulco ainda fresco; Rômulo o matou em nome da sacralidade do limite. Irmão mata irmão: a fundação de Roma começa com sangue.",
-        "imagem": "/eventos/hero-loba-capitolina.jpg"
+        "imagem": "/eventos/momento-roma-lupa.jpg"
       },
       {
         "data": "c. 753 – 716 a.C.",
         "titulo": "O rapto das sabinas e a primeira expansão demográfica",
         "local": "Roma e região dos Sabinos",
         "texto": "A nova cidade tinha um problema agudo: poucos habitantes e quase nenhuma mulher. A lenda conta que Rômulo convidou os povos vizinhos — sobretudo os sabinos — para uma festa religiosa e, durante os jogos, ordenou que seus homens raptassem as mulheres solteiras, que foram então integradas como esposas. O episódio, muito provavelmente uma memória mítica de fusões tribais reais, culminou com os exércitos sabinos marchando sobre Roma — mas as próprias mulheres raptadas interpuseram-se entre os combatentes para impedir o derramamento de sangue. O resultado foi uma aliança: Rômulo passou a cogovernas Roma com o rei sabino Títo Tácio, e as tribos fundindo-se gradualmente. Esse padrão de absorção de povos vizinhos — pela força, pela diplomacia ou pela lei — seria a estratégia central de crescimento de Roma por séculos.",
-        "imagem": "/eventos/hero-loba-capitolina.jpg"
+        "imagem": "/eventos/momento-roma-mapa.jpg"
       },
       {
         "data": "c. 753 – 509 a.C.",
         "titulo": "Os sete reis: do mito à história",
         "local": "Roma",
         "texto": "A tradição romana listou sete reis desde Rômulo até Tarquínio, o Soberbo, cujos reinados cobrem os séculos VIII a VI a.C.: Rômulo (fundador), Numa Pompílio (organizador das leis religiosas), Túlo Hostílio (guerreiro), Anco Márcio (construtor do porto de Óstia), Tarquínio Prisco (o primeiro rei etrusco, que trouxe arquitetura monumental), Sérvio Túlio (reorganizador do exército e criador do censo) e Tarquínio, o Soberbo (o tirano cuja expulsão deu origem à República). Os arqueólogos identificam nesse período a transição real de aldeias dispersas para um núcleo urbano com templos de pedra, Foro drenado e aberto, muralhas e planejamento de ruas — uma urbanização acelerada provavelmente com influência etrusca direta.",
-        "imagem": "/eventos/hero-loba-capitolina.jpg"
+        "imagem": "/eventos/figura-romulo-fundador.jpg"
       },
       {
         "data": "509 a.C.",
         "titulo": "A expulsão do rei e o nascimento da República",
         "local": "Roma",
         "texto": "A fase monárquica de Roma terminou em 509 a.C. com a expulsão de Tarquínio, o Soberbo, após o escândalo do estupro de Lucrécia — episódio que a tradição transforma em origem da virtude republicana. A monarquia foi substituída por dois cônsules eleitos anualmente, com poderes iguais e capacidade de veto mútuo — uma solução que diluía o poder individual e criava freios institucionais. Foi o começo de um sistema político que, ao longo dos séculos seguintes, com Senado, magistraturas e direito escrito, criaria as bases das democracias representativas ocidentais. Roma deixava de ser a criação de um rei e tornava-se, formalmente, a criação de seus cidadãos.",
-        "imagem": "/eventos/hero-loba-capitolina.jpg"
+        "imagem": "/eventos/momento-roma-forum.jpg"
       }
     ],
     "locais": [
@@ -1906,42 +1906,42 @@
         "titulo": "Ying Zheng sobe ao trono de Qin aos 13 anos",
         "local": "Xianyang, estado de Qin",
         "texto": "Quando Ying Zheng assumiu o trono do estado de Qin em 246 a.C., ninguém poderia prever que aquele adolescente se tornaria o homem que unificaria a China. Nascido de pai rei e mãe concubina, cresceu parte da infância como refém num estado rival — uma humilhação que alguns historiadores citam como fonte de sua determinação implacável. Nos primeiros anos, o poder real estava nas mãos do regente Lü Buwei e da influente mãe do rei; Ying Zheng assumiu o controle efetivo do governo apenas em 238 a.C., após sufocar uma conspiração. A partir daí, cercou-se de ministros de talento — notavelmente Li Si, legista de formação, que se tornaria o arquiteto intelectual do império — e começou a preparar meticulosamente a campanha de conquista.",
-        "imagem": "/eventos/hero-exercito-terracota.jpg"
+        "imagem": "/eventos/figura-qin-shi-huang.jpg"
       },
       {
         "data": "230 – 221 a.C.",
         "titulo": "A conquista dos seis reinos: um por um",
         "local": "China central",
         "texto": "A campanha de unificação durou exatamente dez anos e seguiu uma estratégia cuidadosamente calculada: isolar diplomaticamente cada reino antes de atacá-lo militarmente, usar suborno e espionagem para semear divisão entre os rivais, e atacar primeiro os reinos menores para ganhar recursos e território antes de enfrentar os maiores. O primeiro a cair foi Han, em 230 a.C. — o menor e mais fraco. Em seguida, Zhao (228 a.C.), Wei (225 a.C.), Chu (223 a.C., numa batalha que exigiu 600.000 soldados), Yan (222 a.C.) e finalmente Qi (221 a.C.), o último reino, que se rendeu quase sem luta. Cada conquista trouxe recursos, população, tecnologia e especialistas que foram imediatamente integrados ao aparato de Qin. O processo foi brutal — estimativas de mortos nas batalhas atingem centenas de milhares — mas militarmente eficiente.",
-        "imagem": "/eventos/hero-exercito-terracota.jpg"
+        "imagem": "/eventos/momento-china-estados.jpg"
       },
       {
         "data": "221 a.C.",
         "titulo": "Qin Shi Huang: o Primeiro Imperador se proclama",
         "local": "Xianyang, China",
         "texto": "Com a rendição de Qi em 221 a.C., Ying Zheng convocou seus ministros para decidir qual título usar para o governante de uma entidade política sem precedente. Os títulos tradicionais — wang (rei) ou ba (hegemon) — eram inadequados para quem governava toda a China. Li Si propôs uma solução: combinar os títulos dos lendários gobernantes míticos — Três Augustos e Cinco Imperadores — para criar um título novo: Huangdi, que traduziríamos como Imperador. Ying Zheng acrescentou o prefixo Shi ('primeiro' ou 'fundador'), declarando-se Qin Shi Huangdi: o Primeiro Augusto Imperador de Qin. A denominação era mais que vaidade: era uma declaração de que a China unificada não era continuação de nada anterior — era um começo absoluto. Seus sucessores deveriam numerar-se Segundo, Terceiro... por dez mil gerações. A dinastia Qin durou quinze anos.",
-        "imagem": "/eventos/hero-exercito-terracota.jpg"
+        "imagem": "/eventos/momento-china-territorio.jpg"
       },
       {
         "data": "221 – 210 a.C.",
         "titulo": "A padronização do império: pesos, medidas, escrita e estradas",
         "local": "China",
         "texto": "A unificação política foi seguida por uma das campanhas de padronização mais ambiciosas da história. Li Si liderou a unificação da escrita: o sistema de caracteres de Qin tornou-se o padrão de todo o império — burocratas de reinos que falavam dialetos mutuamente incompreensíveis passaram a se comunicar pelo mesmo sistema de escrita. Pesos e medidas foram padronizados, assim como a largura dos eixos dos carros — para que as rodeiras nas estradas de terra servissem a todos os veículos. Uma rede de estradas imperiais de aproximadamente 6.800 km foi construída irradiando de Xianyang. O sistema legal foi unificado, o calendário reformado. Ao mesmo tempo, livros que contradiziam a doutrina oficial do legismo — especialmente obras confucianas — foram queimados, e 460 eruditos foram enterrados vivos por supostamente subverter a ordem. A padronização foi total: não havia espaço para pluralidade ideológica no primeiro império.",
-        "imagem": "/eventos/hero-exercito-terracota.jpg"
+        "imagem": "/eventos/figura-shang-yang.jpg"
       },
       {
         "data": "c. 215 – 210 a.C.",
         "titulo": "A Grande Muralha e o Exército de Terracota",
         "local": "Norte da China e Monte Li, Xi'an",
         "texto": "As obras faraônicas de Qin Shi Huang definiram sua lenda e seu legado físico. No norte, ele ordenou que os muros defensivos já existentes nos reinos de Yan, Zhao e Wei fossem conectados e ampliados numa barreira contínua contra as incursões dos nômades Xiongnu — embrião da Grande Muralha que as dinastias seguintes continuariam a expandir por séculos. Centenas de milhares de trabalhadores — soldados, prisioneiros, camponeses — foram recrutados para a obra, e muitos morreram incorporados à própria muralha segundo a lenda. Simultaneamente, o imperador ordenou a construção de seu mausoléu no Monte Li, perto de Xianyang: uma tumba que levou 38 anos para ser construída por mais de 700.000 trabalhadores e incluía, entre outros tesouros, um exército de mais de 8.000 soldados de terracota em tamanho real, com rostos individualizados, para protegê-lo na eternidade. O câmara central, segundo as fontes antigas, continha um mapa em relevo do império com rios de mercúrio fluente. O local foi descoberto por acidente em 1974 e é hoje patrimônio mundial da UNESCO.",
-        "imagem": "/eventos/hero-exercito-terracota.jpg"
+        "imagem": "/eventos/momento-china-muralha.jpg"
       },
       {
         "data": "210 – 206 a.C.",
         "titulo": "A morte do imperador e o colapso da dinastia",
         "local": "China",
         "texto": "Qin Shi Huang morreu em 210 a.C., durante uma de suas inspeções ao império, provavelmente de envenenamento por mercúrio — irônico, pois consumia pílulas de mercúrio na crença de que lhe confeririam imortalidade. A morte foi mantida em segredo pelos ministros durante semanas para evitar levantes. O herdeiro legítimo foi afastado por uma conspiração de palácio que colocou um filho mais jovem — e manipulável — no trono. O segundo imperador de Qin foi incapaz de manter a ordem; dentro de quatro anos de rebeliões generalizadas, o império desmoronou. A dinastia que deveria durar dez mil gerações foi a mais curta das grandes dinastias chinesas. Mas deixou algo que nenhuma rebelião poderia desfazer: a ideia de que a China era uma, e deveria permanecer assim.",
-        "imagem": "/eventos/hero-exercito-terracota.jpg"
+        "imagem": "/eventos/momento-china-terracota.jpg"
       }
     ],
     "locais": [
@@ -2043,42 +2043,42 @@
         "titulo": "O saque de Roma por Alarico: o choque civilizacional",
         "local": "Roma",
         "texto": "Quando o rei visigodo Alarico saqueou Roma em 410 d.C., o impacto psicológico foi imenso — maior que o impacto militar. A cidade não havia sido invadida por inimigos externos em 800 anos, desde a invasão gaulesa de 390 a.C. Para os cristãos da época, a queda levantou questões teológicas urgentes: se Roma era protegida por Deus, como isso havia acontecido? Foi essa questão que levou Santo Agostinho a escrever A Cidade de Deus — obra que redirecionou a esperança cristã do Império terreno para um reino espiritual. O saque durou três dias e foi seguido da partida dos visigodos rumo ao sul da Itália e depois à Espanha, onde fundaram um reino. Roma continuou sendo habitada — mas o saque de 410 marcou o momento em que o mundo reconheceu que o Império Ocidental estava ferido de morte.",
-        "imagem": "/eventos/hero-queda-roma-ocidente.jpg"
+        "imagem": "/eventos/momento-roma-alarico-saque.jpg"
       },
       {
         "data": "434 – 453 d.C.",
         "titulo": "Atila e os hunos: o terror que acelerou o colapso",
         "local": "Panônia (atual Hungria) e Europa Ocidental",
         "texto": "A irrupção dos hunos na Europa, iniciada no final do século IV, não foi a causa principal da queda do Ocidente, mas funcionou como um acelerador: ao empurrar os povos germânicos — visigodos, ostrogodos, burgúndios, vândalos — para dentro das fronteiras romanas, criou uma pressão que o Império Ocidental não tinha capacidade de absorver. Atila, que assumiu o comando dos hunos por volta de 434 d.C. e assassinou seu co-líder irmão Bleda, liderou campanhas devastadoras nos Bálcãs, no norte da Itália (destruindo cidades como Aquileia, cujos refugiados fundaram Veneza) e na Gália, onde foi detido na Batalha dos Campos Cataláunicos em 451 d.C. — a única grande derrota de sua carreira. Sua morte em 453 d.C., na noite de seu casamento, dissolveu rapidamente o império huno, mas o dano ao tecido político e demográfico da Europa Ocidental já estava feito.",
-        "imagem": "/eventos/hero-queda-roma-ocidente.jpg"
+        "imagem": "/eventos/momento-roma-atila.jpg"
       },
       {
         "data": "455 d.C.",
         "titulo": "O saque de Roma pelos vândalos",
         "local": "Roma",
         "texto": "Em 455 d.C., Roma foi saqueada pela segunda vez em 45 anos — desta vez pelos vândalos liderados por Genserico, que haviam cruzado o Mediterrâneo da África do Norte numa frota de guerra. O saque durou duas semanas e foi mais sistemático que o de Alarico: os vândalos levaram ouro, prata, obras de arte e tesouros do templo de Jerusalém que Tito havia trazido para Roma em 70 d.C. A palavra 'vandalismo', embora historicamente imprecisa (os vândalos destruíam menos do que pilhavam), entrou na língua portuguesa a partir desse evento. O imperador Petrônio Máximo, que havia usurpado o trono e inadvertidamente provocado a invasão ao romper um acordo com Genserico, foi assassinado pela própria população romana antes mesmo de a frota vândala desembarcar.",
-        "imagem": "/eventos/hero-queda-roma-ocidente.jpg"
+        "imagem": "/eventos/momento-roma-vandalos.jpg"
       },
       {
         "data": "455 – 476 d.C.",
         "titulo": "A dissolução: dez imperadores em vinte anos",
         "local": "Ravena, Itália",
         "texto": "Nos vinte anos que separaram o saque vândalo de Roma da deposição final, o Império Ocidental viu desfilar dez imperadores — alguns reinando por poucos meses, vários assassinados por seus próprios generais. O poder real havia migrado irrevogavelmente dos imperadores para os 'magísteres militum', generais de origem em geral germânica que colocavam e depunham soberanos conforme seus interesses. Ricimero, de origem visigoda e sueva, foi o mais poderoso desses 'fazedores de imperadores': entre 456 e 472 d.C., depôs quatro imperadores e elevou quatro outros. O Ocidente havia se tornado um conjunto cada vez menor de territórios: a Britânia perdida desde cerca de 410, a Gália disputada com visigodos e burgúndios, a Hispânia controlada pelos visigodos, a África do Norte sob os vândalos. O que restava ao 'Imperador do Ocidente' era essencialmente o nordeste da Itália.",
-        "imagem": "/eventos/hero-queda-roma-ocidente.jpg"
+        "imagem": "/eventos/momento-roma-dissolucao.jpg"
       },
       {
         "data": "4 de setembro de 476 d.C.",
         "titulo": "Odoacro depõe Rômulo Augusto: o fim oficial",
         "local": "Ravena, Itália",
         "texto": "O último ato foi quase sem drama. Em agosto de 476, o general Odoacro — chefe de mercenários germânicos de várias tribos — liderou uma revolta das tropas que exigiam terras italianas como pagamento atrasado. O imperador Orestes, que havia colocado seu próprio filho no trono sob o nome de Rômulo Augusto (apelidado ironicamente de Augustulo, 'pequeno Augusto'), foi capturado e executado. Em 4 de setembro de 476, Odoacro convocou o jovem Rômulo — provavelmente com menos de 16 anos — e o exonerou do cargo imperial. Comovido pela aparência inofensiva do rapaz, em vez de matá-lo enviou-o para o exílio na Campânia com uma pensão generosa. Odoacro devolveu as insígnias imperiais ao imperador do Oriente em Constantinopla e governou a Itália simplesmente como rei — sem fingir ser Romano. A ficção do Império Ocidental havia chegado ao fim.",
-        "imagem": "/eventos/hero-queda-roma-ocidente.jpg"
+        "imagem": "/eventos/figura-romulo-augusto.jpg"
       },
       {
         "data": "476 d.C. em diante",
         "titulo": "O Oriente que sobreviveu: Constantinopla ainda era Roma",
         "local": "Constantinopla",
         "texto": "Em Constantinopla, o imperador Zenão continuou governando o que os romanos chamavam simplesmente de 'o Império' — sem a qualificação 'do Oriente', que é uma convenção historiográfica moderna. Para os habitantes de Bizâncio, o evento de 476 foi uma perturbação provincial: o Oriente tinha recursos, exércitos, comércio e cidades que o Ocidente havia perdido. O Império Romano do Oriente — que historiadores chamam de Império Bizantino, nome que seus habitantes jamais usaram — continuaria por outros 977 anos, até 1453 d.C., quando Constantinopla caiu para os turcos otomanos. Em termos de continuidade institucional, a Roma que 'caiu' em 476 era uma casca — a Roma real estava em Bizâncio, onde o direito romano, o grego helenístico e o cristianismo ortodoxo criavam uma civilização robusta e inovadora por mais de mil anos.",
-        "imagem": "/eventos/hero-queda-roma-ocidente.jpg"
+        "imagem": "/eventos/momento-roma-constantinopla.jpg"
       }
     ],
     "locais": [
