@@ -1589,13 +1589,13 @@
       {
         "nome": "Narmer (Menes)",
         "papel": "Faraó unificador do Egito",
-        "imagem": "",
+        "imagem": "/eventos/figura-narmer.jpg",
         "descricao": "Primeiro faraó documentado do Egito, unificou os dois reinos e é a figura central da Paleta de Narmer — o documento visual mais importante da fundação da civilização egípcia."
       },
       {
         "nome": "Hor-Aha",
         "papel": "Segundo faraó da Primeira Dinastia",
-        "imagem": "",
+        "imagem": "/eventos/figura-hor-aha.jpg",
         "descricao": "Sucessor imediato de Narmer e possivelmente o fundador efetivo de Mênfis, consolidou a administração do Egito unificado e expandiu o poder real pelo delta."
       },
       {
@@ -1607,7 +1607,7 @@
       {
         "nome": "Hórus",
         "papel": "Divindade protetora da realeza egípcia",
-        "imagem": "",
+        "imagem": "/eventos/figura-horus.jpg",
         "descricao": "O deus-falcão aparece na Paleta de Narmer sancionando a vitória real — e sua associação com o faraó como encarnação viva de Hórus tornou-se o fundamento teológico do poder egípcio por três milênios."
       }
     ],
@@ -1725,13 +1725,13 @@
       {
         "nome": "Teodósio I",
         "papel": "Imperador romano, responsável pela extinção dos Jogos",
-        "imagem": "",
+        "imagem": "/eventos/figura-teodosio-i.jpg",
         "descricao": "Proclamou o catolicismo niceno religião oficial do Império em 380 d.C. e aboliu os Jogos em 393 d.C. como parte de sua campanha sistemática contra os cultos pagãos."
       },
       {
         "nome": "Pierre de Coubertin",
         "papel": "Fundador dos Jogos Olímpicos modernos",
-        "imagem": "",
+        "imagem": "/eventos/figura-coubertin.jpg",
         "descricao": "Historiador e educador francês que propôs a revivescência dos Jogos em 1894 e organizou a primeira edição moderna em Atenas em 1896, fundando o Comitê Olímpico Internacional."
       }
     ],
@@ -1843,7 +1843,7 @@
       {
         "nome": "Rômulo",
         "papel": "Fundador mítico e primeiro rei de Roma",
-        "imagem": "",
+        "imagem": "/eventos/figura-romulo-fundador.jpg",
         "descricao": "Filho de Marte e Réia Sílvia na lenda, traçou o sulco sagrado que delimitou Roma, matou o irmão Remo e governou por 37 anos — seu desaparecimento misterioso foi interpretado como apoteose, tornando-o o deus Quirino."
       },
       {
@@ -1855,7 +1855,7 @@
       {
         "nome": "Numa Pompílio",
         "papel": "Segundo rei de Roma, legislador religioso",
-        "imagem": "",
+        "imagem": "/eventos/figura-numa.jpg",
         "descricao": "Rei sabino que sucedeu Rômulo e, segundo a tradição, organizou o calendário romano, criou os colégios sacerdotais e estabeleceu as bases do ius divinum — o direito religioso que regularia Roma por séculos."
       },
       {
@@ -1980,7 +1980,7 @@
       {
         "nome": "Qin Shi Huang (Ying Zheng)",
         "papel": "Primeiro Imperador da China Unificada",
-        "imagem": "",
+        "imagem": "/eventos/figura-qin-shi-huang.jpg",
         "descricao": "Subiu ao trono de Qin aos 13 anos, conquistou os seis reinos rivais entre 230 e 221 a.C., e criou as instituições — escrita unificada, direito único, moeda comum — que definiram a identidade chinesa por dois mil anos."
       },
       {
@@ -1998,7 +1998,7 @@
       {
         "nome": "Shang Yang",
         "papel": "Ministro reformista do século IV a.C.",
-        "imagem": "",
+        "imagem": "/eventos/figura-shang-yang.jpg",
         "descricao": "Seus reformas radicais — mérito militar substituindo nascimento nobre, leis uniformes, recenseamento rigoroso — transformaram Qin de estado periférico em máquina de conquista mais de cem anos antes de Qin Shi Huang nascer."
       }
     ],
@@ -2117,13 +2117,13 @@
       {
         "nome": "Rômulo Augusto",
         "papel": "Último imperador do Ocidente",
-        "imagem": "",
+        "imagem": "/eventos/figura-romulo-augusto.jpg",
         "descricao": "Adolescente colocado no trono pelo pai Orestes em 475 d.C. e deposto por Odoacro em 4 de setembro de 476 — seu nome era ao mesmo tempo o do fundador de Roma e o do primeiro imperador, tornando sua deposição simbólica além de política."
       },
       {
         "nome": "Odoacro",
         "papel": "Líder germânico, primeiro rei da Itália pós-romana",
-        "imagem": "",
+        "imagem": "/eventos/figura-odoacro.jpg",
         "descricao": "General de origem mista (skiri, huno ou godo — as fontes divergem), liderou a revolta final dos mercenários, depôs Rômulo Augusto sem derramamento de sangue e governou a Itália como rei por 17 anos, até ser assassinado por Teodorico, o Grande, em 493."
       },
       {
@@ -2135,7 +2135,7 @@
       {
         "nome": "Alarico I",
         "papel": "Rei dos visigodos, saqueador de Roma em 410",
-        "imagem": "",
+        "imagem": "/eventos/figura-alarico.jpg",
         "descricao": "General visigodo que havia servido no exército romano e liderou o primeiro saque de Roma em oito séculos — evento que chocou o mundo antigo e inspirou Agostinho a escrever A Cidade de Deus, redirigindo a esperança cristã do Império terreno para um reino espiritual."
       }
     ],
