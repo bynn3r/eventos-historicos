@@ -10,13 +10,20 @@
     "region": "África",
     "country": "Egito",
     "category": "Política",
-    "summary": "Menes une o Alto e Baixo Egito, fundando a primeira dinastia.",
-    "content": "O faraó Menes (também conhecido como Narmer) consegue unificar o Alto e Baixo Egito, estabelecendo a primeira dinastia e criando um dos primeiros estados centralizados da história. Este evento marca o início da civilização egípcia como a conhecemos, com a criação de um sistema administrativo complexo e o desenvolvimento da escrita hieroglífica.",
+    "summary": "Por volta de 3100 a.C., o rei Narmer uniu o Alto e o Baixo Egito sob uma única coroa — criando um dos primeiros Estados centralizados da história e lançando as bases da civilização faraônica que duraria três mil anos.",
+    "content": "Por volta de 3100 a.C., o Vale do Nilo era dividido em dois reinos distintos: o Alto Egito, ao sul, governado por faraós que usavam a coroa branca e tinham no abutre sua divindade protetora; e o Baixo Egito, ao norte, do delta do rio, cujo rei portava a coroa vermelha e reverenciava a cobra-real. Dois mundos com deuses, emblemas e cidades diferentes. A unificação desses dois reinos sob uma única autoridade é o evento que os historiadores apontam como o início da civilização egípcia propriamente dita.\n\nO personagem central da unificação é Narmer, identificado por muitos estudiosos com o lendário Menes que a tradição posterior recordou como o primeiro faraó. A Paleta de Narmer, placa de ardósia de cerca de 64 cm encontrada em Hieracômpolis no final do século XIX e hoje no Museu do Cairo, é o documento mais rico desse momento: de um lado, Narmer usa a coroa branca do Alto Egito e golpeia um inimigo; do outro, veste a coroa vermelha do Baixo Egito inspecionando prisioneiros. A imagem condensou séculos de conflito e a lógica de um poder que reivindicava legitimidade nos dois mundos ao mesmo tempo.\n\nA unificação não foi apenas política e simbólica. Ela criou as condições para um dos sistemas administrativos mais duráveis da história: impostos centralizados sobre a produção agrícola do Nilo, um corpo de escribas treinados para registrar em hieróglifos e uma corte real instalada em Mênfis, ponto estratégico entre os dois mundos. Dessa estrutura brotaria, nos séculos seguintes, a Idade de Ouro das pirâmides e uma tradição de 31 dinastias que persistiria por mais de três mil anos.",
     "importance": 4,
     "featured": false,
     "image": "/eventos/hero-narmer-palette.jpg",
-    "relatedEvents": [],
-    "characters": [],
+    "relatedEvents": ["codigo-hamurabi"],
+    "characters": [
+      {
+        "name": "Narmer (Menes)",
+        "role": "Faraó unificador do Egito",
+        "image": "",
+        "description": "Primeiro faraó documentado do Egito, unificou os dois reinos e é a figura central da Paleta de Narmer, o documento visual mais importante da fundação da civilização egípcia."
+      }
+    ],
     "sources": [],
     "keywords": [
       "egito",
@@ -24,7 +31,12 @@
       "narmer",
       "faraó",
       "nilo",
-      "primeira dinastia"
+      "primeira dinastia",
+      "paleta de narmer",
+      "alto egito",
+      "baixo egito",
+      "hieroglifos",
+      "menfis"
     ]
   },
   {
@@ -77,15 +89,29 @@
     "region": "Europa",
     "country": "Grécia",
     "category": "Cultural",
-    "summary": "Início dos Jogos Olímpicos na Grécia Antiga.",
-    "content": "Os primeiros Jogos Olímpicos registrados são realizados em Olímpia, na Grécia, em honra a Zeus. Este evento marca não apenas o início de uma tradição esportiva que perdura até hoje, mas também representa a importância da competição atlética na cultura grega e o desenvolvimento de um calendário pan-helênico que unia as cidades-estado gregas.",
+    "summary": "Em 776 a.C., atletas de várias cidades-estado gregas se reuniram em Olímpia pela primeira vez para uma competição em honra a Zeus — inaugurando um ritual que, a cada quatro anos, unia povos rivais sob uma trégua sagrada por mais de mil anos.",
+    "content": "Em 776 a.C., o santuário de Zeus em Olímpia reuniu, pela primeira vez em registro, atletas de várias cidades-estado gregas para uma competição de corrida em honra ao pai dos deuses. O vencedor da única prova — o estádio, uma corrida de aproximadamente 190 metros — foi Koroibos de Elis, cujo nome abriu o registro que serviria por séculos como calendário de referência para toda a Grécia.\n\nOs Jogos Olímpicos não eram um evento esportivo no sentido moderno: eram um ritual religioso realizado a cada quatro anos, e sua realização implicava a ekechéria, a trégua sagrada, pela qual todas as cidades-estado gregas suspendiam as guerras para garantir a passagem segura de atletas e espectadores. Ao longo dos séculos, o programa se expandiu para incluir corridas mais longas, pentatlo, luta, boxe, pancrácio e corridas de quadrigas. Os vencedores não recebiam dinheiro — apenas uma coroa de ramos de oliveira selvagem — mas voltavam para casa como heróis: poemas eram compostos em sua honra e estátuas erguidas nas praças.\n\nOs Jogos foram abolidos em 393 d.C. pelo imperador Teodósio I, que os considerava manifestação pagã, após mais de mil anos ininterruptos. Sobreviveram na memória e nos textos até o barão Pierre de Coubertin fundar, em 1896, os Jogos Olímpicos modernos em Atenas — redefinindo o esporte como instrumento de paz e entendimento entre nações e honrando, de forma deliberada, o modelo grego de competição civilizadora.",
     "importance": 3,
     "featured": false,
     "image": "/eventos/hero-olimpia-grecia.jpg",
     "relatedEvents": [
-      "fundacao-de-roma"
+      "fundacao-de-roma",
+      "conquistas-alexandre-grande"
     ],
-    "characters": [],
+    "characters": [
+      {
+        "name": "Koroibos de Elis",
+        "role": "Primeiro campeão olímpico registrado",
+        "image": "",
+        "description": "Venceu a corrida do estádio em 776 a.C., tornando-se o primeiro atleta registrado a receber a coroa de oliveira e o nome que abriu a lista oficial dos Jogos."
+      },
+      {
+        "name": "Zeus",
+        "role": "Divindade central do santuário de Olímpia",
+        "image": "",
+        "description": "Os Jogos eram realizados em sua honra; a enorme estátua criada pelo escultor Fídias no interior do templo de Olímpia era considerada uma das Sete Maravilhas do Mundo Antigo."
+      }
+    ],
     "sources": [],
     "keywords": [
       "olimpíadas",
@@ -93,7 +119,12 @@
       "grécia antiga",
       "olimpia",
       "zeus",
-      "atletismo"
+      "atletismo",
+      "ekecheria",
+      "trégua sagrada",
+      "koroibos",
+      "pan-helenismo",
+      "jogos olímpicos modernos"
     ]
   },
   {
@@ -107,8 +138,8 @@
     "region": "Europa",
     "country": "Itália",
     "category": "Política",
-    "summary": "História da fundação de Roma por Rômulo e Remo.",
-    "content": "Segundo a tradição romana, Roma é fundada por Rômulo após matar seu irmão gêmeo Remo. Embora seja uma lenda, esta data marca simbolicamente o início de uma das civilizações mais influentes da história, que evoluiria de uma pequena cidade-estado para um império que dominaria o Mediterrâneo por mais de mil anos.",
+    "summary": "A lenda diz que Rômulo matou o irmão Remo e fundou a cidade às margens do Tibre em 753 a.C. — mas por trás do mito há arqueologia real: é nesse período que aldeias latinas no Lácio começaram a se organizar no embrião do maior império do mundo antigo.",
+    "content": "A lenda romana conta que Rômulo e Remo, filhos gêmeos do deus Marte com a princesa Réia Sílvia, foram abandonados às margens do Tibre por um tio usurpador e amamentados por uma loba. Resgatados por um pastor, cresceram e derrubaram o tirano. Quando decidiram fundar uma cidade nova no local onde haviam sido encontrados, disputaram qual colina escolher: Rômulo preferiu o Palatino, Remo o Aventino. Remo cruzou a fronteira sagrada traçada pelo irmão como provocação — e Rômulo o matou, tornando-se o único fundador e senhor da cidade que levou seu nome. A data que a tradição fixou para esse ato: 21 de abril de 753 a.C.\n\nA arqueologia não confirma a lenda de Rômulo, mas registra atividade humana consistente nos montes romanos desde o século X a.C., com as primeiras estruturas permanentes sobre o Palatino datadas do século VIII a.C. — coincidindo com a data tradicional. O que 753 a.C. marca não é o instante mágico de uma fundação, mas o período em que aldeias etruscas e latinas no Lácio começaram a se organizar numa comunidade mais complexa, com muros, fórum e uma identidade coletiva distinta. A versão mítica serviu para legitimar essa origem e conectar a cidade a uma genealogia divina.\n\nDe aldeia de pastores a senhora do mundo mediterrâneo: a trajetória de Roma ao longo dos oito séculos seguintes seria uma das mais extraordinárias da história — república oligárquica que controlou a Itália, depois o Mediterrâneo, depois três continentes, e se transformou em Império que durou, em sua forma ocidental, até 476 d.C. O fundador lendário que matou o irmão se tornaria símbolo de uma ambição que não conhecia fronteiras — humanas nem divinas.",
     "importance": 4,
     "featured": false,
     "image": "/eventos/hero-loba-capitolina.jpg",
@@ -116,7 +147,20 @@
       "primeiros-jogos-olimpicos",
       "queda-imperio-romano-ocidente"
     ],
-    "characters": [],
+    "characters": [
+      {
+        "name": "Rômulo",
+        "role": "Fundador lendário de Roma",
+        "image": "",
+        "description": "Na tradição romana, filho de Marte e primeiro rei de Roma; matou o irmão Remo, fundou a cidade e após a morte foi deificado como Quirino, deus protetor dos romanos."
+      },
+      {
+        "name": "Remo",
+        "role": "Irmão gêmeo de Rômulo",
+        "image": "",
+        "description": "Co-fundador negado: na lenda, cruzou o sulco sagrado traçado pelo irmão e foi morto por ele, tornando-se símbolo dos limites do poder e do preço da fundação de qualquer ordem."
+      }
+    ],
     "sources": [],
     "keywords": [
       "roma",
@@ -124,7 +168,12 @@
       "remo",
       "itália",
       "império romano",
-      "loba capitolina"
+      "loba capitolina",
+      "palatino",
+      "tibre",
+      "lácio",
+      "fundação de roma",
+      "mito de fundação"
     ]
   },
   {
@@ -195,20 +244,45 @@
     "region": "Ásia",
     "country": "China",
     "category": "Política",
-    "summary": "Qin Shi Huang une a China e se torna o primeiro imperador.",
-    "content": "Qin Shi Huang completa a unificação da China, terminando o período dos Reinos Combatentes e estabelecendo a dinastia Qin. Ele padroniza a moeda, a escrita, as medidas e inicia a construção da Grande Muralha. Suas reformas criam a base para a China imperial que duraria mais de 2000 anos.",
+    "summary": "Em 221 a.C., após séculos de guerra entre reinos rivais, Qin Shi Huang derrotou o último adversário e se autoproclamou Primeiro Imperador — unificando a escrita, a moeda e as leis da China numa estrutura que definiria o país por mais de dois mil anos.",
+    "content": "Por quase dois séculos e meio, a China viveu o que ficou conhecido como o Período dos Reinos Combatentes: sete grandes estados — Qin, Chu, Zhao, Wei, Han, Yan e Qi — em guerra constante por dominação, num ciclo de alianças, traições e campanhas militares que ceifou milhões de vidas e remodelou continuamente o mapa da região. Em 221 a.C., o rei Ying Zheng do estado de Qin derrotou o último dos rivais, unificou pela primeira vez toda a China central sob uma única autoridade e criou para si um título sem precedente: Qin Shi Huang, o Primeiro Imperador.\n\nA unificação foi seguida de reformas profundas e deliberadas para impossibilitar a fragmentação: a escrita foi padronizada, eliminando as variações regionais que dificultavam a comunicação; pesos, medidas e moedas foram uniformizados; uma rede de estradas e canais conectou o território; e os estados conquistados foram transformados em comandaturas administradas por funcionários nomeados pelo governo central, em lugar de nobres hereditários. O sistema legal baseado no legalismo filosófico — leis claras, aplicadas independentemente do status social — foi imposto ao conjunto do império. Livros de outras correntes filosóficas, especialmente os confucianos, foram queimados.\n\nQin Shi Huang governou por apenas onze anos como imperador antes de morrer em 210 a.C., mas o modelo que criou persistiu. A dinastia Qin durou apenas até 206 a.C., rapidamente substituída pela Han, mas esta e todas as subsequentes mantiveram a estrutura administrativa centralizada que o Primeiro Imperador forjou. Para proteger as fronteiras setentrionais, ele conectou muralhas já existentes numa estrutura contínua — o embrião da Grande Muralha. Ao morrer, mandou construir uma necrópole monumental guardada por cerca de 8 mil soldados de terracota em tamanho real, redescobertos por agricultores em 1974 e hoje um dos sítios arqueológicos mais visitados do mundo.",
     "importance": 4,
     "featured": false,
     "image": "/eventos/hero-exercito-terracota.jpg",
-    "relatedEvents": [],
-    "characters": [],
+    "relatedEvents": ["conquistas-alexandre-grande"],
+    "characters": [
+      {
+        "name": "Qin Shi Huang (Ying Zheng)",
+        "role": "Primeiro Imperador da China",
+        "image": "",
+        "description": "Rei do estado de Qin que, após subjugar os seis reinos rivais, criou o título de imperador e impôs reformas que definiram a estrutura política chinesa pelos dois mil anos seguintes."
+      },
+      {
+        "name": "Li Si",
+        "role": "Chanceler do Império Qin",
+        "image": "",
+        "description": "Principal assessor político de Qin Shi Huang, arquiteto das reformas administrativas e do sistema de escrita unificado; defensor do legalismo como filosofia de Estado."
+      },
+      {
+        "name": "General Meng Tian",
+        "role": "Comandante das forças do norte",
+        "image": "",
+        "description": "Liderou campanhas contra os Xiongnu e supervisionou a construção dos primeiros trechos da Grande Muralha; executado após a morte do imperador por intrigas de corte."
+      }
+    ],
     "sources": [],
     "keywords": [
       "china",
       "qin shi huang",
       "dinastia qin",
       "grande muralha",
-      "reinos combatentes"
+      "reinos combatentes",
+      "exército de terracota",
+      "li si",
+      "legalismo",
+      "primeiro imperador",
+      "unificação china",
+      "xianyang"
     ]
   },
   {
@@ -222,8 +296,8 @@
     "region": "Europa",
     "country": "Itália",
     "category": "Política",
-    "summary": "Fim oficial do Império Romano do Ocidente.",
-    "content": "Odoacro, líder dos hérulos, depõe Rômulo Augusto, o último imperador romano do Ocidente, marcando o fim oficial do Império Romano do Ocidente. Este evento simboliza o fim da Antiguidade e o início da Idade Média na Europa, com profundas transformações políticas, sociais e culturais.",
+    "summary": "Em setembro de 476, o general germânico Odoacro depôs o adolescente Rômulo Augusto e devolveu as insígnias imperiais a Constantinopla — encerrando formalmente o Império Romano do Ocidente e, com ele, a Antiguidade europeia.",
+    "content": "Em 4 de setembro de 476 d.C., um adolescente chamado Rômulo Augusto foi deposto por Odoacro, líder de tropas mercenárias germânicas que serviam ao exército romano do Ocidente. O gesto foi quase uma formalidade: Rômulo não era reconhecido pelo Imperador do Oriente em Constantinopla, não controlava de fato território significativo e havia sido colocado no trono pelo próprio pai, o general Orestes, apenas dez meses antes. Odoacro remeteu as insígnias imperiais a Constantinopla com uma mensagem simples: um único imperador era suficiente para Roma. A data entrou para os livros como o fim do Império Romano do Ocidente — e como o fim da Antiguidade.\n\nA narrativa de uma \"queda\" súbita é, em grande parte, uma construção posterior. O Império Romano do Ocidente havia décadas era governado por generais bárbaros que mantinham imperadores titulares como marionetes, e o território que Roma controlava havia encolhido dramaticamente desde o século III. O que 476 marcou foi menos uma ruptura abrupta e mais a formalização do que já era realidade: a autoridade imperial romana no Ocidente havia se fragmentado em reinos germânicos autônomos — visigodos na Hispânia, francos na Gália, ostrogodos na Itália, vândalos no norte da África. O latim sobreviveu como língua eclesiástica e jurídica, o direito romano foi incorporado pelos novos reinos, e a Igreja Católica preencheu parte do espaço institucional deixado pelo colapso da administração imperial.\n\nO Império Romano do Oriente — que a posteridade chamaria de Império Bizantino — continuou existindo por quase mais mil anos, com capital em Constantinopla, até sua queda diante dos otomanos em 1453. Para muitos historiadores, portanto, \"Roma\" não caiu em 476: transformou-se. A data é, sobretudo, um marcador conveniente para o encerramento de uma era e o início da Idade Média europeia, um mundo diferente que, mesmo assim, se construiu sobre as ruínas e os alicerces do que Roma havia sido.",
     "importance": 5,
     "featured": false,
     "image": "/eventos/hero-queda-roma-ocidente.jpg",
@@ -232,7 +306,26 @@
       "queda-constantinopla",
       "coroacao-carlos-magno"
     ],
-    "characters": [],
+    "characters": [
+      {
+        "name": "Rômulo Augusto",
+        "role": "Último imperador romano do Ocidente",
+        "image": "",
+        "description": "Adolescente colocado no trono pelo pai, o general Orestes; deposto por Odoacro em setembro de 476 sem resistência; foi exilado para uma villa na Campânia, onde viveu por décadas."
+      },
+      {
+        "name": "Odoacro",
+        "role": "Líder germânico, primeiro rei da Itália",
+        "image": "",
+        "description": "Chefe de tropas hérulas, hunnos e skiros no exército romano; após depor Rômulo Augusto, governou a Itália como rei vassalo de Constantinopla por quase dezesseis anos."
+      },
+      {
+        "name": "Orestes",
+        "role": "General romano, pai de Rômulo Augusto",
+        "image": "",
+        "description": "Filho de pai romano e mãe germânica, foi o poder real por trás do governo de Rômulo Augusto; recusou-se a ceder terras às tropas de Odoacro e foi morto em Pavia."
+      }
+    ],
     "sources": [],
     "keywords": [
       "roma",
@@ -241,7 +334,11 @@
       "rômulo augusto",
       "queda de roma",
       "idade média",
-      "bárbaros"
+      "bárbaros",
+      "herulos",
+      "orestes",
+      "fim da antiguidade",
+      "reinos germânicos"
     ]
   },
   {
