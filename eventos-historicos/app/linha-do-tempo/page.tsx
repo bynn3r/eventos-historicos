@@ -1,6 +1,6 @@
 "use client"
 
-import { useMemo, useState } from "react"
+import { useEffect, useMemo, useRef, useState } from "react"
 import Link from "next/link"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
@@ -87,10 +87,83 @@ function EventDialogContent({ event }: { event: TimelineEvent }) {
   )
 }
 
+function TimelineEventItem({ event, index }: { event: TimelineEvent; index: number }) {
+  const ref = useRef<HTMLDivElement>(null)
+  const { icon: IconComponent, color } = getVisual(event.slug)
+  const isLeft = index % 2 === 0
+
+  useEffect(() => {
+    const el = ref.current
+    if (!el) return
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          el.classList.add("is-visible")
+          observer.disconnect()
+        }
+      },
+      { threshold: 0.12, rootMargin: "0px 0px -48px 0px" },
+    )
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [])
+
+  return (
+    <div
+      ref={ref}
+      className="timeline-item relative grid grid-cols-[auto_1fr] md:grid-cols-[1fr_40px_1fr] items-start md:items-center gap-x-6 md:gap-x-0"
+    >
+      {/* Icon — mobile: col 1; desktop: always center column */}
+      <div className="md:col-start-2 md:row-start-1 flex items-center justify-center">
+        <div
+          className={`timeline-dot w-8 h-8 md:w-10 md:h-10 ${color} rounded-full border-4 border-background flex items-center justify-center shadow-lg z-10`}
+        >
+          <IconComponent className="h-4 w-4 md:h-5 md:w-5 text-white" />
+        </div>
+      </div>
+
+      {/* Card — mobile: col 2; desktop: col 1 (even) or col 3 (odd) */}
+      <div
+        className={[
+          "pb-8 md:pb-0 md:row-start-1",
+          isLeft ? "md:col-start-1 md:flex md:justify-end md:pr-8" : "md:col-start-3 md:pl-8",
+        ].join(" ")}
+      >
+        <Dialog>
+          <DialogTrigger asChild>
+            <Card className="w-full md:max-w-md cursor-pointer hover:shadow-lg transition-all duration-200 hover:scale-[1.02]">
+              <CardHeader className="pb-3">
+                <div className={`flex items-center gap-2 mb-3 ${isLeft ? "md:flex-row-reverse" : ""}`}>
+                  <Badge className={`${color} text-white font-semibold`}>{event.dateDisplay}</Badge>
+                  <Badge variant="secondary">{event.category}</Badge>
+                </div>
+                <CardTitle className={`text-xl leading-tight ${isLeft ? "md:text-right" : ""}`}>
+                  {event.title}
+                </CardTitle>
+                <CardDescription className={`text-base leading-relaxed ${isLeft ? "md:text-right" : ""}`}>
+                  {event.summary}
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className={`flex items-center gap-2 text-sm text-muted-foreground ${isLeft ? "md:flex-row-reverse" : ""}`}>
+                  <MapPin className="h-4 w-4" />
+                  <span>{event.region}</span>
+                </div>
+              </CardContent>
+            </Card>
+          </DialogTrigger>
+          <EventDialogContent event={event} />
+        </Dialog>
+      </div>
+    </div>
+  )
+}
+
 export default function LinhaDoTempoPage() {
   const allEvents = useMemo(() => getAllTimelineEvents(), [])
 
   const [selectedCategory, setSelectedCategory] = useState<string>("all")
+
   const [selectedRegion, setSelectedRegion] = useState<string>("all")
   const [selectedPeriod, setSelectedPeriod] = useState<string>("all")
   const [searchTerm, setSearchTerm] = useState<string>("")
@@ -103,6 +176,37 @@ export default function LinhaDoTempoPage() {
     period: selectedPeriod,
     sort: sortOrder,
   })
+
+  // Scroll-linked timeline line
+  const lineDesktopRef = useRef<HTMLDivElement>(null)
+  const lineMobileRef = useRef<HTMLDivElement>(null)
+  const timelineContainerRef = useRef<HTMLDivElement>(null)
+  const updateLineRef = useRef<() => void>(() => {})
+
+  useEffect(() => {
+    const update = () => {
+      const line = lineDesktopRef.current
+      const container = timelineContainerRef.current
+      if (!line || !container) return
+      const rect = container.getBoundingClientRect()
+      const progress = Math.max(0, Math.min(1, (window.innerHeight * 0.55 - rect.top) / rect.height))
+      line.style.transform = `scaleY(${progress})`
+    }
+    updateLineRef.current = update
+
+    // Reveal lines
+    lineDesktopRef.current?.classList.add("is-ready")
+    lineMobileRef.current?.classList.add("is-ready")
+
+    window.addEventListener("scroll", update, { passive: true })
+    update()
+    return () => window.removeEventListener("scroll", update)
+  }, [])
+
+  // Recalculate when filters change (container height changes)
+  useEffect(() => {
+    updateLineRef.current()
+  }, [filteredEvents])
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -192,74 +296,27 @@ export default function LinhaDoTempoPage() {
         {/* Timeline */}
         <section className="py-12">
           <div className="container mx-auto px-4">
-            <div className="relative max-w-6xl mx-auto">
+            <div ref={timelineContainerRef} className="relative max-w-6xl mx-auto">
               {/* Timeline Line - Hidden on mobile, visible on desktop */}
-              <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-primary/20 via-primary to-primary/20"></div>
+              <div
+                ref={lineDesktopRef}
+                className="timeline-line-desktop hidden md:block absolute left-1/2 -translate-x-1/2 w-1 h-full bg-gradient-to-b from-primary/20 via-primary to-primary/20"
+              />
 
               {/* Mobile Timeline Line */}
-              <div className="md:hidden absolute left-4 top-0 w-1 h-full bg-gradient-to-b from-primary/20 via-primary/20 to-primary/20"></div>
+              <div
+                ref={lineMobileRef}
+                className="timeline-line-mobile md:hidden absolute left-4 top-0 w-1 h-full bg-gradient-to-b from-primary/20 via-primary/20 to-primary/20"
+              />
 
+              {/* Single DOM tree per event — no duplication for crawlers.
+                  Mobile: 2-col grid [icon | card].
+                  Desktop: 3-col grid [left(1fr) | center(40px) | right(1fr)].
+                  Card placed in col-1 (even) or col-3 (odd) via md:col-start-*. */}
               <div className="space-y-8 md:space-y-16">
-                {filteredEvents.map((event, index) => {
-                  const { icon: IconComponent, color } = getVisual(event.slug)
-                  const isLeft = index % 2 === 0
-
-                  return (
-                    // Single DOM tree per event — no duplication for crawlers.
-                    // Mobile: 2-col grid [icon | card].
-                    // Desktop: 3-col grid [left(1fr) | center(40px) | right(1fr)].
-                    // The card is placed in col-1 (even) or col-3 (odd) via md:col-start-*.
-                    <div
-                      key={event.id}
-                      className="relative grid grid-cols-[auto_1fr] md:grid-cols-[1fr_40px_1fr] items-start md:items-center gap-x-6 md:gap-x-0"
-                    >
-                      {/* Icon — mobile: col 1; desktop: always center column */}
-                      <div className="md:col-start-2 md:row-start-1 flex items-center justify-center">
-                        <div
-                          className={`w-8 h-8 md:w-10 md:h-10 ${color} rounded-full border-4 border-background flex items-center justify-center shadow-lg z-10`}
-                        >
-                          <IconComponent className="h-4 w-4 md:h-5 md:w-5 text-white" />
-                        </div>
-                      </div>
-
-                      {/* Card — mobile: col 2; desktop: col 1 (even) or col 3 (odd) */}
-                      <div
-                        className={[
-                          "pb-8 md:pb-0 md:row-start-1",
-                          isLeft
-                            ? "md:col-start-1 md:flex md:justify-end md:pr-8"
-                            : "md:col-start-3 md:pl-8",
-                        ].join(" ")}
-                      >
-                        <Dialog>
-                          <DialogTrigger asChild>
-                            <Card className="w-full md:max-w-md cursor-pointer hover:shadow-lg transition-all duration-200 hover:scale-[1.02]">
-                              <CardHeader className="pb-3">
-                                <div className={`flex items-center gap-2 mb-3 ${isLeft ? "md:flex-row-reverse" : ""}`}>
-                                  <Badge className={`${color} text-white font-semibold`}>{event.dateDisplay}</Badge>
-                                  <Badge variant="secondary">{event.category}</Badge>
-                                </div>
-                                <CardTitle className={`text-xl leading-tight ${isLeft ? "md:text-right" : ""}`}>
-                                  {event.title}
-                                </CardTitle>
-                                <CardDescription className={`text-base leading-relaxed ${isLeft ? "md:text-right" : ""}`}>
-                                  {event.summary}
-                                </CardDescription>
-                              </CardHeader>
-                              <CardContent>
-                                <div className={`flex items-center gap-2 text-sm text-muted-foreground ${isLeft ? "md:flex-row-reverse" : ""}`}>
-                                  <MapPin className="h-4 w-4" />
-                                  <span>{event.region}</span>
-                                </div>
-                              </CardContent>
-                            </Card>
-                          </DialogTrigger>
-                          <EventDialogContent event={event} />
-                        </Dialog>
-                      </div>
-                    </div>
-                  )
-                })}
+                {filteredEvents.map((event, index) => (
+                  <TimelineEventItem key={event.id} event={event} index={index} />
+                ))}
               </div>
 
               {filteredEvents.length === 0 && (

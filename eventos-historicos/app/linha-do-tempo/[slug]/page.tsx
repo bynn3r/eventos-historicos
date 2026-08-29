@@ -3,13 +3,14 @@ import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
-import { ArrowLeft, ArrowRight, MapPin, Globe2, BookOpen } from "lucide-react"
+import { ArrowLeft, ArrowRight, Globe2, BookOpen } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 import { notFound } from "next/navigation"
 import grandesEventosData from "@/data/grandes-eventos.json"
 import { getAllTimelineEvents, getTimelineEventBySlug, getRelatedTimelineEvents } from "@/lib/timeline"
 import { findRelatedContent } from "@/lib/related-content"
+import { EventHero } from "@/components/event-hero"
 
 const SITE_URL = "https://eventoshistoricos.com.br"
 
@@ -113,57 +114,20 @@ export default function LinhaDoTempoEventoPage({ params }: LinhaDoTempoEventoPag
       />
 
       <main className="flex-1">
+        {/* Cinematic hero */}
+        <EventHero
+          title={event.title}
+          dateDisplay={event.dateDisplay}
+          period={event.period}
+          category={event.category}
+          country={event.country}
+          region={event.region}
+          summary={event.summary}
+          image={event.image}
+        />
+
         <article className="py-12">
           <div className="container mx-auto px-4 max-w-4xl">
-            {/* Breadcrumb */}
-            <nav aria-label="breadcrumb" className="mb-6 text-sm text-muted-foreground">
-              <Link href="/" className="hover:text-foreground">
-                Início
-              </Link>
-              <span className="mx-2">/</span>
-              <Link href="/linha-do-tempo" className="hover:text-foreground">
-                Linha do Tempo
-              </Link>
-              <span className="mx-2">/</span>
-              <span className="text-foreground">{event.title}</span>
-            </nav>
-
-            <Button variant="ghost" asChild className="mb-6 pl-0">
-              <Link href="/linha-do-tempo">
-                <ArrowLeft className="mr-2 h-4 w-4" />
-                Voltar à Linha do Tempo
-              </Link>
-            </Button>
-
-            {/* Header */}
-            <div className="mb-8">
-              <div className="flex flex-wrap items-center gap-2 mb-4">
-                <Badge className="text-base font-bold px-3 py-1">{event.dateDisplay}</Badge>
-                <Badge variant="secondary">{event.period}</Badge>
-                <Badge variant="outline">{event.category}</Badge>
-              </div>
-
-              <h1 className="text-4xl md:text-5xl font-bold text-balance mb-6">{event.title}</h1>
-
-              <p className="text-xl text-muted-foreground text-pretty max-w-3xl mb-4">{event.summary}</p>
-
-              <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
-                <div className="flex items-center gap-2">
-                  <MapPin className="h-4 w-4" />
-                  <span>
-                    {event.country} · {event.region}
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            {/* Featured Image */}
-            {event.image && (
-              <div className="aspect-video relative mb-8 rounded-lg overflow-hidden">
-                <Image src={event.image} alt={event.title} fill priority className="object-cover" />
-              </div>
-            )}
-
             {/* Flagship experience banner */}
             {hasFlagshipExperience && (
               <Card className="mb-10 border-primary/30 bg-primary/5">

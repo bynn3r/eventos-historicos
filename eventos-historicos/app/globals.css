@@ -126,3 +126,43 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* ── Timeline scroll-reveal animations ───────────────── */
+.timeline-item {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+.timeline-item.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.timeline-dot {
+  transform: scale(0);
+  opacity: 0;
+  transition:
+    transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1) 0.25s,
+    opacity 0.3s ease 0.25s;
+}
+.timeline-item.is-visible .timeline-dot {
+  transform: scale(1);
+  opacity: 1;
+}
+.timeline-line-desktop {
+  transform-origin: top;
+  transform: scaleY(0);
+  opacity: 0;
+  transition:
+    transform 0.12s linear,
+    opacity 0.8s ease 0.2s;
+}
+.timeline-line-desktop.is-ready {
+  opacity: 1;
+}
+.timeline-line-mobile {
+  opacity: 0;
+  transition: opacity 1s ease 0.4s;
+}
+.timeline-line-mobile.is-ready {
+  opacity: 1;
+}
