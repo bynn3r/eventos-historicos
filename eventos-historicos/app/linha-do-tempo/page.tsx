@@ -196,8 +196,8 @@ export default function LinhaDoTempoPage() {
               {/* Timeline Line - Hidden on mobile, visible on desktop */}
               <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-primary/20 via-primary to-primary/20"></div>
 
-              {/* Mobile Timeline Line - Visible only on mobile */}
-              <div className="md:hidden absolute left-8 top-0 w-1 h-full bg-gradient-to-b from-primary/20 via-primary/20 to-primary/20"></div>
+              {/* Mobile Timeline Line */}
+              <div className="md:hidden absolute left-4 top-0 w-1 h-full bg-gradient-to-b from-primary/20 via-primary/20 to-primary/20"></div>
 
               <div className="space-y-8 md:space-y-16">
                 {filteredEvents.map((event, index) => {
@@ -205,126 +205,57 @@ export default function LinhaDoTempoPage() {
                   const isLeft = index % 2 === 0
 
                   return (
-                    <div key={event.id} className="relative">
-                      {/* Mobile Layout */}
-                      <div className="md:hidden flex items-start gap-6">
-                        {/* Timeline Point */}
-                        <div className="relative flex-shrink-0">
-                          <div
-                            className={`w-8 h-8 ${color} rounded-full border-4 border-background flex items-center justify-center shadow-lg`}
-                          >
-                            <IconComponent className="h-4 w-4 text-white" />
-                          </div>
-                        </div>
-
-                        {/* Event Card */}
-                        <div className="flex-1 pb-8">
-                          <Dialog>
-                            <DialogTrigger asChild>
-                              <Card className="cursor-pointer hover:shadow-lg transition-all duration-200 hover:scale-[1.02]">
-                                <CardHeader className="pb-3">
-                                  <div className="flex items-center gap-2 mb-3">
-                                    <Badge className={`${color} text-white font-semibold`}>{event.dateDisplay}</Badge>
-                                    <Badge variant="secondary">{event.category}</Badge>
-                                  </div>
-                                  <CardTitle className="text-xl leading-tight">{event.title}</CardTitle>
-                                  <CardDescription className="text-base leading-relaxed">
-                                    {event.summary}
-                                  </CardDescription>
-                                </CardHeader>
-                                <CardContent>
-                                  <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                                    <MapPin className="h-4 w-4" />
-                                    <span>{event.region}</span>
-                                  </div>
-                                </CardContent>
-                              </Card>
-                            </DialogTrigger>
-                            <EventDialogContent event={event} />
-                          </Dialog>
+                    // Single DOM tree per event — no duplication for crawlers.
+                    // Mobile: 2-col grid [icon | card].
+                    // Desktop: 3-col grid [left(1fr) | center(40px) | right(1fr)].
+                    // The card is placed in col-1 (even) or col-3 (odd) via md:col-start-*.
+                    <div
+                      key={event.id}
+                      className="relative grid grid-cols-[auto_1fr] md:grid-cols-[1fr_40px_1fr] items-start md:items-center gap-x-6 md:gap-x-0"
+                    >
+                      {/* Icon — mobile: col 1; desktop: always center column */}
+                      <div className="md:col-start-2 md:row-start-1 flex items-center justify-center">
+                        <div
+                          className={`w-8 h-8 md:w-10 md:h-10 ${color} rounded-full border-4 border-background flex items-center justify-center shadow-lg z-10`}
+                        >
+                          <IconComponent className="h-4 w-4 md:h-5 md:w-5 text-white" />
                         </div>
                       </div>
 
-                      {/* Desktop Layout */}
-                      <div className="hidden md:block">
-                        <div className="flex items-center">
-                          {/* Left Side Content */}
-                          <div className="flex-1 pr-8">
-                            {isLeft && (
-                              <div className="flex justify-end">
-                                <Dialog>
-                                  <DialogTrigger asChild>
-                                    <Card className="w-full max-w-md cursor-pointer hover:shadow-lg transition-all duration-200 hover:scale-[1.02]">
-                                      <CardHeader className="pb-3">
-                                        <div className="flex items-center justify-end gap-2 mb-3">
-                                          <Badge variant="secondary">{event.category}</Badge>
-                                          <Badge className={`${color} text-white font-semibold`}>
-                                            {event.dateDisplay}
-                                          </Badge>
-                                        </div>
-                                        <CardTitle className="text-xl leading-tight text-right">
-                                          {event.title}
-                                        </CardTitle>
-                                        <CardDescription className="text-base leading-relaxed text-right">
-                                          {event.summary}
-                                        </CardDescription>
-                                      </CardHeader>
-                                      <CardContent>
-                                        <div className="flex items-center justify-end gap-2 text-sm text-muted-foreground">
-                                          <span>{event.region}</span>
-                                          <MapPin className="h-4 w-4" />
-                                        </div>
-                                      </CardContent>
-                                    </Card>
-                                  </DialogTrigger>
-                                  <EventDialogContent event={event} />
-                                </Dialog>
-                              </div>
-                            )}
-                          </div>
-
-                          {/* Center Timeline Point */}
-                          <div className="relative flex-shrink-0">
-                            <div
-                              className={`w-10 h-10 ${color} rounded-full border-4 border-background flex items-center justify-center shadow-lg z-10 relative`}
-                            >
-                              <IconComponent className="h-5 w-5 text-white" />
-                            </div>
-                          </div>
-
-                          {/* Right Side Content */}
-                          <div className="flex-1 pl-8">
-                            {!isLeft && (
-                              <div className="flex justify-start">
-                                <Dialog>
-                                  <DialogTrigger asChild>
-                                    <Card className="w-full max-w-md cursor-pointer hover:shadow-lg transition-all duration-200 hover:scale-[1.02]">
-                                    <CardHeader className="pb-3">
-                                      <div className="flex items-center gap-2 mb-3">
-                                        <Badge className={`${color} text-white font-semibold`}>
-                                          {event.dateDisplay}
-                                        </Badge>
-                                        <Badge variant="secondary">{event.category}</Badge>
-                                      </div>
-                                      <CardTitle className="text-xl leading-tight">{event.title}</CardTitle>
-                                      <CardDescription className="text-base leading-relaxed">
-                                        {event.summary}
-                                      </CardDescription>
-                                    </CardHeader>
-                                    <CardContent>
-                                      <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                                        <MapPin className="h-4 w-4" />
-                                        <span>{event.region}</span>
-                                      </div>
-                                    </CardContent>
-                                  </Card>
-                                </DialogTrigger>
-                                <EventDialogContent event={event} />
-                                </Dialog>
-                              </div>
-                            )}
-                          </div>
-                        </div>
+                      {/* Card — mobile: col 2; desktop: col 1 (even) or col 3 (odd) */}
+                      <div
+                        className={[
+                          "pb-8 md:pb-0 md:row-start-1",
+                          isLeft
+                            ? "md:col-start-1 md:flex md:justify-end md:pr-8"
+                            : "md:col-start-3 md:pl-8",
+                        ].join(" ")}
+                      >
+                        <Dialog>
+                          <DialogTrigger asChild>
+                            <Card className="w-full md:max-w-md cursor-pointer hover:shadow-lg transition-all duration-200 hover:scale-[1.02]">
+                              <CardHeader className="pb-3">
+                                <div className={`flex items-center gap-2 mb-3 ${isLeft ? "md:flex-row-reverse" : ""}`}>
+                                  <Badge className={`${color} text-white font-semibold`}>{event.dateDisplay}</Badge>
+                                  <Badge variant="secondary">{event.category}</Badge>
+                                </div>
+                                <CardTitle className={`text-xl leading-tight ${isLeft ? "md:text-right" : ""}`}>
+                                  {event.title}
+                                </CardTitle>
+                                <CardDescription className={`text-base leading-relaxed ${isLeft ? "md:text-right" : ""}`}>
+                                  {event.summary}
+                                </CardDescription>
+                              </CardHeader>
+                              <CardContent>
+                                <div className={`flex items-center gap-2 text-sm text-muted-foreground ${isLeft ? "md:flex-row-reverse" : ""}`}>
+                                  <MapPin className="h-4 w-4" />
+                                  <span>{event.region}</span>
+                                </div>
+                              </CardContent>
+                            </Card>
+                          </DialogTrigger>
+                          <EventDialogContent event={event} />
+                        </Dialog>
                       </div>
                     </div>
                   )
