@@ -15,12 +15,14 @@
     "importance": 4,
     "featured": true,
     "image": "/eventos/hero-narmer-palette.jpg",
-    "relatedEvents": ["codigo-hamurabi"],
+    "relatedEvents": [
+      "codigo-hamurabi"
+    ],
     "characters": [
       {
         "name": "Narmer (Menes)",
         "role": "Faraó unificador do Egito",
-        "image": "",
+        "image": "/eventos/figura-narmer.jpg",
         "description": "Primeiro faraó documentado do Egito, unificou os dois reinos e é a figura central da Paleta de Narmer, o documento visual mais importante da fundação da civilização egípcia."
       }
     ],
@@ -55,7 +57,10 @@
     "importance": 4,
     "featured": false,
     "image": "/eventos/hero-codigo-hamurabi.jpg",
-    "relatedEvents": ["unificacao-egito", "conquistas-alexandre-grande"],
+    "relatedEvents": [
+      "unificacao-egito",
+      "conquistas-alexandre-grande"
+    ],
     "characters": [
       {
         "name": "Hamurábi",
@@ -108,7 +113,7 @@
       {
         "name": "Zeus",
         "role": "Divindade central do santuário de Olímpia",
-        "image": "",
+        "image": "/eventos/figura-zeus.jpg",
         "description": "Os Jogos eram realizados em sua honra; a enorme estátua criada pelo escultor Fídias no interior do templo de Olímpia era considerada uma das Sete Maravilhas do Mundo Antigo."
       }
     ],
@@ -151,7 +156,7 @@
       {
         "name": "Rômulo",
         "role": "Fundador lendário de Roma",
-        "image": "",
+        "image": "/eventos/figura-romulo-fundador.jpg",
         "description": "Na tradição romana, filho de Marte e primeiro rei de Roma; matou o irmão Remo, fundou a cidade e após a morte foi deificado como Quirino, deus protetor dos romanos."
       },
       {
@@ -192,7 +197,11 @@
     "importance": 5,
     "featured": false,
     "image": "/eventos/hero-conquistas-alexandre-grande.jpg",
-    "relatedEvents": ["primeiros-jogos-olimpicos", "unificacao-china", "codigo-hamurabi"],
+    "relatedEvents": [
+      "primeiros-jogos-olimpicos",
+      "unificacao-china",
+      "codigo-hamurabi"
+    ],
     "characters": [
       {
         "name": "Alexandre, o Grande",
@@ -249,12 +258,14 @@
     "importance": 4,
     "featured": true,
     "image": "/eventos/hero-exercito-terracota.jpg",
-    "relatedEvents": ["conquistas-alexandre-grande"],
+    "relatedEvents": [
+      "conquistas-alexandre-grande"
+    ],
     "characters": [
       {
         "name": "Qin Shi Huang (Ying Zheng)",
         "role": "Primeiro Imperador da China",
-        "image": "",
+        "image": "/eventos/figura-qin-shi-huang.jpg",
         "description": "Rei do estado de Qin que, após subjugar os seis reinos rivais, criou o título de imperador e impôs reformas que definiram a estrutura política chinesa pelos dois mil anos seguintes."
       },
       {
@@ -310,13 +321,13 @@
       {
         "name": "Rômulo Augusto",
         "role": "Último imperador romano do Ocidente",
-        "image": "",
+        "image": "/eventos/figura-romulo-augusto.jpg",
         "description": "Adolescente colocado no trono pelo pai, o general Orestes; deposto por Odoacro em setembro de 476 sem resistência; foi exilado para uma villa na Campânia, onde viveu por décadas."
       },
       {
         "name": "Odoacro",
         "role": "Líder germânico, primeiro rei da Itália",
-        "image": "",
+        "image": "/eventos/figura-odoacro.jpg",
         "description": "Chefe de tropas hérulas, hunnos e skiros no exército romano; após depor Rômulo Augusto, governou a Itália como rei vassalo de Constantinopla por quase dezesseis anos."
       },
       {
@@ -357,7 +368,11 @@
     "importance": 5,
     "featured": false,
     "image": "/eventos/hero-hegira-inicio-islam.jpg",
-    "relatedEvents": ["queda-constantinopla", "primeira-cruzada", "coroacao-carlos-magno"],
+    "relatedEvents": [
+      "queda-constantinopla",
+      "primeira-cruzada",
+      "coroacao-carlos-magno"
+    ],
     "characters": [
       {
         "name": "Maomé",
@@ -415,7 +430,11 @@
     "importance": 5,
     "featured": false,
     "image": "/eventos/hero-coroacao-carlos-magno.jpg",
-    "relatedEvents": ["queda-imperio-romano-ocidente", "hegira-inicio-islam", "primeira-cruzada"],
+    "relatedEvents": [
+      "queda-imperio-romano-ocidente",
+      "hegira-inicio-islam",
+      "primeira-cruzada"
+    ],
     "characters": [
       {
         "name": "Carlos Magno",
@@ -472,7 +491,11 @@
     "importance": 5,
     "featured": false,
     "image": "/eventos/hero-grande-cisma-oriente.jpg",
-    "relatedEvents": ["queda-constantinopla", "primeira-cruzada", "hegira-inicio-islam"],
+    "relatedEvents": [
+      "queda-constantinopla",
+      "primeira-cruzada",
+      "hegira-inicio-islam"
+    ],
     "characters": [
       {
         "name": "Papa Leão IX",
@@ -523,7 +546,12 @@
     "importance": 5,
     "featured": false,
     "image": "/eventos/hero-primeira-cruzada.jpg",
-    "relatedEvents": ["queda-constantinopla", "hegira-inicio-islam", "grande-cisma-oriente", "coroacao-carlos-magno"],
+    "relatedEvents": [
+      "queda-constantinopla",
+      "hegira-inicio-islam",
+      "grande-cisma-oriente",
+      "coroacao-carlos-magno"
+    ],
     "characters": [
       {
         "name": "Papa Urbano II",
@@ -922,7 +950,11 @@
     "importance": 5,
     "featured": false,
     "image": "/eventos/hero-reforma-protestante.jpg",
-    "relatedEvents": ["grande-cisma-oriente", "magna-carta", "descobrimento-america"],
+    "relatedEvents": [
+      "grande-cisma-oriente",
+      "magna-carta",
+      "descobrimento-america"
+    ],
     "characters": [
       {
         "name": "Martinho Lutero",
@@ -1445,7 +1477,10 @@
     "importance": 5,
     "featured": false,
     "image": "/eventos/hero-independencia-india.jpg",
-    "relatedEvents": ["fim-segunda-guerra-mundial", "queda-muro-berlim"],
+    "relatedEvents": [
+      "fim-segunda-guerra-mundial",
+      "queda-muro-berlim"
+    ],
     "characters": [
       {
         "name": "Mahatma Gandhi",
