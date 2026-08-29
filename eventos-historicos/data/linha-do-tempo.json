@@ -55,7 +55,7 @@
     "importance": 4,
     "featured": false,
     "image": "/eventos/hero-codigo-hamurabi.jpg",
-    "relatedEvents": [],
+    "relatedEvents": ["unificacao-egito", "conquistas-alexandre-grande"],
     "characters": [
       {
         "name": "Hamurábi",
@@ -192,7 +192,7 @@
     "importance": 5,
     "featured": false,
     "image": "/eventos/hero-conquistas-alexandre-grande.jpg",
-    "relatedEvents": [],
+    "relatedEvents": ["primeiros-jogos-olimpicos", "unificacao-china", "codigo-hamurabi"],
     "characters": [
       {
         "name": "Alexandre, o Grande",
@@ -357,7 +357,7 @@
     "importance": 5,
     "featured": false,
     "image": "/eventos/hero-hegira-inicio-islam.jpg",
-    "relatedEvents": [],
+    "relatedEvents": ["queda-constantinopla", "primeira-cruzada", "coroacao-carlos-magno"],
     "characters": [
       {
         "name": "Maomé",
@@ -415,7 +415,7 @@
     "importance": 5,
     "featured": false,
     "image": "/eventos/hero-coroacao-carlos-magno.jpg",
-    "relatedEvents": [],
+    "relatedEvents": ["queda-imperio-romano-ocidente", "hegira-inicio-islam", "primeira-cruzada"],
     "characters": [
       {
         "name": "Carlos Magno",
@@ -472,7 +472,7 @@
     "importance": 5,
     "featured": false,
     "image": "/eventos/hero-grande-cisma-oriente.jpg",
-    "relatedEvents": [],
+    "relatedEvents": ["queda-constantinopla", "primeira-cruzada", "hegira-inicio-islam"],
     "characters": [
       {
         "name": "Papa Leão IX",
@@ -523,7 +523,7 @@
     "importance": 5,
     "featured": false,
     "image": "/eventos/hero-primeira-cruzada.jpg",
-    "relatedEvents": [],
+    "relatedEvents": ["queda-constantinopla", "hegira-inicio-islam", "grande-cisma-oriente", "coroacao-carlos-magno"],
     "characters": [
       {
         "name": "Papa Urbano II",
@@ -581,7 +581,8 @@
     "featured": false,
     "image": "/eventos/hero-magna-carta.jpg",
     "relatedEvents": [
-      "independencia-estados-unidos"
+      "independencia-estados-unidos",
+      "reforma-protestante"
     ],
     "characters": [
       {
@@ -634,7 +635,8 @@
     "featured": false,
     "image": "/eventos/hero-guerra-dos-cem-anos.jpg",
     "relatedEvents": [
-      "peste-negra"
+      "peste-negra",
+      "queda-constantinopla"
     ],
     "characters": [
       {
@@ -693,7 +695,8 @@
     "featured": false,
     "image": "/eventos/hero-peste-negra.jpg",
     "relatedEvents": [
-      "guerra-dos-cem-anos"
+      "guerra-dos-cem-anos",
+      "queda-constantinopla"
     ],
     "characters": [
       {
@@ -802,7 +805,8 @@
     "image": "/eventos/hero-colombo.jpg",
     "relatedEvents": [
       "queda-constantinopla",
-      "descobrimento-brasil"
+      "descobrimento-brasil",
+      "reforma-protestante"
     ],
     "characters": [
       {
@@ -859,7 +863,8 @@
     "image": "/eventos/hero-descobrimento-brasil.jpg",
     "relatedEvents": [
       "descobrimento-america",
-      "queda-constantinopla"
+      "queda-constantinopla",
+      "independencia-brasil"
     ],
     "characters": [
       {
@@ -917,7 +922,7 @@
     "importance": 5,
     "featured": false,
     "image": "/eventos/hero-reforma-protestante.jpg",
-    "relatedEvents": [],
+    "relatedEvents": ["grande-cisma-oriente", "magna-carta", "descobrimento-america"],
     "characters": [
       {
         "name": "Martinho Lutero",
@@ -975,7 +980,8 @@
     "featured": false,
     "image": "/eventos/hero-revolucao-industrial.jpg",
     "relatedEvents": [
-      "primeira-guerra-mundial"
+      "primeira-guerra-mundial",
+      "grande-depressao-1929"
     ],
     "characters": [
       {
@@ -1088,7 +1094,9 @@
     "featured": true,
     "image": "/eventos/hero-bastilha.jpg",
     "relatedEvents": [
-      "independencia-estados-unidos"
+      "independencia-estados-unidos",
+      "independencia-brasil",
+      "revolucao-industrial"
     ],
     "characters": [
       {
@@ -1146,7 +1154,8 @@
     "image": "/eventos/hero-independencia-brasil.jpg",
     "relatedEvents": [
       "independencia-estados-unidos",
-      "descobrimento-brasil"
+      "descobrimento-brasil",
+      "revolucao-francesa"
     ],
     "characters": [
       {
@@ -1266,7 +1275,8 @@
     "image": "/eventos/hero-revolucao-russa.jpg",
     "relatedEvents": [
       "primeira-guerra-mundial",
-      "queda-muro-berlim"
+      "queda-muro-berlim",
+      "fim-segunda-guerra-mundial"
     ],
     "characters": [
       {
@@ -1325,7 +1335,9 @@
     "featured": false,
     "image": "/eventos/hero-grande-depressao-1929.jpg",
     "relatedEvents": [
-      "fim-segunda-guerra-mundial"
+      "fim-segunda-guerra-mundial",
+      "revolucao-industrial",
+      "primeira-guerra-mundial"
     ],
     "characters": [
       {
@@ -1433,7 +1445,7 @@
     "importance": 5,
     "featured": false,
     "image": "/eventos/hero-independencia-india.jpg",
-    "relatedEvents": [],
+    "relatedEvents": ["fim-segunda-guerra-mundial", "queda-muro-berlim"],
     "characters": [
       {
         "name": "Mahatma Gandhi",
@@ -1491,7 +1503,9 @@
     "featured": true,
     "image": "/eventos/hero-apollo11-aldrin.jpg",
     "relatedEvents": [
-      "fim-segunda-guerra-mundial"
+      "fim-segunda-guerra-mundial",
+      "revolucao-russa",
+      "queda-muro-berlim"
     ],
     "characters": [
       {
@@ -1549,7 +1563,8 @@
     "image": "/eventos/hero-muro-berlim.jpg",
     "relatedEvents": [
       "fim-segunda-guerra-mundial",
-      "revolucao-russa"
+      "revolucao-russa",
+      "chegada-homem-lua"
     ],
     "characters": [
       {
