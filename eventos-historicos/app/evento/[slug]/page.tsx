@@ -158,9 +158,15 @@ export default function EventoPage({ params }: EventoPageProps) {
             <div className="mx-auto mt-12 grid max-w-5xl grid-cols-2 gap-6 md:grid-cols-4">
               {evento.figuras.map((figura) => (
                 <div key={figura.nome} className="text-center">
-                  <div className="relative mx-auto aspect-square w-full max-w-[160px] overflow-hidden rounded-full border bg-muted">
-                    <Image src={figura.imagem} alt={figura.nome} fill className="object-cover" />
-                  </div>
+                  {figura.imagem ? (
+                    <div className="relative mx-auto aspect-square w-full max-w-[160px] overflow-hidden rounded-full border bg-muted">
+                      <Image src={figura.imagem} alt={figura.nome} fill className="object-cover" />
+                    </div>
+                  ) : (
+                    <div className="mx-auto flex aspect-square w-full max-w-[160px] items-center justify-center rounded-full border bg-muted text-3xl text-muted-foreground select-none">
+                      {figura.nome.charAt(0)}
+                    </div>
+                  )}
                   <h3 className="mt-4 font-semibold text-foreground">{figura.nome}</h3>
                   <p className="text-sm text-primary">{figura.papel}</p>
                   <p className="mt-2 text-sm leading-6 text-muted-foreground">{figura.descricao}</p>

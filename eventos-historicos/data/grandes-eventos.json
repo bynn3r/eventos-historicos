@@ -1498,10 +1498,22 @@
     "mapaTitulo": "Ao longo do Nilo, em 3100 a.C.",
     "mapaDescricao": "Do santuário de Hieracômpolis, no Alto Egito, ao delta de Buto — os lugares que moldaram a unificação da primeira grande civilização do mundo.",
     "estatisticas": [
-      { "label": "Extensão do Vale do Nilo unificado", "valor": "≈ 1.200 km" },
-      { "label": "Duração da civilização faraônica", "valor": "3.000 anos (31 dinastias)" },
-      { "label": "Data estimada da unificação", "valor": "c. 3100 a.C." },
-      { "label": "Reinos unificados", "valor": "2 (Alto e Baixo Egito)" }
+      {
+        "label": "Extensão do Vale do Nilo unificado",
+        "valor": "≈ 1.200 km"
+      },
+      {
+        "label": "Duração da civilização faraônica",
+        "valor": "3.000 anos (31 dinastias)"
+      },
+      {
+        "label": "Data estimada da unificação",
+        "valor": "c. 3100 a.C."
+      },
+      {
+        "label": "Reinos unificados",
+        "valor": "2 (Alto e Baixo Egito)"
+      }
     ],
     "contexto": "Por volta de 3200 a.C., o Vale do Nilo era dividido em dois reinos rivais com deuses, coroas e tradições distintas: o Alto Egito, ao sul — terra do deserto e do granito —, cujos governantes portavam a coroa branca e veneravam o abutre; e o Baixo Egito, ao norte — reino fértil do delta —, cujos reis usavam a coroa vermelha e reverenciavam a serpente-real. A fronteira entre os dois mundos era ao mesmo tempo física e sagrada, marcada pela transição da paisagem árida do vale para a explosão verde do delta onde o Nilo se abria ao Mediterrâneo.\n\nO registro arqueológico mostra que, no período pré-dinástico tardio, o Alto Egito estava em expansão: centros como Hieracômpolis e Abidos produziam cerâmica, escritas incipientes e objetos de prestígio cada vez mais refinados. Seus governantes acumulavam riqueza por meio do comércio com a Núbia e do controle das rotas do deserto — e, eventualmente, voltaram sua força militar para o norte. A unificação foi provavelmente um processo gradual de décadas, pontuado por guerras e casamentos diplomáticos, mas a tradição egípcia e o registro arqueológico apontam para um momento de ruptura definitivo associado ao nome de Narmer.",
     "momentos": [
@@ -1577,25 +1589,25 @@
       {
         "nome": "Narmer (Menes)",
         "papel": "Faraó unificador do Egito",
-        "imagem": "/eventos/hero-narmer-palette.jpg",
+        "imagem": "",
         "descricao": "Primeiro faraó documentado do Egito, unificou os dois reinos e é a figura central da Paleta de Narmer — o documento visual mais importante da fundação da civilização egípcia."
       },
       {
         "nome": "Hor-Aha",
         "papel": "Segundo faraó da Primeira Dinastia",
-        "imagem": "/eventos/hero-narmer-palette.jpg",
+        "imagem": "",
         "descricao": "Sucessor imediato de Narmer e possivelmente o fundador efetivo de Mênfis, consolidou a administração do Egito unificado e expandiu o poder real pelo delta."
       },
       {
         "nome": "Neithhotep",
         "papel": "Rainha e possível aliada política da unificação",
-        "imagem": "/eventos/hero-narmer-palette.jpg",
+        "imagem": "",
         "descricao": "Possivelmente uma princesa do Baixo Egito cujo casamento com Narmer ou Hor-Aha teria selado a aliança política entre os dois reinos — seu nome invoca a deusa Neith, divindade do norte."
       },
       {
         "nome": "Hórus",
         "papel": "Divindade protetora da realeza egípcia",
-        "imagem": "/eventos/hero-narmer-palette.jpg",
+        "imagem": "",
         "descricao": "O deus-falcão aparece na Paleta de Narmer sancionando a vitória real — e sua associação com o faraó como encarnação viva de Hórus tornou-se o fundamento teológico do poder egípcio por três milênios."
       }
     ],
@@ -1616,10 +1628,22 @@
     "mapaTitulo": "Do santuário de Zeus ao mundo moderno",
     "mapaDescricao": "De Olímpia no Peloponeso a Atenas moderna — os lugares reais que sediaram os Jogos na Antiguidade e o renascimento olímpico do século XIX.",
     "estatisticas": [
-      { "label": "Primeira edição registrada", "valor": "776 a.C." },
-      { "label": "Frequência dos Jogos", "valor": "a cada 4 anos (ciclo olímpico)" },
-      { "label": "Duração dos Jogos Antigos", "valor": "mais de 1.100 anos" },
-      { "label": "Ano da abolição por Teodósio I", "valor": "393 d.C." }
+      {
+        "label": "Primeira edição registrada",
+        "valor": "776 a.C."
+      },
+      {
+        "label": "Frequência dos Jogos",
+        "valor": "a cada 4 anos (ciclo olímpico)"
+      },
+      {
+        "label": "Duração dos Jogos Antigos",
+        "valor": "mais de 1.100 anos"
+      },
+      {
+        "label": "Ano da abolição por Teodósio I",
+        "valor": "393 d.C."
+      }
     ],
     "contexto": "No século VIII a.C., a Grécia era um mosaico de centenas de cidades-estado independentes — poleis — que falavam dialetos parecidos, veneravam os mesmos deuses e se guerreavam constantemente por territórios, recursos e prestígio. Atenas, Esparta, Corinto, Tebas e dezenas de outras cidades eram rivais políticos e militares que dificilmente cooperavam — exceto em torno de santuários religiosos pan-helênicos, como os de Delfos, Dódona e Olímpia. Esses santuários eram espaços neutros, administrados por anfictionias — alianças religiosas regionais — onde até inimigos declarados podiam se aproximar para consultar oráculos, fazer oferendas e, eventualmente, competir.\n\nO santuário de Zeus em Olímpia, no noroeste do Peloponeso, era um desses lugares sagrados. A tradição grega atribuía a fundação dos Jogos Olímpicos ao próprio Hércules, ou a Pélops — o herói que deu nome à península —, ou ainda ao rei Ifitos de Elis, que teria negociado com Esparta e Pisa a criação de uma trégua sagrada para permitir a realização dos Jogos. A data de 776 a.C. é a primeira registrada no cânone oficial compilado pelo historiador Hipias de Élis por volta do século V a.C., que listou os vencedores de cada olimpíada. É possível que competições informais em Olímpia sejam ainda mais antigas — mas 776 a.C. marca o início do registro que serviu como calendário de referência para toda a Grécia.",
     "momentos": [
@@ -1681,7 +1705,7 @@
       {
         "nome": "Delfos",
         "lat": 38.4824,
-        "lng": 22.5010,
+        "lng": 22.501,
         "descricao": "Outro grande santuário pan-helênico, sede dos Jogos Píticos — realizados a cada quatro anos, com defasagem de dois anos em relação a Olímpia, completando o ciclo de festivais gregos."
       }
     ],
@@ -1689,25 +1713,25 @@
       {
         "nome": "Koroibos de Elis",
         "papel": "Primeiro campeão olímpico registrado, 776 a.C.",
-        "imagem": "/eventos/hero-olimpia-grecia.jpg",
+        "imagem": "",
         "descricao": "Venceu a corrida do estádio em 776 a.C., tornando-se o primeiro atleta a ter o nome gravado na lista oficial dos Jogos, que serviria como calendário de referência para toda a Grécia."
       },
       {
         "nome": "Ifitos de Elis",
         "papel": "Rei de Élis, co-fundador dos Jogos",
-        "imagem": "/eventos/hero-olimpia-grecia.jpg",
+        "imagem": "",
         "descricao": "A tradição atribui a ele a negociação da ekechéria com Esparta e Pisa e a restauração ou fundação dos Jogos no século IX–VIII a.C. — seu acordo com o rei espartano Licurgo teria sido gravado num disco de bronze exposto em Olímpia."
       },
       {
         "nome": "Teodósio I",
         "papel": "Imperador romano, responsável pela extinção dos Jogos",
-        "imagem": "/eventos/hero-olimpia-grecia.jpg",
+        "imagem": "",
         "descricao": "Proclamou o catolicismo niceno religião oficial do Império em 380 d.C. e aboliu os Jogos em 393 d.C. como parte de sua campanha sistemática contra os cultos pagãos."
       },
       {
         "nome": "Pierre de Coubertin",
         "papel": "Fundador dos Jogos Olímpicos modernos",
-        "imagem": "/eventos/hero-olimpia-grecia.jpg",
+        "imagem": "",
         "descricao": "Historiador e educador francês que propôs a revivescência dos Jogos em 1894 e organizou a primeira edição moderna em Atenas em 1896, fundando o Comitê Olímpico Internacional."
       }
     ],
@@ -1728,10 +1752,22 @@
     "mapaTitulo": "Às margens do Tibre, em 753 a.C.",
     "mapaDescricao": "Das colinas Palatina e Capitolina ao Foro Romano, do santuário de Rômulo ao templo de Júpiter Optimus Maximus — os lugares reais onde Roma nasceu.",
     "estatisticas": [
-      { "label": "Data tradicional da fundação", "valor": "21 de abril de 753 a.C." },
-      { "label": "Colinas sobre as quais Roma foi construída", "valor": "7" },
-      { "label": "Duração do Império Romano (Ocidente)", "valor": "509 anos (509 a.C.–476 d.C.)" },
-      { "label": "Extensão máxima do Império Romano", "valor": "≈ 5 milhões de km²" }
+      {
+        "label": "Data tradicional da fundação",
+        "valor": "21 de abril de 753 a.C."
+      },
+      {
+        "label": "Colinas sobre as quais Roma foi construída",
+        "valor": "7"
+      },
+      {
+        "label": "Duração do Império Romano (Ocidente)",
+        "valor": "509 anos (509 a.C.–476 d.C.)"
+      },
+      {
+        "label": "Extensão máxima do Império Romano",
+        "valor": "≈ 5 milhões de km²"
+      }
     ],
     "contexto": "No início do primeiro milênio a.C., o Lácio — a planície no centro-oeste da Itália — era habitado por povos latino-falantes que viviam em aldeias de palha e barro dispersas pelas colinas junto ao Tibre. Ao norte estavam os etruscos, civilização altamente desenvolvida com cidades muradas, escrita e comércio mediterrâneo intenso; ao sul, os gregos haviam fundado colônias na Campânia e na Sicília. O sítio das futuras sete colinas de Roma tinha um valor estratégico óbvio: controlava a primeira travessia por terra do Tibre — o ponto onde o rio, ainda navegável desde o mar a 25 km, estreitava o suficiente para ser cruzado numa ilha natural, o ponto onde os caminhos do norte e do sul convergiam naturalmente.\n\nA lenda da fundação, elaborada principalmente por Tito Lívio e Dionísio de Halicarnasso nos séculos I a.C. e I d.C., conta que Rômulo e Remo eram filhos de Marte e de Réia Sílvia, vestal da cidade de Alba Longa. Abandonados ao Tibre por um tio tirano, foram salvos por uma loba que os amamentou na gruta do Lupercal, ao pé da Colina Palatina. Cresceram entre pastores e, ao descobrir sua origem real, fundaram uma cidade nova. O mito responde à necessidade de uma origem nobre para um povo que, na realidade arqueológica, emergiu de uma fusão gradual de tribos latinas, sabinas e etruscas ao longo de gerações.",
     "momentos": [
@@ -1807,25 +1843,25 @@
       {
         "nome": "Rômulo",
         "papel": "Fundador mítico e primeiro rei de Roma",
-        "imagem": "/eventos/hero-loba-capitolina.jpg",
+        "imagem": "",
         "descricao": "Filho de Marte e Réia Sílvia na lenda, traçou o sulco sagrado que delimitou Roma, matou o irmão Remo e governou por 37 anos — seu desaparecimento misterioso foi interpretado como apoteose, tornando-o o deus Quirino."
       },
       {
         "nome": "Remo",
         "papel": "Co-fundador mítico de Roma",
-        "imagem": "/eventos/hero-loba-capitolina.jpg",
+        "imagem": "",
         "descricao": "Irmão gêmeo de Rômulo, saltou em escárnio sobre o sulco sagrado recém-traçado e foi morto pelo irmão — sua morte inaugura a tradição romana de que a lei e a fronteira são mais sagradas do que o sangue."
       },
       {
         "nome": "Numa Pompílio",
         "papel": "Segundo rei de Roma, legislador religioso",
-        "imagem": "/eventos/hero-loba-capitolina.jpg",
+        "imagem": "",
         "descricao": "Rei sabino que sucedeu Rômulo e, segundo a tradição, organizou o calendário romano, criou os colégios sacerdotais e estabeleceu as bases do ius divinum — o direito religioso que regularia Roma por séculos."
       },
       {
         "nome": "Tarquínio Prisco",
         "papel": "Quinto rei de Roma, de origem etrusca",
-        "imagem": "/eventos/hero-loba-capitolina.jpg",
+        "imagem": "",
         "descricao": "Primeiro rei etrusco de Roma, responsável pela construção do Circo Máximo, drenagem do Foro e início do templo de Júpiter Capitolino — a urbanização monumental que transformou Roma de aldeia em cidade."
       }
     ],
@@ -1846,10 +1882,22 @@
     "mapaTitulo": "Pelos sete reinos da China antiga",
     "mapaDescricao": "De Xianyang, capital de Qin, aos territórios conquistados um a um — e ao Monte Li, onde o primeiro imperador está enterrado com seu exército de terracota.",
     "estatisticas": [
-      { "label": "Duração do período dos Reinos Combatentes", "valor": "254 anos (475 – 221 a.C.)" },
-      { "label": "Reinos derrotados por Qin Shi Huang", "valor": "6 (Han, Zhao, Wei, Chu, Yan, Qi)" },
-      { "label": "Soldados de terracota no mausoléu", "valor": "mais de 8.000" },
-      { "label": "Extensão do primeiro muro unificado", "valor": "≈ 5.000 km" }
+      {
+        "label": "Duração do período dos Reinos Combatentes",
+        "valor": "254 anos (475 – 221 a.C.)"
+      },
+      {
+        "label": "Reinos derrotados por Qin Shi Huang",
+        "valor": "6 (Han, Zhao, Wei, Chu, Yan, Qi)"
+      },
+      {
+        "label": "Soldados de terracota no mausoléu",
+        "valor": "mais de 8.000"
+      },
+      {
+        "label": "Extensão do primeiro muro unificado",
+        "valor": "≈ 5.000 km"
+      }
     ],
     "contexto": "O período dos Reinos Combatentes (475–221 a.C.) foi uma das eras mais violentas e transformadoras da história da China. Sete grandes reinos — Han, Wei, Zhao, Qi, Chu, Yan e Qin — disputavam hegemonia sobre um território que havia sido nominalmente unificado sob a dinastia Zhou desde o século XI a.C., mas que na prática era um mosaico de estados semi-independentes em constante guerra. Batalhas com centenas de milhares de soldados eram comuns; as estimativas de mortos em conflitos desse período chegam a dezenas de milhões. Foi também uma era de extraordinária efervescência intelectual: Confúcio, Sun Tzu, Lao-Tsé, Mencio e Han Fei — os fundadores das principais escolas filosóficas chinesas — viveram e ensinaram nesse contexto de caos e busca por ordem.\n\nO estado de Qin, no noroeste — menor, menos populoso e considerado 'bárbaro' pelos reinos do leste — adotou no século IV a.C. um conjunto de reformas draconianamente racionais sob o ministro Shang Yang: abolição da nobreza hereditária, promoção por mérito militar, unificação das leis penais, redistribuição de terras e proibição de mobilidade urbana não autorizada. O resultado foi uma máquina de guerra e produção agrícola sem paralelo: soldados que recebiam promoções por cada cabeça de inimigo apresentada, uma burocracia obediente e impessoal, e um Estado capaz de mobilizar recursos de forma que nenhum rival podia igualar. Em 246 a.C., um menino de 13 anos subiu ao trono de Qin.",
     "momentos": [
@@ -1932,25 +1980,25 @@
       {
         "nome": "Qin Shi Huang (Ying Zheng)",
         "papel": "Primeiro Imperador da China Unificada",
-        "imagem": "/eventos/hero-exercito-terracota.jpg",
+        "imagem": "",
         "descricao": "Subiu ao trono de Qin aos 13 anos, conquistou os seis reinos rivais entre 230 e 221 a.C., e criou as instituições — escrita unificada, direito único, moeda comum — que definiram a identidade chinesa por dois mil anos."
       },
       {
         "nome": "Li Si",
         "papel": "Chanceler-chefe e arquiteto intelectual do império",
-        "imagem": "/eventos/hero-exercito-terracota.jpg",
+        "imagem": "",
         "descricao": "Discípulo de Xunzi e grande teórico do legismo, foi o cérebro por trás das reformas de padronização — escrita, pesos, medidas, leis — que transformaram a conquista militar em Estado unificado duradouro."
       },
       {
         "nome": "General Meng Tian",
         "papel": "Comandante militar e supervisor da Grande Muralha",
-        "imagem": "/eventos/hero-exercito-terracota.jpg",
+        "imagem": "",
         "descricao": "O mais importante general de Qin Shi Huang, responsável pelas campanhas contra os Xiongnu no norte e pela supervisão da construção da Grande Muralha com 300.000 soldados sob seu comando."
       },
       {
         "nome": "Shang Yang",
         "papel": "Ministro reformista do século IV a.C.",
-        "imagem": "/eventos/hero-exercito-terracota.jpg",
+        "imagem": "",
         "descricao": "Seus reformas radicais — mérito militar substituindo nascimento nobre, leis uniformes, recenseamento rigoroso — transformaram Qin de estado periférico em máquina de conquista mais de cem anos antes de Qin Shi Huang nascer."
       }
     ],
@@ -1971,10 +2019,22 @@
     "mapaTitulo": "O Império que se desmanchava",
     "mapaDescricao": "De Ravena, última capital ocidental, a Constantinopla que sobreviveu — e aos territórios que o Ocidente perdeu um a um para os povos germânicos nas décadas que antecederam 476.",
     "estatisticas": [
-      { "label": "Data da fundação de Roma", "valor": "753 a.C. (tradicional)" },
-      { "label": "Data da deposição do último imperador", "valor": "4 de setembro de 476 d.C." },
-      { "label": "Duração total do poder romano (monarquia+república+império)", "valor": "≈ 1.229 anos" },
-      { "label": "Duração do Império Romano do Oriente após 476", "valor": "977 anos (até 1453)" }
+      {
+        "label": "Data da fundação de Roma",
+        "valor": "753 a.C. (tradicional)"
+      },
+      {
+        "label": "Data da deposição do último imperador",
+        "valor": "4 de setembro de 476 d.C."
+      },
+      {
+        "label": "Duração total do poder romano (monarquia+república+império)",
+        "valor": "≈ 1.229 anos"
+      },
+      {
+        "label": "Duração do Império Romano do Oriente após 476",
+        "valor": "977 anos (até 1453)"
+      }
     ],
     "contexto": "O Império Romano do Ocidente não caiu em um dia — desintegrou-se ao longo de pelo menos dois séculos de pressões simultâneas que se reforçavam mutuamente. A chamada Crise do Século III (235–284 d.C.) havia exposto as vulnerabilidades estruturais do sistema: guerras civis constantes, inflação galopante, pestilências devastadoras e incursões de povos germânicos pelas fronteiras fragilizaram o Estado antes mesmo que qualquer 'invasão bárbara' definitiva ocorresse. Diocleciano e Constantino o Grande reformaram o Império no século IV, mas a solução envolveu dividir o trabalho administrativo — primeiro entre dois e depois entre quatro co-imperadores — e contratar cada vez mais soldados germânicos para guardar as fronteiras.\n\nA divisão definitiva entre Oriente e Ocidente ocorreu em 395 d.C., quando Teodósio I morreu e dividiu o Império entre seus dois filhos: Arcádio ficou com o Oriente, sediado em Constantinopla; Honório com o Ocidente, que acabaria estabelecendo sua capital em Ravena, no norte da Itália, por ser defensável num pântano. A partir desse ponto, o Ocidente e o Oriente tornaram-se essencialmente países separados — e o Ocidente, empobrecido, cada vez menos capaz de pagar e manter seu exército.",
     "momentos": [
@@ -2057,25 +2117,25 @@
       {
         "nome": "Rômulo Augusto",
         "papel": "Último imperador do Ocidente",
-        "imagem": "/eventos/hero-queda-roma-ocidente.jpg",
+        "imagem": "",
         "descricao": "Adolescente colocado no trono pelo pai Orestes em 475 d.C. e deposto por Odoacro em 4 de setembro de 476 — seu nome era ao mesmo tempo o do fundador de Roma e o do primeiro imperador, tornando sua deposição simbólica além de política."
       },
       {
         "nome": "Odoacro",
         "papel": "Líder germânico, primeiro rei da Itália pós-romana",
-        "imagem": "/eventos/hero-queda-roma-ocidente.jpg",
+        "imagem": "",
         "descricao": "General de origem mista (skiri, huno ou godo — as fontes divergem), liderou a revolta final dos mercenários, depôs Rômulo Augusto sem derramamento de sangue e governou a Itália como rei por 17 anos, até ser assassinado por Teodorico, o Grande, em 493."
       },
       {
         "nome": "Orestes",
         "papel": "General e pai do último imperador",
-        "imagem": "/eventos/hero-queda-roma-ocidente.jpg",
+        "imagem": "",
         "descricao": "Ex-secretário de Atila que se tornara o poder por trás do trono no Ocidente, instalou o próprio filho como imperador em 475 e foi executado por Odoacro quando sua recusa em conceder terras aos mercenários precipitou a crise final."
       },
       {
         "nome": "Alarico I",
         "papel": "Rei dos visigodos, saqueador de Roma em 410",
-        "imagem": "/eventos/hero-queda-roma-ocidente.jpg",
+        "imagem": "",
         "descricao": "General visigodo que havia servido no exército romano e liderou o primeiro saque de Roma em oito séculos — evento que chocou o mundo antigo e inspirou Agostinho a escrever A Cidade de Deus, redirigindo a esperança cristã do Império terreno para um reino espiritual."
       }
     ],
