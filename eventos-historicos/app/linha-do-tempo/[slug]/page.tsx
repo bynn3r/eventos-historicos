@@ -63,6 +63,11 @@ export default function LinhaDoTempoEventoPage({ params }: LinhaDoTempoEventoPag
     limit: 3,
   })
   const hasFlagshipExperience = grandesEventosData.some((flagship) => flagship.slug === event.slug)
+
+  const allSorted = getAllTimelineEvents().sort((a, b) => a.startYear - b.startYear)
+  const currentIndex = allSorted.findIndex((e) => e.slug === event.slug)
+  const prevEvent = currentIndex > 0 ? allSorted[currentIndex - 1] : null
+  const nextEvent = currentIndex < allSorted.length - 1 ? allSorted[currentIndex + 1] : null
   const url = `${SITE_URL}/linha-do-tempo/${event.slug}`
 
   const jsonLd = {
@@ -290,6 +295,49 @@ export default function LinhaDoTempoEventoPage({ params }: LinhaDoTempoEventoPag
             )}
           </div>
         </article>
+
+        {/* Navegação anterior / próximo */}
+        {(prevEvent || nextEvent) && (
+          <nav aria-label="Navegação entre eventos" className="border-t bg-muted/30 py-8">
+            <div className="container mx-auto px-4 max-w-4xl">
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                {prevEvent ? (
+                  <Link
+                    href={`/linha-do-tempo/${prevEvent.slug}`}
+                    className="group flex items-start gap-3 rounded-lg border bg-background p-4 hover:shadow-md transition-shadow"
+                  >
+                    <ArrowLeft className="mt-0.5 h-5 w-5 flex-shrink-0 text-muted-foreground group-hover:text-primary transition-colors" />
+                    <div className="min-w-0">
+                      <p className="text-xs font-medium text-muted-foreground mb-1">Evento anterior</p>
+                      <p className="text-sm font-semibold leading-snug group-hover:text-primary transition-colors truncate">
+                        {prevEvent.title}
+                      </p>
+                      <p className="text-xs text-muted-foreground mt-0.5">{prevEvent.dateDisplay}</p>
+                    </div>
+                  </Link>
+                ) : (
+                  <div />
+                )}
+
+                {nextEvent && (
+                  <Link
+                    href={`/linha-do-tempo/${nextEvent.slug}`}
+                    className="group flex items-start gap-3 rounded-lg border bg-background p-4 hover:shadow-md transition-shadow sm:flex-row-reverse sm:text-right"
+                  >
+                    <ArrowRight className="mt-0.5 h-5 w-5 flex-shrink-0 text-muted-foreground group-hover:text-primary transition-colors" />
+                    <div className="min-w-0">
+                      <p className="text-xs font-medium text-muted-foreground mb-1">Próximo evento</p>
+                      <p className="text-sm font-semibold leading-snug group-hover:text-primary transition-colors truncate">
+                        {nextEvent.title}
+                      </p>
+                      <p className="text-xs text-muted-foreground mt-0.5">{nextEvent.dateDisplay}</p>
+                    </div>
+                  </Link>
+                )}
+              </div>
+            </div>
+          </nav>
+        )}
       </main>
 
       <Footer />
