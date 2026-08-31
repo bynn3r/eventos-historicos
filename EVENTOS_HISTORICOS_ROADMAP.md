@@ -366,6 +366,38 @@ Preferir linguagem historicamente mais precisa.
 
 ---
 
+## Status da Sprint 2
+
+- **Data:** 2026-08-30
+- **Status:** Concluída
+
+**O que foi implementado:**
+
+- Campo `cronologia` adicionado aos 29 eventos em `linha-do-tempo.json` (4–7 marcos por evento)
+- Tipos TypeScript novos em `lib/timeline.ts`: `TimelineCronologiaItem`, `TimelineRelatedContext`, campo `tipo` em `TimelineSource`
+- Campo `sources[]` preenchido com fontes primárias e secundárias para 8 eventos prioritários (Narmer, Hamurábi, Alexandre, Magna Carta, Queda de Constantinopla, Colombo, Brasil, Reforma Protestante, Declaração Americana, Revolução Francesa)
+- Campo `relatedEventsContext` adicionado a 3 eventos com relações causais contextuais relevantes:
+  - `queda-constantinopla` → `descobrimento-america` (rotas otomanas motivaram navegação atlântica)
+  - `revolucao-industrial` → `primeira-guerra-mundial` (escala industrial da guerra)
+  - `grande-depressao-1929` → `fim-segunda-guerra-mundial` (depressão nutriiu extremismo)
+- Componente `EventCronologia` criado (`components/event-cronologia.tsx`) — exibe linha vertical dentro do artigo
+- Página `/linha-do-tempo/[slug]` atualizada: seção cronologia, badge "contextual" em eventos relacionados, exibição de fontes com badge de tipo e fallback para URL vazia
+- Precisão histórica: "Descobrimento da América" → "Chegada de Colombo às Américas"
+
+**O que ficou pendente (registrar para próxima Sprint):**
+- [ ] `eventosRelacionados` em `curiosidades.json` (Evento→Curiosidade e Curiosidade→Evento bidirecional)
+- [ ] Contexto histórico nas páginas de notícias (Notícia→Evento)
+- [ ] Breadcrumb semântico completo em `/evento/[slug]`
+- [ ] Fontes com URLs reais para os eventos que têm apenas referências bibliográficas
+
+**Testes realizados:**
+- TypeScript: sem erros (`tsc --noEmit`)
+- Verificação de todos os arquivos editados
+
+**Próximo passo sugerido:** Sprint 3 — Experiência Visual e Animações.
+
+---
+
 # SPRINT 3 — EXPERIÊNCIA VISUAL E ANIMAÇÕES
 
 ## Objetivo
