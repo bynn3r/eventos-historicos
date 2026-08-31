@@ -10,6 +10,17 @@ export interface TimelineCharacter {
 export interface TimelineSource {
   title: string
   url: string
+  tipo?: "primária" | "secundária" | "académica"
+}
+
+export interface TimelineCronologiaItem {
+  ano: string
+  titulo: string
+}
+
+export interface TimelineRelatedContext {
+  slug: string
+  relacao: string
 }
 
 export interface TimelineEvent {
@@ -29,8 +40,10 @@ export interface TimelineEvent {
   featured: boolean
   image: string
   relatedEvents: string[]
+  relatedEventsContext?: TimelineRelatedContext[]
   characters: TimelineCharacter[]
   sources: TimelineSource[]
+  cronologia?: TimelineCronologiaItem[]
   keywords: string[]
 }
 

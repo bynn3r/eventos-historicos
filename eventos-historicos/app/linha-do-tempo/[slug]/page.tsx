@@ -11,6 +11,7 @@ import grandesEventosData from "@/data/grandes-eventos.json"
 import { getAllTimelineEvents, getTimelineEventBySlug, getRelatedTimelineEvents } from "@/lib/timeline"
 import { findRelatedContent } from "@/lib/related-content"
 import { EventHero } from "@/components/event-hero"
+import { EventCronologia } from "@/components/event-cronologia"
 
 const SITE_URL = "https://eventoshistoricos.com.br"
 
@@ -57,6 +58,9 @@ export default function LinhaDoTempoEventoPage({ params }: LinhaDoTempoEventoPag
   }
 
   const relatedEvents = getRelatedTimelineEvents(event)
+  const relatedContextMap = Object.fromEntries(
+    (event.relatedEventsContext ?? []).map((ctx) => [ctx.slug, ctx.relacao])
+  )
   const relatedCuriosidades = findRelatedContent(`${event.title} ${event.summary}`, {
     category: event.category,
     excludeSlug: event.slug,
@@ -159,6 +163,13 @@ export default function LinhaDoTempoEventoPage({ params }: LinhaDoTempoEventoPag
               ))}
             </div>
 
+            {/* Cronologia */}
+            {event.cronologia && event.cronologia.length > 0 && (
+              <div className="mt-12 pt-8 border-t">
+                <EventCronologia cronologia={event.cronologia} />
+              </div>
+            )}
+
             {/* Characters */}
             {event.characters.length > 0 && (
               <div className="mt-12 pt-8 border-t">
@@ -192,17 +203,26 @@ export default function LinhaDoTempoEventoPage({ params }: LinhaDoTempoEventoPag
                   <Globe2 className="h-5 w-5" />
                   Fontes
                 </h2>
-                <ul className="space-y-2">
-                  {event.sources.map((source) => (
-                    <li key={source.url}>
-                      <a
-                        href={source.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-primary hover:underline"
-                      >
-                        {source.title}
-                      </a>
+                <ul className="space-y-3">
+                  {event.sources.map((source, i) => (
+                    <li key={i} className="flex items-start gap-2 text-sm">
+                      {source.tipo && (
+                        <Badge variant="outline" className="shrink-0 mt-0.5 text-xs">
+                          {source.tipo}
+                        </Badge>
+                      )}
+                      {source.url ? (
+                        <a
+                          href={source.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-primary hover:underline"
+                        >
+                          {source.title}
+                        </a>
+                      ) : (
+                        <span className="text-muted-foreground">{source.title}</span>
+                      )}
                     </li>
                   ))}
                 </ul>
@@ -223,11 +243,20 @@ export default function LinhaDoTempoEventoPage({ params }: LinhaDoTempoEventoPag
                       <div className="flex items-center gap-2 mb-3">
                         <Badge>{related.dateDisplay}</Badge>
                         <Badge variant="secondary">{related.category}</Badge>
+                        {relatedContextMap[related.slug] && (
+                          <Badge variant="outline" className="text-xs">contextual</Badge>
+                        )}
                       </div>
                       <h3 className="font-semibold mb-2 group-hover:text-primary transition-colors">
                         {related.title}
                       </h3>
-                      <p className="text-sm text-muted-foreground">{related.summary}</p>
+                      {relatedContextMap[related.slug] ? (
+                        <p className="text-sm text-muted-foreground italic">
+                          {relatedContextMap[related.slug]}
+                        </p>
+                      ) : (
+                        <p className="text-sm text-muted-foreground">{related.summary}</p>
+                      )}
                     </Link>
                   ))}
                 </div>

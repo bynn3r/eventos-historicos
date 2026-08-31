@@ -26,7 +26,16 @@
         "description": "Primeiro faraó documentado do Egito, unificou os dois reinos e é a figura central da Paleta de Narmer, o documento visual mais importante da fundação da civilização egípcia."
       }
     ],
-    "sources": [],
+    "sources": [
+      { "title": "Paleta de Narmer — Museu Egípcio do Cairo", "url": "", "tipo": "primária" },
+      { "title": "SHAW, Ian (ed.). The Oxford History of Ancient Egypt. Oxford University Press, 2000.", "url": "", "tipo": "secundária" }
+    ],
+    "cronologia": [
+      { "ano": "c. 3200 a.C.", "titulo": "Alto e Baixo Egito rivalizam como reinos independentes" },
+      { "ano": "c. 3100 a.C.", "titulo": "Narmer derrota o Baixo Egito e une os dois reinos" },
+      { "ano": "c. 3100 a.C.", "titulo": "Capital estabelecida em Mênfis, ponto estratégico entre os dois mundos" },
+      { "ano": "c. 2686 a.C.", "titulo": "Início do Império Antigo — era das grandes pirâmides" }
+    ],
     "keywords": [
       "egito",
       "menes",
@@ -69,7 +78,17 @@
         "description": "Sexto rei da primeira dinastia babilônica, unificou a Mesopotâmia e ordenou a compilação do código de leis que leva seu nome."
       }
     ],
-    "sources": [],
+    "sources": [
+      { "title": "Estela do Código de Hamurábi — Museu do Louvre, Paris", "url": "", "tipo": "primária" },
+      { "title": "ROTH, Martha T. Law Collections from Mesopotamia and Asia Minor. Scholars Press, 1997.", "url": "", "tipo": "académica" }
+    ],
+    "cronologia": [
+      { "ano": "c. 1792 a.C.", "titulo": "Hamurábi assume o trono de Babilônia" },
+      { "ano": "c. 1780 a.C.", "titulo": "Hamurábi unifica a Mesopotâmia derrotando os reinos rivais" },
+      { "ano": "c. 1754 a.C.", "titulo": "Código gravado na estela de diorito negro" },
+      { "ano": "c. 1750 a.C.", "titulo": "Morte de Hamurábi; fragmentação gradual do império" },
+      { "ano": "1901", "titulo": "Estela redescoberta em Susa por missão arqueológica francesa" }
+    ],
     "keywords": [
       "codigo de hamurabi",
       "hamurabi",
@@ -118,6 +137,13 @@
       }
     ],
     "sources": [],
+    "cronologia": [
+      { "ano": "776 a.C.", "titulo": "Primeiros Jogos registrados; Koroibos vence a corrida do estádio" },
+      { "ano": "724 a.C.", "titulo": "Adição da corrida do diaulos (dois estádios)" },
+      { "ano": "708 a.C.", "titulo": "Pentatlo e luta adicionados ao programa olímpico" },
+      { "ano": "393 d.C.", "titulo": "Imperador Teodósio I proíbe os Jogos como manifestação pagã" },
+      { "ano": "1896", "titulo": "Pierre de Coubertin funda os Jogos Olímpicos modernos em Atenas" }
+    ],
     "keywords": [
       "olimpíadas",
       "jogos olímpicos",
@@ -167,6 +193,12 @@
       }
     ],
     "sources": [],
+    "cronologia": [
+      { "ano": "séc. X a.C.", "titulo": "Primeiros assentamentos humanos sobre os montes do Lácio" },
+      { "ano": "753 a.C.", "titulo": "Data tradicional da fundação; Rômulo torna-se o primeiro rei" },
+      { "ano": "509 a.C.", "titulo": "Expulsão do último rei etrusco; fundação da República Romana" },
+      { "ano": "264 a.C.", "titulo": "Roma controla toda a Itália; início das Guerras Púnicas" }
+    ],
     "keywords": [
       "roma",
       "rômulo",
@@ -228,7 +260,19 @@
         "description": "Governante indiano que enfrentou Alexandre na Batalha do Hidaspes."
       }
     ],
-    "sources": [],
+    "sources": [
+      { "title": "ARRIANO. Anabasis Alexandri. (séc. II d.C.)", "url": "", "tipo": "primária" },
+      { "title": "PLUTARCO. Vida de Alexandre. In: Vidas Paralelas. (séc. I-II d.C.)", "url": "", "tipo": "primária" }
+    ],
+    "cronologia": [
+      { "ano": "336 a.C.", "titulo": "Assassinato de Filipe II; Alexandre assume o trono com 20 anos" },
+      { "ano": "334 a.C.", "titulo": "Atravessa os Dardanelos; vitória no rio Granico" },
+      { "ano": "333 a.C.", "titulo": "Vitória em Issos; Dario III foge abandonando família e tesouro" },
+      { "ano": "332 a.C.", "titulo": "Conquista do Egito; fundação de Alexandria" },
+      { "ano": "331 a.C.", "titulo": "Batalha de Gaugamela: queda do Império Persa Aquemênida" },
+      { "ano": "326 a.C.", "titulo": "Batalha do Hidaspes; exército se recusa a avançar para a Índia" },
+      { "ano": "323 a.C.", "titulo": "Morte de Alexandre em Babilônia, aos 32 anos" }
+    ],
     "keywords": [
       "alexandre o grande",
       "macedonia antiga",
@@ -282,6 +326,14 @@
       }
     ],
     "sources": [],
+    "cronologia": [
+      { "ano": "475 a.C.", "titulo": "Início do Período dos Reinos Combatentes" },
+      { "ano": "247 a.C.", "titulo": "Ying Zheng assume o trono do estado de Qin com 13 anos" },
+      { "ano": "230–221 a.C.", "titulo": "Campanhas militares Qin conquistam os seis reinos rivais" },
+      { "ano": "221 a.C.", "titulo": "Ying Zheng proclama-se Qin Shi Huang, Primeiro Imperador" },
+      { "ano": "214 a.C.", "titulo": "Início da Grande Muralha e construção do Exército de Terracota" },
+      { "ano": "210 a.C.", "titulo": "Morte do Primeiro Imperador; início do declínio da dinastia Qin" }
+    ],
     "keywords": [
       "china",
       "qin shi huang",
@@ -338,6 +390,13 @@
       }
     ],
     "sources": [],
+    "cronologia": [
+      { "ano": "235–284", "titulo": "Crise do século III: 50 anos de anarquia militar e fragmentação" },
+      { "ano": "395", "titulo": "Divisão definitiva do Império Romano entre Oriente e Ocidente" },
+      { "ano": "410", "titulo": "Saque de Roma pelos visigodos de Alarico I — choque para a cristandade" },
+      { "ano": "455", "titulo": "Saque de Roma pelos vândalos de Genserico" },
+      { "ano": "4 set. 476", "titulo": "Odoacro depõe Rômulo Augusto; dissolução do Império Romano do Ocidente" }
+    ],
     "keywords": [
       "roma",
       "império romano",
@@ -400,6 +459,14 @@
       }
     ],
     "sources": [],
+    "cronologia": [
+      { "ano": "c. 610", "titulo": "Maomé recebe as primeiras revelações em Meca" },
+      { "ano": "615", "titulo": "Perseguições intensificam; parte dos muçulmanos emigra para a Etiópia" },
+      { "ano": "24 set. 622", "titulo": "Hégira: Maomé chega a Medina, funda a primeira comunidade política islâmica" },
+      { "ano": "624", "titulo": "Batalha de Badr: primeira grande vitória militar islâmica" },
+      { "ano": "630", "titulo": "Reconquista de Meca; conversão em massa dos árabes" },
+      { "ano": "632", "titulo": "Morte de Maomé; Abu Bakr torna-se primeiro califa" }
+    ],
     "keywords": [
       "hegira",
       "hijra",
@@ -462,6 +529,13 @@
       }
     ],
     "sources": [],
+    "cronologia": [
+      { "ano": "768", "titulo": "Carlos Magno torna-se rei dos francos" },
+      { "ano": "772–804", "titulo": "Guerras saxônicas: submissão e conversão forçada dos saxões" },
+      { "ano": "799", "titulo": "Papa Leão III busca proteção de Carlos Magno após ataque em Roma" },
+      { "ano": "25 dez. 800", "titulo": "Papa coroa Carlos Magno imperador na Basílica de São Pedro" },
+      { "ano": "814", "titulo": "Morte de Carlos Magno; divisão do império entre os três filhos" }
+    ],
     "keywords": [
       "carlos magno",
       "sacro imperio romano",
@@ -517,6 +591,13 @@
       }
     ],
     "sources": [],
+    "cronologia": [
+      { "ano": "863–867", "titulo": "Cisma fotiano: primeira ruptura temporária entre Roma e Constantinopla" },
+      { "ano": "16 jul. 1054", "titulo": "Cardeal Humberto deposita bula de excomunhão sobre o altar de Santa Sofia" },
+      { "ano": "1054", "titulo": "Patriarca Cerulário excomungou os legados papais em resposta" },
+      { "ano": "1204", "titulo": "Cruzados saqueiam Constantinopla; ruptura entre as Igrejas torna-se irreparável" },
+      { "ano": "1965", "titulo": "Paulo VI e Atenágoras revogam mutuamente as excomunhões de 1054" }
+    ],
     "keywords": [
       "grande cisma",
       "igreja ortodoxa",
@@ -579,6 +660,14 @@
       }
     ],
     "sources": [],
+    "cronologia": [
+      { "ano": "27 nov. 1095", "titulo": "Papa Urbano II convoca a cruzada no Concílio de Clermont" },
+      { "ano": "1096", "titulo": "Cruzada Popular de Pedro, o Eremita, é dizimada pelos turcos seljúcidas" },
+      { "ano": "1097", "titulo": "Exército principal cruza para a Ásia; conquista de Niceia" },
+      { "ano": "jun. 1098", "titulo": "Tomada de Antioquia após cerco de oito meses" },
+      { "ano": "15 jul. 1099", "titulo": "Tomada de Jerusalém; massacre da população muçulmana e judaica" },
+      { "ano": "1099", "titulo": "Godofredo de Bulhão recusa o título de rei de Jerusalém" }
+    ],
     "keywords": [
       "primeira cruzada",
       "cruzadas",
@@ -632,7 +721,17 @@
         "description": "Comandou a facção nobre que ocupou Londres."
       }
     ],
-    "sources": [],
+    "sources": [
+      { "title": "Magna Carta Libertatum (1215) — British Library, Londres", "url": "", "tipo": "primária" }
+    ],
+    "cronologia": [
+      { "ano": "1204", "titulo": "João perde a Normandia para a França; começa a crise de autoridade" },
+      { "ano": "1214", "titulo": "Derrota em Bouvines; barões ingleses se rebelam contra o rei" },
+      { "ano": "mai. 1215", "titulo": "Barões rebeldes ocupam Londres e forçam negociação" },
+      { "ano": "15 jun. 1215", "titulo": "João sela a Magna Carta em Runnymede" },
+      { "ano": "ago. 1215", "titulo": "Papa Inocêncio III anula a carta; guerra civil inicia" },
+      { "ano": "1225", "titulo": "Reedição definitiva da Magna Carta pelo filho de João, Henrique III" }
+    ],
     "keywords": [
       "magna carta",
       "direitos humanos",
@@ -693,6 +792,15 @@
       }
     ],
     "sources": [],
+    "cronologia": [
+      { "ano": "1328", "titulo": "Morte de Carlos IV da França sem herdeiro; Eduardo III reivindica o trono" },
+      { "ano": "1337", "titulo": "Eduardo III declara guerra; início oficial do conflito" },
+      { "ano": "1346", "titulo": "Vitória inglesa em Crécy com uso devastador do arco longo galês" },
+      { "ano": "1415", "titulo": "Henrique V vence em Azincourt; França em seu ponto mais fraco" },
+      { "ano": "1429", "titulo": "Joana d'Arc rompe o cerco de Orléans; Carlos VII coroado em Reims" },
+      { "ano": "1431", "titulo": "Joana d'Arc queimada viva em Rouen pelos ingleses" },
+      { "ano": "1453", "titulo": "Vitória francesa em Castillon; encerramento do conflito" }
+    ],
     "keywords": [
       "guerra dos cem anos",
       "joana d arc",
@@ -741,6 +849,13 @@
       }
     ],
     "sources": [],
+    "cronologia": [
+      { "ano": "1346", "titulo": "Primeiro surto registrado em Caffa, na Crimeia, via rotas da Ásia Central" },
+      { "ano": "out. 1347", "titulo": "Naus genovesas chegam à Sicília carregando a epidemia" },
+      { "ano": "1348", "titulo": "Epidemia devasta a Itália, França e Espanha; perseguições a judeus" },
+      { "ano": "1349", "titulo": "Peste chega à Inglaterra e à Alemanha" },
+      { "ano": "1351", "titulo": "Primeiro surto recua; estima-se 25–50 milhões de mortos na Europa" }
+    ],
     "keywords": [
       "peste negra",
       "peste bubonica",
@@ -778,6 +893,12 @@
       "hegira-inicio-islam",
       "descobrimento-brasil"
     ],
+    "relatedEventsContext": [
+      {
+        "slug": "descobrimento-america",
+        "relacao": "O controle otomano das rotas terrestres para o Oriente encareceu as especiarias europeias, incentivando Portugal e Espanha a buscar rotas marítimas alternativas — contexto direto que financiou as viagens de Colombo."
+      }
+    ],
     "characters": [
       {
         "name": "Mehmed II",
@@ -804,7 +925,17 @@
         "description": "Depois de ter sua oferta recusada por falta de recursos bizantinos, fundiu para Mehmed II as maiores bombardas já construídas até então, decisivas para abrir brechas nas muralhas milenares."
       }
     ],
-    "sources": [],
+    "sources": [
+      { "title": "DOUKAS. Decline and Fall of Byzantium to the Ottoman Turks. Wayne State University Press, 1975.", "url": "", "tipo": "primária" },
+      { "title": "RUNCIMAN, Steven. The Fall of Constantinople 1453. Cambridge University Press, 1965.", "url": "", "tipo": "secundária" }
+    ],
+    "cronologia": [
+      { "ano": "1422", "titulo": "Segundo cerco otomano fracassado; Constantinopla ainda resiste" },
+      { "ano": "1451", "titulo": "Mehmed II sobe ao trono com 19 anos; faz da conquista seu projeto central" },
+      { "ano": "fev. 1453", "titulo": "Início do cerco; bombardas de Orban destroem progressivamente as muralhas" },
+      { "ano": "mai. 1453", "titulo": "Ataque por terra e por mar; cadeia bloqueando o Corno de Ouro é superada" },
+      { "ano": "29 mai. 1453", "titulo": "Muralhas rompidas ao amanhecer; Constantino XI morre em combate" }
+    ],
     "keywords": [
       "constantinopla",
       "bizâncio",
@@ -818,7 +949,7 @@
   {
     "id": "descobrimento-america",
     "slug": "descobrimento-america",
-    "title": "Descobrimento da América",
+    "title": "Chegada de Colombo às Américas",
     "startYear": 1492,
     "endYear": 1492,
     "dateDisplay": "1492",
@@ -862,7 +993,17 @@
         "description": "Armador experiente de Palos, foi decisivo para recrutar tripulação e conter ameaças de motim durante a travessia; separou-se de Colombo no Caribe e morreu poucos dias após o retorno à Espanha, em março de 1493."
       }
     ],
-    "sources": [],
+    "sources": [
+      { "title": "Diário de Colombo (cópia de Bartolomé de Las Casas, séc. XVI) — Biblioteca Nacional de España", "url": "", "tipo": "primária" }
+    ],
+    "cronologia": [
+      { "ano": "1488", "titulo": "Bartolomeu Dias dobra o Cabo da Boa Esperança — Portugal aposta na rota africana" },
+      { "ano": "abr. 1492", "titulo": "Capitulações de Santa Fé: acordo com os Reis Católicos" },
+      { "ano": "3 ago. 1492", "titulo": "Colombo parte de Palos de la Frontera com três navios" },
+      { "ano": "12 out. 1492", "titulo": "Terra à vista: chegada a Guanahani (atuais Bahamas)" },
+      { "ano": "mar. 1493", "titulo": "Retorno à Espanha; início da colonização do Caribe" },
+      { "ano": "1494", "titulo": "Tratado de Tordesilhas divide o mundo entre Portugal e Espanha" }
+    ],
     "keywords": [
       "colombo",
       "américa",
@@ -920,7 +1061,17 @@
         "description": "Povo indígena de tronco tupi que habitava o litoral onde a esquadra aportou."
       }
     ],
-    "sources": [],
+    "sources": [
+      { "title": "Carta de Pero Vaz de Caminha ao Rei Dom Manuel I (1500) — Arquivo Nacional da Torre do Tombo, Lisboa", "url": "", "tipo": "primária" }
+    ],
+    "cronologia": [
+      { "ano": "1494", "titulo": "Tratado de Tordesilhas divide o Atlântico entre Portugal e Espanha" },
+      { "ano": "9 mar. 1500", "titulo": "Cabral parte de Lisboa com 13 embarcações rumo à Índia" },
+      { "ano": "22 abr. 1500", "titulo": "Avistamento do Monte Pascoal; chegada ao litoral baiano" },
+      { "ano": "26 abr. 1500", "titulo": "Primeira missa rezada em solo brasileiro" },
+      { "ano": "mai. 1500", "titulo": "Pero Vaz de Caminha conclui a carta ao rei Dom Manuel I" },
+      { "ano": "1530", "titulo": "Início da colonização sistemática do território" }
+    ],
     "keywords": [
       "descobrimento do brasil",
       "pedro alvares cabral",
@@ -981,7 +1132,16 @@
         "description": "Governante que protegeu politicamente Lutero."
       }
     ],
-    "sources": [],
+    "sources": [
+      { "title": "LUTERO, Martinho. 95 Teses (Disputatio pro Declaratione Virtutis Indulgentiarum, 1517)", "url": "", "tipo": "primária" }
+    ],
+    "cronologia": [
+      { "ano": "séc. XV", "titulo": "Pré-Reforma: críticas de Jan Hus e John Wycliffe à Igreja Católica" },
+      { "ano": "31 out. 1517", "titulo": "Lutero publica as 95 Teses em Wittenberg" },
+      { "ano": "1521", "titulo": "Dieta de Worms: Lutero recusa-se a retratar-se; papa Leão X o excomungou" },
+      { "ano": "1522–1534", "titulo": "Lutero traduz a Bíblia para o alemão vernáculo" },
+      { "ano": "1555", "titulo": "Paz de Augsburg: reconhecimento legal do protestantismo no Sacro Império" }
+    ],
     "keywords": [
       "reforma protestante",
       "martinho lutero",
@@ -1015,6 +1175,12 @@
       "primeira-guerra-mundial",
       "grande-depressao-1929"
     ],
+    "relatedEventsContext": [
+      {
+        "slug": "primeira-guerra-mundial",
+        "relacao": "A industrialização tornou possível a guerra em escala industrial: produção em massa de armamentos, ferrovias para mobilização de tropas e armas químicas saídas de laboratórios industriais definiram o caráter da Grande Guerra."
+      }
+    ],
     "characters": [
       {
         "name": "James Watt",
@@ -1036,6 +1202,13 @@
       }
     ],
     "sources": [],
+    "cronologia": [
+      { "ano": "1764", "titulo": "James Hargreaves inventa a spinning jenny, mecanizando a fiação" },
+      { "ano": "1769", "titulo": "James Watt patenteia a máquina a vapor aperfeiçoada" },
+      { "ano": "1776", "titulo": "Adam Smith publica 'A Riqueza das Nações'" },
+      { "ano": "1825", "titulo": "Primeira ferrovia pública: Stockton a Darlington" },
+      { "ano": "c. 1840", "titulo": "Industrialização consolida-se na Grã-Bretanha; espalha-se pela Europa" }
+    ],
     "keywords": [
       "revolucao industrial",
       "maquina a vapor",
@@ -1096,7 +1269,16 @@
         "description": "Um dos principais defensores da independência, viria a se tornar o segundo presidente dos EUA."
       }
     ],
-    "sources": [],
+    "sources": [
+      { "title": "Declaração de Independência dos Estados Unidos (4 de julho de 1776) — National Archives, Washington D.C.", "url": "", "tipo": "primária" }
+    ],
+    "cronologia": [
+      { "ano": "1763", "titulo": "Fim da Guerra dos Sete Anos; Grã-Bretanha impõe novos impostos às colônias" },
+      { "ano": "1773", "titulo": "Boston Tea Party: protesto contra o imposto sobre o chá" },
+      { "ano": "abr. 1775", "titulo": "Batalhas de Lexington e Concord: início da guerra de independência" },
+      { "ano": "4 jul. 1776", "titulo": "Declaração de Independência aprovada pelo Congresso Continental" },
+      { "ano": "1783", "titulo": "Tratado de Paris: Grã-Bretanha reconhece formalmente a independência" }
+    ],
     "keywords": [
       "independencia dos estados unidos",
       "declaracao de independencia",
@@ -1156,7 +1338,17 @@
         "description": "Orador poderoso e um dos organizadores da insurreição de 10 de agosto de 1792, tornou-se figura central da Primeira República antes de cair em desgraça e ser guilhotinado em 1794."
       }
     ],
-    "sources": [],
+    "sources": [
+      { "title": "Declaração dos Direitos do Homem e do Cidadão (26 de agosto de 1789) — Archives Nationales, Paris", "url": "", "tipo": "primária" }
+    ],
+    "cronologia": [
+      { "ano": "mai. 1789", "titulo": "Convocação dos Estados Gerais; Terceiro Estado forma Assembleia Nacional" },
+      { "ano": "14 jul. 1789", "titulo": "Queda da Bastilha" },
+      { "ano": "ago. 1789", "titulo": "Declaração dos Direitos do Homem e do Cidadão aprovada" },
+      { "ano": "set. 1792", "titulo": "Proclamação da República; Luís XVI guilhotinado em janeiro de 1793" },
+      { "ano": "1793–1794", "titulo": "O Terror: Robespierre conduz execuções em massa em nome da virtude" },
+      { "ano": "9 nov. 1799", "titulo": "Golpe de 18 Brumário: Napoleão toma o poder" }
+    ],
     "keywords": [
       "frança",
       "revolução francesa",
@@ -1216,6 +1408,14 @@
       }
     ],
     "sources": [],
+    "cronologia": [
+      { "ano": "1808", "titulo": "Corte portuguesa chega ao Rio; Brasil elevado a sede do Império" },
+      { "ano": "1820", "titulo": "Revolução Liberal do Porto exige recolonização e retorno do rei" },
+      { "ano": "9 jan. 1822", "titulo": "\"Dia do Fico\": D. Pedro recusa retornar a Portugal" },
+      { "ano": "7 set. 1822", "titulo": "Grito do Ipiranga: D. Pedro rompe com Portugal às margens do Ipiranga" },
+      { "ano": "dez. 1822", "titulo": "D. Pedro I coroado Primeiro Imperador do Brasil" },
+      { "ano": "1825", "titulo": "Portugal reconhece a independência mediante indenização mediada pelos britânicos" }
+    ],
     "keywords": [
       "independencia do brasil",
       "sete de setembro",
@@ -1276,6 +1476,13 @@
       }
     ],
     "sources": [],
+    "cronologia": [
+      { "ano": "28 jun. 1914", "titulo": "Assassinato do Arquiduque Francisco Ferdinando em Sarajevo" },
+      { "ano": "ago. 1914", "titulo": "Mobilizações em cascata; guerra declarada por todas as grandes potências" },
+      { "ano": "1915–1917", "titulo": "Guerra de trincheiras na frente ocidental; avanços mínimos com custo enorme" },
+      { "ano": "abr. 1917", "titulo": "EUA entram na guerra; Rússia se retira após a Revolução" },
+      { "ano": "11 nov. 1918", "titulo": "Armistício; Tratado de Versalhes assinado em junho de 1919" }
+    ],
     "keywords": [
       "primeira guerra mundial",
       "grande guerra",
@@ -1337,6 +1544,14 @@
       }
     ],
     "sources": [],
+    "cronologia": [
+      { "ano": "fev. 1917", "titulo": "Greve em Petrogrado; Nicolau II abdica; Governo Provisório assume" },
+      { "ano": "abr. 1917", "titulo": "Lênin retorna do exílio com as Teses de Abril" },
+      { "ano": "jul. 1917", "titulo": "Tentativa fracassada de tomada do poder pelos bolcheviques (Dias de Julho)" },
+      { "ano": "out. 1917", "titulo": "Bolcheviques tomam o Palácio de Inverno; Governo Provisório deposto" },
+      { "ano": "1918–1921", "titulo": "Guerra Civil; Exército Vermelho derrota os Brancos" },
+      { "ano": "1922", "titulo": "Formação da União das Repúblicas Socialistas Soviéticas (URSS)" }
+    ],
     "keywords": [
       "revolucao russa",
       "urss",
@@ -1371,6 +1586,12 @@
       "revolucao-industrial",
       "primeira-guerra-mundial"
     ],
+    "relatedEventsContext": [
+      {
+        "slug": "fim-segunda-guerra-mundial",
+        "relacao": "A Grande Depressão produziu o caldo econômico e político em que regimes autoritários como o nazismo floresceram, tornando-a um elo causal direto para o conflito de 1939."
+      }
+    ],
     "characters": [
       {
         "name": "Franklin D. Roosevelt",
@@ -1386,6 +1607,14 @@
       }
     ],
     "sources": [],
+    "cronologia": [
+      { "ano": "24 out. 1929", "titulo": "Quinta-Feira Negra: início do pânico na Bolsa de Nova York" },
+      { "ano": "29 out. 1929", "titulo": "Terça-Feira Negra: colapso total; mercado perde US$ 14 bilhões" },
+      { "ano": "1930–1932", "titulo": "Ondas de falências bancárias; desemprego sobe para 25% nos EUA" },
+      { "ano": "nov. 1932", "titulo": "Roosevelt eleito presidente com promessa do New Deal" },
+      { "ano": "1933–1938", "titulo": "New Deal: obras públicas, reforma bancária e Previdência Social" },
+      { "ano": "1939", "titulo": "Mobilização industrial da Segunda Guerra inicia a recuperação plena" }
+    ],
     "keywords": [
       "grande depressao",
       "crise de 1929",
@@ -1448,6 +1677,15 @@
       }
     ],
     "sources": [],
+    "cronologia": [
+      { "ano": "set. 1939", "titulo": "Alemanha invade a Polônia; França e Reino Unido declaram guerra" },
+      { "ano": "jun. 1941", "titulo": "Alemanha invade a URSS; abre-se a frente oriental" },
+      { "ano": "dez. 1941", "titulo": "Ataque japonês a Pearl Harbor; EUA entram no conflito" },
+      { "ano": "6 jun. 1944", "titulo": "Dia D: desembarque aliado na Normandia" },
+      { "ano": "30 abr. 1945", "titulo": "Suicídio de Hitler; capitulação alemã em 8 de maio" },
+      { "ano": "6–9 ago. 1945", "titulo": "Bombas atômicas em Hiroshima e Nagasaki" },
+      { "ano": "2 set. 1945", "titulo": "Rendição formal do Japão; fim da guerra" }
+    ],
     "keywords": [
       "segunda guerra mundial",
       "hitler",
@@ -1508,6 +1746,14 @@
       }
     ],
     "sources": [],
+    "cronologia": [
+      { "ano": "1919", "titulo": "Massacre de Amritsar; Gandhi lidera a resistência civil organizada" },
+      { "ano": "1930", "titulo": "Marcha do Sal: desobediência civil em massa contra o monopólio britânico" },
+      { "ano": "1942", "titulo": "Movimento 'Quit India': Gandhi exige saída britânica imediata" },
+      { "ano": "mar. 1947", "titulo": "Lord Mountbatten chega à Índia para negociar a transferência de poder" },
+      { "ano": "15 ago. 1947", "titulo": "Independência simultânea da Índia e do Paquistão" },
+      { "ano": "30 jan. 1948", "titulo": "Assassinato de Gandhi por extremista hindu" }
+    ],
     "keywords": [
       "independencia da india",
       "gandhi",
@@ -1569,6 +1815,14 @@
       }
     ],
     "sources": [],
+    "cronologia": [
+      { "ano": "out. 1957", "titulo": "URSS lança o Sputnik, primeiro satélite artificial da história" },
+      { "ano": "abr. 1961", "titulo": "Iuri Gagarin: primeiro ser humano a orbitar a Terra" },
+      { "ano": "mai. 1961", "titulo": "Kennedy anuncia ao Congresso a meta de pousar na Lua antes de 1970" },
+      { "ano": "jan. 1967", "titulo": "Incêndio da Apollo 1 mata três astronautas; programa reformulado" },
+      { "ano": "dez. 1968", "titulo": "Apollo 8: primeira tripulação a orbitar a Lua" },
+      { "ano": "20 jul. 1969", "titulo": "Apollo 11 pousa na Lua; Neil Armstrong dá o primeiro passo humano no satélite" }
+    ],
     "keywords": [
       "lua",
       "apollo 11",
@@ -1628,6 +1882,14 @@
       }
     ],
     "sources": [],
+    "cronologia": [
+      { "ano": "13 ago. 1961", "titulo": "Construção do Muro de Berlim começa na madrugada" },
+      { "ano": "1985", "titulo": "Gorbachev assume a liderança soviética; glasnost e perestroika" },
+      { "ano": "out. 1989", "titulo": "Protestos em massa na RDA; Honecker é substituído por Egon Krenz" },
+      { "ano": "9 nov. 1989", "titulo": "Anúncio imprevisto de Schabowski; Muro aberto naquela mesma noite" },
+      { "ano": "3 out. 1990", "titulo": "Reunificação formal da Alemanha" },
+      { "ano": "dez. 1991", "titulo": "Dissolução da União Soviética; fim da Guerra Fria" }
+    ],
     "keywords": [
       "muro de berlim",
       "alemanha",
