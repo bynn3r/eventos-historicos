@@ -223,7 +223,7 @@
     "country": "Grécia",
     "category": "Militar",
     "summary": "Em pouco mais de uma década, um jovem rei macedônio derrubou o maior império já visto e espalhou a cultura grega da Península Balcânica até as margens do rio Indo.",
-    "content": "Alexandre III da Macedônia tinha apenas vinte anos quando assumiu o trono, em 336 a.C. Educado em parte por Aristóteles, herdou o projeto paterno de invadir o Império Persa Aquemênida. Em 334 a.C., à frente de cerca de 40 mil homens, atravessou o estreito dos Dardanelos rumo à Ásia Menor, dando início a uma campanha que duraria onze anos.\n\nAs vitórias vieram em sequência acelerada: no rio Granico (334 a.C.), em Issos (333 a.C.), onde pôs em fuga o rei Dario III, e no cerco de Tiro (332 a.C.). Avançou até o Egito, onde fundou Alexandria. O golpe decisivo veio em Gaugamela (331 a.C.), desmantelando de vez o poder persa e abrindo caminho para a conquista de Babilônia, Susa e Persépolis.\n\nCom o Império Persa desfeito, Alexandre seguiu para o leste, submetendo a Báctria e a Sogdiana. Em 326 a.C., às margens do rio Indo, travou a Batalha do Hidaspes contra o rei indiano Poro. Exausto, o exército se recusou a avançar mais fundo na Índia, obrigando a retirada.\n\nAlexandre morreu em Babilônia em 323 a.C., aos 32 anos. Seu império fragmentou-se nas Guerras dos Diádocos, dando origem aos reinos helenísticos que por séculos misturaram cultura grega com tradições locais do Egito, da Mesopotâmia e da Pérsia.",
+    "content": "Alexandre III da Macedônia tinha apenas vinte anos quando assumiu o trono, em 336 a.C. Educado em parte por Aristóteles, herdou o projeto paterno de invadir o Império Persa Aquemênida. Em 334 a.C., à frente de cerca de 40 mil homens, atravessou o estreito dos Dardanelos rumo à Ásia Menor, dando início a uma campanha que duraria onze anos.\n\nAs vitórias vieram em sequência acelerada: no rio Granico (334 a.C.), em Issos (333 a.C.), onde pôs em fuga o rei Dario III, e no cerco de Tiro (332 a.C.). Avançou até o Egito, onde fundou Alexandria. O golpe decisivo veio em Gaugamela (331 a.C.), desmantelando de vez o poder persa e abrindo caminho para a conquista de Babilônia, Susa e Persépolis.\n\nCom o Império Persa desfeito, Alexandre seguiu para o leste, submetendo a Báctria e a Sogdiana. Em 326 a.C., às margens do rio Hidaspes (atual Jhelum, no Paquistão), travou a Batalha do Hidaspes contra o rei indiano Poro. Exausto, o exército se recusou a avançar mais fundo na Índia, obrigando a retirada.\n\nAlexandre morreu em Babilônia em 323 a.C., aos 32 anos. Seu império fragmentou-se nas Guerras dos Diádocos, dando origem aos reinos helenísticos que por séculos misturaram cultura grega com tradições locais do Egito, da Mesopotâmia e da Pérsia.",
     "importance": 5,
     "featured": false,
     "image": "/eventos/hero-conquistas-alexandre-grande.jpg",
@@ -265,7 +265,7 @@
       { "ano": "333 a.C.", "titulo": "Vitória em Issos; Dario III foge abandonando família e tesouro" },
       { "ano": "332 a.C.", "titulo": "Conquista do Egito; fundação de Alexandria" },
       { "ano": "331 a.C.", "titulo": "Batalha de Gaugamela: queda do Império Persa Aquemênida" },
-      { "ano": "326 a.C.", "titulo": "Batalha do Hidaspes; exército se recusa a avançar para a Índia" },
+      { "ano": "326 a.C.", "titulo": "Batalha do Hidaspes (rio Jhelum); exército se recusa a avançar para a Índia" },
       { "ano": "323 a.C.", "titulo": "Morte de Alexandre em Babilônia, aos 32 anos" }
     ],
     "keywords": [
@@ -615,7 +615,7 @@
     "dateDisplay": "1096–1099",
     "period": "Idade Média",
     "region": "Oriente Médio",
-    "country": "Israel",
+    "country": "Levante (Palestina histórica)",
     "category": "Militar",
     "summary": "Um apelo do papa em um concílio na França incendiou a Europa e lançou milhares de cavaleiros, camponeses e peregrinos rumo a Jerusalém.",
     "content": "Em 27 de novembro de 1095, no Concílio de Clermont, o papa Urbano II pediu o envio de um exército cristão para socorrer o Império Bizantino e libertar Jerusalém do domínio muçulmano. A resposta popular foi avassaladora.\n\nA primeira leva, a Cruzada Popular liderada por Pedro, o Eremita, foi dizimada pelos turcos seljúcidas. O exército cruzado principal, liderado por Godofredo de Bulhão, Boemundo de Tarento e Raimundo IV de Toulouse, cruzou para a Ásia Menor em 1097, conquistou Niceia e, após um cerco brutal, tomou Antioquia em 1098.\n\nEm junho de 1099, os cruzados chegaram a Jerusalém. Em 15 de julho de 1099, romperam as defesas e tomaram a cidade, seguindo-se um massacre generalizado da população muçulmana e judaica. Godofredo de Bulhão foi escolhido para governar, recusando o título de rei.\n\nA vitória resultou na criação de quatro Estados latinos no Levante. Foi a única cruzada, entre as várias que se seguiriam, a alcançar plenamente seu objetivo militar — mas lançou as bases de séculos de conflito entre cristandade e islã cujos ecos ainda ressoam nas tensões geopolíticas contemporâneas da região.",
