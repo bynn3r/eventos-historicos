@@ -398,6 +398,45 @@ Preferir linguagem historicamente mais precisa.
 
 ---
 
+## Auditoria e Enriquecimento Histórico
+
+- **Data:** 2026-08-30
+- **Status:** Concluída (lote inicial)
+
+**Auditoria de precisão histórica:**
+
+- `conquistas-alexandre-grande`: corrigido "rio Indo" → "rio Hidaspes (atual Jhelum, no Paquistão)" — a Batalha do Hidaspes (326 a.C.) ocorreu no rio Hidaspes, não no Indo. Cronologia do evento atualizada em coerência.
+- `primeira-cruzada`: corrigido `country: "Israel"` → `"Levante (Palestina histórica)"` — o Estado de Israel só existe desde 1948; em 1099 a região era o Levante.
+- `descobrimento-america`: título corrigido de "Descobrimento da América" → "Chegada de Colombo às Américas" (já feito no Sprint 2).
+
+**Auditoria de todo o conteúdo:**
+
+- `curiosidades.json` (26 artigos): revisados e sem erros factuais encontrados.
+- `grandes-eventos.json` (2 eventos — fim-segunda-guerra-mundial, queda-constantinopla): revisados e sem erros factuais.
+- `linha-do-tempo.json` (29 eventos originais): erros corrigidos acima.
+
+**6 novos eventos criados na Linha do Tempo:**
+
+- `fundacao-imperio-mongol` (1206–1294): maior Império contíguo da história, Pax Mongolica, saque de Bagdá.
+- `revolucao-cientifica` (1543–1687): Copérnico → Kepler → Galileu → Newton; método científico.
+- `guerras-napoleonicas` (1803–1815): Austerlitz, invasão da Rússia, Waterloo, Congresso de Viena.
+- `conferencia-berlim` (1884–1885): Corrida por África, Ato Geral de Berlim, legado das fronteiras coloniais.
+- `abolicao-escravatura-brasil` (1850–1888): Lei Áurea, Joaquim Nabuco, José do Patrocínio, ausência de políticas pós-abolição.
+- `criacao-estado-israel` (1948–1949): Declaração Balfour, Plano de Partilha ONU, Guerra da Independência, Nakba.
+
+**Total de eventos na Linha do Tempo após esta etapa:** 35
+
+**Testes realizados:**
+- JSON válido (node -e require())
+- TypeScript: sem erros (`tsc --noEmit`)
+
+**Pendências desta etapa:**
+- [ ] Imagens hero para os 6 novos eventos (atualmente apontam para paths inexistentes)
+- [ ] Fontes (`sources[]`) ainda vazias nos 6 novos eventos — adicionar quando artigos mencionarem explicitamente suas fontes
+- [ ] `relatedEventsContext` para relações causais entre os novos e existentes eventos
+
+---
+
 # SPRINT 3 — EXPERIÊNCIA VISUAL E ANIMAÇÕES
 
 ## Objetivo
