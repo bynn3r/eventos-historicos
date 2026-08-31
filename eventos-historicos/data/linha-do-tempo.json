@@ -1891,5 +1891,386 @@
       "otan",
       "berlim"
     ]
+  },
+  {
+    "id": "fundacao-imperio-mongol",
+    "slug": "fundacao-imperio-mongol",
+    "title": "Fundação e Expansão do Império Mongol",
+    "startYear": 1206,
+    "endYear": 1294,
+    "dateDisplay": "1206–1294",
+    "period": "Idade Média",
+    "region": "Ásia",
+    "country": "Mongólia",
+    "category": "Militar",
+    "summary": "Em 1206, Temüjin unificou as tribos das estepes e se tornou Genghis Khan. O que se seguiu foi o maior império contíguo já construído na história — e também um dos mais devastadores.",
+    "content": "Em 1206, numa grande assembleia tribal conhecida como kurultai, Temüjin foi proclamado Genghis Khan — 'governante universal' — após reunificar, pela primeira vez, as tribos mongolas e túrquicas das estepes da Ásia Central. Nascido por volta de 1162, em circunstâncias modestas que incluíram a morte do pai ainda na infância e anos de cativeiro rival, Temüjin construiu seu poder através de décadas de alianças, conquistas e uma reorganização radical do exército: esquadras baseadas em lealdade pessoal, não em laços tribais, e uma cavalaria leve capaz de percorrer distâncias imensas.\n\nA maquinaria de guerra mongola era devastadora e inovadora. Combinava a mobilidade extrema da cavalaria com táticas de cerco sofisticadas, absorvendo engenheiros chineses e persas para operar catapultas e bater muralhas. As invasões geralmente ofereciam rendição em troca de submissão imediata: quem resistia enfrentava o extermínio; quem capitulava podia ser incorporado. Cidades inteiras foram arrasadas — Samarcanda, Nishapur, Kiev — e regiões florescentes transformadas em desertos humanos.\n\nSob os sucessores de Genghis Khan, o império continuou a se expandir. Ögödei Khan lançou Batu Khan rumo ao Leste Europeu: exércitos mongóis chegaram à Polônia e à Hungria em 1241, derrotando cavalaria europeia em Legnica e no rio Mohi, antes de recuarem pela morte de Ögödei. Hülegü Khan destruiu Bagdá em 1258, executou o último califa abássida Al-Musta'sim e encerrou quinhentos anos do Califado — um dos maiores choques culturais e políticos do mundo islâmico medieval. A expansão para o Ocidente foi contida na Batalha de Ain Jalut, em 1260, quando os mamelucos do Egito derrotaram um exército mongol pela primeira vez.\n\nNo Leste, Kublai Khan completou a conquista da dinastia Song chinesa em 1279 e fundou a dinastia Yuan, tornando-se o primeiro governante estrangeiro de toda a China. Com Kublai, o império atingiu sua extensão máxima: cerca de 24 milhões de quilômetros quadrados, do Pacífico ao Mar Negro — o maior estado contíguo da história.\n\nAo mesmo tempo, o domínio mongol criou o que os historiadores chamam de Pax Mongolica: décadas em que as rotas da seda, controladas e protegidas por um único poder, permitiram um fluxo sem precedentes de mercadorias, doenças, tecnologias e ideias entre a China e a Europa. A mesma rota que trouxe a seda e as especiarias também trouxe a Peste Negra, que chegou ao Mar Negro em meados do século XIV carregada pelas caravanas.",
+    "importance": 5,
+    "featured": false,
+    "image": "/eventos/hero-fundacao-imperio-mongol.jpg",
+    "relatedEvents": [
+      "primeira-cruzada",
+      "queda-constantinopla",
+      "peste-negra"
+    ],
+    "characters": [
+      {
+        "name": "Genghis Khan",
+        "role": "Fundador e Khan Supremo do Império Mongol",
+        "image": "",
+        "description": "Unificou as tribos mongolas em 1206 e iniciou as conquistas que transformariam o mapa da Eurásia."
+      },
+      {
+        "name": "Ögödei Khan",
+        "role": "Segundo Grande Khan (1229–1241)",
+        "image": "",
+        "description": "Filho e sucessor de Genghis Khan, expandiu o império para a China do Norte e a Europa Oriental."
+      },
+      {
+        "name": "Kublai Khan",
+        "role": "Quinto Grande Khan e fundador da dinastia Yuan",
+        "image": "",
+        "description": "Neto de Genghis Khan, completou a conquista da China e governou o Império Mongol em seu auge máximo, recebendo Marco Polo em sua corte."
+      }
+    ],
+    "sources": [],
+    "cronologia": [
+      { "ano": "1206", "titulo": "Kurultai: Temüjin é proclamado Genghis Khan — início do Império Mongol" },
+      { "ano": "1211–1215", "titulo": "Invasão do Império Jin; saque de Zhongdu (atual Pequim)" },
+      { "ano": "1219–1221", "titulo": "Conquista do Império Corásmio; Samarcanda e Bukhara destruídas" },
+      { "ano": "1237–1242", "titulo": "Batu Khan invade a Rússia e o Leste Europeu; Kiev destruída" },
+      { "ano": "1258", "titulo": "Saque de Bagdá; execução do último califa abássida — fim do Califado" },
+      { "ano": "1260", "titulo": "Batalha de Ain Jalut: mamelucos detêm os mongóis; divisão do Império em khanatos" },
+      { "ano": "1279", "titulo": "Kublai Khan conquista a China Song; Império Mongol no auge (≈ 24 milhões km²)" }
+    ],
+    "keywords": [
+      "genghis khan",
+      "império mongol",
+      "mongólia",
+      "kublai khan",
+      "conquistas mongolas",
+      "pax mongolica",
+      "bagdá",
+      "califado abássida",
+      "rota da seda",
+      "idade média"
+    ]
+  },
+  {
+    "id": "revolucao-cientifica",
+    "slug": "revolucao-cientifica",
+    "title": "A Revolução Científica",
+    "startYear": 1543,
+    "endYear": 1687,
+    "dateDisplay": "1543–1687",
+    "period": "Idade Moderna",
+    "region": "Europa",
+    "country": "Europa",
+    "category": "Ciência e Cultura",
+    "summary": "Entre Copérnico retirando a Terra do centro do universo e Newton unificando o cosmos numa única equação, a Europa ergueu uma nova forma de conhecer o mundo — e nunca mais olhou para trás.",
+    "content": "Em 1543, um cânone da catedral de Frombork, na Polônia, publicou um livro que demoraria décadas para ser compreendido em toda a sua radicalidade. Nicolau Copérnico, em 'De revolutionibus orbium coelestium', propôs que a Terra e os planetas orbitavam o Sol — não o contrário. O modelo heliocêntrico não era inteiramente novo, mas Copérnico apresentou-o em linguagem matemática rigorosa. Segundo a tradição, o livro foi entregue a Copérnico em seu leito de morte; o astrônomo não viveu para ver a tempestade intelectual que a obra desencadearia.\n\nO problema de Copérnico era que sua teoria ainda usava órbitas circulares perfeitas. Coube a Johannes Kepler, trabalhando com as observações astronômicas meticulosas de Tycho Brahe, descobrir que os planetas descrevem elipses, não círculos. As três leis do movimento planetário de Kepler, publicadas entre 1609 e 1619, ofereceram pela primeira vez uma descrição matematicamente precisa do sistema solar.\n\nEnquanto isso, na Itália, Galileu Galilei apontou um telescópio aperfeiçoado ao céu em 1609 e encontrou o que a cosmologia aristotélica não previa: luas orbitando Júpiter, manchas no Sol, e a superfície irregular da Lua. Suas observações apoiavam o heliocentrismo e lhe custaram caro: em 1633, o Tribunal da Inquisição o forçou a abjurar suas afirmações, sob ameaça de tortura. Galileu passou o resto da vida em prisão domiciliar. Fora da astronomia, William Harvey demonstrou em 1628 que o sangue circula continuamente pelo corpo humano, derrubando séculos de medicina galênica.\n\nIsaac Newton chegou à física em 1665, quando uma epidemia de peste fechou a Universidade de Cambridge e o enviou para a fazenda da família em Woolsthorpe. Nesses 'anos das maravilhas', Newton desenvolveu o cálculo diferencial e integral, formulou a teoria da gravitação universal e analisou a decomposição da luz pelo prisma. Em 1687, publicou 'Philosophiae Naturalis Principia Mathematica'. Nessa obra, Newton unificou os movimentos dos planetas de Kepler e os experimentos terrestres de Galileu numa única lei: qualquer dois corpos com massa se atraem com uma força proporcional ao produto de suas massas e inversamente proporcional ao quadrado da distância entre eles. O cosmos inteiro obedecia a equações que qualquer humano, com matemática suficiente, poderia calcular.\n\nA Revolução Científica não foi só uma mudança de conteúdo — foi uma mudança de método. Francis Bacon propôs o método indutivo-experimental; René Descartes propôs o método dedutivo-racional e o mecanicismo. A fundação de academias científicas — a Royal Society em Londres em 1660 e a Académie des Sciences em Paris em 1666 — institucionalizou a ciência como empreendimento coletivo, baseado em publicação, crítica e replicação.",
+    "importance": 5,
+    "featured": false,
+    "image": "/eventos/hero-revolucao-cientifica.jpg",
+    "relatedEvents": [
+      "reforma-protestante",
+      "revolucao-industrial",
+      "revolucao-francesa"
+    ],
+    "characters": [
+      {
+        "name": "Nicolau Copérnico",
+        "role": "Astrônomo polonês",
+        "image": "",
+        "description": "Propôs o modelo heliocêntrico em 'De revolutionibus' (1543), deslocando a Terra do centro do universo."
+      },
+      {
+        "name": "Galileu Galilei",
+        "role": "Físico e astrônomo italiano",
+        "image": "",
+        "description": "Usou o telescópio para confirmar o heliocentrismo e foi condenado pela Inquisição em 1633."
+      },
+      {
+        "name": "Isaac Newton",
+        "role": "Matemático e físico inglês",
+        "image": "",
+        "description": "Publicou os Principia Mathematica em 1687, unificando a mecânica celeste e terrestre com a lei da gravitação universal."
+      }
+    ],
+    "sources": [],
+    "cronologia": [
+      { "ano": "1543", "titulo": "Copérnico publica 'De revolutionibus' — a Terra orbita o Sol, não o contrário" },
+      { "ano": "1609–1619", "titulo": "Kepler formula as três leis do movimento planetário (órbitas elípticas)" },
+      { "ano": "1610", "titulo": "Galileu aponta o telescópio ao céu; descobre as quatro luas de Júpiter" },
+      { "ano": "1628", "titulo": "Harvey publica a descoberta da circulação contínua do sangue" },
+      { "ano": "1633", "titulo": "Galileu é condenado pela Inquisição; forçado a abjurar o heliocentrismo" },
+      { "ano": "1660–1666", "titulo": "Fundação da Royal Society (Londres) e da Académie des Sciences (Paris)" },
+      { "ano": "1687", "titulo": "Newton publica os Principia Mathematica — lei da gravitação universal" }
+    ],
+    "keywords": [
+      "revolução científica",
+      "copérnico",
+      "galileu",
+      "newton",
+      "kepler",
+      "heliocentrismo",
+      "principia mathematica",
+      "método científico",
+      "iluminismo",
+      "renascimento científico"
+    ]
+  },
+  {
+    "id": "guerras-napoleonicas",
+    "slug": "guerras-napoleonicas",
+    "title": "Guerras Napoleônicas",
+    "startYear": 1803,
+    "endYear": 1815,
+    "dateDisplay": "1803–1815",
+    "period": "Idade Moderna",
+    "region": "Europa",
+    "country": "França",
+    "category": "Militar",
+    "summary": "Por uma dúzia de anos, um corso de baixa nobreza reconfigurou o mapa da Europa, exportou os ideais da Revolução Francesa e construiu um império que desfez a si mesmo nas estepes russas.",
+    "content": "Napoleão Bonaparte nasceu em 1769 em Ajácio, na ilha da Córsega, que havia sido comprada pela França da República de Gênova apenas um ano antes. Filho de família de pequena nobreza, formou-se nas escolas militares reais e emergiu como general de destaque durante as guerras revolucionárias da França. Em 9 de novembro de 1799 — o 18 Brumário, pelo calendário republicano — liderou um golpe que encerrou o Diretório e instalou o Consulado, com ele próprio como Primeiro Cônsul. Em 1804, na catedral de Notre-Dame, coroou-se Imperador dos Franceses — pegando a coroa das mãos do papa Pio VII e pondo sobre a própria cabeça, num gesto que pretendia afirmar que seu poder vinha de si mesmo, não da Igreja.\n\nOs anos seguintes foram de vitórias militares espetaculares. Em 2 de dezembro de 1805 — aniversário exato de sua coroação — Napoleão derrotou os exércitos combinados da Áustria e da Rússia na Batalha de Austerlitz, na Morávia, numa manobra considerada até hoje uma obra-prima da tática militar. Em 1806, dissolveu o Sacro Império Romano-Germânico, que sobrevivia havia mais de mil anos. O Bloco Continental, decretado em novembro de 1806, tentou sufocar economicamente a Grã-Bretanha proibindo o comércio europeu com a ilha, mas acabou criando tensões com aliados e enfraquecendo a própria economia francesa.\n\nO ponto de inflexão começou na Espanha. Em 1808, Napoleão forçou abdicações e colocou o irmão José no trono espanhol, mas subestimou a resistência popular. A guerrilha ibérica sangrou a Grande Armée por anos numa guerra de desgaste que Wellington descreveu como a 'úlcera espanhola'. Em 1812, a invasão da Rússia selou o destino napoleônico: a Grande Armée entrou com mais de 600 mil homens e chegou a Moscou apenas para encontrar a cidade parcialmente incendiada e vazia de suprimentos. O rigoroso inverno russo e a tática de terra arrasada transformaram a retirada numa catástrofe; dos 600 mil, estimam-se que menos de 120 mil cruzaram de volta a fronteira.\n\nA coalizão europeia aproveitou a fraqueza. Em outubro de 1813, na Batalha de Leipzig — chamada 'Batalha das Nações' — Napoleão foi derrotado por austríacos, prussianos, russos e suecos. Em março de 1814, as forças aliadas entraram em Paris. Napoleão abdicou e foi exilado na ilha de Elba. Dez meses depois, escapou e marchou até Paris num triunfo aclamado pelos soldados — os 'Cem Dias'. A Europa coligada respondeu: Napoleão foi definitivamente derrotado na Batalha de Waterloo em 18 de junho de 1815 pelas forças do Duque de Wellington e do marechal prussiano Blücher. Exilado na remota ilha de Santa Helena, no Atlântico Sul, morreu em 5 de maio de 1821.\n\nO Congresso de Viena (1814-1815) redesenhou a Europa buscando restaurar monarquias e criar um equilíbrio de poder. Mas as guerras napoleônicas já haviam espalhado os ideais da Revolução — liberdade, igualdade, soberania popular, codificação do direito — por todo o continente. O Código Napoleônico permaneceu como base dos sistemas jurídicos de dezenas de países. E o nacionalismo que Napoleão inadvertidamente estimulou — ao unir alemães e italianos contra o ocupante francês — alimentaria as unificações nacionais das décadas seguintes.",
+    "importance": 5,
+    "featured": false,
+    "image": "/eventos/hero-guerras-napoleonicas.jpg",
+    "relatedEvents": [
+      "revolucao-francesa",
+      "independencia-brasil",
+      "primeira-guerra-mundial"
+    ],
+    "characters": [
+      {
+        "name": "Napoleão Bonaparte",
+        "role": "Imperador dos Franceses",
+        "image": "",
+        "description": "Conquistou quase toda a Europa entre 1804 e 1812 antes de ser derrotado e exilado em Santa Helena."
+      },
+      {
+        "name": "Arthur Wellesley, Duque de Wellington",
+        "role": "Comandante das forças britânicas e aliadas",
+        "image": "",
+        "description": "Venceu a campanha peninsular na Espanha e derrotou Napoleão na Batalha de Waterloo em 18 de junho de 1815."
+      },
+      {
+        "name": "Tsar Alexandre I",
+        "role": "Imperador da Rússia",
+        "image": "",
+        "description": "Liderou a resistência russa à invasão de 1812 e foi peça central na coalizão que derrubou Napoleão."
+      }
+    ],
+    "sources": [],
+    "cronologia": [
+      { "ano": "nov. 1799", "titulo": "Golpe do 18 Brumário: Napoleão torna-se Primeiro Cônsul" },
+      { "ano": "dez. 1804", "titulo": "Napoleão coroa-se Imperador em Notre-Dame, diante do papa Pio VII" },
+      { "ano": "dez. 1805", "titulo": "Batalha de Austerlitz: maior vitória napoleônica, contra Áustria e Rússia" },
+      { "ano": "1808", "titulo": "Invasão da Espanha; início da guerrilha ibérica — a 'úlcera espanhola'" },
+      { "ano": "1812", "titulo": "Invasão da Rússia: Grande Armée entra com 600 mil; volta com menos de 120 mil" },
+      { "ano": "out. 1813", "titulo": "Batalha de Leipzig ('das Nações'): coalizão derrota Napoleão" },
+      { "ano": "jun. 1815", "titulo": "Batalha de Waterloo; abdicação; exílio em Santa Helena" }
+    ],
+    "keywords": [
+      "napoleão bonaparte",
+      "guerras napoleônicas",
+      "batalha de waterloo",
+      "revolução francesa",
+      "austerlitz",
+      "congresso de viena",
+      "código napoleônico",
+      "império francês",
+      "wellington",
+      "santa helena"
+    ]
+  },
+  {
+    "id": "conferencia-berlim",
+    "slug": "conferencia-berlim",
+    "title": "Conferência de Berlim e a Partilha da África",
+    "startYear": 1884,
+    "endYear": 1885,
+    "dateDisplay": "1884–1885",
+    "period": "Idade Contemporânea",
+    "region": "África",
+    "country": "Alemanha",
+    "category": "Política",
+    "summary": "Em novembro de 1884, quatorze potências europeias se reuniram em Berlim para regulamentar a corrida por território africano — sem convidar um único representante africano para decidir o destino de um continente.",
+    "content": "Em 1880, as potências europeias controlavam cerca de 10% do território africano, concentradas em zonas costeiras e nas colônias mais antigas. Em apenas três décadas, esse número saltaria para mais de 90% — uma das transformações políticas e territoriais mais rápidas da história moderna, conhecida como 'Corrida por África'. A Conferência de Berlim, convocada pelo chanceler alemão Otto von Bismarck de novembro de 1884 a fevereiro de 1885, não foi o início dessa corrida, mas tentou organizá-la com regras que beneficiassem as potências mais bem posicionadas.\n\nOs quatorze países presentes — incluindo Grã-Bretanha, França, Alemanha, Portugal, Bélgica, Itália, Espanha e os Estados Unidos — negociaram o Ato Geral de Berlim, assinado em 26 de fevereiro de 1885. O documento estabeleceu o princípio da 'ocupação efetiva': para que uma potência pudesse reivindicar legitimamente um território africano, precisava demonstrar que o ocupava de fato, com administração e presença física. Isso acelerou a corrida, pois cada potência apressou-se a estabelecer postos, ferrovias e guarnições para garantir suas reivindicações antes dos rivais. Nenhum representante africano foi convidado ou consultado.\n\nAs fronteiras desenhadas em Berlim e nos tratados subsequentes cortaram reinos, linhagens, grupos étnicos e rotas comerciais com a frieza de uma régua sobre um mapa. Ashanti, Zulu, Somali, Ndebele — povos com estados, exércitos e tradições próprias foram subsumidos em fronteiras artificiais que nada tinham a ver com sua realidade. Essas mesmas fronteiras, com pequenos ajustes, são as dos Estados africanos independentes do século XXI.\n\nA resistência africana existiu e foi frequentemente feroz. Os etíopes, sob o imperador Menelik II, derrotaram o exército italiano na Batalha de Adwa em março de 1896 — um dos raríssimos casos em que uma potência africana derrotou definitivamente um exército colonial europeu, preservando a independência da Etiópia. Os herero e nama foram vítimas de genocídio nas mãos dos alemães na atual Namíbia entre 1904 e 1908. Mas, salvo a Etiópia e a Libéria, todo o continente africano havia caído sob controle europeu até 1914.\n\nO legado da Conferência de Berlim moldou o século XX e continua a moldar o XXI. A artificialidade das fronteiras coloniais alimentou guerras civis, conflitos étnicos e instabilidade política em países cujos limites foram desenhados para conveniência europeia, não para refletir realidades locais. Os movimentos de descolonização do século XX, que produziram dezenas de Estados independentes nas décadas de 1950 e 1960, herdaram fronteiras que ninguém escolheu.",
+    "importance": 5,
+    "featured": false,
+    "image": "/eventos/hero-conferencia-berlim.jpg",
+    "relatedEvents": [
+      "primeira-guerra-mundial",
+      "fim-segunda-guerra-mundial",
+      "independencia-india"
+    ],
+    "characters": [
+      {
+        "name": "Otto von Bismarck",
+        "role": "Chanceler do Império Alemão",
+        "image": "",
+        "description": "Convocou e presidiu a Conferência de Berlim, procurando regulamentar a disputa colonial para evitar guerra entre as potências europeias."
+      },
+      {
+        "name": "Rei Leopoldo II da Bélgica",
+        "role": "Soberano do Estado Livre do Congo",
+        "image": "",
+        "description": "Obteve reconhecimento sobre o enorme território do Congo como propriedade pessoal, onde o regime de terror na extração de borracha matou milhões de congoleses."
+      },
+      {
+        "name": "Imperador Menelik II",
+        "role": "Imperador da Etiópia",
+        "image": "",
+        "description": "Derrotou o exército italiano na Batalha de Adwa em 1896, tornando-se símbolo de resistência africana ao colonialismo europeu."
+      }
+    ],
+    "sources": [],
+    "cronologia": [
+      { "ano": "1880", "titulo": "Potências europeias controlam ≈ 10% da África; corrida colonial acelera" },
+      { "ano": "15 nov. 1884", "titulo": "Conferência de Berlim tem início; 14 países europeus presentes, nenhum africano" },
+      { "ano": "26 fev. 1885", "titulo": "Ato Geral de Berlim assinado: 'ocupação efetiva' regulamenta a partilha" },
+      { "ano": "1 mar. 1896", "titulo": "Batalha de Adwa: Etiópia derrota a Itália — única nação africana a resistir à colonização" },
+      { "ano": "1904–1908", "titulo": "Genocídio dos herero e nama pelos alemães na atual Namíbia" },
+      { "ano": "1914", "titulo": "África quase inteiramente colonizada; apenas Etiópia e Libéria independentes" }
+    ],
+    "keywords": [
+      "conferência de berlim",
+      "partilha da áfrica",
+      "colonialismo",
+      "imperialismo",
+      "bismarck",
+      "leopoldo ii",
+      "estado livre do congo",
+      "adwa",
+      "descolonização",
+      "fronteiras africanas"
+    ]
+  },
+  {
+    "id": "abolicao-escravatura-brasil",
+    "slug": "abolicao-escravatura-brasil",
+    "title": "Abolição da Escravatura no Brasil",
+    "startYear": 1850,
+    "endYear": 1888,
+    "dateDisplay": "13 de maio de 1888",
+    "period": "Idade Contemporânea",
+    "region": "América do Sul",
+    "country": "Brasil",
+    "category": "Política",
+    "summary": "Em 13 de maio de 1888, a Princesa Isabel assinou a Lei Áurea e libertou mais de 700 mil pessoas escravizadas — tornando o Brasil o último país das Américas a abolir a escravidão.",
+    "content": "O Brasil foi o maior destino do tráfico transatlântico de escravizados na história: cerca de 4,9 milhões de africanos foram trazidos à força para o território entre os séculos XVI e XIX, o equivalente a quase 40% de todo o tráfico atlântico. A escravidão era a espinha dorsal da economia agroexportadora brasileira — do açúcar no Nordeste ao café em São Paulo e Minas Gerais — e sua abolição foi um processo lento, marcado por pressão internacional, lutas internas e, acima de tudo, pela resistência constante dos próprios escravizados.\n\nO primeiro passo significativo foi a Lei Eusébio de Queirós, de 1850, que proibiu o tráfico transatlântico de escravizados. A pressão britânica foi decisiva: desde 1807, a Grã-Bretanha havia abolido o próprio tráfico e pressionava diplomaticamente e pela força naval. Com o tráfico encerrado, a população escravizada deixou de ser renovada por importações. A Lei do Ventre Livre, de 28 de setembro de 1871, declarou livres os filhos de mulheres escravizadas nascidos a partir daquela data. A Lei dos Sexagenários, de 1885, libertou escravizados com mais de 60 anos — uma ironia cruel, dado que poucos sobreviviam até essa idade.\n\nO movimento abolicionista ganhou força nas décadas de 1870 e 1880. Joaquim Nabuco, filho de senador pernambucano, publicou 'O Abolicionismo' em 1883 e fundou a Sociedade Brasileira contra a Escravidão, articulando argumentos morais, econômicos e políticos contra o sistema. José do Patrocínio, filho de escravizada, usou sua influência como jornalista e orador para mobilizar a opinião pública nas cidades. André Rebouças, engenheiro negro, ligou a abolição à necessidade de reforma agrária. Luiz Gama, filho de africana escravizada, tornou-se advogado e libertou centenas de escravizados através de tribunais, antes de morrer em 1882.\n\nNos anos finais, a abolição tornava-se inevitável: fazendas em São Paulo perdiam escravizados em fugas em massa; o exército recusou-se a perseguir fugitivos; cidades declaravam-se 'territórios livres'. Em 13 de maio de 1888, a Princesa Isabel — regente do Império enquanto Dom Pedro II se tratava na Europa — assinou a Lei Áurea, documento de apenas dois artigos que declarava extinta a escravidão. Mais de 700 mil pessoas foram libertadas naquele dia.\n\nA abolição, porém, não veio acompanhada de indenização, acesso à terra, educação ou qualquer política de integração para os recém-libertos. Os ex-escravizados foram lançados ao mercado de trabalho sem recursos, enquanto proprietários receberam trabalhadores imigrantes europeus subsidiados pelo governo. Menos de um ano e meio depois, em 15 de novembro de 1889, Dom Pedro II foi deposto e o Brasil tornou-se uma República — e muitos historiadores apontam que a abolição, ao alienar a elite escravocrata da Coroa, acelerou o fim do Império.",
+    "importance": 5,
+    "featured": false,
+    "image": "/eventos/hero-abolicao-brasil.jpg",
+    "relatedEvents": [
+      "independencia-brasil",
+      "descobrimento-brasil",
+      "independencia-estados-unidos"
+    ],
+    "characters": [
+      {
+        "name": "Princesa Isabel",
+        "role": "Regente do Império do Brasil",
+        "image": "",
+        "description": "Assinou a Lei Áurea em 13 de maio de 1888, tornando-se símbolo da abolição no Brasil e passando à história como 'A Redentora'."
+      },
+      {
+        "name": "Joaquim Nabuco",
+        "role": "Político e escritor abolicionista",
+        "image": "",
+        "description": "Publicou 'O Abolicionismo' (1883) e fundou a Sociedade Brasileira contra a Escravidão, sendo o principal líder parlamentar da causa."
+      },
+      {
+        "name": "José do Patrocínio",
+        "role": "Jornalista e orador abolicionista",
+        "image": "",
+        "description": "Filho de escravizada, usou o jornalismo para mobilizar a opinião pública e foi um dos mais importantes líderes do movimento abolicionista."
+      }
+    ],
+    "sources": [],
+    "cronologia": [
+      { "ano": "1850", "titulo": "Lei Eusébio de Queirós proíbe o tráfico transatlântico de escravizados" },
+      { "ano": "1871", "titulo": "Lei do Ventre Livre: filhos de escravizadas nascem livres a partir dessa data" },
+      { "ano": "1883", "titulo": "Joaquim Nabuco publica 'O Abolicionismo'; Sociedade Brasileira contra a Escravidão" },
+      { "ano": "1885", "titulo": "Lei dos Sexagenários: liberta escravizados com mais de 60 anos" },
+      { "ano": "13 mai. 1888", "titulo": "Princesa Isabel assina a Lei Áurea — fim da escravidão no Brasil" },
+      { "ano": "15 nov. 1889", "titulo": "Proclamação da República; queda do Império 18 meses após a abolição" }
+    ],
+    "keywords": [
+      "abolição da escravatura",
+      "lei áurea",
+      "princesa isabel",
+      "joaquim nabuco",
+      "josé do patrocínio",
+      "escravidão no brasil",
+      "lei do ventre livre",
+      "movimento abolicionista",
+      "brasil império",
+      "1888"
+    ]
+  },
+  {
+    "id": "criacao-estado-israel",
+    "slug": "criacao-estado-israel",
+    "title": "Criação do Estado de Israel",
+    "startYear": 1948,
+    "endYear": 1949,
+    "dateDisplay": "14 de maio de 1948",
+    "period": "Idade Contemporânea",
+    "region": "Oriente Médio",
+    "country": "Israel",
+    "category": "Política",
+    "summary": "Em 14 de maio de 1948, David Ben-Gurion proclamou o Estado de Israel em Tel Aviv — realizando o sonho do movimento sionista e desencadeando uma guerra que criaria o conflito mais duradouro do Oriente Médio.",
+    "content": "O Estado de Israel nasceu de uma confluência de forças que raramente se repetiu na história moderna: um movimento político de décadas, uma tragédia civilizatória sem precedentes, uma conjuntura geopolítica única e a decisão formal de uma organização internacional. Em 14 de maio de 1948, às quatro da tarde em Tel Aviv, David Ben-Gurion leu a Declaração de Independência do Estado de Israel na sala de exposições do Museu de Arte da cidade — a imagem de Ben-Gurion em pé sob o retrato de Theodor Herzl tornou-se um dos ícones do século.\n\nO pano de fundo era o Mandato Britânico sobre a Palestina, vigente desde o fim da Primeira Guerra Mundial. Em 1917, a Declaração Balfour comprometera o governo britânico com o estabelecimento de um 'lar nacional para o povo judeu' na Palestina, sem prejudicar os direitos civis e religiosos das comunidades não judaicas que ali viviam. As décadas seguintes foram marcadas por imigração judaica crescente — acelerada pela perseguição nazista nos anos 1930 — e por conflitos crescentes com a população árabe local. Depois do Holocausto, que assassinou seis milhões de judeus europeus, a pressão internacional por uma solução tornou-se irresistível.\n\nEm novembro de 1947, a Assembleia Geral da ONU aprovou o Plano de Partilha (Resolução 181), que dividia a Palestina em um Estado judeu e um Estado árabe, com Jerusalém sob administração internacional. Os líderes sionistas aceitaram o plano; os líderes árabes da Palestina e os países árabes vizinhos rejeitaram-no. Ao proclamar a independência, Israel foi reconhecido pelos Estados Unidos onze minutos depois — o presidente Truman dera a aprovação pessoal contra a recomendação de parte do Departamento de Estado. A União Soviética também reconheceu Israel nos dias seguintes.\n\nNo dia seguinte à proclamação, em 15 de maio de 1948, os exércitos do Egito, Jordânia, Síria, Iraque e Líbano invadiram o recém-nascido Estado — começava a Primeira Guerra Árabe-Israelense. Contra todas as expectativas, Israel não apenas sobreviveu como expandiu seu território além do que o Plano de Partilha previa. Quando os armistícios foram assinados em 1949, Israel controlava cerca de 78% do território da antiga Palestina mandatória. Cerca de 700 mil palestinos árabes haviam fugido ou sido expulsos de suas casas — evento chamado de Nakba (catástrofe, em árabe) — tornando-se refugiados nos países vizinhos. Israel foi admitido à ONU em 11 de maio de 1949.\n\nA criação do Estado de Israel e a Nakba palestina inauguraram um conflito que continuou a moldar o Oriente Médio nas décadas seguintes. As guerras de 1956, 1967 — quando Israel capturou a Cisjordânia, Gaza, o Sinai e as Colinas do Golã — e 1973, os acordos de paz com o Egito em 1979 e com a Jordânia em 1994, e as negociações sobre um Estado palestino continuam a dominar a agenda geopolítica regional e global.",
+    "importance": 5,
+    "featured": false,
+    "image": "/eventos/hero-criacao-estado-israel.jpg",
+    "relatedEvents": [
+      "primeira-guerra-mundial",
+      "fim-segunda-guerra-mundial",
+      "independencia-india"
+    ],
+    "characters": [
+      {
+        "name": "David Ben-Gurion",
+        "role": "Primeiro-Ministro e Ministro da Defesa de Israel",
+        "image": "",
+        "description": "Proclamou a independência de Israel em 14 de maio de 1948 e liderou o país durante a Guerra da Independência."
+      },
+      {
+        "name": "Theodor Herzl",
+        "role": "Fundador do sionismo político moderno",
+        "image": "",
+        "description": "Convocou o primeiro Congresso Sionista em Basileia em 1897 e articulou a visão de um Estado judeu soberano, décadas antes de sua criação."
+      },
+      {
+        "name": "Chaim Weizmann",
+        "role": "Primeiro Presidente do Estado de Israel",
+        "image": "",
+        "description": "Líder sionista e cientista que negociou a Declaração Balfour com o governo britânico e tornou-se o primeiro chefe de Estado de Israel."
+      }
+    ],
+    "sources": [],
+    "cronologia": [
+      { "ano": "1897", "titulo": "Theodor Herzl convoca o 1º Congresso Sionista em Basileia, Suíça" },
+      { "ano": "1917", "titulo": "Declaração Balfour: Grã-Bretanha apoia o 'lar nacional judaico' na Palestina" },
+      { "ano": "nov. 1947", "titulo": "ONU aprova o Plano de Partilha da Palestina (Resolução 181)" },
+      { "ano": "14 mai. 1948", "titulo": "Ben-Gurion proclama o Estado de Israel em Tel Aviv" },
+      { "ano": "15 mai. 1948", "titulo": "Egito, Jordânia, Síria, Iraque e Líbano invadem Israel — início da Guerra da Independência" },
+      { "ano": "1949", "titulo": "Armistícios; Israel com 78% da Palestina; ≈ 700 mil palestinos refugiados (Nakba)" }
+    ],
+    "keywords": [
+      "estado de israel",
+      "sionismo",
+      "ben-gurion",
+      "declaração balfour",
+      "nakba",
+      "plano de partilha",
+      "guerra árabe-israelense",
+      "oriente médio",
+      "theodor herzl",
+      "holocausto"
+    ]
   }
 ]
