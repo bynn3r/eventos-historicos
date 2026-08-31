@@ -2,15 +2,22 @@ import type { Metadata } from "next"
 import { Shield, Eye, Lock, Users, FileText, Mail } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Separator } from "@/components/ui/separator"
+import { Navigation } from "@/components/navigation"
+import { Footer } from "@/components/footer"
 
 export const metadata: Metadata = {
   title: "Política de Privacidade | Eventos Históricos",
-  description: "Saiba como coletamos, usamos e protegemos suas informações pessoais no Eventos Históricos.",
+  description: "Saiba como coletamos, usamos e protegemos suas informações pessoais no Eventos Históricos, em conformidade com a LGPD.",
+  alternates: {
+    canonical: "https://eventoshistoricos.com.br/privacidade",
+  },
 }
 
 export default function PrivacidadePage() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen flex flex-col bg-background">
+      <Navigation />
+      <main className="flex-1">
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-primary/10 to-background py-16">
         <div className="container mx-auto px-4">
@@ -219,6 +226,29 @@ export default function PrivacidadePage() {
 
             <Separator />
 
+            {/* LGPD */}
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <Shield className="h-5 w-5 text-primary" />
+                  Lei Geral de Proteção de Dados (LGPD)
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <p className="text-muted-foreground">
+                  Esta política está em conformidade com a Lei nº 13.709/2018 — Lei Geral de Proteção de Dados Pessoais
+                  (LGPD). Como titular de dados pessoais, você tem direito a: confirmação da existência de tratamento,
+                  acesso, correção, anonimização, bloqueio ou eliminação de dados desnecessários, portabilidade,
+                  eliminação de dados tratados com consentimento, revogação do consentimento e informação sobre
+                  compartilhamento.
+                </p>
+                <p className="text-muted-foreground">
+                  Para exercer qualquer desses direitos ou esclarecer dúvidas, entre em contato através do formulário
+                  de contato disponível no site.
+                </p>
+              </CardContent>
+            </Card>
+
             {/* Contato */}
             <Card>
               <CardHeader>
@@ -230,18 +260,19 @@ export default function PrivacidadePage() {
               <CardContent className="space-y-4">
                 <p className="text-muted-foreground">
                   Se você tiver dúvidas sobre esta política de privacidade ou sobre como tratamos seus dados, entre em
-                  contato conosco:
+                  contato conosco através da página de{" "}
+                  <a href="/contato" className="text-primary underline underline-offset-4 hover:opacity-80">
+                    contato
+                  </a>
+                  .
                 </p>
-                <div className="bg-muted/50 p-4 rounded-lg">
-                  <p className="font-semibold">Eventos Históricos</p>
-                  <p className="text-muted-foreground">Email: privacidade@eventoshistoricos.com</p>
-                  <p className="text-muted-foreground">Telefone: (11) 1234-5678</p>
-                </div>
               </CardContent>
             </Card>
           </div>
         </div>
       </section>
+      </main>
+      <Footer />
     </div>
   )
 }

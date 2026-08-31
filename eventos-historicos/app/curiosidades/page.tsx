@@ -1,3 +1,4 @@
+import type { Metadata } from "next"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
@@ -8,6 +9,22 @@ import { BookOpen, Search, Calendar } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 import curiosidadesData from "@/data/curiosidades.json"
+
+export const metadata: Metadata = {
+  title: "Curiosidades Históricas | Eventos Históricos",
+  description:
+    "Descubra fatos surpreendentes e curiosidades sobre os grandes eventos e personagens que moldaram a história da humanidade.",
+  alternates: {
+    canonical: "https://eventoshistoricos.com.br/curiosidades",
+  },
+  openGraph: {
+    title: "Curiosidades Históricas | Eventos Históricos",
+    description: "Fatos surpreendentes sobre os grandes eventos e personagens que moldaram a história.",
+    type: "website",
+    locale: "pt_BR",
+    url: "https://eventoshistoricos.com.br/curiosidades",
+  },
+}
 
 export default function CuriosidadesPage() {
   const sortedCuriosidades = [...curiosidadesData].sort(

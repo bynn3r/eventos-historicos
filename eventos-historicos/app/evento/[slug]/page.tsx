@@ -6,10 +6,11 @@ import { EventJourney } from "@/components/evento/event-journey"
 import { EventMap } from "@/components/evento/event-map"
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowLeft, ArrowDown } from "lucide-react"
+import { ArrowLeft, ArrowDown, BookOpen } from "lucide-react"
 import { notFound } from "next/navigation"
 import grandesEventosData from "@/data/grandes-eventos.json"
 import curiosidadesData from "@/data/curiosidades.json"
+import timelineData from "@/data/linha-do-tempo.json"
 
 interface EventoPageProps {
   params: {
@@ -21,6 +22,8 @@ export async function generateStaticParams() {
   return grandesEventosData.map((evento) => ({ slug: evento.slug }))
 }
 
+const SITE_URL = "https://eventoshistoricos.com.br"
+
 export async function generateMetadata({ params }: EventoPageProps) {
   const evento = grandesEventosData.find((e) => e.slug === params.slug)
 
@@ -28,9 +31,27 @@ export async function generateMetadata({ params }: EventoPageProps) {
     return { title: "Evento não encontrado" }
   }
 
+  const url = `${SITE_URL}/evento/${evento.slug}`
+  const description = evento.hook.length > 160 ? `${evento.hook.substring(0, 157)}...` : evento.hook
+
   return {
     title: `${evento.titulo} (${evento.ano}) | Eventos Históricos`,
-    description: evento.hook,
+    description,
+    alternates: { canonical: url },
+    openGraph: {
+      title: `${evento.titulo} (${evento.ano})`,
+      description,
+      type: "article",
+      locale: "pt_BR",
+      url,
+      images: evento.heroImagem ? [{ url: `${SITE_URL}${evento.heroImagem}`, alt: evento.titulo }] : undefined,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${evento.titulo} (${evento.ano})`,
+      description,
+      images: evento.heroImagem ? [`${SITE_URL}${evento.heroImagem}`] : undefined,
+    },
   }
 }
 
@@ -45,8 +66,25 @@ export default function EventoPage({ params }: EventoPageProps) {
     evento.curiosidadesRelacionadas?.includes(c.id),
   )
 
+  const timelineArticle = (timelineData as { slug: string }[]).find((e) => e.slug === params.slug)
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    name: evento.titulo,
+    description: evento.hook,
+    image: evento.heroImagem ? `${SITE_URL}${evento.heroImagem}` : undefined,
+    url: `${SITE_URL}/evento/${evento.slug}`,
+    startDate: String(evento.ano),
+    inLanguage: "pt-BR",
+  }
+
   return (
     <div className="min-h-screen flex flex-col">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Navigation />
 
       <main className="flex-1 bg-background">
@@ -65,16 +103,30 @@ export default function EventoPage({ params }: EventoPageProps) {
 
           <div className="relative z-10 w-full">
             <div className="container mx-auto px-4 pb-16 pt-32 sm:px-6 lg:px-8">
-              <Button
-                variant="ghost"
-                asChild
-                className="mb-6 pl-0 text-white/80 hover:bg-white/10 hover:text-white"
-              >
-                <Link href="/grandes-eventos">
-                  <ArrowLeft className="mr-2 h-4 w-4" />
-                  Voltar aos Grandes Eventos
-                </Link>
-              </Button>
+              <div className="flex flex-wrap items-center gap-3 mb-6">
+                <Button
+                  variant="ghost"
+                  asChild
+                  className="pl-0 text-white/80 hover:bg-white/10 hover:text-white"
+                >
+                  <Link href="/grandes-eventos">
+                    <ArrowLeft className="mr-2 h-4 w-4" />
+                    Voltar aos Grandes Eventos
+                  </Link>
+                </Button>
+                {timelineArticle && (
+                  <Button
+                    variant="ghost"
+                    asChild
+                    className="text-white/80 hover:bg-white/10 hover:text-white"
+                  >
+                    <Link href={`/linha-do-tempo/${params.slug}`}>
+                      <BookOpen className="mr-2 h-4 w-4" />
+                      Ver artigo completo
+                    </Link>
+                  </Button>
+                )}
+              </div>
 
               <div className="flex items-center gap-3">
                 <Badge className="bg-primary text-primary-foreground text-base font-bold px-3 py-1">

@@ -23,16 +23,36 @@ export async function generateStaticParams() {
   return []
 }
 
+const SITE_URL = "https://eventoshistoricos.com.br"
+
 export async function generateMetadata({ params }: NoticiaPageProps) {
   const meta = await getNewsArticleMetaBySlug(params.slug)
 
   if (!meta) {
-    return { title: "Noticia nao encontrada" }
+    return { title: "Notícia não encontrada" }
   }
 
+  const url = `${SITE_URL}/noticias/${params.slug}`
+  const description = meta.descricao && meta.descricao.length > 160
+    ? `${meta.descricao.substring(0, 157)}...`
+    : meta.descricao
+
   return {
-    title: `${meta.titulo} | Eventos Historicos`,
-    description: meta.descricao,
+    title: `${meta.titulo} | Eventos Históricos`,
+    description,
+    alternates: { canonical: url },
+    openGraph: {
+      title: meta.titulo,
+      description,
+      type: "article",
+      locale: "pt_BR",
+      url,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: meta.titulo,
+      description,
+    },
   }
 }
 

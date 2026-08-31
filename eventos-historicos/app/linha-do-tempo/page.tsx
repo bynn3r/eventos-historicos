@@ -89,6 +89,7 @@ function EventDialogContent({ event }: { event: TimelineEvent }) {
 
 function TimelineEventItem({ event, index }: { event: TimelineEvent; index: number }) {
   const ref = useRef<HTMLDivElement>(null)
+  const [open, setOpen] = useState(false)
   const { icon: IconComponent, color } = getVisual(event.slug)
   const isLeft = index % 2 === 0
 
@@ -129,7 +130,7 @@ function TimelineEventItem({ event, index }: { event: TimelineEvent; index: numb
           isLeft ? "md:col-start-1 md:flex md:justify-end md:pr-8" : "md:col-start-3 md:pl-8",
         ].join(" ")}
       >
-        <Dialog>
+        <Dialog open={open} onOpenChange={setOpen}>
           <DialogTrigger asChild>
             <Card className="w-full md:max-w-md cursor-pointer hover:shadow-lg transition-all duration-200 hover:scale-[1.02]">
               <CardHeader className="pb-3">
@@ -152,8 +153,25 @@ function TimelineEventItem({ event, index }: { event: TimelineEvent; index: numb
               </CardContent>
             </Card>
           </DialogTrigger>
-          <EventDialogContent event={event} />
+          {open && <EventDialogContent event={event} />}
         </Dialog>
+        {/* Links rastreáveis por crawlers — navegação direta para artigos */}
+        <div className={`flex gap-4 px-1 pt-2 text-xs ${isLeft ? "md:justify-end" : ""}`}>
+          <Link
+            href={`/linha-do-tempo/${event.slug}`}
+            className="text-muted-foreground hover:text-primary underline underline-offset-2 transition-colors"
+          >
+            Artigo completo
+          </Link>
+          {event.featured && (
+            <Link
+              href={`/evento/${event.slug}`}
+              className="text-muted-foreground hover:text-primary underline underline-offset-2 transition-colors"
+            >
+              Explorar evento
+            </Link>
+          )}
+        </div>
       </div>
     </div>
   )

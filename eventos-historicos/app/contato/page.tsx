@@ -1,3 +1,4 @@
+import type { Metadata } from "next"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
@@ -7,6 +8,21 @@ import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Mail, Phone, MapPin, Clock, Send } from "lucide-react"
+
+export const metadata: Metadata = {
+  title: "Contato | Eventos Históricos",
+  description: "Entre em contato com a equipe do Eventos Históricos. Sugestões, parcerias e dúvidas.",
+  alternates: {
+    canonical: "https://eventoshistoricos.com.br/contato",
+  },
+  openGraph: {
+    title: "Contato | Eventos Históricos",
+    description: "Entre em contato com a equipe do Eventos Históricos.",
+    type: "website",
+    locale: "pt_BR",
+    url: "https://eventoshistoricos.com.br/contato",
+  },
+}
 
 export default function ContatoPage() {
   return (

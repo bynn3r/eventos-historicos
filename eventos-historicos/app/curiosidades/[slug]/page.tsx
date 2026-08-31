@@ -1,8 +1,9 @@
+import type { Metadata } from "next"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { Calendar, ArrowLeft, Share2 } from "lucide-react"
+import { Calendar, ArrowLeft, Share2, ChevronRight } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 import { notFound } from "next/navigation"
@@ -21,19 +22,37 @@ export async function generateStaticParams() {
   }))
 }
 
+const SITE_URL = "https://eventoshistoricos.com.br"
+
 export async function generateMetadata({ params }: CuriosidadePageProps) {
   const curiosidade = curiosidadesData.find((c) => c.slug === params.slug)
 
   if (!curiosidade) {
-    return {
-      title: "Curiosidade não encontrada",
-    }
+    return { title: "Curiosidade não encontrada" }
   }
+
+  const description =
+    curiosidade.descricao.length > 160 ? `${curiosidade.descricao.substring(0, 157)}...` : curiosidade.descricao
+  const url = `${SITE_URL}/curiosidades/${curiosidade.slug}`
 
   return {
     title: `${curiosidade.titulo} | Eventos Históricos`,
-    description:
-      curiosidade.descricao.length > 160 ? `${curiosidade.descricao.substring(0, 160)}...` : curiosidade.descricao,
+    description,
+    alternates: { canonical: url },
+    openGraph: {
+      title: curiosidade.titulo,
+      description,
+      type: "article",
+      locale: "pt_BR",
+      url,
+      images: curiosidade.imagem ? [{ url: `${SITE_URL}${curiosidade.imagem}`, alt: curiosidade.titulo }] : undefined,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: curiosidade.titulo,
+      description,
+      images: curiosidade.imagem ? [`${SITE_URL}${curiosidade.imagem}`] : undefined,
+    },
   }
 }
 
@@ -50,13 +69,44 @@ export default function CuriosidadePage({ params }: CuriosidadePageProps) {
     limit: 4,
   })
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: curiosidade.titulo,
+    description: curiosidade.descricao,
+    image: curiosidade.imagem ? `${SITE_URL}${curiosidade.imagem}` : undefined,
+    url: `${SITE_URL}/curiosidades/${curiosidade.slug}`,
+    datePublished: curiosidade.data,
+    inLanguage: "pt-BR",
+    publisher: {
+      "@type": "Organization",
+      name: "Eventos Históricos",
+      url: SITE_URL,
+    },
+  }
+
   return (
     <div className="min-h-screen flex flex-col">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Navigation />
 
       <main className="flex-1">
         <article className="py-12">
           <div className="container mx-auto px-4 max-w-4xl">
+            {/* Breadcrumb */}
+            <nav aria-label="breadcrumb" className="mb-6">
+              <ol className="flex items-center gap-1.5 text-sm text-muted-foreground flex-wrap">
+                <li><Link href="/" className="hover:text-foreground transition-colors">Início</Link></li>
+                <li><ChevronRight className="h-3.5 w-3.5" /></li>
+                <li><Link href="/curiosidades" className="hover:text-foreground transition-colors">Curiosidades</Link></li>
+                <li><ChevronRight className="h-3.5 w-3.5" /></li>
+                <li className="text-foreground font-medium line-clamp-1">{curiosidade.titulo}</li>
+              </ol>
+            </nav>
+
             {/* Header */}
             <div className="mb-8">
               <Button variant="ghost" asChild className="mb-6">

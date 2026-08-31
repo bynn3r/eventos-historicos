@@ -1,9 +1,26 @@
+import type { Metadata } from "next"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Globe, BookOpen, Users } from "lucide-react"
 import Image from "next/image"
+
+export const metadata: Metadata = {
+  title: "Sobre | Eventos Históricos",
+  description:
+    "Conheça o Eventos Históricos, portal brasileiro dedicado à história mundial, geopolítica e curiosidades históricas.",
+  alternates: {
+    canonical: "https://eventoshistoricos.com.br/sobre",
+  },
+  openGraph: {
+    title: "Sobre o Eventos Históricos",
+    description: "Portal brasileiro dedicado à história mundial e geopolítica.",
+    type: "website",
+    locale: "pt_BR",
+    url: "https://eventoshistoricos.com.br/sobre",
+  },
+}
 
 export default function SobrePage() {
   return (

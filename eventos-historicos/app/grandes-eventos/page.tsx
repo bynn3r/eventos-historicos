@@ -1,3 +1,4 @@
+import type { Metadata } from "next"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
@@ -7,6 +8,22 @@ import { Input } from "@/components/ui/input"
 import { Search, Users, Globe, Zap, Sword } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
+
+export const metadata: Metadata = {
+  title: "Grandes Eventos da História | Eventos Históricos",
+  description:
+    "Explore os acontecimentos que definiram a humanidade: guerras, revoluções, descobertas e momentos que mudaram o curso da história.",
+  alternates: {
+    canonical: "https://eventoshistoricos.com.br/grandes-eventos",
+  },
+  openGraph: {
+    title: "Grandes Eventos da História | Eventos Históricos",
+    description: "Os acontecimentos que definiram a humanidade: guerras, revoluções e descobertas.",
+    type: "website",
+    locale: "pt_BR",
+    url: "https://eventoshistoricos.com.br/grandes-eventos",
+  },
+}
 
 export default function GrandesEventosPage() {
   return (
