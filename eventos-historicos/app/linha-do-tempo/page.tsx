@@ -126,8 +126,8 @@ function TimelineEventItem({ event, index }: { event: TimelineEvent; index: numb
       {/* Card — mobile: col 2; desktop: col 1 (even) or col 3 (odd) */}
       <div
         className={[
-          "pb-8 md:pb-0 md:row-start-1",
-          isLeft ? "md:col-start-1 md:flex md:justify-end md:pr-8" : "md:col-start-3 md:pl-8",
+          "flex flex-col pb-8 md:pb-0 md:row-start-1",
+          isLeft ? "md:col-start-1 md:items-end md:pr-8" : "md:col-start-3 md:pl-8",
         ].join(" ")}
       >
         <Dialog open={open} onOpenChange={setOpen}>
@@ -155,8 +155,8 @@ function TimelineEventItem({ event, index }: { event: TimelineEvent; index: numb
           </DialogTrigger>
           {open && <EventDialogContent event={event} />}
         </Dialog>
-        {/* Links rastreáveis por crawlers — navegação direta para artigos */}
-        <div className={`flex gap-4 px-1 pt-2 text-xs ${isLeft ? "md:justify-end" : ""}`}>
+        {/* Links rastreáveis por crawlers — abaixo do card, empilhados verticalmente */}
+        <div className={`flex gap-4 px-1 pt-2 text-xs w-full md:max-w-md ${isLeft ? "md:justify-end" : ""}`}>
           <Link
             href={`/linha-do-tempo/${event.slug}`}
             className="text-muted-foreground hover:text-primary underline underline-offset-2 transition-colors"
