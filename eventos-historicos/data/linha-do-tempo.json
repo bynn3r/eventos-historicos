@@ -27,8 +27,7 @@
       }
     ],
     "sources": [
-      { "title": "Paleta de Narmer — Museu Egípcio do Cairo", "url": "", "tipo": "primária" },
-      { "title": "SHAW, Ian (ed.). The Oxford History of Ancient Egypt. Oxford University Press, 2000.", "url": "", "tipo": "secundária" }
+      { "title": "Paleta de Narmer — Museu Egípcio do Cairo", "url": "", "tipo": "primária" }
     ],
     "cronologia": [
       { "ano": "c. 3200 a.C.", "titulo": "Alto e Baixo Egito rivalizam como reinos independentes" },
@@ -79,8 +78,7 @@
       }
     ],
     "sources": [
-      { "title": "Estela do Código de Hamurábi — Museu do Louvre, Paris", "url": "", "tipo": "primária" },
-      { "title": "ROTH, Martha T. Law Collections from Mesopotamia and Asia Minor. Scholars Press, 1997.", "url": "", "tipo": "académica" }
+      { "title": "Estela do Código de Hamurábi — Museu do Louvre, Paris", "url": "", "tipo": "primária" }
     ],
     "cronologia": [
       { "ano": "c. 1792 a.C.", "titulo": "Hamurábi assume o trono de Babilônia" },
@@ -260,10 +258,7 @@
         "description": "Governante indiano que enfrentou Alexandre na Batalha do Hidaspes."
       }
     ],
-    "sources": [
-      { "title": "ARRIANO. Anabasis Alexandri. (séc. II d.C.)", "url": "", "tipo": "primária" },
-      { "title": "PLUTARCO. Vida de Alexandre. In: Vidas Paralelas. (séc. I-II d.C.)", "url": "", "tipo": "primária" }
-    ],
+    "sources": [],
     "cronologia": [
       { "ano": "336 a.C.", "titulo": "Assassinato de Filipe II; Alexandre assume o trono com 20 anos" },
       { "ano": "334 a.C.", "titulo": "Atravessa os Dardanelos; vitória no rio Granico" },
@@ -925,10 +920,7 @@
         "description": "Depois de ter sua oferta recusada por falta de recursos bizantinos, fundiu para Mehmed II as maiores bombardas já construídas até então, decisivas para abrir brechas nas muralhas milenares."
       }
     ],
-    "sources": [
-      { "title": "DOUKAS. Decline and Fall of Byzantium to the Ottoman Turks. Wayne State University Press, 1975.", "url": "", "tipo": "primária" },
-      { "title": "RUNCIMAN, Steven. The Fall of Constantinople 1453. Cambridge University Press, 1965.", "url": "", "tipo": "secundária" }
-    ],
+    "sources": [],
     "cronologia": [
       { "ano": "1422", "titulo": "Segundo cerco otomano fracassado; Constantinopla ainda resiste" },
       { "ano": "1451", "titulo": "Mehmed II sobe ao trono com 19 anos; faz da conquista seu projeto central" },
@@ -993,9 +985,7 @@
         "description": "Armador experiente de Palos, foi decisivo para recrutar tripulação e conter ameaças de motim durante a travessia; separou-se de Colombo no Caribe e morreu poucos dias após o retorno à Espanha, em março de 1493."
       }
     ],
-    "sources": [
-      { "title": "Diário de Colombo (cópia de Bartolomé de Las Casas, séc. XVI) — Biblioteca Nacional de España", "url": "", "tipo": "primária" }
-    ],
+    "sources": [],
     "cronologia": [
       { "ano": "1488", "titulo": "Bartolomeu Dias dobra o Cabo da Boa Esperança — Portugal aposta na rota africana" },
       { "ano": "abr. 1492", "titulo": "Capitulações de Santa Fé: acordo com os Reis Católicos" },
