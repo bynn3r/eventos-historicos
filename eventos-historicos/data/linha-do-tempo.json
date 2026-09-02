@@ -2272,5 +2272,777 @@
       "theodor herzl",
       "holocausto"
     ]
+  },
+  {
+    "id": "revolucao-agricola-neolitica",
+    "slug": "revolucao-agricola-neolitica",
+    "title": "Revolução Agrícola Neolítica",
+    "startYear": -10000,
+    "endYear": -5000,
+    "dateDisplay": "c. 10000–5000 a.C.",
+    "period": "Idade Antiga",
+    "region": "Oriente Médio",
+    "country": "Mesopotâmia",
+    "category": "Sociedade",
+    "summary": "Por volta de 10000 a.C., comunidades humanas do Crescente Fértil começaram a cultivar plantas e domesticar animais — inaugurando a revolução que criaria as cidades, os impérios e a civilização.",
+    "content": "Em Göbekli Tepe, no sudeste da Turquia, arqueólogos descobriram monumentos de pedra com mais de 11 mil anos — estruturas cerimoniais erguidas antes mesmo de qualquer sinal de agricultura regular. O sítio, datado de c. 9000 a.C., desafiou a narrativa clássica ao sugerir que o ritual e a organização coletiva podem ter precedido o plantio: talvez não tenha sido o excedente de comida que criou as primeiras comunidades complexas, mas a necessidade de reunir pessoas para fins sagrados que impulsionou a domesticação das plantas.\n\nNo Crescente Fértil — arco que vai do atual Iraque ao Israel, passando pela Síria e pela Turquia — os primeiros agricultores selecionaram sistematicamente sementes de trigo einkorn e cevada, plantando-as perto de suas habitações. Em paralelo, ovelhas e cabras foram domesticadas por volta de 8500 a.C., seguidas de porcos e bovinos. O calendário agrícola — plantar, cultivar, colher — impôs uma nova relação com o tempo e o território: pela primeira vez na história, grupos humanos tornaram-se sedentários por necessidade.\n\nO excedente alimentar gerado pela agricultura transformou profundamente a organização social. Com mais comida do que o necessário para sobreviver, foi possível sustentar pessoas que não produziam alimentos: artesãos, sacerdotes, guerreiros, comerciantes. Surgiu a especialização profissional, depois a hierarquia social, depois o Estado. A desigualdade, praticamente inexistente entre caçadores-coletores, tornou-se estrutural: quem controlava o armazém de grãos controlava a comunidade.\n\nAs primeiras cidades emergiram como produto direto desse processo. Jericó, no atual Vale do Jordão, tem traços de habitação permanente de c. 9000 a.C. Çatalhöyük, na Anatólia (c. 7500 a.C.), abrigava até 8.000 habitantes em construções contíguas sem ruas — as pessoas entravam pelas rooftops. Uruk, na Mesopotâmia, cresceu até 40.000 habitantes por volta de 3400 a.C. e produziu os primeiros registros escritos — tabletes de argila que catalogavam estoques de grãos e cabeças de gado. A escrita nasceu da contabilidade agrícola. A Encyclopaedia Britannica documenta essa cronologia detalhadamente em seu verbete sobre a Revolução Neolítica.",
+    "importance": 5,
+    "featured": false,
+    "image": "/eventos/hero-revolucao-agricola-neolitica.jpg",
+    "relatedEvents": ["unificacao-egito", "codigo-hamurabi"],
+    "characters": [],
+    "sources": [
+      {
+        "title": "Encyclopaedia Britannica — Neolithic Revolution",
+        "url": "https://www.britannica.com/event/Neolithic-Revolution",
+        "tipo": "enciclopédia"
+      }
+    ],
+    "cronologia": [
+      { "ano": "c. 10000 a.C.", "titulo": "Primeiras plantas cultivadas no Crescente Fértil" },
+      { "ano": "c. 9000 a.C.", "titulo": "Göbekli Tepe — monumentos pré-agrícolas na Anatólia" },
+      { "ano": "c. 8500 a.C.", "titulo": "Domesticação de ovelhas e cabras" },
+      { "ano": "c. 7500 a.C.", "titulo": "Çatalhöyük (Turquia): uma das primeiras cidades com 8000 habitantes" },
+      { "ano": "c. 6000 a.C.", "titulo": "Agricultura espalha-se para Europa, Índia e China" },
+      { "ano": "c. 4000 a.C.", "titulo": "Primeiros registros escritos na Suméria — produto direto do excedente agrícola" }
+    ],
+    "keywords": ["neolítico", "agricultura", "crescente fértil", "domesticação", "göbekli tepe", "çatalhöyük", "mesopotâmia", "revolução agrícola", "trigo", "cevada"]
+  },
+  {
+    "id": "nascimento-budismo",
+    "slug": "nascimento-budismo",
+    "title": "Nascimento do Budismo",
+    "startYear": -563,
+    "endYear": -400,
+    "dateDisplay": "c. 563–400 a.C.",
+    "period": "Idade Antiga",
+    "region": "Ásia Meridional",
+    "country": "Índia",
+    "category": "Religião",
+    "summary": "Nas florestas do norte da Índia, por volta de 500 a.C., um príncipe chamado Sidarta Gautama alcançou a iluminação sob uma figueira — e fundou uma das maiores religiões do mundo.",
+    "content": "Numa noite de c. 534 a.C., enquanto seu recém-nascido filho dormia, o príncipe Sidarta Gautama saiu sorrateiramente do palácio real de Kapilavastu. Tinha 29 anos, a vida mais confortável que o dinheiro podia comprar e — segundo os textos budistas — um pressentimento insuportável de que algo estava errado com o mundo. Ao cruzar os portões do palácio, encontrou pela primeira vez um velho, um enfermo e um cadáver: as três visões que o textos chamam de os Três Mensageiros Divinos. O choque o levou a abandonar família, trono e riqueza para buscar o fim do sofrimento.\n\nDurante seis anos, Sidarta praticou o ascetismo extremo ao lado de outros mendicantes: jejuns prolongados, exposição ao calor e ao frio, mortificação do corpo. Chegou a um estado tão debilitado que, segundo a tradição, conseguia sentir sua coluna com a mão através do abdômen. Concluiu então que a automortificação não levava à iluminação — apenas substituía um excesso (prazer) por outro (dor). Em c. 528 a.C., sentou-se sob uma figueira sagrada (Ficus religiosa) em Bodh Gaya, no atual Bihar, Índia, e jurou não se levantar até alcançar a compreensão definitiva. Após 49 dias de meditação, tornou-se o Buda — o Desperto.\n\nSeu primeiro ensinamento, proferido em Benares para cinco ex-companheiros ascetas, é conhecido como o Sermão do Dhammacakkappavattana — a Colocação em Movimento da Roda do Dharma. Nele Buda apresentou as Quatro Nobres Verdades: a vida é sofrimento (dukkha); o sofrimento tem origem no desejo; o desejo pode ser extinto; o caminho para extingui-lo é o Caminho Óctuplo — oito práticas de conduta ética, meditação e sabedoria. Esses ensinamentos foram preservados e compilados pelos primeiros discípulos no Dīgha Nikāya (Coleção dos Discursos Longos), um dos textos canônicos fundamentais do Budismo Theravada.\n\nApós a morte de Buda em c. 483 a.C., o budismo se expandiu pelo subcontinente indiano. Sua disseminação acelerou decisivamente no século III a.C., quando o imperador Ashoka — o mais poderoso governante da Índia até então — converteu-se após a sangrenta conquista de Kalinga e enviou missionários ao Sudeste Asiático, ao Sri Lanka, à Ásia Central e provavelmente até ao Mediterrâneo. Hoje, o budismo conta com entre 500 e 600 milhões de seguidores — da Tailândia ao Japão, do Tibete ao Brasil.",
+    "importance": 5,
+    "featured": false,
+    "image": "/eventos/hero-nascimento-budismo.jpg",
+    "relatedEvents": ["conquistas-alexandre-grande", "unificacao-china"],
+    "characters": [
+      {
+        "name": "Sidarta Gautama (Buda)",
+        "role": "Fundador do Budismo",
+        "image": "/eventos/figura-sidarta.jpg",
+        "description": "Príncipe do clã Sakya que abandonou a vida palatina para buscar o fim do sofrimento, alcançou a iluminação em Bodh Gaya e passou 45 anos ensinando o Dharma."
+      },
+      {
+        "name": "Ananda",
+        "role": "Discípulo pessoal de Buda e custódio de seus ensinamentos",
+        "image": "/eventos/figura-ananda.jpg",
+        "description": "Primo e assistente pessoal de Buda por 25 anos, memorizado os discursos com precisão extraordinária e os recitou no Primeiro Concílio Budista após a morte do mestre."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Dīgha Nikāya — Coleção dos Discursos Longos (Pali Text Society)",
+        "url": "",
+        "tipo": "primária"
+      }
+    ],
+    "cronologia": [
+      { "ano": "c. 563 a.C.", "titulo": "Nascimento de Sidarta em Lumbini (atual Nepal)" },
+      { "ano": "c. 534 a.C.", "titulo": "Abandona o palácio" },
+      { "ano": "c. 528 a.C.", "titulo": "Iluminação em Bodh Gaya" },
+      { "ano": "c. 528 a.C.", "titulo": "Sermão de Benares — primeiros ensinamentos" },
+      { "ano": "c. 483 a.C.", "titulo": "Morte de Buda em Kushinagar" },
+      { "ano": "c. 250 a.C.", "titulo": "Imperador Ashoka adota o budismo e dissemina-o por toda a Ásia" }
+    ],
+    "keywords": ["budismo", "sidarta gautama", "buda", "bodh gaya", "quatro nobres verdades", "caminho óctuplo", "índia", "ashoka", "nirvana", "meditação"]
+  },
+  {
+    "id": "assassinato-julio-cesar",
+    "slug": "assassinato-julio-cesar",
+    "title": "Assassinato de Júlio César",
+    "startYear": -44,
+    "endYear": -44,
+    "dateDisplay": "15 de março de 44 a.C.",
+    "period": "Idade Antiga",
+    "region": "Europa",
+    "country": "Roma",
+    "category": "Política",
+    "summary": "Nos Idos de Março de 44 a.C., 23 facadas no Teatro de Pompeu encerraram a vida do maior general de Roma — e a morte da República Romana.",
+    "content": "Naquela manhã de 15 de março, Júlio César cruzou o Fórum Romano ignorando uma série de alertas. O harúspice Espúrinna havia lhe avisado para se precaver dos Idos de Março. Sua esposa Calpúrnia relatara sonhos perturbadores. Uma nota de aviso fora colocada em suas mãos quando chegava ao Teatro de Pompeu — ele a guardou sem ler. César, que havia sobrevivido a décadas de guerras civis, sabia de conspirações e as desprezava. Era, afinal, o ditador perpétuo de Roma: quem ousaria?\n\nOs aproximadamente 60 senadores conjurados, autodenominados Liberatores, esperavam-no na sala do Senado instalada no Teatro de Pompeu. À medida que César tomava seu assento, um deles se aproximou sob pretexto de fazer um pedido. Os outros se agruparam ao redor. O primeiro golpe de punhal veio de Servílio Cásca — na nuca. César agarrou o braço do agressor e perguntou: 'Cásca, o que você está fazendo?' Em seguida, os demais senadores desembanharam seus punhais e caíram sobre ele. Segundo Suetônio, em Vidas dos Doze Césares, César recebeu 23 feridas — apenas uma delas fatal, no peito. O médico Antístio concluiu posteriormente que todas as demais poderiam ter sido sobrevividas. Marco Júnio Bruto, amigo íntimo de César, estava entre os conspiradores.\n\nO paradoxo dos Idos de Março é que o plano para salvar a República a destruiu. Os Liberatores não haviam calculado o quanto César era amado pelo povo romano — nem o quanto Marco Antônio sabia explorar esse amor. No funeral, Marco Antônio leu o testamento de César (que deixava dinheiro a cada cidadão romano) e exibiu sua toga ensanguentada diante da multidão. A reação foi imediata: motins populares, os conspiradores forçados a fugir de Roma. Plutarco, em suas Vidas Paralelas, descreve a atmosfera de terror que tomou conta da cidade nos dias seguintes ao assassinato.\n\nAs guerras civis que se seguiram — César contra Pompeu havia sido apenas o prelúdio — culminaram na batalha de Filipos (42 a.C.), onde Bruto e Cássio foram derrotados por Otávio e Marco Antônio. Depois vieram as guerras entre esses dois aliados, resolvidas na batalha de Ácio em 31 a.C. Em 27 a.C., Otávio recebeu do Senado o título de Augusto e tornou-se o primeiro imperador romano. A República que os conspiradores tentaram salvar morreu exatamente porque a mataram.",
+    "importance": 5,
+    "featured": false,
+    "image": "/eventos/hero-assassinato-julio-cesar.jpg",
+    "relatedEvents": ["fundacao-de-roma", "queda-imperio-romano-ocidente"],
+    "characters": [
+      {
+        "name": "Júlio César",
+        "role": "Ditador perpétuo de Roma",
+        "image": "/eventos/figura-cesar.jpg",
+        "description": "General e estadista que cruzou o Rubicão em 49 a.C., venceu a guerra civil e foi nomeado ditador perpétuo, concentrando poderes que alarmaram o Senado."
+      },
+      {
+        "name": "Marco Júnio Bruto",
+        "role": "Conspirador principal",
+        "image": "/eventos/figura-bruto.jpg",
+        "description": "Amigo próximo de César que liderou a conjura acreditando defender a República Romana."
+      },
+      {
+        "name": "Otávio Augusto",
+        "role": "Herdeiro político de César",
+        "image": "/eventos/figura-augusto.jpg",
+        "description": "Sobrinho-neto e filho adotivo de César que, após vencer as guerras civis, tornou-se o primeiro imperador romano em 27 a.C."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Suetônio — Vidas dos Doze Césares",
+        "url": "",
+        "tipo": "primária"
+      },
+      {
+        "title": "Plutarco — Vidas Paralelas: Júlio César",
+        "url": "",
+        "tipo": "primária"
+      }
+    ],
+    "cronologia": [
+      { "ano": "49 a.C.", "titulo": "César cruza o Rubicão — guerra civil começa" },
+      { "ano": "48 a.C.", "titulo": "Derrota Pompeu na batalha de Farsália" },
+      { "ano": "fev. 44 a.C.", "titulo": "Nomeado ditador perpétuo" },
+      { "ano": "15 mar. 44 a.C.", "titulo": "Assassinado no Teatro de Pompeu" },
+      { "ano": "44 a.C.", "titulo": "Discurso de Marco Antônio — revolta popular contra os conspiradores" },
+      { "ano": "42 a.C.", "titulo": "Batalha de Filipos — morte de Bruto e Cássio" },
+      { "ano": "27 a.C.", "titulo": "Otávio torna-se Augusto — nascimento do Império Romano" }
+    ],
+    "keywords": ["júlio césar", "idos de março", "bruto", "cássio", "república romana", "senado", "rubicão", "augusto", "império romano", "conspiração"]
+  },
+  {
+    "id": "invencao-imprensa-gutenberg",
+    "slug": "invencao-imprensa-gutenberg",
+    "title": "Invenção da Imprensa por Gutenberg",
+    "startYear": 1450,
+    "endYear": 1455,
+    "dateDisplay": "c. 1450–1455",
+    "period": "Idade Média",
+    "region": "Europa",
+    "country": "Sacro Império Romano-Germânico",
+    "category": "Ciência e Tecnologia",
+    "summary": "Em Mainz, por volta de 1450, Johannes Gutenberg criou a prensa de tipos móveis metálicos — a invenção que democratizou o conhecimento e tornou a Reforma Protestante, a Revolução Científica e o Iluminismo possíveis.",
+    "content": "Johannes Gutenberg não inventou os tipos móveis — os chineses os usavam desde o século XI, e os coreanos já imprimiam com tipos de metal no século XIII. O que Gutenberg inventou foi um sistema. O ex-ourives de Mainz combinou três elementos que ninguém havia unido antes: uma prensa mecânica adaptada das utilizadas para prensar uvas e azeite, uma tinta oleosa densa que aderiu ao metal com uniformidade, e tipos metálicos fundidos numa liga precisa de chumbo, estanho e antimônio — dura o suficiente para resistir à pressão, maleável o suficiente para ser fundida em moldes precisos. O resultado foi a reprodução mecânica de texto em série, com velocidade e consistência que nenhum escriba poderia igualar.\n\nEntre 1452 e 1455, a oficina de Gutenberg em Mainz produziu aquilo que se tornaria o objeto mais importante da história do livro ocidental: a Bíblia de 42 linhas, também conhecida como Bíblia de Gutenberg. Foram impressos aproximadamente 180 exemplares — 135 em papel e 45 em vitela (pele de bezerro). Quarenta e nove sobrevivem hoje em coleções de museus e bibliotecas ao redor do mundo; dois deles estão no Gutenberg-Museum em Mainz, que preserva os exemplares em condições controladas e os expõe ao público. O próprio Gutenberg nunca viu o sucesso financeiro de sua invenção: em 1455, seu sócio Johann Fust moveu processo judicial por inadimplência e obteve a prensa como pagamento.\n\nO impacto da imprensa foi cumulativo e irreversível. Antes de Gutenberg, a Europa possuía cerca de 30 mil livros manuscritos. Em 1500 — apenas cinquenta anos depois — já circulavam mais de 15 milhões de livros impressos, produzidos por mais de 1.000 impressoras em toda a Europa. O custo de um livro caiu de um salário anual de um trabalhador para algumas semanas de trabalho. Pela primeira vez na história, uma pessoa de classe média poderia possuir uma biblioteca particular. O conhecimento deixou de ser patrimônio exclusivo da Igreja e das universidades.\n\nA conexão mais imediata é com a Reforma Protestante. Em outubro de 1517, Martinho Lutero pregou suas 95 Teses na porta da Igreja de Wittenberg — um gesto local que, num mundo pré-Gutenberg, teria ficado em Wittenberg. Com a imprensa, suas teses foram reproduzidas em milhares de cópias e distribuídas por toda a Alemanha em semanas. Sem a prensa de Gutenberg, não há Reforma Protestante. Sem a Reforma, o Iluminismo teria outra trajetória. Sem o Iluminismo, as revoluções americana e francesa teriam outras bases. A cadeia causal que começa em Mainz em 1450 percorre os séculos até o mundo em que vivemos.",
+    "importance": 5,
+    "featured": false,
+    "image": "/eventos/hero-invencao-imprensa-gutenberg.jpg",
+    "relatedEvents": ["reforma-protestante", "revolucao-cientifica"],
+    "characters": [
+      {
+        "name": "Johannes Gutenberg",
+        "role": "Inventor da prensa de tipos móveis",
+        "image": "/eventos/figura-gutenberg.jpg",
+        "description": "Ourives de Mainz que combinou técnicas mecânicas e metalúrgicas para criar a impressão em série na Europa ocidental."
+      },
+      {
+        "name": "Johann Fust",
+        "role": "Financiador e posterior adversário",
+        "image": "/eventos/figura-fust.jpg",
+        "description": "Banqueiro que financiou o projeto de Gutenberg e depois obteve a prensa judicialmente, continuando o negócio com Peter Schöffer."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Gutenberg-Museum Mainz — acervo da Bíblia de 42 linhas",
+        "url": "https://www.gutenberg-museum.de",
+        "tipo": "museu"
+      }
+    ],
+    "cronologia": [
+      { "ano": "c. 1436", "titulo": "Primeiros experimentos de impressão em Estrasburgo" },
+      { "ano": "c. 1450", "titulo": "Gutenberg estabelece a oficina em Mainz com financiamento de Johann Fust" },
+      { "ano": "1452–1455", "titulo": "Impressão da Bíblia de Gutenberg (Bíblia de 42 linhas)" },
+      { "ano": "1455", "titulo": "Processo judicial Fust vs. Gutenberg — Gutenberg perde a prensa como pagamento" },
+      { "ano": "1465", "titulo": "Primeira impressora fora da Alemanha — instalada em Subiaco, Itália" },
+      { "ano": "c. 1500", "titulo": "Mais de 1.000 impressoras em toda a Europa, 15 milhões de livros em circulação" }
+    ],
+    "keywords": ["gutenberg", "imprensa", "tipos móveis", "bíblia de gutenberg", "mainz", "impressão", "reforma protestante", "democratização do conhecimento", "livro", "renascimento"]
+  },
+  {
+    "id": "imperio-mali",
+    "slug": "imperio-mali",
+    "title": "Império do Mali",
+    "startYear": 1235,
+    "endYear": 1610,
+    "dateDisplay": "1235–1610",
+    "period": "Idade Média",
+    "region": "África Ocidental",
+    "country": "Mali",
+    "category": "Política",
+    "summary": "No coração da África Ocidental, o Império do Mali controlou as maiores reservas de ouro e sal do mundo medieval — e seu imperador Mansa Musa fez a peregrinação mais cara da história humana.",
+    "content": "Em 1324, o imperador Mansa Musa partiu de Niani, capital do Mali, em direção a Meca. Com ele viajavam aproximadamente 60 mil homens — cortesãos, soldados, escravos e servos — e 80 camelos carregando cada um cerca de 130 quilos de ouro em pó. Durante sua passagem pelo Cairo, Mansa Musa distribuiu ouro com tal generosidade — presentes, esmolas, compras — que a quantidade de ouro em circulação no Mediterrâneo aumentou subitamente. A inflação resultante fez o preço do ouro cair e permaneceu deprimido por mais de uma década. A peregrinação de Mansa Musa é frequentemente citada por economistas como o exemplo histórico mais dramático de um único indivíduo afetando a economia global.\n\nO Império do Mali havia sido fundado por Sundiata Keita em torno de 1235, após sua vitória sobre o rei Sumanguru Kanté do Império Sosso na batalha de Kirina. A epopeia de Sundiata — transmitida oralmente por gerações de griots (poetas-historiadores) — é um dos grandes textos literários da África Ocidental. O Mali controlava duas das commodities mais valiosas da Idade Média: o ouro das minas de Bambuhu e Bure, e o sal das minas de Taghaza no Saara. As rotas comerciais que cruzavam o Saara ligando a África Subsaariana ao Mediterrâneo islâmico passavam pelo território do Mali, gerando riqueza tributária colossal.\n\nTimbuktu, a maior cidade do império, tornou-se um dos principais centros intelectuais do mundo islâmico medieval. A Universidade Sankoré, funcionando no interior de uma mesquita, atraía estudiosos de todo o Mediterrâneo e do Oriente Médio. Em seu auge, Timbuktu abrigava dezenas de milhares de estudiosos e uma indústria de cópia de manuscritos que produzia textos de astronomia, matemática, medicina e teologia. O viajante marroquino Ibn Battuta visitou o Mali em 1352 e descreveu minuciosamente sua organização, riqueza e justiça em seu relato de viagem conhecido como a Rihla — uma das fontes primárias mais importantes sobre o Império do Mali.\n\nO declínio do Mali foi gradual. Os Songhai — anteriormente vassalos — expandiram seu próprio império a partir dos anos 1430 e conquistaram Timbuktu em 1468. O golpe final veio de fora do continente: em 1591, um exército marroquino equipado com armas de fogo atravessou o Saara e destruiu Timbuktu, dispersando os estudiosos e queimando parte de seu acervo. O Mali sobreviveu como entidade política reduzida até c. 1610, quando desapareceu definitivamente.",
+    "importance": 4,
+    "featured": false,
+    "image": "/eventos/hero-imperio-mali.jpg",
+    "relatedEvents": ["conquistas-alexandre-grande", "conferencia-berlim", "fundacao-imperio-mongol"],
+    "characters": [
+      {
+        "name": "Mansa Musa",
+        "role": "Imperador do Mali (c.1312–1337)",
+        "image": "/eventos/figura-mansa-musa.jpg",
+        "description": "Considerado o homem mais rico de todos os tempos, sua peregrinação a Meca em 1324 derrubou o preço do ouro no Mediterrâneo."
+      },
+      {
+        "name": "Sundiata Keita",
+        "role": "Fundador do Império do Mali",
+        "image": "/eventos/figura-sundiata.jpg",
+        "description": "Herói épico que derrotou o Império Sosso na batalha de Kirina (~1235) e fundou o maior império da África Ocidental medieval."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Ibn Battuta — Rihla (Viagens, séc. XIV)",
+        "url": "",
+        "tipo": "primária"
+      }
+    ],
+    "cronologia": [
+      { "ano": "c. 1235", "titulo": "Sundiata Keita derrota o Império Sosso — fundação do Mali" },
+      { "ano": "c. 1312", "titulo": "Mansa Musa sobe ao trono" },
+      { "ano": "1324", "titulo": "Peregrinação de Mansa Musa a Meca com toneladas de ouro" },
+      { "ano": "1337", "titulo": "Morte de Mansa Musa" },
+      { "ano": "1352", "titulo": "Ibn Battuta visita o Mali e descreve sua riqueza e organização" },
+      { "ano": "1591", "titulo": "Invasão marroquina destrói Timbuktu — colapso definitivo do Império" }
+    ],
+    "keywords": ["mali", "mansa musa", "sundiata keita", "timbuktu", "ouro", "sahara", "africa ocidental", "ibn battuta", "peregrinação", "sankoré"]
+  },
+  {
+    "id": "revolucao-gloriosa",
+    "slug": "revolucao-gloriosa",
+    "title": "Revolução Gloriosa",
+    "startYear": 1688,
+    "endYear": 1689,
+    "dateDisplay": "1688–1689",
+    "period": "Idade Moderna",
+    "region": "Europa",
+    "country": "Inglaterra",
+    "category": "Política",
+    "summary": "Em novembro de 1688, o rei católico Jaime II fugiu da Inglaterra sem uma única batalha — e o Bill of Rights de 1689 estabeleceu que o Parlamento governaria sobre o rei, criando o modelo de monarquia constitucional que influencia o mundo até hoje.",
+    "content": "Em 5 de novembro de 1688 — data escolhida não por acaso, coincidindo com a memória da Conspiração da Pólvora de 1605 — a flotilha holandesa do príncipe Guilherme de Orange desembarcou em Torbay, no sudoeste da Inglaterra. O convite havia partido de sete líderes parlamentares ingleses, tanto whigs quanto tories, preocupados com as políticas do rei católico Jaime II: sua tentativa de suspender as leis anticatólicas, nomear católicos para cargos militares e civis, e — o estopim — o nascimento de um herdeiro varão católico que tornava a linha de sucessão ameaçadoramente papista para um país profundamente protestante.\n\nO que se seguiu foi a mais pacífica das revoluções: Jaime II, abandonado por generais e nobres, fugiu para a França em dezembro de 1688 sem disparar um único tiro. O Parlamento declarou que sua fuga constituía abdicação e ofereceu o trono ao príncipe holandês e à sua esposa Mary II — filha protestante do próprio Jaime — com uma condição explícita: a aceitação de uma Declaração de Direitos. O Bill of Rights, sancionado em 13 de fevereiro de 1689, estabeleceu que o monarca não podia suspender leis, cobrar impostos ou manter um exército permanente em tempo de paz sem aprovação parlamentar; que os membros do Parlamento gozavam de liberdade de expressão; e que eleições parlamentares deviam ser livres.\n\nNo mesmo ano, John Locke — que havia vivido exilado na Holanda durante o regime de Jaime II — publicou seus Dois Tratados sobre o Governo, obra que justificava filosoficamente a Revolução Gloriosa ao argumentar que o poder político deriva do consentimento dos governados e que um governante que viola os direitos naturais (vida, liberdade, propriedade) pode ser legitimamente deposto. Os Dois Tratados de Locke tornariam-se leitura obrigatória dos pais fundadores americanos e influenciariam diretamente a Declaração de Independência de 1776.\n\nA Revolução Gloriosa estabeleceu um modelo que seria imitado ao longo dos séculos seguintes: a monarquia constitucional parlamentar, onde o poder real é limitado por lei e o parlamento eleito detém a soberania prática. Esse modelo — exportado para o Canadá, Austrália, Nova Zelândia e dezenas de outros países — tornou-se a forma de governo mais comum entre as democracias estáveis do século XXI.",
+    "importance": 4,
+    "featured": false,
+    "image": "/eventos/hero-revolucao-gloriosa.jpg",
+    "relatedEvents": ["independencia-estados-unidos", "revolucao-francesa", "magna-carta"],
+    "characters": [
+      {
+        "name": "Guilherme III de Orange",
+        "role": "Rei da Inglaterra após a Revolução Gloriosa",
+        "image": "/eventos/figura-guilherme-orange.jpg",
+        "description": "Príncipe holandês convidado pelo Parlamento para substituir Jaime II, aceitou as condições do Bill of Rights."
+      },
+      {
+        "name": "Mary II",
+        "role": "Rainha consorte",
+        "image": "/eventos/figura-mary-ii.jpg",
+        "description": "Filha protestante de Jaime II que legitimou a tomada do poder por Guilherme III."
+      },
+      {
+        "name": "John Locke",
+        "role": "Filósofo político",
+        "image": "/eventos/figura-locke.jpg",
+        "description": "Publicou em 1689 os Dois Tratados sobre o Governo, que justificaram a Revolução Gloriosa e influenciaram as revoluções americana e francesa."
+      }
+    ],
+    "sources": [],
+    "cronologia": [
+      { "ano": "1685", "titulo": "Jaime II sobe ao trono — perseguição aos protestantes alarma o Parlamento" },
+      { "ano": "5 nov. 1688", "titulo": "Guilherme de Orange desembarca em Torbay" },
+      { "ano": "dez. 1688", "titulo": "Jaime II foge para a França" },
+      { "ano": "fev. 1689", "titulo": "Parlamento oferece o trono a Guilherme e Mary com condições" },
+      { "ano": "13 fev. 1689", "titulo": "Bill of Rights sancionado — marco do constitucionalismo moderno" },
+      { "ano": "1689", "titulo": "John Locke publica 'Dois Tratados sobre o Governo'" }
+    ],
+    "keywords": ["revolução gloriosa", "bill of rights", "guilherme de orange", "parlamento inglês", "monarquia constitucional", "john locke", "jaime ii", "inglaterra", "constitucionalismo", "democracia"]
+  },
+  {
+    "id": "independencias-america-latina",
+    "slug": "independencias-america-latina",
+    "title": "Independências da América Latina",
+    "startYear": 1810,
+    "endYear": 1826,
+    "dateDisplay": "1810–1826",
+    "period": "Idade Moderna",
+    "region": "América do Sul",
+    "country": "Venezuela / Argentina / México",
+    "category": "Independência",
+    "summary": "Entre 1810 e 1826, uma onda de revoluções varreu a América espanhola — de Hidalgo no México a Bolívar na Venezuela e San Martín no Rio da Prata — criando uma dezena de novas nações em menos de duas décadas.",
+    "content": "Na madrugada de 16 de setembro de 1810, o padre Miguel Hidalgo tocou o sino da igreja em Dolores, México, convocando seus paroquianos. Não era hora de missa — era hora de revolução. Seu discurso improvisado, conhecido como o Grito de Dolores, convocou os mexicanos a lutar contra o governo colonial espanhol. Em horas, milhares de camponeses indígenas e mestiços marchavam com ele. O Grito de Dolores é celebrado até hoje, em 15 de setembro à meia-noite, quando o presidente do México reproduz o sino original do balcão do Palácio Nacional na Cidade do México.\n\nO contexto que tornou possível essa onda revolucionária foi a crise da metrópole: em 1808, Napoleão Bonaparte invadiu a Espanha e colocou seu irmão José no trono espanhol, prendendo o rei Fernando VII. A ilegitimidade do novo governo colonial — representante de um rei deposto por uma potência estrangeira — criou um vácuo político que os líderes criollos (nascidos nas colônias de pais espanhóis) aproveitaram. As ideias iluministas de Locke, Rousseau e dos pais fundadores americanos haviam chegado à América Latina e forneciam a linguagem da justificação.\n\nSimón Bolívar percorreu um caminho extraordinário: nascido em Caracas numa família aristocrática venezuelana, viajou à Europa jovem e ali absorveu o Iluminismo. Voltou e liderou campanhas militares que libertaram Venezuela, Colômbia, Equador, Peru e a Bolívia — país que leva seu nome. José de San Martín, argentino de família espanhola, organizou o Exército dos Andes e realizou uma das mais audaciosas manobras militares da história: cruzou os Andes no inverno de 1817 com 5.000 homens para surpreender as forças realistas no Chile. A batalha de Ayacucho, em 9 de dezembro de 1824, no Peru, foi o último confronto decisivo: as forças republicanas de Sucre derrotaram o último grande exército realista na América do Sul.\n\nA independência do Brasil seguiu caminho oposto: em 1808, a família real portuguesa havia fugido de Napoleão e se instalado no Rio de Janeiro. Em 1822, o príncipe regente Dom Pedro I — filho do rei português — decidiu ficar no Brasil ao invés de retornar a Portugal e proclamou a independência às margens do rio Ipiranga em São Paulo. A independência brasileira foi monárquica e pacífica, resultado de negociação mais do que de guerra — um contraste marcante com o processo violento que varreu a América espanhola.",
+    "importance": 5,
+    "featured": false,
+    "image": "/eventos/hero-independencias-america-latina.jpg",
+    "relatedEvents": ["independencia-brasil", "revolucao-francesa", "independencia-estados-unidos", "guerras-napoleonicas"],
+    "characters": [
+      {
+        "name": "Simón Bolívar",
+        "role": "'El Libertador' da América",
+        "image": "/eventos/figura-bolivar.jpg",
+        "description": "Libertou Venezuela, Colômbia, Equador, Peru e fundou a Bolívia. Sonhou com uma América Latina unificada."
+      },
+      {
+        "name": "José de San Martín",
+        "role": "Libertador do Sul",
+        "image": "/eventos/figura-san-martin.jpg",
+        "description": "Cruzou os Andes em 1817 para libertar o Chile e depois marchou para o Peru."
+      },
+      {
+        "name": "Miguel Hidalgo",
+        "role": "Padre e líder da independência mexicana",
+        "image": "/eventos/figura-hidalgo.jpg",
+        "description": "Deu início à revolução mexicana com o Grito de Dolores em setembro de 1810."
+      }
+    ],
+    "sources": [],
+    "cronologia": [
+      { "ano": "1808", "titulo": "Napoleão invade a Espanha — crise de legitimidade colonial" },
+      { "ano": "16 set. 1810", "titulo": "Grito de Dolores de Hidalgo — início no México" },
+      { "ano": "1811", "titulo": "Venezuela declara independência" },
+      { "ano": "1817", "titulo": "San Martín cruza os Andes e liberta o Chile" },
+      { "ano": "1819", "titulo": "Bolívar cria a Gran Colombia (Venezuela, Colômbia, Equador)" },
+      { "ano": "9 dez. 1824", "titulo": "Batalha de Ayacucho — última batalha das guerras de independência" },
+      { "ano": "1826", "titulo": "Última fortaleza realista cai — América espanhola independente" }
+    ],
+    "keywords": ["simón bolívar", "san martín", "hidalgo", "independência da américa latina", "grito de dolores", "ayacucho", "gran colombia", "bolívia", "chile", "venezuela"]
+  },
+  {
+    "id": "unificacao-alemanha",
+    "slug": "unificacao-alemanha",
+    "title": "Unificação da Alemanha",
+    "startYear": 1866,
+    "endYear": 1871,
+    "dateDisplay": "1866–1871",
+    "period": "Idade Contemporânea",
+    "region": "Europa",
+    "country": "Alemanha",
+    "category": "Política",
+    "summary": "Em 18 de janeiro de 1871, Guilherme I foi proclamado Kaiser do recém-criado Império Alemão no Salão dos Espelhos de Versalhes — a humilhação calculada que Otto von Bismarck orquestrou para cimentar a unidade alemã sobre os escombros da França.",
+    "content": "A escolha do local foi deliberada e cruel. O Salão dos Espelhos de Versalhes — o símbolo máximo da glória francesa, construído por Luís XIV para projetar o poder da monarquia mais poderosa da Europa — foi o cenário escolhido por Otto von Bismarck para proclamar o nascimento do Império Alemão em 18 de janeiro de 1871. Paris estava sitiada. A França havia sofrido sua derrota mais humilhante em séculos. E os reis, príncipes e generais alemães se reuniram na galeria dourada do palácio inimigo para aclamar o rei Guilherme I da Prússia como Kaiser (Imperador) da Alemanha. A mensagem era inequívoca: a nova potência europeia havia nascido sobre as cinzas da antiga.\n\nAntes de 1871, a 'Alemanha' era uma expressão geográfica e cultural, não um Estado. O mosaico de 39 estados separados — reinos, ducados, principados e cidades livres — compartilhavam língua e cultura, mas tinham soberania própria. Bismarck, nomeado primeiro-ministro da Prússia em 1862, acreditava que a unificação só poderia ser conquistada 'pelo ferro e pelo sangue' — e provou estar certo. Em sete anos, conduziu três guerras cirurgicamente calculadas: contra a Dinamarca (1864, para conquistar Schleswig-Holstein), contra a Áustria (1866, para excluí-la da liderança dos estados alemães) e contra a França (1870-71, para unir os estados alemães do sul numa causa nacional comum).\n\nA unificação criou de um só golpe a maior potência econômica e militar do continente europeu. A população alemã ultrapassava a da França; sua indústria, especialmente no Ruhr, crescia mais rapidamente que a britânica; seu exército havia acabado de demonstrar superioridade tática sobre todos os adversários. O equilíbrio de poder europeu — laboriosamente construído no Congresso de Viena de 1815 — foi destruído em 1871 por uma nova potência que não se encaixava nas antigas categorias. As tensões acumuladas nas décadas seguintes — rivalidade naval com a Grã-Bretanha, competição colonial, alianças cada vez mais rígidas — plantariam as sementes da Primeira Guerra Mundial.\n\nBismarck, consciente do perigo, passou os vinte anos seguintes tentando manter a Alemanha satisfeita com o que tinha e impedindo a formação de coalizões contra ela. Quando o jovem Kaiser Guilherme II o demitiu em 1890 para conduzir uma política externa mais agressiva, removeu o único freio que havia funcionado. Vinte e quatro anos depois, a Europa entrava em guerra.",
+    "importance": 4,
+    "featured": false,
+    "image": "/eventos/hero-unificacao-alemanha.jpg",
+    "relatedEvents": ["primeira-guerra-mundial", "guerras-napoleonicas", "revolucao-francesa"],
+    "characters": [
+      {
+        "name": "Otto von Bismarck",
+        "role": "'O Chanceler de Ferro'",
+        "image": "/eventos/figura-bismarck.jpg",
+        "description": "Primeiro-ministro da Prússia que orquestrou a unificação alemã por meio de três guerras calculadas e uma diplomacia implacável."
+      },
+      {
+        "name": "Guilherme I",
+        "role": "Primeiro Kaiser alemão",
+        "image": "/eventos/figura-guilherme-i.jpg",
+        "description": "Rei da Prússia que foi proclamado imperador do Reich Alemão no Salão dos Espelhos em 1871."
+      }
+    ],
+    "sources": [],
+    "cronologia": [
+      { "ano": "1862", "titulo": "Bismarck torna-se primeiro-ministro da Prússia" },
+      { "ano": "1864", "titulo": "Guerra contra a Dinamarca — Prússia conquista Schleswig-Holstein" },
+      { "ano": "1866", "titulo": "Guerra contra a Áustria — Prússia domina os estados alemães do norte" },
+      { "ano": "1870–71", "titulo": "Guerra franco-prussiana — Sedan, cerco de Paris" },
+      { "ano": "18 jan. 1871", "titulo": "Proclamação do Império Alemão no Salão dos Espelhos" },
+      { "ano": "1890", "titulo": "Bismarck é demitido pelo Kaiser Guilherme II" }
+    ],
+    "keywords": ["bismarck", "unificação da alemanha", "kaiser", "guilherme i", "império alemão", "realpolitik", "prússia", "franco-prussiana", "versalhes", "segunda reich"]
+  },
+  {
+    "id": "revolucao-meiji",
+    "slug": "revolucao-meiji",
+    "title": "Restauração Meiji",
+    "startYear": 1868,
+    "endYear": 1912,
+    "dateDisplay": "1868–1912",
+    "period": "Idade Contemporânea",
+    "region": "Ásia Oriental",
+    "country": "Japão",
+    "category": "Modernização",
+    "summary": "Em 1868, um Japão feudal que havia se fechado ao mundo por dois séculos iniciou a transformação mais veloz da história moderna — e em quarenta anos se tornara uma potência industrial capaz de derrotar a Rússia czarista.",
+    "content": "Em julho de 1853, quatro navios de guerra americanos — dois a vapor — entraram na baía de Uraga, perto de Edo (atual Tóquio). O comodoro Matthew Perry havia sido enviado pelo presidente Millard Fillmore para forçar o Japão a abrir seus portos ao comércio americano. Nenhum japonês vivo havia visto navios movidos a vapor — os 'navios negros', como os chamaram, eram de uma tecnologia tão superiormente intimidante que o shogun Tokugawa assinou o Tratado de Kanagawa em março de 1854, abrindo dois portos e encerrando dois séculos de isolamento. O choque foi civilizacional: o Japão percebeu de repente que havia ficado para trás.\n\nA resposta foi a Restauração Meiji de 1868. Um grupo de samurais de clãs rivais derrubou o xogunato Tokugawa e restaurou o poder ao jovem imperador Mutsuhito, de apenas 15 anos, que adotou o nome de reinado Meiji — 'governo iluminado'. O que se seguiu foi o programa mais ambicioso de modernização forçada da história: o Japão enviou sistematicamente missões ao Ocidente para aprender e copiar. A Missão Iwakura (1871-1873) levou 107 funcionários japoneses — incluindo o futuro primeiro-ministro Itō Hirobumi — a uma tournée de 18 meses pelos Estados Unidos e pela Europa. Voltaram com projetos concretos: ferrovias no modelo inglês, exército no modelo prussiano, marinha no modelo britânico, sistema educacional no modelo francês, código civil no modelo alemão.\n\nA velocidade da transformação foi sem precedentes. Em 1868, o Japão era um país feudal com samurais e espadas; em 1905, derrotou o Império Russo numa guerra marítima, afundando a frota do Almirante Rozhestvensky na batalha de Tsushima. Foi a primeira vez na era moderna que uma potência asiática derrotou uma potência europeia numa guerra convencional. O choque reverberou por todo o mundo colonial: se o Japão podia modernizar-se e vencer, outros povos colonizados também podiam.\n\nAo morrer em 1912, o imperador Meiji deixou um Japão irreconhecível. As ferrovias conectavam todo o arquipélago. A educação era universal. Havia uma Constituição (1889), um Parlamento, indústrias de aço, estaleiros, uma frota de guerra. O país havia adquirido colônias próprias: Taiwan (1895, após derrotar a China), Coreia (1910). A Restauração Meiji é estudada até hoje como modelo de modernização acelerada — e como aviso sobre suas contradições: a mesma energia que modernizou o Japão também o levaria à expansão imperial e, eventualmente, à Segunda Guerra Mundial.",
+    "importance": 5,
+    "featured": false,
+    "image": "/eventos/hero-revolucao-meiji.jpg",
+    "relatedEvents": ["revolucao-xinhai", "primeira-guerra-mundial", "conferencia-berlim"],
+    "characters": [
+      {
+        "name": "Imperador Meiji (Mutsuhito)",
+        "role": "Imperador que liderou a modernização do Japão",
+        "image": "/eventos/figura-meiji.jpg",
+        "description": "Restaurado ao poder em 1868 aos 15 anos, deu nome à era que transformou o Japão feudal em potência industrial."
+      },
+      {
+        "name": "Itō Hirobumi",
+        "role": "Arquiteto da modernização",
+        "image": "/eventos/figura-ito.jpg",
+        "description": "Liderou a Missão Iwakura e tornou-se o primeiro primeiro-ministro constitucional do Japão, redigindo sua Constituição de 1889."
+      }
+    ],
+    "sources": [],
+    "cronologia": [
+      { "ano": "1853", "titulo": "Chegada dos navios de Perry — Japão forçado a abrir portos" },
+      { "ano": "jan. 1868", "titulo": "Restauração Meiji — fim do xogunato Tokugawa" },
+      { "ano": "1871–1873", "titulo": "Missão Iwakura: delegação japonesa estuda o Ocidente" },
+      { "ano": "1889", "titulo": "Constituição Meiji — monarquia constitucional" },
+      { "ano": "1894–95", "titulo": "Guerra sino-japonesa — China cede Taiwan" },
+      { "ano": "1905", "titulo": "Guerra russo-japonesa — vitória japonesa choca o mundo" }
+    ],
+    "keywords": ["meiji", "japão", "modernização", "xogunato", "perry", "missão iwakura", "guerra russo-japonesa", "itō hirobumi", "era meiji", "westernização"]
+  },
+  {
+    "id": "revolucao-xinhai",
+    "slug": "revolucao-xinhai",
+    "title": "Revolução Xinhai",
+    "startYear": 1911,
+    "endYear": 1912,
+    "dateDisplay": "1911–1912",
+    "period": "Idade Contemporânea",
+    "region": "Ásia Oriental",
+    "country": "China",
+    "category": "Política",
+    "summary": "Em 10 de outubro de 1911, uma revolta de soldados em Wuchang desencadeou a queda da dinastia Qing — encerrando mais de dois mil anos de governo imperial na China e abrindo um século de guerras e revoluções.",
+    "content": "Na noite de 10 de outubro de 1911, soldados do batalhão de engenharia da cidade de Wuchang (atual Wuhan) descobriram que uma lista de seus nomes havia sido encontrada pelas autoridades — evidência de seus vínculos com sociedades revolucionárias. Diante da perspectiva de prisão ou execução, decidiram agir antes de ser presos. A revolta espontânea conquistou a cidade em horas. O que começou como ato de desespero tornou-se o gatilho de uma revolução: em semanas, 15 das 24 províncias declararam independência do governo imperial Qing. Em Taiwan, comemora-se o 10 de outubro — o 'Dia Duplo Dez' — como feriado nacional até hoje.\n\nA dinastia Qing havia sobrevivido a humilhações catastróficas: a Primeira Guerra do Ópio (1839-42) e o Tratado de Nanquim, que cedeu Hong Kong à Grã-Bretanha; a Rebelião Taiping (1850-64), guerra civil que matou entre 20 e 30 milhões de pessoas; a derrota para o Japão em 1895, que custou Taiwan. A Imperatriz Viúva Cixi, que governou de facto a China por 47 anos, morreu em 1908 deixando o trono a Puyi — uma criança de dois anos. O Império Qing estava governado por um bebê.\n\nSun Yat-sen, médico e revolucionário que havia passado anos no exílio organizando o movimento revolucionário e arrecadando fundos junto à diáspora chinesa, soube da revolta de Wuchang quando estava em Denver, Colorado, lendo um jornal. Voltou às pressas e foi eleito presidente provisório da República da China em Nanjing em 1º de janeiro de 1912. O Edito de Abdicação de Puyi foi publicado em 12 de fevereiro de 1912 — encerrando a monarquia imperial chinesa que havia existido, com algumas interrupções, por mais de dois mil anos.\n\nO vácuo que se seguiu precipitou um século de turbulência. Yuan Shikai, general que havia negociado a abdicação de Puyi, assumiu a presidência no lugar de Sun Yat-sen e tentou restaurar a monarquia com ele mesmo como imperador — fracassando. Após sua morte em 1916, a China fragmentou-se em feudos controlados por senhores da guerra. A invasão japonesa (1931-1945), a Segunda Guerra Mundial e a guerra civil entre o Kuomintang de Chiang Kai-shek e o Partido Comunista de Mao Zedong culminaram na proclamação da República Popular em 1949 — o final de uma crise de legitimidade aberta em 1911.",
+    "importance": 5,
+    "featured": false,
+    "image": "/eventos/hero-revolucao-xinhai.jpg",
+    "relatedEvents": ["revolucao-comunista-china", "primeira-guerra-mundial", "revolucao-meiji"],
+    "characters": [
+      {
+        "name": "Sun Yat-sen",
+        "role": "Fundador da República Chinesa",
+        "image": "/eventos/figura-sun-yat-sen.jpg",
+        "description": "Médico e revolucionário que fundou o Partido Kuomintang e proclamou a República em Nanjing em 1912."
+      },
+      {
+        "name": "Puyi",
+        "role": "Último imperador da China",
+        "image": "/eventos/figura-puyi.jpg",
+        "description": "Criança de 5 anos quando abdicou em fevereiro de 1912, encerrando dois mil anos de monarquia imperial na China."
+      },
+      {
+        "name": "Yuan Shikai",
+        "role": "Primeiro presidente da República",
+        "image": "/eventos/figura-yuan-shikai.jpg",
+        "description": "General que negociou a abdicação de Puyi e assumiu a presidência, tentando restaurar o império com ele mesmo como imperador."
+      }
+    ],
+    "sources": [],
+    "cronologia": [
+      { "ano": "1908", "titulo": "Morte da Imperatriz Cixi — Puyi, 2 anos, sobe ao trono" },
+      { "ano": "10 out. 1911", "titulo": "Revolta de Wuchang — início da Revolução Xinhai" },
+      { "ano": "jan. 1912", "titulo": "Sun Yat-sen proclama a República em Nanjing" },
+      { "ano": "12 fev. 1912", "titulo": "Puyi abdica — fim da dinastia Qing" },
+      { "ano": "1916–1928", "titulo": "Era dos senhores da guerra — China fragmentada" },
+      { "ano": "1927", "titulo": "Cisão entre Kuomintang e Partido Comunista — início da guerra civil" }
+    ],
+    "keywords": ["revolução xinhai", "china", "dinastia qing", "sun yat-sen", "puyi", "república chinesa", "wuchang", "kuomintang", "fim do império", "modernização"]
+  },
+  {
+    "id": "declaracao-universal-direitos-humanos",
+    "slug": "declaracao-universal-direitos-humanos",
+    "title": "Declaração Universal dos Direitos Humanos",
+    "startYear": 1948,
+    "endYear": 1948,
+    "dateDisplay": "10 de dezembro de 1948",
+    "period": "Idade Contemporânea",
+    "region": "Global",
+    "country": "França",
+    "category": "Direitos Humanos",
+    "summary": "Na esteira do Holocausto e da Segunda Guerra, a ONU adotou em 10 de dezembro de 1948 a Declaração Universal dos Direitos Humanos — 30 artigos que definem o que significa ser humano perante o direito internacional.",
+    "content": "Na tarde de 10 de dezembro de 1948, na Assembleia Geral das Nações Unidas reunida em Paris, Eleanor Roosevelt levantou um enorme cartaz com o texto da Declaração Universal dos Direitos Humanos. A ex-primeira-dama americana, viúva de Franklin Roosevelt havia apenas três anos, havia presidido o comitê de redação por dois anos — conduzindo 85 reuniões formais, negociando cada palavra com representantes de culturas, religiões e sistemas políticos radicalmente diferentes. Quando o texto foi adotado por 48 votos a favor, zero contra e oito abstenções, Roosevelt recebeu uma ovação de pé da Assembleia.\n\nO documento nasceu do trauma. Os campos de extermínio nazistas, revelados ao mundo em 1945, haviam demonstrado até onde a negação sistemática da humanidade podia chegar quando não havia nenhum padrão legal internacional de dignidade. O comitê de redação foi intencionalmente diverso: além de Eleanor Roosevelt, incluiu o jurista e filósofo libanês Charles Malik, o filósofo confuciano e diplomata chinês P.C. Chang, e o jurista canadense John Humphrey, que produziu o primeiro rascunho. A diversidade geográfica e cultural era uma afirmação política: esses direitos não eram 'ocidentais' — eram universais.\n\nOs 30 artigos da DUDH cobrem um espectro amplo: do direito à vida (Artigo 3) e à proibição da tortura (Artigo 5) ao direito à educação (Artigo 26) e à participação cultural (Artigo 27). A DUDH não tem força legal vinculante por si mesma — não é um tratado que os estados ratificam. Mas tornou-se a base de todo o direito internacional dos direitos humanos que veio depois: os Pactos Internacionais de 1966 (Direitos Civis e Políticos; Direitos Econômicos, Sociais e Culturais) deram força legal a seus princípios. O texto oficial está disponível no site do Alto Comissariado da ONU para os Direitos Humanos (OHCHR).\n\nO impacto da DUDH no direito nacional foi igualmente profundo. Constituições promulgadas após 1948 — incluindo a Constituição Brasileira de 1988, redigida após a ditadura militar — incorporaram explicitamente seus princípios. O Brasil reconhece a dignidade da pessoa humana como fundamento da República logo no Artigo 1º da Constituição. O 10 de dezembro é comemorado anualmente como Dia Internacional dos Direitos Humanos — lembrete de que o documento existe, mas sua aplicação continua sendo um projeto inacabado.",
+    "importance": 5,
+    "featured": false,
+    "image": "/eventos/hero-declaracao-universal-direitos-humanos.jpg",
+    "relatedEvents": ["fim-segunda-guerra-mundial", "criacao-estado-israel", "independencia-india", "colapso-urss"],
+    "characters": [
+      {
+        "name": "Eleanor Roosevelt",
+        "role": "Presidente do comitê de redação",
+        "image": "/eventos/figura-eleanor-roosevelt.jpg",
+        "description": "Ex-primeira-dama americana que liderou o comitê que redigiu a DUDH, tornando-se o rosto da declaração."
+      },
+      {
+        "name": "René Cassin",
+        "role": "Redator principal, Nobel da Paz 1968",
+        "image": "/eventos/figura-rene-cassin.jpg",
+        "description": "Jurista francês sobrevivente de família judaica decimada pelo Holocausto, foi o principal arquiteto técnico do texto."
+      },
+      {
+        "name": "Charles Malik",
+        "role": "Presidente da Assembleia Geral da ONU",
+        "image": "/eventos/figura-charles-malik.jpg",
+        "description": "Filósofo e diplomata libanês que presidiu a sessão que adotou a DUDH e defendeu sua universalidade."
+      }
+    ],
+    "sources": [
+      {
+        "title": "ONU — Declaração Universal dos Direitos Humanos (texto oficial)",
+        "url": "https://www.ohchr.org/en/human-rights/universal-declaration",
+        "tipo": "oficial"
+      }
+    ],
+    "cronologia": [
+      { "ano": "jan. 1947", "titulo": "Comissão de Direitos Humanos da ONU constituída, com Eleanor Roosevelt como presidente" },
+      { "ano": "jun. 1948", "titulo": "Texto aprovado pela comissão após 85 reuniões" },
+      { "ano": "10 dez. 1948", "titulo": "Assembleia Geral adota a DUDH — 48 votos a favor, 0 contra, 8 abstenções" },
+      { "ano": "1966", "titulo": "Pactos Internacionais de Direitos Civis e Políticos — DUDH ganha força legal" },
+      { "ano": "1988", "titulo": "Constituição Brasileira incorpora princípios da DUDH" },
+      { "ano": "10 dez.", "titulo": "Comemorado anualmente como Dia Internacional dos Direitos Humanos" }
+    ],
+    "keywords": ["direitos humanos", "dudh", "eleanor roosevelt", "onu", "declaração universal", "holocausto", "direitos fundamentais", "dignidade", "paris", "1948"]
+  },
+  {
+    "id": "revolucao-comunista-china",
+    "slug": "revolucao-comunista-china",
+    "title": "Revolução Comunista na China",
+    "startYear": 1949,
+    "endYear": 1949,
+    "dateDisplay": "1º de outubro de 1949",
+    "period": "Idade Contemporânea",
+    "region": "Ásia Oriental",
+    "country": "China",
+    "category": "Política",
+    "summary": "Na Praça Tiananmen, em 1º de outubro de 1949, Mao Zedong proclamou a República Popular da China — encerrando décadas de guerra civil e criando o maior Estado comunista do mundo.",
+    "content": "Às 15 horas de 1º de outubro de 1949, Mao Zedong subiu ao balcão da Porta de Tiananmen, em Pequim, diante de centenas de milhares de pessoas. Sua voz saiu pelos alto-falantes instalados pela primeira vez na praça: 'O povo chinês se levantou.' A frase, tão simples quanto carregada, resumia décadas de guerra civil, invasão estrangeira e humilhação nacional. A República Popular da China havia nascido — o maior Estado comunista do mundo, com 550 milhões de habitantes.\n\nA guerra civil entre o Partido Comunista Chinês (PCC) e os Nacionalistas (Kuomintang) de Chiang Kai-shek havia começado oficialmente em 1927, após o massacre de Xangai em que Chiang tentou exterminar os comunistas. Foi interrompida pela invasão japonesa (1937) e retomada em 1945. A estratégia de Mao — construir base de poder no campo, mobilizando os camponeses, e depois cercar as cidades — provou-se mais eficaz do que o esforço americanizado e centralizado do Kuomintang. Em 1948-49, o Exército de Libertação Popular (ELP) lançou ofensivas em cascata que desintegraram os exércitos de Chiang: a batalha de Huai-Hai (novembro 1948 a janeiro 1949), com mais de 600.000 soldados de cada lado, foi uma das maiores batalhas terrestres da história.\n\nChiang Kai-shek retirou-se para Taiwan com o governo Nacionalista, as reservas de ouro do Banco Central e parte do exército — cerca de 1,2 milhão de pessoas. Levou também o acervo do Palácio Imperial, que até hoje está no Museu Nacional do Palácio em Taipei. A divisão criada em 1949 persiste: a República Popular da China (continental) e a República da China (Taiwan) existem em paralelo, com reivindicações territoriais mútuas, e a questão de Taiwan continua sendo um dos pontos de tensão mais explosivos da geopolítica do século XXI.\n\nA proclamação da República Popular precipitou a Guerra da Coreia (1950-53): os EUA, alarmados com a 'perda da China' para o comunismo, comprometeram-se militarmente a impedir que a Coreia do Sul seguisse o mesmo caminho. A China enviou cerca de 300.000 soldados — as 'tropas voluntárias' — para lutar contra os americanos na Coreia. A guerra terminou em armistício, com a Coreia dividida na mesma linha de antes. A guerra que começou com Mao subirndo ao balcão de Tiananmen moldou a geopolítica asiática por décadas.",
+    "importance": 5,
+    "featured": false,
+    "image": "/eventos/hero-revolucao-comunista-china.jpg",
+    "relatedEvents": ["revolucao-xinhai", "fim-segunda-guerra-mundial", "revolucao-russa", "primeira-guerra-mundial"],
+    "characters": [
+      {
+        "name": "Mao Zedong",
+        "role": "Presidente da República Popular da China",
+        "image": "/eventos/figura-mao.jpg",
+        "description": "Fundador do Estado comunista chinês e líder do Partido Comunista Chinês desde os anos 1920, responsável pela estratégia que derrotou o Kuomintang."
+      },
+      {
+        "name": "Chiang Kai-shek",
+        "role": "Líder do Kuomintang",
+        "image": "/eventos/figura-chiang.jpg",
+        "description": "Generalíssimo Nacionalista que foi derrotado na guerra civil e recuou para Taiwan, onde governou até 1975."
+      },
+      {
+        "name": "Zhou Enlai",
+        "role": "Premier da República Popular",
+        "image": "/eventos/figura-zhou.jpg",
+        "description": "Primeiro-ministro e principal diplomata da China comunista, articulou a política externa chinesa por décadas."
+      }
+    ],
+    "sources": [],
+    "cronologia": [
+      { "ano": "1927", "titulo": "Massacre de Xangai — cisão definitiva entre Kuomintang e PCC" },
+      { "ano": "1934–35", "titulo": "A Longa Marcha — PCC recua para o norte, Mao consolida liderança" },
+      { "ano": "1945", "titulo": "Derrota do Japão — guerra civil retomada" },
+      { "ano": "1948–49", "titulo": "Grandes ofensivas comunistas — exército de Chiang desintegra-se" },
+      { "ano": "1 out. 1949", "titulo": "Proclamação da República Popular da China" },
+      { "ano": "1950–53", "titulo": "Guerra da Coreia — China enfrenta tropas americanas" }
+    ],
+    "keywords": ["mao zedong", "china comunista", "partido comunista chinês", "kuomintang", "chiang kai-shek", "tiananmen", "república popular", "guerra civil chinesa", "guerra fria", "zhou enlai"]
+  },
+  {
+    "id": "descolonizacao-africa",
+    "slug": "descolonizacao-africa",
+    "title": "Descolonização da África",
+    "startYear": 1957,
+    "endYear": 1975,
+    "dateDisplay": "1957–1975",
+    "period": "Idade Contemporânea",
+    "region": "África",
+    "country": "África",
+    "category": "Independência",
+    "summary": "Em 1957, o Gana de Kwame Nkrumah tornou-se a primeira nação da África subsaariana a se libertar do colonialismo moderno — abrindo caminho para a onda que criaria 54 países independentes em menos de duas décadas.",
+    "content": "Na madrugada de 6 de março de 1957, Kwame Nkrumah discursou para uma multidão de centenas de milhares de pessoas em Accra: 'A estrela da África está se erguendo.' O Gana — anteriormente Costa do Ouro britânica — tornava-se o primeiro país da África subsaariana a se tornar independente na era moderna. Nkrumah havia sido preso pelos britânicos em 1950 e eleito para o parlamento enquanto ainda estava na prisão; a independência do Gana foi tanto uma vitória pessoal quanto um símbolo para todo o continente. A bandeira do Gana, verde, ouro e vermelho com uma estrela negra no centro, tornou-se o ícone do pan-africanismo.\n\nO 'Ano da África' foi 1960: 17 países declararam independência em menos de doze meses, incluindo a República Democrática do Congo (ex-Congo Belga), Senegal, Nigéria, Costa do Marfim e Camarões. O processo foi acelerado por três fatores convergentes: o enfraquecimento econômico das potências coloniais europeias após a Segunda Guerra, a pressão da Guerra Fria (EUA e URSS apoiavam movimentos anticoloniais por razões estratégicas concorrentes) e o surgimento de líderes carismáticos formados nas próprias metrópoles coloniais — Nkrumah estudara nos EUA e na Grã-Bretanha, Léopold Sédar Senghor era poeta reconhecido em Paris, Patrice Lumumba era correspondente de rádio.\n\nO processo foi violento onde as metrópoles resistiram. No Quênia, a Rebelião Mau Mau (1952-60) resultou em dezenas de milhares de mortos e na prisão de mais de 150 mil quenianos em campos britânicos. Na Argélia, a guerra de independência (1954-62) custou entre 300 mil e 1,5 milhão de vidas argelinas — além de provocar uma crise política que levou ao colapso da Quarta República francesa e ao retorno do general De Gaulle ao poder. Frantz Fanon, intelectual martinicano radicado na Argélia, publicou em 1961 'Os Condenados da Terra' — o texto teórico mais influente da descolonização, que analisava a violência colonial como força desumanizante e a violência anticolonial como processo de recuperação da dignidade.\n\nA independência formal não eliminou a dependência econômica. As antigas metrópoles mantiveram vínculos comerciais, monetários e militares que os críticos denominaram 'neocolonialismo'. Patrice Lumumba, eleito primeiro-ministro do Congo em 1960, foi deposto e assassinado em janeiro de 1961 — com envolvimento documentado da CIA e da Bélgica — quando tentou nationalizar os recursos minerais do Congo. Angola e Moçambique, últimas grandes colônias africanas, só se tornaram independentes em 1975, após a Revolução dos Cravos derrubar a ditadura portuguesa.",
+    "importance": 5,
+    "featured": false,
+    "image": "/eventos/hero-descolonizacao-africa.jpg",
+    "relatedEvents": ["conferencia-berlim", "fim-segunda-guerra-mundial", "independencia-india", "colapso-urss"],
+    "characters": [
+      {
+        "name": "Kwame Nkrumah",
+        "role": "Primeiro-ministro e depois presidente do Gana",
+        "image": "/eventos/figura-nkrumah.jpg",
+        "description": "Liderou o Gana à independência em 1957 e tornou-se o maior símbolo do pan-africanismo."
+      },
+      {
+        "name": "Patrice Lumumba",
+        "role": "Primeiro-ministro do Congo Belga",
+        "image": "/eventos/figura-lumumba.jpg",
+        "description": "Eleito primeiro-ministro do Congo em 1960, foi deposto e assassinado em 1961 — mártir da independência africana."
+      },
+      {
+        "name": "Frantz Fanon",
+        "role": "Teórico do anticolonialismo",
+        "image": "/eventos/figura-fanon.jpg",
+        "description": "Martinicano radicado na Argélia, seu livro 'Os Condenados da Terra' (1961) tornou-se o manifesto da descolonização africana."
+      }
+    ],
+    "sources": [],
+    "cronologia": [
+      { "ano": "6 mar. 1957", "titulo": "Independência do Gana — primeira da África subsaariana" },
+      { "ano": "1960", "titulo": "'Ano da África' — 17 países independentes" },
+      { "ano": "jul. 1960", "titulo": "Crise do Congo — Lumumba pede ajuda soviética, desestabilização" },
+      { "ano": "jan. 1961", "titulo": "Assassinato de Lumumba no Congo" },
+      { "ano": "1962", "titulo": "Independência da Argélia após guerra de 8 anos" },
+      { "ano": "1965", "titulo": "Declaração de independência da Rodésia — crise" },
+      { "ano": "1975", "titulo": "Independência de Angola e Moçambique — últimas colônias africanas europeias" }
+    ],
+    "keywords": ["descolonização", "áfrica", "nkrumah", "gana", "ano da áfrica", "lumumba", "fanon", "pan-africanismo", "argélia", "independência"]
+  },
+  {
+    "id": "colapso-urss",
+    "slug": "colapso-urss",
+    "title": "Colapso da URSS",
+    "startYear": 1991,
+    "endYear": 1991,
+    "dateDisplay": "25 de dezembro de 1991",
+    "period": "Idade Contemporânea",
+    "region": "Europa Oriental",
+    "country": "Rússia",
+    "category": "Política",
+    "summary": "Às 19h32 de 25 de dezembro de 1991, a bandeira vermelha do Kremlin foi substituída pela tricolor russa — e os 69 anos da União Soviética terminaram sem um único tiro.",
+    "content": "Na noite de 25 de dezembro de 1991, Mikhail Gorbachev transmitiu ao vivo pela televisão soviética sua renúncia como presidente da União das Repúblicas Socialistas Soviéticas. 'Em decorrência da situação que emergiu com a formação da Comunidade de Estados Independentes, estou encerrando minhas atividades no cargo de presidente da URSS.' Às 19h32, a bandeira vermelha com foice e martelo foi arriada do alto do Kremlin e substituída pela tricolor russo-branca-azul-vermelha. Uma superpotência que havia durado 69 anos, construído o primeiro Estado operário da história, enviado o primeiro humano ao espaço e enfrentado os EUA numa guerra fria de meio século havia deixado de existir — sem invasão, sem golpe bem-sucedido, sem um único tiro.\n\nA URSS chegou aos anos 1980 exausta. A economia planificada havia produzido crescimento extensivo nas décadas de 1950 e 1960, mas estagnou nos anos 1970 com a queda dos preços do petróleo. A guerra no Afeganistão (1979-89) custou 15.000 vidas soviéticas e bilhões de rublos — o 'Vietnã soviético'. A corrida armamentista com os EUA consumia cerca de 25% do PIB, versus cerca de 6% americano. Mikhail Gorbachev, eleito secretário-geral do PCUS em 1985, reconhecia que o sistema precisava ser reformado. Introduziu glasnost (transparência nas informações e crítica pública) e perestroika (reestruturação econômica). As reformas abriram espaço para críticas e movimentos de independência que o sistema não estava preparado para absorver.\n\nO ponto de virada foi o fracassado golpe de agosto de 1991. Membros da linha dura do PCUS prenderam Gorbachev em sua residência na Crimeia e tentaram reverter as reformas. Boris Yeltsin, presidente eleito da Rússia, subiu num tanque diante do Parlamento russo e liderou a resistência. O golpe fracassou em 72 horas. Mas o episódio havia exposto a fraqueza do poder central: se o próprio partido não conseguia se coordenar, o Estado que ele sustentava estava falido. Em 8 de dezembro de 1991, Yeltsin, o presidente da Ucrânia Leonid Kravchuk e o da Bielorrússia Stanislau Shushkevich assinaram os Acordos de Belaveja, declarando dissolvida a URSS.\n\nQuinze repúblicas tornaram-se países independentes de um dia para o outro. O fim da Guerra Fria — que havia começado simbolicamente com o discurso da 'Cortina de Ferro' de Churchill em 1946 e se encerrado com a queda do Muro de Berlim em 1989 — foi consumado. Francis Fukuyama declarou o 'fim da história': a democracia liberal havia vencido. A história, no entanto, continuou — nas guerras da Iugoslávia, na ascensão da China e, décadas depois, na invasão russa da Ucrânia.",
+    "importance": 5,
+    "featured": false,
+    "image": "/eventos/hero-colapso-urss.jpg",
+    "relatedEvents": ["queda-muro-berlim", "revolucao-russa", "fim-segunda-guerra-mundial", "chegada-homem-lua"],
+    "characters": [
+      {
+        "name": "Mikhail Gorbachev",
+        "role": "Último líder da URSS",
+        "image": "/eventos/figura-gorbachev.jpg",
+        "description": "Introduziu glasnost e perestroika para reformar o comunismo soviético e acabou presidindo sua dissolução."
+      },
+      {
+        "name": "Boris Yeltsin",
+        "role": "Primeiro presidente da Rússia",
+        "image": "/eventos/figura-yeltsin.jpg",
+        "description": "Liderou a resistência ao golpe de agosto de 1991 e assinou os Acordos de Belaveja que dissolveram a URSS."
+      },
+      {
+        "name": "Ronald Reagan",
+        "role": "Presidente dos EUA (1981-89)",
+        "image": "/eventos/figura-reagan.jpg",
+        "description": "Sua política de pressão econômica e militar contra a URSS — incluindo a Iniciativa de Defesa Estratégica — contribuiu para esgotar a economia soviética."
+      }
+    ],
+    "sources": [],
+    "cronologia": [
+      { "ano": "1985", "titulo": "Gorbachev torna-se secretário-geral — lança glasnost e perestroika" },
+      { "ano": "1989", "titulo": "Queda do Muro de Berlim — colapso do bloco soviético na Europa Oriental" },
+      { "ano": "fev. 1989", "titulo": "Retirada soviética do Afeganistão" },
+      { "ano": "ago. 1991", "titulo": "Golpe fracassado contra Gorbachev em Moscou" },
+      { "ano": "8 dez. 1991", "titulo": "Acordos de Belaveja — líderes da Rússia, Ucrânia e Bielorrússia dissolvem a URSS" },
+      { "ano": "25 dez. 1991", "titulo": "Gorbachev renuncia — bandeira soviética desce do Kremlin" },
+      { "ano": "1991", "titulo": "15 repúblicas soviéticas tornam-se países independentes" }
+    ],
+    "keywords": ["urss", "gorbachev", "yeltsin", "colapso soviético", "guerra fria", "perestroika", "glasnost", "acordos de belaveja", "kremlin", "comunismo"]
+  },
+  {
+    "id": "atentados-11-setembro",
+    "slug": "atentados-11-setembro",
+    "title": "Atentados de 11 de Setembro",
+    "startYear": 2001,
+    "endYear": 2001,
+    "dateDisplay": "11 de setembro de 2001",
+    "period": "Idade Contemporânea",
+    "region": "América do Norte",
+    "country": "Estados Unidos",
+    "category": "Terrorismo",
+    "summary": "Às 8h46 de uma terça-feira de setembro, o voo AA11 atingiu a Torre Norte do World Trade Center — iniciando 102 minutos que mataram 2.977 pessoas e redefiniriam a política global por décadas.",
+    "content": "Às 8h46 da manhã de 11 de setembro de 2001, o céu sobre Manhattan era de um azul excepcional. O Boeing 767 do voo American Airlines 11, sequestrado logo após decolar de Boston, atingiu a Torre Norte do World Trade Center entre os andares 93 e 99. A explosão foi visível de toda Nova York. Câmeras de televisão que cobriam o local por acreditar tratar-se de um acidente de aviação estavam no ar ao vivo às 9h03, quando o voo United Airlines 175 atingiu a Torre Sul entre os andares 77 e 85. Era impossível fingir que era um acidente: o mundo inteiro assistiu, ao vivo, o segundo impacto.\n\nOs quatro ataques foram coordenados pela Al-Qaeda de Osama bin Laden. Dezenove sequestradores — quinze sauditas, dois emiradenses, um egípcio e um libanês — haviam passado meses nos EUA aprendendo a pilotar aviões. O terceiro avião, voo American Airlines 77, atingiu o lado oeste do Pentágono em Arlington, Virgínia, às 9h37. O quarto, voo United Airlines 93, cujo alvo provável era o Capitólio ou a Casa Branca, caiu num campo em Shanksville, Pensilvânia, às 10h03, após passageiros tomarem conhecimento pelos celulares sobre os outros ataques e tentarem retomar o controle da aeronave. As caixas-pretas confirmaram a luta pela cabine nos momentos finais. '102 minutos' — o intervalo entre o primeiro impacto e o colapso da Torre Norte — é o título do livro mais preciso sobre os acontecimentos daquele dia.\n\nAs Torres Sul e Norte desabaram às 9h59 e 10h28, respectivamente. 2.977 pessoas morreram — mais do que em Pearl Harbor em 1941. Entre as vítimas havia cidadãos de 93 países. Os bombeiros e policiais do Departamento de Bombeiros de Nova York perderam 343 colegas — o maior número de vítimas de serviços de emergência num único evento na história americana. A investigação foi conduzida pela Comissão Nacional sobre Ataques Terroristas, cujo relatório final, publicado em julho de 2004 e conhecido como 'Relatório da Comissão do 11 de Setembro', documenta em detalhe o planejamento dos ataques, as falhas de inteligência e as medidas tomadas em resposta.\n\nA resposta americana foi a 'Guerra ao Terror': a invasão do Afeganistão em outubro de 2001, derrubando o regime Talibã que abrigava bin Laden; a aprovação do Patriot Act, que expandiu os poderes de vigilância do governo; a criação do Departamento de Segurança Interna; e, em 2003, a invasão do Iraque — justificada erroneamente como parte da guerra ao terror e com base em informações falsas sobre armas de destruição em massa. A guerra no Afeganistão durou 20 anos, terminando com a retirada americana em agosto de 2021 e o retorno dos Talibãs ao poder.",
+    "importance": 5,
+    "featured": false,
+    "image": "/eventos/hero-atentados-11-setembro.jpg",
+    "relatedEvents": ["colapso-urss", "fim-segunda-guerra-mundial", "primeira-guerra-mundial"],
+    "characters": [
+      {
+        "name": "Osama bin Laden",
+        "role": "Líder da Al-Qaeda",
+        "image": "/eventos/figura-bin-laden.jpg",
+        "description": "Mastermind dos ataques, operou a partir do Afeganistão sob proteção do regime Talibã. Morto em operação americana no Paquistão em 2011."
+      },
+      {
+        "name": "George W. Bush",
+        "role": "Presidente dos EUA",
+        "image": "/eventos/figura-bush.jpg",
+        "description": "Respondeu aos ataques declarando a 'Guerra ao Terror', autorizando a invasão do Afeganistão e, posteriormente, do Iraque."
+      },
+      {
+        "name": "Rudolph Giuliani",
+        "role": "Prefeito de Nova York",
+        "image": "/eventos/figura-giuliani.jpg",
+        "description": "Sua presença nas ruas de Manhattan no dia 11 de setembro o tornou o rosto da resposta local à crise."
+      }
+    ],
+    "sources": [
+      {
+        "title": "The 9/11 Commission Report — Relatório Final da Comissão Nacional (2004)",
+        "url": "https://govinfo.library.unt.edu/911/report/index.htm",
+        "tipo": "oficial"
+      }
+    ],
+    "cronologia": [
+      { "ano": "8h46", "titulo": "Voo AA11 atinge Torre Norte — Nova York" },
+      { "ano": "9h03", "titulo": "Voo UA175 atinge Torre Sul — Nova York" },
+      { "ano": "9h37", "titulo": "Voo AA77 atinge o Pentágono — Arlington, Virgínia" },
+      { "ano": "9h59", "titulo": "Torre Sul colapsa" },
+      { "ano": "10h03", "titulo": "Voo UA93 cai em Shanksville — PA" },
+      { "ano": "10h28", "titulo": "Torre Norte colapsa" },
+      { "ano": "7 out. 2001", "titulo": "Início da invasão americana do Afeganistão" }
+    ],
+    "keywords": ["11 de setembro", "world trade center", "al-qaeda", "osama bin laden", "george w. bush", "terrorismo", "pentagon", "nova york", "guerra ao terror", "afeganistão"]
+  },
+  {
+    "id": "inicio-segunda-guerra-mundial",
+    "slug": "inicio-segunda-guerra-mundial",
+    "title": "Início da Segunda Guerra Mundial",
+    "startYear": 1939,
+    "endYear": 1939,
+    "dateDisplay": "1º de setembro de 1939",
+    "period": "Idade Contemporânea",
+    "region": "Europa",
+    "country": "Alemanha / Polônia",
+    "category": "Militar",
+    "summary": "Às 4h45 de 1º de setembro de 1939, os canhões do couraçado alemão Schleswig-Holstein abriram fogo sobre Westerplatte — e em 72 horas, a Europa inteira estava em guerra.",
+    "content": "Às 4h45 da manhã de 1º de setembro de 1939, os canhões do couraçado alemão Schleswig-Holstein, ancorado no porto de Dantzig (atual Gdańsk) sob pretexto de visita de cortesia, abriram fogo contra a guarnição polonesa de Westerplatte — uma pequena península com 182 soldados. Simultaneamente, 1,5 milhão de soldados alemães cruzavam a fronteira polonesa em três frentes: do norte (a partir da Prússia Oriental e de Pomerânia), do oeste (a partir da Alemanha) e do sul (a partir da recém-incorporada Tchecoslováquia). A Blitzkrieg — guerra-relâmpago — combinava tanques, infantaria motorizada e apoio aéreo de Stukas em mergulho para romper linhas defensivas a uma velocidade que nenhum exército havia visto antes.\n\nO contexto que tornou possível esse momento havia sido construído ao longo de seis anos. Adolf Hitler assumira o poder na Alemanha em janeiro de 1933 e sistematicamente destruiu o Tratado de Versalhes: rearmamento (1935), remilitarização da Renânia (1936), Anschluss da Áustria (março 1938) e, depois de cada passo, nada além de protestos verbais das democracias ocidentais. A Conferência de Munique em setembro de 1938 — onde França e Grã-Bretanha concordaram com a anexação dos Sudetos da Tchecoslováquia em troca da promessa de Hitler de que não teria mais reivindicações territoriais — tornou-se o símbolo do apaziguamento. Neville Chamberlain voltou a Londres brandindo um pedaço de papel e prometendo 'paz para o nosso tempo'. Em março de 1939, Hitler ocupou o restante da Tchecoslováquia, aniquilando qualquer credibilidade que a política de apaziguamento ainda possuísse.\n\nO elemento que tornou a invasão da Polônia possível sem risco de guerra em duas frentes foi o Pacto Molotov-Ribbentrop, assinado em 23 de agosto de 1939. O acordo público de não-agressão entre a Alemanha nazista e a União Soviética chocou o mundo — como duas ideologias tão opostas podiam se aliar? O protocolo secreto anexo respondia: a Europa Oriental seria dividida em zonas de influência. A Polônia seria partilhada ao meio. A Finlândia, os países bálticos e a Bessarábia (Romênia) ficariam com os soviéticos. Removido o risco soviético, Hitler invadiu.\n\nFrança e Grã-Bretanha declararam guerra à Alemanha em 3 de setembro — mas não ajudaram militarmente a Polônia, ficando passivas na 'guerra estranha' (Phoney War) do outono de 1939. A Polônia caiu em 36 dias. Em 17 de setembro, a URSS invadiu pelo leste, conforme o pacto secreto. A resistência de Westerplatte durou 7 dias contra forças imensamente superiores — os 182 soldados poloneses tornaram-se símbolo nacional. Varsóvia resistiu 20 dias ao cerco e capitulou em 27 de setembro. Em outubro, a Polônia estava completamente ocupada e dividida entre as duas potências totalitárias.",
+    "importance": 5,
+    "featured": false,
+    "image": "/eventos/hero-inicio-segunda-guerra-mundial.jpg",
+    "relatedEvents": ["fim-segunda-guerra-mundial", "primeira-guerra-mundial", "revolucao-russa", "grande-depressao-1929"],
+    "characters": [
+      {
+        "name": "Adolf Hitler",
+        "role": "Führer da Alemanha Nazista",
+        "image": "/eventos/figura-hitler.jpg",
+        "description": "Chanceler e ditador que planejou e ordenou a invasão da Polônia, desencadeando a Segunda Guerra Mundial."
+      },
+      {
+        "name": "Neville Chamberlain",
+        "role": "Primeiro-ministro britânico",
+        "image": "/eventos/figura-chamberlain.jpg",
+        "description": "Arquiteto da política de apaziguamento — assinou os Acordos de Munique em 1938 acreditando garantir 'paz para o nosso tempo'."
+      },
+      {
+        "name": "Winston Churchill",
+        "role": "Sucessor de Chamberlain (1940)",
+        "image": "/eventos/figura-churchill.jpg",
+        "description": "Criticou o apaziguamento desde o início e substituiu Chamberlain em maio de 1940, liderando a resistência britânica."
+      }
+    ],
+    "sources": [],
+    "cronologia": [
+      { "ano": "set. 1938", "titulo": "Conferência de Munique — apaziguamento cede os Sudetos a Hitler" },
+      { "ano": "mar. 1939", "titulo": "Alemanha ocupa a Tchecoslováquia inteira" },
+      { "ano": "23 ago. 1939", "titulo": "Pacto Molotov-Ribbentrop — URSS e Alemanha dividem a Europa Oriental" },
+      { "ano": "1 set. 1939", "titulo": "Invasão da Polônia — início da guerra" },
+      { "ano": "3 set. 1939", "titulo": "França e Grã-Bretanha declaram guerra à Alemanha" },
+      { "ano": "17 set. 1939", "titulo": "URSS invade a Polônia pelo leste" },
+      { "ano": "6 out. 1939", "titulo": "Polônia totalmente ocupada — partilhada entre Alemanha e URSS" }
+    ],
+    "keywords": ["segunda guerra mundial", "invasão da polônia", "blitzkrieg", "hitler", "westerplatte", "apaziguamento", "munique", "molotov ribbentrop", "nazismo", "1939"]
   }
 ]

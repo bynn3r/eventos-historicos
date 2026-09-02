@@ -2141,5 +2141,507 @@
     ],
     "legado": "A queda do Império Romano do Ocidente em 476 é convencionalmente usada como marco do fim da Antiguidade e início da Idade Média — mas nenhum romano da época acordou naquele 4 de setembro sentindo que uma era havia terminado. A vida cotidiana continuou, as igrejas permaneceram abertas, os mercados funcionaram. O que mudou, lentamente, foi o mapa do poder: onde havia um Estado centralizado com leis, exércitos e fiscalidade, formaram-se reinos germânicos menores com suas próprias tradições, línguas e sistemas jurídicos.\n\nO legado mais concreto da 'queda' é a língua que falamos. O latim vulgar falado pelos romanos comuns continuou sendo falado pelas populações da antiga Gália, Hispânia, Dácia e Itália — e evoluiu, ao longo dos séculos, para o francês, o espanhol, o português, o romeno e o italiano. A Igreja Católica, sediada em Roma, preservou o latim escrito, o direito romano e o aparato administrativo imperial, tornando-se a maior herdeira institucional do Império.\n\nA questão de 'por que Roma caiu' continua sendo um dos debates mais fecundos da historiografia. Edward Gibbon, no século XVIII, culpou o Cristianismo e a 'barbárie'. Historiadores modernos apontam a crise fiscal estrutural, as epidemias de peste, as mudanças climáticas do século III, a fragmentação política, o esgotamento do modelo escravista. A resposta mais honesta é: todas essas causas, agindo simultaneamente por séculos, sobre um sistema que havia funcionado extraordinariamente bem por tanto tempo que ninguém sabia como repará-lo quando começou a falhar.",
     "curiosidadesRelacionadas": []
+  },
+  {
+    "slug": "inicio-segunda-guerra-mundial",
+    "titulo": "Início da Segunda Guerra Mundial",
+    "ano": "1939",
+    "periodo": "1939 – 1945",
+    "categoria": "Militar",
+    "hook": "Às 4h45 de 1º de setembro de 1939, os canhões do Schleswig-Holstein abriram fogo sobre Westerplatte. Em 72 horas, toda a Europa estava em guerra.",
+    "heroImagem": "/eventos/hero-inicio-segunda-guerra.jpg",
+    "heroLegenda": "Soldados alemães derrubam a barreira de fronteira polonesa em 1º de setembro de 1939 — a imagem que se tornou símbolo do início da maior guerra da história.",
+    "jornadaTitulo": "As semanas que desencadearam a guerra",
+    "jornadaDescricao": "De Munique à invasão da Polônia: acompanhe os momentos que tornaram inevitável o maior conflito da história.",
+    "mapaTitulo": "Europa, setembro de 1939",
+    "mapaDescricao": "De Berlim a Varsóvia, de Moscou a Londres: os lugares onde a guerra foi decidida — e onde começou.",
+    "estatisticas": [
+      { "label": "Data de início", "valor": "1º de setembro de 1939" },
+      { "label": "Divisões alemãs na invasão", "valor": "62 divisões" },
+      { "label": "Duração da campanha polonesa", "valor": "36 dias" },
+      { "label": "Conflito total", "valor": "6 anos, 70–85 milhões de mortos" }
+    ],
+    "contexto": "Em janeiro de 1933, Adolf Hitler tornou-se chanceler da Alemanha derrotada pela Primeira Guerra e humilhada pelo Tratado de Versalhes. Nos seis anos seguintes, sistematicamente rearmou o país, remilitarizou a Renânia (1936), anexou a Áustria (março 1938) e desmembrou a Tchecoslováquia — cada passo acompanhado de promessas de que seria o último. As democracias ocidentais, traumatizadas pela memória da Primeira Guerra e convictas de que Hitler poderia ser satisfeito com concessões razoáveis, responderam com a política de apaziguamento. A Conferência de Munique de setembro de 1938 — onde França e Grã-Bretanha entregaram os Sudetos checoslovacos em troca de uma promessa hitleriana de paz — tornou-se o símbolo desta ilusão.\n\nO elemento decisivo que tornou a invasão da Polônia possível sem risco de guerra em duas frentes foi o Pacto Molotov-Ribbentrop, assinado em 23 de agosto de 1939. O acordo público de não-agressão entre nazistas e soviéticos — duas ideologias aparentemente inconciliáveis — chocou o mundo. O protocolo secreto que o acompanhava dividia a Europa Oriental em zonas de influência: a Polônia seria repartida ao meio. Removida a ameaça soviética, Hitler ordenou a invasão para 1º de setembro de 1939. Quando o Schleswig-Holstein abriu fogo sobre Westerplatte naquela manhã, a Segunda Guerra Mundial havia começado.\n\nFrança e Grã-Bretanha declararam guerra à Alemanha em 3 de setembro, cumprindo suas obrigações com a Polônia — mas não forneceram ajuda militar direta. A Polônia enfrentou sozinha a Blitzkrieg alemã pelo oeste e, a partir de 17 de setembro, a invasão soviética pelo leste. Em 36 dias, um país de 35 milhões de habitantes havia sido varrido do mapa político. Começava o conflito mais devastador da história humana.",
+    "momentos": [
+      {
+        "data": "23 de agosto de 1939",
+        "titulo": "Pacto Molotov-Ribbentrop",
+        "local": "Moscou",
+        "texto": "Vyacheslav Molotov e Joachim von Ribbentrop assinaram em Moscou o Pacto de Não-Agressão que chocou o mundo. O protocolo secreto que o acompanhava dividia a Europa Oriental: a Polônia seria repartida entre Alemanha e URSS, os países bálticos e a Finlândia ficariam para os soviéticos. Com a neutralidade soviética garantida, Hitler tinha via livre para invadir a Polônia sem o risco de uma guerra em duas frentes que havia destruído a Alemanha em 1914-18.",
+        "imagem": "/eventos/momento-molotov.jpg"
+      },
+      {
+        "data": "1º de setembro de 1939, 4h45",
+        "titulo": "Tiro inicial sobre Westerplatte",
+        "local": "Dantzig (atual Gdańsk)",
+        "texto": "Os canhões do couraçado alemão Schleswig-Holstein, ancorado no porto de Dantzig sob pretexto de 'visita de cortesia', abriram fogo contra a guarnição polonesa de Westerplatte — 182 soldados que defendiam um depósito de munição. Simultaneamente, 1,5 milhão de soldados alemães cruzavam a fronteira polonesa em três frentes. Os 182 defensores de Westerplatte resistiram por 7 dias contra forças imensamente superiores, tornando-se símbolo da resistência polonesa.",
+        "imagem": "/eventos/momento-westerplatte.jpg"
+      },
+      {
+        "data": "1º de setembro de 1939",
+        "titulo": "A Blitzkrieg avança",
+        "local": "Fronteira polonesa",
+        "texto": "A Blitzkrieg — guerra-relâmpago — era uma doutrina tática completamente nova: blindados e infantaria motorizada perfuravam as linhas defensivas enquanto Stukas em mergulho destruíam pontes, ferrovias e centros de comunicação, semeando o pânico. A velocidade era incompatível com as táticas defensivas polonesas, baseadas em cavalaria e infantaria de 1918. Divisões inteiras foram cercadas antes de poder reagir. A aviação alemã destruiu a maior parte da força aérea polonesa ainda no chão nos primeiros dias.",
+        "imagem": "/eventos/momento-blitzkrieg.jpg"
+      },
+      {
+        "data": "3 de setembro de 1939",
+        "titulo": "França e Grã-Bretanha declaram guerra",
+        "local": "Londres e Paris",
+        "texto": "Às 11h da manhã de domingo, o primeiro-ministro Neville Chamberlain transmitiu ao rádio britânico: 'Nenhuma resposta foi recebida à nossa última nota. Consequentemente, este país está em estado de guerra com a Alemanha.' O mesmo ocorreu em Paris horas depois. A declaração de guerra era cumprimento de obrigações formais — mas não significou ajuda militar imediata à Polônia. Na fronteira franco-alemã, os exércitos ficaram parados numa 'guerra estranha' (drôle de guerre) que duraria até maio de 1940.",
+        "imagem": "/eventos/momento-declaracao-guerra.jpg"
+      },
+      {
+        "data": "17 de setembro de 1939",
+        "titulo": "URSS invade pelo Leste",
+        "local": "Polônia Oriental",
+        "texto": "Invocando a necessidade de proteger as minorias ucranianas e bielorrussas, o Exército Vermelho cruzou a fronteira oriental da Polônia às 3 horas da manhã de 17 de setembro. O governo polonês, que havia fugido para a Romênia, estava agora cercado por dois países. A invasão soviética, resultado direto do Pacto Molotov-Ribbentrop, tornou qualquer resistência continuada impossível. Cerca de 250.000 soldados poloneses foram feitos prisioneiros pelos soviéticos.",
+        "imagem": "/eventos/momento-invasao-urss.jpg"
+      },
+      {
+        "data": "27 de setembro de 1939",
+        "titulo": "Varsóvia capitula",
+        "local": "Varsóvia",
+        "texto": "Após 20 dias de cerco e bombardeios que destruíram grande parte da cidade, Varsóvia capitulou em 27 de setembro. O comandante da guarnição, general Juliusz Rómmel, assinou a rendição. Mais de 100 mil soldados poloneses foram capturados. A resistência polonesa, no entanto, não terminou: o governo no exílio estabeleceu-se em Londres e o Armia Krajowa (Exército Doméstico) continuaria a lutar na clandestinidade até o fim da guerra.",
+        "imagem": "/eventos/momento-varsovia.jpg"
+      }
+    ],
+    "locais": [
+      {
+        "nome": "Berlim",
+        "lat": 52.52,
+        "lng": 13.4,
+        "descricao": "Capital do Reich — onde Hitler planejou e ordenou a invasão da Polônia."
+      },
+      {
+        "nome": "Westerplatte",
+        "lat": 54.4,
+        "lng": 18.67,
+        "descricao": "Guarnição polonesa onde os primeiros tiros da guerra foram disparados."
+      },
+      {
+        "nome": "Varsóvia",
+        "lat": 52.23,
+        "lng": 21.01,
+        "descricao": "Capital polonesa que resistiu 20 dias ao cerco alemão antes de capitular."
+      },
+      {
+        "nome": "Moscou",
+        "lat": 55.75,
+        "lng": 37.62,
+        "descricao": "Onde Molotov e Ribbentrop assinaram o pacto que dividiu a Europa Oriental."
+      },
+      {
+        "nome": "Londres",
+        "lat": 51.51,
+        "lng": -0.13,
+        "descricao": "Chamberlain anunciou a declaração de guerra à Alemanha em rádio nacional."
+      },
+      {
+        "nome": "Munique",
+        "lat": 48.13,
+        "lng": 11.58,
+        "descricao": "Onde em 1938 o apaziguamento cedeu os Sudetos a Hitler — 'paz para o nosso tempo'."
+      }
+    ],
+    "figuras": [
+      {
+        "nome": "Adolf Hitler",
+        "papel": "Führer da Alemanha Nazista",
+        "imagem": "/eventos/figura-hitler.jpg",
+        "descricao": "Planejou e ordenou a invasão da Polônia, desencadeando a Segunda Guerra Mundial."
+      },
+      {
+        "nome": "Neville Chamberlain",
+        "papel": "Primeiro-ministro britânico",
+        "imagem": "/eventos/figura-chamberlain.jpg",
+        "descricao": "Arquiteto do apaziguamento em Munique; declarou guerra à Alemanha em 3 de setembro de 1939."
+      },
+      {
+        "nome": "Winston Churchill",
+        "papel": "Ministro da Marinha / Futuro PM",
+        "imagem": "/eventos/figura-churchill.jpg",
+        "descricao": "Criticou o apaziguamento e tornou-se primeiro-ministro em maio de 1940."
+      },
+      {
+        "nome": "Josef Stalin",
+        "papel": "Líder da União Soviética",
+        "imagem": "/eventos/figura-stalin.jpg",
+        "descricao": "Assinou o Pacto Molotov-Ribbentrop e invadiu a Polônia pelo leste em setembro de 1939."
+      }
+    ],
+    "legado": "A invasão da Polônia em 1º de setembro de 1939 iniciou o conflito mais devastador da história da humanidade: seis anos de guerra que custariam entre 70 e 85 milhões de vidas, incluindo o extermínio sistemático de seis milhões de judeus no Holocausto, as bombas atômicas sobre Hiroshima e Nagasaki e a destruição de cidades inteiras de Coventry a Stalingrado, de Dresden a Tóquio. A escala da catástrofe era inimaginável em setembro de 1939 — e foi, em parte, consequência direta do fracasso do apaziguamento em deterr Hitler quando ainda havia tempo.\n\nO fracasso do apaziguamento moldou profundamente a política internacional do pós-guerra. A lição de Munique — que concessões a regimes agressores encorajam novas agressões em vez de saciar ambições — tornou-se doutrina. 'Munique' transformou-se em metáfora para qualquer política de acomodação percebida como ingênua. Essa lição influenciou a resposta americana à Guerra da Coreia (1950), à Crise dos Mísseis de Cuba (1962) e ao Iraque de Saddam Hussein (1991). A Otan, fundada em 1949, foi diretamente uma resposta ao isolacionismo que havia permitido à Alemanha rearmar-se sem consequências.\n\nA ordem mundial do pós-guerra — ONU, Carta dos Direitos Humanos, Tribunal de Nuremberg, regras do direito internacional humanitário — foi construída como resposta direta às atrocidades que começaram naquela manhã de setembro de 1939. A Segunda Guerra Mundial é, no sentido mais literal, o evento fundador da ordem internacional contemporânea: as instituições, normas e alianças que estruturam o mundo do século XXI foram desenhadas para que Westerplatte nunca mais se repetisse.",
+    "curiosidadesRelacionadas": ["blitzkrieg", "holocausto", "resistencia-francesa", "dia-d"]
+  },
+  {
+    "slug": "assassinato-julio-cesar",
+    "titulo": "Assassinato de Júlio César",
+    "ano": "44 a.C.",
+    "periodo": "c. 49–27 a.C.",
+    "categoria": "Política",
+    "hook": "Vinte e três facadas no Teatro de Pompeu encerraram a República Romana — e abriram caminho para o Império que moldaria a civilização ocidental por séculos.",
+    "heroImagem": "/eventos/hero-assassinato-cesar.jpg",
+    "heroLegenda": "Jean-Léon Gérôme, 'A Morte de César' (1867) — os senadores em volta do corpo de Júlio César no Teatro de Pompeu, em 15 de março de 44 a.C.",
+    "jornadaTitulo": "Do Rubicão aos Idos de Março",
+    "jornadaDescricao": "Cinco anos de conquistas, poder crescente e desconfiança senatorial — até a manhã em que a República tentou salvar a si mesma matando seu maior general.",
+    "mapaTitulo": "Roma, 44 a.C.",
+    "mapaDescricao": "Do Fórum Romano ao Teatro de Pompeu — e das batalhas que fizeram César ao destino final da República.",
+    "estatisticas": [
+      { "label": "Data", "valor": "15 de março de 44 a.C." },
+      { "label": "Número de conspiradores", "valor": "~60 senadores" },
+      { "label": "Punhaladas", "valor": "23" },
+      { "label": "Fim da República Romana", "valor": "27 a.C. — 17 anos depois" }
+    ],
+    "contexto": "Júlio César não chegou ao poder por herança — conquistou-o por talento militar e habilidade política num sistema que oficialmente desprezava ambas as coisas. Governador da Gália por dez anos (58-49 a.C.), conduziu campanhas que expandiram o domínio romano ao norte até o Canal da Mancha e ao leste até o Reno, subjugando populações celtas e germânicas e acumulando riqueza, legionários leais e prestígio incomparável. Quando o Senado ordenou que deixasse seus exércitos e voltasse a Roma como civil, cruzou o rio Rubicão com as legiões em janeiro de 49 a.C. — ato que equivalia à declaração de guerra civil. 'A sorte está lançada', teria dito.\n\nA guerra civil contra Pompeu durou menos de dois anos. A batalha decisiva foi em Farsália, na Grécia, em agosto de 48 a.C.: os exércitos de Pompeu eram maiores, mas os veteranos de César eram superiores. Pompeu fugiu para o Egito, onde foi assassinado por cortesãos do Faraó antes mesmo de César chegar. Em 46 a.C., César havia derrotado todos os opositores e retornado a Roma como mestre absoluto. Em fevereiro de 44 a.C., o Senado o nomeou ditador perpétuo — uma magistratura romana que existia para crises temporárias, mas que nunca havia sido concedida sem prazo definido.\n\nA nomeação de ditador perpétuo foi o estopim. Para os senadores que acreditavam na República — e para os que simplesmente queriam participar do poder — César havia cruzado a linha. Boatos de que aceitaria o título de rei, que transferiria a capital para Alexandria e que planejava uma nova campanha oriental tornavam urgente a ação. Cerca de 60 senadores organizaram a conspiração liderada por Marco Júnio Bruto e Caio Cássio Longino. Eram chamados os Liberatores — os Libertadores. O dia escolhido foi 15 de março de 44 a.C. — os Idos de Março.",
+    "momentos": [
+      {
+        "data": "janeiro de 49 a.C.",
+        "titulo": "César cruza o Rubicão",
+        "local": "Rio Rubicão, Itália",
+        "texto": "Na noite de janeiro de 49 a.C., Júlio César conduziu a XIII Legião através do Rio Rubicão, pequeno afluente do Adriático que marcava o limite além do qual nenhum general romano podia entrar armado em território italiano. Cruzar o Rubicão com suas legiões equivalia à declaração de guerra contra o Senado de Roma. Segundo Suetônio, César hesitou na margem, pesando a enormidade do passo. Então disse: 'Alea iacta est' — a sorte está lançada. A guerra civil havia começado.",
+        "imagem": "/eventos/momento-rubicao.jpg"
+      },
+      {
+        "data": "agosto de 48 a.C.",
+        "titulo": "Batalha de Farsália",
+        "local": "Tessália, Grécia",
+        "texto": "Em Farsália, na Tessália, os exércitos de César e Pompeu se encontraram em campo aberto. Pompeu tinha superioridade numérica — cerca de 45.000 homens contra 22.000 de César — e uma cavalaria muito mais forte. César antecipou a manobra inimiga: escondeu seis coortes de veteranos para atacar de flanco a cavalaria de Pompeu quando ela tentasse cercar seus flancos. O plano funcionou com precisão cirúrgica. A batalha durou poucas horas; o exército de Pompeu desintegrou-se. César perdeu cerca de 200 homens; Pompeu, 6.000.",
+        "imagem": "/eventos/momento-farsalia.jpg"
+      },
+      {
+        "data": "fevereiro de 44 a.C.",
+        "titulo": "Ditador perpétuo",
+        "local": "Roma",
+        "texto": "Em fevereiro de 44 a.C., o Senado Romano concedeu a Júlio César o título de dictator perpetuo — ditador perpétuo, sem prazo de expiração. A magistratura da ditadura existia na constituição romana para crises temporárias: o ditador tinha poderes absolutos por seis meses. Nunca havia sido concedida sem prazo. Para muitos senadores, era a monarquia com outro nome — o pior pesadelo da tradição republicana. O próprio César parecia consciente do simbolismo perturbador: em fevereiro, num festival, Marco Antônio lhe ofereceu publicamente uma coroa de louros, e César a recusou três vezes. Mas a encenação não convenceu os conspiradores.",
+        "imagem": "/eventos/momento-ditador.jpg"
+      },
+      {
+        "data": "15 de março de 44 a.C.",
+        "titulo": "Os Idos de Março",
+        "local": "Teatro de Pompeu, Roma",
+        "texto": "César chegou ao Teatro de Pompeu naquela manhã ignorando vários avisos. O harúspice Espúrinha havia lhe advertido para se precaver dos Idos de Março. Sua esposa Calpúrnia havia sonhado com seu assassinato. Uma nota de aviso fora colocada em suas mãos — ele a guardou sem ler. À medida que se aproximava de sua cadeira na sala do Senado, um dos conspiradores se adiantou sob pretexto de apresentar uma petição. Os outros se agruparam ao redor. O primeiro golpe de punhal veio de Servílio Cásca — na nuca. César agarrou seu braço. Em seguida, dezenas de punhais caíram sobre ele. Vinte e três feridas. Apenas uma fatal. Segundo Plutarco, César cobriu o rosto com a toga quando viu que Bruto estava entre os conspiradores.",
+        "imagem": "/eventos/momento-ides.jpg"
+      },
+      {
+        "data": "março de 44 a.C.",
+        "titulo": "Discurso de Marco Antônio",
+        "local": "Fórum Romano",
+        "texto": "No funeral de César, Marco Antônio subiu ao pódio diante de uma multidão enorme. Seu discurso — imortalizando pelo Shakespeare séculos depois — começou com aparente elogio aos conspiradores: 'Bruto é um homem honrado.' Mas enquanto falava, Marco Antônio leu o testamento de César (que deixava dinheiro a cada cidadão romano), exibiu a toga ensanguentada e depois — segundo Suetônio — levantou o corpo de César sobre um suporte para que a multidão visse as feridas. A reação foi imediata: tumultos, os conspiradores forçados a fugir de Roma. O povo que os Liberatores esperavam libertar havia se voltado contra eles.",
+        "imagem": "/eventos/momento-antonio.jpg"
+      },
+      {
+        "data": "outubro de 42 a.C.",
+        "titulo": "Batalha de Filipos",
+        "local": "Macedônia",
+        "texto": "Em Filipos, na Macedônia, os exércitos de Bruto e Cássio enfrentaram as forças de Otávio e Marco Antônio. A batalha foi travada em dois dias separados; no primeiro, Bruto teve sucesso contra Otávio enquanto Marco Antônio derrotava Cássio — que, desesperado, se suicidou. No segundo combate, três semanas depois, Bruto foi derrotado. Cercado, pediu a um amigo que o ajudasse a se matar. Com a morte de Bruto, o último dos grandes conspiradores havia desaparecido. A República pela qual morreram havia sobrevivido menos de dois anos após os Idos de Março.",
+        "imagem": "/eventos/momento-filipos.jpg"
+      },
+      {
+        "data": "27 a.C.",
+        "titulo": "Otávio torna-se Augusto",
+        "local": "Roma",
+        "texto": "Em 27 a.C., após vencer as guerras civis e derrotar Marco Antônio e Cleópatra na batalha de Ácio (31 a.C.), Otávio recebeu do Senado o título honorífico de Augustus — o Venerável. Era tecnicamente o 'primeiro cidadão' (Princeps), não um rei. Mas na prática concentrava o comando do exército, o controle das províncias e autoridade religiosa suprema. A República havia sido preservada nas formas; o Império havia nascido na substância. O Império Romano fundado por Augusto duraria, no Ocidente, até 476 d.C. — e no Oriente (como Império Bizantino) até 1453 d.C.",
+        "imagem": "/eventos/momento-augusto.jpg"
+      }
+    ],
+    "locais": [
+      {
+        "nome": "Roma",
+        "lat": 41.9,
+        "lng": 12.49,
+        "descricao": "Capital da República e palco do assassinato no Teatro de Pompeu."
+      },
+      {
+        "nome": "Rubicão",
+        "lat": 44.2,
+        "lng": 12.4,
+        "descricao": "O rio que César cruzou em 49 a.C. iniciando a guerra civil."
+      },
+      {
+        "nome": "Farsália",
+        "lat": 39.3,
+        "lng": 22.1,
+        "descricao": "Onde César derrotou Pompeu em 48 a.C."
+      },
+      {
+        "nome": "Filipos",
+        "lat": 41.0,
+        "lng": 24.3,
+        "descricao": "Batalha decisiva onde Bruto e Cássio foram derrotados e morreram."
+      }
+    ],
+    "figuras": [
+      {
+        "nome": "Júlio César",
+        "papel": "Ditador perpétuo de Roma",
+        "imagem": "/eventos/figura-cesar.jpg",
+        "descricao": "O general que cruzou o Rubicão, venceu a guerra civil e concentrou poderes que alarmaram o Senado."
+      },
+      {
+        "nome": "Marco Júnio Bruto",
+        "papel": "Conspirador principal",
+        "imagem": "/eventos/figura-bruto.jpg",
+        "descricao": "Amigo próximo de César que liderou a conspiração acreditando defender a República."
+      },
+      {
+        "nome": "Marco Antônio",
+        "papel": "General e aliado de César",
+        "imagem": "/eventos/figura-antonio.jpg",
+        "descricao": "Seu discurso no funeral de César virou o povo romano contra os conspiradores."
+      },
+      {
+        "nome": "Otávio Augusto",
+        "papel": "Herdeiro e primeiro imperador",
+        "imagem": "/eventos/figura-augusto.jpg",
+        "descricao": "Sobrinho-neto de César que venceu as guerras civis e tornou-se o primeiro imperador romano."
+      }
+    ],
+    "legado": "O assassinato de César não salvou a República — a destruiu. O paradoxo dos Idos de Março é que os homens que mataram César para preservar as instituições republicanas provocaram exatamente o colapso que temiam. As guerras civis que se seguiram — mais sangrentas e prolongadas do que qualquer conflito que César havia travado — deixaram a sociedade romana tão exausta que a transferência de poder para um único governante foi recebida como alívio. Augusto foi esperto o suficiente para não repetir os erros de César: jamais aceitou o título de rei, preservou as formas republicanas e concentrou o poder por outros meios.\n\nO modelo imperial que Augusto criou perdurou no Ocidente por cinco séculos e no Oriente por quinze. Mas o legado mais duradouro pode ser linguístico: o título de 'César' — originalmente o nome gentílico de uma família romana — tornou-se sinônimo de poder imperial absoluto. O alemão Kaiser, o russo Czar (e Tsar), o árabe Qaysar derivam todos do nome de um único homem. Quando chamamos de 'cesárea' a operação cirúrgica de parto, invocamos — por via de uma lenda medieval que provavelmente é falsa — o mesmo nome.\n\nNa cultura ocidental, a morte de César tornou-se arquétipo da traição e do poder. Shakespeare, Dante, Molière, Shaw e dezenas de outros escritores revisitaram os Idos de Março. A frase 'et tu, Brute?' — que não aparece nas fontes antigas, mas que Shakespeare inventou — tornou-se a expressão definitiva da traição por um amigo de confiança. Raramente na história um único dia teve tanto peso cultural simbólico quanto o 15 de março de 44 a.C.",
+    "curiosidadesRelacionadas": ["gladiadores", "legiao-romana", "senado-romano"]
+  },
+  {
+    "slug": "invencao-imprensa-gutenberg",
+    "titulo": "Invenção da Imprensa por Gutenberg",
+    "ano": "c. 1450",
+    "periodo": "c. 1450 – 1455",
+    "categoria": "Ciência e Tecnologia",
+    "hook": "Uma prensa metálica em Mainz, por volta de 1450, fez o que nenhuma outra invenção havia conseguido: colocou o conhecimento nas mãos de todos.",
+    "heroImagem": "/eventos/hero-biblia-gutenberg.jpg",
+    "heroLegenda": "A Bíblia de Gutenberg (c. 1455) — um dos 49 exemplares sobreviventes, exposto na Biblioteca do Congresso dos EUA.",
+    "jornadaTitulo": "De Mainz para o mundo",
+    "jornadaDescricao": "Acompanhe como a prensa de tipos móveis percorreu a Europa em 50 anos — e por que ela tornou impossível a volta ao mundo medieval.",
+    "mapaTitulo": "A expansão da imprensa, 1450–1500",
+    "mapaDescricao": "De Mainz a Veneza, Roma e Paris: em cinquenta anos a imprensa alcançou cada canto da Europa.",
+    "estatisticas": [
+      { "label": "Ano da invenção", "valor": "c. 1450" },
+      { "label": "Exemplares da Bíblia de Gutenberg", "valor": "~180 (49 sobrevivem)" },
+      { "label": "Livros na Europa em 1500", "valor": "15 milhões" },
+      { "label": "Livros antes da imprensa (1450)", "valor": "~30 mil" }
+    ],
+    "contexto": "Na Europa medieval, o livro era um objeto raríssimo. Cada exemplar era copiado à mão por monges ou escribas profissionais — um processo que levava meses para uma Bíblia completa e anos para textos mais longos. O custo de um único livro equivalia ao salário anual de um trabalhador. Como resultado, em 1450 toda a Europa ocidental possuía cerca de 30 mil livros — menos do que uma livraria universitária moderna. O conhecimento era patrimônio quase exclusivo do clero e de uma pequena elite laica. A maioria da população era analfabeta, não por incapacidade, mas porque não havia razão prática para aprender a ler quando não havia o que ler.\n\nJohannes Gutenberg nasceu em Mainz por volta de 1400, filho de uma família associada ao Arcebispado local. Aprendeu a trabalhar com metais e pedras preciosas — uma especialização que lhe daria a chave para a invenção que mudaria o mundo. Nos anos 1430, em Estrasburgo, começou a experimentar técnicas de impressão. O problema central que havia impedido a impressão mecânica em série era a criação de tipos metálicos que fossem ao mesmo tempo resistentes à pressão, precisos o suficiente para reproduzir letras legíveis e baratos o suficiente para serem produzidos em quantidade. Gutenberg resolveu esse problema com uma liga de chumbo, estanho e antimônio que podia ser fundida em moldes de alta precisão — e que se tornaria o padrão da indústria gráfica por quatro séculos.\n\nEm Mainz, com financiamento do banqueiro Johann Fust, Gutenberg montou a primeira gráfica comercial da Europa ocidental. O sistema completo incluía a liga metálica para os tipos, uma tinta oleosa densa que aderiu uniformemente ao metal (as tintas à base d'água escorregavam dos tipos metálicos) e uma prensa de parafuso adaptada das utilizadas na produção de vinho e azeite. O sistema funcionava: pela primeira vez na história ocidental, páginas de texto idênticas podiam ser reproduzidas em série.",
+    "momentos": [
+      {
+        "data": "c. 1436",
+        "titulo": "Primeiros experimentos",
+        "local": "Estrasburgo",
+        "texto": "Em Estrasburgo, Gutenberg começa a trabalhar em segredo numa tecnologia de reprodução de texto. Seus experimentos são vagamente descritos nos registros de um processo judicial de 1439 — testemunhas mencionam um 'projeto secreto' envolvendo uma prensa, formas e chumbo. Os detalhes são obscuros, mas o processo confirma que Gutenberg estava desenvolvendo a tecnologia vários anos antes de estabelecer a oficina em Mainz.",
+        "imagem": "/eventos/momento-experimento.jpg"
+      },
+      {
+        "data": "c. 1450",
+        "titulo": "A oficina em Mainz",
+        "local": "Mainz",
+        "texto": "Gutenberg estabelece a oficina em Mainz com financiamento do banqueiro Johann Fust, que emprestou 800 gulden — quantia enorme — a juros. A parceria era arriscada: Gutenberg havia prometido uma tecnologia revolucionária, mas ainda precisava refiná-la ao ponto da produção comercial. A oficina produzia inicialmente cartilhas e calendários — produtos menores que testavam a tecnologia e geravam receita enquanto o projeto maior amadurecia.",
+        "imagem": "/eventos/momento-oficina.jpg"
+      },
+      {
+        "data": "1452–1455",
+        "titulo": "A Bíblia de Gutenberg",
+        "local": "Mainz",
+        "texto": "A Bíblia de 42 linhas — chamada assim porque cada página tem 42 linhas de texto em duas colunas — foi o produto mais ambicioso da nova tecnologia. Aproximadamente 180 exemplares foram impressos: 135 em papel e 45 em vitela (pele de bezerro). As páginas eram impressas mecanicamente, mas os títulos, capitulares e decorações eram adicionados à mão por iluminadores — um compromisso entre tradição manuscrita e inovação tipográfica. Quarenta e nove exemplares sobrevivem hoje em coleções ao redor do mundo.",
+        "imagem": "/eventos/momento-biblia.jpg"
+      },
+      {
+        "data": "1455",
+        "titulo": "O processo judicial",
+        "local": "Mainz",
+        "texto": "Johann Fust, cansado de esperar pelo retorno do investimento, moveu processo contra Gutenberg por inadimplência. O tribunal de Mainz decidiu em favor de Fust: Gutenberg perdeu a prensa, os tipos e a maior parte do equipamento como pagamento das dívidas. Fust continuou o negócio com seu genro Peter Schöffer — ex-aprendiz de Gutenberg. Gutenberg recebeu alguma compensação anos depois do arcebispo de Mainz, mas nunca mais operou uma gráfica de sucesso. O inventor da tecnologia que mudaria o mundo morreu relativamente pobre em 1468.",
+        "imagem": "/eventos/momento-processo.jpg"
+      },
+      {
+        "data": "1465",
+        "titulo": "A imprensa chega à Itália",
+        "local": "Subiaco, Itália",
+        "texto": "Os alemães Konrad Sweynheim e Arnold Pannartz instalam a primeira impressora italiana no monastério beneditino de Subiaco, perto de Roma. Em dois anos mudam-se para Roma e depois a tecnologia se espalha para Veneza, que se tornará o maior centro editorial da Europa no final do século XV. Em 1500, mais de 1.000 impressoras operavam em toda a Europa — da Portugal à Polônia — tendo produzido mais de 15 milhões de livros em cinquenta anos.",
+        "imagem": "/eventos/momento-italia.jpg"
+      },
+      {
+        "data": "1517",
+        "titulo": "Lutero e a Reforma",
+        "local": "Wittenberg",
+        "texto": "Em outubro de 1517, Martinho Lutero afixou suas 95 Teses na porta da Igreja do Castelo em Wittenberg — um gesto local de debate acadêmico que, num mundo pré-Gutenberg, teria ficado em Wittenberg. Com a imprensa, suas teses foram reproduzidas em milhares de cópias e distribuídas por toda a Alemanha em semanas, por toda a Europa em meses. A Igreja Católica tentou suprimir os escritos de Lutero: tarde demais. A imprensa havia tornado a censura centralizada praticamente impossível. Sem Gutenberg, não há Reforma Protestante.",
+        "imagem": "/eventos/momento-lutero.jpg"
+      }
+    ],
+    "locais": [
+      {
+        "nome": "Mainz",
+        "lat": 50.0,
+        "lng": 8.27,
+        "descricao": "Cidade onde Gutenberg criou e operou a primeira prensa de tipos móveis da Europa."
+      },
+      {
+        "nome": "Estrasburgo",
+        "lat": 48.57,
+        "lng": 7.75,
+        "descricao": "Onde Gutenberg realizou seus primeiros experimentos de impressão."
+      },
+      {
+        "nome": "Veneza",
+        "lat": 45.44,
+        "lng": 12.33,
+        "descricao": "Tornou-se o maior centro editorial da Europa no século XV."
+      },
+      {
+        "nome": "Wittenberg",
+        "lat": 51.86,
+        "lng": 12.64,
+        "descricao": "Onde Lutero pregou suas 95 Teses em 1517 — disseminadas pela imprensa em semanas."
+      }
+    ],
+    "figuras": [
+      {
+        "nome": "Johannes Gutenberg",
+        "papel": "Inventor da prensa de tipos móveis",
+        "imagem": "/eventos/figura-gutenberg.jpg",
+        "descricao": "Ourives de Mainz que combinou técnicas de prensa, tinta e metalurgia para criar a impressão em série."
+      },
+      {
+        "nome": "Johann Fust",
+        "papel": "Financiador e adversário",
+        "imagem": "/eventos/figura-fust.jpg",
+        "descricao": "Banqueiro que financiou o projeto, ganhou a prensa no processo judicial e continuou o negócio com Schöffer."
+      },
+      {
+        "nome": "Peter Schöffer",
+        "papel": "Continuador da obra",
+        "imagem": "/eventos/figura-schoffer.jpg",
+        "descricao": "Aprendiz de Gutenberg que se tornou sócio de Fust e imprimiu centenas de obras após 1455."
+      }
+    ],
+    "legado": "O impacto da imprensa de Gutenberg é talvez o mais difícil de superestimar na história da tecnologia. Em cinquenta anos, o número de livros na Europa saltou de cerca de 30 mil para mais de 15 milhões. O custo de um livro caiu de um salário anual para algumas semanas de trabalho. Pela primeira vez, uma pessoa de classe média podia possuir uma biblioteca. O conhecimento deixou de ser patrimônio exclusivo da Igreja e das universidades. A alfabetização tornou-se não apenas possível, mas necessária — havia algo para ler.\n\nA conexão entre imprensa e Reforma Protestante é direta e causal. Sem a prensa de Gutenberg, os escritos de Martinho Lutero teriam ficado confinados a Wittenberg. Com ela, tornou-se impossível para a Igreja suprimir ideias dissidentes: cada cópia confiscada havia gerado dezenas de outras. A fragmentação religiosa da Europa — Luteranismo, Calvinismo, Anglicanismo, e dezenas de denominações menores — foi possibilitada pela capacidade de imprimir e distribuir textos teológicos em escala sem precedentes. A Reforma transformou a Europa política, cultural e intelectualmente — e a imprensa foi seu veículo.\n\nA Revolução Científica do século XVII — Copérnico, Galileu, Newton — dependeu igualmente da impressão: pela primeira vez, os resultados de observações e experimentos podiam ser comunicados, verificados e debatidos em escala continental. O Iluminismo do século XVIII — Voltaire, Locke, Rousseau — seria inconcebível sem livros, panfletos e enciclopédias acessíveis a uma classe burguesa crescente. A democratização do conhecimento que Gutenberg inaugurou é a pré-condição de tudo que veio depois — das revoluções americana e francesa à medicina moderna e à ciência contemporânea.",
+    "curiosidadesRelacionadas": ["reforma-protestante", "revolucao-cientifica", "renascimento"]
+  },
+  {
+    "slug": "atentados-11-setembro",
+    "titulo": "Atentados de 11 de Setembro",
+    "ano": "2001",
+    "periodo": "11 de setembro de 2001",
+    "categoria": "Terrorismo",
+    "hook": "Em 102 minutos de horror, 19 homens com bilhetes de avião mudaram a política global, a arquitetura da segurança e a vida de bilhões de pessoas.",
+    "heroImagem": "/eventos/hero-11-setembro.jpg",
+    "heroLegenda": "As Torres Gêmeas em chamas em 11 de setembro de 2001 — o ataque que redefiniu o século XXI.",
+    "jornadaTitulo": "102 minutos que mudaram o mundo",
+    "jornadaDescricao": "Minuto a minuto, desde o impacto na Torre Norte até o colapso da Torre Sul — e o que veio depois.",
+    "mapaTitulo": "O 11 de Setembro: quatro aviões, quatro alvos",
+    "mapaDescricao": "Nova York, Arlington e Shanksville: os três locais de impacto — e a rota que cada voo percorreu.",
+    "estatisticas": [
+      { "label": "Vítimas diretas", "valor": "2.977" },
+      { "label": "Aviões sequestrados", "valor": "4" },
+      { "label": "Duração dos ataques", "valor": "102 minutos" },
+      { "label": "Guerra no Afeganistão", "valor": "20 anos (2001–2021)" }
+    ],
+    "contexto": "A Al-Qaeda — 'A Base', em árabe — foi fundada por Osama bin Laden no Afeganistão em 1988, ao fim da guerra contra a ocupação soviética. Bin Laden, herdeiro saudita multimilionário que havia lutado contra os soviéticos com apoio americano, voltou seus objetivos contra os próprios EUA após a instalação de bases militares americanas na Arábia Saudita durante a Guerra do Golfo (1991). Para bin Laden, tropas infiéis na terra sagrada do Islã eram uma abominação que justificava guerra.\n\nOs ataques de 11 de setembro não foram o primeiro ato terrorista da Al-Qaeda contra os EUA. Em agosto de 1998, bombas coordenadas destruíram as embaixadas americanas em Nairóbi (Kenya) e Dar es Salaam (Tanzânia), matando 224 pessoas — a maioria africanos. Em outubro de 2000, um bote carregado de explosivos se aproximou do contratorpedeiro USS Cole no porto de Aden, Iêmen, matando 17 marinheiros americanos. Esses ataques geraram respostas militares limitadas (mísseis de cruzeiro sobre campos de treinamento afegãos) mas nenhuma política sistemática de combate à Al-Qaeda. Um memorando da CIA para o presidente George W. Bush datado de 6 de agosto de 2001 — um mês antes dos ataques — alertava explicitamente: 'Bin Laden determinado a atacar dentro dos EUA.'\n\nOs 19 sequestradores de 11 de setembro tinham vivido nos EUA por meses, frequentado aulas de pilotagem na Flórida e no Arizona e agido sem despertar suspeitas. Quinze eram cidadãos sauditas; dois, emiradenses; um, egípcio; um, libanês. Nenhum era afegão. Essa incongruência — os EUA invadiram o Afeganistão e depois o Iraque, mas nenhum dos sequestradores era de nenhum dos dois países — marcou profundamente o debate sobre a resposta americana.",
+    "momentos": [
+      {
+        "data": "8h46",
+        "titulo": "Torre Norte atingida",
+        "local": "World Trade Center, Nova York",
+        "texto": "O voo American Airlines 11, um Boeing 767 com 92 pessoas a bordo partindo de Boston para Los Angeles, foi sequestrado logo após a decolagem. Mohamed Atta, líder dos sequestradores, assumiu os controles e dirigiu o avião para Nova York. Às 8h46, o avião atingiu a Torre Norte do World Trade Center entre os andares 93 e 99. O impacto cortou as escadas de emergência acima do ponto de colisão — os cerca de 1.344 pessoas nos andares superiores não tinham saída. A explosão foi visível de toda Manhattan.",
+        "imagem": "/eventos/momento-torre-norte.jpg"
+      },
+      {
+        "data": "9h03",
+        "titulo": "Torre Sul atingida",
+        "local": "World Trade Center, Nova York",
+        "texto": "Câmeras de televisão que haviam se dirigido ao World Trade Center cobrindo o que parecia um acidente de aviação estavam ao vivo quando o voo United Airlines 175, com 65 pessoas a bordo, atingiu a Torre Sul entre os andares 77 e 85. Desta vez, o mundo inteiro assistiu ao impacto em tempo real. Era impossível continuar acreditando em acidente: a América estava sendo atacada. O segundo impacto foi o momento em que o 11 de setembro deixou de ser um acontecimento local e se tornou um evento histórico global.",
+        "imagem": "/eventos/momento-torre-sul.jpg"
+      },
+      {
+        "data": "9h37",
+        "titulo": "Pentágono atingido",
+        "local": "Arlington, Virgínia",
+        "texto": "O voo American Airlines 77, com 64 pessoas a bordo, partira de Dulles em direção a Los Angeles. Sequestrado, fez um giro de 330 graus sobre o Potomac e atingiu o lado oeste do Pentágono — a sede do Departamento de Defesa americano, em Arlington, Virgínia — às 9h37. O impacto matou 125 pessoas no edifício, além dos 64 a bordo. A seção atingida havia sido recentemente reforçada com vidros resistentes e paredes de concreto — medida que limitou o número de vítimas, mas não impediu o ataque.",
+        "imagem": "/eventos/momento-pentagono.jpg"
+      },
+      {
+        "data": "9h59",
+        "titulo": "Torre Sul colapsa",
+        "local": "Nova York",
+        "texto": "A Torre Sul, atingida 56 minutos após a Torre Norte, colapsou primeiro — às 9h59 — porque o impacto havia sido nos andares inferiores (77-85), submetendo a estrutura a uma carga maior. O colapso levou 10 segundos e gerou uma nuvem de poeira e escombros que se espalhou por vários quarteirões de Lower Manhattan. Centenas de bombeiros e policiais que haviam entrado no edifício para evacuar os ocupantes morreram no colapso.",
+        "imagem": "/eventos/momento-colapso-sul.jpg"
+      },
+      {
+        "data": "10h03",
+        "titulo": "Voo 93 cai em Shanksville",
+        "local": "Pensilvânia",
+        "texto": "O voo United Airlines 93, partindo de Newark para São Francisco com 44 pessoas a bordo, foi sequestrado com atraso — e os passageiros tiveram tempo de ligar para familiares e saber sobre os outros ataques. Em votação informal pelos corredores da aeronave, decidiram tentar retomar o controle da cabine. Os registros da caixa-preta capturam a luta: gritos, quebra de louças, um extintor de incêndio usado como arma de arremesso. Os sequestradores jogaram o avião para os lados tentando desequilibrar os passageiros. Às 10h03, o avião caiu num campo em Shanksville, Pensilvânia. Nenhum sobrevivente. O alvo provável era o Capitólio dos Estados Unidos.",
+        "imagem": "/eventos/momento-voo93.jpg"
+      },
+      {
+        "data": "10h28",
+        "titulo": "Torre Norte colapsa",
+        "local": "Nova York",
+        "texto": "A Torre Norte, atingida às 8h46, resistiu 1 hora e 42 minutos antes de colapsar às 10h28. Os andares superiores — onde centenas de pessoas ainda estavam presas, sem saída para as escadas cortadas pelo impacto — caíram sobre os inferiores em cascata. 2.977 pessoas morreram nos quatro ataques — mais do que em Pearl Harbor. Entre as vítimas havia cidadãos de 93 países. O Departamento de Bombeiros de Nova York perdeu 343 bombeiros — o maior número de vítimas de uma força de emergência num único evento na história americana.",
+        "imagem": "/eventos/momento-colapso-norte.jpg"
+      },
+      {
+        "data": "20h30",
+        "titulo": "Bush discursa para a nação",
+        "local": "Washington DC",
+        "texto": "À noite, o presidente George W. Bush discursou ao vivo para a nação: 'Os ataques terroristas podem abalar os alicerces dos nossos edifícios mais altos, mas não podem tocar os fundamentos da América. Esses atos despedaçaram o aço, mas não podem minar o aço da resolução americana.' Nos dias seguintes, Bush visitaria as ruínas do World Trade Center, falaria através de um megafone para bombeiros entre escombros e anunciaria a 'Guerra ao Terror' — a estrutura política que moldaria a política externa americana pela próxima geração.",
+        "imagem": "/eventos/momento-bush.jpg"
+      }
+    ],
+    "locais": [
+      {
+        "nome": "World Trade Center, Nova York",
+        "lat": 40.71,
+        "lng": -74.01,
+        "descricao": "Torres Gêmeas destruídas no ataque — local do Memorial 9/11 hoje."
+      },
+      {
+        "nome": "Pentágono, Arlington",
+        "lat": 38.87,
+        "lng": -77.05,
+        "descricao": "Sede do Departamento de Defesa americano, atingido pelo voo AA77."
+      },
+      {
+        "nome": "Shanksville, Pensilvânia",
+        "lat": 40.03,
+        "lng": -78.9,
+        "descricao": "Local onde o voo UA93 caiu após passageiros tentarem retomar o controle."
+      },
+      {
+        "nome": "Washington DC",
+        "lat": 38.9,
+        "lng": -77.04,
+        "descricao": "Capital americana — alvo provável do voo 93, onde Bush gerenciou a crise."
+      },
+      {
+        "nome": "Kandahar, Afeganistão",
+        "lat": 31.6,
+        "lng": 65.7,
+        "descricao": "Base central da Al-Qaeda — alvo da invasão americana iniciada em outubro de 2001."
+      }
+    ],
+    "figuras": [
+      {
+        "nome": "Osama bin Laden",
+        "papel": "Líder da Al-Qaeda",
+        "imagem": "/eventos/figura-bin-laden.jpg",
+        "descricao": "Saudita fundador da Al-Qaeda que planejou os ataques a partir do Afeganistão. Morto em operação americana em 2011."
+      },
+      {
+        "nome": "George W. Bush",
+        "papel": "Presidente dos EUA",
+        "imagem": "/eventos/figura-bush.jpg",
+        "descricao": "Declarou a Guerra ao Terror, autorizou a invasão do Afeganistão em 2001 e do Iraque em 2003."
+      },
+      {
+        "nome": "Rudolph Giuliani",
+        "papel": "Prefeito de Nova York",
+        "imagem": "/eventos/figura-giuliani.jpg",
+        "descricao": "Sua presença nas ruas de Manhattan tornou-o o símbolo da resposta local à crise."
+      },
+      {
+        "nome": "Dick Cheney",
+        "papel": "Vice-presidente dos EUA",
+        "imagem": "/eventos/figura-cheney.jpg",
+        "descricao": "Gerenciou a resposta do governo de um bunker secreto enquanto Bush era evacuado."
+      }
+    ],
+    "legado": "O 11 de setembro transformou profundamente a política americana e global. A 'Guerra ao Terror' declarada por Bush resultou na invasão do Afeganistão em outubro de 2001, derrubando o regime Talibã — que retornou ao poder em agosto de 2021, vinte anos depois, quando os EUA se retiraram. A invasão do Iraque em 2003 — justificada por acusações falsas de armas de destruição em massa e ligações equivocadas com a Al-Qaeda — custou mais de 4.000 vidas americanas, centenas de milhares de iraquianos e mais de 2 trilhões de dólares, desestabilizando a região e criando o vácuo de poder que permitiu o surgimento do Estado Islâmico (ISIS) anos depois.\n\nNo interior dos EUA, o 11 de setembro transformou a vida cotidiana. O Patriot Act expandiu dramaticamente os poderes de vigilância do governo. A criação do Departamento de Segurança Interna reuniu 22 agências federais. A segurança aeroportuária tornou-se onipresente e invasiva — o modelo da TSA (Transportation Security Administration) foi adotado em aeroportos ao redor do mundo. O programa de vigilância massiva da NSA — revelado por Edward Snowden em 2013 — foi justificado como resposta ao 11 de setembro. A tensão entre segurança e liberdades civis, aberta naquele setembro de 2001, permanece sem resolução.\n\nO maior legado talvez seja cultural e psicológico: a sensação de vulnerabilidade que o 11 de setembro instalou nas sociedades ocidentais — a percepção de que ataques devastadores podiam vir de dentro, por pessoas que haviam vivido entre nós, usando instrumentos cotidianos como aviões comerciais. Essa percepção alimentou anos de islamofobia, debates sobre imigração e fronteiras, e uma reconfiguração da relação entre cidadão e Estado em matéria de vigilância e privacidade. O século XXI, muitos argumentam, começou de verdade naquele terça-feira de setembro.",
+    "curiosidadesRelacionadas": ["guerra-fria", "cia", "otan"]
   }
 ]

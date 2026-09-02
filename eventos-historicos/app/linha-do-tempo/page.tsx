@@ -45,13 +45,30 @@ const EVENT_VISUALS: Record<string, { icon: any; color: string }> = {
   "independencia-brasil": { icon: Globe, color: "bg-green-500" },
   "primeira-guerra-mundial": { icon: Sword, color: "bg-red-500" },
   "revolucao-russa": { icon: Users, color: "bg-blue-500" },
-  // 6 novos eventos
+  // Sprint 2 — 6 eventos
   "fundacao-imperio-mongol": { icon: Sword, color: "bg-orange-600" },
   "revolucao-cientifica": { icon: Zap, color: "bg-indigo-500" },
   "guerras-napoleonicas": { icon: Sword, color: "bg-red-600" },
   "conferencia-berlim": { icon: Globe, color: "bg-emerald-600" },
   "abolicao-escravatura-brasil": { icon: Users, color: "bg-teal-600" },
   "criacao-estado-israel": { icon: Globe, color: "bg-blue-600" },
+  // Sprint 4 — 16 eventos
+  "revolucao-agricola-neolitica": { icon: Zap, color: "bg-amber-700" },
+  "nascimento-budismo": { icon: BookOpen, color: "bg-orange-400" },
+  "assassinato-julio-cesar": { icon: Sword, color: "bg-red-700" },
+  "invencao-imprensa-gutenberg": { icon: BookOpen, color: "bg-yellow-600" },
+  "imperio-mali": { icon: Crown, color: "bg-yellow-700" },
+  "revolucao-gloriosa": { icon: Users, color: "bg-violet-600" },
+  "independencias-america-latina": { icon: Globe, color: "bg-green-600" },
+  "unificacao-alemanha": { icon: Crown, color: "bg-gray-700" },
+  "revolucao-meiji": { icon: Zap, color: "bg-rose-600" },
+  "revolucao-xinhai": { icon: Users, color: "bg-red-500" },
+  "declaracao-universal-direitos-humanos": { icon: BookOpen, color: "bg-sky-600" },
+  "revolucao-comunista-china": { icon: Users, color: "bg-red-600" },
+  "descolonizacao-africa": { icon: Globe, color: "bg-green-700" },
+  "colapso-urss": { icon: Sword, color: "bg-slate-600" },
+  "atentados-11-setembro": { icon: Zap, color: "bg-zinc-700" },
+  "inicio-segunda-guerra-mundial": { icon: Sword, color: "bg-stone-700" },
 }
 const DEFAULT_VISUAL = { icon: BookOpen, color: "bg-slate-500" }
 
