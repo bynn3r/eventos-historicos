@@ -45,8 +45,23 @@ const EVENT_VISUALS: Record<string, { icon: any; color: string }> = {
   "independencia-brasil": { icon: Globe, color: "bg-green-500" },
   "primeira-guerra-mundial": { icon: Sword, color: "bg-red-500" },
   "revolucao-russa": { icon: Users, color: "bg-blue-500" },
+  // 6 novos eventos
+  "fundacao-imperio-mongol": { icon: Sword, color: "bg-orange-600" },
+  "revolucao-cientifica": { icon: Zap, color: "bg-indigo-500" },
+  "guerras-napoleonicas": { icon: Sword, color: "bg-red-600" },
+  "conferencia-berlim": { icon: Globe, color: "bg-emerald-600" },
+  "abolicao-escravatura-brasil": { icon: Users, color: "bg-teal-600" },
+  "criacao-estado-israel": { icon: Globe, color: "bg-blue-600" },
 }
 const DEFAULT_VISUAL = { icon: BookOpen, color: "bg-slate-500" }
+
+// Subtle period identity: left border accent on each timeline card
+const PERIOD_CARD_ACCENT: Record<string, string> = {
+  "Idade Antiga": "border-l-[3px] border-l-amber-600/50",
+  "Idade Média": "border-l-[3px] border-l-stone-500/50",
+  "Idade Moderna": "border-l-[3px] border-l-sky-600/50",
+  "Idade Contemporânea": "border-l-[3px] border-l-slate-500/50",
+}
 
 function getVisual(slug: string) {
   return EVENT_VISUALS[slug] ?? DEFAULT_VISUAL
@@ -92,6 +107,7 @@ function TimelineEventItem({ event, index }: { event: TimelineEvent; index: numb
   const [open, setOpen] = useState(false)
   const { icon: IconComponent, color } = getVisual(event.slug)
   const isLeft = index % 2 === 0
+  const periodAccent = PERIOD_CARD_ACCENT[event.period] ?? ""
 
   useEffect(() => {
     const el = ref.current
@@ -132,7 +148,7 @@ function TimelineEventItem({ event, index }: { event: TimelineEvent; index: numb
       >
         <Dialog open={open} onOpenChange={setOpen}>
           <DialogTrigger asChild>
-            <Card className="w-full md:max-w-md cursor-pointer hover:shadow-lg transition-all duration-200 hover:scale-[1.02]">
+            <Card className={`w-full md:max-w-md cursor-pointer hover:shadow-lg transition-all duration-200 hover:scale-[1.02] ${periodAccent}`}>
               <CardHeader className="pb-3">
                 <div className={`flex items-center gap-2 mb-3 ${isLeft ? "md:flex-row-reverse" : ""}`}>
                   <Badge className={`${color} text-white font-semibold`}>{event.dateDisplay}</Badge>

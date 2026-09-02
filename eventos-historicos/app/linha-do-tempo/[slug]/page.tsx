@@ -12,6 +12,7 @@ import { getAllTimelineEvents, getTimelineEventBySlug, getRelatedTimelineEvents 
 import { findRelatedContent } from "@/lib/related-content"
 import { EventHero } from "@/components/event-hero"
 import { EventCronologia } from "@/components/event-cronologia"
+import { RevealSection } from "@/components/reveal-section"
 
 const SITE_URL = "https://eventoshistoricos.com.br"
 
@@ -165,14 +166,14 @@ export default function LinhaDoTempoEventoPage({ params }: LinhaDoTempoEventoPag
 
             {/* Cronologia */}
             {event.cronologia && event.cronologia.length > 0 && (
-              <div className="mt-12 pt-8 border-t">
+              <RevealSection className="mt-12 pt-8 border-t">
                 <EventCronologia cronologia={event.cronologia} />
-              </div>
+              </RevealSection>
             )}
 
             {/* Characters */}
             {event.characters.length > 0 && (
-              <div className="mt-12 pt-8 border-t">
+              <RevealSection delay={80} className="mt-12 pt-8 border-t">
                 <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
                   <BookOpen className="h-5 w-5" />
                   Personagens
@@ -193,12 +194,12 @@ export default function LinhaDoTempoEventoPage({ params }: LinhaDoTempoEventoPag
                     </div>
                   ))}
                 </div>
-              </div>
+              </RevealSection>
             )}
 
             {/* Sources */}
             {event.sources.length > 0 && (
-              <div className="mt-12 pt-8 border-t">
+              <RevealSection delay={80} className="mt-12 pt-8 border-t">
                 <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
                   <Globe2 className="h-5 w-5" />
                   Fontes
@@ -226,12 +227,12 @@ export default function LinhaDoTempoEventoPage({ params }: LinhaDoTempoEventoPag
                     </li>
                   ))}
                 </ul>
-              </div>
+              </RevealSection>
             )}
 
             {/* Related Events */}
             {relatedEvents.length > 0 && (
-              <div className="mt-12 pt-8 border-t">
+              <RevealSection delay={120} className="mt-12 pt-8 border-t">
                 <h2 className="text-2xl font-bold mb-6">Eventos Relacionados</h2>
                 <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                   {relatedEvents.map((related) => (
@@ -260,12 +261,12 @@ export default function LinhaDoTempoEventoPage({ params }: LinhaDoTempoEventoPag
                     </Link>
                   ))}
                 </div>
-              </div>
+              </RevealSection>
             )}
 
             {/* Related curiosidades */}
             {relatedCuriosidades.length > 0 && (
-              <div className="mt-12 pt-8 border-t">
+              <RevealSection delay={160} className="mt-12 pt-8 border-t">
                 <h2 className="text-2xl font-bold mb-6">Curiosidades Relacionadas</h2>
                 <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
                   {relatedCuriosidades.map((related) => (
@@ -284,7 +285,7 @@ export default function LinhaDoTempoEventoPage({ params }: LinhaDoTempoEventoPag
                     </Link>
                   ))}
                 </div>
-              </div>
+              </RevealSection>
             )}
           </div>
         </article>

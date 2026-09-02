@@ -166,3 +166,40 @@
 .timeline-line-mobile.is-ready {
   opacity: 1;
 }
+
+/* ── Scroll-reveal for article sections ───────────────── */
+.reveal-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.6s ease var(--reveal-delay, 0ms),
+    transform 0.6s ease var(--reveal-delay, 0ms);
+}
+.reveal-section.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ── Respect prefers-reduced-motion ──────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .timeline-item {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .timeline-dot {
+    transform: scale(1);
+    opacity: 1;
+    transition: none;
+  }
+  .timeline-line-desktop,
+  .timeline-line-mobile {
+    opacity: 1;
+    transition: none;
+  }
+  .reveal-section {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

@@ -6,6 +6,13 @@ import Link from "next/link"
 import { ArrowLeft, MapPin } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 
+const PERIOD_TOP_LINE: Record<string, string> = {
+  "Idade Antiga": "bg-gradient-to-r from-amber-500/50 via-amber-400/70 to-amber-500/50",
+  "Idade Média": "bg-gradient-to-r from-stone-400/50 via-stone-300/70 to-stone-400/50",
+  "Idade Moderna": "bg-gradient-to-r from-sky-500/50 via-sky-400/70 to-sky-500/50",
+  "Idade Contemporânea": "bg-gradient-to-r from-slate-400/50 via-slate-300/70 to-slate-400/50",
+}
+
 interface EventHeroProps {
   title: string
   dateDisplay: string
@@ -35,8 +42,13 @@ export function EventHero({
     return () => cancelAnimationFrame(id)
   }, [])
 
+  const topLineClass = PERIOD_TOP_LINE[period] ?? ""
+
   return (
     <div className="relative min-h-[85vh] flex flex-col justify-end overflow-hidden bg-slate-950">
+      {/* Period accent line */}
+      {topLineClass && <div className={`absolute top-0 inset-x-0 h-[3px] z-30 ${topLineClass}`} />}
+
       {/* Background image */}
       {image && (
         <div className="absolute inset-0">
