@@ -6,11 +6,12 @@ import { EventJourney } from "@/components/evento/event-journey"
 import { EventMap } from "@/components/evento/event-map"
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowLeft, ArrowDown, BookOpen } from "lucide-react"
+import { ArrowLeft, ArrowDown, ArrowRight, BookOpen } from "lucide-react"
 import { notFound } from "next/navigation"
 import grandesEventosData from "@/data/grandes-eventos.json"
 import curiosidadesData from "@/data/curiosidades.json"
 import timelineData from "@/data/linha-do-tempo.json"
+import { RelatedNewsWidget } from "@/components/related-news-widget"
 
 interface EventoPageProps {
   params: {
@@ -66,7 +67,9 @@ export default function EventoPage({ params }: EventoPageProps) {
     evento.curiosidadesRelacionadas?.includes(c.id),
   )
 
-  const timelineArticle = (timelineData as { slug: string }[]).find((e) => e.slug === params.slug)
+  const timelineArticle = (timelineData as { slug: string; keywords?: string[] }[]).find(
+    (e) => e.slug === params.slug,
+  )
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -275,6 +278,38 @@ export default function EventoPage({ params }: EventoPageProps) {
             </div>
           </section>
         )}
+
+        {/* Notícias recentes relacionadas */}
+        {timelineArticle?.keywords && timelineArticle.keywords.length > 0 && (
+          <section className="border-t py-16">
+            <div className="container mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+              <RelatedNewsWidget keywords={timelineArticle.keywords} />
+            </div>
+          </section>
+        )}
+
+        {/* Rodapé de navegação */}
+        <section className="border-t bg-muted/30 py-10">
+          <div className="container mx-auto flex flex-col items-center gap-4 px-4 sm:flex-row sm:justify-between sm:px-6 lg:px-8">
+            <Link
+              href="/grandes-eventos"
+              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
+              <ArrowLeft className="h-4 w-4" />
+              Todos os Grandes Eventos
+            </Link>
+            {timelineArticle && (
+              <Link
+                href={`/linha-do-tempo/${params.slug}`}
+                className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline"
+              >
+                <BookOpen className="h-4 w-4" />
+                Ler artigo completo na Linha do Tempo
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+            )}
+          </div>
+        </section>
       </main>
 
       <Footer />
