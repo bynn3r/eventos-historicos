@@ -66,7 +66,10 @@ export default async function NoticiaPage({ params }: NoticiaPageProps) {
     notFound()
   }
 
-  const relatedHistorical = findRelatedContent(`${noticia.titulo} ${noticia.descricao}`, { category: noticia.categoria })
+  const relatedHistorical = findRelatedContent(
+    `${noticia.titulo} ${noticia.descricao} ${noticia.tags.join(" ")}`,
+    { category: noticia.categoria }
+  )
 
   return <ArticlePageRuntime noticia={noticia} relatedNews={relatedNews} relatedHistorical={relatedHistorical} />
 }

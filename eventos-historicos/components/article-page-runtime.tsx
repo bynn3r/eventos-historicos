@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { NewsImage } from "@/components/news-image"
 import { ArticleTranslate } from "@/components/article-translate"
-import { Calendar, ArrowLeft, ExternalLink, User, Landmark } from "lucide-react"
+import { Calendar, ArrowLeft, ArrowRight, ExternalLink, User, Landmark } from "lucide-react"
 import Link from "next/link"
 import { formatNewsDate, renderSafeArticleHtml, type SiteNewsArticle } from "@/lib/news"
 import type { RelatedContentItem } from "@/lib/related-content"
@@ -152,6 +152,15 @@ export function ArticlePageRuntime({ noticia, relatedNews, relatedHistorical = [
                             <p className="line-clamp-3 text-xs leading-5 text-muted-foreground">{item.summary}</p>
                           </Link>
                         ))}
+                      </div>
+                      <div className="mt-5 flex justify-end">
+                        <Link
+                          href="/linha-do-tempo"
+                          className="inline-flex items-center gap-1.5 text-sm text-primary hover:underline"
+                        >
+                          Explorar a Linha do Tempo completa
+                          <ArrowRight className="h-3.5 w-3.5" />
+                        </Link>
                       </div>
                     </section>
                   )}

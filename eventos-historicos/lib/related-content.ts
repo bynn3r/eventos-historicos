@@ -21,6 +21,7 @@ function normalize(text: string): string {
 interface Matchable {
   keywords: string[]
   category: string
+  importance: number
   item: RelatedContentItem
 }
 
@@ -28,6 +29,7 @@ function buildPool(): Matchable[] {
   const timelinePool: Matchable[] = getAllTimelineEvents().map((event) => ({
     keywords: event.keywords,
     category: event.category,
+    importance: event.importance,
     item: {
       type: "evento",
       slug: event.slug,
@@ -49,6 +51,7 @@ function buildPool(): Matchable[] {
   }>).map((curiosidade) => ({
     keywords: curiosidade.keywords ?? [],
     category: curiosidade.categoria,
+    importance: 3,
     item: {
       type: "curiosidade",
       slug: curiosidade.slug,
@@ -88,7 +91,7 @@ export function findRelatedContent(query: string, options: FindRelatedContentOpt
   const scored = pool
     .filter(({ item }) => item.slug !== excludeSlug)
     .filter(({ item }) => !onlyType || item.type === onlyType)
-    .map(({ keywords, category: itemCategory, item }) => {
+    .map(({ keywords, category: itemCategory, importance, item }) => {
       let score = 0
       for (const keyword of keywords) {
         if (normalizedQuery.includes(normalize(keyword))) {
@@ -97,6 +100,10 @@ export function findRelatedContent(query: string, options: FindRelatedContentOpt
       }
       if (category && normalize(itemCategory) === normalize(category)) {
         score += 1
+      }
+      // boost events with higher editorial importance (4 → +1, 5 → +2)
+      if (importance >= 4) {
+        score += importance - 3
       }
       return { item, score }
     })
