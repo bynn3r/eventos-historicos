@@ -13,6 +13,7 @@ import { findRelatedContent } from "@/lib/related-content"
 import { EventHero } from "@/components/event-hero"
 import { EventCronologia } from "@/components/event-cronologia"
 import { RevealSection } from "@/components/reveal-section"
+import { RelatedNewsWidget } from "@/components/related-news-widget"
 
 const SITE_URL = "https://eventoshistoricos.com.br"
 
@@ -263,6 +264,9 @@ export default function LinhaDoTempoEventoPage({ params }: LinhaDoTempoEventoPag
                 </div>
               </RevealSection>
             )}
+
+            {/* Notícias recentes relacionadas (client-side, não bloqueia SSG) */}
+            <RelatedNewsWidget keywords={event.keywords} />
 
             {/* Related curiosidades */}
             {relatedCuriosidades.length > 0 && (
