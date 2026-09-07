@@ -16,7 +16,18 @@
     "featured": true,
     "image": "/eventos/hero-narmer-palette.jpg",
     "relatedEvents": [
-      "codigo-hamurabi"
+      "codigo-hamurabi",
+      "revolucao-agricola-neolitica"
+    ],
+    "relatedEventsContext": [
+      {
+        "slug": "codigo-hamurabi",
+        "relacao": "Egito e Babilônia foram as duas civilizações fluviais fundadoras do mundo antigo — enquanto Narmer unificava o Nilo, a Mesopotâmia desenvolvia as primeiras leis e escrita da história."
+      },
+      {
+        "slug": "revolucao-agricola-neolitica",
+        "relacao": "A Revolução Agrícola foi a condição prévia que tornou o Egito possível: sem o excedente alimentar do Nilo domesticado, não haveria faraós, pirâmides nem hieróglifos."
+      }
     ],
     "characters": [
       {
@@ -27,13 +38,29 @@
       }
     ],
     "sources": [
-      { "title": "Paleta de Narmer — Museu Egípcio do Cairo", "url": "", "tipo": "primária" }
+      {
+        "title": "Paleta de Narmer — Museu Egípcio do Cairo",
+        "url": "",
+        "tipo": "primária"
+      }
     ],
     "cronologia": [
-      { "ano": "c. 3200 a.C.", "titulo": "Alto e Baixo Egito rivalizam como reinos independentes" },
-      { "ano": "c. 3100 a.C.", "titulo": "Narmer derrota o Baixo Egito e une os dois reinos" },
-      { "ano": "c. 3100 a.C.", "titulo": "Capital estabelecida em Mênfis, ponto estratégico entre os dois mundos" },
-      { "ano": "c. 2686 a.C.", "titulo": "Início do Império Antigo — era das grandes pirâmides" }
+      {
+        "ano": "c. 3200 a.C.",
+        "titulo": "Alto e Baixo Egito rivalizam como reinos independentes"
+      },
+      {
+        "ano": "c. 3100 a.C.",
+        "titulo": "Narmer derrota o Baixo Egito e une os dois reinos"
+      },
+      {
+        "ano": "c. 3100 a.C.",
+        "titulo": "Capital estabelecida em Mênfis, ponto estratégico entre os dois mundos"
+      },
+      {
+        "ano": "c. 2686 a.C.",
+        "titulo": "Início do Império Antigo — era das grandes pirâmides"
+      }
     ],
     "keywords": [
       "egito",
@@ -69,6 +96,16 @@
       "unificacao-egito",
       "conquistas-alexandre-grande"
     ],
+    "relatedEventsContext": [
+      {
+        "slug": "unificacao-egito",
+        "relacao": "O Código de Hamurábi e a unificação do Egito são os dois pilares fundadores da civilização antiga: enquanto Narmer criava o primeiro Estado centralizado, a Babilônia codificava as primeiras leis escritas da história."
+      },
+      {
+        "slug": "conquistas-alexandre-grande",
+        "relacao": "Alexandre conquistou a Babilônia em 331 a.C. e entrou em contato com a tradição jurídica mesopotâmica — a mesma que havia produzido o Código de Hamurábi mais de 1.400 anos antes."
+      }
+    ],
     "characters": [
       {
         "name": "Hamurábi",
@@ -78,14 +115,33 @@
       }
     ],
     "sources": [
-      { "title": "Estela do Código de Hamurábi — Museu do Louvre, Paris", "url": "", "tipo": "primária" }
+      {
+        "title": "Estela do Código de Hamurábi — Museu do Louvre, Paris",
+        "url": "",
+        "tipo": "primária"
+      }
     ],
     "cronologia": [
-      { "ano": "c. 1792 a.C.", "titulo": "Hamurábi assume o trono de Babilônia" },
-      { "ano": "c. 1780 a.C.", "titulo": "Hamurábi unifica a Mesopotâmia derrotando os reinos rivais" },
-      { "ano": "c. 1754 a.C.", "titulo": "Código gravado na estela de diorito negro" },
-      { "ano": "c. 1750 a.C.", "titulo": "Morte de Hamurábi; fragmentação gradual do império" },
-      { "ano": "1901", "titulo": "Estela redescoberta em Susa por missão arqueológica francesa" }
+      {
+        "ano": "c. 1792 a.C.",
+        "titulo": "Hamurábi assume o trono de Babilônia"
+      },
+      {
+        "ano": "c. 1780 a.C.",
+        "titulo": "Hamurábi unifica a Mesopotâmia derrotando os reinos rivais"
+      },
+      {
+        "ano": "c. 1754 a.C.",
+        "titulo": "Código gravado na estela de diorito negro"
+      },
+      {
+        "ano": "c. 1750 a.C.",
+        "titulo": "Morte de Hamurábi; fragmentação gradual do império"
+      },
+      {
+        "ano": "1901",
+        "titulo": "Estela redescoberta em Susa por missão arqueológica francesa"
+      }
     ],
     "keywords": [
       "codigo de hamurabi",
@@ -120,6 +176,16 @@
       "fundacao-de-roma",
       "conquistas-alexandre-grande"
     ],
+    "relatedEventsContext": [
+      {
+        "slug": "fundacao-de-roma",
+        "relacao": "Os Jogos Olímpicos já existiam há 23 anos quando Roma foi fundada em 753 a.C. — enquanto a Grécia criava rituais de unidade cultural, Roma começava a construir o império que mais tarde conquistaria o mundo grego."
+      },
+      {
+        "slug": "conquistas-alexandre-grande",
+        "relacao": "Alexandre era um produto do ideal pan-helênico que os Jogos simbolizavam: usou a cultura grega como argumento para justificar a conquista do mundo persa como missão civilizadora."
+      }
+    ],
     "characters": [
       {
         "name": "Koroibos de Elis",
@@ -136,11 +202,26 @@
     ],
     "sources": [],
     "cronologia": [
-      { "ano": "776 a.C.", "titulo": "Primeiros Jogos registrados; Koroibos vence a corrida do estádio" },
-      { "ano": "724 a.C.", "titulo": "Adição da corrida do diaulos (dois estádios)" },
-      { "ano": "708 a.C.", "titulo": "Pentatlo e luta adicionados ao programa olímpico" },
-      { "ano": "393 d.C.", "titulo": "Imperador Teodósio I proíbe os Jogos como manifestação pagã" },
-      { "ano": "1896", "titulo": "Pierre de Coubertin funda os Jogos Olímpicos modernos em Atenas" }
+      {
+        "ano": "776 a.C.",
+        "titulo": "Primeiros Jogos registrados; Koroibos vence a corrida do estádio"
+      },
+      {
+        "ano": "724 a.C.",
+        "titulo": "Adição da corrida do diaulos (dois estádios)"
+      },
+      {
+        "ano": "708 a.C.",
+        "titulo": "Pentatlo e luta adicionados ao programa olímpico"
+      },
+      {
+        "ano": "393 d.C.",
+        "titulo": "Imperador Teodósio I proíbe os Jogos como manifestação pagã"
+      },
+      {
+        "ano": "1896",
+        "titulo": "Pierre de Coubertin funda os Jogos Olímpicos modernos em Atenas"
+      }
     ],
     "keywords": [
       "olimpíadas",
@@ -176,6 +257,16 @@
       "primeiros-jogos-olimpicos",
       "queda-imperio-romano-ocidente"
     ],
+    "relatedEventsContext": [
+      {
+        "slug": "primeiros-jogos-olimpicos",
+        "relacao": "Roma foi fundada na mesma era dos Jogos Olímpicos — mas enquanto a Grécia celebrava a unidade cultural por meio do esporte, Roma construiria a unidade política por meio das legiões."
+      },
+      {
+        "slug": "queda-imperio-romano-ocidente",
+        "relacao": "A fundação lendária de 753 a.C. e a queda de 476 d.C. delimitam os 1.229 anos de Roma como potência — da cidade de pastores no Palatino ao último imperador deposto por um chefe bárbaro."
+      }
+    ],
     "characters": [
       {
         "name": "Rômulo",
@@ -192,10 +283,22 @@
     ],
     "sources": [],
     "cronologia": [
-      { "ano": "séc. X a.C.", "titulo": "Primeiros assentamentos humanos sobre os montes do Lácio" },
-      { "ano": "753 a.C.", "titulo": "Data tradicional da fundação; Rômulo torna-se o primeiro rei" },
-      { "ano": "509 a.C.", "titulo": "Expulsão do último rei etrusco; fundação da República Romana" },
-      { "ano": "264 a.C.", "titulo": "Roma controla toda a Itália; início das Guerras Púnicas" }
+      {
+        "ano": "séc. X a.C.",
+        "titulo": "Primeiros assentamentos humanos sobre os montes do Lácio"
+      },
+      {
+        "ano": "753 a.C.",
+        "titulo": "Data tradicional da fundação; Rômulo torna-se o primeiro rei"
+      },
+      {
+        "ano": "509 a.C.",
+        "titulo": "Expulsão do último rei etrusco; fundação da República Romana"
+      },
+      {
+        "ano": "264 a.C.",
+        "titulo": "Roma controla toda a Itália; início das Guerras Púnicas"
+      }
     ],
     "keywords": [
       "roma",
@@ -232,6 +335,20 @@
       "unificacao-china",
       "codigo-hamurabi"
     ],
+    "relatedEventsContext": [
+      {
+        "slug": "primeiros-jogos-olimpicos",
+        "relacao": "Alexandre era um produto do ideal pan-helênico que os Jogos simbolizavam: usou a cultura grega como argumento para justificar a conquista do mundo persa como missão civilizadora."
+      },
+      {
+        "slug": "unificacao-china",
+        "relacao": "Enquanto Alexandre unificava o Ocidente sob o helenismo entre 334 e 323 a.C., Qin Shi Huang unificava o Oriente sob a China — dois impérios paralelos que definiram os limites do mundo antigo nas mesmas gerações."
+      },
+      {
+        "slug": "codigo-hamurabi",
+        "relacao": "Ao conquistar a Babilônia em 331 a.C., Alexandre entrou em contato com a tradição jurídica e cultural que havia produzido o Código de Hamurábi mais de 1.400 anos antes."
+      }
+    ],
     "characters": [
       {
         "name": "Alexandre, o Grande",
@@ -260,13 +377,34 @@
     ],
     "sources": [],
     "cronologia": [
-      { "ano": "336 a.C.", "titulo": "Assassinato de Filipe II; Alexandre assume o trono com 20 anos" },
-      { "ano": "334 a.C.", "titulo": "Atravessa os Dardanelos; vitória no rio Granico" },
-      { "ano": "333 a.C.", "titulo": "Vitória em Issos; Dario III foge abandonando família e tesouro" },
-      { "ano": "332 a.C.", "titulo": "Conquista do Egito; fundação de Alexandria" },
-      { "ano": "331 a.C.", "titulo": "Batalha de Gaugamela: queda do Império Persa Aquemênida" },
-      { "ano": "326 a.C.", "titulo": "Batalha do Hidaspes (rio Jhelum); exército se recusa a avançar para a Índia" },
-      { "ano": "323 a.C.", "titulo": "Morte de Alexandre em Babilônia, aos 32 anos" }
+      {
+        "ano": "336 a.C.",
+        "titulo": "Assassinato de Filipe II; Alexandre assume o trono com 20 anos"
+      },
+      {
+        "ano": "334 a.C.",
+        "titulo": "Atravessa os Dardanelos; vitória no rio Granico"
+      },
+      {
+        "ano": "333 a.C.",
+        "titulo": "Vitória em Issos; Dario III foge abandonando família e tesouro"
+      },
+      {
+        "ano": "332 a.C.",
+        "titulo": "Conquista do Egito; fundação de Alexandria"
+      },
+      {
+        "ano": "331 a.C.",
+        "titulo": "Batalha de Gaugamela: queda do Império Persa Aquemênida"
+      },
+      {
+        "ano": "326 a.C.",
+        "titulo": "Batalha do Hidaspes (rio Jhelum); exército se recusa a avançar para a Índia"
+      },
+      {
+        "ano": "323 a.C.",
+        "titulo": "Morte de Alexandre em Babilônia, aos 32 anos"
+      }
     ],
     "keywords": [
       "alexandre o grande",
@@ -298,7 +436,23 @@
     "featured": true,
     "image": "/eventos/hero-exercito-terracota.jpg",
     "relatedEvents": [
-      "conquistas-alexandre-grande"
+      "conquistas-alexandre-grande",
+      "nascimento-budismo",
+      "fundacao-imperio-mongol"
+    ],
+    "relatedEventsContext": [
+      {
+        "slug": "conquistas-alexandre-grande",
+        "relacao": "Enquanto Alexandre construía seu império no Ocidente, Qin Shi Huang unificava a China no Oriente — dois processos paralelos, nas mesmas gerações, que definiram os dois polos do mundo antigo."
+      },
+      {
+        "slug": "nascimento-budismo",
+        "relacao": "O budismo nasceu na Índia cerca de dois séculos antes da unificação chinesa e chegou à China como elemento central da nova ordem imperial, tornando-se força espiritual que moldaria a civilização chinesa por milênios."
+      },
+      {
+        "slug": "fundacao-imperio-mongol",
+        "relacao": "O Império Mongol, 1.500 anos depois, reunificaria a China após séculos de fragmentação — reencenando, em escala continental, o sonho de unidade que Qin Shi Huang havia realizado pela primeira vez."
+      }
     ],
     "characters": [
       {
@@ -322,12 +476,30 @@
     ],
     "sources": [],
     "cronologia": [
-      { "ano": "475 a.C.", "titulo": "Início do Período dos Reinos Combatentes" },
-      { "ano": "247 a.C.", "titulo": "Ying Zheng assume o trono do estado de Qin com 13 anos" },
-      { "ano": "230–221 a.C.", "titulo": "Campanhas militares Qin conquistam os seis reinos rivais" },
-      { "ano": "221 a.C.", "titulo": "Ying Zheng proclama-se Qin Shi Huang, Primeiro Imperador" },
-      { "ano": "214 a.C.", "titulo": "Início da Grande Muralha e construção do Exército de Terracota" },
-      { "ano": "210 a.C.", "titulo": "Morte do Primeiro Imperador; início do declínio da dinastia Qin" }
+      {
+        "ano": "475 a.C.",
+        "titulo": "Início do Período dos Reinos Combatentes"
+      },
+      {
+        "ano": "247 a.C.",
+        "titulo": "Ying Zheng assume o trono do estado de Qin com 13 anos"
+      },
+      {
+        "ano": "230–221 a.C.",
+        "titulo": "Campanhas militares Qin conquistam os seis reinos rivais"
+      },
+      {
+        "ano": "221 a.C.",
+        "titulo": "Ying Zheng proclama-se Qin Shi Huang, Primeiro Imperador"
+      },
+      {
+        "ano": "214 a.C.",
+        "titulo": "Início da Grande Muralha e construção do Exército de Terracota"
+      },
+      {
+        "ano": "210 a.C.",
+        "titulo": "Morte do Primeiro Imperador; início do declínio da dinastia Qin"
+      }
     ],
     "keywords": [
       "china",
@@ -364,6 +536,20 @@
       "queda-constantinopla",
       "coroacao-carlos-magno"
     ],
+    "relatedEventsContext": [
+      {
+        "slug": "fundacao-de-roma",
+        "relacao": "A queda de 476 d.C. fechou o ciclo aberto pela fundação lendária de 753 a.C.: mais de 1.200 anos separaram o primeiro rei do último imperador deposto por Odoacro."
+      },
+      {
+        "slug": "queda-constantinopla",
+        "relacao": "A queda de Roma Ocidental em 476 não extinguiu o Império Romano — apenas transferiu seu centro para Constantinopla, que resistiria por mais 977 anos até cair diante dos otomanos em 1453."
+      },
+      {
+        "slug": "coroacao-carlos-magno",
+        "relacao": "A queda de Roma criou o vácuo de poder que Carlos Magno preencheu três séculos depois: ao ser coroado imperador em 800, ele tentou restaurar simbolicamente o que havia desaparecido em 476."
+      }
+    ],
     "characters": [
       {
         "name": "Rômulo Augusto",
@@ -386,11 +572,26 @@
     ],
     "sources": [],
     "cronologia": [
-      { "ano": "235–284", "titulo": "Crise do século III: 50 anos de anarquia militar e fragmentação" },
-      { "ano": "395", "titulo": "Divisão definitiva do Império Romano entre Oriente e Ocidente" },
-      { "ano": "410", "titulo": "Saque de Roma pelos visigodos de Alarico I — choque para a cristandade" },
-      { "ano": "455", "titulo": "Saque de Roma pelos vândalos de Genserico" },
-      { "ano": "4 set. 476", "titulo": "Odoacro depõe Rômulo Augusto; dissolução do Império Romano do Ocidente" }
+      {
+        "ano": "235–284",
+        "titulo": "Crise do século III: 50 anos de anarquia militar e fragmentação"
+      },
+      {
+        "ano": "395",
+        "titulo": "Divisão definitiva do Império Romano entre Oriente e Ocidente"
+      },
+      {
+        "ano": "410",
+        "titulo": "Saque de Roma pelos visigodos de Alarico I — choque para a cristandade"
+      },
+      {
+        "ano": "455",
+        "titulo": "Saque de Roma pelos vândalos de Genserico"
+      },
+      {
+        "ano": "4 set. 476",
+        "titulo": "Odoacro depõe Rômulo Augusto; dissolução do Império Romano do Ocidente"
+      }
     ],
     "keywords": [
       "roma",
@@ -427,6 +628,20 @@
       "primeira-cruzada",
       "coroacao-carlos-magno"
     ],
+    "relatedEventsContext": [
+      {
+        "slug": "queda-constantinopla",
+        "relacao": "O Islã nasceu sete séculos antes da queda de Constantinopla, mas foi a expansão islâmica que progressivamente cercou o Império Bizantino até o colapso final de 1453."
+      },
+      {
+        "slug": "primeira-cruzada",
+        "relacao": "As Cruzadas foram a resposta cristã à expansão islâmica que a Hégira havia iniciado: a reclamação de Jerusalém, conquistada pelos muçulmanos em 638, motivou a convocação da Primeira Cruzada em 1096."
+      },
+      {
+        "slug": "coroacao-carlos-magno",
+        "relacao": "O Islã e o Império de Carlos Magno foram as duas grandes potências do século IX — a pressão islâmica ao sul foi um dos fatores que acelerou a coesão da Europa cristã sob os carolíngios."
+      }
+    ],
     "characters": [
       {
         "name": "Maomé",
@@ -455,12 +670,30 @@
     ],
     "sources": [],
     "cronologia": [
-      { "ano": "c. 610", "titulo": "Maomé recebe as primeiras revelações em Meca" },
-      { "ano": "615", "titulo": "Perseguições intensificam; parte dos muçulmanos emigra para a Etiópia" },
-      { "ano": "24 set. 622", "titulo": "Hégira: Maomé chega a Medina, funda a primeira comunidade política islâmica" },
-      { "ano": "624", "titulo": "Batalha de Badr: primeira grande vitória militar islâmica" },
-      { "ano": "630", "titulo": "Reconquista de Meca; conversão em massa dos árabes" },
-      { "ano": "632", "titulo": "Morte de Maomé; Abu Bakr torna-se primeiro califa" }
+      {
+        "ano": "c. 610",
+        "titulo": "Maomé recebe as primeiras revelações em Meca"
+      },
+      {
+        "ano": "615",
+        "titulo": "Perseguições intensificam; parte dos muçulmanos emigra para a Etiópia"
+      },
+      {
+        "ano": "24 set. 622",
+        "titulo": "Hégira: Maomé chega a Medina, funda a primeira comunidade política islâmica"
+      },
+      {
+        "ano": "624",
+        "titulo": "Batalha de Badr: primeira grande vitória militar islâmica"
+      },
+      {
+        "ano": "630",
+        "titulo": "Reconquista de Meca; conversão em massa dos árabes"
+      },
+      {
+        "ano": "632",
+        "titulo": "Morte de Maomé; Abu Bakr torna-se primeiro califa"
+      }
     ],
     "keywords": [
       "hegira",
@@ -497,6 +730,20 @@
       "hegira-inicio-islam",
       "primeira-cruzada"
     ],
+    "relatedEventsContext": [
+      {
+        "slug": "queda-imperio-romano-ocidente",
+        "relacao": "A coroação de Carlos Magno em 800 foi uma resposta direta à queda de Roma em 476: ao receber a coroa imperial do papa, ele reivindicava restaurar o Império Romano sob uma nova roupagem cristã."
+      },
+      {
+        "slug": "hegira-inicio-islam",
+        "relacao": "Carlos Magno e o Islã foram contemporâneos em suas expansões — enquanto o califa Harune al-Rachide governava Bagdá, Carlos Magno expandia a cristandade; os dois chegaram a trocar embaixadores."
+      },
+      {
+        "slug": "primeira-cruzada",
+        "relacao": "O Sacro Império Romano criado por Carlos Magno forneceu a estrutura política que tornaria possível a Primeira Cruzada dois séculos depois: reis e cavaleiros cristãos mobilizados sob a bandeira da fé."
+      }
+    ],
     "characters": [
       {
         "name": "Carlos Magno",
@@ -525,11 +772,26 @@
     ],
     "sources": [],
     "cronologia": [
-      { "ano": "768", "titulo": "Carlos Magno torna-se rei dos francos" },
-      { "ano": "772–804", "titulo": "Guerras saxônicas: submissão e conversão forçada dos saxões" },
-      { "ano": "799", "titulo": "Papa Leão III busca proteção de Carlos Magno após ataque em Roma" },
-      { "ano": "25 dez. 800", "titulo": "Papa coroa Carlos Magno imperador na Basílica de São Pedro" },
-      { "ano": "814", "titulo": "Morte de Carlos Magno; divisão do império entre os três filhos" }
+      {
+        "ano": "768",
+        "titulo": "Carlos Magno torna-se rei dos francos"
+      },
+      {
+        "ano": "772–804",
+        "titulo": "Guerras saxônicas: submissão e conversão forçada dos saxões"
+      },
+      {
+        "ano": "799",
+        "titulo": "Papa Leão III busca proteção de Carlos Magno após ataque em Roma"
+      },
+      {
+        "ano": "25 dez. 800",
+        "titulo": "Papa coroa Carlos Magno imperador na Basílica de São Pedro"
+      },
+      {
+        "ano": "814",
+        "titulo": "Morte de Carlos Magno; divisão do império entre os três filhos"
+      }
     ],
     "keywords": [
       "carlos magno",
@@ -565,6 +827,20 @@
       "primeira-cruzada",
       "hegira-inicio-islam"
     ],
+    "relatedEventsContext": [
+      {
+        "slug": "queda-constantinopla",
+        "relacao": "O Cisma de 1054 dividiu o Cristianismo 399 anos antes da queda de Constantinopla — e a recusa do papa em ajudar militarmente o Oriente, fruto dessa divisão, contribuiu para selar o destino da cidade em 1453."
+      },
+      {
+        "slug": "primeira-cruzada",
+        "relacao": "A Primeira Cruzada, lançada em 1096, foi uma tentativa parcial de reatar as relações após o Cisma de 1054 — o papa Urbano II queria ajudar o imperador bizantino, mas a divisão permaneceu e se aprofundou."
+      },
+      {
+        "slug": "hegira-inicio-islam",
+        "relacao": "O Grande Cisma foi acelerado pela pressão islâmica sobre Constantinopla: enquanto a Igreja Oriental enfrentava o avanço muçulmano, divergências teológicas e políticas com Roma aprofundavam a ruptura."
+      }
+    ],
     "characters": [
       {
         "name": "Papa Leão IX",
@@ -587,11 +863,26 @@
     ],
     "sources": [],
     "cronologia": [
-      { "ano": "863–867", "titulo": "Cisma fotiano: primeira ruptura temporária entre Roma e Constantinopla" },
-      { "ano": "16 jul. 1054", "titulo": "Cardeal Humberto deposita bula de excomunhão sobre o altar de Santa Sofia" },
-      { "ano": "1054", "titulo": "Patriarca Cerulário excomungou os legados papais em resposta" },
-      { "ano": "1204", "titulo": "Cruzados saqueiam Constantinopla; ruptura entre as Igrejas torna-se irreparável" },
-      { "ano": "1965", "titulo": "Paulo VI e Atenágoras revogam mutuamente as excomunhões de 1054" }
+      {
+        "ano": "863–867",
+        "titulo": "Cisma fotiano: primeira ruptura temporária entre Roma e Constantinopla"
+      },
+      {
+        "ano": "16 jul. 1054",
+        "titulo": "Cardeal Humberto deposita bula de excomunhão sobre o altar de Santa Sofia"
+      },
+      {
+        "ano": "1054",
+        "titulo": "Patriarca Cerulário excomungou os legados papais em resposta"
+      },
+      {
+        "ano": "1204",
+        "titulo": "Cruzados saqueiam Constantinopla; ruptura entre as Igrejas torna-se irreparável"
+      },
+      {
+        "ano": "1965",
+        "titulo": "Paulo VI e Atenágoras revogam mutuamente as excomunhões de 1054"
+      }
     ],
     "keywords": [
       "grande cisma",
@@ -628,6 +919,24 @@
       "grande-cisma-oriente",
       "coroacao-carlos-magno"
     ],
+    "relatedEventsContext": [
+      {
+        "slug": "queda-constantinopla",
+        "relacao": "A Primeira Cruzada foi convocada em 1096 para ajudar Constantinopla contra os turcos — mas as próprias cruzadas desgastaram o Império Bizantino, culminando no saque de 1204 que antecipou a queda de 1453."
+      },
+      {
+        "slug": "hegira-inicio-islam",
+        "relacao": "As Cruzadas foram a contraofensiva cristã à expansão islâmica iniciada pela Hégira em 622 — a batalha por Jerusalém era, acima de tudo, uma disputa sobre qual fé herdaria a Terra Santa."
+      },
+      {
+        "slug": "grande-cisma-oriente",
+        "relacao": "A Cruzada foi convocada como gesto de aproximação após o Cisma de 1054, mas o saque de Constantinopla pelos cruzados em 1204 aprofundou o abismo entre as igrejas de forma irreparável."
+      },
+      {
+        "slug": "coroacao-carlos-magno",
+        "relacao": "O Sacro Império Romano, herdeiro de Carlos Magno, forneceu a armadura política das Cruzadas: imperadores e reis da Europa cristã mobilizaram exércitos em nome de uma Europa cujos contornos Carlos Magno havia desenhado."
+      }
+    ],
     "characters": [
       {
         "name": "Papa Urbano II",
@@ -656,12 +965,30 @@
     ],
     "sources": [],
     "cronologia": [
-      { "ano": "27 nov. 1095", "titulo": "Papa Urbano II convoca a cruzada no Concílio de Clermont" },
-      { "ano": "1096", "titulo": "Cruzada Popular de Pedro, o Eremita, é dizimada pelos turcos seljúcidas" },
-      { "ano": "1097", "titulo": "Exército principal cruza para a Ásia; conquista de Niceia" },
-      { "ano": "jun. 1098", "titulo": "Tomada de Antioquia após cerco de oito meses" },
-      { "ano": "15 jul. 1099", "titulo": "Tomada de Jerusalém; massacre da população muçulmana e judaica" },
-      { "ano": "1099", "titulo": "Godofredo de Bulhão recusa o título de rei de Jerusalém" }
+      {
+        "ano": "27 nov. 1095",
+        "titulo": "Papa Urbano II convoca a cruzada no Concílio de Clermont"
+      },
+      {
+        "ano": "1096",
+        "titulo": "Cruzada Popular de Pedro, o Eremita, é dizimada pelos turcos seljúcidas"
+      },
+      {
+        "ano": "1097",
+        "titulo": "Exército principal cruza para a Ásia; conquista de Niceia"
+      },
+      {
+        "ano": "jun. 1098",
+        "titulo": "Tomada de Antioquia após cerco de oito meses"
+      },
+      {
+        "ano": "15 jul. 1099",
+        "titulo": "Tomada de Jerusalém; massacre da população muçulmana e judaica"
+      },
+      {
+        "ano": "1099",
+        "titulo": "Godofredo de Bulhão recusa o título de rei de Jerusalém"
+      }
     ],
     "keywords": [
       "primeira cruzada",
@@ -696,6 +1023,16 @@
       "independencia-estados-unidos",
       "reforma-protestante"
     ],
+    "relatedEventsContext": [
+      {
+        "slug": "independencia-estados-unidos",
+        "relacao": "A Magna Carta de 1215 foi o argumento central dos colonos americanos em 1776: ao afirmarem que tinham direitos que o rei não podia violar, invocavam o precedente medieval que havia limitado o poder real pela primeira vez."
+      },
+      {
+        "slug": "reforma-protestante",
+        "relacao": "A Magna Carta e a Reforma Protestante são dois momentos do mesmo impulso histórico — a ideia de que o poder tem limites, seja o do rei sobre os barões, seja o do papa sobre os fiéis."
+      }
+    ],
     "characters": [
       {
         "name": "Rei João da Inglaterra (João Sem-Terra)",
@@ -717,15 +1054,37 @@
       }
     ],
     "sources": [
-      { "title": "Magna Carta Libertatum (1215) — British Library, Londres", "url": "", "tipo": "primária" }
+      {
+        "title": "Magna Carta Libertatum (1215) — British Library, Londres",
+        "url": "",
+        "tipo": "primária"
+      }
     ],
     "cronologia": [
-      { "ano": "1204", "titulo": "João perde a Normandia para a França; começa a crise de autoridade" },
-      { "ano": "1214", "titulo": "Derrota em Bouvines; barões ingleses se rebelam contra o rei" },
-      { "ano": "mai. 1215", "titulo": "Barões rebeldes ocupam Londres e forçam negociação" },
-      { "ano": "15 jun. 1215", "titulo": "João sela a Magna Carta em Runnymede" },
-      { "ano": "ago. 1215", "titulo": "Papa Inocêncio III anula a carta; guerra civil inicia" },
-      { "ano": "1225", "titulo": "Reedição definitiva da Magna Carta pelo filho de João, Henrique III" }
+      {
+        "ano": "1204",
+        "titulo": "João perde a Normandia para a França; começa a crise de autoridade"
+      },
+      {
+        "ano": "1214",
+        "titulo": "Derrota em Bouvines; barões ingleses se rebelam contra o rei"
+      },
+      {
+        "ano": "mai. 1215",
+        "titulo": "Barões rebeldes ocupam Londres e forçam negociação"
+      },
+      {
+        "ano": "15 jun. 1215",
+        "titulo": "João sela a Magna Carta em Runnymede"
+      },
+      {
+        "ano": "ago. 1215",
+        "titulo": "Papa Inocêncio III anula a carta; guerra civil inicia"
+      },
+      {
+        "ano": "1225",
+        "titulo": "Reedição definitiva da Magna Carta pelo filho de João, Henrique III"
+      }
     ],
     "keywords": [
       "magna carta",
@@ -760,6 +1119,16 @@
       "peste-negra",
       "queda-constantinopla"
     ],
+    "relatedEventsContext": [
+      {
+        "slug": "peste-negra",
+        "relacao": "A Peste Negra devastou a Europa nas décadas anteriores à Guerra dos Cem Anos, enfraquecendo demograficamente ambos os lados — França e Inglaterra chegaram ao conflito com populações reduzidas à metade."
+      },
+      {
+        "slug": "queda-constantinopla",
+        "relacao": "A Guerra dos Cem Anos terminou em 1453, o mesmo ano em que Constantinopla caiu para os otomanos — dois eventos que encerraram a Idade Média e abriram caminho para um mundo novo."
+      }
+    ],
     "characters": [
       {
         "name": "Eduardo III da Inglaterra",
@@ -788,13 +1157,34 @@
     ],
     "sources": [],
     "cronologia": [
-      { "ano": "1328", "titulo": "Morte de Carlos IV da França sem herdeiro; Eduardo III reivindica o trono" },
-      { "ano": "1337", "titulo": "Eduardo III declara guerra; início oficial do conflito" },
-      { "ano": "1346", "titulo": "Vitória inglesa em Crécy com uso devastador do arco longo galês" },
-      { "ano": "1415", "titulo": "Henrique V vence em Azincourt; França em seu ponto mais fraco" },
-      { "ano": "1429", "titulo": "Joana d'Arc rompe o cerco de Orléans; Carlos VII coroado em Reims" },
-      { "ano": "1431", "titulo": "Joana d'Arc queimada viva em Rouen pelos ingleses" },
-      { "ano": "1453", "titulo": "Vitória francesa em Castillon; encerramento do conflito" }
+      {
+        "ano": "1328",
+        "titulo": "Morte de Carlos IV da França sem herdeiro; Eduardo III reivindica o trono"
+      },
+      {
+        "ano": "1337",
+        "titulo": "Eduardo III declara guerra; início oficial do conflito"
+      },
+      {
+        "ano": "1346",
+        "titulo": "Vitória inglesa em Crécy com uso devastador do arco longo galês"
+      },
+      {
+        "ano": "1415",
+        "titulo": "Henrique V vence em Azincourt; França em seu ponto mais fraco"
+      },
+      {
+        "ano": "1429",
+        "titulo": "Joana d'Arc rompe o cerco de Orléans; Carlos VII coroado em Reims"
+      },
+      {
+        "ano": "1431",
+        "titulo": "Joana d'Arc queimada viva em Rouen pelos ingleses"
+      },
+      {
+        "ano": "1453",
+        "titulo": "Vitória francesa em Castillon; encerramento do conflito"
+      }
     ],
     "keywords": [
       "guerra dos cem anos",
@@ -829,6 +1219,16 @@
       "guerra-dos-cem-anos",
       "queda-constantinopla"
     ],
+    "relatedEventsContext": [
+      {
+        "slug": "guerra-dos-cem-anos",
+        "relacao": "A Peste Negra e a Guerra dos Cem Anos se alimentaram mutuamente: a epidemia desestabilizou o campo e as cidades, criando o caos social e econômico que tornou o conflito ainda mais devastador."
+      },
+      {
+        "slug": "queda-constantinopla",
+        "relacao": "A Peste Negra chegou à Europa pelas rotas comerciais com o Oriente e foi provavelmente transportada por tropas mongóis durante o cerco a Caffa, cidade genovesa próxima a Constantinopla."
+      }
+    ],
     "characters": [
       {
         "name": "Giovanni Boccaccio",
@@ -845,11 +1245,26 @@
     ],
     "sources": [],
     "cronologia": [
-      { "ano": "1346", "titulo": "Primeiro surto registrado em Caffa, na Crimeia, via rotas da Ásia Central" },
-      { "ano": "out. 1347", "titulo": "Naus genovesas chegam à Sicília carregando a epidemia" },
-      { "ano": "1348", "titulo": "Epidemia devasta a Itália, França e Espanha; perseguições a judeus" },
-      { "ano": "1349", "titulo": "Peste chega à Inglaterra e à Alemanha" },
-      { "ano": "1351", "titulo": "Primeiro surto recua; estima-se 25–50 milhões de mortos na Europa" }
+      {
+        "ano": "1346",
+        "titulo": "Primeiro surto registrado em Caffa, na Crimeia, via rotas da Ásia Central"
+      },
+      {
+        "ano": "out. 1347",
+        "titulo": "Naus genovesas chegam à Sicília carregando a epidemia"
+      },
+      {
+        "ano": "1348",
+        "titulo": "Epidemia devasta a Itália, França e Espanha; perseguições a judeus"
+      },
+      {
+        "ano": "1349",
+        "titulo": "Peste chega à Inglaterra e à Alemanha"
+      },
+      {
+        "ano": "1351",
+        "titulo": "Primeiro surto recua; estima-se 25–50 milhões de mortos na Europa"
+      }
     ],
     "keywords": [
       "peste negra",
@@ -922,11 +1337,26 @@
     ],
     "sources": [],
     "cronologia": [
-      { "ano": "1422", "titulo": "Segundo cerco otomano fracassado; Constantinopla ainda resiste" },
-      { "ano": "1451", "titulo": "Mehmed II sobe ao trono com 19 anos; faz da conquista seu projeto central" },
-      { "ano": "fev. 1453", "titulo": "Início do cerco; bombardas de Orban destroem progressivamente as muralhas" },
-      { "ano": "mai. 1453", "titulo": "Ataque por terra e por mar; cadeia bloqueando o Corno de Ouro é superada" },
-      { "ano": "29 mai. 1453", "titulo": "Muralhas rompidas ao amanhecer; Constantino XI morre em combate" }
+      {
+        "ano": "1422",
+        "titulo": "Segundo cerco otomano fracassado; Constantinopla ainda resiste"
+      },
+      {
+        "ano": "1451",
+        "titulo": "Mehmed II sobe ao trono com 19 anos; faz da conquista seu projeto central"
+      },
+      {
+        "ano": "fev. 1453",
+        "titulo": "Início do cerco; bombardas de Orban destroem progressivamente as muralhas"
+      },
+      {
+        "ano": "mai. 1453",
+        "titulo": "Ataque por terra e por mar; cadeia bloqueando o Corno de Ouro é superada"
+      },
+      {
+        "ano": "29 mai. 1453",
+        "titulo": "Muralhas rompidas ao amanhecer; Constantino XI morre em combate"
+      }
     ],
     "keywords": [
       "constantinopla",
@@ -959,6 +1389,20 @@
       "descobrimento-brasil",
       "reforma-protestante"
     ],
+    "relatedEventsContext": [
+      {
+        "slug": "queda-constantinopla",
+        "relacao": "A queda de Constantinopla em 1453 bloqueou as rotas terrestres para as Índias, forçando Espanha e Portugal a buscar caminhos alternativos pelo mar — o que levou Colombo ao Caribe em 1492."
+      },
+      {
+        "slug": "descobrimento-brasil",
+        "relacao": "O descobrimento da América e do Brasil são dois momentos do mesmo impulso exploratório: Colombo abriu o Atlântico em 1492 e Cabral chegou ao Brasil em 1500 durante uma expedição que contornava a África."
+      },
+      {
+        "slug": "reforma-protestante",
+        "relacao": "A riqueza trazida das Américas financiou monarquias e a Igreja — e as contradições dessa opulência foram um dos combustíveis que alimentaram a crítica de Lutero à corrupção eclesiástica."
+      }
+    ],
     "characters": [
       {
         "name": "Cristóvão Colombo",
@@ -987,12 +1431,30 @@
     ],
     "sources": [],
     "cronologia": [
-      { "ano": "1488", "titulo": "Bartolomeu Dias dobra o Cabo da Boa Esperança — Portugal aposta na rota africana" },
-      { "ano": "abr. 1492", "titulo": "Capitulações de Santa Fé: acordo com os Reis Católicos" },
-      { "ano": "3 ago. 1492", "titulo": "Colombo parte de Palos de la Frontera com três navios" },
-      { "ano": "12 out. 1492", "titulo": "Terra à vista: chegada a Guanahani (atuais Bahamas)" },
-      { "ano": "mar. 1493", "titulo": "Retorno à Espanha; início da colonização do Caribe" },
-      { "ano": "1494", "titulo": "Tratado de Tordesilhas divide o mundo entre Portugal e Espanha" }
+      {
+        "ano": "1488",
+        "titulo": "Bartolomeu Dias dobra o Cabo da Boa Esperança — Portugal aposta na rota africana"
+      },
+      {
+        "ano": "abr. 1492",
+        "titulo": "Capitulações de Santa Fé: acordo com os Reis Católicos"
+      },
+      {
+        "ano": "3 ago. 1492",
+        "titulo": "Colombo parte de Palos de la Frontera com três navios"
+      },
+      {
+        "ano": "12 out. 1492",
+        "titulo": "Terra à vista: chegada a Guanahani (atuais Bahamas)"
+      },
+      {
+        "ano": "mar. 1493",
+        "titulo": "Retorno à Espanha; início da colonização do Caribe"
+      },
+      {
+        "ano": "1494",
+        "titulo": "Tratado de Tordesilhas divide o mundo entre Portugal e Espanha"
+      }
     ],
     "keywords": [
       "colombo",
@@ -1025,6 +1487,20 @@
       "queda-constantinopla",
       "independencia-brasil"
     ],
+    "relatedEventsContext": [
+      {
+        "slug": "descobrimento-america",
+        "relacao": "O descobrimento do Brasil em 1500 foi consequência direta da abertura do Atlântico por Colombo em 1492: Cabral seguia a rota para as Índias quando encontrou o Brasil, oito anos após Colombo."
+      },
+      {
+        "slug": "queda-constantinopla",
+        "relacao": "A queda de Constantinopla em 1453 forçou Portugal a buscar rotas marítimas alternativas para o Oriente — o que levou às grandes navegações e ao encontro de Cabral com o Brasil em 1500."
+      },
+      {
+        "slug": "independencia-brasil",
+        "relacao": "O descobrimento de 1500 e a independência de 1822 delimitam os 322 anos da era colonial brasileira — do desembarque de Cabral na Bahia ao grito do Ipiranga de D. Pedro I."
+      }
+    ],
     "characters": [
       {
         "name": "Pedro Álvares Cabral",
@@ -1052,15 +1528,37 @@
       }
     ],
     "sources": [
-      { "title": "Carta de Pero Vaz de Caminha ao Rei Dom Manuel I (1500) — Arquivo Nacional da Torre do Tombo, Lisboa", "url": "", "tipo": "primária" }
+      {
+        "title": "Carta de Pero Vaz de Caminha ao Rei Dom Manuel I (1500) — Arquivo Nacional da Torre do Tombo, Lisboa",
+        "url": "",
+        "tipo": "primária"
+      }
     ],
     "cronologia": [
-      { "ano": "1494", "titulo": "Tratado de Tordesilhas divide o Atlântico entre Portugal e Espanha" },
-      { "ano": "9 mar. 1500", "titulo": "Cabral parte de Lisboa com 13 embarcações rumo à Índia" },
-      { "ano": "22 abr. 1500", "titulo": "Avistamento do Monte Pascoal; chegada ao litoral baiano" },
-      { "ano": "26 abr. 1500", "titulo": "Primeira missa rezada em solo brasileiro" },
-      { "ano": "mai. 1500", "titulo": "Pero Vaz de Caminha conclui a carta ao rei Dom Manuel I" },
-      { "ano": "1530", "titulo": "Início da colonização sistemática do território" }
+      {
+        "ano": "1494",
+        "titulo": "Tratado de Tordesilhas divide o Atlântico entre Portugal e Espanha"
+      },
+      {
+        "ano": "9 mar. 1500",
+        "titulo": "Cabral parte de Lisboa com 13 embarcações rumo à Índia"
+      },
+      {
+        "ano": "22 abr. 1500",
+        "titulo": "Avistamento do Monte Pascoal; chegada ao litoral baiano"
+      },
+      {
+        "ano": "26 abr. 1500",
+        "titulo": "Primeira missa rezada em solo brasileiro"
+      },
+      {
+        "ano": "mai. 1500",
+        "titulo": "Pero Vaz de Caminha conclui a carta ao rei Dom Manuel I"
+      },
+      {
+        "ano": "1530",
+        "titulo": "Início da colonização sistemática do território"
+      }
     ],
     "keywords": [
       "descobrimento do brasil",
@@ -1096,6 +1594,20 @@
       "magna-carta",
       "descobrimento-america"
     ],
+    "relatedEventsContext": [
+      {
+        "slug": "grande-cisma-oriente",
+        "relacao": "A Reforma Protestante de 1517 aprofundou a fragmentação cristã iniciada pelo Cisma de 1054: se o Cisma dividiu Oriente e Ocidente, a Reforma dividiu o próprio Ocidente em incontáveis denominações."
+      },
+      {
+        "slug": "magna-carta",
+        "relacao": "A Reforma Protestante e a Magna Carta são dois pilares dos direitos individuais no Ocidente: um limitou o poder do rei sobre o corpo, o outro limitou o poder do papa sobre a alma."
+      },
+      {
+        "slug": "descobrimento-america",
+        "relacao": "A Reforma e as grandes navegações são filhas do mesmo século: enquanto Lutero desafiava Roma em 1517, Espanha e Portugal construíam impérios além-mar cujas riquezas alimentavam a Igreja que a Reforma atacava."
+      }
+    ],
     "characters": [
       {
         "name": "Martinho Lutero",
@@ -1123,14 +1635,33 @@
       }
     ],
     "sources": [
-      { "title": "LUTERO, Martinho. 95 Teses (Disputatio pro Declaratione Virtutis Indulgentiarum, 1517)", "url": "", "tipo": "primária" }
+      {
+        "title": "LUTERO, Martinho. 95 Teses (Disputatio pro Declaratione Virtutis Indulgentiarum, 1517)",
+        "url": "",
+        "tipo": "primária"
+      }
     ],
     "cronologia": [
-      { "ano": "séc. XV", "titulo": "Pré-Reforma: críticas de Jan Hus e John Wycliffe à Igreja Católica" },
-      { "ano": "31 out. 1517", "titulo": "Lutero publica as 95 Teses em Wittenberg" },
-      { "ano": "1521", "titulo": "Dieta de Worms: Lutero recusa-se a retratar-se; papa Leão X o excomungou" },
-      { "ano": "1522–1534", "titulo": "Lutero traduz a Bíblia para o alemão vernáculo" },
-      { "ano": "1555", "titulo": "Paz de Augsburg: reconhecimento legal do protestantismo no Sacro Império" }
+      {
+        "ano": "séc. XV",
+        "titulo": "Pré-Reforma: críticas de Jan Hus e John Wycliffe à Igreja Católica"
+      },
+      {
+        "ano": "31 out. 1517",
+        "titulo": "Lutero publica as 95 Teses em Wittenberg"
+      },
+      {
+        "ano": "1521",
+        "titulo": "Dieta de Worms: Lutero recusa-se a retratar-se; papa Leão X o excomungou"
+      },
+      {
+        "ano": "1522–1534",
+        "titulo": "Lutero traduz a Bíblia para o alemão vernáculo"
+      },
+      {
+        "ano": "1555",
+        "titulo": "Paz de Augsburg: reconhecimento legal do protestantismo no Sacro Império"
+      }
     ],
     "keywords": [
       "reforma protestante",
@@ -1193,11 +1724,26 @@
     ],
     "sources": [],
     "cronologia": [
-      { "ano": "1764", "titulo": "James Hargreaves inventa a spinning jenny, mecanizando a fiação" },
-      { "ano": "1769", "titulo": "James Watt patenteia a máquina a vapor aperfeiçoada" },
-      { "ano": "1776", "titulo": "Adam Smith publica 'A Riqueza das Nações'" },
-      { "ano": "1825", "titulo": "Primeira ferrovia pública: Stockton a Darlington" },
-      { "ano": "c. 1840", "titulo": "Industrialização consolida-se na Grã-Bretanha; espalha-se pela Europa" }
+      {
+        "ano": "1764",
+        "titulo": "James Hargreaves inventa a spinning jenny, mecanizando a fiação"
+      },
+      {
+        "ano": "1769",
+        "titulo": "James Watt patenteia a máquina a vapor aperfeiçoada"
+      },
+      {
+        "ano": "1776",
+        "titulo": "Adam Smith publica 'A Riqueza das Nações'"
+      },
+      {
+        "ano": "1825",
+        "titulo": "Primeira ferrovia pública: Stockton a Darlington"
+      },
+      {
+        "ano": "c. 1840",
+        "titulo": "Industrialização consolida-se na Grã-Bretanha; espalha-se pela Europa"
+      }
     ],
     "keywords": [
       "revolucao industrial",
@@ -1233,6 +1779,20 @@
       "revolucao-francesa",
       "independencia-brasil"
     ],
+    "relatedEventsContext": [
+      {
+        "slug": "magna-carta",
+        "relacao": "Os colonos americanos invocaram a Magna Carta de 1215 como fundamento de seus direitos: a ideia de que o rei não pode taxar sem consentimento dos governados vinha diretamente do precedente inglês de sete séculos antes."
+      },
+      {
+        "slug": "revolucao-francesa",
+        "relacao": "A independência americana de 1776 foi o laboratório que provou ser possível fundar uma república baseada em direitos naturais — e esse exemplo inspirou diretamente a Revolução Francesa de 1789."
+      },
+      {
+        "slug": "independencia-brasil",
+        "relacao": "A independência americana demonstrou que colônias podiam romper com metrópoles europeias — e o modelo republicano norte-americano influenciou o movimento pela independência brasileira de 1822."
+      }
+    ],
     "characters": [
       {
         "name": "Thomas Jefferson",
@@ -1260,14 +1820,33 @@
       }
     ],
     "sources": [
-      { "title": "Declaração de Independência dos Estados Unidos (4 de julho de 1776) — National Archives, Washington D.C.", "url": "", "tipo": "primária" }
+      {
+        "title": "Declaração de Independência dos Estados Unidos (4 de julho de 1776) — National Archives, Washington D.C.",
+        "url": "",
+        "tipo": "primária"
+      }
     ],
     "cronologia": [
-      { "ano": "1763", "titulo": "Fim da Guerra dos Sete Anos; Grã-Bretanha impõe novos impostos às colônias" },
-      { "ano": "1773", "titulo": "Boston Tea Party: protesto contra o imposto sobre o chá" },
-      { "ano": "abr. 1775", "titulo": "Batalhas de Lexington e Concord: início da guerra de independência" },
-      { "ano": "4 jul. 1776", "titulo": "Declaração de Independência aprovada pelo Congresso Continental" },
-      { "ano": "1783", "titulo": "Tratado de Paris: Grã-Bretanha reconhece formalmente a independência" }
+      {
+        "ano": "1763",
+        "titulo": "Fim da Guerra dos Sete Anos; Grã-Bretanha impõe novos impostos às colônias"
+      },
+      {
+        "ano": "1773",
+        "titulo": "Boston Tea Party: protesto contra o imposto sobre o chá"
+      },
+      {
+        "ano": "abr. 1775",
+        "titulo": "Batalhas de Lexington e Concord: início da guerra de independência"
+      },
+      {
+        "ano": "4 jul. 1776",
+        "titulo": "Declaração de Independência aprovada pelo Congresso Continental"
+      },
+      {
+        "ano": "1783",
+        "titulo": "Tratado de Paris: Grã-Bretanha reconhece formalmente a independência"
+      }
     ],
     "keywords": [
       "independencia dos estados unidos",
@@ -1302,6 +1881,20 @@
       "independencia-brasil",
       "revolucao-industrial"
     ],
+    "relatedEventsContext": [
+      {
+        "slug": "independencia-estados-unidos",
+        "relacao": "A Revolução Francesa foi diretamente inspirada pela independência americana: muitos dos revolucionários, como Lafayette, haviam lutado ao lado de Washington e voltaram para a França com os ideais republicanos."
+      },
+      {
+        "slug": "independencia-brasil",
+        "relacao": "Os ideais da Revolução Francesa — liberdade, igualdade, fraternidade — atravessaram o Atlântico e alimentaram os movimentos de independência da América Latina, incluindo o Brasil de 1822."
+      },
+      {
+        "slug": "revolucao-industrial",
+        "relacao": "A Revolução Francesa destruiu o Antigo Regime político ao mesmo tempo em que a Revolução Industrial destruía o econômico — juntas, produziram o mundo moderno nos últimos anos do século XVIII."
+      }
+    ],
     "characters": [
       {
         "name": "Luís XVI",
@@ -1329,15 +1922,37 @@
       }
     ],
     "sources": [
-      { "title": "Declaração dos Direitos do Homem e do Cidadão (26 de agosto de 1789) — Archives Nationales, Paris", "url": "", "tipo": "primária" }
+      {
+        "title": "Declaração dos Direitos do Homem e do Cidadão (26 de agosto de 1789) — Archives Nationales, Paris",
+        "url": "",
+        "tipo": "primária"
+      }
     ],
     "cronologia": [
-      { "ano": "mai. 1789", "titulo": "Convocação dos Estados Gerais; Terceiro Estado forma Assembleia Nacional" },
-      { "ano": "14 jul. 1789", "titulo": "Queda da Bastilha" },
-      { "ano": "ago. 1789", "titulo": "Declaração dos Direitos do Homem e do Cidadão aprovada" },
-      { "ano": "set. 1792", "titulo": "Proclamação da República; Luís XVI guilhotinado em janeiro de 1793" },
-      { "ano": "1793–1794", "titulo": "O Terror: Robespierre conduz execuções em massa em nome da virtude" },
-      { "ano": "9 nov. 1799", "titulo": "Golpe de 18 Brumário: Napoleão toma o poder" }
+      {
+        "ano": "mai. 1789",
+        "titulo": "Convocação dos Estados Gerais; Terceiro Estado forma Assembleia Nacional"
+      },
+      {
+        "ano": "14 jul. 1789",
+        "titulo": "Queda da Bastilha"
+      },
+      {
+        "ano": "ago. 1789",
+        "titulo": "Declaração dos Direitos do Homem e do Cidadão aprovada"
+      },
+      {
+        "ano": "set. 1792",
+        "titulo": "Proclamação da República; Luís XVI guilhotinado em janeiro de 1793"
+      },
+      {
+        "ano": "1793–1794",
+        "titulo": "O Terror: Robespierre conduz execuções em massa em nome da virtude"
+      },
+      {
+        "ano": "9 nov. 1799",
+        "titulo": "Golpe de 18 Brumário: Napoleão toma o poder"
+      }
     ],
     "keywords": [
       "frança",
@@ -1371,6 +1986,20 @@
       "descobrimento-brasil",
       "revolucao-francesa"
     ],
+    "relatedEventsContext": [
+      {
+        "slug": "independencia-estados-unidos",
+        "relacao": "A independência americana de 1776 demonstrou que era possível romper com uma metrópole europeia — e o modelo norte-americano influenciou os intelectuais brasileiros que articularam a independência de 1822."
+      },
+      {
+        "slug": "descobrimento-brasil",
+        "relacao": "O descobrimento de 1500 e a independência de 1822 demarcam os 322 anos do Brasil como colônia portuguesa — de Cabral ao grito do Ipiranga, uma trajetória completa."
+      },
+      {
+        "slug": "revolucao-francesa",
+        "relacao": "Os ideais iluministas da Revolução Francesa chegaram ao Brasil via Portugal e inspiraram a geração de D. Pedro I — a retórica dos direitos naturais e da soberania popular moldou o discurso da independência de 1822."
+      }
+    ],
     "characters": [
       {
         "name": "Dom Pedro I",
@@ -1399,12 +2028,30 @@
     ],
     "sources": [],
     "cronologia": [
-      { "ano": "1808", "titulo": "Corte portuguesa chega ao Rio; Brasil elevado a sede do Império" },
-      { "ano": "1820", "titulo": "Revolução Liberal do Porto exige recolonização e retorno do rei" },
-      { "ano": "9 jan. 1822", "titulo": "\"Dia do Fico\": D. Pedro recusa retornar a Portugal" },
-      { "ano": "7 set. 1822", "titulo": "Grito do Ipiranga: D. Pedro rompe com Portugal às margens do Ipiranga" },
-      { "ano": "dez. 1822", "titulo": "D. Pedro I coroado Primeiro Imperador do Brasil" },
-      { "ano": "1825", "titulo": "Portugal reconhece a independência mediante indenização mediada pelos britânicos" }
+      {
+        "ano": "1808",
+        "titulo": "Corte portuguesa chega ao Rio; Brasil elevado a sede do Império"
+      },
+      {
+        "ano": "1820",
+        "titulo": "Revolução Liberal do Porto exige recolonização e retorno do rei"
+      },
+      {
+        "ano": "9 jan. 1822",
+        "titulo": "\"Dia do Fico\": D. Pedro recusa retornar a Portugal"
+      },
+      {
+        "ano": "7 set. 1822",
+        "titulo": "Grito do Ipiranga: D. Pedro rompe com Portugal às margens do Ipiranga"
+      },
+      {
+        "ano": "dez. 1822",
+        "titulo": "D. Pedro I coroado Primeiro Imperador do Brasil"
+      },
+      {
+        "ano": "1825",
+        "titulo": "Portugal reconhece a independência mediante indenização mediada pelos britânicos"
+      }
     ],
     "keywords": [
       "independencia do brasil",
@@ -1439,6 +2086,20 @@
       "fim-segunda-guerra-mundial",
       "revolucao-industrial"
     ],
+    "relatedEventsContext": [
+      {
+        "slug": "revolucao-russa",
+        "relacao": "A Primeira Guerra Mundial criou as condições para a Revolução Russa: as humilhantes derrotas do exército czarista, a fome nas cidades e o colapso da legitimidade do regime abriram o caminho para os bolcheviques."
+      },
+      {
+        "slug": "fim-segunda-guerra-mundial",
+        "relacao": "A Primeira Guerra Mundial foi a causa direta da Segunda: o Tratado de Versalhes de 1919, com suas reparações humilhantes à Alemanha, criou o ressentimento que Hitler explorou para chegar ao poder."
+      },
+      {
+        "slug": "revolucao-industrial",
+        "relacao": "A Primeira Guerra Mundial foi possível graças à Revolução Industrial: ferrovias para mover exércitos de milhões, indústria química para fabricar gases tóxicos, metalurgia para produzir obuses em série."
+      }
+    ],
     "characters": [
       {
         "name": "Gavrilo Princip",
@@ -1467,11 +2128,26 @@
     ],
     "sources": [],
     "cronologia": [
-      { "ano": "28 jun. 1914", "titulo": "Assassinato do Arquiduque Francisco Ferdinando em Sarajevo" },
-      { "ano": "ago. 1914", "titulo": "Mobilizações em cascata; guerra declarada por todas as grandes potências" },
-      { "ano": "1915–1917", "titulo": "Guerra de trincheiras na frente ocidental; avanços mínimos com custo enorme" },
-      { "ano": "abr. 1917", "titulo": "EUA entram na guerra; Rússia se retira após a Revolução" },
-      { "ano": "11 nov. 1918", "titulo": "Armistício; Tratado de Versalhes assinado em junho de 1919" }
+      {
+        "ano": "28 jun. 1914",
+        "titulo": "Assassinato do Arquiduque Francisco Ferdinando em Sarajevo"
+      },
+      {
+        "ano": "ago. 1914",
+        "titulo": "Mobilizações em cascata; guerra declarada por todas as grandes potências"
+      },
+      {
+        "ano": "1915–1917",
+        "titulo": "Guerra de trincheiras na frente ocidental; avanços mínimos com custo enorme"
+      },
+      {
+        "ano": "abr. 1917",
+        "titulo": "EUA entram na guerra; Rússia se retira após a Revolução"
+      },
+      {
+        "ano": "11 nov. 1918",
+        "titulo": "Armistício; Tratado de Versalhes assinado em junho de 1919"
+      }
     ],
     "keywords": [
       "primeira guerra mundial",
@@ -1507,6 +2183,20 @@
       "queda-muro-berlim",
       "fim-segunda-guerra-mundial"
     ],
+    "relatedEventsContext": [
+      {
+        "slug": "primeira-guerra-mundial",
+        "relacao": "A Primeira Guerra Mundial foi o gatilho da Revolução Russa: as derrotas militares, a fome e a crise do regime czarista criaram o caos que Lenin e os bolcheviques transformaram em revolução."
+      },
+      {
+        "slug": "queda-muro-berlim",
+        "relacao": "A Revolução Russa de 1917 criou a URSS que o Muro de Berlim simbolizava — e a queda do Muro em 1989 foi o primeiro sinal do colapso soviético que se completaria em 1991."
+      },
+      {
+        "slug": "fim-segunda-guerra-mundial",
+        "relacao": "A Revolução Russa transformou a Rússia na URSS que, sob Stálin, enfrentou e derrotou Hitler na Frente Oriental — sem a Revolução de 1917, a Segunda Guerra teria tido um desfecho completamente diferente."
+      }
+    ],
     "characters": [
       {
         "name": "Nicolau II",
@@ -1535,12 +2225,30 @@
     ],
     "sources": [],
     "cronologia": [
-      { "ano": "fev. 1917", "titulo": "Greve em Petrogrado; Nicolau II abdica; Governo Provisório assume" },
-      { "ano": "abr. 1917", "titulo": "Lênin retorna do exílio com as Teses de Abril" },
-      { "ano": "jul. 1917", "titulo": "Tentativa fracassada de tomada do poder pelos bolcheviques (Dias de Julho)" },
-      { "ano": "out. 1917", "titulo": "Bolcheviques tomam o Palácio de Inverno; Governo Provisório deposto" },
-      { "ano": "1918–1921", "titulo": "Guerra Civil; Exército Vermelho derrota os Brancos" },
-      { "ano": "1922", "titulo": "Formação da União das Repúblicas Socialistas Soviéticas (URSS)" }
+      {
+        "ano": "fev. 1917",
+        "titulo": "Greve em Petrogrado; Nicolau II abdica; Governo Provisório assume"
+      },
+      {
+        "ano": "abr. 1917",
+        "titulo": "Lênin retorna do exílio com as Teses de Abril"
+      },
+      {
+        "ano": "jul. 1917",
+        "titulo": "Tentativa fracassada de tomada do poder pelos bolcheviques (Dias de Julho)"
+      },
+      {
+        "ano": "out. 1917",
+        "titulo": "Bolcheviques tomam o Palácio de Inverno; Governo Provisório deposto"
+      },
+      {
+        "ano": "1918–1921",
+        "titulo": "Guerra Civil; Exército Vermelho derrota os Brancos"
+      },
+      {
+        "ano": "1922",
+        "titulo": "Formação da União das Repúblicas Socialistas Soviéticas (URSS)"
+      }
     ],
     "keywords": [
       "revolucao russa",
@@ -1598,12 +2306,30 @@
     ],
     "sources": [],
     "cronologia": [
-      { "ano": "24 out. 1929", "titulo": "Quinta-Feira Negra: início do pânico na Bolsa de Nova York" },
-      { "ano": "29 out. 1929", "titulo": "Terça-Feira Negra: colapso total; mercado perde US$ 14 bilhões" },
-      { "ano": "1930–1932", "titulo": "Ondas de falências bancárias; desemprego sobe para 25% nos EUA" },
-      { "ano": "nov. 1932", "titulo": "Roosevelt eleito presidente com promessa do New Deal" },
-      { "ano": "1933–1938", "titulo": "New Deal: obras públicas, reforma bancária e Previdência Social" },
-      { "ano": "1939", "titulo": "Mobilização industrial da Segunda Guerra inicia a recuperação plena" }
+      {
+        "ano": "24 out. 1929",
+        "titulo": "Quinta-Feira Negra: início do pânico na Bolsa de Nova York"
+      },
+      {
+        "ano": "29 out. 1929",
+        "titulo": "Terça-Feira Negra: colapso total; mercado perde US$ 14 bilhões"
+      },
+      {
+        "ano": "1930–1932",
+        "titulo": "Ondas de falências bancárias; desemprego sobe para 25% nos EUA"
+      },
+      {
+        "ano": "nov. 1932",
+        "titulo": "Roosevelt eleito presidente com promessa do New Deal"
+      },
+      {
+        "ano": "1933–1938",
+        "titulo": "New Deal: obras públicas, reforma bancária e Previdência Social"
+      },
+      {
+        "ano": "1939",
+        "titulo": "Mobilização industrial da Segunda Guerra inicia a recuperação plena"
+      }
     ],
     "keywords": [
       "grande depressao",
@@ -1640,6 +2366,24 @@
       "primeira-guerra-mundial",
       "grande-depressao-1929"
     ],
+    "relatedEventsContext": [
+      {
+        "slug": "chegada-homem-lua",
+        "relacao": "A corrida espacial que levou o homem à Lua em 1969 nasceu da Segunda Guerra Mundial: os foguetes V-2 alemães foram capturados pelos americanos e tornaram-se a base do programa Apollo."
+      },
+      {
+        "slug": "queda-muro-berlim",
+        "relacao": "A Segunda Guerra Mundial dividiu a Europa entre ocidente liberal e oriente soviético — e o Muro de Berlim, construído em 1961, foi a expressão física mais brutal dessa divisão que o fim da guerra havia criado."
+      },
+      {
+        "slug": "primeira-guerra-mundial",
+        "relacao": "A Segunda Guerra foi uma continuação direta da Primeira: as condições do Tratado de Versalhes que encerraram a Primeira Guerra criaram o ressentimento alemão que Hitler transformou em Segunda Guerra."
+      },
+      {
+        "slug": "grande-depressao-1929",
+        "relacao": "A Grande Depressão foi o elo entre as duas guerras mundiais: ao destruir a economia alemã e gerar desemprego em massa, ela permitiu a ascensão do nazismo que levou à Segunda Guerra."
+      }
+    ],
     "characters": [
       {
         "name": "Harry S. Truman",
@@ -1668,13 +2412,34 @@
     ],
     "sources": [],
     "cronologia": [
-      { "ano": "set. 1939", "titulo": "Alemanha invade a Polônia; França e Reino Unido declaram guerra" },
-      { "ano": "jun. 1941", "titulo": "Alemanha invade a URSS; abre-se a frente oriental" },
-      { "ano": "dez. 1941", "titulo": "Ataque japonês a Pearl Harbor; EUA entram no conflito" },
-      { "ano": "6 jun. 1944", "titulo": "Dia D: desembarque aliado na Normandia" },
-      { "ano": "30 abr. 1945", "titulo": "Suicídio de Hitler; capitulação alemã em 8 de maio" },
-      { "ano": "6–9 ago. 1945", "titulo": "Bombas atômicas em Hiroshima e Nagasaki" },
-      { "ano": "2 set. 1945", "titulo": "Rendição formal do Japão; fim da guerra" }
+      {
+        "ano": "set. 1939",
+        "titulo": "Alemanha invade a Polônia; França e Reino Unido declaram guerra"
+      },
+      {
+        "ano": "jun. 1941",
+        "titulo": "Alemanha invade a URSS; abre-se a frente oriental"
+      },
+      {
+        "ano": "dez. 1941",
+        "titulo": "Ataque japonês a Pearl Harbor; EUA entram no conflito"
+      },
+      {
+        "ano": "6 jun. 1944",
+        "titulo": "Dia D: desembarque aliado na Normandia"
+      },
+      {
+        "ano": "30 abr. 1945",
+        "titulo": "Suicídio de Hitler; capitulação alemã em 8 de maio"
+      },
+      {
+        "ano": "6–9 ago. 1945",
+        "titulo": "Bombas atômicas em Hiroshima e Nagasaki"
+      },
+      {
+        "ano": "2 set. 1945",
+        "titulo": "Rendição formal do Japão; fim da guerra"
+      }
     ],
     "keywords": [
       "segunda guerra mundial",
@@ -1709,6 +2474,16 @@
       "fim-segunda-guerra-mundial",
       "queda-muro-berlim"
     ],
+    "relatedEventsContext": [
+      {
+        "slug": "fim-segunda-guerra-mundial",
+        "relacao": "A Segunda Guerra Mundial enfraqueceu decisivamente o poder britânico: a Grã-Bretanha saiu da guerra endividada e exausta, incapaz de manter seu império — o que tornou a independência da Índia em 1947 inevitável."
+      },
+      {
+        "slug": "queda-muro-berlim",
+        "relacao": "A independência da Índia e a queda do Muro são dois marcos do colapso do imperialismo europeu: o primeiro encerrou o Império Britânico, o segundo encerrou o Império Soviético — 42 anos separaram os dois."
+      }
+    ],
     "characters": [
       {
         "name": "Mahatma Gandhi",
@@ -1737,12 +2512,30 @@
     ],
     "sources": [],
     "cronologia": [
-      { "ano": "1919", "titulo": "Massacre de Amritsar; Gandhi lidera a resistência civil organizada" },
-      { "ano": "1930", "titulo": "Marcha do Sal: desobediência civil em massa contra o monopólio britânico" },
-      { "ano": "1942", "titulo": "Movimento 'Quit India': Gandhi exige saída britânica imediata" },
-      { "ano": "mar. 1947", "titulo": "Lord Mountbatten chega à Índia para negociar a transferência de poder" },
-      { "ano": "15 ago. 1947", "titulo": "Independência simultânea da Índia e do Paquistão" },
-      { "ano": "30 jan. 1948", "titulo": "Assassinato de Gandhi por extremista hindu" }
+      {
+        "ano": "1919",
+        "titulo": "Massacre de Amritsar; Gandhi lidera a resistência civil organizada"
+      },
+      {
+        "ano": "1930",
+        "titulo": "Marcha do Sal: desobediência civil em massa contra o monopólio britânico"
+      },
+      {
+        "ano": "1942",
+        "titulo": "Movimento 'Quit India': Gandhi exige saída britânica imediata"
+      },
+      {
+        "ano": "mar. 1947",
+        "titulo": "Lord Mountbatten chega à Índia para negociar a transferência de poder"
+      },
+      {
+        "ano": "15 ago. 1947",
+        "titulo": "Independência simultânea da Índia e do Paquistão"
+      },
+      {
+        "ano": "30 jan. 1948",
+        "titulo": "Assassinato de Gandhi por extremista hindu"
+      }
     ],
     "keywords": [
       "independencia da india",
@@ -1778,6 +2571,20 @@
       "revolucao-russa",
       "queda-muro-berlim"
     ],
+    "relatedEventsContext": [
+      {
+        "slug": "fim-segunda-guerra-mundial",
+        "relacao": "Os foguetes que levaram o homem à Lua eram desenvolvimentos diretos dos V-2 alemães da Segunda Guerra: Werner von Braun, o engenheiro dos V-2, foi o arquiteto principal do programa Apollo."
+      },
+      {
+        "slug": "revolucao-russa",
+        "relacao": "A corrida espacial foi um capítulo da Guerra Fria entre EUA e URSS — rivalidade que havia começado quando a Revolução Russa criou o primeiro Estado comunista em oposição ao capitalismo americano."
+      },
+      {
+        "slug": "queda-muro-berlim",
+        "relacao": "A corrida que levou o homem à Lua foi um produto da rivalidade soviético-americana que o Muro simbolizava — quando a URSS colapsou, o modelo de grandes programas espaciais financiados pela rivalidade geopolítica terminou junto."
+      }
+    ],
     "characters": [
       {
         "name": "Neil Armstrong",
@@ -1806,12 +2613,30 @@
     ],
     "sources": [],
     "cronologia": [
-      { "ano": "out. 1957", "titulo": "URSS lança o Sputnik, primeiro satélite artificial da história" },
-      { "ano": "abr. 1961", "titulo": "Iuri Gagarin: primeiro ser humano a orbitar a Terra" },
-      { "ano": "mai. 1961", "titulo": "Kennedy anuncia ao Congresso a meta de pousar na Lua antes de 1970" },
-      { "ano": "jan. 1967", "titulo": "Incêndio da Apollo 1 mata três astronautas; programa reformulado" },
-      { "ano": "dez. 1968", "titulo": "Apollo 8: primeira tripulação a orbitar a Lua" },
-      { "ano": "20 jul. 1969", "titulo": "Apollo 11 pousa na Lua; Neil Armstrong dá o primeiro passo humano no satélite" }
+      {
+        "ano": "out. 1957",
+        "titulo": "URSS lança o Sputnik, primeiro satélite artificial da história"
+      },
+      {
+        "ano": "abr. 1961",
+        "titulo": "Iuri Gagarin: primeiro ser humano a orbitar a Terra"
+      },
+      {
+        "ano": "mai. 1961",
+        "titulo": "Kennedy anuncia ao Congresso a meta de pousar na Lua antes de 1970"
+      },
+      {
+        "ano": "jan. 1967",
+        "titulo": "Incêndio da Apollo 1 mata três astronautas; programa reformulado"
+      },
+      {
+        "ano": "dez. 1968",
+        "titulo": "Apollo 8: primeira tripulação a orbitar a Lua"
+      },
+      {
+        "ano": "20 jul. 1969",
+        "titulo": "Apollo 11 pousa na Lua; Neil Armstrong dá o primeiro passo humano no satélite"
+      }
     ],
     "keywords": [
       "lua",
@@ -1845,6 +2670,20 @@
       "revolucao-russa",
       "chegada-homem-lua"
     ],
+    "relatedEventsContext": [
+      {
+        "slug": "fim-segunda-guerra-mundial",
+        "relacao": "O Muro de Berlim foi erguido em 1961 como consequência direta da divisão da Alemanha determinada pelos Aliados em 1945 — e sua queda em 1989 encerrou simbolicamente o mundo que a Segunda Guerra havia criado."
+      },
+      {
+        "slug": "revolucao-russa",
+        "relacao": "A Revolução Russa de 1917 criou o sistema soviético que o Muro de Berlim representava — a queda do Muro foi o prenúncio do colapso da URSS em 1991, encerrando o ciclo iniciado pelos bolcheviques."
+      },
+      {
+        "slug": "chegada-homem-lua",
+        "relacao": "A corrida espacial que levou o homem à Lua foi combustível da rivalidade que o Muro simbolizava — quando o Muro caiu em 1989, a Guerra Fria que havia motivado a corrida espacial chegava ao fim."
+      }
+    ],
     "characters": [
       {
         "name": "Mikhail Gorbachev",
@@ -1873,12 +2712,30 @@
     ],
     "sources": [],
     "cronologia": [
-      { "ano": "13 ago. 1961", "titulo": "Construção do Muro de Berlim começa na madrugada" },
-      { "ano": "1985", "titulo": "Gorbachev assume a liderança soviética; glasnost e perestroika" },
-      { "ano": "out. 1989", "titulo": "Protestos em massa na RDA; Honecker é substituído por Egon Krenz" },
-      { "ano": "9 nov. 1989", "titulo": "Anúncio imprevisto de Schabowski; Muro aberto naquela mesma noite" },
-      { "ano": "3 out. 1990", "titulo": "Reunificação formal da Alemanha" },
-      { "ano": "dez. 1991", "titulo": "Dissolução da União Soviética; fim da Guerra Fria" }
+      {
+        "ano": "13 ago. 1961",
+        "titulo": "Construção do Muro de Berlim começa na madrugada"
+      },
+      {
+        "ano": "1985",
+        "titulo": "Gorbachev assume a liderança soviética; glasnost e perestroika"
+      },
+      {
+        "ano": "out. 1989",
+        "titulo": "Protestos em massa na RDA; Honecker é substituído por Egon Krenz"
+      },
+      {
+        "ano": "9 nov. 1989",
+        "titulo": "Anúncio imprevisto de Schabowski; Muro aberto naquela mesma noite"
+      },
+      {
+        "ano": "3 out. 1990",
+        "titulo": "Reunificação formal da Alemanha"
+      },
+      {
+        "ano": "dez. 1991",
+        "titulo": "Dissolução da União Soviética; fim da Guerra Fria"
+      }
     ],
     "keywords": [
       "muro de berlim",
@@ -1913,6 +2770,20 @@
       "queda-constantinopla",
       "peste-negra"
     ],
+    "relatedEventsContext": [
+      {
+        "slug": "primeira-cruzada",
+        "relacao": "As Cruzadas e a ascensão mongol ocorreram em paralelo: enquanto cruzados cristãos tentavam reconquistar Jerusalém, Gengis Khan construía o maior império terrestre da história nas estepes da Ásia Central."
+      },
+      {
+        "slug": "queda-constantinopla",
+        "relacao": "Os mongóis enfraqueceram os turcos seljúcidas, que enfraqueceram Bizâncio, preparando o terreno para o Império Otomano que finalmente tomaria Constantinopla em 1453 — uma cadeia de consequências que remonta a Gengis Khan."
+      },
+      {
+        "slug": "peste-negra",
+        "relacao": "O Império Mongol criou as condições para a Peste Negra: ao conectar pela primeira vez a Europa ao leste asiático por rotas comerciais seguras, abriu o caminho para a propagação da Yersinia pestis."
+      }
+    ],
     "characters": [
       {
         "name": "Genghis Khan",
@@ -1935,13 +2806,34 @@
     ],
     "sources": [],
     "cronologia": [
-      { "ano": "1206", "titulo": "Kurultai: Temüjin é proclamado Genghis Khan — início do Império Mongol" },
-      { "ano": "1211–1215", "titulo": "Invasão do Império Jin; saque de Zhongdu (atual Pequim)" },
-      { "ano": "1219–1221", "titulo": "Conquista do Império Corásmio; Samarcanda e Bukhara destruídas" },
-      { "ano": "1237–1242", "titulo": "Batu Khan invade a Rússia e o Leste Europeu; Kiev destruída" },
-      { "ano": "1258", "titulo": "Saque de Bagdá; execução do último califa abássida — fim do Califado" },
-      { "ano": "1260", "titulo": "Batalha de Ain Jalut: mamelucos detêm os mongóis; divisão do Império em khanatos" },
-      { "ano": "1279", "titulo": "Kublai Khan conquista a China Song; Império Mongol no auge (≈ 24 milhões km²)" }
+      {
+        "ano": "1206",
+        "titulo": "Kurultai: Temüjin é proclamado Genghis Khan — início do Império Mongol"
+      },
+      {
+        "ano": "1211–1215",
+        "titulo": "Invasão do Império Jin; saque de Zhongdu (atual Pequim)"
+      },
+      {
+        "ano": "1219–1221",
+        "titulo": "Conquista do Império Corásmio; Samarcanda e Bukhara destruídas"
+      },
+      {
+        "ano": "1237–1242",
+        "titulo": "Batu Khan invade a Rússia e o Leste Europeu; Kiev destruída"
+      },
+      {
+        "ano": "1258",
+        "titulo": "Saque de Bagdá; execução do último califa abássida — fim do Califado"
+      },
+      {
+        "ano": "1260",
+        "titulo": "Batalha de Ain Jalut: mamelucos detêm os mongóis; divisão do Império em khanatos"
+      },
+      {
+        "ano": "1279",
+        "titulo": "Kublai Khan conquista a China Song; Império Mongol no auge (≈ 24 milhões km²)"
+      }
     ],
     "keywords": [
       "genghis khan",
@@ -1977,6 +2869,20 @@
       "revolucao-industrial",
       "revolucao-francesa"
     ],
+    "relatedEventsContext": [
+      {
+        "slug": "reforma-protestante",
+        "relacao": "A Reforma Protestante e a Revolução Científica são filhas do mesmo impulso: questionar a autoridade estabelecida. Se Lutero questionou o papa, Galileu questionou Aristóteles — ambos pagaram preço por isso."
+      },
+      {
+        "slug": "revolucao-industrial",
+        "relacao": "A Revolução Científica foi o fundamento intelectual da Revolução Industrial: sem a física de Newton, a química de Lavoisier e a termodinâmica, não haveria máquina a vapor eficiente."
+      },
+      {
+        "slug": "revolucao-francesa",
+        "relacao": "O Iluminismo, filho da Revolução Científica, forneceu a linguagem e os argumentos com que os revolucionários franceses derrubaram o Antigo Regime em 1789."
+      }
+    ],
     "characters": [
       {
         "name": "Nicolau Copérnico",
@@ -1999,13 +2905,34 @@
     ],
     "sources": [],
     "cronologia": [
-      { "ano": "1543", "titulo": "Copérnico publica 'De revolutionibus' — a Terra orbita o Sol, não o contrário" },
-      { "ano": "1609–1619", "titulo": "Kepler formula as três leis do movimento planetário (órbitas elípticas)" },
-      { "ano": "1610", "titulo": "Galileu aponta o telescópio ao céu; descobre as quatro luas de Júpiter" },
-      { "ano": "1628", "titulo": "Harvey publica a descoberta da circulação contínua do sangue" },
-      { "ano": "1633", "titulo": "Galileu é condenado pela Inquisição; forçado a abjurar o heliocentrismo" },
-      { "ano": "1660–1666", "titulo": "Fundação da Royal Society (Londres) e da Académie des Sciences (Paris)" },
-      { "ano": "1687", "titulo": "Newton publica os Principia Mathematica — lei da gravitação universal" }
+      {
+        "ano": "1543",
+        "titulo": "Copérnico publica 'De revolutionibus' — a Terra orbita o Sol, não o contrário"
+      },
+      {
+        "ano": "1609–1619",
+        "titulo": "Kepler formula as três leis do movimento planetário (órbitas elípticas)"
+      },
+      {
+        "ano": "1610",
+        "titulo": "Galileu aponta o telescópio ao céu; descobre as quatro luas de Júpiter"
+      },
+      {
+        "ano": "1628",
+        "titulo": "Harvey publica a descoberta da circulação contínua do sangue"
+      },
+      {
+        "ano": "1633",
+        "titulo": "Galileu é condenado pela Inquisição; forçado a abjurar o heliocentrismo"
+      },
+      {
+        "ano": "1660–1666",
+        "titulo": "Fundação da Royal Society (Londres) e da Académie des Sciences (Paris)"
+      },
+      {
+        "ano": "1687",
+        "titulo": "Newton publica os Principia Mathematica — lei da gravitação universal"
+      }
     ],
     "keywords": [
       "revolução científica",
@@ -2041,6 +2968,20 @@
       "independencia-brasil",
       "primeira-guerra-mundial"
     ],
+    "relatedEventsContext": [
+      {
+        "slug": "revolucao-francesa",
+        "relacao": "As Guerras Napoleônicas foram a exportação armada da Revolução Francesa: Napoleão levou os ideais de liberdade, igualdade e fraternidade até Moscou — e os nacionaismos que despertou destruíram seu próprio império."
+      },
+      {
+        "slug": "independencia-brasil",
+        "relacao": "As invasões napoleônicas forçaram a família real portuguesa a fugir para o Brasil em 1808 — tornando o Rio de Janeiro capital do império e plantando a semente que germinou na independência de 1822."
+      },
+      {
+        "slug": "primeira-guerra-mundial",
+        "relacao": "Napoleão redesenhou o mapa europeu e criou os nacionaismos que um século depois colidiram na Primeira Guerra Mundial — os estados que ele fundou e destruiu tornaram-se os beligerantes de 1914."
+      }
+    ],
     "characters": [
       {
         "name": "Napoleão Bonaparte",
@@ -2063,13 +3004,34 @@
     ],
     "sources": [],
     "cronologia": [
-      { "ano": "nov. 1799", "titulo": "Golpe do 18 Brumário: Napoleão torna-se Primeiro Cônsul" },
-      { "ano": "dez. 1804", "titulo": "Napoleão coroa-se Imperador em Notre-Dame, diante do papa Pio VII" },
-      { "ano": "dez. 1805", "titulo": "Batalha de Austerlitz: maior vitória napoleônica, contra Áustria e Rússia" },
-      { "ano": "1808", "titulo": "Invasão da Espanha; início da guerrilha ibérica — a 'úlcera espanhola'" },
-      { "ano": "1812", "titulo": "Invasão da Rússia: Grande Armée entra com 600 mil; volta com menos de 120 mil" },
-      { "ano": "out. 1813", "titulo": "Batalha de Leipzig ('das Nações'): coalizão derrota Napoleão" },
-      { "ano": "jun. 1815", "titulo": "Batalha de Waterloo; abdicação; exílio em Santa Helena" }
+      {
+        "ano": "nov. 1799",
+        "titulo": "Golpe do 18 Brumário: Napoleão torna-se Primeiro Cônsul"
+      },
+      {
+        "ano": "dez. 1804",
+        "titulo": "Napoleão coroa-se Imperador em Notre-Dame, diante do papa Pio VII"
+      },
+      {
+        "ano": "dez. 1805",
+        "titulo": "Batalha de Austerlitz: maior vitória napoleônica, contra Áustria e Rússia"
+      },
+      {
+        "ano": "1808",
+        "titulo": "Invasão da Espanha; início da guerrilha ibérica — a 'úlcera espanhola'"
+      },
+      {
+        "ano": "1812",
+        "titulo": "Invasão da Rússia: Grande Armée entra com 600 mil; volta com menos de 120 mil"
+      },
+      {
+        "ano": "out. 1813",
+        "titulo": "Batalha de Leipzig ('das Nações'): coalizão derrota Napoleão"
+      },
+      {
+        "ano": "jun. 1815",
+        "titulo": "Batalha de Waterloo; abdicação; exílio em Santa Helena"
+      }
     ],
     "keywords": [
       "napoleão bonaparte",
@@ -2105,6 +3067,20 @@
       "fim-segunda-guerra-mundial",
       "independencia-india"
     ],
+    "relatedEventsContext": [
+      {
+        "slug": "primeira-guerra-mundial",
+        "relacao": "A Conferência de Berlim de 1884 dividiu a África entre as potências europeias — e a disputa por colônias africanas foi um dos elementos da rivalidade entre Alemanha, França e Grã-Bretanha que explodiu na Primeira Guerra."
+      },
+      {
+        "slug": "fim-segunda-guerra-mundial",
+        "relacao": "O fim da Segunda Guerra Mundial deu início ao processo de descolonização que desmontou o que a Conferência de Berlim havia construído: 14 potências haviam dividido a África em 1884; décadas depois, devolviam-na."
+      },
+      {
+        "slug": "independencia-india",
+        "relacao": "A independência da Índia em 1947 abriu a era das descolonizações que desfaria o mundo criado pela Conferência de Berlim — a África e a Ásia que os europeus haviam partilhado reclamavam sua soberania."
+      }
+    ],
     "characters": [
       {
         "name": "Otto von Bismarck",
@@ -2127,12 +3103,30 @@
     ],
     "sources": [],
     "cronologia": [
-      { "ano": "1880", "titulo": "Potências europeias controlam ≈ 10% da África; corrida colonial acelera" },
-      { "ano": "15 nov. 1884", "titulo": "Conferência de Berlim tem início; 14 países europeus presentes, nenhum africano" },
-      { "ano": "26 fev. 1885", "titulo": "Ato Geral de Berlim assinado: 'ocupação efetiva' regulamenta a partilha" },
-      { "ano": "1 mar. 1896", "titulo": "Batalha de Adwa: Etiópia derrota a Itália — única nação africana a resistir à colonização" },
-      { "ano": "1904–1908", "titulo": "Genocídio dos herero e nama pelos alemães na atual Namíbia" },
-      { "ano": "1914", "titulo": "África quase inteiramente colonizada; apenas Etiópia e Libéria independentes" }
+      {
+        "ano": "1880",
+        "titulo": "Potências europeias controlam ≈ 10% da África; corrida colonial acelera"
+      },
+      {
+        "ano": "15 nov. 1884",
+        "titulo": "Conferência de Berlim tem início; 14 países europeus presentes, nenhum africano"
+      },
+      {
+        "ano": "26 fev. 1885",
+        "titulo": "Ato Geral de Berlim assinado: 'ocupação efetiva' regulamenta a partilha"
+      },
+      {
+        "ano": "1 mar. 1896",
+        "titulo": "Batalha de Adwa: Etiópia derrota a Itália — única nação africana a resistir à colonização"
+      },
+      {
+        "ano": "1904–1908",
+        "titulo": "Genocídio dos herero e nama pelos alemães na atual Namíbia"
+      },
+      {
+        "ano": "1914",
+        "titulo": "África quase inteiramente colonizada; apenas Etiópia e Libéria independentes"
+      }
     ],
     "keywords": [
       "conferência de berlim",
@@ -2168,6 +3162,20 @@
       "descobrimento-brasil",
       "independencia-estados-unidos"
     ],
+    "relatedEventsContext": [
+      {
+        "slug": "independencia-brasil",
+        "relacao": "O Brasil proclamou sua independência em 1822 mantendo a escravidão — e a Lei Áurea de 1888 foi o encerramento tardio de uma contradição que havia definido os primeiros 66 anos do país independente."
+      },
+      {
+        "slug": "descobrimento-brasil",
+        "relacao": "A escravidão africana foi introduzida no Brasil décadas após o descobrimento de 1500, como solução econômica para a produção de açúcar — e sua abolição em 1888 encerrou quase 350 anos de uma história que começou na colônia."
+      },
+      {
+        "slug": "independencia-estados-unidos",
+        "relacao": "Os EUA aboliram a escravidão em 1865, após uma guerra civil, enquanto o Brasil a manteve até 1888 — os dois países que mais importaram escravizados africanos das Américas seguiram caminhos opostos para o mesmo fim."
+      }
+    ],
     "characters": [
       {
         "name": "Princesa Isabel",
@@ -2190,12 +3198,30 @@
     ],
     "sources": [],
     "cronologia": [
-      { "ano": "1850", "titulo": "Lei Eusébio de Queirós proíbe o tráfico transatlântico de escravizados" },
-      { "ano": "1871", "titulo": "Lei do Ventre Livre: filhos de escravizadas nascem livres a partir dessa data" },
-      { "ano": "1883", "titulo": "Joaquim Nabuco publica 'O Abolicionismo'; Sociedade Brasileira contra a Escravidão" },
-      { "ano": "1885", "titulo": "Lei dos Sexagenários: liberta escravizados com mais de 60 anos" },
-      { "ano": "13 mai. 1888", "titulo": "Princesa Isabel assina a Lei Áurea — fim da escravidão no Brasil" },
-      { "ano": "15 nov. 1889", "titulo": "Proclamação da República; queda do Império 18 meses após a abolição" }
+      {
+        "ano": "1850",
+        "titulo": "Lei Eusébio de Queirós proíbe o tráfico transatlântico de escravizados"
+      },
+      {
+        "ano": "1871",
+        "titulo": "Lei do Ventre Livre: filhos de escravizadas nascem livres a partir dessa data"
+      },
+      {
+        "ano": "1883",
+        "titulo": "Joaquim Nabuco publica 'O Abolicionismo'; Sociedade Brasileira contra a Escravidão"
+      },
+      {
+        "ano": "1885",
+        "titulo": "Lei dos Sexagenários: liberta escravizados com mais de 60 anos"
+      },
+      {
+        "ano": "13 mai. 1888",
+        "titulo": "Princesa Isabel assina a Lei Áurea — fim da escravidão no Brasil"
+      },
+      {
+        "ano": "15 nov. 1889",
+        "titulo": "Proclamação da República; queda do Império 18 meses após a abolição"
+      }
     ],
     "keywords": [
       "abolição da escravatura",
@@ -2231,6 +3257,20 @@
       "fim-segunda-guerra-mundial",
       "independencia-india"
     ],
+    "relatedEventsContext": [
+      {
+        "slug": "primeira-guerra-mundial",
+        "relacao": "A criação do Estado de Israel em 1948 foi uma consequência direta da Primeira Guerra Mundial: a Declaração Balfour de 1917, prometendo um lar nacional judaico na Palestina, nasceu das negociações de guerra britânicas."
+      },
+      {
+        "slug": "fim-segunda-guerra-mundial",
+        "relacao": "O Holocausto cometido durante a Segunda Guerra Mundial deu urgência moral irresistível à criação do Estado de Israel em 1948 — sem o genocídio nazista, o apoio internacional ao sionismo dificilmente teria alcançado tal magnitude."
+      },
+      {
+        "slug": "independencia-india",
+        "relacao": "Israel e Índia tornaram-se independentes no mesmo ano (1948 e 1947) — dois processos simultâneos de descolonização que redesenharam o Oriente Médio e o sul da Ásia ao mesmo tempo."
+      }
+    ],
     "characters": [
       {
         "name": "David Ben-Gurion",
@@ -2253,12 +3293,30 @@
     ],
     "sources": [],
     "cronologia": [
-      { "ano": "1897", "titulo": "Theodor Herzl convoca o 1º Congresso Sionista em Basileia, Suíça" },
-      { "ano": "1917", "titulo": "Declaração Balfour: Grã-Bretanha apoia o 'lar nacional judaico' na Palestina" },
-      { "ano": "nov. 1947", "titulo": "ONU aprova o Plano de Partilha da Palestina (Resolução 181)" },
-      { "ano": "14 mai. 1948", "titulo": "Ben-Gurion proclama o Estado de Israel em Tel Aviv" },
-      { "ano": "15 mai. 1948", "titulo": "Egito, Jordânia, Síria, Iraque e Líbano invadem Israel — início da Guerra da Independência" },
-      { "ano": "1949", "titulo": "Armistícios; Israel com 78% da Palestina; ≈ 700 mil palestinos refugiados (Nakba)" }
+      {
+        "ano": "1897",
+        "titulo": "Theodor Herzl convoca o 1º Congresso Sionista em Basileia, Suíça"
+      },
+      {
+        "ano": "1917",
+        "titulo": "Declaração Balfour: Grã-Bretanha apoia o 'lar nacional judaico' na Palestina"
+      },
+      {
+        "ano": "nov. 1947",
+        "titulo": "ONU aprova o Plano de Partilha da Palestina (Resolução 181)"
+      },
+      {
+        "ano": "14 mai. 1948",
+        "titulo": "Ben-Gurion proclama o Estado de Israel em Tel Aviv"
+      },
+      {
+        "ano": "15 mai. 1948",
+        "titulo": "Egito, Jordânia, Síria, Iraque e Líbano invadem Israel — início da Guerra da Independência"
+      },
+      {
+        "ano": "1949",
+        "titulo": "Armistícios; Israel com 78% da Palestina; ≈ 700 mil palestinos refugiados (Nakba)"
+      }
     ],
     "keywords": [
       "estado de israel",
@@ -2289,7 +3347,20 @@
     "importance": 5,
     "featured": false,
     "image": "/eventos/hero-revolucao-agricola-neolitica.jpg",
-    "relatedEvents": ["unificacao-egito", "codigo-hamurabi"],
+    "relatedEvents": [
+      "unificacao-egito",
+      "codigo-hamurabi"
+    ],
+    "relatedEventsContext": [
+      {
+        "slug": "unificacao-egito",
+        "relacao": "A Revolução Agrícola Neolítica foi o pré-requisito que tornou a civilização egípcia possível: sem o excedente alimentar gerado pela agricultura do Nilo, não haveria exército, Estado nem pirâmides."
+      },
+      {
+        "slug": "codigo-hamurabi",
+        "relacao": "A agricultura gerou os excedentes que criaram as cidades mesopotâmicas — e foram as cidades que criaram a necessidade de leis escritas, da qual o Código de Hamurábi é o exemplo mais completo que sobreviveu."
+      }
+    ],
     "characters": [],
     "sources": [
       {
@@ -2299,14 +3370,43 @@
       }
     ],
     "cronologia": [
-      { "ano": "c. 10000 a.C.", "titulo": "Primeiras plantas cultivadas no Crescente Fértil" },
-      { "ano": "c. 9000 a.C.", "titulo": "Göbekli Tepe — monumentos pré-agrícolas na Anatólia" },
-      { "ano": "c. 8500 a.C.", "titulo": "Domesticação de ovelhas e cabras" },
-      { "ano": "c. 7500 a.C.", "titulo": "Çatalhöyük (Turquia): uma das primeiras cidades com 8000 habitantes" },
-      { "ano": "c. 6000 a.C.", "titulo": "Agricultura espalha-se para Europa, Índia e China" },
-      { "ano": "c. 4000 a.C.", "titulo": "Primeiros registros escritos na Suméria — produto direto do excedente agrícola" }
+      {
+        "ano": "c. 10000 a.C.",
+        "titulo": "Primeiras plantas cultivadas no Crescente Fértil"
+      },
+      {
+        "ano": "c. 9000 a.C.",
+        "titulo": "Göbekli Tepe — monumentos pré-agrícolas na Anatólia"
+      },
+      {
+        "ano": "c. 8500 a.C.",
+        "titulo": "Domesticação de ovelhas e cabras"
+      },
+      {
+        "ano": "c. 7500 a.C.",
+        "titulo": "Çatalhöyük (Turquia): uma das primeiras cidades com 8000 habitantes"
+      },
+      {
+        "ano": "c. 6000 a.C.",
+        "titulo": "Agricultura espalha-se para Europa, Índia e China"
+      },
+      {
+        "ano": "c. 4000 a.C.",
+        "titulo": "Primeiros registros escritos na Suméria — produto direto do excedente agrícola"
+      }
     ],
-    "keywords": ["neolítico", "agricultura", "crescente fértil", "domesticação", "göbekli tepe", "çatalhöyük", "mesopotâmia", "revolução agrícola", "trigo", "cevada"]
+    "keywords": [
+      "neolítico",
+      "agricultura",
+      "crescente fértil",
+      "domesticação",
+      "göbekli tepe",
+      "çatalhöyük",
+      "mesopotâmia",
+      "revolução agrícola",
+      "trigo",
+      "cevada"
+    ]
   },
   {
     "id": "nascimento-budismo",
@@ -2324,7 +3424,20 @@
     "importance": 5,
     "featured": false,
     "image": "/eventos/hero-nascimento-budismo.jpg",
-    "relatedEvents": ["conquistas-alexandre-grande", "unificacao-china"],
+    "relatedEvents": [
+      "conquistas-alexandre-grande",
+      "unificacao-china"
+    ],
+    "relatedEventsContext": [
+      {
+        "slug": "conquistas-alexandre-grande",
+        "relacao": "Quando Alexandre chegou ao subcontinente indiano em 326 a.C., o budismo já tinha mais de 200 anos — e o encontro entre a filosofia budista e o helenismo alexandrino produziu a arte greco-budista de Gandhara."
+      },
+      {
+        "slug": "unificacao-china",
+        "relacao": "O budismo chegou à China nos séculos seguintes à unificação de Qin Shi Huang, transformando-se em uma das três religiões fundadoras da civilização chinesa, ao lado do confucionismo e do taoísmo."
+      }
+    ],
     "characters": [
       {
         "name": "Sidarta Gautama (Buda)",
@@ -2347,14 +3460,43 @@
       }
     ],
     "cronologia": [
-      { "ano": "c. 563 a.C.", "titulo": "Nascimento de Sidarta em Lumbini (atual Nepal)" },
-      { "ano": "c. 534 a.C.", "titulo": "Abandona o palácio" },
-      { "ano": "c. 528 a.C.", "titulo": "Iluminação em Bodh Gaya" },
-      { "ano": "c. 528 a.C.", "titulo": "Sermão de Benares — primeiros ensinamentos" },
-      { "ano": "c. 483 a.C.", "titulo": "Morte de Buda em Kushinagar" },
-      { "ano": "c. 250 a.C.", "titulo": "Imperador Ashoka adota o budismo e dissemina-o por toda a Ásia" }
+      {
+        "ano": "c. 563 a.C.",
+        "titulo": "Nascimento de Sidarta em Lumbini (atual Nepal)"
+      },
+      {
+        "ano": "c. 534 a.C.",
+        "titulo": "Abandona o palácio"
+      },
+      {
+        "ano": "c. 528 a.C.",
+        "titulo": "Iluminação em Bodh Gaya"
+      },
+      {
+        "ano": "c. 528 a.C.",
+        "titulo": "Sermão de Benares — primeiros ensinamentos"
+      },
+      {
+        "ano": "c. 483 a.C.",
+        "titulo": "Morte de Buda em Kushinagar"
+      },
+      {
+        "ano": "c. 250 a.C.",
+        "titulo": "Imperador Ashoka adota o budismo e dissemina-o por toda a Ásia"
+      }
     ],
-    "keywords": ["budismo", "sidarta gautama", "buda", "bodh gaya", "quatro nobres verdades", "caminho óctuplo", "índia", "ashoka", "nirvana", "meditação"]
+    "keywords": [
+      "budismo",
+      "sidarta gautama",
+      "buda",
+      "bodh gaya",
+      "quatro nobres verdades",
+      "caminho óctuplo",
+      "índia",
+      "ashoka",
+      "nirvana",
+      "meditação"
+    ]
   },
   {
     "id": "assassinato-julio-cesar",
@@ -2372,7 +3514,20 @@
     "importance": 5,
     "featured": false,
     "image": "/eventos/hero-assassinato-julio-cesar.jpg",
-    "relatedEvents": ["fundacao-de-roma", "queda-imperio-romano-ocidente"],
+    "relatedEvents": [
+      "fundacao-de-roma",
+      "queda-imperio-romano-ocidente"
+    ],
+    "relatedEventsContext": [
+      {
+        "slug": "fundacao-de-roma",
+        "relacao": "O assassinato de César em 44 a.C. foi o clímax da crise da República fundada em 509 a.C.: o mesmo sistema de equilíbrio de poder que havia durado 460 anos não sobreviveu à concentração de poder nas mãos de um único homem."
+      },
+      {
+        "slug": "queda-imperio-romano-ocidente",
+        "relacao": "O assassinato de César desencadeou as guerras civis que transformaram a República no Império — a forma de governo que duraria até 476 d.C. e cuja queda encerraria a Antiguidade clássica."
+      }
+    ],
     "characters": [
       {
         "name": "Júlio César",
@@ -2406,15 +3561,47 @@
       }
     ],
     "cronologia": [
-      { "ano": "49 a.C.", "titulo": "César cruza o Rubicão — guerra civil começa" },
-      { "ano": "48 a.C.", "titulo": "Derrota Pompeu na batalha de Farsália" },
-      { "ano": "fev. 44 a.C.", "titulo": "Nomeado ditador perpétuo" },
-      { "ano": "15 mar. 44 a.C.", "titulo": "Assassinado no Teatro de Pompeu" },
-      { "ano": "44 a.C.", "titulo": "Discurso de Marco Antônio — revolta popular contra os conspiradores" },
-      { "ano": "42 a.C.", "titulo": "Batalha de Filipos — morte de Bruto e Cássio" },
-      { "ano": "27 a.C.", "titulo": "Otávio torna-se Augusto — nascimento do Império Romano" }
+      {
+        "ano": "49 a.C.",
+        "titulo": "César cruza o Rubicão — guerra civil começa"
+      },
+      {
+        "ano": "48 a.C.",
+        "titulo": "Derrota Pompeu na batalha de Farsália"
+      },
+      {
+        "ano": "fev. 44 a.C.",
+        "titulo": "Nomeado ditador perpétuo"
+      },
+      {
+        "ano": "15 mar. 44 a.C.",
+        "titulo": "Assassinado no Teatro de Pompeu"
+      },
+      {
+        "ano": "44 a.C.",
+        "titulo": "Discurso de Marco Antônio — revolta popular contra os conspiradores"
+      },
+      {
+        "ano": "42 a.C.",
+        "titulo": "Batalha de Filipos — morte de Bruto e Cássio"
+      },
+      {
+        "ano": "27 a.C.",
+        "titulo": "Otávio torna-se Augusto — nascimento do Império Romano"
+      }
     ],
-    "keywords": ["júlio césar", "idos de março", "bruto", "cássio", "república romana", "senado", "rubicão", "augusto", "império romano", "conspiração"]
+    "keywords": [
+      "júlio césar",
+      "idos de março",
+      "bruto",
+      "cássio",
+      "república romana",
+      "senado",
+      "rubicão",
+      "augusto",
+      "império romano",
+      "conspiração"
+    ]
   },
   {
     "id": "invencao-imprensa-gutenberg",
@@ -2432,7 +3619,20 @@
     "importance": 5,
     "featured": false,
     "image": "/eventos/hero-invencao-imprensa-gutenberg.jpg",
-    "relatedEvents": ["reforma-protestante", "revolucao-cientifica"],
+    "relatedEvents": [
+      "reforma-protestante",
+      "revolucao-cientifica"
+    ],
+    "relatedEventsContext": [
+      {
+        "slug": "reforma-protestante",
+        "relacao": "A Reforma Protestante só se tornou europeia porque Gutenberg já havia criado a imprensa: Lutero pregou em Wittenberg, mas a prensa levou suas 95 Teses a toda a Europa em semanas, sem que Roma pudesse interceptar."
+      },
+      {
+        "slug": "revolucao-cientifica",
+        "relacao": "A Revolução Científica dependeu da imprensa para se disseminar: sem a capacidade de reproduzir e compartilhar resultados experimentais em larga escala, o método científico teria ficado restrito a correspondências entre sábios."
+      }
+    ],
     "characters": [
       {
         "name": "Johannes Gutenberg",
@@ -2455,14 +3655,43 @@
       }
     ],
     "cronologia": [
-      { "ano": "c. 1436", "titulo": "Primeiros experimentos de impressão em Estrasburgo" },
-      { "ano": "c. 1450", "titulo": "Gutenberg estabelece a oficina em Mainz com financiamento de Johann Fust" },
-      { "ano": "1452–1455", "titulo": "Impressão da Bíblia de Gutenberg (Bíblia de 42 linhas)" },
-      { "ano": "1455", "titulo": "Processo judicial Fust vs. Gutenberg — Gutenberg perde a prensa como pagamento" },
-      { "ano": "1465", "titulo": "Primeira impressora fora da Alemanha — instalada em Subiaco, Itália" },
-      { "ano": "c. 1500", "titulo": "Mais de 1.000 impressoras em toda a Europa, 15 milhões de livros em circulação" }
+      {
+        "ano": "c. 1436",
+        "titulo": "Primeiros experimentos de impressão em Estrasburgo"
+      },
+      {
+        "ano": "c. 1450",
+        "titulo": "Gutenberg estabelece a oficina em Mainz com financiamento de Johann Fust"
+      },
+      {
+        "ano": "1452–1455",
+        "titulo": "Impressão da Bíblia de Gutenberg (Bíblia de 42 linhas)"
+      },
+      {
+        "ano": "1455",
+        "titulo": "Processo judicial Fust vs. Gutenberg — Gutenberg perde a prensa como pagamento"
+      },
+      {
+        "ano": "1465",
+        "titulo": "Primeira impressora fora da Alemanha — instalada em Subiaco, Itália"
+      },
+      {
+        "ano": "c. 1500",
+        "titulo": "Mais de 1.000 impressoras em toda a Europa, 15 milhões de livros em circulação"
+      }
     ],
-    "keywords": ["gutenberg", "imprensa", "tipos móveis", "bíblia de gutenberg", "mainz", "impressão", "reforma protestante", "democratização do conhecimento", "livro", "renascimento"]
+    "keywords": [
+      "gutenberg",
+      "imprensa",
+      "tipos móveis",
+      "bíblia de gutenberg",
+      "mainz",
+      "impressão",
+      "reforma protestante",
+      "democratização do conhecimento",
+      "livro",
+      "renascimento"
+    ]
   },
   {
     "id": "imperio-mali",
@@ -2480,7 +3709,25 @@
     "importance": 4,
     "featured": false,
     "image": "/eventos/hero-imperio-mali.jpg",
-    "relatedEvents": ["conquistas-alexandre-grande", "conferencia-berlim", "fundacao-imperio-mongol"],
+    "relatedEvents": [
+      "conquistas-alexandre-grande",
+      "conferencia-berlim",
+      "fundacao-imperio-mongol"
+    ],
+    "relatedEventsContext": [
+      {
+        "slug": "conquistas-alexandre-grande",
+        "relacao": "O Império Mali, no apogeu entre os séculos XIII e XIV, atingiu sofisticação comparável à de grandes impérios da Antiguidade — mas nunca se encontrou com o mundo que Alexandre havia moldado séculos antes."
+      },
+      {
+        "slug": "conferencia-berlim",
+        "relacao": "O Império Mali e outros reinos subsaarianos prósperos foram o que a Conferência de Berlim apagou do mapa mental europeu: ao dividir a África como terra sem história, os colonizadores ignoraram séculos de civilizações avançadas."
+      },
+      {
+        "slug": "fundacao-imperio-mongol",
+        "relacao": "Mali e mongóis foram contemporâneos: enquanto Gengis Khan construía o maior império terrestre do mundo no século XIII, Sundiata Keita fundava o Império Mali — dois colossus em lados opostos do Velho Mundo."
+      }
+    ],
     "characters": [
       {
         "name": "Mansa Musa",
@@ -2503,14 +3750,43 @@
       }
     ],
     "cronologia": [
-      { "ano": "c. 1235", "titulo": "Sundiata Keita derrota o Império Sosso — fundação do Mali" },
-      { "ano": "c. 1312", "titulo": "Mansa Musa sobe ao trono" },
-      { "ano": "1324", "titulo": "Peregrinação de Mansa Musa a Meca com toneladas de ouro" },
-      { "ano": "1337", "titulo": "Morte de Mansa Musa" },
-      { "ano": "1352", "titulo": "Ibn Battuta visita o Mali e descreve sua riqueza e organização" },
-      { "ano": "1591", "titulo": "Invasão marroquina destrói Timbuktu — colapso definitivo do Império" }
+      {
+        "ano": "c. 1235",
+        "titulo": "Sundiata Keita derrota o Império Sosso — fundação do Mali"
+      },
+      {
+        "ano": "c. 1312",
+        "titulo": "Mansa Musa sobe ao trono"
+      },
+      {
+        "ano": "1324",
+        "titulo": "Peregrinação de Mansa Musa a Meca com toneladas de ouro"
+      },
+      {
+        "ano": "1337",
+        "titulo": "Morte de Mansa Musa"
+      },
+      {
+        "ano": "1352",
+        "titulo": "Ibn Battuta visita o Mali e descreve sua riqueza e organização"
+      },
+      {
+        "ano": "1591",
+        "titulo": "Invasão marroquina destrói Timbuktu — colapso definitivo do Império"
+      }
     ],
-    "keywords": ["mali", "mansa musa", "sundiata keita", "timbuktu", "ouro", "sahara", "africa ocidental", "ibn battuta", "peregrinação", "sankoré"]
+    "keywords": [
+      "mali",
+      "mansa musa",
+      "sundiata keita",
+      "timbuktu",
+      "ouro",
+      "sahara",
+      "africa ocidental",
+      "ibn battuta",
+      "peregrinação",
+      "sankoré"
+    ]
   },
   {
     "id": "revolucao-gloriosa",
@@ -2528,7 +3804,25 @@
     "importance": 4,
     "featured": false,
     "image": "/eventos/hero-revolucao-gloriosa.jpg",
-    "relatedEvents": ["independencia-estados-unidos", "revolucao-francesa", "magna-carta"],
+    "relatedEvents": [
+      "independencia-estados-unidos",
+      "revolucao-francesa",
+      "magna-carta"
+    ],
+    "relatedEventsContext": [
+      {
+        "slug": "independencia-estados-unidos",
+        "relacao": "A Revolução Gloriosa de 1688 criou o modelo de monarquia constitucional que os colonos americanos invocaram ao declarar independência em 1776 — ao depor um rei que violava seus direitos, eles seguiam o precedente inglês."
+      },
+      {
+        "slug": "revolucao-francesa",
+        "relacao": "A Revolução Gloriosa foi o ensaio geral britânico que a Revolução Francesa radicalizou: enquanto os ingleses limitaram o poder real com um parlamento, os franceses aboliram a monarquia e guilhotinaram o rei."
+      },
+      {
+        "slug": "magna-carta",
+        "relacao": "A Revolução Gloriosa e a Magna Carta são os dois pilares da constituição britânica não-escrita: a Carta de 1215 limitou o poder do rei pela primeira vez; a Gloriosa de 1688 o subordinou definitivamente ao parlamento."
+      }
+    ],
     "characters": [
       {
         "name": "Guilherme III de Orange",
@@ -2551,14 +3845,43 @@
     ],
     "sources": [],
     "cronologia": [
-      { "ano": "1685", "titulo": "Jaime II sobe ao trono — perseguição aos protestantes alarma o Parlamento" },
-      { "ano": "5 nov. 1688", "titulo": "Guilherme de Orange desembarca em Torbay" },
-      { "ano": "dez. 1688", "titulo": "Jaime II foge para a França" },
-      { "ano": "fev. 1689", "titulo": "Parlamento oferece o trono a Guilherme e Mary com condições" },
-      { "ano": "13 fev. 1689", "titulo": "Bill of Rights sancionado — marco do constitucionalismo moderno" },
-      { "ano": "1689", "titulo": "John Locke publica 'Dois Tratados sobre o Governo'" }
+      {
+        "ano": "1685",
+        "titulo": "Jaime II sobe ao trono — perseguição aos protestantes alarma o Parlamento"
+      },
+      {
+        "ano": "5 nov. 1688",
+        "titulo": "Guilherme de Orange desembarca em Torbay"
+      },
+      {
+        "ano": "dez. 1688",
+        "titulo": "Jaime II foge para a França"
+      },
+      {
+        "ano": "fev. 1689",
+        "titulo": "Parlamento oferece o trono a Guilherme e Mary com condições"
+      },
+      {
+        "ano": "13 fev. 1689",
+        "titulo": "Bill of Rights sancionado — marco do constitucionalismo moderno"
+      },
+      {
+        "ano": "1689",
+        "titulo": "John Locke publica 'Dois Tratados sobre o Governo'"
+      }
     ],
-    "keywords": ["revolução gloriosa", "bill of rights", "guilherme de orange", "parlamento inglês", "monarquia constitucional", "john locke", "jaime ii", "inglaterra", "constitucionalismo", "democracia"]
+    "keywords": [
+      "revolução gloriosa",
+      "bill of rights",
+      "guilherme de orange",
+      "parlamento inglês",
+      "monarquia constitucional",
+      "john locke",
+      "jaime ii",
+      "inglaterra",
+      "constitucionalismo",
+      "democracia"
+    ]
   },
   {
     "id": "independencias-america-latina",
@@ -2576,7 +3899,30 @@
     "importance": 5,
     "featured": false,
     "image": "/eventos/hero-independencias-america-latina.jpg",
-    "relatedEvents": ["independencia-brasil", "revolucao-francesa", "independencia-estados-unidos", "guerras-napoleonicas"],
+    "relatedEvents": [
+      "independencia-brasil",
+      "revolucao-francesa",
+      "independencia-estados-unidos",
+      "guerras-napoleonicas"
+    ],
+    "relatedEventsContext": [
+      {
+        "slug": "independencia-brasil",
+        "relacao": "Brasil e as colônias hispânicas se tornaram independentes na mesma onda, entre 1810 e 1825 — mas enquanto as repúblicas hispânicas fragmentaram o continente em dezenas de países, o Brasil manteve sua unidade territorial."
+      },
+      {
+        "slug": "revolucao-francesa",
+        "relacao": "Os ideais da Revolução Francesa de 1789 cruzaram o Atlântico e inflamaram as elites crioulas da América Latina: liberdade, soberania popular e igualdade perante a lei foram os argumentos da independência."
+      },
+      {
+        "slug": "independencia-estados-unidos",
+        "relacao": "A independência dos EUA em 1776 mostrou que colônias podiam vencer metrópoles europeias — e líderes como Simón Bolívar tomaram o modelo norte-americano como referência explícita."
+      },
+      {
+        "slug": "guerras-napoleonicas",
+        "relacao": "As invasões napoleônicas foram o gatilho das independências latino-americanas: ao ocupar a Espanha e Portugal, Napoleão criou o vácuo de autoridade que as elites crioulas aproveitaram para proclamar a separação."
+      }
+    ],
     "characters": [
       {
         "name": "Simón Bolívar",
@@ -2599,15 +3945,47 @@
     ],
     "sources": [],
     "cronologia": [
-      { "ano": "1808", "titulo": "Napoleão invade a Espanha — crise de legitimidade colonial" },
-      { "ano": "16 set. 1810", "titulo": "Grito de Dolores de Hidalgo — início no México" },
-      { "ano": "1811", "titulo": "Venezuela declara independência" },
-      { "ano": "1817", "titulo": "San Martín cruza os Andes e liberta o Chile" },
-      { "ano": "1819", "titulo": "Bolívar cria a Gran Colombia (Venezuela, Colômbia, Equador)" },
-      { "ano": "9 dez. 1824", "titulo": "Batalha de Ayacucho — última batalha das guerras de independência" },
-      { "ano": "1826", "titulo": "Última fortaleza realista cai — América espanhola independente" }
+      {
+        "ano": "1808",
+        "titulo": "Napoleão invade a Espanha — crise de legitimidade colonial"
+      },
+      {
+        "ano": "16 set. 1810",
+        "titulo": "Grito de Dolores de Hidalgo — início no México"
+      },
+      {
+        "ano": "1811",
+        "titulo": "Venezuela declara independência"
+      },
+      {
+        "ano": "1817",
+        "titulo": "San Martín cruza os Andes e liberta o Chile"
+      },
+      {
+        "ano": "1819",
+        "titulo": "Bolívar cria a Gran Colombia (Venezuela, Colômbia, Equador)"
+      },
+      {
+        "ano": "9 dez. 1824",
+        "titulo": "Batalha de Ayacucho — última batalha das guerras de independência"
+      },
+      {
+        "ano": "1826",
+        "titulo": "Última fortaleza realista cai — América espanhola independente"
+      }
     ],
-    "keywords": ["simón bolívar", "san martín", "hidalgo", "independência da américa latina", "grito de dolores", "ayacucho", "gran colombia", "bolívia", "chile", "venezuela"]
+    "keywords": [
+      "simón bolívar",
+      "san martín",
+      "hidalgo",
+      "independência da américa latina",
+      "grito de dolores",
+      "ayacucho",
+      "gran colombia",
+      "bolívia",
+      "chile",
+      "venezuela"
+    ]
   },
   {
     "id": "unificacao-alemanha",
@@ -2625,7 +4003,25 @@
     "importance": 4,
     "featured": false,
     "image": "/eventos/hero-unificacao-alemanha.jpg",
-    "relatedEvents": ["primeira-guerra-mundial", "guerras-napoleonicas", "revolucao-francesa"],
+    "relatedEvents": [
+      "primeira-guerra-mundial",
+      "guerras-napoleonicas",
+      "revolucao-francesa"
+    ],
+    "relatedEventsContext": [
+      {
+        "slug": "primeira-guerra-mundial",
+        "relacao": "A unificação alemã sob Bismarck em 1871 criou a potência que desencadeou a Primeira Guerra Mundial: o Segundo Reich, poderoso e insatisfeito com suas fronteiras, foi o motor do conflito de 1914."
+      },
+      {
+        "slug": "guerras-napoleonicas",
+        "relacao": "As guerras napoleônicas foram o catalisador que criou o nacionalismo alemão: ao dominar os principados germânicos, Napoleão inadvertidamente despertou o desejo de unidade que Bismarck concretizaria em 1871."
+      },
+      {
+        "slug": "revolucao-francesa",
+        "relacao": "A Revolução Francesa espalhou os ideais de soberania popular e identidade nacional que alimentaram o romantismo alemão — e foi esse nacionalismo cultural do século XIX que Bismarck transformou em poder político em 1871."
+      }
+    ],
     "characters": [
       {
         "name": "Otto von Bismarck",
@@ -2642,14 +4038,43 @@
     ],
     "sources": [],
     "cronologia": [
-      { "ano": "1862", "titulo": "Bismarck torna-se primeiro-ministro da Prússia" },
-      { "ano": "1864", "titulo": "Guerra contra a Dinamarca — Prússia conquista Schleswig-Holstein" },
-      { "ano": "1866", "titulo": "Guerra contra a Áustria — Prússia domina os estados alemães do norte" },
-      { "ano": "1870–71", "titulo": "Guerra franco-prussiana — Sedan, cerco de Paris" },
-      { "ano": "18 jan. 1871", "titulo": "Proclamação do Império Alemão no Salão dos Espelhos" },
-      { "ano": "1890", "titulo": "Bismarck é demitido pelo Kaiser Guilherme II" }
+      {
+        "ano": "1862",
+        "titulo": "Bismarck torna-se primeiro-ministro da Prússia"
+      },
+      {
+        "ano": "1864",
+        "titulo": "Guerra contra a Dinamarca — Prússia conquista Schleswig-Holstein"
+      },
+      {
+        "ano": "1866",
+        "titulo": "Guerra contra a Áustria — Prússia domina os estados alemães do norte"
+      },
+      {
+        "ano": "1870–71",
+        "titulo": "Guerra franco-prussiana — Sedan, cerco de Paris"
+      },
+      {
+        "ano": "18 jan. 1871",
+        "titulo": "Proclamação do Império Alemão no Salão dos Espelhos"
+      },
+      {
+        "ano": "1890",
+        "titulo": "Bismarck é demitido pelo Kaiser Guilherme II"
+      }
     ],
-    "keywords": ["bismarck", "unificação da alemanha", "kaiser", "guilherme i", "império alemão", "realpolitik", "prússia", "franco-prussiana", "versalhes", "segunda reich"]
+    "keywords": [
+      "bismarck",
+      "unificação da alemanha",
+      "kaiser",
+      "guilherme i",
+      "império alemão",
+      "realpolitik",
+      "prússia",
+      "franco-prussiana",
+      "versalhes",
+      "segunda reich"
+    ]
   },
   {
     "id": "revolucao-meiji",
@@ -2667,7 +4092,25 @@
     "importance": 5,
     "featured": false,
     "image": "/eventos/hero-revolucao-meiji.jpg",
-    "relatedEvents": ["revolucao-xinhai", "primeira-guerra-mundial", "conferencia-berlim"],
+    "relatedEvents": [
+      "revolucao-xinhai",
+      "primeira-guerra-mundial",
+      "conferencia-berlim"
+    ],
+    "relatedEventsContext": [
+      {
+        "slug": "revolucao-xinhai",
+        "relacao": "A Restauração Meiji do Japão inspirou os revolucionários chineses que lideraram a Revolução Xinhai de 1911: o modelo de modernização asiática sem submissão ao Ocidente atraiu líderes como Sun Yat-sen."
+      },
+      {
+        "slug": "primeira-guerra-mundial",
+        "relacao": "O Japão modernizado pela Restauração Meiji entrou na Primeira Guerra Mundial ao lado dos Aliados em 1914 — a primeira vez que uma potência asiática participou de um conflito europeu como igual."
+      },
+      {
+        "slug": "conferencia-berlim",
+        "relacao": "A Conferência de Berlim de 1884 partilhou a África entre potências europeias enquanto o Japão Meiji se modernizava — e ao derrotar a Rússia em 1905, o Japão mostrou que a era da supremacia europeia tinha prazo de validade."
+      }
+    ],
     "characters": [
       {
         "name": "Imperador Meiji (Mutsuhito)",
@@ -2684,14 +4127,43 @@
     ],
     "sources": [],
     "cronologia": [
-      { "ano": "1853", "titulo": "Chegada dos navios de Perry — Japão forçado a abrir portos" },
-      { "ano": "jan. 1868", "titulo": "Restauração Meiji — fim do xogunato Tokugawa" },
-      { "ano": "1871–1873", "titulo": "Missão Iwakura: delegação japonesa estuda o Ocidente" },
-      { "ano": "1889", "titulo": "Constituição Meiji — monarquia constitucional" },
-      { "ano": "1894–95", "titulo": "Guerra sino-japonesa — China cede Taiwan" },
-      { "ano": "1905", "titulo": "Guerra russo-japonesa — vitória japonesa choca o mundo" }
+      {
+        "ano": "1853",
+        "titulo": "Chegada dos navios de Perry — Japão forçado a abrir portos"
+      },
+      {
+        "ano": "jan. 1868",
+        "titulo": "Restauração Meiji — fim do xogunato Tokugawa"
+      },
+      {
+        "ano": "1871–1873",
+        "titulo": "Missão Iwakura: delegação japonesa estuda o Ocidente"
+      },
+      {
+        "ano": "1889",
+        "titulo": "Constituição Meiji — monarquia constitucional"
+      },
+      {
+        "ano": "1894–95",
+        "titulo": "Guerra sino-japonesa — China cede Taiwan"
+      },
+      {
+        "ano": "1905",
+        "titulo": "Guerra russo-japonesa — vitória japonesa choca o mundo"
+      }
     ],
-    "keywords": ["meiji", "japão", "modernização", "xogunato", "perry", "missão iwakura", "guerra russo-japonesa", "itō hirobumi", "era meiji", "westernização"]
+    "keywords": [
+      "meiji",
+      "japão",
+      "modernização",
+      "xogunato",
+      "perry",
+      "missão iwakura",
+      "guerra russo-japonesa",
+      "itō hirobumi",
+      "era meiji",
+      "westernização"
+    ]
   },
   {
     "id": "revolucao-xinhai",
@@ -2709,7 +4181,25 @@
     "importance": 5,
     "featured": false,
     "image": "/eventos/hero-revolucao-xinhai.jpg",
-    "relatedEvents": ["revolucao-comunista-china", "primeira-guerra-mundial", "revolucao-meiji"],
+    "relatedEvents": [
+      "revolucao-comunista-china",
+      "primeira-guerra-mundial",
+      "revolucao-meiji"
+    ],
+    "relatedEventsContext": [
+      {
+        "slug": "revolucao-comunista-china",
+        "relacao": "A Revolução Xinhai de 1911 derrubou o último imperador e fundou a República — mas sua instabilidade criou o caos que o Partido Comunista de Mao explorou para tomar o poder em 1949."
+      },
+      {
+        "slug": "primeira-guerra-mundial",
+        "relacao": "A Revolução Xinhai fragilizou a China justamente quando a Primeira Guerra Mundial redesenhava o mundo: o Japão aproveitou a instabilidade para expandir sua influência no continente, plantando sementes da guerra no Pacífico."
+      },
+      {
+        "slug": "revolucao-meiji",
+        "relacao": "A Revolução Xinhai foi diretamente inspirada pelo sucesso da Restauração Meiji: ver o Japão se modernizar e derrotar a Rússia convenceu os republicanos chineses de que a transformação era possível sem seguir o modelo ocidental."
+      }
+    ],
     "characters": [
       {
         "name": "Sun Yat-sen",
@@ -2732,14 +4222,43 @@
     ],
     "sources": [],
     "cronologia": [
-      { "ano": "1908", "titulo": "Morte da Imperatriz Cixi — Puyi, 2 anos, sobe ao trono" },
-      { "ano": "10 out. 1911", "titulo": "Revolta de Wuchang — início da Revolução Xinhai" },
-      { "ano": "jan. 1912", "titulo": "Sun Yat-sen proclama a República em Nanjing" },
-      { "ano": "12 fev. 1912", "titulo": "Puyi abdica — fim da dinastia Qing" },
-      { "ano": "1916–1928", "titulo": "Era dos senhores da guerra — China fragmentada" },
-      { "ano": "1927", "titulo": "Cisão entre Kuomintang e Partido Comunista — início da guerra civil" }
+      {
+        "ano": "1908",
+        "titulo": "Morte da Imperatriz Cixi — Puyi, 2 anos, sobe ao trono"
+      },
+      {
+        "ano": "10 out. 1911",
+        "titulo": "Revolta de Wuchang — início da Revolução Xinhai"
+      },
+      {
+        "ano": "jan. 1912",
+        "titulo": "Sun Yat-sen proclama a República em Nanjing"
+      },
+      {
+        "ano": "12 fev. 1912",
+        "titulo": "Puyi abdica — fim da dinastia Qing"
+      },
+      {
+        "ano": "1916–1928",
+        "titulo": "Era dos senhores da guerra — China fragmentada"
+      },
+      {
+        "ano": "1927",
+        "titulo": "Cisão entre Kuomintang e Partido Comunista — início da guerra civil"
+      }
     ],
-    "keywords": ["revolução xinhai", "china", "dinastia qing", "sun yat-sen", "puyi", "república chinesa", "wuchang", "kuomintang", "fim do império", "modernização"]
+    "keywords": [
+      "revolução xinhai",
+      "china",
+      "dinastia qing",
+      "sun yat-sen",
+      "puyi",
+      "república chinesa",
+      "wuchang",
+      "kuomintang",
+      "fim do império",
+      "modernização"
+    ]
   },
   {
     "id": "declaracao-universal-direitos-humanos",
@@ -2757,7 +4276,30 @@
     "importance": 5,
     "featured": false,
     "image": "/eventos/hero-declaracao-universal-direitos-humanos.jpg",
-    "relatedEvents": ["fim-segunda-guerra-mundial", "criacao-estado-israel", "independencia-india", "colapso-urss"],
+    "relatedEvents": [
+      "fim-segunda-guerra-mundial",
+      "criacao-estado-israel",
+      "independencia-india",
+      "colapso-urss"
+    ],
+    "relatedEventsContext": [
+      {
+        "slug": "fim-segunda-guerra-mundial",
+        "relacao": "A Declaração foi a resposta direta aos horrores da Segunda Guerra Mundial: o Holocausto e os crimes de guerra tornaram urgente criar um padrão universal que nenhum Estado pudesse violar."
+      },
+      {
+        "slug": "criacao-estado-israel",
+        "relacao": "Israel e a Declaração Universal foram proclamados no mesmo ano, 1948: ambos filhos do mesmo trauma do Holocausto e do desejo de evitar que tal catástrofe se repetisse."
+      },
+      {
+        "slug": "independencia-india",
+        "relacao": "A independência da Índia e a Declaração Universal dos Direitos Humanos foram contemporâneas — e o jurista indiano B.R. Ambedkar influenciou diretamente os debates sobre os direitos que a ONU proclamaria."
+      },
+      {
+        "slug": "colapso-urss",
+        "relacao": "O colapso da URSS em 1991 foi, em parte, uma vitória dos valores que a Declaração de 1948 proclamava: direitos civis, liberdade de expressão e autodeterminação dos povos que as repúblicas soviéticas invocaram ao se separar."
+      }
+    ],
     "characters": [
       {
         "name": "Eleanor Roosevelt",
@@ -2786,14 +4328,43 @@
       }
     ],
     "cronologia": [
-      { "ano": "jan. 1947", "titulo": "Comissão de Direitos Humanos da ONU constituída, com Eleanor Roosevelt como presidente" },
-      { "ano": "jun. 1948", "titulo": "Texto aprovado pela comissão após 85 reuniões" },
-      { "ano": "10 dez. 1948", "titulo": "Assembleia Geral adota a DUDH — 48 votos a favor, 0 contra, 8 abstenções" },
-      { "ano": "1966", "titulo": "Pactos Internacionais de Direitos Civis e Políticos — DUDH ganha força legal" },
-      { "ano": "1988", "titulo": "Constituição Brasileira incorpora princípios da DUDH" },
-      { "ano": "10 dez.", "titulo": "Comemorado anualmente como Dia Internacional dos Direitos Humanos" }
+      {
+        "ano": "jan. 1947",
+        "titulo": "Comissão de Direitos Humanos da ONU constituída, com Eleanor Roosevelt como presidente"
+      },
+      {
+        "ano": "jun. 1948",
+        "titulo": "Texto aprovado pela comissão após 85 reuniões"
+      },
+      {
+        "ano": "10 dez. 1948",
+        "titulo": "Assembleia Geral adota a DUDH — 48 votos a favor, 0 contra, 8 abstenções"
+      },
+      {
+        "ano": "1966",
+        "titulo": "Pactos Internacionais de Direitos Civis e Políticos — DUDH ganha força legal"
+      },
+      {
+        "ano": "1988",
+        "titulo": "Constituição Brasileira incorpora princípios da DUDH"
+      },
+      {
+        "ano": "10 dez.",
+        "titulo": "Comemorado anualmente como Dia Internacional dos Direitos Humanos"
+      }
     ],
-    "keywords": ["direitos humanos", "dudh", "eleanor roosevelt", "onu", "declaração universal", "holocausto", "direitos fundamentais", "dignidade", "paris", "1948"]
+    "keywords": [
+      "direitos humanos",
+      "dudh",
+      "eleanor roosevelt",
+      "onu",
+      "declaração universal",
+      "holocausto",
+      "direitos fundamentais",
+      "dignidade",
+      "paris",
+      "1948"
+    ]
   },
   {
     "id": "revolucao-comunista-china",
@@ -2811,7 +4382,30 @@
     "importance": 5,
     "featured": false,
     "image": "/eventos/hero-revolucao-comunista-china.jpg",
-    "relatedEvents": ["revolucao-xinhai", "fim-segunda-guerra-mundial", "revolucao-russa", "primeira-guerra-mundial"],
+    "relatedEvents": [
+      "revolucao-xinhai",
+      "fim-segunda-guerra-mundial",
+      "revolucao-russa",
+      "primeira-guerra-mundial"
+    ],
+    "relatedEventsContext": [
+      {
+        "slug": "revolucao-xinhai",
+        "relacao": "A Revolução Comunista de 1949 completou o processo iniciado pela Xinhai de 1911: enquanto a Xinhai derrubou o imperador e fundou uma república instável, Mao transformou essa república em Estado comunista após 38 anos de guerras."
+      },
+      {
+        "slug": "fim-segunda-guerra-mundial",
+        "relacao": "A Segunda Guerra Mundial foi decisiva para a vitória comunista: a invasão japonesa enfraqueceu o governo nacionalista de Chiang Kai-shek, permitindo ao Partido Comunista de Mao vencer a guerra civil em 1949."
+      },
+      {
+        "slug": "revolucao-russa",
+        "relacao": "A Revolução Russa foi o modelo e o mentor da Revolução Chinesa: o Partido Comunista Chinês foi fundado com apoio soviético em 1921, e Mao aplicou o leninismo às condições de um país de camponeses."
+      },
+      {
+        "slug": "primeira-guerra-mundial",
+        "relacao": "A Primeira Guerra Mundial humilhou a China: o Tratado de Versalhes entregou ao Japão os territórios alemães no país, gerando o Movimento de 4 de Maio de 1919 que radicalizou a geração que fundaria o Partido Comunista Chinês."
+      }
+    ],
     "characters": [
       {
         "name": "Mao Zedong",
@@ -2834,14 +4428,43 @@
     ],
     "sources": [],
     "cronologia": [
-      { "ano": "1927", "titulo": "Massacre de Xangai — cisão definitiva entre Kuomintang e PCC" },
-      { "ano": "1934–35", "titulo": "A Longa Marcha — PCC recua para o norte, Mao consolida liderança" },
-      { "ano": "1945", "titulo": "Derrota do Japão — guerra civil retomada" },
-      { "ano": "1948–49", "titulo": "Grandes ofensivas comunistas — exército de Chiang desintegra-se" },
-      { "ano": "1 out. 1949", "titulo": "Proclamação da República Popular da China" },
-      { "ano": "1950–53", "titulo": "Guerra da Coreia — China enfrenta tropas americanas" }
+      {
+        "ano": "1927",
+        "titulo": "Massacre de Xangai — cisão definitiva entre Kuomintang e PCC"
+      },
+      {
+        "ano": "1934–35",
+        "titulo": "A Longa Marcha — PCC recua para o norte, Mao consolida liderança"
+      },
+      {
+        "ano": "1945",
+        "titulo": "Derrota do Japão — guerra civil retomada"
+      },
+      {
+        "ano": "1948–49",
+        "titulo": "Grandes ofensivas comunistas — exército de Chiang desintegra-se"
+      },
+      {
+        "ano": "1 out. 1949",
+        "titulo": "Proclamação da República Popular da China"
+      },
+      {
+        "ano": "1950–53",
+        "titulo": "Guerra da Coreia — China enfrenta tropas americanas"
+      }
     ],
-    "keywords": ["mao zedong", "china comunista", "partido comunista chinês", "kuomintang", "chiang kai-shek", "tiananmen", "república popular", "guerra civil chinesa", "guerra fria", "zhou enlai"]
+    "keywords": [
+      "mao zedong",
+      "china comunista",
+      "partido comunista chinês",
+      "kuomintang",
+      "chiang kai-shek",
+      "tiananmen",
+      "república popular",
+      "guerra civil chinesa",
+      "guerra fria",
+      "zhou enlai"
+    ]
   },
   {
     "id": "descolonizacao-africa",
@@ -2859,7 +4482,30 @@
     "importance": 5,
     "featured": false,
     "image": "/eventos/hero-descolonizacao-africa.jpg",
-    "relatedEvents": ["conferencia-berlim", "fim-segunda-guerra-mundial", "independencia-india", "colapso-urss"],
+    "relatedEvents": [
+      "conferencia-berlim",
+      "fim-segunda-guerra-mundial",
+      "independencia-india",
+      "colapso-urss"
+    ],
+    "relatedEventsContext": [
+      {
+        "slug": "conferencia-berlim",
+        "relacao": "A descolonização desfez em décadas o que a Conferência de Berlim havia construído em semanas: as fronteiras artificiais que 14 potências europeias desenharam sobre um mapa em 1884 tornaram-se os novos Estados africanos, com todas as suas contradições."
+      },
+      {
+        "slug": "fim-segunda-guerra-mundial",
+        "relacao": "A Segunda Guerra Mundial esgotou as potências coloniais europeias e legitimou o discurso anticolonial: Grã-Bretanha e França, que haviam lutado pela liberdade contra o nazismo, não podiam negar o mesmo princípio a seus impérios."
+      },
+      {
+        "slug": "independencia-india",
+        "relacao": "A independência da Índia em 1947 foi o sinal de largada para a descolonização global: ao provar que o maior império britânico podia ser perdido sem colapso total, abriu a porta para as independências africanas."
+      },
+      {
+        "slug": "colapso-urss",
+        "relacao": "O colapso da URSS em 1991 afetou a África ao retirar o principal apoio aos movimentos socialistas anticoloniais — muitos regimes que haviam chegado ao poder com ajuda soviética perderam sua base de sustentação."
+      }
+    ],
     "characters": [
       {
         "name": "Kwame Nkrumah",
@@ -2882,15 +4528,47 @@
     ],
     "sources": [],
     "cronologia": [
-      { "ano": "6 mar. 1957", "titulo": "Independência do Gana — primeira da África subsaariana" },
-      { "ano": "1960", "titulo": "'Ano da África' — 17 países independentes" },
-      { "ano": "jul. 1960", "titulo": "Crise do Congo — Lumumba pede ajuda soviética, desestabilização" },
-      { "ano": "jan. 1961", "titulo": "Assassinato de Lumumba no Congo" },
-      { "ano": "1962", "titulo": "Independência da Argélia após guerra de 8 anos" },
-      { "ano": "1965", "titulo": "Declaração de independência da Rodésia — crise" },
-      { "ano": "1975", "titulo": "Independência de Angola e Moçambique — últimas colônias africanas europeias" }
+      {
+        "ano": "6 mar. 1957",
+        "titulo": "Independência do Gana — primeira da África subsaariana"
+      },
+      {
+        "ano": "1960",
+        "titulo": "'Ano da África' — 17 países independentes"
+      },
+      {
+        "ano": "jul. 1960",
+        "titulo": "Crise do Congo — Lumumba pede ajuda soviética, desestabilização"
+      },
+      {
+        "ano": "jan. 1961",
+        "titulo": "Assassinato de Lumumba no Congo"
+      },
+      {
+        "ano": "1962",
+        "titulo": "Independência da Argélia após guerra de 8 anos"
+      },
+      {
+        "ano": "1965",
+        "titulo": "Declaração de independência da Rodésia — crise"
+      },
+      {
+        "ano": "1975",
+        "titulo": "Independência de Angola e Moçambique — últimas colônias africanas europeias"
+      }
     ],
-    "keywords": ["descolonização", "áfrica", "nkrumah", "gana", "ano da áfrica", "lumumba", "fanon", "pan-africanismo", "argélia", "independência"]
+    "keywords": [
+      "descolonização",
+      "áfrica",
+      "nkrumah",
+      "gana",
+      "ano da áfrica",
+      "lumumba",
+      "fanon",
+      "pan-africanismo",
+      "argélia",
+      "independência"
+    ]
   },
   {
     "id": "colapso-urss",
@@ -2908,7 +4586,30 @@
     "importance": 5,
     "featured": false,
     "image": "/eventos/hero-colapso-urss.jpg",
-    "relatedEvents": ["queda-muro-berlim", "revolucao-russa", "fim-segunda-guerra-mundial", "chegada-homem-lua"],
+    "relatedEvents": [
+      "queda-muro-berlim",
+      "revolucao-russa",
+      "fim-segunda-guerra-mundial",
+      "chegada-homem-lua"
+    ],
+    "relatedEventsContext": [
+      {
+        "slug": "queda-muro-berlim",
+        "relacao": "A queda do Muro de Berlim em 1989 foi o prenúncio direto do colapso soviético: quando os países da Europa Oriental abandonaram o comunismo um a um, a URSS perdeu seu império externo antes de implodir em 1991."
+      },
+      {
+        "slug": "revolucao-russa",
+        "relacao": "A Revolução Russa de 1917 criou o Estado que colapsou em 1991: 74 anos separaram o triunfo dos bolcheviques da dissolução da URSS — o experimento comunista mais longo e influente da história."
+      },
+      {
+        "slug": "fim-segunda-guerra-mundial",
+        "relacao": "A Segunda Guerra Mundial gerou a URSS como superpotência — e o colapso soviético encerrou o mundo bipolar que a guerra havia criado: o sistema internacional de 1945 durou exatamente até 1991."
+      },
+      {
+        "slug": "chegada-homem-lua",
+        "relacao": "A corrida espacial que levou o homem à Lua foi um produto da rivalidade soviético-americana — e o colapso da URSS em 1991 encerrou definitivamente o modelo de grandes programas espaciais financiados pela competição geopolítica."
+      }
+    ],
     "characters": [
       {
         "name": "Mikhail Gorbachev",
@@ -2931,15 +4632,47 @@
     ],
     "sources": [],
     "cronologia": [
-      { "ano": "1985", "titulo": "Gorbachev torna-se secretário-geral — lança glasnost e perestroika" },
-      { "ano": "1989", "titulo": "Queda do Muro de Berlim — colapso do bloco soviético na Europa Oriental" },
-      { "ano": "fev. 1989", "titulo": "Retirada soviética do Afeganistão" },
-      { "ano": "ago. 1991", "titulo": "Golpe fracassado contra Gorbachev em Moscou" },
-      { "ano": "8 dez. 1991", "titulo": "Acordos de Belaveja — líderes da Rússia, Ucrânia e Bielorrússia dissolvem a URSS" },
-      { "ano": "25 dez. 1991", "titulo": "Gorbachev renuncia — bandeira soviética desce do Kremlin" },
-      { "ano": "1991", "titulo": "15 repúblicas soviéticas tornam-se países independentes" }
+      {
+        "ano": "1985",
+        "titulo": "Gorbachev torna-se secretário-geral — lança glasnost e perestroika"
+      },
+      {
+        "ano": "1989",
+        "titulo": "Queda do Muro de Berlim — colapso do bloco soviético na Europa Oriental"
+      },
+      {
+        "ano": "fev. 1989",
+        "titulo": "Retirada soviética do Afeganistão"
+      },
+      {
+        "ano": "ago. 1991",
+        "titulo": "Golpe fracassado contra Gorbachev em Moscou"
+      },
+      {
+        "ano": "8 dez. 1991",
+        "titulo": "Acordos de Belaveja — líderes da Rússia, Ucrânia e Bielorrússia dissolvem a URSS"
+      },
+      {
+        "ano": "25 dez. 1991",
+        "titulo": "Gorbachev renuncia — bandeira soviética desce do Kremlin"
+      },
+      {
+        "ano": "1991",
+        "titulo": "15 repúblicas soviéticas tornam-se países independentes"
+      }
     ],
-    "keywords": ["urss", "gorbachev", "yeltsin", "colapso soviético", "guerra fria", "perestroika", "glasnost", "acordos de belaveja", "kremlin", "comunismo"]
+    "keywords": [
+      "urss",
+      "gorbachev",
+      "yeltsin",
+      "colapso soviético",
+      "guerra fria",
+      "perestroika",
+      "glasnost",
+      "acordos de belaveja",
+      "kremlin",
+      "comunismo"
+    ]
   },
   {
     "id": "atentados-11-setembro",
@@ -2957,7 +4690,25 @@
     "importance": 5,
     "featured": false,
     "image": "/eventos/hero-atentados-11-setembro.jpg",
-    "relatedEvents": ["colapso-urss", "fim-segunda-guerra-mundial", "primeira-guerra-mundial"],
+    "relatedEvents": [
+      "colapso-urss",
+      "fim-segunda-guerra-mundial",
+      "primeira-guerra-mundial"
+    ],
+    "relatedEventsContext": [
+      {
+        "slug": "colapso-urss",
+        "relacao": "O colapso da URSS em 1991 criou o vácuo de poder no Afeganistão que a Al-Qaeda preencheu: os mujahidin financiados pelos EUA para combater os soviéticos tornaram-se os talibãs que abrigaram Bin Laden."
+      },
+      {
+        "slug": "fim-segunda-guerra-mundial",
+        "relacao": "A ordem mundial criada após a Segunda Guerra Mundial — com os EUA como superpotência ocidental — foi o alvo simbólico dos atentados: as Torres Gêmeas representavam o capitalismo financeiro americano que Bin Laden queria destruir."
+      },
+      {
+        "slug": "primeira-guerra-mundial",
+        "relacao": "A Primeira Guerra Mundial desmembrou o Império Otomano e redesenhou o Oriente Médio com fronteiras artificiais — e as tensões criadas pelos acordos secretos de 1916 (Sykes-Picot) alimentam conflitos que contribuíram para o 11 de Setembro."
+      }
+    ],
     "characters": [
       {
         "name": "Osama bin Laden",
@@ -2986,15 +4737,47 @@
       }
     ],
     "cronologia": [
-      { "ano": "8h46", "titulo": "Voo AA11 atinge Torre Norte — Nova York" },
-      { "ano": "9h03", "titulo": "Voo UA175 atinge Torre Sul — Nova York" },
-      { "ano": "9h37", "titulo": "Voo AA77 atinge o Pentágono — Arlington, Virgínia" },
-      { "ano": "9h59", "titulo": "Torre Sul colapsa" },
-      { "ano": "10h03", "titulo": "Voo UA93 cai em Shanksville — PA" },
-      { "ano": "10h28", "titulo": "Torre Norte colapsa" },
-      { "ano": "7 out. 2001", "titulo": "Início da invasão americana do Afeganistão" }
+      {
+        "ano": "8h46",
+        "titulo": "Voo AA11 atinge Torre Norte — Nova York"
+      },
+      {
+        "ano": "9h03",
+        "titulo": "Voo UA175 atinge Torre Sul — Nova York"
+      },
+      {
+        "ano": "9h37",
+        "titulo": "Voo AA77 atinge o Pentágono — Arlington, Virgínia"
+      },
+      {
+        "ano": "9h59",
+        "titulo": "Torre Sul colapsa"
+      },
+      {
+        "ano": "10h03",
+        "titulo": "Voo UA93 cai em Shanksville — PA"
+      },
+      {
+        "ano": "10h28",
+        "titulo": "Torre Norte colapsa"
+      },
+      {
+        "ano": "7 out. 2001",
+        "titulo": "Início da invasão americana do Afeganistão"
+      }
     ],
-    "keywords": ["11 de setembro", "world trade center", "al-qaeda", "osama bin laden", "george w. bush", "terrorismo", "pentagon", "nova york", "guerra ao terror", "afeganistão"]
+    "keywords": [
+      "11 de setembro",
+      "world trade center",
+      "al-qaeda",
+      "osama bin laden",
+      "george w. bush",
+      "terrorismo",
+      "pentagon",
+      "nova york",
+      "guerra ao terror",
+      "afeganistão"
+    ]
   },
   {
     "id": "inicio-segunda-guerra-mundial",
@@ -3012,7 +4795,30 @@
     "importance": 5,
     "featured": false,
     "image": "/eventos/hero-inicio-segunda-guerra-mundial.jpg",
-    "relatedEvents": ["fim-segunda-guerra-mundial", "primeira-guerra-mundial", "revolucao-russa", "grande-depressao-1929"],
+    "relatedEvents": [
+      "fim-segunda-guerra-mundial",
+      "primeira-guerra-mundial",
+      "revolucao-russa",
+      "grande-depressao-1929"
+    ],
+    "relatedEventsContext": [
+      {
+        "slug": "fim-segunda-guerra-mundial",
+        "relacao": "A invasão da Polônia em 1939 e a rendição japonesa em 1945 delimitam os seis anos que remodelaram o mundo — o início e o fim do maior conflito da história humana."
+      },
+      {
+        "slug": "primeira-guerra-mundial",
+        "relacao": "A Segunda Guerra foi uma continuação da Primeira: o Tratado de Versalhes de 1919, que humilhou a Alemanha, criou as condições econômicas e políticas que Hitler explorou para iniciar uma nova guerra em 1939."
+      },
+      {
+        "slug": "revolucao-russa",
+        "relacao": "A Revolução Russa criou a URSS que, após o Pacto Molotov-Ribbentrop de 1939, permitiu a Hitler invadir a Polônia sem temer um front oriental — o pacto entre nazistas e soviéticos foi uma das condições para o início da guerra."
+      },
+      {
+        "slug": "grande-depressao-1929",
+        "relacao": "A Grande Depressão de 1929 destruiu a economia alemã e criou a desesperança que levou Hitler ao poder em 1933 — sem a crise econômica, a invasão da Polônia em 1939 dificilmente teria acontecido."
+      }
+    ],
     "characters": [
       {
         "name": "Adolf Hitler",
@@ -3035,14 +4841,46 @@
     ],
     "sources": [],
     "cronologia": [
-      { "ano": "set. 1938", "titulo": "Conferência de Munique — apaziguamento cede os Sudetos a Hitler" },
-      { "ano": "mar. 1939", "titulo": "Alemanha ocupa a Tchecoslováquia inteira" },
-      { "ano": "23 ago. 1939", "titulo": "Pacto Molotov-Ribbentrop — URSS e Alemanha dividem a Europa Oriental" },
-      { "ano": "1 set. 1939", "titulo": "Invasão da Polônia — início da guerra" },
-      { "ano": "3 set. 1939", "titulo": "França e Grã-Bretanha declaram guerra à Alemanha" },
-      { "ano": "17 set. 1939", "titulo": "URSS invade a Polônia pelo leste" },
-      { "ano": "6 out. 1939", "titulo": "Polônia totalmente ocupada — partilhada entre Alemanha e URSS" }
+      {
+        "ano": "set. 1938",
+        "titulo": "Conferência de Munique — apaziguamento cede os Sudetos a Hitler"
+      },
+      {
+        "ano": "mar. 1939",
+        "titulo": "Alemanha ocupa a Tchecoslováquia inteira"
+      },
+      {
+        "ano": "23 ago. 1939",
+        "titulo": "Pacto Molotov-Ribbentrop — URSS e Alemanha dividem a Europa Oriental"
+      },
+      {
+        "ano": "1 set. 1939",
+        "titulo": "Invasão da Polônia — início da guerra"
+      },
+      {
+        "ano": "3 set. 1939",
+        "titulo": "França e Grã-Bretanha declaram guerra à Alemanha"
+      },
+      {
+        "ano": "17 set. 1939",
+        "titulo": "URSS invade a Polônia pelo leste"
+      },
+      {
+        "ano": "6 out. 1939",
+        "titulo": "Polônia totalmente ocupada — partilhada entre Alemanha e URSS"
+      }
     ],
-    "keywords": ["segunda guerra mundial", "invasão da polônia", "blitzkrieg", "hitler", "westerplatte", "apaziguamento", "munique", "molotov ribbentrop", "nazismo", "1939"]
+    "keywords": [
+      "segunda guerra mundial",
+      "invasão da polônia",
+      "blitzkrieg",
+      "hitler",
+      "westerplatte",
+      "apaziguamento",
+      "munique",
+      "molotov ribbentrop",
+      "nazismo",
+      "1939"
+    ]
   }
 ]
