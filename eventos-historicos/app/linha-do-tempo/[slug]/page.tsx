@@ -180,20 +180,33 @@ export default function LinhaDoTempoEventoPage({ params }: LinhaDoTempoEventoPag
                   Personagens
                 </h2>
                 <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
-                  {event.characters.map((character) => (
-                    <div key={character.name} className="text-center">
-                      {character.image && (
-                        <div className="relative mx-auto aspect-square w-full max-w-[140px] overflow-hidden rounded-full border bg-muted">
-                          <Image src={character.image} alt={character.name} fill className="object-cover" />
-                        </div>
-                      )}
-                      <h3 className="mt-4 font-semibold text-foreground">{character.name}</h3>
-                      <p className="text-sm text-primary">{character.role}</p>
-                      {character.description && (
-                        <p className="mt-2 text-sm leading-6 text-muted-foreground">{character.description}</p>
-                      )}
-                    </div>
-                  ))}
+                  {event.characters.map((character) => {
+                    const charSlug = character.name
+                      .normalize("NFD")
+                      .replace(/[̀-ͯ]/g, "")
+                      .toLowerCase()
+                      .replace(/[^a-z0-9\s-]/g, "")
+                      .trim()
+                      .replace(/\s+/g, "-")
+                    return (
+                      <Link key={character.name} href={`/personagens/${charSlug}`} className="group text-center block">
+                        {character.image ? (
+                          <div className="relative mx-auto aspect-square w-full max-w-[140px] overflow-hidden rounded-full border bg-muted transition-opacity group-hover:opacity-90">
+                            <Image src={character.image} alt={character.name} fill className="object-cover" />
+                          </div>
+                        ) : (
+                          <div className="mx-auto flex aspect-square w-full max-w-[140px] items-center justify-center rounded-full border bg-muted text-3xl font-bold text-muted-foreground">
+                            {character.name.charAt(0)}
+                          </div>
+                        )}
+                        <h3 className="mt-4 font-semibold text-foreground group-hover:text-primary transition-colors">{character.name}</h3>
+                        <p className="text-sm text-primary">{character.role}</p>
+                        {character.description && (
+                          <p className="mt-2 text-sm leading-6 text-muted-foreground">{character.description}</p>
+                        )}
+                      </Link>
+                    )
+                  })}
                 </div>
               </RevealSection>
             )}
