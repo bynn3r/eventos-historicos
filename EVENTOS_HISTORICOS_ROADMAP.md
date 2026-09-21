@@ -865,9 +865,41 @@ Implementar a visualização geográfica interativa pendente da Sprint 5, escolh
 - Build Next.js completo sem erros; `/mapa` gerada como página estática
 - Verificação via servidor de dev local: 51 marcadores e 51 links renderizados no SSR (contagem via HTML bruto)
 
-**Pendente da lista "Futuro" da Sprint 5:**
-- [ ] Guerras (entidade própria, distinta de "evento")
+**Pendente da lista "Futuro" da Sprint 5 (ao final da 7):**
+- [x] Guerras (entidade própria, distinta de "evento") — ver Sprint 8
 - [ ] Impérios (entidade própria)
+- [ ] Página de país individual (bloqueada pela qualidade do campo `country`)
+
+---
+
+# SPRINT 8 — GUERRAS E CONFLITOS (extensão da lista "Futuro" da Sprint 5)
+
+## Objetivo
+
+Implementar "Guerras" como entidade própria do grafo de conhecimento (Evento ↔ Guerra ↔ Período), escolhida pelo usuário entre as opções restantes por ser a de menor risco: reaproveita os 51 eventos existentes sem exigir pesquisa histórica nova.
+
+## Status da Sprint 8
+
+- **Data:** 2026-09-20
+- **Status:** Concluída
+
+**O que foi implementado:**
+- `lib/wars.ts` (novo): curadoria editorial de 8 guerras a partir dos eventos já classificados como categoria "Militar" na Linha do Tempo (Segunda Guerra Mundial, Primeira Guerra Mundial, Guerras Napoleônicas, Guerra dos Cem Anos, Primeira Cruzada, Conquistas de Alexandre, Queda de Constantinopla, Conquistas Mongóis). A Segunda Guerra Mundial agrupa 2 eventos (início e fim); as demais têm 1 evento cada. Nenhum dado histórico novo foi inventado — apenas reorganização do conteúdo já publicado (datas, cronologia interna, resumos)
+- `components/event-cronologia.tsx`: prop `title` opcional adicionada, permitindo reusar o componente com um cabeçalho por evento quando uma guerra tem mais de um artigo membro (sem alterar o uso existente em `/linha-do-tempo/[slug]`)
+- `app/guerras/page.tsx` (novo): índice das 8 guerras
+- `app/guerras/[slug]/page.tsx` (novo): cronologia interna (uma seção `EventCronologia` por evento membro), lista de artigos completos e link para experiência imersiva quando existente (início/fim da 2ª Guerra, Queda de Constantinopla, 1ª Guerra Mundial já têm página em `/evento`)
+- `linha-do-tempo/[slug]/page.tsx`: banner "Parte da [guerra]" nos artigos que pertencem a uma guerra, fechando mais um dead-end de navegação
+- Navegação e sitemap atualizados (+9 URLs)
+
+**Decisão de escopo:** cronologias de eventos-membro são exibidas em seções separadas (uma por evento), não mescladas numa timeline única — evita parsing ambíguo de datas com formatos distintos ("set. 1939" vs "336 a.C.") e risco de reordenar incorretamente.
+
+**Testes realizados:**
+- TypeScript: sem erros (`tsc --noEmit`)
+- Build Next.js completo sem erros; 8 páginas de guerra geradas estaticamente
+- Verificação via servidor de dev local: cronologia dupla da 2ª Guerra Mundial renderiza corretamente com títulos distintos; banner "Parte da guerra" confirmado no artigo `inicio-segunda-guerra-mundial`
+
+**Pendente da lista "Futuro" da Sprint 5:**
+- [ ] Impérios (entidade própria) — maior risco editorial, exige pesquisa histórica nova
 - [ ] Página de país individual (bloqueada pela qualidade do campo `country`)
 
 ---
