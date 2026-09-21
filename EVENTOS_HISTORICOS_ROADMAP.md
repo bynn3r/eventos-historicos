@@ -828,13 +828,47 @@ Esta Sprint não estava detalhada neste documento — foi aberta a partir da se�
 - `event-hero.tsx`: região no hero do artigo agora é link para `/regioes/[slug]`
 - Sitemap: +7 URLs (263 no total)
 
-**Pendente da lista "Futuro" da Sprint 5:**
+**Pendente da lista "Futuro" da Sprint 5 (ao final da 6D):**
 - [ ] Guerras (entidade própria, distinta de "evento")
 - [ ] Impérios (entidade própria)
-- [ ] Mapas históricos (visualização geográfica interativa)
+- [x] Mapas históricos (visualização geográfica interativa) — ver Sprint 7
 - [ ] Página de país individual (bloqueada pela qualidade do campo `country` — precisaria de normalização dos dados primeiro)
 
 **Testes realizados em cada etapa:** `tsc --noEmit` sem erros; `next build` completo sem erros; testes manuais via servidor de dev local para os endpoints novos (`/api/busca`, `/api/noticias/related`, páginas de região).
+
+---
+
+# SPRINT 7 — MAPA HISTÓRICO (extensão da lista "Futuro" da Sprint 5)
+
+## Objetivo
+
+Implementar a visualização geográfica interativa pendente da Sprint 5, escolhida pelo usuário entre as três opções restantes (Guerras, Impérios, Mapas históricos), com plano curto apresentado e aprovado antes da execução (regra §17).
+
+## Status da Sprint 7
+
+- **Data:** 2026-09-20
+- **Status:** Concluída
+
+**O que foi implementado:**
+- `data/linha-do-tempo.json`: campo `coordinates` (lat/lng) adicionado aos 51 eventos — um ponto geográfico representativo por evento (capital ou local histórico do acontecimento), baseado em geografia verificável e não controversa; nenhum dado histórico foi inventado, apenas georreferenciado
+- `lib/timeline.ts`: interface `TimelineCoordinates` e campo `coordinates` obrigatório em `TimelineEvent`
+- `lib/map-projection.ts` (novo): função de projeção equiretangular lat/lng→posição extraída de `EventMap` para reuso, evitando duplicar a mesma lógica em dois componentes (princípio "evitar versões duplicadas do mesmo componente")
+- `components/evento/event-map.tsx`: refatorado para consumir a função compartilhada, sem mudança de comportamento
+- `components/historical-world-map.tsx` (novo): mapa-múndi ilustrativo (SVG estático, sem biblioteca externa pesada) com os 51 eventos, filtro por período, painel de detalhe ao clicar no marcador; eventos que caem na mesma cidade (Roma tem 4, Paris e Berlim têm 3 cada) são espalhados num pequeno círculo para continuarem individualmente clicáveis
+- `app/mapa/page.tsx` (novo): página com o mapa interativo + lista textual cronológica dos 51 eventos como alternativa acessível por teclado/leitor de tela (princípio de acessibilidade do roadmap)
+- Navegação e sitemap atualizados com a nova rota
+
+**Decisão de escopo:** sem clustering de marcadores nesta primeira versão, conforme alinhado no plano — o espalhamento circular resolve a sobreposição das cidades com múltiplos eventos sem adicionar complexidade de agrupamento dinâmico.
+
+**Testes realizados:**
+- TypeScript: sem erros (`tsc --noEmit`)
+- Build Next.js completo sem erros; `/mapa` gerada como página estática
+- Verificação via servidor de dev local: 51 marcadores e 51 links renderizados no SSR (contagem via HTML bruto)
+
+**Pendente da lista "Futuro" da Sprint 5:**
+- [ ] Guerras (entidade própria, distinta de "evento")
+- [ ] Impérios (entidade própria)
+- [ ] Página de país individual (bloqueada pela qualidade do campo `country`)
 
 ---
 
