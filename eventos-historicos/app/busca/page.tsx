@@ -2,7 +2,7 @@
 
 import type React from "react"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useMemo } from "react"
 import { useSearchParams } from "next/navigation"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
@@ -13,140 +13,84 @@ import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Search, Filter, Calendar, ArrowRight } from "lucide-react"
 import Link from "next/link"
+import type { SearchResultItem } from "@/app/api/busca/route"
 
-interface SearchResult {
-  id: string
-  title: string
-  excerpt: string
-  type: "noticia" | "curiosidade" | "evento" | "artigo"
-  category: string
-  date: string
-  url: string
+const CONTENT_TYPES = ["all", "evento", "curiosidade", "personagem", "noticia"] as const
+
+const TYPE_LABELS: Record<string, string> = {
+  all: "Todos",
+  evento: "Eventos",
+  curiosidade: "Curiosidades",
+  personagem: "Personagens",
+  noticia: "Notícias",
 }
 
-const mockSearchResults: SearchResult[] = [
-  {
-    id: "1",
-    title: "Escalada de Tensões no Oriente Médio: Análise das Implicações Geopolíticas",
-    excerpt:
-      "Uma análise profunda dos recentes desenvolvimentos na região e suas consequências para o equilíbrio de poder mundial...",
-    type: "noticia",
-    category: "Oriente Médio",
-    date: "15 de Janeiro, 2024",
-    url: "/artigo/tensoes-oriente-medio",
-  },
-  {
-    id: "2",
-    title: "A Biblioteca de Alexandria Nunca Foi Totalmente Destruída",
-    excerpt:
-      "Contrário à crença popular, a famosa Biblioteca de Alexandria não foi destruída em um único evento catastrófico...",
-    type: "curiosidade",
-    category: "Antiguidade",
-    date: "10 de Janeiro, 2024",
-    url: "/curiosidade/biblioteca-alexandria",
-  },
-  {
-    id: "3",
-    title: "Fim da Segunda Guerra Mundial",
-    excerpt:
-      "O conflito mais devastador da história chega ao fim com a rendição do Japão, marcando o início de uma nova ordem mundial...",
-    type: "evento",
-    category: "Século XX",
-    date: "5 de Janeiro, 2024",
-    url: "/evento/1945-fim-segunda-guerra-mundial",
-  },
-  {
-    id: "4",
-    title: "China e EUA: Nova Fase das Relações Comerciais",
-    excerpt: "Análise dos acordos comerciais recentes e seu impacto na economia global...",
-    type: "noticia",
-    category: "Ásia",
-    date: "14 de Janeiro, 2024",
-    url: "/artigo/china-eua-comercio",
-  },
-  {
-    id: "5",
-    title: "O Império Mongol Era Maior que a África",
-    excerpt:
-      "O Império Mongol, no seu auge, cobria aproximadamente 24 milhões de km² - maior que todo o continente africano...",
-    type: "curiosidade",
-    category: "Idade Média",
-    date: "8 de Janeiro, 2024",
-    url: "/curiosidade/imperio-mongol",
-  },
+const TYPE_BADGE_COLORS: Record<string, string> = {
+  evento: "bg-purple-500",
+  curiosidade: "bg-green-500",
+  personagem: "bg-amber-500",
+  noticia: "bg-blue-500",
+}
+
+const SUGGESTIONS = [
+  { term: "Segunda Guerra Mundial", description: "Eventos e análises do maior conflito da história" },
+  { term: "Império Romano", description: "História e curiosidades sobre Roma Antiga" },
+  { term: "Guerra Fria", description: "Tensões entre EUA e URSS no século XX" },
+  { term: "Revolução Francesa", description: "O movimento que mudou a França e o mundo" },
+  { term: "Napoleão", description: "Ascensão e queda do imperador francês" },
+  { term: "Oriente Médio", description: "Geopolítica e conflitos na região" },
 ]
 
 export default function BuscaPage() {
   const searchParams = useSearchParams()
+  const [inputValue, setInputValue] = useState(searchParams.get("q") || "")
   const [searchTerm, setSearchTerm] = useState(searchParams.get("q") || "")
   const [selectedType, setSelectedType] = useState<string>("all")
   const [selectedCategory, setSelectedCategory] = useState<string>("all")
-  const [results, setResults] = useState<SearchResult[]>([])
+  const [results, setResults] = useState<SearchResultItem[]>([])
+  const [categories, setCategories] = useState<string[]>([])
   const [isLoading, setIsLoading] = useState(false)
 
-  const contentTypes = ["all", "noticia", "curiosidade", "evento", "artigo"]
-  const categories = [
-    "all",
-    "Oriente Médio",
-    "Ásia",
-    "Europa",
-    "Américas",
-    "África",
-    "Antiguidade",
-    "Idade Média",
-    "Século XX",
-  ]
-
-  const getTypeLabel = (type: string) => {
-    const labels = {
-      all: "Todos",
-      noticia: "Notícias",
-      curiosidade: "Curiosidades",
-      evento: "Eventos",
-      artigo: "Artigos",
-    }
-    return labels[type as keyof typeof labels] || type
-  }
-
-  const getTypeBadgeColor = (type: string) => {
-    const colors = {
-      noticia: "bg-blue-500",
-      curiosidade: "bg-green-500",
-      evento: "bg-purple-500",
-      artigo: "bg-orange-500",
-    }
-    return colors[type as keyof typeof colors] || "bg-gray-500"
-  }
+  // Debounce input -> searchTerm
+  useEffect(() => {
+    const handle = setTimeout(() => setSearchTerm(inputValue.trim()), 350)
+    return () => clearTimeout(handle)
+  }, [inputValue])
 
   useEffect(() => {
-    if (searchTerm) {
-      setIsLoading(true)
-      // Simulate API call
-      setTimeout(() => {
-        const filtered = mockSearchResults.filter((result) => {
-          const matchesSearch =
-            result.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            result.excerpt.toLowerCase().includes(searchTerm.toLowerCase())
-          const matchesType = selectedType === "all" || result.type === selectedType
-          const matchesCategory = selectedCategory === "all" || result.category === selectedCategory
-
-          return matchesSearch && matchesType && matchesCategory
-        })
-        setResults(filtered)
-        setIsLoading(false)
-      }, 500)
-    } else {
+    if (searchTerm.length < 2) {
       setResults([])
+      setIsLoading(false)
+      return
     }
+
+    setIsLoading(true)
+    const controller = new AbortController()
+
+    const params = new URLSearchParams({ q: searchTerm, type: selectedType, category: selectedCategory })
+    fetch(`/api/busca?${params.toString()}`, { signal: controller.signal })
+      .then((r) => (r.ok ? r.json() : { results: [], categories: [] }))
+      .then((data: { results: SearchResultItem[]; categories: string[] }) => {
+        setResults(data.results)
+        setCategories((prev) => (data.categories.length > 0 ? data.categories : prev))
+        setIsLoading(false)
+      })
+      .catch((err) => {
+        if (err.name !== "AbortError") setIsLoading(false)
+      })
+
+    return () => controller.abort()
   }, [searchTerm, selectedType, selectedCategory])
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault()
-    // Update URL with search params
+    setSearchTerm(inputValue.trim())
     const url = new URL(window.location.href)
-    url.searchParams.set("q", searchTerm)
+    url.searchParams.set("q", inputValue.trim())
     window.history.pushState({}, "", url.toString())
   }
+
+  const categoryOptions = useMemo(() => ["all", ...categories], [categories])
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -159,15 +103,14 @@ export default function BuscaPage() {
             <div className="max-w-4xl mx-auto">
               <h1 className="text-4xl font-bold mb-6 text-center">Buscar Conteúdo</h1>
 
-              {/* Search Form */}
               <form onSubmit={handleSearch} className="mb-6">
                 <div className="relative max-w-2xl mx-auto">
                   <Search className="absolute left-4 top-4 h-5 w-5 text-muted-foreground" />
                   <Input
-                    placeholder="Digite sua busca: eventos, países, períodos históricos..."
-                    className="pl-12 pr-4 py-4 text-lg"
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
+                    placeholder="Digite sua busca: eventos, personagens, países, períodos históricos..."
+                    className="pl-12 pr-24 py-4 text-lg"
+                    value={inputValue}
+                    onChange={(e) => setInputValue(e.target.value)}
                   />
                   <Button type="submit" className="absolute right-2 top-2">
                     Buscar
@@ -175,7 +118,7 @@ export default function BuscaPage() {
                 </div>
               </form>
 
-              {searchTerm && (
+              {searchTerm.length >= 2 && (
                 <p className="text-center text-muted-foreground">
                   {isLoading ? "Buscando..." : `${results.length} resultado(s) encontrado(s) para "${searchTerm}"`}
                 </p>
@@ -185,7 +128,7 @@ export default function BuscaPage() {
         </section>
 
         {/* Filters */}
-        {searchTerm && (
+        {searchTerm.length >= 2 && (
           <section className="py-6 border-b">
             <div className="container mx-auto px-4">
               <div className="flex flex-col md:flex-row gap-4 items-center justify-center">
@@ -196,21 +139,21 @@ export default function BuscaPage() {
                       <SelectValue placeholder="Tipo" />
                     </SelectTrigger>
                     <SelectContent>
-                      {contentTypes.map((type) => (
+                      {CONTENT_TYPES.map((type) => (
                         <SelectItem key={type} value={type}>
-                          {getTypeLabel(type)}
+                          {TYPE_LABELS[type]}
                         </SelectItem>
                       ))}
                     </SelectContent>
                   </Select>
                   <Select value={selectedCategory} onValueChange={setSelectedCategory}>
-                    <SelectTrigger className="w-[150px]">
+                    <SelectTrigger className="w-[180px]">
                       <SelectValue placeholder="Categoria" />
                     </SelectTrigger>
                     <SelectContent>
-                      {categories.map((category) => (
-                        <SelectItem key={category} value={category}>
-                          {category === "all" ? "Todas" : category}
+                      {categoryOptions.map((cat) => (
+                        <SelectItem key={cat} value={cat}>
+                          {cat === "all" ? "Todas as categorias" : cat}
                         </SelectItem>
                       ))}
                     </SelectContent>
@@ -224,22 +167,15 @@ export default function BuscaPage() {
         {/* Search Results */}
         <section className="py-12">
           <div className="container mx-auto px-4">
-            {!searchTerm ? (
+            {searchTerm.length < 2 ? (
               <div className="max-w-4xl mx-auto">
                 <h2 className="text-2xl font-bold mb-8 text-center">Sugestões de Busca</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {[
-                    { term: "Segunda Guerra Mundial", description: "Eventos e análises do maior conflito da história" },
-                    { term: "Império Romano", description: "História e curiosidades sobre Roma Antiga" },
-                    { term: "Guerra Fria", description: "Tensões entre EUA e URSS no século XX" },
-                    { term: "Revolução Francesa", description: "O movimento que mudou a França e o mundo" },
-                    { term: "Descobrimento da América", description: "As grandes navegações e seus impactos" },
-                    { term: "Oriente Médio", description: "Geopolítica e conflitos na região" },
-                  ].map((suggestion, index) => (
+                  {SUGGESTIONS.map((suggestion, index) => (
                     <Card
                       key={index}
                       className="cursor-pointer hover:shadow-lg transition-shadow"
-                      onClick={() => setSearchTerm(suggestion.term)}
+                      onClick={() => setInputValue(suggestion.term)}
                     >
                       <CardHeader>
                         <CardTitle className="text-lg">{suggestion.term}</CardTitle>
@@ -276,22 +212,24 @@ export default function BuscaPage() {
                     {results.map((result) => (
                       <Card key={result.id} className="hover:shadow-lg transition-shadow">
                         <CardHeader>
-                          <div className="flex items-start justify-between mb-2">
+                          <div className="flex items-start justify-between mb-2 gap-2 flex-wrap">
                             <div className="flex items-center gap-2">
-                              <Badge className={`${getTypeBadgeColor(result.type)} text-white`}>
-                                {getTypeLabel(result.type)}
+                              <Badge className={`${TYPE_BADGE_COLORS[result.type]} text-white`}>
+                                {TYPE_LABELS[result.type]}
                               </Badge>
                               <Badge variant="secondary">{result.category}</Badge>
                             </div>
-                            <div className="flex items-center gap-1 text-sm text-muted-foreground">
-                              <Calendar className="h-3 w-3" />
-                              <span>{result.date}</span>
-                            </div>
+                            {result.date && (
+                              <div className="flex items-center gap-1 text-sm text-muted-foreground">
+                                <Calendar className="h-3 w-3" />
+                                <span>{result.date}</span>
+                              </div>
+                            )}
                           </div>
                           <CardTitle className="text-xl hover:text-primary">
                             <Link href={result.url}>{result.title}</Link>
                           </CardTitle>
-                          <CardDescription className="text-base">{result.excerpt}</CardDescription>
+                          <CardDescription className="text-base line-clamp-3">{result.excerpt}</CardDescription>
                         </CardHeader>
                         <CardContent>
                           <Button variant="outline" asChild>
@@ -313,6 +251,7 @@ export default function BuscaPage() {
                     <Button
                       variant="outline"
                       onClick={() => {
+                        setInputValue("")
                         setSearchTerm("")
                         setSelectedType("all")
                         setSelectedCategory("all")
