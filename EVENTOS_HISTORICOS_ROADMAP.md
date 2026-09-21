@@ -898,9 +898,41 @@ Implementar "Guerras" como entidade própria do grafo de conhecimento (Evento �
 - Build Next.js completo sem erros; 8 páginas de guerra geradas estaticamente
 - Verificação via servidor de dev local: cronologia dupla da 2ª Guerra Mundial renderiza corretamente com títulos distintos; banner "Parte da guerra" confirmado no artigo `inicio-segunda-guerra-mundial`
 
+**Pendente da lista "Futuro" da Sprint 5 (ao final da 8):**
+- [ ] Impérios (entidade própria) — maior risco editorial, exige pesquisa histórica nova
+- [x] Página de país individual — ver Sprint 9
+
+---
+
+# SPRINT 9 — PAÍSES (extensão da lista "Futuro" da Sprint 5)
+
+## Objetivo
+
+Desbloquear a página de país, adiada na Sprint 6D pela heterogeneidade do campo `country` (31 valores, muitos compostos como "Venezuela / Argentina / México"), normalizando-o num novo campo sem descartar o original.
+
+## Status da Sprint 9
+
+- **Data:** 2026-09-20
+- **Status:** Concluída
+
+**O que foi implementado:**
+- `data/linha-do-tempo.json`: campo `countries: string[]` adicionado aos 51 eventos, normalizando o texto livre de `country` em nomes canônicos para agrupamento. O campo `country` original foi mantido intacto — nada que já lia esse campo (hero, sitemap, listas) foi afetado. Decisões editoriais da normalização:
+  - Eventos genuinamente multinacionais ou continentais ("Diversos países" na 1ª Guerra Mundial, "Europa" na Revolução Científica, "África" na Descolonização) ficaram com `countries: []` em vez de forçar uma escolha arbitrária de um único país
+  - Entidades históricas distintas de países modernos (Levante, Mesopotâmia, Sacro Império Romano-Germânico) foram mantidas como grupos próprios, preservando a mesma precisão editorial já adotada na correção "Israel" → "Levante" da Primeira Cruzada (Sprint 2)
+  - "Roma" (assassinato de Júlio César) normalizado para "Itália" por consistência com os outros 3 eventos romanos que já usavam essa rotulagem — correção de inconsistência de dado, não reinterpretação histórica
+- `lib/timeline.ts`: campo `countries` adicionado à interface `TimelineEvent`
+- `lib/countries.ts` (novo): agrupa os eventos por país — 27 países resultantes, de 1 evento (ex.: Egito, Mali) a 5 eventos (Itália, França, Alemanha)
+- `app/paises/page.tsx` e `app/paises/[slug]/page.tsx` (novos): índice e página individual por país, mesmo padrão visual das páginas de Região
+- `linha-do-tempo/[slug]/page.tsx`: badges "Países" no artigo, linkando para a página de cada país envolvido — um evento pode ter mais de um badge (ex.: Guerra dos Cem Anos → França + Inglaterra)
+- Navegação e sitemap atualizados (+28 URLs)
+
+**Testes realizados:**
+- TypeScript: sem erros (`tsc --noEmit`)
+- Build Next.js completo sem erros; 27 páginas de país geradas estaticamente
+- Verificação via servidor de dev local: `/paises/italia` responde 200; artigo `guerra-dos-cem-anos` mostra badges para França e Inglaterra
+
 **Pendente da lista "Futuro" da Sprint 5:**
 - [ ] Impérios (entidade própria) — maior risco editorial, exige pesquisa histórica nova
-- [ ] Página de país individual (bloqueada pela qualidade do campo `country`)
 
 ---
 
