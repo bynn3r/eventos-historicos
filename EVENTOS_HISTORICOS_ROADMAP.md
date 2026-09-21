@@ -528,6 +528,29 @@ A animação deve servir ao conteúdo.
 
 ---
 
+## Status da Sprint 3
+
+- **Data:** 2026-09-XX
+- **Status:** Concluída
+
+**O que foi implementado:**
+- `globals.css`: reset de `prefers-reduced-motion` aplicado a todas as animações
+- `globals.css`: classe `.reveal-section` para scroll-reveal
+- `components/reveal-section.tsx`: componente client novo com `IntersectionObserver`, fade-in escalonado
+- `components/event-hero.tsx`: linha de destaque de período (âmbar/pedra/céu/ardósia) no topo do hero
+- `linha-do-tempo/page.tsx`: ícones para os 6 eventos novos da época; borda esquerda colorida por período nos cards
+- `linha-do-tempo/[slug]/page.tsx`: seções de cronologia, personagens, fontes e relacionados envolvidas em `RevealSection` para fade-in escalonado ao rolar
+
+**Identidade temporal implementada:** cores/acentos diferentes por período (Antiga/Média/Moderna/Contemporânea), mantendo o layout consistente conforme pedido pelo roadmap.
+
+**Testes realizados:**
+- TypeScript: sem erros (`tsc --noEmit`)
+- `prefers-reduced-motion` verificado no CSS
+
+**Próximo passo sugerido:** Sprint 4 — Expansão do Acervo.
+
+---
+
 # SPRINT 4 — EXPANSÃO DO ACERVO
 
 ## Objetivo
@@ -606,6 +629,34 @@ Antes de inserir os 50 eventos:
 5. só então inserir os conteúdos.
 
 Não criar personagens, mapas ou novas grandes entidades nesta Sprint.
+
+---
+
+## Status da Sprint 4
+
+- **Data:** 2026-09-XX
+- **Status:** Concluída
+
+**Processo seguido:** lista de 16 eventos propostos e confirmada pelo usuário antes da inserção (incluindo `inicio-segunda-guerra-mundial`, apontado pelo usuário como lacuna — "faltava a segunda guerra mundial, não só o fim dela").
+
+**16 novos eventos adicionados à Linha do Tempo** (total: 35 → 51), cobrindo períodos e regiões sub-representados:
+- Pré-história: Revolução Agrícola Neolítica (c. 10000 a.C.)
+- Antiguidade: Nascimento do Budismo, Assassinato de Júlio César
+- Idade Média: Imprensa de Gutenberg, Império Mali (Mansa Musa)
+- Idade Moderna: Revolução Gloriosa, Independências da América Latina
+- Contemporânea: Unificação da Alemanha, Restauração Meiji, Revolução Xinhai, Declaração Universal dos Direitos Humanos, Revolução Comunista Chinesa, Descolonização da África, Colapso da URSS, 11 de Setembro, Início da Segunda Guerra Mundial
+
+Cada evento inclui artigo completo, fontes (quando citadas explicitamente no texto), personagens e cronologia interna, conforme exigido pelo usuário.
+
+**4 experiências imersivas novas em `grandes-eventos.json`** (total: 14 → 18): `inicio-segunda-guerra-mundial`, `assassinato-julio-cesar`, `invencao-imprensa-gutenberg`, `atentados-11-setembro` — cada uma com momentos, locais e figuras históricas.
+
+**`EVENT_VISUALS`** atualizado com ícones e cores para os 16 novos slugs.
+
+**Testes realizados:**
+- TypeScript: sem erros (`tsc --noEmit`)
+- JSON válido para os dois arquivos de dados
+
+**Próximo passo sugerido:** Sprint 5 — Mudança Conceitual.
 
 ---
 
@@ -719,6 +770,71 @@ Preparar arquitetura para:
 - mapas.
 
 Não implementar tudo automaticamente.
+
+---
+
+## Status da Sprint 5
+
+- **Data:** 2026-09-XX
+- **Status:** Concluída
+
+**O que foi implementado:**
+- `relatedEventsContext` adicionado aos 51 eventos da Linha do Tempo (143 descrições de relação causal/contextual entre eventos, substituindo o resumo genérico anteriormente exibido)
+- `lib/related-content.ts`: campo `importance` adicionado ao matcher; eventos com `importance >= 4` recebem boost de pontuação na busca por conteúdo relacionado
+- Notícia → Contexto histórico: query de `findRelatedContent` em `/noticias/[slug]` estendida para incluir `tags`; CTA "Explorar a Linha do Tempo completa" adicionado após o grid de contexto histórico
+- `components/related-news-widget.tsx` (novo) + `app/api/noticias/related/route.ts` (novo): widget client-side que busca notícias recentes relacionadas a um evento por sobreposição de keywords, sem tornar as páginas de evento dinâmicas (fetch pós-hidratação)
+- `/evento/[slug]`: rodapé de navegação com link para o artigo completo na Linha do Tempo, fechando o dead-end das páginas de Grandes Eventos
+
+**Conceito da Sprint cumprido:** o usuário agora pode entrar por qualquer conteúdo (notícia, curiosidade, evento, Linha do Tempo) e continuar descobrindo — sem alterar a Home nem duplicar a Linha do Tempo nos Grandes Eventos.
+
+**Testes realizados:**
+- TypeScript: sem erros (`tsc --noEmit`)
+- Build Next.js completo sem erros
+
+**Próximo passo sugerido:** conforme a seção "Futuro" desta Sprint — Personagens e Países foram abertos como Sprint 6 (ver abaixo); Guerras, Impérios e Mapas históricos seguem pendentes.
+
+---
+
+# SPRINT 6 — PERSONAGENS, BUSCA, SEO E REGIÕES (extensão não formalizada previamente)
+
+## Objetivo
+
+Esta Sprint não estava detalhada neste documento — foi aberta a partir da seção "Futuro" da Sprint 5 ("preparar arquitetura para personagens, países, guerras, impérios, mapas") e conduzida em 4 partes (A–D), uma de cada vez, com autorização do usuário entre cada etapa, seguindo a regra de "executar somente uma Sprint por vez".
+
+## Status da Sprint 6
+
+- **Data:** 2026-09-20
+- **Status:** Concluída (6A, 6B, 6C, 6D)
+
+### 6A — Personagens
+- `lib/characters.ts` (novo): extrai os 152 personagens únicos dos 51 eventos, gera slugs, agrupa os 3 que aparecem em mais de um evento (Otto von Bismarck, Mikhail Gorbachev, Winston Churchill)
+- `/personagens` (novo): índice alfabético com navegação sticky por letra
+- `/personagens/[slug]` (novo): página individual com bio, badges de período, lista de eventos e links para artigo/experiência imersiva; JSON-LD `Person`
+- Navegação: link "Personagens" no dropdown "Mais" (desktop) e no menu mobile
+- Cards de personagens em `/linha-do-tempo/[slug]` agora são links para a página do personagem
+
+### 6B — Busca Aprimorada
+- `app/api/busca/route.ts` (novo): endpoint unificado que busca em eventos, curiosidades, personagens e notícias (DynamoDB), com scoring por relevância (título pesa mais que corpo) e boost por `importance`
+- `/busca`: dados mockados substituídos por fetch debounced ao endpoint real; filtro de categoria populado dinamicamente
+
+### 6C — SEO e Sitemap
+- `sitemap.ts`: as 153 páginas de personagens (faltantes desde a 6A) adicionadas — sitemap foi de 103 para 256 URLs
+- `/linha-do-tempo/[slug]`: Twitter Card e `alt` na imagem OG adicionados (faltavam nesta página, que já existiam em `/evento`, `/curiosidades` e `/personagens`)
+- `/busca`: `layout.tsx` novo com `robots: noindex, follow` (conteúdo client-rendered de resultados de query não deve ser indexado)
+
+### 6D — Regiões e Continentes
+- `lib/regions.ts` (novo): agrupa os 51 eventos em 6 continentes/macrorregiões (Europa, Ásia, Oriente Médio, África, Américas, Global) a partir do texto livre do campo `region` — o campo `country` é granular demais (31 valores, muitos compostos) para agrupamento direto por país
+- `/regioes` e `/regioes/[slug]` (novos): índice de continentes e listagem cronológica de eventos por continente, com países como badges
+- `event-hero.tsx`: região no hero do artigo agora é link para `/regioes/[slug]`
+- Sitemap: +7 URLs (263 no total)
+
+**Pendente da lista "Futuro" da Sprint 5:**
+- [ ] Guerras (entidade própria, distinta de "evento")
+- [ ] Impérios (entidade própria)
+- [ ] Mapas históricos (visualização geográfica interativa)
+- [ ] Página de país individual (bloqueada pela qualidade do campo `country` — precisaria de normalização dos dados primeiro)
+
+**Testes realizados em cada etapa:** `tsc --noEmit` sem erros; `next build` completo sem erros; testes manuais via servidor de dev local para os endpoints novos (`/api/busca`, `/api/noticias/related`, páginas de região).
 
 ---
 
