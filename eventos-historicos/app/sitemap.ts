@@ -4,6 +4,7 @@ import curiosidadesData from "@/data/curiosidades.json"
 import { getAllTimelineEvents } from "@/lib/timeline"
 import { getAllCharacters } from "@/lib/characters"
 import { getAllContinents } from "@/lib/regions"
+import { getAllWars } from "@/lib/wars"
 
 const SITE_URL = "https://eventoshistoricos.com.br"
 
@@ -19,6 +20,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/personagens`, changeFrequency: "monthly", priority: 0.7 },
     { url: `${SITE_URL}/regioes`, changeFrequency: "monthly", priority: 0.7 },
     { url: `${SITE_URL}/mapa`, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${SITE_URL}/guerras`, changeFrequency: "monthly", priority: 0.7 },
     { url: `${SITE_URL}/sobre`, changeFrequency: "monthly", priority: 0.4 },
     { url: `${SITE_URL}/contato`, changeFrequency: "monthly", priority: 0.3 },
     { url: `${SITE_URL}/privacidade`, changeFrequency: "yearly", priority: 0.2 },
@@ -54,6 +56,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }))
 
+  const guerraRoutes: MetadataRoute.Sitemap = getAllWars().map((war) => ({
+    url: `${SITE_URL}/guerras/${war.slug}`,
+    changeFrequency: "monthly",
+    priority: 0.6,
+  }))
+
   return [
     ...staticRoutes,
     ...timelineRoutes,
@@ -61,5 +69,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...curiosidadeRoutes,
     ...personagemRoutes,
     ...regiaoRoutes,
+    ...guerraRoutes,
   ]
 }

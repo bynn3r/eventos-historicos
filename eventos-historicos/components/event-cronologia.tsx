@@ -2,14 +2,15 @@ import type { TimelineCronologiaItem } from "@/lib/timeline"
 
 interface EventCronologiaProps {
   cronologia: TimelineCronologiaItem[]
+  title?: string
 }
 
-export function EventCronologia({ cronologia }: EventCronologiaProps) {
+export function EventCronologia({ cronologia, title = "Cronologia" }: EventCronologiaProps) {
   if (!cronologia || cronologia.length === 0) return null
 
   return (
     <section className="py-8">
-      <h2 className="text-2xl font-bold mb-6">Cronologia</h2>
+      <h2 className="text-2xl font-bold mb-6">{title}</h2>
       <ol className="relative border-l-2 border-border ml-2 space-y-0">
         {cronologia.map((item, index) => (
           <li key={index} className="relative pl-8 pb-6 last:pb-0">

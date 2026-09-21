@@ -26,6 +26,7 @@ import {
   Users,
   Globe2,
   Map as MapIcon,
+  Swords,
 } from "lucide-react"
 import { useTheme } from "next-themes"
 import { useLanguage } from "@/contexts/language-context"
@@ -164,6 +165,14 @@ export function Navigation() {
                       Mapa Histórico
                     </Link>
                     <Link
+                      href="/guerras"
+                      className="flex items-center px-4 py-2 text-sm hover:bg-accent hover:text-accent-foreground transition-colors"
+                      onClick={() => setMaisOpen(false)}
+                    >
+                      <Swords className="mr-3 h-4 w-4" />
+                      Guerras
+                    </Link>
+                    <Link
                       href="/busca"
                       className="flex items-center px-4 py-2 text-sm hover:bg-accent hover:text-accent-foreground transition-colors"
                       onClick={() => setMaisOpen(false)}
@@ -277,6 +286,14 @@ export function Navigation() {
                     >
                       <MapIcon className="h-5 w-5 text-primary" />
                       <span>Mapa Histórico</span>
+                    </Link>
+
+                    <Link
+                      href="/guerras"
+                      className="flex items-center space-x-3 rounded-lg px-3 py-3 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
+                    >
+                      <Swords className="h-5 w-5 text-primary" />
+                      <span>Guerras</span>
                     </Link>
                   </div>
 
