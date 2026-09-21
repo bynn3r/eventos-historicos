@@ -38,6 +38,7 @@ export interface TimelineEvent {
   period: string
   region: string
   country: string
+  countries: string[]
   coordinates: TimelineCoordinates
   category: string
   summary: string

@@ -11,6 +11,7 @@ import grandesEventosData from "@/data/grandes-eventos.json"
 import { getAllTimelineEvents, getTimelineEventBySlug, getRelatedTimelineEvents } from "@/lib/timeline"
 import { getContinentSlugForRegion } from "@/lib/regions"
 import { getWarForEvent } from "@/lib/wars"
+import { getCountriesForEvent } from "@/lib/countries"
 import { findRelatedContent } from "@/lib/related-content"
 import { EventHero } from "@/components/event-hero"
 import { EventCronologia } from "@/components/event-cronologia"
@@ -80,6 +81,7 @@ export default function LinhaDoTempoEventoPage({ params }: LinhaDoTempoEventoPag
   const hasFlagshipExperience = grandesEventosData.some((flagship) => flagship.slug === event.slug)
   const continentSlug = getContinentSlugForRegion(event.region)
   const war = getWarForEvent(event.slug)
+  const eventCountries = getCountriesForEvent(event)
 
   const allSorted = getAllTimelineEvents().sort((a, b) => a.startYear - b.startYear)
   const currentIndex = allSorted.findIndex((e) => e.slug === event.slug)
@@ -188,6 +190,20 @@ export default function LinhaDoTempoEventoPage({ params }: LinhaDoTempoEventoPag
                   </Button>
                 </CardContent>
               </Card>
+            )}
+
+            {/* Países envolvidos */}
+            {eventCountries.length > 0 && (
+              <div className="mb-10 flex flex-wrap items-center gap-2">
+                <span className="text-sm text-muted-foreground">Países:</span>
+                {eventCountries.map((country) => (
+                  <Link key={country.slug} href={`/paises/${country.slug}`}>
+                    <Badge variant="outline" className="hover:bg-accent hover:text-accent-foreground transition-colors">
+                      {country.name}
+                    </Badge>
+                  </Link>
+                ))}
+              </div>
             )}
 
             {/* Content */}

@@ -9,6 +9,9 @@
     "period": "Idade Antiga",
     "region": "África",
     "country": "Egito",
+    "countries": [
+      "Egito"
+    ],
     "coordinates": {
       "lat": 29.8447,
       "lng": 31.25
@@ -90,6 +93,9 @@
     "period": "Idade Antiga",
     "region": "Mesopotâmia",
     "country": "Iraque",
+    "countries": [
+      "Iraque"
+    ],
     "coordinates": {
       "lat": 32.5364,
       "lng": 44.42
@@ -174,6 +180,9 @@
     "period": "Idade Antiga",
     "region": "Europa",
     "country": "Grécia",
+    "countries": [
+      "Grécia"
+    ],
     "coordinates": {
       "lat": 37.6382,
       "lng": 21.6303
@@ -259,6 +268,9 @@
     "period": "Idade Antiga",
     "region": "Europa",
     "country": "Itália",
+    "countries": [
+      "Itália"
+    ],
     "coordinates": {
       "lat": 41.9028,
       "lng": 12.4964
@@ -340,6 +352,9 @@
     "period": "Idade Antiga",
     "region": "Mediterrâneo Oriental, Oriente Médio e Ásia Central",
     "country": "Grécia",
+    "countries": [
+      "Grécia"
+    ],
     "coordinates": {
       "lat": 40.7683,
       "lng": 22.5265
@@ -449,6 +464,9 @@
     "period": "Idade Antiga",
     "region": "Ásia",
     "country": "China",
+    "countries": [
+      "China"
+    ],
     "coordinates": {
       "lat": 34.3667,
       "lng": 108.7
@@ -549,6 +567,9 @@
     "period": "Idade Antiga",
     "region": "Europa",
     "country": "Itália",
+    "countries": [
+      "Itália"
+    ],
     "coordinates": {
       "lat": 41.9028,
       "lng": 12.4964
@@ -645,6 +666,9 @@
     "period": "Idade Média",
     "region": "Península Arábica",
     "country": "Arábia Saudita",
+    "countries": [
+      "Arábia Saudita"
+    ],
     "coordinates": {
       "lat": 24.5247,
       "lng": 39.5692
@@ -751,6 +775,9 @@
     "period": "Idade Média",
     "region": "Europa Ocidental",
     "country": "Itália",
+    "countries": [
+      "Itália"
+    ],
     "coordinates": {
       "lat": 41.9028,
       "lng": 12.4964
@@ -852,6 +879,9 @@
     "period": "Idade Média",
     "region": "Europa Oriental",
     "country": "Turquia",
+    "countries": [
+      "Turquia"
+    ],
     "coordinates": {
       "lat": 41.0082,
       "lng": 28.9784
@@ -947,6 +977,9 @@
     "period": "Idade Média",
     "region": "Oriente Médio",
     "country": "Levante (Palestina histórica)",
+    "countries": [
+      "Levante (Palestina histórica)"
+    ],
     "coordinates": {
       "lat": 31.7683,
       "lng": 35.2137
@@ -1057,6 +1090,9 @@
     "period": "Idade Média",
     "region": "Europa Ocidental",
     "country": "Inglaterra",
+    "countries": [
+      "Inglaterra"
+    ],
     "coordinates": {
       "lat": 51.4448,
       "lng": -0.5713
@@ -1157,6 +1193,10 @@
     "period": "Idade Média",
     "region": "Europa Ocidental",
     "country": "França e Inglaterra",
+    "countries": [
+      "França",
+      "Inglaterra"
+    ],
     "coordinates": {
       "lat": 48.8566,
       "lng": 2.3522
@@ -1261,6 +1301,11 @@
     "period": "Idade Média",
     "region": "Europa, Ásia e Norte da África",
     "country": "Itália, França, Inglaterra e outros países europeus",
+    "countries": [
+      "Itália",
+      "França",
+      "Inglaterra"
+    ],
     "coordinates": {
       "lat": 38.1938,
       "lng": 15.554
@@ -1345,6 +1390,9 @@
     "period": "Idade Média",
     "region": "Europa/Ásia",
     "country": "Turquia",
+    "countries": [
+      "Turquia"
+    ],
     "coordinates": {
       "lat": 41.0082,
       "lng": 28.9784
@@ -1438,6 +1486,9 @@
     "period": "Idade Moderna",
     "region": "Américas",
     "country": "Bahamas",
+    "countries": [
+      "Bahamas"
+    ],
     "coordinates": {
       "lat": 24.027,
       "lng": -74.4762
@@ -1540,6 +1591,9 @@
     "period": "Idade Moderna",
     "region": "América do Sul",
     "country": "Brasil",
+    "countries": [
+      "Brasil"
+    ],
     "coordinates": {
       "lat": -16.4497,
       "lng": -39.0648
@@ -1651,6 +1705,9 @@
     "period": "Idade Moderna",
     "region": "Europa",
     "country": "Alemanha",
+    "countries": [
+      "Alemanha"
+    ],
     "coordinates": {
       "lat": 51.8667,
       "lng": 12.65
@@ -1758,6 +1815,9 @@
     "period": "Idade Moderna",
     "region": "Europa",
     "country": "Reino Unido (Grã-Bretanha)",
+    "countries": [
+      "Reino Unido"
+    ],
     "coordinates": {
       "lat": 53.4808,
       "lng": -2.2426
@@ -1844,6 +1904,9 @@
     "period": "Idade Moderna",
     "region": "América do Norte",
     "country": "Estados Unidos",
+    "countries": [
+      "Estados Unidos"
+    ],
     "coordinates": {
       "lat": 39.9526,
       "lng": -75.1652
@@ -1950,6 +2013,9 @@
     "period": "Idade Contemporânea",
     "region": "Europa",
     "country": "França",
+    "countries": [
+      "França"
+    ],
     "coordinates": {
       "lat": 48.8566,
       "lng": 2.3522
@@ -2059,6 +2125,9 @@
     "period": "Idade Contemporânea",
     "region": "América do Sul",
     "country": "Brasil",
+    "countries": [
+      "Brasil"
+    ],
     "coordinates": {
       "lat": -23.5629,
       "lng": -46.6091
@@ -2163,6 +2232,7 @@
     "period": "Idade Contemporânea",
     "region": "Europa",
     "country": "Diversos países (conflito global)",
+    "countries": [],
     "coordinates": {
       "lat": 43.8563,
       "lng": 18.4131
@@ -2264,6 +2334,9 @@
     "period": "Idade Contemporânea",
     "region": "Europa Oriental",
     "country": "Rússia",
+    "countries": [
+      "Rússia"
+    ],
     "coordinates": {
       "lat": 59.9343,
       "lng": 30.3351
@@ -2369,6 +2442,9 @@
     "period": "Idade Contemporânea",
     "region": "América do Norte",
     "country": "Estados Unidos",
+    "countries": [
+      "Estados Unidos"
+    ],
     "coordinates": {
       "lat": 40.7128,
       "lng": -74.006
@@ -2454,6 +2530,9 @@
     "period": "Idade Contemporânea",
     "region": "Global",
     "country": "Japão",
+    "countries": [
+      "Japão"
+    ],
     "coordinates": {
       "lat": 35.6762,
       "lng": 139.6503
@@ -2568,6 +2647,9 @@
     "period": "Idade Contemporânea",
     "region": "Ásia Meridional",
     "country": "Índia",
+    "countries": [
+      "Índia"
+    ],
     "coordinates": {
       "lat": 28.6139,
       "lng": 77.209
@@ -2668,6 +2750,9 @@
     "period": "Idade Contemporânea",
     "region": "Global",
     "country": "Estados Unidos",
+    "countries": [
+      "Estados Unidos"
+    ],
     "coordinates": {
       "lat": 28.5729,
       "lng": -80.649
@@ -2771,6 +2856,9 @@
     "period": "Idade Contemporânea",
     "region": "Europa",
     "country": "Alemanha",
+    "countries": [
+      "Alemanha"
+    ],
     "coordinates": {
       "lat": 52.52,
       "lng": 13.405
@@ -2875,6 +2963,9 @@
     "period": "Idade Média",
     "region": "Ásia",
     "country": "Mongólia",
+    "countries": [
+      "Mongólia"
+    ],
     "coordinates": {
       "lat": 47.199,
       "lng": 102.8437
@@ -2978,6 +3069,7 @@
     "period": "Idade Moderna",
     "region": "Europa",
     "country": "Europa",
+    "countries": [],
     "coordinates": {
       "lat": 43.7696,
       "lng": 11.2558
@@ -3081,6 +3173,9 @@
     "period": "Idade Moderna",
     "region": "Europa",
     "country": "França",
+    "countries": [
+      "França"
+    ],
     "coordinates": {
       "lat": 50.6805,
       "lng": 4.4004
@@ -3184,6 +3279,9 @@
     "period": "Idade Contemporânea",
     "region": "África",
     "country": "Alemanha",
+    "countries": [
+      "Alemanha"
+    ],
     "coordinates": {
       "lat": 52.52,
       "lng": 13.405
@@ -3283,6 +3381,9 @@
     "period": "Idade Contemporânea",
     "region": "América do Sul",
     "country": "Brasil",
+    "countries": [
+      "Brasil"
+    ],
     "coordinates": {
       "lat": -22.9068,
       "lng": -43.1729
@@ -3382,6 +3483,9 @@
     "period": "Idade Contemporânea",
     "region": "Oriente Médio",
     "country": "Israel",
+    "countries": [
+      "Israel"
+    ],
     "coordinates": {
       "lat": 32.0853,
       "lng": 34.7818
@@ -3481,6 +3585,9 @@
     "period": "Idade Antiga",
     "region": "Oriente Médio",
     "country": "Mesopotâmia",
+    "countries": [
+      "Mesopotâmia"
+    ],
     "coordinates": {
       "lat": 37.2231,
       "lng": 38.9224
@@ -3562,6 +3669,9 @@
     "period": "Idade Antiga",
     "region": "Ásia Meridional",
     "country": "Índia",
+    "countries": [
+      "Índia"
+    ],
     "coordinates": {
       "lat": 24.6961,
       "lng": 84.9911
@@ -3656,6 +3766,9 @@
     "period": "Idade Antiga",
     "region": "Europa",
     "country": "Roma",
+    "countries": [
+      "Itália"
+    ],
     "coordinates": {
       "lat": 41.9028,
       "lng": 12.4964
@@ -3765,6 +3878,9 @@
     "period": "Idade Média",
     "region": "Europa",
     "country": "Sacro Império Romano-Germânico",
+    "countries": [
+      "Sacro Império Romano-Germânico"
+    ],
     "coordinates": {
       "lat": 49.9929,
       "lng": 8.2473
@@ -3859,6 +3975,9 @@
     "period": "Idade Média",
     "region": "África Ocidental",
     "country": "Mali",
+    "countries": [
+      "Mali"
+    ],
     "coordinates": {
       "lat": 16.7666,
       "lng": -3.0026
@@ -3958,6 +4077,9 @@
     "period": "Idade Moderna",
     "region": "Europa",
     "country": "Inglaterra",
+    "countries": [
+      "Inglaterra"
+    ],
     "coordinates": {
       "lat": 51.5074,
       "lng": -0.1278
@@ -4057,6 +4179,11 @@
     "period": "Idade Moderna",
     "region": "América do Sul",
     "country": "Venezuela / Argentina / México",
+    "countries": [
+      "Venezuela",
+      "Argentina",
+      "México"
+    ],
     "coordinates": {
       "lat": 10.4806,
       "lng": -66.9036
@@ -4165,6 +4292,9 @@
     "period": "Idade Contemporânea",
     "region": "Europa",
     "country": "Alemanha",
+    "countries": [
+      "Alemanha"
+    ],
     "coordinates": {
       "lat": 52.52,
       "lng": 13.405
@@ -4258,6 +4388,9 @@
     "period": "Idade Contemporânea",
     "region": "Ásia Oriental",
     "country": "Japão",
+    "countries": [
+      "Japão"
+    ],
     "coordinates": {
       "lat": 35.6762,
       "lng": 139.6503
@@ -4351,6 +4484,9 @@
     "period": "Idade Contemporânea",
     "region": "Ásia Oriental",
     "country": "China",
+    "countries": [
+      "China"
+    ],
     "coordinates": {
       "lat": 30.5928,
       "lng": 114.3055
@@ -4450,6 +4586,9 @@
     "period": "Idade Contemporânea",
     "region": "Global",
     "country": "França",
+    "countries": [
+      "França"
+    ],
     "coordinates": {
       "lat": 48.8566,
       "lng": 2.3522
@@ -4560,6 +4699,9 @@
     "period": "Idade Contemporânea",
     "region": "Ásia Oriental",
     "country": "China",
+    "countries": [
+      "China"
+    ],
     "coordinates": {
       "lat": 39.9042,
       "lng": 116.4074
@@ -4664,6 +4806,7 @@
     "period": "Idade Contemporânea",
     "region": "África",
     "country": "África",
+    "countries": [],
     "coordinates": {
       "lat": 5.6037,
       "lng": -0.187
@@ -4772,6 +4915,9 @@
     "period": "Idade Contemporânea",
     "region": "Europa Oriental",
     "country": "Rússia",
+    "countries": [
+      "Rússia"
+    ],
     "coordinates": {
       "lat": 55.7558,
       "lng": 37.6173
@@ -4880,6 +5026,9 @@
     "period": "Idade Contemporânea",
     "region": "América do Norte",
     "country": "Estados Unidos",
+    "countries": [
+      "Estados Unidos"
+    ],
     "coordinates": {
       "lat": 40.7128,
       "lng": -74.006
@@ -4989,6 +5138,10 @@
     "period": "Idade Contemporânea",
     "region": "Europa",
     "country": "Alemanha / Polônia",
+    "countries": [
+      "Alemanha",
+      "Polônia"
+    ],
     "coordinates": {
       "lat": 54.4058,
       "lng": 18.6698
