@@ -47,7 +47,13 @@ export async function generateMetadata({ params }: LinhaDoTempoEventoPageProps) 
       url,
       type: "article",
       locale: "pt_BR",
-      images: event.image ? [{ url: `${SITE_URL}${event.image}` }] : undefined,
+      images: event.image ? [{ url: `${SITE_URL}${event.image}`, alt: event.title }] : undefined,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${event.title} (${event.dateDisplay})`,
+      description,
+      images: event.image ? [`${SITE_URL}${event.image}`] : undefined,
     },
   }
 }
