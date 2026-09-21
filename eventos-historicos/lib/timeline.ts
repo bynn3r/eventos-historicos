@@ -23,6 +23,11 @@ export interface TimelineRelatedContext {
   relacao: string
 }
 
+export interface TimelineCoordinates {
+  lat: number
+  lng: number
+}
+
 export interface TimelineEvent {
   id: string
   slug: string
@@ -33,6 +38,7 @@ export interface TimelineEvent {
   period: string
   region: string
   country: string
+  coordinates: TimelineCoordinates
   category: string
   summary: string
   content: string

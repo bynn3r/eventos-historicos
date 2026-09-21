@@ -3,24 +3,13 @@
 import { useState } from "react"
 import Image from "next/image"
 import { MapPin, X } from "lucide-react"
+import { toMapPosition } from "@/lib/map-projection"
 
 interface Local {
   nome: string
   lat: number
   lng: number
   descricao: string
-}
-
-// Mapa ilustrativo (projeção equiretangular aproximada, cortada nos polos) —
-// posições calculadas a partir de lat/lng para fins editoriais, não uma
-// ferramenta de geolocalização de precisão.
-const LAT_MIN = -60
-const LAT_MAX = 84
-
-function toPosition(lat: number, lng: number) {
-  const x = ((lng + 180) / 360) * 100
-  const y = ((LAT_MAX - lat) / (LAT_MAX - LAT_MIN)) * 100
-  return { x, y }
 }
 
 export function EventMap({ locais }: { locais: Local[] }) {
@@ -37,7 +26,7 @@ export function EventMap({ locais }: { locais: Local[] }) {
         />
 
         {locais.map((local, index) => {
-          const { x, y } = toPosition(local.lat, local.lng)
+          const { x, y } = toMapPosition(local.lat, local.lng)
           const isSelected = selected === index
 
           return (

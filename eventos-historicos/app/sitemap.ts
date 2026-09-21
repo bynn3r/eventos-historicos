@@ -18,6 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/noticias`, changeFrequency: "daily", priority: 0.8 },
     { url: `${SITE_URL}/personagens`, changeFrequency: "monthly", priority: 0.7 },
     { url: `${SITE_URL}/regioes`, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${SITE_URL}/mapa`, changeFrequency: "monthly", priority: 0.7 },
     { url: `${SITE_URL}/sobre`, changeFrequency: "monthly", priority: 0.4 },
     { url: `${SITE_URL}/contato`, changeFrequency: "monthly", priority: 0.3 },
     { url: `${SITE_URL}/privacidade`, changeFrequency: "yearly", priority: 0.2 },
