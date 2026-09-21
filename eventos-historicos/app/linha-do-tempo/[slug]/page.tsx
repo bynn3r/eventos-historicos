@@ -9,6 +9,7 @@ import Image from "next/image"
 import { notFound } from "next/navigation"
 import grandesEventosData from "@/data/grandes-eventos.json"
 import { getAllTimelineEvents, getTimelineEventBySlug, getRelatedTimelineEvents } from "@/lib/timeline"
+import { getContinentSlugForRegion } from "@/lib/regions"
 import { findRelatedContent } from "@/lib/related-content"
 import { EventHero } from "@/components/event-hero"
 import { EventCronologia } from "@/components/event-cronologia"
@@ -76,6 +77,7 @@ export default function LinhaDoTempoEventoPage({ params }: LinhaDoTempoEventoPag
     limit: 3,
   })
   const hasFlagshipExperience = grandesEventosData.some((flagship) => flagship.slug === event.slug)
+  const continentSlug = getContinentSlugForRegion(event.region)
 
   const allSorted = getAllTimelineEvents().sort((a, b) => a.startYear - b.startYear)
   const currentIndex = allSorted.findIndex((e) => e.slug === event.slug)
@@ -134,6 +136,7 @@ export default function LinhaDoTempoEventoPage({ params }: LinhaDoTempoEventoPag
           category={event.category}
           country={event.country}
           region={event.region}
+          regionHref={continentSlug ? `/regioes/${continentSlug}` : undefined}
           summary={event.summary}
           image={event.image}
         />

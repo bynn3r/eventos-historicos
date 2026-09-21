@@ -20,6 +20,7 @@ interface EventHeroProps {
   category: string
   country: string
   region: string
+  regionHref?: string
   summary: string
   image?: string
 }
@@ -31,6 +32,7 @@ export function EventHero({
   category,
   country,
   region,
+  regionHref,
   summary,
   image,
 }: EventHeroProps) {
@@ -130,9 +132,18 @@ export function EventHero({
           }}
         >
           <MapPin className="h-4 w-4" />
-          <span>
-            {country} · {region}
-          </span>
+          {regionHref ? (
+            <span>
+              {country} ·{" "}
+              <Link href={regionHref} className="underline decoration-white/30 hover:text-white hover:decoration-white/60 transition-colors">
+                {region}
+              </Link>
+            </span>
+          ) : (
+            <span>
+              {country} · {region}
+            </span>
+          )}
         </div>
       </div>
 

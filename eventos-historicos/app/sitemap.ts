@@ -3,6 +3,7 @@ import grandesEventosData from "@/data/grandes-eventos.json"
 import curiosidadesData from "@/data/curiosidades.json"
 import { getAllTimelineEvents } from "@/lib/timeline"
 import { getAllCharacters } from "@/lib/characters"
+import { getAllContinents } from "@/lib/regions"
 
 const SITE_URL = "https://eventoshistoricos.com.br"
 
@@ -16,6 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/curiosidades`, changeFrequency: "weekly", priority: 0.8 },
     { url: `${SITE_URL}/noticias`, changeFrequency: "daily", priority: 0.8 },
     { url: `${SITE_URL}/personagens`, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${SITE_URL}/regioes`, changeFrequency: "monthly", priority: 0.7 },
     { url: `${SITE_URL}/sobre`, changeFrequency: "monthly", priority: 0.4 },
     { url: `${SITE_URL}/contato`, changeFrequency: "monthly", priority: 0.3 },
     { url: `${SITE_URL}/privacidade`, changeFrequency: "yearly", priority: 0.2 },
@@ -45,5 +47,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.5,
   }))
 
-  return [...staticRoutes, ...timelineRoutes, ...eventoRoutes, ...curiosidadeRoutes, ...personagemRoutes]
+  const regiaoRoutes: MetadataRoute.Sitemap = getAllContinents().map((continent) => ({
+    url: `${SITE_URL}/regioes/${continent.slug}`,
+    changeFrequency: "monthly",
+    priority: 0.6,
+  }))
+
+  return [
+    ...staticRoutes,
+    ...timelineRoutes,
+    ...eventoRoutes,
+    ...curiosidadeRoutes,
+    ...personagemRoutes,
+    ...regiaoRoutes,
+  ]
 }
