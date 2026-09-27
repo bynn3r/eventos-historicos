@@ -221,7 +221,13 @@
         "description": "Os Jogos eram realizados em sua honra; a enorme estátua criada pelo escultor Fídias no interior do templo de Olímpia era considerada uma das Sete Maravilhas do Mundo Antigo."
       }
     ],
-    "sources": [],
+    "sources": [
+      {
+        "title": "Sítio Arqueológico de Olímpia — Patrimônio Mundial da UNESCO, Grécia",
+        "url": "https://whc.unesco.org/en/list/517/",
+        "tipo": "académica"
+      }
+    ],
     "cronologia": [
       {
         "ano": "776 a.C.",
@@ -309,7 +315,13 @@
         "description": "Co-fundador negado: na lenda, cruzou o sulco sagrado traçado pelo irmão e foi morto por ele, tornando-se símbolo dos limites do poder e do preço da fundação de qualquer ordem."
       }
     ],
-    "sources": [],
+    "sources": [
+      {
+        "title": "Lapis Niger e escavações arqueológicas do Fórum Romano e Monte Palatino — Parco Archeologico del Colosseo, Roma",
+        "url": "",
+        "tipo": "académica"
+      }
+    ],
     "cronologia": [
       {
         "ano": "séc. X a.C.",
@@ -410,7 +422,18 @@
         "description": "Governante indiano que enfrentou Alexandre na Batalha do Hidaspes."
       }
     ],
-    "sources": [],
+    "sources": [
+      {
+        "title": "Sarcófago de Alexandre (necrópole real de Sidon) — Museus Arqueológicos de Istambul, Turquia",
+        "url": "",
+        "tipo": "primária"
+      },
+      {
+        "title": "Mosaico de Alexandre, Batalha de Issos (Casa do Fauno, Pompeia) — Museu Arqueológico Nacional de Nápoles, Itália",
+        "url": "",
+        "tipo": "secundária"
+      }
+    ],
     "cronologia": [
       {
         "ano": "336 a.C.",
@@ -516,7 +539,18 @@
         "description": "Liderou campanhas contra os Xiongnu e supervisionou a construção dos primeiros trechos da Grande Muralha; executado após a morte do imperador por intrigas de corte."
       }
     ],
-    "sources": [],
+    "sources": [
+      {
+        "title": "Fragmentos da Estela do Monte Tai (219 a.C.) — Templo Dai, Tai'an, Shandong, China",
+        "url": "",
+        "tipo": "primária"
+      },
+      {
+        "title": "Exército de Terracota e Mausoléu de Qin Shi Huang — Patrimônio Mundial da UNESCO, Xi'an, China",
+        "url": "https://whc.unesco.org/en/list/441",
+        "tipo": "primária"
+      }
+    ],
     "cronologia": [
       {
         "ano": "475 a.C.",
@@ -619,7 +653,13 @@
         "description": "Filho de pai romano e mãe germânica, foi o poder real por trás do governo de Rômulo Augusto; recusou-se a ceder terras às tropas de Odoacro e foi morto em Pavia."
       }
     ],
-    "sources": [],
+    "sources": [
+      {
+        "title": "Anonymus Valesianus, Pars Posterior (crônica do séc. VI, sobrevivente em manuscrito do séc. IX) — Staatsbibliothek zu Berlin",
+        "url": "",
+        "tipo": "primária"
+      }
+    ],
     "cronologia": [
       {
         "ano": "235–284",
@@ -724,7 +764,13 @@
         "description": "Instituiu em 639 d.C. o calendário islâmico tendo a Hégira como seu ano inicial."
       }
     ],
-    "sources": [],
+    "sources": [
+      {
+        "title": "Constituição de Medina, preservada na Sirat Rasul Allah de Ibn Ishaq (recensão de Ibn Hisham)",
+        "url": "",
+        "tipo": "primária"
+      }
+    ],
     "cronologia": [
       {
         "ano": "c. 610",
@@ -833,7 +879,13 @@
         "description": "Monge inglês que liderou a corte intelectual carolíngia."
       }
     ],
-    "sources": [],
+    "sources": [
+      {
+        "title": "Trono de Carlomagno (Karlsthron), c. 790 — Catedral de Aachen, Patrimônio Mundial da UNESCO, Alemanha",
+        "url": "https://whc.unesco.org/en/list/3",
+        "tipo": "primária"
+      }
+    ],
     "cronologia": [
       {
         "ano": "768",
@@ -931,7 +983,13 @@
         "description": "Patriarca bizantino que excomungou os legados romanos em resposta."
       }
     ],
-    "sources": [],
+    "sources": [
+      {
+        "title": "Bula de excomunhão do cardeal Humberto de Silva Cândida contra o patriarca Miguel Cerulário (16 de julho de 1054)",
+        "url": "",
+        "tipo": "primária"
+      }
+    ],
     "cronologia": [
       {
         "ano": "863–867",
@@ -1040,7 +1098,13 @@
         "description": "Seus sermões mobilizaram milhares de camponeses na primeira onda da cruzada."
       }
     ],
-    "sources": [],
+    "sources": [
+      {
+        "title": "Gesta Francorum et aliorum Hierosolimitanorum — manuscrito mais antigo sobrevivente (Reg.lat.572, início do séc. XII), Biblioteca Apostólica Vaticana",
+        "url": "",
+        "tipo": "primária"
+      }
+    ],
     "cronologia": [
       {
         "ano": "27 nov. 1095",
@@ -1247,7 +1311,18 @@
         "description": "Sua vitória em Azincourt o aproximou, por pouco tempo, de unificar as coroas inglesa e francesa."
       }
     ],
-    "sources": [],
+    "sources": [
+      {
+        "title": "Procès de condamnation de Jeanne d'Arc (1431) — cópias autenticadas, Bibliothèque nationale de France (ms. lat. 5965/5966)",
+        "url": "",
+        "tipo": "primária"
+      },
+      {
+        "title": "Traité de Troyes (21 de maio de 1420) — Archives Nationales de France, Paris",
+        "url": "",
+        "tipo": "primária"
+      }
+    ],
     "cronologia": [
       {
         "ano": "1328",
@@ -1344,7 +1419,18 @@
         "description": "Emitiu bulas papais protegendo comunidades judaicas das perseguições."
       }
     ],
-    "sources": [],
+    "sources": [
+      {
+        "title": "Decameron — manuscrito autógrafo de Giovanni Boccaccio (c. 1370), testemunho contemporâneo da peste em Florença — Staatsbibliothek zu Berlin (códice Hamilton 90)",
+        "url": "",
+        "tipo": "primária"
+      },
+      {
+        "title": "Ole J. Benedictow, 'The Black Death, 1346-1353: The Complete History' (Boydell Press)",
+        "url": "",
+        "tipo": "académica"
+      }
+    ],
     "cronologia": [
       {
         "ano": "1346",
@@ -1443,7 +1529,13 @@
         "description": "Depois de ter sua oferta recusada por falta de recursos bizantinos, fundiu para Mehmed II as maiores bombardas já construídas até então, decisivas para abrir brechas nas muralhas milenares."
       }
     ],
-    "sources": [],
+    "sources": [
+      {
+        "title": "Nicolò Barbaro, Diário do cerco de Constantinopla (1453) — manuscrito autógrafo, Biblioteca Nazionale Marciana, Veneza (codex Ital. Suppl. VII, 746)",
+        "url": "",
+        "tipo": "primária"
+      }
+    ],
     "cronologia": [
       {
         "ano": "1422",
@@ -1544,7 +1636,13 @@
         "description": "Armador experiente de Palos, foi decisivo para recrutar tripulação e conter ameaças de motim durante a travessia; separou-se de Colombo no Caribe e morreu poucos dias após o retorno à Espanha, em março de 1493."
       }
     ],
-    "sources": [],
+    "sources": [
+      {
+        "title": "Diário de Bordo da primeira viagem de Cristóvão Colombo (1492-1493) — transcrição de Frei Bartolomé de las Casas, c. 1530 — Biblioteca Nacional de España, Madrid",
+        "url": "",
+        "tipo": "primária"
+      }
+    ],
     "cronologia": [
       {
         "ano": "1488",
@@ -1858,7 +1956,13 @@
         "description": "Autor de 'A Riqueza das Nações' (1776), forneceu as bases teóricas do capitalismo industrial."
       }
     ],
-    "sources": [],
+    "sources": [
+      {
+        "title": "Old Bess — máquina a vapor original de James Watt (1777) — Science Museum, Londres",
+        "url": "",
+        "tipo": "primária"
+      }
+    ],
     "cronologia": [
       {
         "ano": "1764",
@@ -2183,7 +2287,13 @@
         "description": "Transferiu a Corte ao Rio em 1808, elevou o Brasil a reino em 1815 e assinou o reconhecimento da independência em 1825."
       }
     ],
-    "sources": [],
+    "sources": [
+      {
+        "title": "Manifesto do Príncipe Regente do Brasil aos Governos e às Nações Amigas (6 de agosto de 1822) — Biblioteca Nacional, Rio de Janeiro",
+        "url": "https://redememoria.bn.gov.br/redeMemoria/handle/20.500.12156.2/302378",
+        "tipo": "primária"
+      }
+    ],
     "cronologia": [
       {
         "ano": "1808",
@@ -2288,7 +2398,18 @@
         "description": "Assumiu o governo francês em 1917, conduziu o esforço de guerra final e presidiu depois a Conferência de Paz de Paris."
       }
     ],
-    "sources": [],
+    "sources": [
+      {
+        "title": "Tratado de Versalhes (28 de junho de 1919) — Archives Nationales, França (original); cópia autenticada britânica no The National Archives, Londres",
+        "url": "https://www.nationalarchives.gov.uk/explore-the-collection/stories/the-treaty-of-versailles/",
+        "tipo": "primária"
+      },
+      {
+        "title": "Pistola FN 1910 usada por Gavrilo Princip no assassinato do Arquiduque Franz Ferdinand (28 de junho de 1914) — Museu de História Militar (Heeresgeschichtliches Museum), Viena",
+        "url": "https://www.hgm.at/en/visit-our-museums/museum-of-military-history/exhibitions/the-sarajevo-assassination",
+        "tipo": "primária"
+      }
+    ],
     "cronologia": [
       {
         "ano": "28 jun. 1914",
@@ -2392,7 +2513,18 @@
         "description": "Liderou o Governo Provisório entre julho e outubro de 1917, mas não conseguiu conter o avanço bolchevique."
       }
     ],
-    "sources": [],
+    "sources": [
+      {
+        "title": "Manifesto de abdicação de Nicolau II (2/15 de março de 1917) — Arquivo Estatal da Federação Russa (GARF), Fundo 601, Moscou",
+        "url": "",
+        "tipo": "primária"
+      },
+      {
+        "title": "Teses de Abril de Lenin (abril de 1917) — Arquivo Pessoal de Vladimir Lenin, Arquivo Estatal Russo de História Sócio-Política (RGASPI), Moscou",
+        "url": "",
+        "tipo": "primária"
+      }
+    ],
     "cronologia": [
       {
         "ano": "fev. 1917",
@@ -2480,7 +2612,13 @@
         "description": "Governou nos primeiros anos da Depressão."
       }
     ],
-    "sources": [],
+    "sources": [
+      {
+        "title": "Social Security Act (14 de agosto de 1935) — National Archives, Washington D.C.",
+        "url": "https://www.archives.gov/milestone-documents/social-security-act",
+        "tipo": "primária"
+      }
+    ],
     "cronologia": [
       {
         "ano": "24 out. 1929",
@@ -2593,7 +2731,18 @@
         "description": "Anunciou pessoalmente, em rádio nacional, a aceitação da rendição japonesa em 15 de agosto de 1945."
       }
     ],
-    "sources": [],
+    "sources": [
+      {
+        "title": "Instrumento de Rendição do Japão (2 de setembro de 1945) — National Archives, Record Group 218, Washington D.C.",
+        "url": "https://catalog.archives.gov/id/1752336",
+        "tipo": "primária"
+      },
+      {
+        "title": "Bombardeiro B-29 Enola Gay — Steven F. Udvar-Hazy Center, National Air and Space Museum, Smithsonian Institution",
+        "url": "https://airandspace.si.edu/collection-objects/boeing-b-29-superfortress-enola-gay/nasm_A19500100000",
+        "tipo": "primária"
+      }
+    ],
     "cronologia": [
       {
         "ano": "set. 1939",
@@ -2700,7 +2849,13 @@
         "description": "Conduziu a negociação final da transferência de poder em 1947."
       }
     ],
-    "sources": [],
+    "sources": [
+      {
+        "title": "Indian Independence Act 1947 (18 de julho de 1947) — Parliamentary Archives, Londres (cat. HL/PO/PU/1/1947/10&11G6c30); texto oficial em legislation.gov.uk",
+        "url": "https://www.legislation.gov.uk/ukpga/1947/30/pdfs/ukpga_19470030_en.pdf",
+        "tipo": "primária"
+      }
+    ],
     "cronologia": [
       {
         "ano": "1919",
@@ -2808,7 +2963,18 @@
         "description": "Liderou a equipe de controladores de voo durante a descida e o pouso do módulo lunar, tomando decisões decisivas sob pressão diante dos alarmes de computador nos minutos finais."
       }
     ],
-    "sources": [],
+    "sources": [
+      {
+        "title": "Fotografia de Buzz Aldrin na superfície lunar, Base Tranquilidade (20 de julho de 1969, por Neil Armstrong) — National Archives, Washington D.C.",
+        "url": "https://catalog.archives.gov/id/16685140",
+        "tipo": "primária"
+      },
+      {
+        "title": "Discurso de John F. Kennedy na Rice University sobre o esforço espacial nacional (12 de setembro de 1962) — John F. Kennedy Presidential Library and Museum, Boston",
+        "url": "https://www.jfklibrary.org/archives/other-resources/john-f-kennedy-speeches/rice-university-19620912",
+        "tipo": "primária"
+      }
+    ],
     "cronologia": [
       {
         "ano": "out. 1957",
@@ -2914,7 +3080,13 @@
         "description": "Sucedeu Erich Honecker em 18 de outubro de 1989 e autorizou a nova regulamentação de viagens cujo anúncio precipitado por Schabowski levou à derrubada do Muro."
       }
     ],
-    "sources": [],
+    "sources": [
+      {
+        "title": "Transcrição/gravação da entrevista coletiva de Günter Schabowski (9 de novembro de 1989) — projeto Chronik der Mauer (Bundesstiftung Aufarbeitung / Bundeszentrale für politische Bildung / Deutschlandradio)",
+        "url": "https://www.chronik-der-mauer.de/en/chronicle/_year1989/_month11/?month=11&year=1989&opennid=179496&moc=1",
+        "tipo": "primária"
+      }
+    ],
     "cronologia": [
       {
         "ano": "13 ago. 1961",
@@ -3015,7 +3187,13 @@
         "description": "Neto de Genghis Khan, completou a conquista da China e governou o Império Mongol em seu auge máximo, recebendo Marco Polo em sua corte."
       }
     ],
-    "sources": [],
+    "sources": [
+      {
+        "title": "The Secret History of the Mongols: A Mongolian Epic Chronicle of the Thirteenth Century (trad. e comentário histórico-filológico de Igor de Rachewiltz, Brill, 2004) — tradução acadêmica de referência da crônica mongol do séc. XIII",
+        "url": "",
+        "tipo": "académica"
+      }
+    ],
     "cronologia": [
       {
         "ano": "1206",
@@ -3119,7 +3297,18 @@
         "description": "Publicou os Principia Mathematica em 1687, unificando a mecânica celeste e terrestre com a lei da gravitação universal."
       }
     ],
-    "sources": [],
+    "sources": [
+      {
+        "title": "De revolutionibus orbium coelestium — manuscrito autógrafo de Nicolau Copérnico (1520–1541) — Biblioteca Jagiellonian, Cracóvia",
+        "url": "",
+        "tipo": "primária"
+      },
+      {
+        "title": "Philosophiae Naturalis Principia Mathematica de Isaac Newton — manuscrito enviado à gráfica (1686) — Royal Society, Londres (MS/69)",
+        "url": "",
+        "tipo": "primária"
+      }
+    ],
     "cronologia": [
       {
         "ano": "1543",
@@ -3225,7 +3414,13 @@
         "description": "Liderou a resistência russa à invasão de 1812 e foi peça central na coalizão que derrubou Napoleão."
       }
     ],
-    "sources": [],
+    "sources": [
+      {
+        "title": "Acte d'abdication de Napoléon Ier (6 de abril de 1814), assinado em Fontainebleau — Archives Nationales, Paris",
+        "url": "",
+        "tipo": "primária"
+      }
+    ],
     "cronologia": [
       {
         "ano": "nov. 1799",
@@ -3331,7 +3526,13 @@
         "description": "Derrotou o exército italiano na Batalha de Adwa em 1896, tornando-se símbolo de resistência africana ao colonialismo europeu."
       }
     ],
-    "sources": [],
+    "sources": [
+      {
+        "title": "Ato Geral da Conferência de Berlim (26 de fevereiro de 1885) — Arquivo Político do Ministério das Relações Exteriores da Alemanha (Auswärtiges Amt), Berlim",
+        "url": "https://archiv.diplo.de/arc-en/the-political-archive/general-act-2684414",
+        "tipo": "primária"
+      }
+    ],
     "cronologia": [
       {
         "ano": "1880",
@@ -3433,7 +3634,13 @@
         "description": "Filho de escravizada, usou o jornalismo para mobilizar a opinião pública e foi um dos mais importantes líderes do movimento abolicionista."
       }
     ],
-    "sources": [],
+    "sources": [
+      {
+        "title": "Lei Áurea (Lei nº 3.353, de 13 de maio de 1888) — Arquivo Nacional do Brasil, Rio de Janeiro",
+        "url": "https://www.gov.br/arquivonacional/pt-br/canais_atendimento/imprensa/copy_of_noticias/lei-aurea-faz-parte-do-acervo-do-arquivo-nacional",
+        "tipo": "primária"
+      }
+    ],
     "cronologia": [
       {
         "ano": "1850",
@@ -3535,7 +3742,13 @@
         "description": "Líder sionista e cientista que negociou a Declaração Balfour com o governo britânico e tornou-se o primeiro chefe de Estado de Israel."
       }
     ],
-    "sources": [],
+    "sources": [
+      {
+        "title": "Declaração de Independência do Estado de Israel (14 de maio de 1948) — Arquivos do Estado de Israel, Jerusalém",
+        "url": "https://catalog.archives.gov.il/site/en/chapter/the-declaration-of-independence/",
+        "tipo": "primária"
+      }
+    ],
     "cronologia": [
       {
         "ano": "1897",
@@ -4129,7 +4342,13 @@
         "description": "Publicou em 1689 os Dois Tratados sobre o Governo, que justificaram a Revolução Gloriosa e influenciaram as revoluções americana e francesa."
       }
     ],
-    "sources": [],
+    "sources": [
+      {
+        "title": "Bill of Rights (1689) — manuscrito original em pergaminho — Parliamentary Archives, Londres",
+        "url": "",
+        "tipo": "primária"
+      }
+    ],
     "cronologia": [
       {
         "ano": "1685",
@@ -4238,7 +4457,18 @@
         "description": "Deu início à revolução mexicana com o Grito de Dolores em setembro de 1810."
       }
     ],
-    "sources": [],
+    "sources": [
+      {
+        "title": "Acta de la Independencia de las Provincias Unidas en Sud América (9 de julho de 1816) — exemplar preservado no Archivo General de la Nación, Buenos Aires (o documento original foi extraviado em 1820)",
+        "url": "",
+        "tipo": "primária"
+      },
+      {
+        "title": "Carta de Jamaica de Simón Bolívar (6 de setembro de 1815) — manuscrito original em espanhol, Archivo Histórico del Ministerio de Cultura y Patrimonio, Quito, Equador",
+        "url": "https://www.unesco.org/en/memory-world/lac/reply-south-american-gentleman-island-jamaica-letter-simon-bolivar-1815",
+        "tipo": "primária"
+      }
+    ],
     "cronologia": [
       {
         "ano": "1808",
@@ -4338,7 +4568,18 @@
         "description": "Rei da Prússia que foi proclamado imperador do Reich Alemão no Salão dos Espelhos em 1871."
       }
     ],
-    "sources": [],
+    "sources": [
+      {
+        "title": "Verfassung des Deutschen Reiches — Constituição do Império Alemão (16 de abril de 1871), exemplar catalogado — Deutsche Digitale Bibliothek",
+        "url": "https://www.deutsche-digitale-bibliothek.de/item/NCYTRNH7POG4IRKBA3YU2OIQLEZD7EVE",
+        "tipo": "primária"
+      },
+      {
+        "title": "German History in Documents and Images (GHDI) — German Historical Institute Washington, comentário e texto da Constituição de 1871",
+        "url": "https://germanhistorydocs.org/de/reichsgruendung-bismarcks-deutschland-1866-1890/verfassung-des-deutschen-reiches-16-april-1871",
+        "tipo": "académica"
+      }
+    ],
     "cronologia": [
       {
         "ano": "1862",
@@ -4434,7 +4675,13 @@
         "description": "Liderou a Missão Iwakura e tornou-se o primeiro primeiro-ministro constitucional do Japão, redigindo sua Constituição de 1889."
       }
     ],
-    "sources": [],
+    "sources": [
+      {
+        "title": "Juramento de Cinco Artigos (Charter Oath, 6 de abril de 1868) — National Diet Library, arquivo 'Modern Japan in Archives', Tóquio",
+        "url": "https://www.ndl.go.jp/modern/e/cha1/index.html",
+        "tipo": "primária"
+      }
+    ],
     "cronologia": [
       {
         "ano": "1853",
@@ -4536,7 +4783,13 @@
         "description": "General que negociou a abdicação de Puyi e assumiu a presidência, tentando restaurar o império com ele mesmo como imperador."
       }
     ],
-    "sources": [],
+    "sources": [
+      {
+        "title": "Édito de Abdicação do Imperador Puyi (12 de fevereiro de 1912) — Museu Nacional da China, Pequim",
+        "url": "https://www.chnmuseum.cn/zp/zpml/gmww/202008/t20200824_247195.shtml",
+        "tipo": "primária"
+      }
+    ],
     "cronologia": [
       {
         "ano": "1908",
@@ -4756,7 +5009,13 @@
         "description": "Primeiro-ministro e principal diplomata da China comunista, articulou a política externa chinesa por décadas."
       }
     ],
-    "sources": [],
+    "sources": [
+      {
+        "title": "Programa Comum da Conferência Consultiva Política do Povo Chinês (29 de setembro de 1949) — Museu Nacional da China, Pequim",
+        "url": "https://www.chnmuseum.cn/WZWSREL3pwL3pwbWwvZ213dy8yMDIxMDQvdDIwMjEwNDA2XzI0OTU2OS5zaHRtbA==",
+        "tipo": "primária"
+      }
+    ],
     "cronologia": [
       {
         "ano": "1927",
@@ -4861,7 +5120,13 @@
         "description": "Martinicano radicado na Argélia, seu livro 'Os Condenados da Terra' (1961) tornou-se o manifesto da descolonização africana."
       }
     ],
-    "sources": [],
+    "sources": [
+      {
+        "title": "Ghana Independence Act 1957 (7 de fevereiro de 1957) — Legislação do Reino Unido, legislation.gov.uk",
+        "url": "https://www.legislation.gov.uk/ukpga/Eliz2/5-6/6/contents",
+        "tipo": "primária"
+      }
+    ],
     "cronologia": [
       {
         "ano": "6 mar. 1957",
@@ -4972,7 +5237,13 @@
         "description": "Sua política de pressão econômica e militar contra a URSS — incluindo a Iniciativa de Defesa Estratégica — contribuiu para esgotar a economia soviética."
       }
     ],
-    "sources": [],
+    "sources": [
+      {
+        "title": "Acordos de Belavezha (8 de dezembro de 1991) — Biblioteca Presidencial da Rússia (Boris Yeltsin Presidential Library)",
+        "url": "https://www.prlib.ru/en/history/619792",
+        "tipo": "primária"
+      }
+    ],
     "cronologia": [
       {
         "ano": "1985",
@@ -5196,7 +5467,18 @@
         "description": "Criticou o apaziguamento desde o início e substituiu Chamberlain em maio de 1940, liderando a resistência britânica."
       }
     ],
-    "sources": [],
+    "sources": [
+      {
+        "title": "Protocolos secretos do Pacto Germano-Soviético de Não Agressão (Molotov-Ribbentrop, 23 de agosto de 1939) — documentos capturados do Ministério das Relações Exteriores alemão, digitalizados pelo Wilson Center Digital Archive",
+        "url": "https://digitalarchive.wilsoncenter.org/document/secret-supplementary-protocols-molotov-ribbentrop-non-aggression-pact-1939",
+        "tipo": "primária"
+      },
+      {
+        "title": "Declaração Anglo-Germânica de Munique (\"paz para o nosso tempo\", 30 de setembro de 1938) — The National Archives, Londres",
+        "url": "",
+        "tipo": "primária"
+      }
+    ],
     "cronologia": [
       {
         "ano": "set. 1938",
