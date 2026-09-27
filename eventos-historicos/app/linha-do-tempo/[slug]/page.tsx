@@ -3,7 +3,7 @@ import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
-import { ArrowLeft, ArrowRight, Globe2, BookOpen, Swords } from "lucide-react"
+import { ArrowLeft, ArrowRight, Globe2, BookOpen, Swords, Crown } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 import { notFound } from "next/navigation"
@@ -11,6 +11,7 @@ import grandesEventosData from "@/data/grandes-eventos.json"
 import { getAllTimelineEvents, getTimelineEventBySlug, getRelatedTimelineEvents } from "@/lib/timeline"
 import { getContinentSlugForRegion } from "@/lib/regions"
 import { getWarForEvent } from "@/lib/wars"
+import { getEmpireForEvent } from "@/lib/empires"
 import { getCountriesForEvent } from "@/lib/countries"
 import { findRelatedContent } from "@/lib/related-content"
 import { EventHero } from "@/components/event-hero"
@@ -81,6 +82,7 @@ export default function LinhaDoTempoEventoPage({ params }: LinhaDoTempoEventoPag
   const hasFlagshipExperience = grandesEventosData.some((flagship) => flagship.slug === event.slug)
   const continentSlug = getContinentSlugForRegion(event.region)
   const war = getWarForEvent(event.slug)
+  const empire = getEmpireForEvent(event.slug)
   const eventCountries = getCountriesForEvent(event)
 
   const allSorted = getAllTimelineEvents().sort((a, b) => a.startYear - b.startYear)
@@ -185,6 +187,29 @@ export default function LinhaDoTempoEventoPage({ params }: LinhaDoTempoEventoPag
                   <Button asChild variant="outline">
                     <Link href={`/guerras/${war.slug}`}>
                       Ver guerra completa
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                  </Button>
+                </CardContent>
+              </Card>
+            )}
+
+            {/* Empire banner */}
+            {empire && (
+              <Card className="mb-10 border-amber-700/30 bg-amber-700/5">
+                <CardContent className="flex flex-col items-start gap-4 py-6 sm:flex-row sm:items-center sm:justify-between">
+                  <div className="flex items-center gap-3">
+                    <Crown className="h-5 w-5 flex-shrink-0 text-amber-700" />
+                    <div>
+                      <p className="font-semibold text-foreground">Parte da história do {empire.name}</p>
+                      <p className="text-sm text-muted-foreground">
+                        Veja a trajetória completa, da fundação à queda ({empire.yearsDisplay}).
+                      </p>
+                    </div>
+                  </div>
+                  <Button asChild variant="outline">
+                    <Link href={`/imperios/${empire.slug}`}>
+                      Ver império completo
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>

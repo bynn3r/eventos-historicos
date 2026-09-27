@@ -6,6 +6,7 @@ import { getAllCharacters } from "@/lib/characters"
 import { getAllContinents } from "@/lib/regions"
 import { getAllWars } from "@/lib/wars"
 import { getAllCountries } from "@/lib/countries"
+import { getAllEmpires } from "@/lib/empires"
 
 const SITE_URL = "https://eventoshistoricos.com.br"
 
@@ -23,6 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/mapa`, changeFrequency: "monthly", priority: 0.7 },
     { url: `${SITE_URL}/guerras`, changeFrequency: "monthly", priority: 0.7 },
     { url: `${SITE_URL}/paises`, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${SITE_URL}/imperios`, changeFrequency: "monthly", priority: 0.7 },
     { url: `${SITE_URL}/sobre`, changeFrequency: "monthly", priority: 0.4 },
     { url: `${SITE_URL}/contato`, changeFrequency: "monthly", priority: 0.3 },
     { url: `${SITE_URL}/privacidade`, changeFrequency: "yearly", priority: 0.2 },
@@ -70,6 +72,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }))
 
+  const imperioRoutes: MetadataRoute.Sitemap = getAllEmpires().map((empire) => ({
+    url: `${SITE_URL}/imperios/${empire.slug}`,
+    changeFrequency: "monthly",
+    priority: 0.6,
+  }))
+
   return [
     ...staticRoutes,
     ...timelineRoutes,
@@ -79,5 +87,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...regiaoRoutes,
     ...guerraRoutes,
     ...paisRoutes,
+    ...imperioRoutes,
   ]
 }
