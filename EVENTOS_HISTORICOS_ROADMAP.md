@@ -931,8 +931,39 @@ Desbloquear a página de país, adiada na Sprint 6D pela heterogeneidade do camp
 - Build Next.js completo sem erros; 27 páginas de país geradas estaticamente
 - Verificação via servidor de dev local: `/paises/italia` responde 200; artigo `guerra-dos-cem-anos` mostra badges para França e Inglaterra
 
-**Pendente da lista "Futuro" da Sprint 5:**
-- [ ] Impérios (entidade própria) — maior risco editorial, exige pesquisa histórica nova
+**Pendente da lista "Futuro" da Sprint 5 (ao final da 9):**
+- [x] Impérios (entidade própria) — ver Sprint 10
+
+---
+
+# SPRINT 10 — IMPÉRIOS (extensão da lista "Futuro" da Sprint 5)
+
+## Objetivo
+
+Fechar a lista "Futuro" da Sprint 5 com a última entidade pendente. Por ser a de maior risco editorial (rule §13 do roadmap), um plano curto com o recorte exato de impérios e as ressalvas de enquadramento histórico foi apresentado e aprovado antes da implementação (rule §17).
+
+## Status da Sprint 10
+
+- **Data:** 2026-09-26
+- **Status:** Concluída
+
+**O que foi implementado:**
+- `lib/empires.ts` (novo): curadoria editorial de 4 impérios, reconstruídos inteiramente a partir de eventos já existentes na Linha do Tempo — nenhum fato novo (data, território, governante) foi escrito:
+  - **Roma Antiga**: `fundacao-de-roma` (753 a.C.) → `assassinato-julio-cesar` (44 a.C., transição República→Império) → `queda-imperio-romano-ocidente` (476 d.C.). Ressalva sinalizada e aceita: o nome agrupa Reino, República e Império como um arco narrativo único, por não haver eventos que permitam separá-los sem inventar conteúdo
+  - **Império Chinês**: `unificacao-china` (221 a.C., fundação sob Qin Shi Huang) → `revolucao-xinhai` (1911–12, queda da última dinastia). Ressalva sinalizada e aceita: apenas 2 eventos-âncora para ~2100 anos de história dinástica
+  - **Império Mongol**: `fundacao-imperio-mongol` (1206–1294), 1 evento que já narra fundação e expansão
+  - **Império do Mali**: `imperio-mali` (1235–1610), 1 evento
+  - Ficaram de fora **Império Bizantino** e **Império Macedônico** (Alexandre) — teriam 1 evento cada, duplicando quase integralmente o que já existe em Guerras, sem agregar valor como página própria
+- `app/imperios/page.tsx` e `app/imperios/[slug]/page.tsx` (novos): mesmo padrão de Guerras — cronologia por evento membro, artigos completos, link para experiência imersiva quando existente
+- `linha-do-tempo/[slug]/page.tsx`: banner "Parte da história do [império]"; um evento pode ter banner de guerra E de império simultaneamente (ex.: `fundacao-imperio-mongol` pertence a "Conquistas Mongóis" em Guerras e a "Império Mongol" aqui — são facetas diferentes do mesmo grafo de conhecimento, não uma duplicação)
+- Navegação e sitemap atualizados (+5 URLs)
+
+**Testes realizados:**
+- TypeScript: sem erros (`tsc --noEmit`)
+- Build Next.js completo sem erros; 4 páginas de império geradas estaticamente
+- Verificação via servidor de dev local: Roma Antiga renderiza as 3 cronologias em ordem; `fundacao-imperio-mongol` exibe os dois banners (guerra + império) simultaneamente
+
+**Lista "Futuro" da Sprint 5: concluída.** Todas as entidades propostas (Personagens, Países, Guerras, Impérios, Mapas) foram implementadas entre as Sprints 6–10.
 
 ---
 
