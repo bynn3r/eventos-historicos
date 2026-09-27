@@ -124,7 +124,7 @@
       {
         "name": "Hamurábi",
         "role": "Rei da Babilônia",
-        "image": "",
+        "image": "/eventos/figura-hamurabi.jpg",
         "description": "Sexto rei da primeira dinastia babilônica, unificou a Mesopotâmia e ordenou a compilação do código de leis que leva seu nome."
       }
     ],
@@ -211,7 +211,7 @@
       {
         "name": "Koroibos de Elis",
         "role": "Primeiro campeão olímpico registrado",
-        "image": "",
+        "image": "/eventos/figura-koroibos-de-elis.jpg",
         "description": "Venceu a corrida do estádio em 776 a.C., tornando-se o primeiro atleta registrado a receber a coroa de oliveira e o nome que abriu a lista oficial dos Jogos."
       },
       {
@@ -311,7 +311,7 @@
       {
         "name": "Remo",
         "role": "Irmão gêmeo de Rômulo",
-        "image": "",
+        "image": "/eventos/figura-remo.jpg",
         "description": "Co-fundador negado: na lenda, cruzou o sulco sagrado traçado pelo irmão e foi morto por ele, tornando-se símbolo dos limites do poder e do preço da fundação de qualquer ordem."
       }
     ],
@@ -400,25 +400,25 @@
       {
         "name": "Alexandre, o Grande",
         "role": "Rei da Macedônia",
-        "image": "",
+        "image": "/eventos/figura-alexandre-o-grande.jpg",
         "description": "Rei macedônio que conquistou o Império Persa e construiu um dos maiores impérios do mundo antigo antes dos 33 anos."
       },
       {
         "name": "Filipe II da Macedônia",
         "role": "Rei da Macedônia, pai de Alexandre",
-        "image": "",
+        "image": "/eventos/figura-filipe-ii-da-macedonia.jpg",
         "description": "Construiu o exército profissional macedônio e planejou a invasão da Pérsia antes de ser assassinado em 336 a.C."
       },
       {
         "name": "Dario III",
         "role": "Rei do Império Persa",
-        "image": "",
+        "image": "/eventos/figura-dario-iii.jpg",
         "description": "Último grande rei aquemênida, derrotado por Alexandre em Issos e Gaugamela."
       },
       {
         "name": "Poro",
         "role": "Rei indiano do reino de Paurava",
-        "image": "",
+        "image": "/eventos/figura-poro.jpg",
         "description": "Governante indiano que enfrentou Alexandre na Batalha do Hidaspes."
       }
     ],
@@ -857,13 +857,13 @@
       {
         "name": "Carlos Magno",
         "role": "Rei dos francos, coroado Imperador do Ocidente",
-        "image": "",
+        "image": "/eventos/figura-carlos-magno.jpg",
         "description": "Rei franco que unificou grande parte da Europa Ocidental e recebeu do papa o título de imperador."
       },
       {
         "name": "Papa Leão III",
         "role": "Papa que realizou a coroação",
-        "image": "",
+        "image": "/eventos/figura-papa-leao-iii.jpg",
         "description": "Pontífice que, após sobreviver a uma tentativa de deposição, coroou Carlos Magno imperador."
       },
       {
@@ -875,7 +875,7 @@
       {
         "name": "Alcuíno de York",
         "role": "Erudito e principal conselheiro intelectual de Carlos Magno",
-        "image": "",
+        "image": "/eventos/figura-alcuino-de-york.jpg",
         "description": "Monge inglês que liderou a corte intelectual carolíngia."
       }
     ],
@@ -967,7 +967,7 @@
       {
         "name": "Papa Leão IX",
         "role": "Papa que enviou a legação a Constantinopla",
-        "image": "",
+        "image": "/eventos/figura-papa-leao-ix.jpg",
         "description": "Pontífice reformista que iniciou a missão diplomática cujo fracasso desencadeou o cisma."
       },
       {
@@ -979,7 +979,7 @@
       {
         "name": "Miguel I Cerulário",
         "role": "Patriarca de Constantinopla",
-        "image": "",
+        "image": "/eventos/figura-miguel-i-cerulario.jpg",
         "description": "Patriarca bizantino que excomungou os legados romanos em resposta."
       }
     ],
@@ -1076,25 +1076,25 @@
       {
         "name": "Papa Urbano II",
         "role": "Papa que convocou a cruzada no Concílio de Clermont",
-        "image": "",
+        "image": "/eventos/figura-papa-urbano-ii.jpg",
         "description": "Seu discurso em Clermont em 1095 deu origem à Primeira Cruzada."
       },
       {
         "name": "Godofredo de Bulhão",
         "role": "Líder cruzado, primeiro governante de Jerusalém conquistada",
-        "image": "",
+        "image": "/eventos/figura-godofredo-de-bulhao.jpg",
         "description": "Liderou a tomada de Jerusalém e se tornou seu primeiro governante cristão."
       },
       {
         "name": "Boemundo de Tarento",
         "role": "Príncipe normando, conquistador de Antioquia",
-        "image": "",
+        "image": "/eventos/figura-boemundo-de-tarento.jpg",
         "description": "Comandou o cerco de Antioquia e fundou o Principado cruzado da cidade."
       },
       {
         "name": "Pedro, o Eremita",
         "role": "Pregador popular, líder da Cruzada Popular",
-        "image": "",
+        "image": "/eventos/figura-pedro-o-eremita.jpg",
         "description": "Seus sermões mobilizaram milhares de camponeses na primeira onda da cruzada."
       }
     ],
@@ -1185,13 +1185,13 @@
       {
         "name": "Rei João da Inglaterra (João Sem-Terra)",
         "role": "Rei da Inglaterra, forçado a selar o documento",
-        "image": "",
+        "image": "/eventos/figura-rei-joao-da-inglaterra-joao-sem-terra.jpg",
         "description": "Monarca cujas derrotas militares o levaram a ceder às exigências dos barões."
       },
       {
         "name": "Stephen Langton",
         "role": "Arcebispo de Canterbury e mediador",
-        "image": "",
+        "image": "/eventos/figura-stephen-langton.jpg",
         "description": "Figura-chave na negociação entre o rei e os barões rebeldes."
       },
       {
@@ -1289,25 +1289,25 @@
       {
         "name": "Eduardo III da Inglaterra",
         "role": "Rei inglês que reivindicou o trono francês",
-        "image": "",
+        "image": "/eventos/figura-eduardo-iii-da-inglaterra.jpg",
         "description": "Sua reivindicação dinástica deu início ao conflito em 1337."
       },
       {
         "name": "Joana d'Arc",
         "role": "Líder militar francesa",
-        "image": "",
+        "image": "/eventos/figura-joana-darc.jpg",
         "description": "Camponesa que liberou o cerco de Orléans e conduziu Carlos VII à coroação."
       },
       {
         "name": "Carlos VII da França",
         "role": "Rei francês coroado com o apoio de Joana d'Arc",
-        "image": "",
+        "image": "/eventos/figura-carlos-vii-da-franca.jpg",
         "description": "Consolidou a reconquista francesa e comandou a vitória final em 1453."
       },
       {
         "name": "Henrique V da Inglaterra",
         "role": "Rei inglês vencedor em Azincourt",
-        "image": "",
+        "image": "/eventos/figura-henrique-v-da-inglaterra.jpg",
         "description": "Sua vitória em Azincourt o aproximou, por pouco tempo, de unificar as coroas inglesa e francesa."
       }
     ],
@@ -1409,13 +1409,13 @@
       {
         "name": "Giovanni Boccaccio",
         "role": "Escritor florentino e cronista da epidemia",
-        "image": "",
+        "image": "/eventos/figura-giovanni-boccaccio.jpg",
         "description": "Registrou no Decameron o impacto devastador da peste sobre Florença."
       },
       {
         "name": "Papa Clemente VI",
         "role": "Papa em Avignon durante a pandemia",
-        "image": "",
+        "image": "/eventos/figura-papa-clemente-vi.jpg",
         "description": "Emitiu bulas papais protegendo comunidades judaicas das perseguições."
       }
     ],
@@ -1725,7 +1725,7 @@
       {
         "name": "Pedro Álvares Cabral",
         "role": "Comandante da esquadra portuguesa",
-        "image": "",
+        "image": "/eventos/figura-pedro-alvares-cabral.jpg",
         "description": "Fidalgo português que comandou a frota de treze naus e chegou à costa do Brasil em abril de 1500."
       },
       {
@@ -1839,25 +1839,25 @@
       {
         "name": "Martinho Lutero",
         "role": "Monge agostiniano e autor das 95 Teses",
-        "image": "",
+        "image": "/eventos/figura-martinho-lutero.jpg",
         "description": "Professor de teologia em Wittenberg cuja crítica às indulgências deu origem à Reforma Protestante."
       },
       {
         "name": "Papa Leão X",
         "role": "Pontífice da Igreja Católica",
-        "image": "",
+        "image": "/eventos/figura-papa-leao-x.jpg",
         "description": "Papa que excomungou Lutero em 1521."
       },
       {
         "name": "Johann Tetzel",
         "role": "Frade vendedor de indulgências",
-        "image": "",
+        "image": "/eventos/figura-johann-tetzel.jpg",
         "description": "Sua campanha agressiva de venda de indulgências motivou a reação de Lutero."
       },
       {
         "name": "Frederico, o Sábio",
         "role": "Elector da Saxônia",
-        "image": "",
+        "image": "/eventos/figura-frederico-o-sabio.jpg",
         "description": "Governante que protegeu politicamente Lutero."
       }
     ],
@@ -1940,19 +1940,19 @@
       {
         "name": "James Watt",
         "role": "Engenheiro e inventor",
-        "image": "",
+        "image": "/eventos/figura-james-watt.jpg",
         "description": "Aperfeiçoou a máquina a vapor entre 1769 e 1776."
       },
       {
         "name": "Richard Arkwright",
         "role": "Empresário e inventor têxtil",
-        "image": "",
+        "image": "/eventos/figura-richard-arkwright.jpg",
         "description": "Criou o water frame e organizou o primeiro sistema fabril moderno."
       },
       {
         "name": "Adam Smith",
         "role": "Economista e filósofo",
-        "image": "",
+        "image": "/eventos/figura-adam-smith.jpg",
         "description": "Autor de 'A Riqueza das Nações' (1776), forneceu as bases teóricas do capitalismo industrial."
       }
     ],
@@ -2044,25 +2044,25 @@
       {
         "name": "Thomas Jefferson",
         "role": "Autor principal da Declaração de Independência",
-        "image": "",
+        "image": "/eventos/figura-thomas-jefferson.jpg",
         "description": "Delegado da Virgínia e principal redator do texto que proclamou a independência."
       },
       {
         "name": "George Washington",
         "role": "Comandante do Exército Continental",
-        "image": "",
+        "image": "/eventos/figura-george-washington.jpg",
         "description": "Liderou as forças coloniais e se tornaria o primeiro presidente dos EUA."
       },
       {
         "name": "Benjamin Franklin",
         "role": "Diplomata e membro do Comitê dos Cinco",
-        "image": "",
+        "image": "/eventos/figura-benjamin-franklin.jpg",
         "description": "Ajudou a revisar a Declaração e buscou apoio francês para a causa americana."
       },
       {
         "name": "John Adams",
         "role": "Delegado de Massachusetts",
-        "image": "",
+        "image": "/eventos/figura-john-adams.jpg",
         "description": "Um dos principais defensores da independência, viria a se tornar o segundo presidente dos EUA."
       }
     ],
@@ -2602,13 +2602,13 @@
       {
         "name": "Franklin D. Roosevelt",
         "role": "Presidente dos Estados Unidos e criador do New Deal",
-        "image": "",
+        "image": "/eventos/figura-franklin-d-roosevelt.jpg",
         "description": "Lançou o New Deal para combater o desemprego após a Grande Depressão."
       },
       {
         "name": "Herbert Hoover",
         "role": "Presidente dos Estados Unidos durante o início da crise",
-        "image": "",
+        "image": "/eventos/figura-herbert-hoover.jpg",
         "description": "Governou nos primeiros anos da Depressão."
       }
     ],
@@ -2827,25 +2827,25 @@
       {
         "name": "Mahatma Gandhi",
         "role": "Líder do movimento de independência indiano",
-        "image": "",
+        "image": "/eventos/figura-mahatma-gandhi.jpg",
         "description": "Liderou décadas de resistência civil não violenta contra o domínio britânico."
       },
       {
         "name": "Jawaharlal Nehru",
         "role": "Primeiro primeiro-ministro da Índia independente",
-        "image": "",
+        "image": "/eventos/figura-jawaharlal-nehru.jpg",
         "description": "Discursou na proclamação da independência em 1947."
       },
       {
         "name": "Muhammad Ali Jinnah",
         "role": "Líder da Liga Muçulmana e fundador do Paquistão",
-        "image": "",
+        "image": "/eventos/figura-muhammad-ali-jinnah.jpg",
         "description": "Defendeu a criação de um Estado separado para os muçulmanos do subcontinente."
       },
       {
         "name": "Lord Mountbatten",
         "role": "Último vice-rei britânico da Índia",
-        "image": "",
+        "image": "/eventos/figura-lord-mountbatten.jpg",
         "description": "Conduziu a negociação final da transferência de poder em 1947."
       }
     ],
@@ -3171,19 +3171,19 @@
       {
         "name": "Genghis Khan",
         "role": "Fundador e Khan Supremo do Império Mongol",
-        "image": "",
+        "image": "/eventos/figura-genghis-khan.jpg",
         "description": "Unificou as tribos mongolas em 1206 e iniciou as conquistas que transformariam o mapa da Eurásia."
       },
       {
         "name": "Ögödei Khan",
         "role": "Segundo Grande Khan (1229–1241)",
-        "image": "",
+        "image": "/eventos/figura-ogodei-khan.jpg",
         "description": "Filho e sucessor de Genghis Khan, expandiu o império para a China do Norte e a Europa Oriental."
       },
       {
         "name": "Kublai Khan",
         "role": "Quinto Grande Khan e fundador da dinastia Yuan",
-        "image": "",
+        "image": "/eventos/figura-kublai-khan.jpg",
         "description": "Neto de Genghis Khan, completou a conquista da China e governou o Império Mongol em seu auge máximo, recebendo Marco Polo em sua corte."
       }
     ],
@@ -3281,19 +3281,19 @@
       {
         "name": "Nicolau Copérnico",
         "role": "Astrônomo polonês",
-        "image": "",
+        "image": "/eventos/figura-nicolau-copernico.jpg",
         "description": "Propôs o modelo heliocêntrico em 'De revolutionibus' (1543), deslocando a Terra do centro do universo."
       },
       {
         "name": "Galileu Galilei",
         "role": "Físico e astrônomo italiano",
-        "image": "",
+        "image": "/eventos/figura-galileu-galilei.jpg",
         "description": "Usou o telescópio para confirmar o heliocentrismo e foi condenado pela Inquisição em 1633."
       },
       {
         "name": "Isaac Newton",
         "role": "Matemático e físico inglês",
-        "image": "",
+        "image": "/eventos/figura-isaac-newton.jpg",
         "description": "Publicou os Principia Mathematica em 1687, unificando a mecânica celeste e terrestre com a lei da gravitação universal."
       }
     ],
@@ -3398,19 +3398,19 @@
       {
         "name": "Napoleão Bonaparte",
         "role": "Imperador dos Franceses",
-        "image": "",
+        "image": "/eventos/figura-napoleao-bonaparte.jpg",
         "description": "Conquistou quase toda a Europa entre 1804 e 1812 antes de ser derrotado e exilado em Santa Helena."
       },
       {
         "name": "Arthur Wellesley, Duque de Wellington",
         "role": "Comandante das forças britânicas e aliadas",
-        "image": "",
+        "image": "/eventos/figura-arthur-wellesley-duque-de-wellington.jpg",
         "description": "Venceu a campanha peninsular na Espanha e derrotou Napoleão na Batalha de Waterloo em 18 de junho de 1815."
       },
       {
         "name": "Tsar Alexandre I",
         "role": "Imperador da Rússia",
-        "image": "",
+        "image": "/eventos/figura-tsar-alexandre-i.jpg",
         "description": "Liderou a resistência russa à invasão de 1812 e foi peça central na coalizão que derrubou Napoleão."
       }
     ],
@@ -3510,19 +3510,19 @@
       {
         "name": "Otto von Bismarck",
         "role": "Chanceler do Império Alemão",
-        "image": "",
+        "image": "/eventos/figura-otto-von-bismarck.jpg",
         "description": "Convocou e presidiu a Conferência de Berlim, procurando regulamentar a disputa colonial para evitar guerra entre as potências europeias."
       },
       {
         "name": "Rei Leopoldo II da Bélgica",
         "role": "Soberano do Estado Livre do Congo",
-        "image": "",
+        "image": "/eventos/figura-rei-leopoldo-ii-da-belgica.jpg",
         "description": "Obteve reconhecimento sobre o enorme território do Congo como propriedade pessoal, onde o regime de terror na extração de borracha matou milhões de congoleses."
       },
       {
         "name": "Imperador Menelik II",
         "role": "Imperador da Etiópia",
-        "image": "",
+        "image": "/eventos/figura-imperador-menelik-ii.jpg",
         "description": "Derrotou o exército italiano na Batalha de Adwa em 1896, tornando-se símbolo de resistência africana ao colonialismo europeu."
       }
     ],
@@ -3618,19 +3618,19 @@
       {
         "name": "Princesa Isabel",
         "role": "Regente do Império do Brasil",
-        "image": "",
+        "image": "/eventos/figura-princesa-isabel.jpg",
         "description": "Assinou a Lei Áurea em 13 de maio de 1888, tornando-se símbolo da abolição no Brasil e passando à história como 'A Redentora'."
       },
       {
         "name": "Joaquim Nabuco",
         "role": "Político e escritor abolicionista",
-        "image": "",
+        "image": "/eventos/figura-joaquim-nabuco.jpg",
         "description": "Publicou 'O Abolicionismo' (1883) e fundou a Sociedade Brasileira contra a Escravidão, sendo o principal líder parlamentar da causa."
       },
       {
         "name": "José do Patrocínio",
         "role": "Jornalista e orador abolicionista",
-        "image": "",
+        "image": "/eventos/figura-jose-do-patrocinio.jpg",
         "description": "Filho de escravizada, usou o jornalismo para mobilizar a opinião pública e foi um dos mais importantes líderes do movimento abolicionista."
       }
     ],
@@ -3726,19 +3726,19 @@
       {
         "name": "David Ben-Gurion",
         "role": "Primeiro-Ministro e Ministro da Defesa de Israel",
-        "image": "",
+        "image": "/eventos/figura-david-ben-gurion.jpg",
         "description": "Proclamou a independência de Israel em 14 de maio de 1948 e liderou o país durante a Guerra da Independência."
       },
       {
         "name": "Theodor Herzl",
         "role": "Fundador do sionismo político moderno",
-        "image": "",
+        "image": "/eventos/figura-theodor-herzl.jpg",
         "description": "Convocou o primeiro Congresso Sionista em Basileia em 1897 e articulou a visão de um Estado judeu soberano, décadas antes de sua criação."
       },
       {
         "name": "Chaim Weizmann",
         "role": "Primeiro Presidente do Estado de Israel",
-        "image": "",
+        "image": "/eventos/figura-chaim-weizmann.jpg",
         "description": "Líder sionista e cientista que negociou a Declaração Balfour com o governo britânico e tornou-se o primeiro chefe de Estado de Israel."
       }
     ],
