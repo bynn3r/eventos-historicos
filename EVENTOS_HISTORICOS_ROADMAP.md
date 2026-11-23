@@ -248,7 +248,7 @@ Nesta Sprint:
 
 **O que ficou pendente (registrar para próxima Sprint):**
 - [ ] `images: { unoptimized: true }` — avaliar impacto no deploy antes de alterar
-- [ ] Breadcrumb visual em `/evento/[slug]` — apenas link de retorno adicionado; breadcrumb semântico completo pode ser feito na Sprint 2
+- [x] Breadcrumb visual em `/evento/[slug]` — concluído na Sprint 11
 - [ ] Google Search Console verification code — adicionar quando disponível (local indicado em `app/layout.tsx`)
 - [ ] Notícias dinâmicas não incluídas no sitemap (slugs DynamoDB; solução necessária separada)
 
@@ -964,6 +964,43 @@ Fechar a lista "Futuro" da Sprint 5 com a última entidade pendente. Por ser a d
 - Verificação via servidor de dev local: Roma Antiga renderiza as 3 cronologias em ordem; `fundacao-imperio-mongol` exibe os dois banners (guerra + império) simultaneamente
 
 **Lista "Futuro" da Sprint 5: concluída.** Todas as entidades propostas (Personagens, Países, Guerras, Impérios, Mapas) foram implementadas entre as Sprints 6–10.
+
+---
+
+# SPRINT 11 — PENDÊNCIAS TÉCNICAS (imagens e breadcrumb)
+
+## Objetivo
+
+Resolver pendências técnicas de baixo risco registradas nas Sprints anteriores, sem criar conteúdo novo nem alterar a arquitetura de deploy.
+
+## Status da Sprint 11
+
+- **Data:** 2026-11-23
+- **Status:** Concluída
+
+**Problema identificado:** 94 caminhos de imagem referenciados nos JSONs não existiam em `public/` — heros, figuras e momentos dos eventos criados nas Sprints 2 e 4 (ex.: `hero-revolucao-meiji.jpg`, `figura-mansa-musa.jpg`, `momento-rubicao.jpg`). Resultado em produção: requisições 404, `og:image`/JSON-LD apontando para arquivos inexistentes e blocos de imagem vazios.
+
+**O que foi implementado:**
+- `scripts/generate-image-manifest.mjs` (novo): lista as imagens existentes em `public/` e grava `lib/generated/public-images.json`. Roda automaticamente no `pnpm build` (script `build` atualizado; também disponível como `pnpm images:manifest`)
+- `lib/public-images.ts` (novo): `existingImage(src)` — função pura (funciona em server e client components) que devolve `undefined` quando o arquivo não existe
+- `lib/timeline.ts`: imagens de eventos e personagens filtradas na origem, beneficiando todas as páginas derivadas (Linha do Tempo, Personagens, Países, Regiões, Guerras, Impérios, Mapa, busca) — cada uma já tinha estado sem imagem (hero escuro, inicial do nome, card sem capa)
+- `/evento/[slug]`: hero, figuras e momentos filtrados; hero sem imagem usa fundo escuro e oculta a legenda da foto; `EventJourney` aceita momento sem imagem
+- `/evento/[slug]`: **breadcrumb semântico completo** (pendência da Sprint 1) — `nav > ol` com `aria-current="page"` e `BreadcrumbList` no JSON-LD (via `@graph`, mesmo padrão de `/linha-do-tempo/[slug]`)
+- **Compressão de imagens:** 110 JPEGs acima de 400 KB redimensionados para no máximo 1920 px (qualidade 82, progressivo), mantendo os mesmos nomes — 126 MB → 57 MB. `momento-roma-palatino.jpg`: 14,9 MB → 458 KB
+
+**Para adicionar uma imagem faltante:** basta colocar o arquivo em `public/eventos/` com o nome já referenciado no JSON. O próximo build a detecta sozinho (em dev, rodar `pnpm images:manifest`).
+
+**Testes realizados:**
+- TypeScript: sem erros (`tsc --noEmit`)
+- Build Next.js completo sem erros (`pnpm build`, mesmo comando do Amplify)
+- HTML gerado verificado: nenhuma referência a imagem inexistente; `BreadcrumbList` e `aria-current` presentes em `/evento/[slug]`
+
+**Pendências que continuam abertas:**
+- [ ] 94 imagens faltantes precisam ser obtidas (exige curadoria e verificação de licença — ex.: Wikimedia Commons, domínio público)
+- [ ] `images: { unoptimized: true }` — mantido; a compressão manual reduz o impacto, mas WebP/srcset seguem desativados
+- [ ] Google Search Console verification code
+- [ ] Notícias dinâmicas no sitemap
+- [ ] Verificação manual em mobile/desktop
 
 ---
 

@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "next build",
+    "build": "node scripts/generate-image-manifest.mjs && next build",
+    "images:manifest": "node scripts/generate-image-manifest.mjs",
     "dev": "next dev",
     "lint": "next lint",
     "start": "next start"

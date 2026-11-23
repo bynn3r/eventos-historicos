@@ -12,6 +12,7 @@ import grandesEventosData from "@/data/grandes-eventos.json"
 import curiosidadesData from "@/data/curiosidades.json"
 import timelineData from "@/data/linha-do-tempo.json"
 import { RelatedNewsWidget } from "@/components/related-news-widget"
+import { existingImage } from "@/lib/public-images"
 
 interface EventoPageProps {
   params: {
@@ -25,8 +26,20 @@ export async function generateStaticParams() {
 
 const SITE_URL = "https://eventoshistoricos.com.br"
 
+// Descarta referências a imagens ainda ausentes em /public (hero, figuras e momentos).
+function getEvento(slug: string) {
+  const evento = grandesEventosData.find((e) => e.slug === slug)
+  if (!evento) return undefined
+  return {
+    ...evento,
+    heroImagem: existingImage(evento.heroImagem),
+    figuras: evento.figuras.map((figura) => ({ ...figura, imagem: existingImage(figura.imagem) })),
+    momentos: evento.momentos.map((momento) => ({ ...momento, imagem: existingImage(momento.imagem) })),
+  }
+}
+
 export async function generateMetadata({ params }: EventoPageProps) {
-  const evento = grandesEventosData.find((e) => e.slug === params.slug)
+  const evento = getEvento(params.slug)
 
   if (!evento) {
     return { title: "Evento não encontrado" }
@@ -57,7 +70,7 @@ export async function generateMetadata({ params }: EventoPageProps) {
 }
 
 export default function EventoPage({ params }: EventoPageProps) {
-  const evento = grandesEventosData.find((e) => e.slug === params.slug)
+  const evento = getEvento(params.slug)
 
   if (!evento) {
     notFound()
@@ -71,15 +84,29 @@ export default function EventoPage({ params }: EventoPageProps) {
     (e) => e.slug === params.slug,
   )
 
+  const url = `${SITE_URL}/evento/${evento.slug}`
+
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Event",
-    name: evento.titulo,
-    description: evento.hook,
-    image: evento.heroImagem ? `${SITE_URL}${evento.heroImagem}` : undefined,
-    url: `${SITE_URL}/evento/${evento.slug}`,
-    startDate: String(evento.ano),
-    inLanguage: "pt-BR",
+    "@graph": [
+      {
+        "@type": "Event",
+        name: evento.titulo,
+        description: evento.hook,
+        image: evento.heroImagem ? `${SITE_URL}${evento.heroImagem}` : undefined,
+        url,
+        startDate: String(evento.ano),
+        inLanguage: "pt-BR",
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Início", item: SITE_URL },
+          { "@type": "ListItem", position: 2, name: "Grandes Eventos", item: `${SITE_URL}/grandes-eventos` },
+          { "@type": "ListItem", position: 3, name: evento.titulo, item: url },
+        ],
+      },
+    ],
   }
 
   return (
@@ -92,16 +119,43 @@ export default function EventoPage({ params }: EventoPageProps) {
 
       <main className="flex-1 bg-background">
         {/* Hero imersivo */}
-        <section className="relative flex min-h-[85vh] items-end overflow-hidden">
+        <section className="relative flex min-h-[85vh] items-end overflow-hidden bg-slate-950">
           <div className="absolute inset-0">
-            <Image
-              src={evento.heroImagem}
-              alt={evento.heroLegenda}
-              fill
-              priority
-              className="object-cover"
-            />
+            {evento.heroImagem && (
+              <Image
+                src={evento.heroImagem}
+                alt={evento.heroLegenda}
+                fill
+                priority
+                className="object-cover"
+              />
+            )}
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-black/10" />
+          </div>
+
+          {/* Breadcrumb */}
+          <div className="absolute inset-x-0 top-6 z-20">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+              <nav aria-label="breadcrumb">
+                <ol className="flex flex-wrap items-center gap-2 text-sm text-white/60">
+                  <li>
+                    <Link href="/" className="transition-colors hover:text-white">
+                      Início
+                    </Link>
+                  </li>
+                  <li aria-hidden className="text-white/30">/</li>
+                  <li>
+                    <Link href="/grandes-eventos" className="transition-colors hover:text-white">
+                      Grandes Eventos
+                    </Link>
+                  </li>
+                  <li aria-hidden className="text-white/30">/</li>
+                  <li aria-current="page" className="text-white/85">
+                    {evento.titulo}
+                  </li>
+                </ol>
+              </nav>
+            </div>
           </div>
 
           <div className="relative z-10 w-full">
@@ -146,7 +200,7 @@ export default function EventoPage({ params }: EventoPageProps) {
 
               <p className="mt-5 max-w-2xl text-lg leading-8 text-white/85 md:text-xl">{evento.hook}</p>
 
-              <p className="mt-3 text-sm text-white/60">{evento.heroLegenda}</p>
+              {evento.heroImagem && <p className="mt-3 text-sm text-white/60">{evento.heroLegenda}</p>}
             </div>
           </div>
 

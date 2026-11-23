@@ -9,7 +9,7 @@ interface Momento {
   titulo: string
   local: string
   texto: string
-  imagem: string
+  imagem?: string
 }
 
 export function EventJourney({ momentos }: { momentos: Momento[] }) {
@@ -70,7 +70,9 @@ export function EventJourney({ momentos }: { momentos: Momento[] }) {
               >
                 <div className={`${isEven ? "md:order-1" : "md:order-2"}`}>
                   <div className="relative aspect-[16/10] overflow-hidden rounded-2xl border bg-muted shadow-sm">
-                    <Image src={momento.imagem} alt={momento.titulo} fill className="object-cover" />
+                    {momento.imagem && (
+                      <Image src={momento.imagem} alt={momento.titulo} fill className="object-cover" />
+                    )}
                   </div>
                 </div>
 
