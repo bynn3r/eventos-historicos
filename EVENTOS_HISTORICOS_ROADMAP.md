@@ -995,8 +995,13 @@ Resolver pendências técnicas de baixo risco registradas nas Sprints anteriores
 - Build Next.js completo sem erros (`pnpm build`, mesmo comando do Amplify)
 - HTML gerado verificado: nenhuma referência a imagem inexistente; `BreadcrumbList` e `aria-current` presentes em `/evento/[slug]`
 
+**Imagens faltantes — 1ª leva (2026-11-25):**
+- Levantamento completo em `IMAGENS-FALTANTES.md`: 93 imagens únicas classificadas em 5 grupos (A–E) por licença e confiabilidade da correspondência
+- Grupos A e B baixados do Wikimedia Commons: **39 imagens em domínio público/CC0** (26 retratos + 13 heros/momentos), comprimidas no mesmo padrão (máx. 1920 px, q82); correspondência pessoa/tema conferida
+- Faltantes: 93 → 54
+
 **Pendências que continuam abertas:**
-- [ ] 94 imagens faltantes precisam ser obtidas (exige curadoria e verificação de licença — ex.: Wikimedia Commons, domínio público)
+- [ ] 54 imagens faltantes — grupo C (CC, exige mecanismo de créditos no site), D (11 de Setembro, decisão editorial) e E (busca manual); ver `IMAGENS-FALTANTES.md`
 - [ ] `images: { unoptimized: true }` — mantido; a compressão manual reduz o impacto, mas WebP/srcset seguem desativados
 - [ ] Google Search Console verification code
 - [ ] Notícias dinâmicas no sitemap
