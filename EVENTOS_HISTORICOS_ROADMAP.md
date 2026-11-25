@@ -1000,8 +1000,13 @@ Resolver pendências técnicas de baixo risco registradas nas Sprints anteriores
 - Grupos A e B baixados do Wikimedia Commons: **39 imagens em domínio público/CC0** (26 retratos + 13 heros/momentos), comprimidas no mesmo padrão (máx. 1920 px, q82); correspondência pessoa/tema conferida
 - Faltantes: 93 → 54
 
+**Imagens faltantes — 2ª leva (2026-11-25):**
+- 47 imagens dos grupos C, D e E, escolhidas pelo critério "ilustrar o momento exato" e conferidas visualmente
+- Créditos de imagens CC/OGL: `data/image-credits.json` + página `/creditos` (link discreto no rodapé, sem legendas sobre as imagens); `/creditos` incluída no sitemap
+- Faltantes: 54 → 7 (ver `IMAGENS-FALTANTES.md`)
+
 **Pendências que continuam abertas:**
-- [ ] 54 imagens faltantes — grupo C (CC, exige mecanismo de créditos no site), D (11 de Setembro, decisão editorial) e E (busca manual); ver `IMAGENS-FALTANTES.md`
+- [ ] 7 imagens faltantes (4 já escolhidas, aguardando download; 3 sem imagem adequada)
 - [ ] `images: { unoptimized: true }` — mantido; a compressão manual reduz o impacto, mas WebP/srcset seguem desativados
 - [ ] Google Search Console verification code
 - [ ] Notícias dinâmicas no sitemap

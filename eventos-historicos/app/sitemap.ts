@@ -28,6 +28,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/sobre`, changeFrequency: "monthly", priority: 0.4 },
     { url: `${SITE_URL}/contato`, changeFrequency: "monthly", priority: 0.3 },
     { url: `${SITE_URL}/privacidade`, changeFrequency: "yearly", priority: 0.2 },
+    { url: `${SITE_URL}/creditos`, changeFrequency: "monthly", priority: 0.1 },
   ]
 
   const timelineRoutes: MetadataRoute.Sitemap = timelineEvents.map((event) => ({

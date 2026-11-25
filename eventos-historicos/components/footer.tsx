@@ -151,6 +151,9 @@ export function Footer() {
               <Link href="/contato" className="text-muted-foreground hover:text-foreground transition-colors">
                 {t("footer.contact")}
               </Link>
+              <Link href="/creditos" className="text-muted-foreground hover:text-foreground transition-colors">
+                Créditos das imagens
+              </Link>
             </div>
           </div>
         </div>

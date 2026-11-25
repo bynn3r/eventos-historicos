@@ -1,5 +1,9 @@
 # Imagens faltantes — proposta de fontes
 
+> **Status em 2026-11-25:** das 93 imagens que faltavam, **86 foram adicionadas** (39 na 1ª leva, 47 na 2ª). Restam **7** — ver a seção "Pendentes" no fim.
+> Imagens com licença CC/OGL têm autoria listada em `data/image-credits.json`, exibida na página `/creditos` (link discreto no rodapé).
+
+
 Levantamento da Sprint 11: 93 imagens referenciadas nos JSONs não existem em `public/eventos/`.
 Candidatas obtidas da imagem principal do artigo na Wikipédia (pt/en), com licença conferida no Wikimedia Commons em 2026-11-23.
 
@@ -137,3 +141,19 @@ Candidatas obtidas da imagem principal do artigo na Wikipédia (pt/en), com lice
 ## Baixa resolução (funcionam, mas valem substituição futura)
 
 - `hero-declaracao-universal-direitos-humanos.jpg` (535 px), `hero-revolucao-cientifica.jpg` (558 px), `hero-revolucao-xinhai.jpg` (639 px), `hero-assassinato-julio-cesar.jpg` / `hero-assassinato-cesar.jpg` (800 px) — usados em hero de tela cheia, ficam levemente desfocados em telas grandes.
+
+## 2ª leva (2026-11-25) — grupos C, D e E
+
+Critério aplicado: a imagem precisa mostrar **o momento exato** do evento, não só o tema. Por isso vários mapas do grupo C foram trocados pela cena real (ex.: gravura da própria Conferência de Berlim, pintura da proclamação em Versalhes, miniatura de Temüjin proclamado Gengis Khan em 1206). As 47 imagens foram conferidas visualmente; três receberam recorte para remover moldura/legenda de página (`hero-invencao-imprensa-gutenberg`, `momento-experimento`, `hero-conferencia-berlim`).
+
+## Pendentes (7)
+
+| Arquivo | Motivo |
+|---|---|
+| `figura-sundiata.jpg` | Não existe retrato contemporâneo de Sundiata Keita — mantido sem imagem (inicial do nome) |
+| `momento-declaracao-guerra.jpg` | Nenhuma imagem livre que mostre o anúncio de 3/9/1939 |
+| `momento-processo.jpg` | Instrumento notarial de Helmasperger (1455) não encontrado em resolução utilizável |
+| `hero-revolucao-comunista-china.jpg` | Escolhida (`Mao Proclaiming New China.JPG`, domínio público) — download bloqueado por limite do Wikimedia; repetir |
+| `momento-westerplatte.jpg` | Escolhida (`Schleswig Holstein firing Westerplatte September 1939.jpg`, domínio público) — repetir download |
+| `momento-varsovia.jpg` | Escolhida (`Bundesarchiv Bild 146-1976-032-19, Kapitulation Warschaus.jpg`, CC BY-SA 3.0 de; crédito já cadastrado) — repetir download |
+| `momento-torre-norte.jpg` | Escolhida (`American Airlines Flight 11 approach (second frame) (right).jpg`, domínio público) — repetir download |
