@@ -1005,10 +1005,18 @@ Resolver pendências técnicas de baixo risco registradas nas Sprints anteriores
 - Créditos de imagens CC/OGL: `data/image-credits.json` + página `/creditos` (link discreto no rodapé, sem legendas sobre as imagens); `/creditos` incluída no sitemap
 - Faltantes: 54 → 7 (ver `IMAGENS-FALTANTES.md`)
 
+**Ajustes após revisão no celular (2026-11-25):**
+- 4 imagens pendentes baixadas (faltantes: 7 → 3) e retratos para 5 personagens que não tinham imagem cadastrada
+- Adolf Hitler incluído como personagem de `fim-segunda-guerra-mundial` (antes só constava no início da guerra)
+- `/personagens`: índice de letras em uma linha com rolagem lateral no celular (antes ocupava 3 linhas fixas); inicial ignora acentos ("Ögödei" agrupado em O)
+- **Google Analytics 4 com consentimento (LGPD):** `components/analytics.tsx` — banner Aceitar/Recusar; o script do Google só carrega após "Aceitar", com IP anonimizado; page views em navegação client-side. Ativado pela variável `NEXT_PUBLIC_GA_ID` no Amplify (sem ela nada é carregado)
+- **Google Search Console:** tag de verificação via variável `NEXT_PUBLIC_GSC_VERIFICATION` (opcional; não usada se a verificação for por DNS)
+- Política de Privacidade: seção de cookies analíticos atualizada para citar o Google Analytics e o consentimento
+
 **Pendências que continuam abertas:**
-- [ ] 7 imagens faltantes (4 já escolhidas, aguardando download; 3 sem imagem adequada)
+- [ ] 3 imagens sem representação adequada (`figura-sundiata`, `momento-declaracao-guerra`, `momento-processo`)
+- [ ] Criar propriedade GA4 e cadastrar `NEXT_PUBLIC_GA_ID` no Amplify; verificar o domínio no Search Console e enviar o sitemap
 - [ ] `images: { unoptimized: true }` — mantido; a compressão manual reduz o impacto, mas WebP/srcset seguem desativados
-- [ ] Google Search Console verification code
 - [ ] Notícias dinâmicas no sitemap
 - [ ] Verificação manual em mobile/desktop
 

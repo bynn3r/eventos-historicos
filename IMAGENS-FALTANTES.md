@@ -1,6 +1,6 @@
 # Imagens faltantes — proposta de fontes
 
-> **Status em 2026-11-25:** das 93 imagens que faltavam, **86 foram adicionadas** (39 na 1ª leva, 47 na 2ª). Restam **7** — ver a seção "Pendentes" no fim.
+> **Status em 2026-11-25:** das 93 imagens que faltavam, **90 foram adicionadas**. Restam **3** sem imagem adequada (ver "Pendentes"). Além disso, 5 personagens que não tinham imagem cadastrada ganharam retrato (ver "Personagens sem imagem").
 > Imagens com licença CC/OGL têm autoria listada em `data/image-credits.json`, exibida na página `/creditos` (link discreto no rodapé).
 
 
@@ -157,3 +157,23 @@ Critério aplicado: a imagem precisa mostrar **o momento exato** do evento, não
 | `momento-westerplatte.jpg` | Escolhida (`Schleswig Holstein firing Westerplatte September 1939.jpg`, domínio público) — repetir download |
 | `momento-varsovia.jpg` | Escolhida (`Bundesarchiv Bild 146-1976-032-19, Kapitulation Warschaus.jpg`, CC BY-SA 3.0 de; crédito já cadastrado) — repetir download |
 | `momento-torre-norte.jpg` | Escolhida (`American Airlines Flight 11 approach (second frame) (right).jpg`, domínio público) — repetir download |
+
+### Atualização (3ª leva)
+As 4 imagens escolhidas que aguardavam download foram baixadas (`hero-revolucao-comunista-china`, `momento-westerplatte`, `momento-varsovia`, `momento-torre-norte`). Restam apenas `figura-sundiata`, `momento-declaracao-guerra` e `momento-processo`.
+
+## Personagens sem imagem
+
+13 personagens não tinham imagem cadastrada no JSON. Adicionados:
+
+| Personagem | Imagem | Licença |
+|---|---|---|
+| Irene de Atenas | Sólido (moeda de ouro) com seu retrato | Domínio público |
+| Robert Fitzwalter | Seu selo | Domínio público |
+| Pero Vaz de Caminha | 1ª folha da Carta (não existe retrato) | Domínio público |
+| Bartolomeu Dias | Estátua na South Africa House, Londres | CC BY-SA 3.0 (crédito em /creditos) |
+| Cardeal Humberto de Silva Cândida | Miniatura da disputa com Cerulário (1054) | Domínio público |
+
+Mantidos sem imagem (inicial do nome), por decisão:
+- **Maomé, Abu Bakr, Umar ibn al-Khattab, Ali ibn Abi Talib** — a tradição islâmica evita representar o Profeta e, em geral, seus companheiros.
+- **Povo Tupiniquim** — não é uma pessoa; as gravuras do período (Hans Staden) retratam os Tupinambá, outro povo.
+- **Li Si, General Meng Tian, Orestes** — nenhuma representação confiável encontrada.

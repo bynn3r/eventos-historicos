@@ -24,7 +24,8 @@ export default function PersonagensPage() {
   const characters = getAllCharacters()
 
   const grouped = characters.reduce<Record<string, typeof characters>>((acc, char) => {
-    const letter = char.name.charAt(0).toUpperCase()
+    // Ignora acentos na inicial ("Ögödei" fica em O)
+    const letter = char.name.normalize("NFD").charAt(0).toUpperCase()
     if (!acc[letter]) acc[letter] = []
     acc[letter].push(char)
     return acc
@@ -60,12 +61,12 @@ export default function PersonagensPage() {
         {/* Índice de letras */}
         <section className="sticky top-16 z-40 border-b bg-background/95 backdrop-blur py-3">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-wrap justify-center gap-1.5">
+            <div className="-mx-4 flex gap-1 overflow-x-auto px-4 [scrollbar-width:none] md:mx-0 md:flex-wrap md:justify-center md:gap-1.5 md:overflow-visible md:px-0 [&::-webkit-scrollbar]:hidden">
               {letters.map((letter) => (
                 <a
                   key={letter}
                   href={`#letra-${letter}`}
-                  className="inline-flex h-8 w-8 items-center justify-center rounded-md text-sm font-semibold text-muted-foreground transition-colors hover:bg-accent hover:text-accent-foreground"
+                  className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-md text-sm font-semibold text-muted-foreground transition-colors hover:bg-accent hover:text-accent-foreground"
                 >
                   {letter}
                 </a>

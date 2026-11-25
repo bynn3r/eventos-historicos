@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 import { ErrorBoundary } from "@/components/error-boundary"
 import { Suspense } from "react"
 import { LanguageProvider } from "@/contexts/language-context"
+import { Analytics } from "@/components/analytics"
 import "./globals.css"
 
 const inter = Inter({
@@ -43,8 +44,11 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  // Adicione aqui o código de verificação do Google Search Console quando disponível
-  // verification: { google: "SEU_CODIGO_AQUI" },
+  // Código da tag HTML do Google Search Console (variável de ambiente no Amplify).
+  // Se a verificação for por DNS, deixe a variável vazia.
+  verification: process.env.NEXT_PUBLIC_GSC_VERIFICATION
+    ? { google: process.env.NEXT_PUBLIC_GSC_VERIFICATION }
+    : undefined,
 }
 
 export default function RootLayout({
@@ -59,6 +63,7 @@ export default function RootLayout({
           <Suspense fallback={null}>
             <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
               <LanguageProvider>{children}</LanguageProvider>
+              <Analytics />
             </ThemeProvider>
           </Suspense>
         </ErrorBoundary>
