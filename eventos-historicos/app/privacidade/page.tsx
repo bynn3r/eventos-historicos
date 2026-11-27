@@ -129,7 +129,7 @@ export default function PrivacidadePage() {
                   <div>
                     <h4 className="font-semibold mb-2">Cookies Analíticos</h4>
                     <p className="text-sm text-muted-foreground">
-                      Nos ajudam a entender como os visitantes interagem com o site para melhorar a experiência.
+                      Usamos o Google Analytics para entender quais conteúdos são mais lidos. Ele só é ativado se você clicar em "Aceitar" no aviso de cookies, com IP anonimizado. Para mudar sua escolha, limpe os dados do site no navegador.
                     </p>
                   </div>
                 </div>

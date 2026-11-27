@@ -1,4 +1,5 @@
 import timelineData from "@/data/linha-do-tempo.json"
+import { existingImage } from "@/lib/public-images"
 
 export interface TimelineCharacter {
   name: string
@@ -54,7 +55,16 @@ export interface TimelineEvent {
   keywords: string[]
 }
 
-const events = timelineData as TimelineEvent[]
+// Imagens referenciadas no JSON mas ainda ausentes em /public são descartadas aqui,
+// na origem, para que todas as páginas derivadas usem seu estado sem imagem.
+const events = (timelineData as TimelineEvent[]).map((event) => ({
+  ...event,
+  image: existingImage(event.image) ?? "",
+  characters: event.characters.map((character) => ({
+    ...character,
+    image: existingImage(character.image),
+  })),
+}))
 
 export function getAllTimelineEvents(): TimelineEvent[] {
   return events

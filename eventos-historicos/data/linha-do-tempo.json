@@ -869,7 +869,7 @@
       {
         "name": "Irene de Atenas",
         "role": "Imperatriz bizantina",
-        "image": "",
+        "image": "/eventos/figura-irene-de-atenas.jpg",
         "description": "Governante bizantina cujo reinado solitário serviu de pretexto ocidental para a coroação de um novo imperador romano."
       },
       {
@@ -973,7 +973,7 @@
       {
         "name": "Cardeal Humberto de Silva Cândida",
         "role": "Legado papal que excomungou o patriarca",
-        "image": "",
+        "image": "/eventos/figura-humberto-silva-candida.jpg",
         "description": "Depositou a bula de excomunhão sobre o altar de Santa Sofia."
       },
       {
@@ -1197,7 +1197,7 @@
       {
         "name": "Robert Fitzwalter",
         "role": "Líder dos barões rebeldes",
-        "image": "",
+        "image": "/eventos/figura-robert-fitzwalter.jpg",
         "description": "Comandou a facção nobre que ocupou Londres."
       }
     ],
@@ -1731,13 +1731,13 @@
       {
         "name": "Pero Vaz de Caminha",
         "role": "Escrivão da esquadra",
-        "image": "",
+        "image": "/eventos/figura-pero-vaz-de-caminha.jpg",
         "description": "Autor da carta que registrou o primeiro relato oficial do encontro com os povos indígenas."
       },
       {
         "name": "Bartolomeu Dias",
         "role": "Navegador da esquadra",
-        "image": "",
+        "image": "/eventos/figura-bartolomeu-dias.jpg",
         "description": "Já havia contornado o Cabo da Boa Esperança em 1488 e integrou a frota de Cabral."
       },
       {
@@ -2729,6 +2729,12 @@
         "role": "Imperador do Japão",
         "image": "/eventos/figura-hirohito.jpg",
         "description": "Anunciou pessoalmente, em rádio nacional, a aceitação da rendição japonesa em 15 de agosto de 1945."
+      },
+      {
+        "name": "Adolf Hitler",
+        "role": "Führer da Alemanha Nazista",
+        "image": "/eventos/figura-hitler.jpg",
+        "description": "Cercado pelo avanço soviético sobre Berlim, suicidou-se no bunker da Chancelaria em 30 de abril de 1945. Dias depois, em 7 e 8 de maio, a Alemanha assinou a rendição incondicional."
       }
     ],
     "sources": [
